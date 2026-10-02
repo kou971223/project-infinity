@@ -1,11 +1,7 @@
+# Legacy single-pass experiment retained for reproduction, not a duplicate schedule.
 name: Free CPU model research and learning
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '47 */6 * * *'
-  push:
-    branches: [main, candidate/core-0.4-free-local-runtime]
-    paths: ['experiments/**', 'src/local-candidate.js', 'src/model-researcher.js', 'src/package-research.js', 'src/publish-research.js', '.github/workflows/model-research.yml']
 permissions:
   contents: read
 concurrency:

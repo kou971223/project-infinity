@@ -1,0 +1,103 @@
+name: Autonomous research continuity
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 * * * *'
+  push:
+    branches: [main, 'candidate/core-0.5-continuity']
+    paths: ['autonomy/**', 'test/test_autonomy.py', '.github/workflows/autonomy.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-autonomy-epoch-1
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 18
+    outputs:
+      record: ${{ steps.package.outputs.record }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_*.py' -v
+      - name: Prepare immutable sandbox image (not passed to candidate)
+        run: |
+          docker pull node:22.16.0-bookworm-slim
+          echo "PINF_NODE_IMAGE=$(docker image inspect node:22.16.0-bookworm-slim --format '{{.Id}}')" >> "$GITHUB_ENV"
+      - name: Install local CPU model dependencies, no API keys
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          .venv/bin/pip install --no-cache-dir transformers==4.57.1 safetensors==0.6.2
+      - name: Read prior evidence, propose source changes, train and validate two seeds
+        id: research
+        continue-on-error: true
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          HF_HUB_DISABLE_XET: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: .venv/bin/python autonomy/cycle.py
+      - name: Transfer data only to separate publication job
+        id: package
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import base64,os,pathlib
+          p=pathlib.Path('reports/autonomy.json')
+          if p.exists():
+              b=p.read_bytes()
+              assert len(b)<=100000,'record size limit'
+              with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+                  f.write('record='+base64.b64encode(b).decode()+'\n')
+          PY
+      - name: Report a failed research execution as failure
+        if: steps.research.outcome != 'success'
+        run: exit 1
+  preserve:
+    outputs:
+      commit: ${{ steps.publish.outputs.record_commit }}
+    needs: research
+    if: always() && needs.research.outputs.record != '' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 4
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Recompute acceptance, retain previous active version on rejection, preserve lineage
+        id: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTONOMY_RECORD_B64: ${{ needs.research.outputs.record }}
+        run: python3 autonomy/publish.py
+  verify-inherited-runtime:
+    needs: preserve
+    if: needs.preserve.result == 'success' && needs.preserve.outputs.commit != ''
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          .venv/bin/pip install --no-cache-dir transformers==4.57.1 safetensors==0.6.2
+      - name: Load persisted accepted weights in a new process and generate real text
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          HF_HUB_DISABLE_XET: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+          PINF_RECORD_REF: ${{ needs.preserve.outputs.commit }}
+        run: .venv/bin/python autonomy/verify_inheritance.py

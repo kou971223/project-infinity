@@ -2,8 +2,8 @@ name: Real local-model browser verification
 on:
   workflow_dispatch:
   push:
-    branches: [main, candidate/core-0.4-free-local-runtime]
-    paths: ['web/**', 'src/app-server.js', 'test/browser_check.py', '.github/workflows/browser.yml']
+    branches: [main, candidate/core-0.5-continuity]
+    paths: ['web/**', 'src/app-server.js', 'autonomy/app.js', 'autonomy/ui.js', 'test/browser_check.py', '.github/workflows/browser.yml']
 permissions:
   contents: read
 concurrency:
@@ -21,14 +21,14 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
-      - name: Install isolated browser-test tools (not production dependencies)
+      - name: Install isolated browser-test tools
         run: |
           python3 -m venv .browserenv
           .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
           .browserenv/bin/python -m playwright install --with-deps chromium
       - name: Real WASM inference, two turns, history and mobile layout
         run: |
-          node src/app-server.js > /tmp/pinf-browser-server.log 2>&1 &
+          node autonomy/app.js > /tmp/pinf-browser-server.log 2>&1 &
           PID=$!
           trap 'kill "$PID" || true' EXIT
           for i in $(seq 1 20); do curl -fsS http://127.0.0.1:3000/health && break; sleep 1; done
