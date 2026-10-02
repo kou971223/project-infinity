@@ -1,0 +1,155 @@
+{
+  "schema": "PINF-BACKEND-REPORT-1",
+  "exp": "EXP-0e691d5e-3265-419a-b45a-3ca8319736e5",
+  "at": "2026-10-02T04:53:30.192Z",
+  "protocol": {
+    "id": "PINF-BACKEND-ACC-1",
+    "candidateCount": 8,
+    "developmentRepeats": 1,
+    "confirmRepeats": 8,
+    "replicateRepeats": 8,
+    "requiredPassRate": 1,
+    "allowedRegressions": 0,
+    "minGain": 0.05,
+    "scope": "local-model startup recovery only",
+    "stopping": "one frozen selected candidate; two new independent seed streams; no post-result tuning"
+  },
+  "protocolHash": "5a4bd47b16b9cd82df2bb7200b4f3734af7a6d3cfe8b44366087b319e026d586",
+  "baseline": {
+    "preferGpu": true,
+    "recoverProbe": false,
+    "recoverLoad": false
+  },
+  "baselineHash": "21d5d3e00d71c4dbcc77a9571b96e7a18f32059aa1be8e2bb18079bf4fae98b0",
+  "candidate": {
+    "preferGpu": true,
+    "recoverProbe": true,
+    "recoverLoad": true
+  },
+  "candidateHash": "b12cdf1a277333e2060955b0c55094c13a1bd6af820814a4c37fcd00d0e51437",
+  "attempts": [
+    {
+      "hash": "8b0cffd1f2e019e0090b72bb09b690970f991fb45128da191bb6c75c16fce1aa",
+      "passed": 10,
+      "total": 12
+    },
+    {
+      "hash": "0038374a1e77e1460914b3683f0825b8214e8460866b2e92ca819a0a12cf1ad8",
+      "passed": 10,
+      "total": 12
+    },
+    {
+      "hash": "d4aa57d4ec07a71754297964b12c1fcb810005937f26b571e82e35b04e9e9422",
+      "passed": 10,
+      "total": 12
+    },
+    {
+      "hash": "6f6519ce8fd120c6d72662a4efd3c74eadf27dbe53043eb67973ff533925d84c",
+      "passed": 10,
+      "total": 12
+    },
+    {
+      "hash": "21d5d3e00d71c4dbcc77a9571b96e7a18f32059aa1be8e2bb18079bf4fae98b0",
+      "passed": 9,
+      "total": 12
+    },
+    {
+      "hash": "f99e64b734677128ffcb27367a3eb5ca78fa6420e4dbfeedc0e11445e7561420",
+      "passed": 11,
+      "total": 12
+    },
+    {
+      "hash": "f79748b8c706ee3249397ca6b82a54be0b0a4256a851dd9abd45250ce8b18bc5",
+      "passed": 10,
+      "total": 12
+    },
+    {
+      "hash": "b12cdf1a277333e2060955b0c55094c13a1bd6af820814a4c37fcd00d0e51437",
+      "passed": 12,
+      "total": 12
+    }
+  ],
+  "origin": "enumerative program synthesis; no LLM improvement claim",
+  "taxonomy": "E1 application reliability",
+  "overallProjectAccepted": false,
+  "decision": "ADOPT_BOUNDED_RUNTIME",
+  "comparisons": [
+    {
+      "baseline": 72,
+      "candidate": 96,
+      "total": 96,
+      "gain": 0.25,
+      "regressions": 0,
+      "familyCount": 12,
+      "scope": "synthetic backend-failure families; not human users or intelligence",
+      "providerCallsBefore": 80,
+      "providerCallsAfter": 120
+    },
+    {
+      "baseline": 72,
+      "candidate": 96,
+      "total": 96,
+      "gain": 0.25,
+      "regressions": 0,
+      "familyCount": 12,
+      "scope": "synthetic backend-failure families; not human users or intelligence",
+      "providerCallsBefore": 80,
+      "providerCallsAfter": 120
+    }
+  ],
+  "seedsRevealedAfterDecision": [
+    "eb8cb97f60e8c9db438882058867568fc5664772e8817f5e",
+    "e4efbd1fa461567e925a90576c30e10b3338a6fe8dd46ec0"
+  ],
+  "elapsedMs": 14,
+  "independence": {
+    "separateMeasurement": true,
+    "externalIndependent": false,
+    "shared": [
+      "author",
+      "scenario families",
+      "executor"
+    ]
+  },
+  "confounders": [
+    "Failure recovery adds one CPU attempt after GPU failure; not equal-load compute",
+    "Real iPhone/GPU fault injection not performed",
+    "Timing is not a device-performance benchmark"
+  ],
+  "releaseChecks": [
+    {
+      "baseline": 72,
+      "candidate": 96,
+      "total": 96,
+      "gain": 0.25,
+      "regressions": 0,
+      "familyCount": 12,
+      "scope": "synthetic backend-failure families; not human users or intelligence",
+      "providerCallsBefore": 80,
+      "providerCallsAfter": 120
+    },
+    {
+      "baseline": 72,
+      "candidate": 96,
+      "total": 96,
+      "gain": 0.25,
+      "regressions": 0,
+      "familyCount": 12,
+      "scope": "synthetic backend-failure families; not human users or intelligence",
+      "providerCallsBefore": 80,
+      "providerCallsAfter": 120
+    }
+  ],
+  "previousProgram": {
+    "preferGpu": true,
+    "recoverProbe": false,
+    "recoverLoad": false
+  },
+  "appliedFiles": [
+    "web/backend-policy.json",
+    "web/backend-policy.js"
+  ],
+  "releaseAt": "2026-10-02T04:53:41.778Z",
+  "runId": "36966506256",
+  "event": "push"
+}
