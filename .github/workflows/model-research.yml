@@ -1,0 +1,42 @@
+name: Model candidate research
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 * * * *'
+permissions:
+  contents: read
+  models: read
+concurrency:
+  group: pinf-model-candidate-research
+  cancel-in-progress: false
+jobs:
+  candidate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - name: Generate candidate with GitHub Models and validate in bounded pipeline
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RESEARCH_MODEL: openai/gpt-4o
+        run: npm run research:model
+      - name: Summarize bounded result
+        run: |
+          if [ -f reports/model-latest.json ]; then
+            node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync("reports/model-latest.json"));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"Model candidate decision: "+r.decision+"\nScope: "+r.specification.scope+"\nNo self-promotion authority.\n")'
+          else
+            echo "No model candidate report produced." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: model-candidate-record
+          path: reports/model-latest.json
+          if-no-files-found: ignore
+          retention-days: 7
