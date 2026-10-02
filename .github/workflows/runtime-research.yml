@@ -1,0 +1,95 @@
+name: Runtime code research and verified adoption
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 * * * *'
+  push:
+    branches: [main, 'candidate/core-0.6-runtime-integration']
+    paths: ['continuity/**', 'web/backend-policy.*', 'web/chat-worker.js', 'test/continuity.test.js', '.github/workflows/runtime-research.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-runtime-code-research
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    outputs:
+      candidate: ${{ steps.record.outputs.candidate }}
+      sources: ${{ steps.record.outputs.sources }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_continuity*.py' -v
+      - run: python3 continuity/evidence.py
+      - run: node continuity/runtime-research.js
+      - name: Transfer bounded data, not executable proposals or credentials
+        id: record
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              for name,file in [('candidate','backend-candidate.json'),('sources','runtime-sources.json')]:
+                  data=pathlib.Path('reports',file).read_bytes()
+                  assert len(data)<24000
+                  f.write(name+'='+base64.b64encode(data).decode()+'\n')
+          PY
+  validate-and-adopt:
+    needs: research
+    if: github.ref == 'refs/heads/main' && github.repository == 'kou971223/project-infinity'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Decode data without running generated code
+        env:
+          CANDIDATE: ${{ needs.research.outputs.candidate }}
+          SOURCES: ${{ needs.research.outputs.sources }}
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os,json
+          pathlib.Path('reports').mkdir(exist_ok=True)
+          for var,file in [('CANDIDATE','backend-candidate.json'),('SOURCES','runtime-sources.json')]:
+              data=base64.b64decode(os.environ[var],validate=True)
+              assert len(data)<24000
+              json.loads(data)
+              pathlib.Path('reports',file).write_bytes(data)
+          PY
+      - name: Independently rerun the fixed behavioral contract before preparation
+        run: node continuity/runtime-research.js --prepare
+      - run: npm test
+      - name: Publish only compiler-produced program files after actual verification
+        id: apply
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- web/backend-policy.json web/backend-policy.js; then
+            echo 'applied=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'project-infinity-research'
+          git config user.email 'project-infinity-research@users.noreply.github.com'
+          git add -- web/backend-policy.json web/backend-policy.js reports/backend-promotion.json
+          git commit -m 'research: adopt behaviorally verified model-startup program'
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:main
+          echo 'applied=true' >> "$GITHUB_OUTPUT"
+      - name: Preserve actual outcome in separate data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUNTIME_APPLIED: ${{ steps.apply.outputs.applied }}
+        run: node continuity/publish-record.js

@@ -29,7 +29,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
   server.on('request',async(req,res)=>{
     try{
       const url=new URL(req.url,'http://localhost');
-      const files={'/':'web/index.html','/free-chat.js':'web/free-chat.js','/chat-worker.js':'web/chat-worker.js'};
+      const files={'/':'web/index.html','/free-chat.js':'web/free-chat.js','/chat-worker.js':'web/chat-worker.js','/model-backend.js':'continuity/backend.js','/backend-policy.js':'web/backend-policy.js'};
       if(req.method==='GET'&&Object.hasOwn(files,url.pathname)){
         const html=url.pathname==='/';res.writeHead(200,{'Content-Type':html?'text/html; charset=utf-8':'text/javascript; charset=utf-8',
           'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'});
