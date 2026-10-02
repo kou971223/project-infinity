@@ -1,0 +1,195 @@
+{
+  "schema": "PINF-RUNTIME-PUBLIC-1",
+  "at": "2026-10-02T04:53:46.396Z",
+  "runId": "36966506256",
+  "event": "push",
+  "decision": "ADOPT_BOUNDED_RUNTIME",
+  "applied": true,
+  "candidate": {
+    "schema": "PINF-BACKEND-REPORT-1",
+    "exp": "EXP-0e691d5e-3265-419a-b45a-3ca8319736e5",
+    "at": "2026-10-02T04:53:30.192Z",
+    "protocol": {
+      "id": "PINF-BACKEND-ACC-1",
+      "candidateCount": 8,
+      "developmentRepeats": 1,
+      "confirmRepeats": 8,
+      "replicateRepeats": 8,
+      "requiredPassRate": 1,
+      "allowedRegressions": 0,
+      "minGain": 0.05,
+      "scope": "local-model startup recovery only",
+      "stopping": "one frozen selected candidate; two new independent seed streams; no post-result tuning"
+    },
+    "protocolHash": "5a4bd47b16b9cd82df2bb7200b4f3734af7a6d3cfe8b44366087b319e026d586",
+    "baseline": {
+      "preferGpu": true,
+      "recoverProbe": false,
+      "recoverLoad": false
+    },
+    "baselineHash": "21d5d3e00d71c4dbcc77a9571b96e7a18f32059aa1be8e2bb18079bf4fae98b0",
+    "candidate": {
+      "preferGpu": true,
+      "recoverProbe": true,
+      "recoverLoad": true
+    },
+    "candidateHash": "b12cdf1a277333e2060955b0c55094c13a1bd6af820814a4c37fcd00d0e51437",
+    "attempts": [
+      {
+        "hash": "8b0cffd1f2e019e0090b72bb09b690970f991fb45128da191bb6c75c16fce1aa",
+        "passed": 10,
+        "total": 12
+      },
+      {
+        "hash": "0038374a1e77e1460914b3683f0825b8214e8460866b2e92ca819a0a12cf1ad8",
+        "passed": 10,
+        "total": 12
+      },
+      {
+        "hash": "d4aa57d4ec07a71754297964b12c1fcb810005937f26b571e82e35b04e9e9422",
+        "passed": 10,
+        "total": 12
+      },
+      {
+        "hash": "6f6519ce8fd120c6d72662a4efd3c74eadf27dbe53043eb67973ff533925d84c",
+        "passed": 10,
+        "total": 12
+      },
+      {
+        "hash": "21d5d3e00d71c4dbcc77a9571b96e7a18f32059aa1be8e2bb18079bf4fae98b0",
+        "passed": 9,
+        "total": 12
+      },
+      {
+        "hash": "f99e64b734677128ffcb27367a3eb5ca78fa6420e4dbfeedc0e11445e7561420",
+        "passed": 11,
+        "total": 12
+      },
+      {
+        "hash": "f79748b8c706ee3249397ca6b82a54be0b0a4256a851dd9abd45250ce8b18bc5",
+        "passed": 10,
+        "total": 12
+      },
+      {
+        "hash": "b12cdf1a277333e2060955b0c55094c13a1bd6af820814a4c37fcd00d0e51437",
+        "passed": 12,
+        "total": 12
+      }
+    ],
+    "origin": "enumerative program synthesis; no LLM improvement claim",
+    "taxonomy": "E1 application reliability",
+    "overallProjectAccepted": false,
+    "decision": "ADOPT_BOUNDED_RUNTIME",
+    "comparisons": [
+      {
+        "baseline": 72,
+        "candidate": 96,
+        "total": 96,
+        "gain": 0.25,
+        "regressions": 0,
+        "familyCount": 12,
+        "scope": "synthetic backend-failure families; not human users or intelligence",
+        "providerCallsBefore": 80,
+        "providerCallsAfter": 120
+      },
+      {
+        "baseline": 72,
+        "candidate": 96,
+        "total": 96,
+        "gain": 0.25,
+        "regressions": 0,
+        "familyCount": 12,
+        "scope": "synthetic backend-failure families; not human users or intelligence",
+        "providerCallsBefore": 80,
+        "providerCallsAfter": 120
+      }
+    ],
+    "seedsRevealedAfterDecision": [
+      "eb8cb97f60e8c9db438882058867568fc5664772e8817f5e",
+      "e4efbd1fa461567e925a90576c30e10b3338a6fe8dd46ec0"
+    ],
+    "elapsedMs": 14,
+    "independence": {
+      "separateMeasurement": true,
+      "externalIndependent": false,
+      "shared": [
+        "author",
+        "scenario families",
+        "executor"
+      ]
+    },
+    "confounders": [
+      "Failure recovery adds one CPU attempt after GPU failure; not equal-load compute",
+      "Real iPhone/GPU fault injection not performed",
+      "Timing is not a device-performance benchmark"
+    ]
+  },
+  "sources": {
+    "schema": "PINF-SOURCES-1",
+    "access": "fetched",
+    "items": [
+      {
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "status": "official_document_body_retrieved_not_independent_validation"
+      },
+      {
+        "title": "Transformers.js 3.8.1 dtypes",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "status": "official_document_body_retrieved_not_independent_validation"
+      }
+    ],
+    "sources": [
+      {
+        "id": "HF-WEBGPU-3.8.1",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "kind": "official_versioned_documentation",
+        "at": "2026-10-02T04:53:29Z",
+        "claimVerification": "not_adjudicated",
+        "dependencyCluster": "huggingface-docs",
+        "access": "fetched",
+        "sha256": "8272f167801164e1624259ea17c4db54c8eb942ab7281de08bd1519a999a1f4b",
+        "bytes": 106642,
+        "scope": "documentation_body_retrieved",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "sourceStatus": "available_at_access"
+      },
+      {
+        "id": "HF-DTYPES-3.8.1",
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "kind": "official_versioned_documentation",
+        "at": "2026-10-02T04:53:29Z",
+        "claimVerification": "not_adjudicated",
+        "dependencyCluster": "huggingface-docs",
+        "access": "fetched",
+        "sha256": "05c5e17f391af1b1d4069cb3c40b8f783c9070caffcf11ae88f506e07c4a7a29",
+        "bytes": 108271,
+        "scope": "documentation_body_retrieved",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
+        "sourceStatus": "available_at_access"
+      },
+      {
+        "id": "ARXIV-AI-RSS",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "kind": "primary_abstract_feed",
+        "at": "2026-10-02T04:53:30Z",
+        "claimVerification": "not_adjudicated",
+        "dependencyCluster": "arxiv-feed",
+        "access": "unavailable",
+        "errorType": "ValueError",
+        "scope": "unverified"
+      }
+    ],
+    "sourceCount": 2,
+    "independentEvidenceCount": "not_established",
+    "privateDataUsed": false,
+    "limits": [
+      "Source retrieval is not claim confirmation or independent replication",
+      "No feed item is called a fully read paper",
+      "All failures retained; no inference from failed access"
+    ]
+  },
+  "chatModelUpdated": false,
+  "overallProjectAccepted": false,
+  "recordHash": "446aa119513abc3454006f8c4e1a06b592f9719e725bf6b6092eac8774b7ebac"
+}
