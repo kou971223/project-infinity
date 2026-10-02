@@ -37,7 +37,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
       }
       if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,version:'0.4.0',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
       if(req.method==='GET'&&['/api/free/status','/api/status'].includes(url.pathname))return json(res,200,{version:'0.4.0',zeroCostMode:true,
-        chat:'browser-local model; requires initial download and device support',model:'Qwen2.5-0.5B-Instruct',
+        chat:'browser keyless remote inference; no local model startup',model:'Pollinations text API model=openai',
         research:await researchRecord(),paidInferenceEnabled:false,fullAppSelfRewrite:false,
         foundationTraining:'separate partial-weight CPU experiment; consult run evidence',
         independentExternalValidation:false,overallProjectAccepted:false});
