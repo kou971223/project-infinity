@@ -26,7 +26,8 @@ jobs:
           python3 -m venv .browserenv
           .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
           .browserenv/bin/python -m playwright install --with-deps chromium
-      - name: Real remote inference, two turns, history and mobile layout\n        run: |
+      - name: Real remote inference, two turns, history and mobile layout
+        run: |
           node continuity/service.js > /tmp/pinf-browser-server.log 2>&1 &
           PID=$!
           trap 'kill "$PID" || true' EXIT
