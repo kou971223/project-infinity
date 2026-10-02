@@ -25,7 +25,8 @@ jobs:
       - run: npm test
       - run: npm run research -- --fetch-source
       - name: Summary (not self-certification)
-        run: node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync("reports/latest.json"));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"Decision: "+r.decision+"\nScope: response text extraction only.\nSource access: "+r.source.runtimeAccess+"\n")'
+        run: |
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync("reports/latest.json"));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"Decision: "+r.decision+"\nScope: response text extraction only.\nSource access: "+r.source.runtimeAccess+"\n")'
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: candidate-record
