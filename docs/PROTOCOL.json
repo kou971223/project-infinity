@@ -1,0 +1,13 @@
+{
+  "version": "PINF-ACC-EXTRACT-1",
+  "scope": "response-text-extraction",
+  "minGain": 0.05,
+  "requirePerfectContract": true,
+  "regressionsAllowed": 0,
+  "maxCandidates": 16,
+  "devRepeats": 2,
+  "confirmRepeats": 12,
+  "replicationRepeats": 12,
+  "stopping": "one selected candidate, one fresh confirmatory and one fresh replication; no post-result tuning",
+  "promotion": "bounded module only; never app privileges, evaluator, thresholds or model weights"
+}

@@ -1,25 +1,88 @@
-import express from "express";
-import { snapshot } from "./state.js";
-import { runResearchCycle } from "./research-cycle.js";
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { randomUUID,timingSafeEqual } from 'node:crypto';
+import { pathToFileURL,fileURLToPath } from 'node:url';
+import { execute } from './program.js';
+import { Archive,hash } from './archive.js';
+import { oracle } from './evaluation.js';
+import { runResearchCycle } from './research-cycle.js';
 
-const app=express();
-app.use(express.json({limit:"1mb"}));
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const approved=()=>JSON.parse(fs.readFileSync(path.join(ROOT,'modules/response-extractor.json'),'utf8'));
+export function extractGuarded(archive,response){
+  const active=archive.active();let output;
+  try{output=execute(active.program,response).value;}catch{output=null;}
+  const expected=oracle(response);
+  if(output!==expected){
+    archive.append('RUNTIME_REGRESSION',{candidate:active.id,inputHash:hash(response),rawInputStored:false});
+    if(active.parent)archive.rollback('runtime_contract_regression',{role:'validator'});
+    // Fail-safe result comes from the separate trusted reference, not the failed code.
+    output=expected;
+  }
+  return output;
+}
 
-app.get("/",(_req,res)=>res.type("html").send(`<!doctype html>
-<html lang="ja"><head><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Project ∞</title><style>
-body{margin:0;background:#080a0e;color:#eef2f7;font:16px system-ui;display:grid;place-items:center;min-height:100vh}
-main{width:min(760px,90vw)}h1{font-size:44px;margin:0 0 12px}p{color:#9aa6b7;line-height:1.8}
-code{color:#78aaff}.box{border:1px solid #252b35;border-radius:18px;padding:22px;background:#0d1117}
-</style></head><body><main><h1>Project ∞</h1><div class="box">
-<p>Open-ended AI research infrastructure.</p>
-<p>常時研究・Candidate生成・検証・昇格・Rollbackを分離した基盤です。</p>
-<p>Health: <code>/health</code> / Status: <code>/api/status</code></p>
-</div></main></body></html>`));
-
-app.get("/health",(_req,res)=>res.json({ok:true,version:snapshot().version}));
-app.get("/api/status",(_req,res)=>res.json(snapshot()));
-app.post("/api/research-cycle",(req,res)=>res.json(runResearchCycle(req.body?.trigger||"manual")));
-
-const port=Number(process.env.PORT||3000);
-app.listen(port,()=>console.log(`Project Infinity listening on ${port}`));
+export function createServer({dataDir=path.join(ROOT,'.runtime','web'),fetcher=globalThis.fetch}={}){
+  const archive=new Archive(dataDir);archive.seed(approved());
+  let latest=null,busy=false,nextLab=0;
+  const reply=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data));};
+  const body=async req=>{let size=0,parts=[];for await(const p of req){size+=p.length;if(size>65536)throw new Error('BODY_LIMIT');parts.push(p);}return JSON.parse(Buffer.concat(parts).toString()||'{}');};
+  const owner=req=>{
+    const secret=process.env.OWNER_TOKEN, supplied=(req.headers.authorization||'').replace(/^Bearer /,'');
+    if(!secret||supplied.length!==secret.length)return false;
+    return timingSafeEqual(Buffer.from(secret),Buffer.from(supplied));
+  };
+  const server=http.createServer(async(req,res)=>{
+    try{
+      const url=new URL(req.url,'http://localhost');
+      const origin=req.headers.origin;
+      if(req.method==='POST'&&origin&&new URL(origin).host!==req.headers.host)return reply(res,403,{error:'ORIGIN_DENIED'});
+      if(req.method==='GET'&&url.pathname==='/'){
+        res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','X-Content-Type-Options':'nosniff','Cache-Control':'no-cache','Referrer-Policy':'no-referrer'});
+        return res.end(fs.readFileSync(path.join(ROOT,'src/ui.html'),'utf8'));
+      }
+      if(req.method==='GET'&&url.pathname==='/health')return reply(res,200,{ok:true,version:'0.2.0',revision:process.env.RENDER_GIT_COMMIT||'local',module:archive.active().id});
+      if(req.method==='GET'&&url.pathname==='/api/status')return reply(res,200,{
+        version:'0.2.0',activeModule:archive.active().id,audit:archive.verify(),busy,
+        capabilities:{executableProgramSynthesis:true,isolatedEvaluation:true,boundedAdoption:true,rollback:true,externalModelConfigured:!!(process.env.OPENAI_API_KEY&&process.env.OPENAI_MODEL),foundationTraining:false,arbitraryAppRewrite:false},
+        storage:process.env.RENDER?'ephemeral local runtime; committed release evidence survives redeploy':'local-filesystem',
+        schedule:'see GitHub Actions; a cron definition is not evidence of completed future runs',
+        humanOrExternalIndependentReplication:false,defaultGenerator:'enumerative program synthesis, not an LLM'
+      });
+      if(req.method==='GET'&&url.pathname==='/api/result'){
+        const f=path.join(ROOT,'reports','release.json');return reply(res,200,latest||(fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')):null));
+      }
+      if(req.method==='POST'&&url.pathname==='/api/extract'){
+        const input=await body(req);return reply(res,200,{text:extractGuarded(archive,input),module:archive.active().id});
+      }
+      if(req.method==='POST'&&(url.pathname==='/api/lab'||url.pathname==='/api/research-cycle')){
+        await body(req);if(busy||Date.now()<nextLab)return reply(res,429,{error:'実験実行中、または間隔制限中です。少し待ってください。'});
+        busy=true;nextLab=Date.now()+60000;
+        try{
+          const temp=fs.mkdtempSync(path.join(os.tmpdir(),'pinf-rehearsal-'));
+          try{latest=await runResearchCycle({dir:temp,rehearsal:true});}finally{fs.rmSync(temp,{recursive:true,force:true});}
+          return reply(res,200,latest);
+        }finally{busy=false;}
+      }
+      if(req.method==='POST'&&url.pathname==='/api/chat'){
+        if(!owner(req))return reply(res,401,{error:'OWNER_AUTH_REQUIRED'});
+        if(!process.env.OPENAI_API_KEY||!process.env.OPENAI_MODEL)return reply(res,503,{error:'MODEL_NOT_CONNECTED'});
+        const input=await body(req);
+        if(!Array.isArray(input.messages)||input.messages.length>24||input.messages.some(m=>!['user','assistant'].includes(m.role)||typeof m.content!=='string'||m.content.length>12000))return reply(res,400,{error:'INVALID_MESSAGES'});
+        const messages=input.messages.map(m=>({role:m.role,content:m.content}));
+        const result=await fetcher('https://api.openai.com/v1/responses',{
+          method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+process.env.OPENAI_API_KEY},signal:AbortSignal.timeout(45000),
+          body:JSON.stringify({model:process.env.OPENAI_MODEL,instructions:'Answer in Japanese. Distinguish evidence from guesses. Never claim weight training, autonomous full-app rewriting or scientific improvements occurred without evidence.',input:messages,max_output_tokens:1800,store:false})
+        });
+        if(!result.ok)return reply(res,502,{error:'MODEL_PROVIDER_ERROR',providerStatus:result.status});
+        const r=await result.json();if(r.status&&r.status!=='completed')return reply(res,502,{error:'MODEL_INCOMPLETE'});
+        return reply(res,200,{reply:extractGuarded(archive,r),module:archive.active().id});
+      }
+      return reply(res,404,{error:'NOT_FOUND'});
+    }catch(e){return reply(res,400,{error:['BODY_LIMIT','INPUT_SIZE','OUTPUT_CONTRACT','STEP_LIMIT'].includes(e.message)?e.message:'REQUEST_FAILED'});}
+  });
+  server.requestTimeout=70000;return server;
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){createServer().listen(Number(process.env.PORT||3000),'0.0.0.0',()=>console.log('Project Infinity Core 0.2 ready'));}

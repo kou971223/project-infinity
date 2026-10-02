@@ -1,17 +1,31 @@
-name: CI
+name: Core verification
 on:
   push:
-    branches: [main, "candidate/**"]
+    branches: [main, 'candidate/**']
   pull_request:
     branches: [main]
 permissions:
   contents: read
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: {node-version: 22, cache: npm}
-      - run: npm install
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
       - run: npm test
+      - run: npm run verify:cycle
+      - run: npm run verify:oracle
+      - run: npm run research
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verification-${{ github.run_id }}
+          path: |
+            reports/rehearsal.json
+            reports/python-oracle-result.json
+            reports/latest.json
+          retention-days: 7

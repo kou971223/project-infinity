@@ -1,32 +1,55 @@
-# Project ∞
+# Project ∞ Core 0.2
 
-Evidence-driven, open-ended AI research infrastructure.
+**状態: 実行できる限定コード改良Prototype。Project ∞全体の完成・汎用知能向上・RSI成立ではありません。**
 
-## Current architecture
-- Chat/API surface
-- Continuous research cycle
-- Candidate changes are never promoted by self-assertion
-- Validation gate + rollback-ready lineage
-- Runtime capability registry
-- Source changes go through Git/CI rather than direct production mutation
-- Model-training lane is an interface until training compute/model weights are connected
+旧0.1の研究処理は固定文を記録するだけでした。この版は、実際に候補プログラムを合成し、隔離実行し、旧版比較・新規入力での再試験・採用・復元まで処理します。
 
-## Important boundary
-Open-ended means the research/search space is not artificially frozen. It does **not** mean infinite compute, guaranteed improvement, zero errors, unrestricted operation, or perpetual availability.
+## 今回実際に扱う対象
 
-## Run
-```bash
-npm install
-npm start
+以前のFloot版で起きた「Responses APIの本文を読み取れない」既知不具合を、**専用の再現領域**で修復します。旧版は `output_text` の直下文字列だけを見る処理です。これは現在の会話サイトを故意に壊す実験ではありません。
+
+候補は専用データフロー言語の実行プログラムです。モデルへのプロンプトにコード文字列を貼って「従う」方式ではなく、命令をインタープリターが実行します。生成したJavaScriptラッパーも保存します。任意のJavaScriptを安全と称してホストでevalすることはしません。
+
+標準生成器は**列挙的プログラム合成**です。LLMによる新規研究・新コード生成の実証や、基盤モデルの学習ではありません。
+
+## 使用
+
+Node.js 22以上。外部npm依存なし。
+
+```sh
 npm test
-npm run research
+npm run verify:cycle
+npm run verify:oracle  # Python 3が必要。別言語で結果を再採点
+npm run research      # 現行モジュールを改善できなければNO_CHANGE
+npm start
 ```
 
-## Environment
-- `PORT` supplied by hosting
-- `OPENAI_API_KEY` optional; when absent the service remains operational in degraded research mode
-- `DATABASE_URL` optional future persistent evidence store
+- `/` : 日本語の実験結果・状態画面
+- `/api/status` : 実装状態。能力の自己申告ではない
+- `/api/extract` : 採用した実行プログラムによる本文抽出
+- `/api/lab` : 分離領域での旧不具合修復再現。毎分最大1回、同時実行1件
+- `/api/chat` : `OWNER_TOKEN`と`OPENAI_API_KEY`、`OPENAI_MODEL`が設定された場合だけ有効。今回のLiveモデル接続は未検証
 
-## Promotion invariant
-Candidate -> frozen -> sandbox/test -> validation -> promotion/branch/reject -> monitor -> rollback.
-A candidate cannot promote itself.
+従来のFloot会話サイトは別のアプリです。本Coreと同一の実装・学習状態とは扱いません。
+
+## 採用条件
+
+開発例のみで最大16案を比較 → 候補hashを固定 → 新規乱数seedで144入力を検査 → 別seed・別workerで144入力を再検査。必須ケース全合格、既存ケースの悪化なし、5ポイント以上の改善、タスク群単位bootstrap区間の下端が0超でのみ限定採用します。
+
+測定しているのはこの形式検査上の正確さです。未知ドメインの知能や研究能力ではありません。評価コードは生成器と分離していますが、契約・開発者・問題生成規則を共有しています。Python再採点も外部研究者による独立追試ではありません。
+
+## 無操作時の実行
+
+GitHub Actionsの `Bounded code research` を毎時17分に設定しています。限定モジュールに対して、一次仕様の取得状態記録・候補合成・検証を行います。改善がなければコードを変えません。改善がある場合だけ別ジョブで新しい試験を再実施し、固定の3ファイルだけを書き換えます。候補に評価器・ワークフロー・権限・秘密情報は渡しません。
+
+スケジュール保存と将来の実行成功は別です。GitHubの遅延、無活動による停止、権限制約等に従います。LLMの常時研究でも秒単位のリアルタイム進化でもありません。Actionsの結果Artifactは7日保持で、それ以上の研究アーカイブ保存は未整備です。正式研究には長期ストレージが必要です。
+
+## セキュリティと記録
+
+命令・項目名・長さ・深さ・入力出力サイズ・操作数を制限し、別Workerで実行します。候補にネットワーク、ファイル、プロセス、テスト正解、検証器、昇格関数を渡しません。
+
+ローカルJSONLにはSHA-256チェーンを付け、候補・採用・復元・Evidence失効の履歴を残します。ただし管理者が履歴全体を書き直す攻撃へのWORM保証ではありません。公開Gitのリリース記録で外部アンカーを作ります。Render無料サービスのローカルファイルは再起動等で失われるため、永続DBとは呼びません。
+
+## 未達
+
+基盤モデルの重み学習、任意のアプリ全体の自動改修、汎用的な自律AI研究、外部研究者による独立追試、永続的な私的研究DB、総合知能向上、無限・永久の稼働は未達です。課金・新規有料サービス契約は行いません。

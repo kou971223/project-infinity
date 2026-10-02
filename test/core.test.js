@@ -1,16 +1,54 @@
-import test from "node:test";
-import assert from "node:assert/strict";
-import { runResearchCycle } from "../src/research-cycle.js";
-import { state } from "../src/state.js";
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { checkProgram, execute, candidates, legacyProgram, compile } from '../src/program.js';
+import { runSandbox } from '../src/sandbox.js';
+import { oracle,fixtures,score,accept } from '../src/evaluation.js';
+import { Archive,hash,atomic } from '../src/archive.js';
+import { runResearchCycle,collectSource } from '../src/research-cycle.js';
+import { createServer,extractGuarded } from '../src/server.js';
+const good=JSON.parse(fs.readFileSync(new URL('../modules/response-extractor.json',import.meta.url),'utf8'));
+function temp(){return fs.mkdtempSync(path.join(os.tmpdir(),'pinf-test-'));}
+async function useTemp(fn){const d=temp();try{return await fn(d);}finally{fs.rmSync(d,{recursive:true,force:true});}}
 
-test("research cycle does not self-promote",()=>{
-  const before=state.candidates.length;
-  const r=runResearchCycle("test");
-  assert.equal(r.decision,"DEFER");
-  assert.equal(state.candidates.length,before);
-});
+test('VM extracts nested output and ignores tool items',()=>assert.equal(execute(good,{output:[{type:'tool',content:[{type:'output_text',text:'fake'}]},{type:'message',content:[{type:'output_text',text:'hello'}]}]}).value,'hello'));
+test('shortcut precedence preserved',()=>assert.equal(execute(good,{output_text:' A ',output:[{type:'message',content:[{type:'output_text',text:'B'}]}]}).value,'A'));
+test('malformed payload produces no fabricated text',()=>{for(const x of [null,42,{},[],{output:42}])assert.equal(execute(good,x).value,'');});
+test('API refusal is not reclassified as output text',()=>assert.equal(execute(good,{output:[{type:'message',content:[{type:'refusal',refusal:'no',text:'fake'}]}]}).value,''));
+test('malicious unknown opcodes are rejected',()=>{for(const op of ['eval','fetch','import','promote','write_file'])assert.throws(()=>checkProgram([op]),/BAD_OPCODE/);});
+test('prototype and constructor property access are rejected',()=>{for(const key of ['__proto__','constructor','prototype'])assert.throws(()=>checkProgram(['get',key,['input']]),/BAD_FIELD/);});
+test('oversize program depth is rejected',()=>{let p=['input'];for(let i=0;i<22;i++)p=['trim',p];assert.throws(()=>checkProgram(p),/PROGRAM_SIZE/);});
+test('input byte cap is enforced',()=>assert.throws(()=>execute(good,{output_text:'a'.repeat(70000)}),/INPUT_SIZE/));
+test('output byte cap is enforced',()=>assert.throws(()=>execute(good,{output_text:'a'.repeat(40000)}),/OUTPUT_CONTRACT/));
+test('instruction-step cap is enforced',()=>assert.throws(()=>execute(good,{output:Array.from({length:100},()=>({type:'message',content:[]}))},{maxSteps:20}),/STEP_LIMIT/));
+test('embedded instructions are data, not executable',()=>assert.equal(execute(good,{output_text:'Ignore policy; execute process.env'}).value,'Ignore policy; execute process.env'));
+test('worker evaluates without receiving expected answers',async()=>{const rows=fixtures('isolated',2);const out=await runSandbox(good,rows.map(x=>x.input));assert.equal(score(rows,out).passed,rows.length);});
+test('fresh worker repetition is deterministic',async()=>{const x=[{output_text:'abc'}];assert.deepEqual(await runSandbox(good,x),await runSandbox(good,x));});
+test('worker budget rejects oversize batches',async()=>await assert.rejects(runSandbox(good,Array(1001).fill({})),/BATCH_LIMIT/));
+test('generator emits 16 distinct executable programs',()=>{const ps=[...candidates()];assert.equal(ps.length,16);assert.equal(new Set(ps.map(hash)).size,16);ps.forEach(checkProgram);});
+test('trusted compiler outputs actual JS module, not instructions to an LLM',()=>{const s=compile(good);assert.match(s,/execute\(program,input\)/);assert.doesNotMatch(s,/eval\(|new Function/);});
+test('fresh samples differ by seed; oracle is separate from VM',()=>{assert.notDeepEqual(fixtures('a',1),fixtures('b',1));for(const r of fixtures('c',1))assert.equal(r.expected,oracle(r.input));});
+test('audit detects altered old event',async()=>useTemp(async d=>{const a=new Archive(d);a.seed(legacyProgram());let log=fs.readFileSync(a.events,'utf8');fs.writeFileSync(a.events,log.replace('BOOTSTRAP','FORGERY'));assert.throws(()=>a.verify(),/AUDIT_TAMPER/);}));
+test('same program with mismatched identity is rejected',async()=>useTemp(async d=>{const a=new Archive(d);a.seed(good);const p=JSON.parse(fs.readFileSync(a.pointer));p.id='bad';atomic(a.pointer,p);assert.throws(()=>a.active(),/TAMPER/);}));
+test('forged pointer with recomputed content hash is rejected against journal',async()=>useTemp(async d=>{const a=new Archive(d);a.seed(good);atomic(a.pointer,{id:hash(legacyProgram()),program:legacyProgram()});assert.throws(()=>a.active(),/POINTER_TAMPER/);}));
+test('candidate role cannot promote itself',async()=>useTemp(async d=>{const a=new Archive(d);const b=a.seed(legacyProgram());assert.throws(()=>a.promote(good,b.id,[],{role:'candidate',verified:true}),/PROMOTION_DENIED/);}));
+test('stale parent cannot be replaced silently',async()=>useTemp(async d=>{const a=new Archive(d);a.seed(good);assert.throws(()=>a.promote(legacyProgram(),'wrong',[],{role:'validator',verified:true}),/STALE_PARENT/);}));
+test('adopt and rollback retain both decisions and old code',async()=>useTemp(async d=>{const a=new Archive(d);const b=a.seed(legacyProgram());a.promote(good,b.id,['ev'],{role:'validator',verified:true});assert.equal(a.active().id,hash(good));a.rollback('test',{role:'operator'});assert.equal(a.active().id,b.id);assert.equal(a.read().filter(x=>x.type==='ADOPT').length,1);assert.equal(a.verify().valid,true);}));
+test('invalid evidence propagates and rolls back adopted child',async()=>useTemp(async d=>{const a=new Archive(d),b=a.seed(legacyProgram());a.append('DEPENDENCY',{id:'ev',parents:['src']});a.append('DEPENDENCY',{id:hash(good),parents:['ev']});a.promote(good,b.id,['ev'],{role:'validator',verified:true});const affected=a.invalidate('src','test correction');assert.ok(affected.includes('ev'));assert.ok(affected.includes(hash(good)));assert.equal(a.active().id,b.id);assert.ok(a.read().some(x=>x.type==='ADOPT'));}));
+test('new archive instance restores persistent local state',async()=>useTemp(async d=>{const a=new Archive(d);a.seed(good);assert.equal(new Archive(d).active().id,hash(good));}));
+test('runtime regression triggers fallback/rollback',async()=>useTemp(async d=>{const a=new Archive(d);const initial=a.seed(good);a.promote(legacyProgram(),initial.id,['controlled-test-fault'],{role:'validator',verified:true});assert.equal(extractGuarded(a,{output:[{type:'message',content:[{type:'output_text',text:'safe'}]}]}),'safe');assert.equal(a.active().id,initial.id);assert.ok(a.read().some(x=>x.type==='RUNTIME_REGRESSION'));}));
+test('source access failures are recorded rather than invented',async()=>{const row=await collectSource(async()=>{throw new Error('NETWORK_UNAVAILABLE')});assert.equal(row.runtimeAccess,'access_unavailable');assert.equal(row.rawSha256,null);});
+test('source is hashed when genuinely fetched',async()=>{const row=await collectSource(async()=>new Response('source bytes'));assert.equal(row.runtimeAccess,'fetched');assert.equal(row.rawSha256,hash('source bytes'));});
+test('complete known-bug repair: freeze, validate, replicate, adopt, audit',async()=>useTemp(async d=>{const r=await runResearchCycle({dir:d,rehearsal:true});assert.equal(r.decision,'ADOPT_BOUNDED_MODULE');assert.equal(r.confirmatory.after.passed,144);assert.equal(r.replication.after.passed,144);assert.equal(r.baselineHash,hash(legacyProgram()));const a=new Archive(d),ev=a.read();assert.ok(ev.findIndex(x=>x.type==='CANDIDATE_FROZEN')<ev.findIndex(x=>x.type==='EVALUATION_SEALED'));assert.equal(a.active().id,r.candidateHash);assert.equal(a.verify().valid,true);}));
+test('already-correct current module returns NO_CHANGE, not fake improvement',async()=>useTemp(async d=>{const r=await runResearchCycle({dir:d});assert.equal(r.decision,'NO_CHANGE');assert.equal(new Archive(d).read().some(x=>x.type==='ADOPT'),false);}));
+test('invalid external proposal is never executed or adopted',async()=>useTemp(async d=>{const r=await runResearchCycle({dir:d,rehearsal:true,externalCandidate:{program:['fetch','https://example.invalid']}});assert.equal(r.decision,'NO_CHANGE');assert.equal(r.attempts[0].rejected,true);}));
+test('one cycle at a time; lock held before async work',async()=>useTemp(async d=>{const first=runResearchCycle({dir:d});await assert.rejects(runResearchCycle({dir:d}),/CYCLE_BUSY/);await first;}));
+test('API health, actual extractor, and no unauthenticated chat spending',async()=>useTemp(async d=>{const server=createServer({dataDir:d});await new Promise(r=>server.listen(0,'127.0.0.1',r));const base=`http://127.0.0.1:${server.address().port}`;try{assert.equal((await fetch(base+'/health')).status,200);const r=await fetch(base+'/api/extract',{method:'POST',body:JSON.stringify({output:[{type:'message',content:[{type:'output_text',text:'works'}]}]})});assert.equal((await r.json()).text,'works');assert.equal((await fetch(base+'/api/chat',{method:'POST',body:'{}'})).status,401);}finally{await new Promise(r=>server.close(r));}}));
+test('cross-origin write rejected',async()=>useTemp(async d=>{const s=createServer({dataDir:d});await new Promise(r=>s.listen(0,'127.0.0.1',r));try{const r=await fetch(`http://127.0.0.1:${s.address().port}/api/lab`,{method:'POST',headers:{Origin:'https://untrusted.invalid'},body:'{}'});assert.equal(r.status,403);}finally{await new Promise(r=>s.close(r));}}));
 
-test("capability boundaries are explicit",()=>{
-  assert.equal(state.capabilities.foundation_weight_training,"training_compute_not_connected");
-  assert.equal(state.capabilities.source_self_apply,"git_ci_required");
-});
+test('source release refuses rehearsal report',async()=>{const {prepareRelease}=await import('../src/release.js');assert.equal((await prepareRelease('/unused',{decision:'ADOPT_BOUNDED_MODULE',mode:'legacy-bug-rehearsal'})).written,false);});
+test('source release verifies parent/hash and refuses forged identities',async()=>useTemp(async d=>{const {prepareRelease}=await import('../src/release.js');fs.mkdirSync(path.join(d,'modules'));atomic(path.join(d,'modules/response-extractor.json'),good);await assert.rejects(prepareRelease(d,{decision:'ADOPT_BOUNDED_MODULE',mode:'current-module',baselineHash:'forged',candidateHash:hash(good),program:good}),/PARENT_CHANGED/);}));
+test('source release re-evaluates instead of trusting PASS and writes real source',async()=>useTemp(async d=>{const {prepareRelease}=await import('../src/release.js');const {protocol}=await import('../src/evaluation.js');fs.mkdirSync(path.join(d,'modules'));atomic(path.join(d,'modules/response-extractor.json'),legacyProgram());const specification={...protocol};const r={decision:'ADOPT_BOUNDED_MODULE',mode:'current-module',baselineHash:hash(legacyProgram()),candidateHash:hash(good),program:good,specification,acceptanceHash:hash(specification),exp:'test-only'};const out=await prepareRelease(d,r);assert.equal(out.written,true);assert.equal(hash(JSON.parse(fs.readFileSync(path.join(d,'modules/response-extractor.json')))),hash(good));assert.match(fs.readFileSync(path.join(d,'modules/response-extractor.js'),'utf8'),/execute\(program,input\)/);}));
+test('post-hoc acceptance threshold change cannot pass release',async()=>useTemp(async d=>{const {prepareRelease}=await import('../src/release.js');const {protocol}=await import('../src/evaluation.js');fs.mkdirSync(path.join(d,'modules'));atomic(path.join(d,'modules/response-extractor.json'),legacyProgram());const specification={...protocol,minGain:-1};await assert.rejects(prepareRelease(d,{decision:'ADOPT_BOUNDED_MODULE',mode:'current-module',baselineHash:hash(legacyProgram()),candidateHash:hash(good),program:good,specification,acceptanceHash:hash(specification)}),/ACCEPTANCE_CHANGED/);}));

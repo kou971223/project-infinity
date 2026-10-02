@@ -1,0 +1,70 @@
+name: Bounded code research
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/**', 'modules/**', '.github/workflows/research.yml']
+concurrency:
+  group: pinf-bounded-code-research
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: npm run research -- --fetch-source
+      - name: Summary (not self-certification)
+        run: |
+          node -e 'const fs=require("fs"),r=JSON.parse(fs.readFileSync("reports/latest.json"));fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,"Decision: "+r.decision+"\nScope: response text extraction only.\nSource access: "+r.source.runtimeAccess+"\n")'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: candidate-record
+          path: reports/latest.json
+          retention-days: 7
+  promote-bounded-module:
+    needs: research
+    if: github.ref == 'refs/heads/main' && github.repository == 'kou971223/project-infinity'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: candidate-record
+          path: reports
+      - name: Revalidate immutable candidate and prepare only allowlisted files
+        run: node src/release.js
+      - name: Recheck full core after module preparation
+        run: npm test
+      - name: Commit only verified bounded module changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- modules/response-extractor.json modules/response-extractor.js; then
+            echo "No verified module improvement; no source mutation."
+            exit 0
+          fi
+          git config user.name "project-infinity-research"
+          git config user.email "project-infinity-research@users.noreply.github.com"
+          git add -- modules/response-extractor.json modules/response-extractor.js reports/module-promotion.json
+          git commit -m "research: adopt verified response-extractor program"
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:main

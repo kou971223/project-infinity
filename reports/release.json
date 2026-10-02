@@ -1,0 +1,136 @@
+{
+  "version": "0.2.0",
+  "exp": "EXP-456e614e-989f-45b7-a8c0-c69638a5fb34",
+  "mode": "legacy-bug-rehearsal",
+  "decision": "ADOPT_BOUNDED_MODULE",
+  "candidateOrigin": "enumerative-program-synthesis",
+  "hypothesis": "Structured raw-response traversal repairs shortcut-only response extraction without interpreting tool/refusal contents as answer text.",
+  "taxonomy": {
+    "version": "PINF-ICT-0.1",
+    "category": "E1",
+    "scope": "application reliability only; not learned model intelligence or E4/RSI"
+  },
+  "baselineHash": "d99d05a243a773657677b7c571053079675e34630b4a49dc3bae8a3e81da3855",
+  "candidateHash": "1da0ee1808757885f8f16e5495b8749bb9ba9bcc14940f0d2db21b4f3ae3a0d7",
+  "acceptanceHash": "bde0f34ddfe354b52062b269f5b3f232c6d6876e06c3a53fca21e2c67efa367d",
+  "specification": {
+    "version": "PINF-ACC-EXTRACT-1",
+    "scope": "response-text-extraction",
+    "minGain": 0.05,
+    "requirePerfectContract": true,
+    "regressionsAllowed": 0,
+    "maxCandidates": 16,
+    "devRepeats": 2,
+    "confirmRepeats": 12,
+    "replicationRepeats": 12,
+    "stopping": "one selected candidate, one fresh confirmatory and one fresh replication; no post-result tuning",
+    "promotion": "bounded module only; never app privileges, evaluator, thresholds or model weights",
+    "baselineHash": "d99d05a243a773657677b7c571053079675e34630b4a49dc3bae8a3e81da3855",
+    "mode": "legacy-bug-rehearsal",
+    "sourceId": "SRC-OPENAI-TEXT-20261002"
+  },
+  "source": {
+    "id": "SRC-OPENAI-TEXT-20261002",
+    "url": "https://developers.openai.com/api/docs/guides/text",
+    "type": "official-documentation",
+    "sourceStatus": "active_at_access",
+    "accessDate": "2026-10-02",
+    "claim": "Raw Responses output may contain multiple item types; SDK output_text is a convenience aggregation.",
+    "initialVerification": "Read via browser research tool; no independent replication implied.",
+    "applicationConvention": "Newline joining, trimming, and malformed-input handling are this application contract, not universal API guarantees.",
+    "runtimeAccess": "not_requested",
+    "rawSha256": null
+  },
+  "resources": {
+    "candidateCount": 16,
+    "developmentCasesPerCandidate": 24,
+    "confirmatoryCases": 144,
+    "replicationCases": 144,
+    "inferenceCalls": 0,
+    "financialCost": "no external model API invoked by enumerative mode",
+    "flops": "unknown",
+    "energy": "unknown"
+  },
+  "independence": {
+    "candidateEvaluatorCode": "separate",
+    "runtime": "isolated worker + non-evaluating capability-free DSL interpreter",
+    "hiddenAnswers": "not supplied to candidate",
+    "modelJudge": "none",
+    "commonDependencies": [
+      "contract",
+      "fixture generator",
+      "author"
+    ],
+    "externalReplication": "not performed"
+  },
+  "limitations": [
+    "Synthetic format variants, not natural research tasks",
+    "Known legacy bug repair, not a novel intelligence breakthrough",
+    "Same research team and shared task construct",
+    "Rehearsal rollback restores legacy code only inside isolated rehearsal state"
+  ],
+  "audit": {
+    "valid": true,
+    "events": 11,
+    "head": "d6e325d238e57544102b1ad824cacbb3a211fa5d9682ae5f8953cab3b8c39c05"
+  },
+  "confirmatory": {
+    "delta": 0.75,
+    "regressions": 0,
+    "ci95": [
+      0.5,
+      1
+    ],
+    "ciInterpretation": "task-family bootstrap within this synthetic contract suite; not a general-intelligence CI",
+    "groups": [
+      {"family":"shortcut","delta":0},
+      {"family":"raw_message","delta":1},
+      {"family":"several_parts","delta":1},
+      {"family":"tool_before_message","delta":1},
+      {"family":"non_message_text","delta":1},
+      {"family":"refusal_noise","delta":1},
+      {"family":"bad_shape","delta":0},
+      {"family":"empty_shortcut","delta":1},
+      {"family":"unicode","delta":1},
+      {"family":"nested_decoy","delta":1},
+      {"family":"mixed_types","delta":1},
+      {"family":"shortcut_precedence","delta":0}
+    ],
+    "before": {"n":144,"passed":36,"accuracy":0.25},
+    "after": {"n":144,"passed":144,"accuracy":1}
+  },
+  "replication": {
+    "delta": 0.75,
+    "regressions": 0,
+    "ci95": [0.5,1],
+    "ciInterpretation": "task-family bootstrap within this synthetic contract suite; not a general-intelligence CI",
+    "groups": [
+      {"family":"shortcut","delta":0},
+      {"family":"raw_message","delta":1},
+      {"family":"several_parts","delta":1},
+      {"family":"tool_before_message","delta":1},
+      {"family":"non_message_text","delta":1},
+      {"family":"refusal_noise","delta":1},
+      {"family":"bad_shape","delta":0},
+      {"family":"empty_shortcut","delta":1},
+      {"family":"unicode","delta":1},
+      {"family":"nested_decoy","delta":1},
+      {"family":"mixed_types","delta":1},
+      {"family":"shortcut_precedence","delta":0}
+    ],
+    "before": {"n":144,"passed":36,"accuracy":0.25},
+    "after": {"n":144,"passed":144,"accuracy":1}
+  },
+  "verification": {
+    "unitTests": {"passed":38,"failed":0,"testLog":"reports/unit-tests.tap"},
+    "pythonOracle": {"status":"PASS","cases":288,"mismatches":[],"scope":"independent language implementation on same recorded samples; not external replication"},
+    "browser": {"scope":"offline static layout rendering; live browser E2E not verified","reason":"Local URL navigation blocked by browser administrator policy; no policy bypass attempted","browser":"Chromium","width":393,"overflow":false,"inputFontSize":"16px"}
+  },
+  "runtime": {
+    "node":"v22.16.0",
+    "python":"Python 3.13.5",
+    "localExternalNetwork":"DNS unavailable; no model call performed",
+    "repeatedRun":"new random holdout inputs after unchanged code and protocol"
+  },
+  "rawReport":"Run npm run verify:cycle then npm run verify:oracle; full raw results also supplied in release ZIP."
+}
