@@ -1,0 +1,73 @@
+name: Archive-aware source research
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '29 */6 * * *'
+  push:
+    branches: [main, candidate/core-0.5-research-inheritance]
+    paths: ['autonomy/**', 'test/test_autonomy.py', 'test/autonomy-publish.test.js', '.github/workflows/autonomy.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-archive-aware-source-research
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    outputs:
+      packet: ${{ steps.packet.outputs.packet }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_*.py' -v
+      - name: Test container boundary with labeled fixtures
+        run: python3 autonomy/sandbox_selftest.py
+      - name: Install local CPU inference only
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          .venv/bin/pip install --no-cache-dir transformers==4.57.1 safetensors==0.6.2
+      - name: Read evidence history, collect literature, generate source candidate
+        id: generate
+        continue-on-error: true
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          HF_HUB_DISABLE_XET: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: .venv/bin/python autonomy/loop.py --generate
+      - name: Test frozen source in networkless credentialless containers
+        if: steps.generate.outcome == 'success'
+        run: python3 autonomy/sandbox.py
+      - name: Package data only; rejection is a research result, not a passed improvement
+        id: packet
+        if: always()
+        run: node autonomy/packet.mjs
+      - name: Fail operationally when generation did not execute
+        if: steps.generate.outcome != 'success'
+        run: exit 1
+  preserve:
+    needs: research
+    if: always() && needs.research.outputs.packet != '' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Publish history and eligible REVIEW branches; no main write or merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTONOMY_PACKET_B64: ${{ needs.research.outputs.packet }}
+        run: node autonomy/publish.mjs

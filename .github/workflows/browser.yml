@@ -2,8 +2,8 @@ name: Real local-model browser verification
 on:
   workflow_dispatch:
   push:
-    branches: [main, candidate/core-0.4-free-local-runtime]
-    paths: ['web/**', 'src/app-server.js', 'test/browser_check.py', '.github/workflows/browser.yml']
+    branches: [main, candidate/core-0.4-free-local-runtime, candidate/core-0.5-research-inheritance]
+    paths: ['web/**', 'src/app-server.js', 'src/autonomy-status.js', 'test/browser_check.py', '.github/workflows/browser.yml']
 permissions:
   contents: read
 concurrency:

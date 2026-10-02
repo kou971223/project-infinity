@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {digest} from '../autonomy/packet.mjs';
+import {createAutonomyReader,readBounded} from '../src/autonomy-status.js';
+function packet(){const x={schema:'PINF-AUTONOMY-1',generation:2,sourceCommit:'a'.repeat(40),runId:'123',history:[{},{}],sources:[],parentRecordHash:'b'.repeat(64),promoted:false,overallProjectAccepted:false,cost:{paidInferenceCalls:0,newPaidServices:0},decision:'NO_CHANGE',candidate:null,at:'2026-10-02T03:00:00Z',event:'push'};return {...x,recordHash:digest(x)};}
+test('stream is capped before full buffering',async()=>{await assert.rejects(readBounded(new Response('x'.repeat(30)),10),/SIZE/);});
+test('valid record displays actual lineage, not model generations',async()=>{const get=createAutonomyReader({fetcher:async()=>Response.json(packet()),now:()=>Date.parse('2026-10-02T04:00:00Z')});const r=await get();assert.equal(r.generation,2);assert.equal(r.productionPromotion,false);assert.equal(r.scheduleObserved,false);assert.equal(r.stale,false);});
+test('concurrent refresh coalesces',async()=>{let count=0;const get=createAutonomyReader({fetcher:async()=>{count++;await new Promise(r=>setTimeout(r,5));return Response.json(packet());}});await Promise.all([get(),get(),get()]);assert.equal(count,1);});
+test('tampered record is never displayed as verified',async()=>{const x=packet();x.generation=100;const get=createAutonomyReader({fetcher:async()=>Response.json(x)});assert.equal((await get()).available,false);});
+test('on access failure previous evidence retained as stale',async()=>{let tick=Date.parse('2026-10-02T04:00:00Z'),fail=false;const get=createAutonomyReader({fetcher:async()=>fail?new Response('{}',{status:503}):Response.json(packet()),now:()=>tick});const a=await get();tick+=130000;fail=true;const b=await get();assert.equal(a.recordHash,b.recordHash);assert.equal(b.stale,true);assert.equal(b.lastReadError,'RECORD_HTTP_503');});

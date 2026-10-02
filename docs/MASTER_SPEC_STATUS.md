@@ -1,13 +1,16 @@
-# Master Specification completion status
+# Completion record
 
-Specification: Project Infinity Master Specification v0.1, objectives unchanged.
-Implementation: Core 0.4 candidate.
-Overall: Experimental / NOT Accepted as the full Project Infinity.
+Specification: Project Infinity Master Specification v0.1 (original objectives unchanged)
+Implementation candidate: Core 0.5
+Scoped release matrix: PINF-CORE05-ACC-1 in CORE05_ACCEPTANCE.md
+Overall Project Infinity: NOT ACCEPTED
 
-Existing bounded-code acceptance remains PINF-ACC-EXTRACT-1. The separate CPU weight experiment uses PINF-LEARN-NORM-1. Neither matrix is the acceptance matrix for the whole system.
+Core 0.5 adds archival research-state inheritance, bounded public literature collection, application source inspection, actual local-model source proposals, frozen patches, separate container regression checks and a candidate-branch/data-branch publisher. An unvalidated source candidate never receives main-write, evaluator-change, deployment or credential authority.
 
-Verified research run: 36956736700. Local pretrained-model inference and partial-weight gradient updates executed; learning gain below the preregistered threshold, code proposal failed schema. No chat-weight promotion. See docs/CORE04_STATUS.md and actual workflow logs.
+This is NOT application-wide autonomous production rewriting. Passing syntax or regression tests does not prove a useful improvement. The pilot source gate can create only review branches for five application files; widening that gate requires a separate change and validation. Existing bounded-program adoption remains separate.
 
-Current Critical unresolved: general autonomous AI research, arbitrary application-wide source change pipeline, independently validated model improvement inherited by the chat model, external independent validation, long-horizon RSI evidence. Browser-local model compatibility and published deployment must be verified separately for this release. A workflow, source-code presence or model self-description is not completion evidence.
+The Core 0.4 experimental norm-vector update did not meet its gain threshold and was not promoted. It is not inherited by the browser chat. The new lane inherits research evidence and agenda history, NOT learned model weights. Record generations must not be presented as intelligence generations.
 
-No acceptance threshold was lowered after results. Original overall completion remains unaccepted even when bounded subsystem tests pass.
+Original unresolved Critical: broad independently justified source improvements and automatic promotion; verified learned-weight inheritance into the usable assistant; external independent validation; long-horizon RSI/generalization evidence; indefinite reliability and free availability are not guaranteed.
+
+Hosted test outcomes, actual model execution, published evidence, second-cycle consumption and live revision checks must be recorded separately after verification. This text alone does not certify them. No original acceptance criterion is downgraded to declare completion.
