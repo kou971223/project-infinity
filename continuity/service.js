@@ -26,12 +26,13 @@ export async function createContinuityApplication({factory=null,fetcher=globalTh
  server.on('request',async(req,res)=>{
   try{
    const url=new URL(req.url,'http://localhost');
-   if(req.method==='GET'&&url.pathname==='/health')return json(res,{ok:true,version:'0.6.0',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
+   if(req.method==='GET'&&url.pathname==='/health')return json(res,{ok:true,version:'0.6.0',uiRevision:'ios-startup-1',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
    if(req.method==='GET'&&url.pathname==='/api/runtime/status')return json(res,await status());
    if(req.method==='GET'&&url.pathname==='/continuity-ui.js'){res.writeHead(200,{'Content-Type':'text/javascript','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});return res.end(fs.readFileSync(path.join(ROOT,'continuity/ui.js')));}
    if(req.method==='GET'&&url.pathname==='/'){
     const html=fs.readFileSync(path.join(ROOT,'web/index.html'),'utf8');res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'});
-    return res.end(html.replace('Core 0.4','Core 0.6').replace('</body>','<script type="module" src="/autonomy.js"></script><script type="module" src="/continuity-ui.js"></script></body>'));
+    // Research records are fetched on demand in a separate dialog, not injected into the conversation.
+    return res.end(html);
    }
    return old(req,res);
   }catch{if(!res.headersSent)res.writeHead(500);res.end('RUNTIME_STATUS_UNAVAILABLE');}

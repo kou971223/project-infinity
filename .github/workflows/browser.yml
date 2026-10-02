@@ -2,8 +2,8 @@ name: Real local-model browser verification
 on:
   workflow_dispatch:
   push:
-    branches: [main, candidate/core-0.5-continuity, candidate/core-0.6-runtime-integration]
-    paths: ['web/**', 'src/app-server.js', 'autonomy/app.js', 'autonomy/ui.js', 'continuity/**', 'test/browser_check.py', '.github/workflows/browser.yml']
+    branches: [main, candidate/core-0.5-continuity, candidate/core-0.6-runtime-integration, fix/ios-memory-startup]
+    paths: ['web/**', 'src/app-server.js', 'autonomy/app.js', 'autonomy/ui.js', 'continuity/**', 'test/browser_check.py', 'test/startup_ui_check.py', '.github/workflows/browser.yml']
 permissions:
   contents: read
 concurrency:
@@ -26,7 +26,14 @@ jobs:
           python3 -m venv .browserenv
           .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
           .browserenv/bin/python -m playwright install --with-deps chromium
-      - name: Real WASM inference, two turns, history and mobile layout
+      - name: UI failure and cancellation contract (mock, not inference evidence)
+        run: |
+          node continuity/service.js > /tmp/pinf-ui-server.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:3000/health && break; sleep 1; done
+          .browserenv/bin/python test/startup_ui_check.py
+      - name: Actual WASM model inference, two turns, history and mobile layout
         run: |
           node continuity/service.js > /tmp/pinf-browser-server.log 2>&1 &
           PID=$!
