@@ -1,0 +1,99 @@
+name: Verified learned chat release
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Autonomous research continuity']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '53 */6 * * *'
+  push:
+    branches: [main, 'candidate/core-0.7-chat-learning']
+    paths: ['chatlearn/**', 'web/chat-worker.js', 'web/free-chat.js', 'test/chatlearn.test.js', 'test/test_chatlearn.py', 'test/chat_bridge_browser.py', '.github/workflows/chat-learning.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-chat-learning-release
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 22
+    outputs:
+      record: ${{ steps.package.outputs.record }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_chatlearn.py' -v
+      - name: Install CPU ONNX and tokenizer tools without any inference key
+        run: |
+          python3 -m venv .chatvenv
+          .chatvenv/bin/pip install --no-cache-dir onnxruntime==1.23.2 transformers==4.57.1 numpy==2.2.6 playwright==1.56.0
+      - name: Freeze accepted trained weights; compare the actual quantized chat models
+        id: evaluation
+        continue-on-error: true
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          HF_HUB_DISABLE_XET: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: .chatvenv/bin/python chatlearn/evaluate.py
+      - name: Recompute the gate and prepare a test-only release
+        if: steps.evaluation.outcome == 'success'
+        run: node chatlearn/prepare.js
+      - name: Real browser inference, verified weights, reload and rollback
+        id: browser
+        if: steps.evaluation.outcome == 'success'
+        continue-on-error: true
+        run: |
+          if [ ! -f reports/chat-release.test.json ]; then
+            echo 'Candidate not approved; old chat remains active.'
+            exit 0
+          fi
+          .chatvenv/bin/python -m playwright install --with-deps chromium
+          PINF_CHAT_BRIDGE_TEST=1 node chatlearn/app.js > /tmp/pinf-chat-bridge.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:3000/health && break; sleep 1; done
+          .chatvenv/bin/python test/chat_bridge_browser.py
+      - name: Package only bounded public data, not executable files
+        id: package
+        if: always()
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          const read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):null;
+          const ev=read('reports/chat-candidate.json');if(!ev)process.exit(0);
+          delete ev.release;
+          const record={schema:'PINF-CHAT-PUBLICATION-1',attempt:process.env.GITHUB_RUN_ATTEMPT,evaluation:ev,release:read('reports/chat-release.test.json'),browser:read('reports/chat-browser.json')};
+          const raw=Buffer.from(JSON.stringify(record));if(raw.length>140000)throw Error('RECORD_SIZE');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'record='+raw.toString('base64')+'\n');
+          console.log(JSON.stringify({execution:ev.status,decision:ev.decision,browser:record.browser?.status||'not_run',scope:'bounded norm transport; not RSI'}));
+          JS
+      - name: Do not label failed execution as successful validation
+        if: steps.evaluation.outcome != 'success' || steps.browser.outcome == 'failure'
+        run: exit 1
+  publish:
+    needs: evaluate
+    if: always() && github.ref == 'refs/heads/main' && needs.evaluate.outputs.record != ''
+    runs-on: ubuntu-22.04
+    timeout-minutes: 4
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Independently recompute gates and publish data-only model release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHAT_RECORD_B64: ${{ needs.evaluate.outputs.record }}
+        run: node chatlearn/publish.js
