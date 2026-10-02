@@ -1,8 +1,14 @@
 {
-  "name":"project-infinity",
-  "version":"0.1.0",
-  "private":true,
-  "type":"module",
-  "scripts":{"start":"node src/server.js","research":"node src/research-cycle.js","test":"node --test"},
-  "dependencies":{"express":"^5.1.0"}
+  "name": "project-infinity",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22 <25"},
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "research": "node src/research-cycle.js",
+    "verify:cycle": "node src/research-cycle.js --rehearsal",
+    "verify:oracle": "python3 test/oracle.py reports/rehearsal.json"
+  }
 }
