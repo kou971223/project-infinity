@@ -26,6 +26,6 @@ with sync_playwright() as p:
   assert not errors,errors
   page.reload(wait_until='domcontentloaded');assert page.locator('.message.assistant').count()==2
   page.locator('#new').click();assert page.locator('.message.user').count()==0
-  result={'status':'passed','mode':'real keyless remote inference','browser':'Chromium Linux','viewport':[390,844],'twoTurns':True,'historyReload':True,'newChat':True,'providerRequestObserved':True,'answers':answers,'elapsedSeconds':round(time.monotonic()-started,2),'realIPhoneVerified':False}
+  result={'status':'passed','mode':'real keyless remote inference','browser':'Chromium Linux','viewport':[390,844],'twoTurns':True,'historyReload':True,'newChat':True,'sameOriginProxyObserved':True,'answers':answers,'elapsedSeconds':round(time.monotonic()-started,2),'realIPhoneVerified':False}
   (ROOT/'reports').mkdir(exist_ok=True);(ROOT/'reports/browser-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False),flush=True)
  finally: browser.close()
