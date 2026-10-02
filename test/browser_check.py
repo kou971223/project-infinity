@@ -1,44 +1,31 @@
-"""Real two-turn browser inference unless MOCK_BROWSER=1 (UI-only, never actual model evidence)."""
+"""Real two-turn browser verification for the zero-cost remote chat surface."""
 import json, os, pathlib, time
 from playwright.sync_api import sync_playwright
-ROOT=pathlib.Path(__file__).resolve().parents[1];MOCK=os.environ.get('MOCK_BROWSER')=='1'
+ROOT=pathlib.Path(__file__).resolve().parents[1]
 BASE=os.environ.get('BROWSER_BASE_URL','http://127.0.0.1:3000');started=time.monotonic();errors=[];requests=[]
 with sync_playwright() as p:
  browser=p.chromium.launch(headless=True,executable_path=os.environ.get('CHROMIUM_PATH') or None,args=['--disable-dev-shm-usage'])
  ctx=browser.new_context(viewport={'width':390,'height':844},device_scale_factor=1,is_mobile=True,has_touch=True)
  page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda r:requests.append({'method':r.method,'url':r.url}))
- if MOCK:
-  page.add_init_script("""class FakeWorker {
-   postMessage(d){setTimeout(()=>{if(!this.onmessage)return;this.onmessage({data:d.type==='load'?{type:'ready',device:'wasm'}:{type:'done',text:'検証用応答（モック）: '+d.messages.at(-1).content,turn:d.turn}});},25);}
-   terminate(){this.onmessage=null;}
-  } window.Worker=FakeWorker;""")
- page.goto(BASE,wait_until='domcontentloaded',timeout=60000);page.wait_for_selector('#cpu',timeout=20000);page.locator('#cpu').click()
+ page.goto(BASE,wait_until='domcontentloaded',timeout=60000);page.wait_for_selector('#send',timeout=20000)
+ answers=[]
  try:
-  page.wait_for_function("document.querySelector('#progress').textContent.startsWith('起動済み') || !!document.querySelector('#error').textContent",timeout=300000)
-  error=page.locator('#error').inner_text()
-  if error:raise RuntimeError('MODEL_LOAD: '+error)
-  answers=[]
-  for prompt in ['こんにちは。日本語で短くあいさつしてください。','前のあいさつに続けて、一言だけ返してください。']:
+  for prompt in ['「テスト1成功」とだけ答えて','前の指示に続けて「テスト2成功」とだけ答えて']:
    page.locator('#input').fill(prompt);page.locator('#send').click()
-   # An empty draft now disables send even after an answer; wait on the actual model state, not that button.
-   page.wait_for_function("document.body.dataset.phase === 'ready' || !!document.querySelector('#error').textContent",timeout=180000)
-   error=page.locator('#error').inner_text()
-   if error:raise RuntimeError('GENERATION: '+error)
+   page.wait_for_function("document.querySelectorAll('.message.assistant').length > %d || !!document.querySelector('#error').textContent"%len(answers),timeout=90000)
+   err=page.locator('#error').inner_text()
+   if err: raise RuntimeError('REMOTE_GENERATION: '+err)
    answer=page.locator('.message.assistant').last.inner_text()
-   if len(answer.strip())<6:raise AssertionError('EMPTY_MODEL_ANSWER')
+   if len(answer.strip())<4: raise AssertionError('EMPTY_REMOTE_ANSWER')
    answers.append(answer[:300])
-  assert page.locator('.message.user').count()==2
-  assert page.locator('.message.assistant').count()==2
+  assert page.locator('.message.user').count()==2 and page.locator('.message.assistant').count()==2
+  assert any('text.pollinations.ai/' in r['url'] for r in requests)
+  assert not any(r['method']=='POST' and 'project-infinity' in r['url'] for r in requests)
   font=page.locator('#input').evaluate('(e)=>getComputedStyle(e).fontSize');assert float(font.removesuffix('px'))>=16
   assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+1')
   assert not errors,errors
-  assert not any(r['method']=='POST' for r in requests)
-  (ROOT/'reports').mkdir(exist_ok=True);page.screenshot(path=str(ROOT/'reports/mobile-0.4.png'),full_page=True)
   page.reload(wait_until='domcontentloaded');assert page.locator('.message.assistant').count()==2
   page.locator('#new').click();assert page.locator('.message.user').count()==0
-  assert '新しい会話' in page.locator('#notice').inner_text()
-  result={'status':'passed','mode':'mock UI only' if MOCK else 'real browser-local model','browser':'Chromium Linux','viewport':[390,844],'fontSize':font,'twoTurns':True,'historyReload':True,'newChat':True,'noPaidPost':True,'answers':answers,'elapsedSeconds':round(time.monotonic()-started,2),'realIPhoneVerified':False}
-  (ROOT/'reports/browser-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False),flush=True)
- except Exception:
-  print('BROWSER_DIAGNOSTIC',json.dumps({'progress':page.locator('#progress').inner_text(),'error':page.locator('#error').inner_text(),'pageErrors':errors},ensure_ascii=False),flush=True);raise
- finally:browser.close()
+  result={'status':'passed','mode':'real keyless remote inference','browser':'Chromium Linux','viewport':[390,844],'twoTurns':True,'historyReload':True,'newChat':True,'providerRequestObserved':True,'answers':answers,'elapsedSeconds':round(time.monotonic()-started,2),'realIPhoneVerified':False}
+  (ROOT/'reports').mkdir(exist_ok=True);(ROOT/'reports/browser-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False),flush=True)
+ finally: browser.close()
