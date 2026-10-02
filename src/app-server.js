@@ -37,11 +37,23 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
       }
       if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,version:'0.4.0',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
       if(req.method==='GET'&&['/api/free/status','/api/status'].includes(url.pathname))return json(res,200,{version:'0.4.0',zeroCostMode:true,
-        chat:'browser-local model; requires initial download and device support',model:'Qwen2.5-0.5B-Instruct',
+        chat:'browser keyless remote inference; no local model startup',model:'Pollinations text API model=openai',
         research:await researchRecord(),paidInferenceEnabled:false,fullAppSelfRewrite:false,
         foundationTraining:'separate partial-weight CPU experiment; consult run evidence',
         independentExternalValidation:false,overallProjectAccepted:false});
-      if(req.method==='POST'&&url.pathname==='/api/chat'){req.resume();return json(res,503,{error:'ZERO_COST_MODE_USE_LOCAL_CHAT'});}
+      if(req.method==='POST'&&url.pathname==='/api/chat'){
+        let raw='';for await(const chunk of req){raw+=chunk;if(Buffer.byteLength(raw)>24000)return json(res,413,{error:'INPUT_TOO_LARGE'});}
+        let body;try{body=JSON.parse(raw||'{}');}catch{return json(res,400,{error:'INVALID_JSON'});}
+        if(!Array.isArray(body.messages)||!body.messages.length||body.messages.length>10)return json(res,400,{error:'INVALID_MESSAGES'});
+        const clean=body.messages.map(m=>({role:m?.role,content:typeof m?.content==='string'?m.content.slice(0,2000):''}));
+        if(clean.some(m=>!['user','assistant'].includes(m.role)||!m.content))return json(res,400,{error:'INVALID_MESSAGES'});
+        const recent=clean.slice(-8).map(m=>(m.role==='user'?'ユーザー: ':'AI: ')+m.content).join('\n');
+        const prompt='以下の会話に日本語で簡潔かつ正確に回答してください。事実と不確実性を区別してください。\n\n'+recent+'\nAI:';
+        const q=new URLSearchParams({model:'openai',private:'true',referrer:'project-infinity-core.onrender.com',system:'You are Project Infinity. Reply in Japanese. Be concise and accurate. Do not claim you browsed the web or changed yourself unless the supplied conversation proves it.'});
+        try{const upstream=await fetcher('https://text.pollinations.ai/'+encodeURIComponent(prompt)+'?'+q,{signal:AbortSignal.timeout(45000),headers:{Referer:'https://project-infinity-core.onrender.com/'}});
+          if(!upstream.ok)return json(res,502,{error:'UPSTREAM_'+upstream.status});const reply=(await upstream.text()).trim().slice(0,8000);if(!reply)return json(res,502,{error:'EMPTY_UPSTREAM'});return json(res,200,{reply,provider:'pollinations',paid:false});}
+        catch(e){return json(res,502,{error:'UPSTREAM_FAILED'});}
+      }
       if(req.method==='GET'&&url.pathname==='/lab'){req.url='/';return old(req,res);}
       return old(req,res);
     }catch{if(!res.headersSent)return json(res,400,{error:'REQUEST_FAILED'});res.end();}
