@@ -1,0 +1,36 @@
+name: Real local-model browser verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, candidate/core-0.4-free-local-runtime]
+    paths: ['web/**', 'src/app-server.js', 'test/browser_check.py', '.github/workflows/browser.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-browser-verification-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Install isolated browser-test tools (not production dependencies)
+        run: |
+          python3 -m venv .browserenv
+          .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
+          .browserenv/bin/python -m playwright install --with-deps chromium
+      - name: Real WASM inference, two turns, history and mobile layout
+        run: |
+          node src/app-server.js > /tmp/pinf-browser-server.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:3000/health && break; sleep 1; done
+          .browserenv/bin/python test/browser_check.py
+          cat reports/browser-check.json

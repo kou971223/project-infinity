@@ -1,0 +1,20 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {parseCandidate} from '../src/local-candidate.js';
+import {checkedRecord,publish,BRANCH} from '../src/publish-research.js';
+test('structured candidate accepted as data',()=>assert.deepEqual(parseCandidate('{"hypothesis":"test the parser contract","program":["input"]}').program,['input']));
+test('executable content rejected',()=>assert.throws(()=>parseCandidate('process.exit(0)')));
+test('model cannot add authority',()=>assert.throws(()=>parseCandidate('{"hypothesis":"test the parser contract","program":["input"],"promote":true}')));
+test('oversize candidate rejected',()=>assert.throws(()=>parseCandidate('x'.repeat(20001))));
+test('missing hypothesis rejected',()=>assert.throws(()=>parseCandidate('{"program":["input"]}')));
+test('publisher schema fails closed',()=>assert.throws(()=>checkedRecord('{"learning":{"status":"running"}}')));
+test('publisher has no main-branch target',()=>assert.notEqual(BRANCH,'main'));
+test('publisher refuses absent credential',async()=>await assert.rejects(publish('{"version":"0.4.0","learning":{"status":"completed"}}',null)));
+test('publisher uses fixed record paths and nonforce update',async()=>{
+ const calls=[];const f=async(url,opts)=>{const body=opts.body?JSON.parse(opts.body):null;calls.push({url,method:opts.method,body});
+ const x=url.endsWith('/git/ref/heads/research-records')?{object:{sha:'parent'}}:url.endsWith('/git/commits/parent')?{tree:{sha:'tree'}}:url.endsWith('/git/trees')?{sha:'nextTree'}:url.endsWith('/git/commits')?{sha:'newCommit'}:{};
+ return {ok:true,status:200,json:async()=>x};};
+ await publish('{"version":"0.4.0","learning":{"status":"completed"}}','test-token',f);
+ assert.equal(calls.at(-1).body.force,false);assert.ok(calls.at(-1).url.endsWith('/research-records'));
+ const tree=calls.find(c=>c.url.endsWith('/git/trees')).body.tree;
+ assert.ok(tree.every(e=>e.path.startsWith('research/')&&e.path.endsWith('.json')));
+});
