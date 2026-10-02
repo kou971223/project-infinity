@@ -5,7 +5,7 @@ on:
     - cron: '37 * * * *'
   push:
     branches: [main, 'candidate/core-0.5-continuity']
-    paths: ['autonomy/**', 'test/test_autonomy.py', '.github/workflows/autonomy.yml']
+    paths: ['autonomy/**', 'test/test_autonomy.py', 'test/test_source_sandbox.py', 'test/docker_boundary.py', '.github/workflows/autonomy.yml']
 permissions:
   contents: read
 concurrency:
@@ -31,6 +31,8 @@ jobs:
         run: |
           docker pull node:22.16.0-bookworm-slim
           echo "PINF_NODE_IMAGE=$(docker image inspect node:22.16.0-bookworm-slim --format '{{.Id}}')" >> "$GITHUB_ENV"
+      - name: Check actual network, filesystem and credential isolation
+        run: python3 test/docker_boundary.py
       - name: Install local CPU model dependencies, no API keys
         run: |
           python3 -m venv .venv
@@ -53,7 +55,7 @@ jobs:
           p=pathlib.Path('reports/autonomy.json')
           if p.exists():
               b=p.read_bytes()
-              assert len(b)<=100000,'record size limit'
+              assert len(b)<=80000,'record size limit'
               with open(os.environ['GITHUB_OUTPUT'],'a') as f:
                   f.write('record='+base64.b64encode(b).decode()+'\n')
           PY

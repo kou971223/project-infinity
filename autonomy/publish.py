@@ -27,8 +27,9 @@ def blob_at(path,ref):
 
 def main():
  raw=base64.b64decode(os.environ.get('AUTONOMY_RECORD_B64',''),validate=True)
- if not raw or len(raw)>100000:raise ValueError('RECORD_SIZE')
+ if not raw or len(raw)>80000:raise ValueError('RECORD_SIZE')
  record=verify_record(json.loads(raw))
+ if record.get('status') not in ['completed','error']:raise ValueError('INCOMPLETE_EXECUTION')
  if record.get('baseCommit')!=os.environ.get('GITHUB_SHA') or record.get('runId')!=os.environ.get('GITHUB_RUN_ID'):raise ValueError('JOB_ORIGIN')
  previous=blob_at('autonomy/latest.json','research-records')
  if previous:verify_record(previous)

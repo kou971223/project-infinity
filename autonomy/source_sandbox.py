@@ -2,8 +2,30 @@
 A passing smoke test is NOT sufficient evidence to merge arbitrary app changes.
 """
 from __future__ import annotations
-import json, os, pathlib, re, shutil, subprocess, tempfile, uuid
+import json, os, pathlib, re, shutil, subprocess, tempfile, uuid, selectors, time
 from contracts import digest,validate_patch
+
+def bounded_process(cmd, *, timeout=100, max_output=2000000):
+    p=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+    selector=selectors.DefaultSelector();selector.register(p.stdout,selectors.EVENT_READ)
+    chunks=[];size=0;reason=None;deadline=time.monotonic()+timeout
+    try:
+      while True:
+        if time.monotonic()>deadline:reason='TIMEOUT';break
+        events=selector.select(.1)
+        if events:
+          b=os.read(p.stdout.fileno(),16384)
+          if not b:break
+          size+=len(b)
+          if size>max_output:reason='OUTPUT_LIMIT';break
+          chunks.append(b)
+        elif p.poll() is not None:break
+      if reason:p.kill()
+      code=p.wait(timeout=5)
+      return {'exitCode':code,'limit':reason,'bytes':size,'logHash':digest(b''.join(chunks))}
+    finally:
+      if p.poll() is None:p.kill();p.wait(timeout=5)
+      selector.close();p.stdout.close()
 
 def verify_patch_in_docker(patch, root, *, image=None):
     patch=validate_patch(patch,root)
@@ -32,11 +54,7 @@ def verify_patch_in_docker(patch, root, *, image=None):
              '--mount',f'type=bind,src={work},dst=/work,readonly','--workdir','/work',image,
              'sh','-c','node --test test/*.test.js']
         try:
-          r=subprocess.run(cmd,capture_output=True,timeout=100)
-          # Do not trust generated stdout as a correctness attestation.
-          results[lane]={'exitCode':r.returncode,'logHash':digest(r.stdout+r.stderr),'bytes':len(r.stdout)+len(r.stderr)}
-        except subprocess.TimeoutExpired:
-          results[lane]={'exitCode':None,'timeout':True}
+          results[lane]=bounded_process(cmd)
         finally:
           subprocess.run(['docker','rm','-f',name],capture_output=True,timeout=10)
     return {'status':'executed','image':image,'results':results,'promoted':False,
