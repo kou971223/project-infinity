@@ -31,10 +31,13 @@ def main():
  record=verify_record(json.loads(raw))
  if record.get('status') not in ['completed','error']:raise ValueError('INCOMPLETE_EXECUTION')
  if record.get('baseCommit')!=os.environ.get('GITHUB_SHA') or record.get('runId')!=os.environ.get('GITHUB_RUN_ID'):raise ValueError('JOB_ORIGIN')
- previous=blob_at('autonomy/latest.json','research-records')
+ ref=call('/git/ref/heads/research-records');head=ref['object']['sha']
+ previous=blob_at('autonomy/latest.json',head)
  if previous:verify_record(previous)
  if previous and previous['recordHash']==record['recordHash']:
-  print(json.dumps({'status':'already_published'}));return
+  if os.environ.get('GITHUB_OUTPUT'):
+   with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('record_commit='+head+'\n')
+  print(json.dumps({'status':'already_published','recordCommit':head}));return
  if (previous or {}).get('recordHash')!=record.get('parentRecordHash'):raise ValueError('STALE_RESEARCH_PARENT')
  old=check_active((previous or {}).get('activeCheckpoint'))
  if record['status']=='completed' and record.get('learningEvidence'):
@@ -45,8 +48,8 @@ def main():
   if old!=record.get('activeCheckpoint'):raise ValueError('UNVALIDATED_CHECKPOINT')
  rid=record['runId']+'-'+record.get('attempt','1')
  if not re.fullmatch(r'[0-9]+-[0-9]+',rid):raise ValueError('RUN_ID')
- ref=call('/git/ref/heads/research-records');head=ref['object']['sha'];commit=call('/git/commits/'+head)
- # Recheck the content parent just before the single non-force ref update below.
+ commit=call('/git/commits/'+head)
+ # Evidence and base tree are read from the same immutable head; a concurrent write makes the non-force update fail.
  active=record.get('activeCheckpoint')
  status={'schema':VERSION,'at':record['at'],'event':record.get('event'),'runId':record['runId'],
          'runStatus':record['status'],'generationBefore':record.get('generationBefore',0),
@@ -61,9 +64,18 @@ def main():
   patch=validate_patch(source['patch'],ROOT)
   base=record['baseCommit'];bc=call('/git/commits/'+base)
   tree=call('/git/trees','POST',{'base_tree':bc['tree']['sha'],'tree':[{'path':patch['path'],'mode':'100644','type':'blob','content':patch['content']}]})
-  c=call('/git/commits','POST',{'tree':tree['sha'],'parents':[base],'message':'Unmerged machine source proposal '+rid+'; independent review required'})
   branch='research-source/'+rid
-  call('/git/refs','POST',{'ref':'refs/heads/'+branch,'sha':c['sha']})
+  try:
+   existing=call('/git/ref/heads/'+branch)
+  except urllib.error.HTTPError as e:
+   if e.code!=404:raise
+   existing=None
+  if existing:
+   c=call('/git/commits/'+existing['object']['sha'])
+   if c['tree']['sha']!=tree['sha'] or [p['sha'] for p in c['parents']]!=[base]:raise ValueError('SOURCE_BRANCH_CONFLICT')
+  else:
+   c=call('/git/commits','POST',{'tree':tree['sha'],'parents':[base],'message':'Unmerged machine source proposal '+rid+'; independent review required'})
+   call('/git/refs','POST',{'ref':'refs/heads/'+branch,'sha':c['sha']})
   status['sourceBranch']=branch
  paths={'autonomy/latest.json':record,'autonomy/runs/'+rid+'.json':record,'autonomy/status.json':status}
  tree=call('/git/trees','POST',{'base_tree':commit['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)} for p,v in paths.items()]})
