@@ -1,6 +1,6 @@
 {
   "name": "project-infinity",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22 <25"},
@@ -8,6 +8,7 @@
     "start": "node src/server.js",
     "test": "node --test test/*.test.js",
     "research": "node src/research-cycle.js",
+    "research:model": "node src/model-researcher.js",
     "verify:cycle": "node src/research-cycle.js --rehearsal",
     "verify:oracle": "python3 test/oracle.py reports/rehearsal.json"
   }
