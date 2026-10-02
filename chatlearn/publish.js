@@ -1,6 +1,6 @@
 /** Separate deterministic writer. It receives data, never a script or arbitrary path. */
 import fs from 'node:fs';import {pathToFileURL} from 'node:url';
-import {validateManifest,floatBytes,sha256,judge} from './manifest.js';
+import {validateManifest,floatBytes,sha256,judge,canonical} from './manifest.js';
 const REPO='kou971223/project-infinity',API='https://api.github.com/repos/'+REPO;
 export async function publicationPlan(record){
  if(record?.schema!=='PINF-CHAT-PUBLICATION-1'||record.evaluation?.schema!=='PINF-CHAT-CANDIDATE-1')throw Error('RECORD_SCHEMA');
@@ -8,6 +8,7 @@ export async function publicationPlan(record){
  if(!['completed','error'].includes(r.status)||typeof r.runId!=='string'||!/^\d+$/.test(r.runId)||!/^\d+$/.test(record.attempt))throw Error('ORIGIN');
  if(r.status==='error'||r.decision!=='ADOPT_CHAT_EXPERIMENTAL_NORM')return {install:false};
  const m=await validateManifest(record.release);const b=record.browser;
+ if(canonical(r.evidence)!==canonical(m.evidence))throw Error('MEASUREMENT_BINDING');
  if(!judge(r.evidence).pass||m.weightHash!==r.weightHash||m.sourceRecordHash!==r.sourceRecordHash)throw Error('EVIDENCE_BINDING');
  if(b?.status!=='passed'||b.mode!=='real-model'||b.weightHash!==m.weightHash||b.releaseHash!==m.releaseHash||b.verifiedChunks!==m.baseChunkHashes.length||b.rollbackVerified!==true||b.reloadVerified!==true||b.twoTurns!==true||b.noPaidPost!==true)throw Error('BROWSER_NOT_VERIFIED');
  return {install:true,manifest:m};
