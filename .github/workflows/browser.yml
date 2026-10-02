@@ -2,7 +2,7 @@ name: Real local-model browser verification
 on:
   workflow_dispatch:
   push:
-    branches: [main, candidate/core-0.5-continuity, candidate/core-0.6-runtime-integration, fix/ios-memory-startup]
+    branches: [main, candidate/core-0.5-continuity, candidate/core-0.6-runtime-integration, fix/ios-memory-startup, fix/ios-q4f16-wasm]
     paths: ['web/**', 'src/app-server.js', 'autonomy/app.js', 'autonomy/ui.js', 'continuity/**', 'test/browser_check.py', 'test/startup_ui_check.py', '.github/workflows/browser.yml']
 permissions:
   contents: read
