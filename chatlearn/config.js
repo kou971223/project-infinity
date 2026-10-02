@@ -1,5 +1,5 @@
 /** Fixed conversion contract, checked against the pinned ONNX bytes on 2026-10-02. */
-export const PROTOCOL='PINF-CHAT-NORM-1';
+export const PROTOCOL='PINF-CHAT-NORM-2';
 export const MODEL='onnx-community/Qwen2.5-0.5B-Instruct';
 export const REVISION='cc5cc01a65cc3ff17bdb73a7de33d879f62599b0';
 export const MODEL_URL=`https://huggingface.co/${MODEL}/resolve/${REVISION}/onnx/model_quantized.onnx`;

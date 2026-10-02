@@ -26,6 +26,7 @@ export async function validateManifest(m){
  const bytes=floatBytes(m.values);if(await sha256(bytes)!==m.weightHash||!hex(m.patchedModelHash)||!hex(m.sourceRecordHash))throw Error('WEIGHT_IDENTITY');
  if(m.values.some(x=>Math.fround(x)!==x))throw Error('NON_FLOAT32');
  if(!Array.isArray(m.baseChunkHashes)||m.baseChunkHashes.length!==Math.ceil(ASSET.bytes/ASSET.chunkSize)||!m.baseChunkHashes.every(hex)||!hex(m.patchedChunkHash))throw Error('CHUNK_IDENTITIES');
+ if(m.measurementRevision!=='PINF-CHAT-WASM-EVAL-1')throw Error('MEASUREMENT_BACKEND');
  if(!judge(m.evidence).pass||m.actualOnnxEvaluation!==true||m.trainingStatus!=='accepted_experimental')throw Error('RELEASE_EVIDENCE');
  const {releaseHash,...body}=m;if(!hex(releaseHash)||await sha256(canonical(body))!==releaseHash)throw Error('RELEASE_HASH');
  return m;

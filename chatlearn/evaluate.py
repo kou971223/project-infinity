@@ -5,7 +5,7 @@ One candidate; fixed compatibility/benefit gate; failure leaves the existing cha
 from __future__ import annotations
 import gc, hashlib, importlib.util, json, math, os, pathlib, random, re, shutil, signal, struct, sys, time, urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-PROTOCOL='PINF-CHAT-NORM-1'
+PROTOCOL='PINF-CHAT-NORM-2'
 REPO='kou971223/project-infinity'
 MODEL='onnx-community/Qwen2.5-0.5B-Instruct'
 REVISION='cc5cc01a65cc3ff17bdb73a7de33d879f62599b0'
@@ -25,7 +25,6 @@ ANCHORS=[
  'Bonjour. Merci pour votre aide. Une explication claire est utile.',
  '你好。请简短地回答问题。不知道时应该说明不确定性。',
 ]
-# A fixed operational regression set, not an untouched intelligence benchmark.
 BEHAVIOR=[
  ('日本の首都を一語で答えてください。',['東京']),
  ('2+3の答えを数字だけで答えてください。',['5','５']),
@@ -70,6 +69,7 @@ def judge(e):
  return {'pass':gain>=.01 and min(d)>0 and worst<=.05 and mean<=.01 and n>=4 and reg==0,'gain':gain,'worstAnchor':worst,'meanAnchor':mean,'baselinePassed':n,'regressions':reg}
 
 def evaluate_model(file,tokenizer,targets):
+ """Retained native reference for reproducing the pre-WASM diagnostic only."""
  import numpy as np, onnxruntime as ort
  so=ort.SessionOptions();so.intra_op_num_threads=2;so.inter_op_num_threads=1;so.enable_mem_pattern=False
  session=ort.InferenceSession(str(file),sess_options=so,providers=['CPUExecutionProvider'])
@@ -101,8 +101,7 @@ def evaluate_model(file,tokenizer,targets):
    if len(past)!=48:raise ValueError('KV_CACHE_CONTRACT')
    ids=[token];total+=1
   return tokenizer.decode(new,skip_special_tokens=True)
- result={'target':[loss(t) for t in targets],'anchors':[loss(t) for t in ANCHORS],
-         'behavior':[generate(p) for p,_ in BEHAVIOR]}
+ result={'target':[loss(t) for t in targets],'anchors':[loss(t) for t in ANCHORS],'behavior':[generate(p) for p,_ in BEHAVIOR]}
  del session;gc.collect();return result
 
 def main():
@@ -115,8 +114,6 @@ def main():
   report.update(sourceRef=ref,sourceRecordHash=record['recordHash'],weightHash=h(raw),generation=active['generation'])
   save(ROOT/'reports/chat-preregister.json',{'protocol':PROTOCOL,'candidateWeightHash':h(raw),'sourceRef':ref,'targetCases':12,'anchorCases':12,'behaviorCases':8,'minimumGain':.01,'worstAnchorIncrease':.05,'meanAnchorIncrease':.01,'behaviorRegressions':0,'minimumBaselineBehaviorPasses':4,'stopping':'one candidate; no post-result tuning','frozenBeforeEvaluation':True})
   from huggingface_hub import hf_hub_download
-  from transformers import AutoTokenizer
-  import onnxruntime as ort
   original=pathlib.Path(hf_hub_download(MODEL,'onnx/model_quantized.onnx',revision=REVISION))
   hashes=[];full=hashlib.sha256()
   with original.open('rb') as f:
@@ -124,7 +121,6 @@ def main():
    f.seek(ASSET['offset']);old=f.read(ASSET['length'])
   if original.stat().st_size!=ASSET['bytes'] or full.hexdigest()!=ASSET['sha256'] or h(old)!=ASSET['normHash']:raise ValueError('BASE_MODEL_IDENTITY')
   if raw==old:raise ValueError('NO_WEIGHT_CHANGE')
-  # Runtime conversion is just this tensor replacement. No graph or other tensor changes.
   if max(abs(x-y) for x,y in zip(values,struct.unpack('<896f',old)))>.1:raise ValueError('NORM_CHANGE_BOUND')
   candidate=ROOT/'.runtime/chat-candidate.onnx';candidate.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(original,candidate)
   with candidate.open('r+b') as f:f.seek(ASSET['offset']);f.write(raw)
@@ -135,22 +131,21 @@ def main():
   report['conversion']={'baseModelHash':ASSET['sha256'],'patchedModelHash':patched_hash,'modifiedBytes':ASSET['length'],'modifiedParameter':ASSET['parameter'],'allOtherBytesUnchanged':True}
   save(ROOT/'reports/chat-freeze.json',{'candidateHash':patched_hash,'weightHash':h(raw),'sourceRef':ref,'protocol':PROTOCOL})
   seed=int.from_bytes(os.urandom(16),'big');legacy=load_module('corpus_only',ROOT/'experiments/local_research.py');targets=legacy.corpus(seed,12)
-  tokenizer=AutoTokenizer.from_pretrained(MODEL,revision=REVISION,trust_remote_code=False)
-  print('EVALUATING_BASELINE',flush=True);before=evaluate_model(original,tokenizer,targets)
-  print('EVALUATING_TRAINED_CANDIDATE',flush=True);after=evaluate_model(candidate,tokenizer,targets)
+  from wasm_evaluate import measure_wasm
+  before,after=measure_wasm(original,candidate,targets,ANCHORS,BEHAVIOR,SYSTEM,MODEL,REVISION)
   evidence={'target':{'before':before['target'],'after':after['target']},'anchors':{'before':before['anchors'],'after':after['anchors']},
    'behavior':[{'id':i,'prompt':p,'before':a,'after':b,'beforePass':any(s in a for s in expected),'afterPass':any(s in b for s in expected)} for i,((p,expected),a,b) in enumerate(zip(BEHAVIOR,before['behavior'],after['behavior']))]}
   result=judge(evidence)
-  report.update(status='completed',decision='ADOPT_CHAT_EXPERIMENTAL_NORM' if result['pass'] else 'REJECT_CHAT_NORM',result=result,evidence=evidence,evalSeedRevealedAfterDecision=str(seed),runtime={'onnxruntime':ort.__version__,'device':'CPUExecutionProvider','threads':2},
-   limitations=['Fixed operational QA checks, not a general intelligence benchmark','Target template shared with training; confirms quantized transfer, not OOD research gain','No Japanese chat quality improvement claimed','Candidate norm from previously accepted research training; not new training','Shared author and model; external independent validation absent','WASM browser E2E is a separate required check'])
+  report.update(status='completed',decision='ADOPT_CHAT_EXPERIMENTAL_NORM' if result['pass'] else 'REJECT_CHAT_NORM',result=result,evidence=evidence,evalSeedRevealedAfterDecision=str(seed),runtime={'backend':'transformers.js-3.8.1-WASM','browser':'Chromium Linux','threads':1,'generationRepetitionPenalty':1.1},measurementRevision='PINF-CHAT-WASM-EVAL-1',
+   limitations=['Fixed operational QA checks, not a general intelligence benchmark','Target template shared with training; confirms quantized transfer, not OOD research gain','No Japanese chat quality improvement claimed','Candidate norm from previously accepted research training; not new training','Shared author and model; external independent validation absent','Browser E2E reload and rollback are separate required checks'])
   if result['pass']:
    report['release']={'schema':'PINF-CHAT-RELEASE-1','protocol':PROTOCOL,'status':'accepted_experimental','model':MODEL,'revision':REVISION,'device':'wasm','dtype':'q8','asset':ASSET,
     'generation':active['generation'],'sourceRef':ref,'sourceRecordHash':record['recordHash'],'trainingStatus':'accepted_experimental',
     'values':values,'weightHash':h(raw),'patchedModelHash':patched_hash,'baseChunkHashes':hashes,'patchedChunkHash':patched_chunk,
-    'evidence':evidence,'actualOnnxEvaluation':True,'runId':report['runId'],'at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'overallProjectAccepted':False}
+    'evidence':evidence,'actualOnnxEvaluation':True,'measurementRevision':'PINF-CHAT-WASM-EVAL-1','runId':report['runId'],'at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'overallProjectAccepted':False}
   finish();print(json.dumps({'status':report['status'],'decision':report['decision'],'result':result}),flush=True);return 0
  except Exception as e:
-  report.update(status='error',decision='NO_RELEASE',errorType=type(e).__name__,error=str(e)[:300]);finish();print(json.dumps({'status':'error','error':str(e)[:300]}),flush=True);return 1
+  record_error=str(e)[:300];report.update(status='error',decision='NO_RELEASE',errorType=type(e).__name__,error=record_error);finish();print(json.dumps({'status':'error','error':record_error}),flush=True);return 1
  finally:
   if hasattr(signal,'SIGALRM'):signal.alarm(0)
 if __name__=='__main__':sys.exit(main())

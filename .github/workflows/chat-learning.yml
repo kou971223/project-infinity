@@ -35,6 +35,7 @@ jobs:
         run: |
           python3 -m venv .chatvenv
           .chatvenv/bin/pip install --no-cache-dir onnxruntime==1.23.2 transformers==4.57.1 numpy==2.2.6 playwright==1.56.0 jinja2==3.1.6
+          .chatvenv/bin/python -m playwright install --with-deps chromium
       - name: Freeze accepted trained weights; compare the actual quantized chat models
         id: evaluation
         continue-on-error: true
