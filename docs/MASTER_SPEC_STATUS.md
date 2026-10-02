@@ -1,14 +1,13 @@
-# Completion record
+# Master Specification completion status
 
-Specification: Project Infinity Master Specification v0.1 (unchanged research objectives)
-Implementation: Core 0.2
-Acceptance matrix: PINF-ACC-EXTRACT-1
-Overall: Experimental / NOT Accepted as Project Infinity
+Specification: Project Infinity Master Specification v0.1, objectives unchanged.
+Implementation: Core 0.4 candidate.
+Overall: Experimental / NOT Accepted as the full Project Infinity.
 
-Implemented and locally testable: candidate program synthesis, bounded interpreter, per-worker isolation, reference comparison, pre-confirmatory freeze, fresh generated evaluation, internal fresh replication, active pointer, runtime regression fallback, rollback, evidence invalidation propagation, hash-chain audit, no candidate access to promotion functions.
+Existing bounded-code acceptance remains PINF-ACC-EXTRACT-1. The separate CPU weight experiment uses PINF-LEARN-NORM-1. Neither matrix is the acceptance matrix for the whole system.
 
-Unresolved Critical for overall Project Infinity: external independent validation; general AI research capability; arbitrary source-edit pipeline; model-weight learning; end-to-end long-horizon safety; durable research store; source/evaluator common-mode independence.
+Verified research run: 36956736700. Local pretrained-model inference and partial-weight gradient updates executed; learning gain below the preregistered threshold, code proposal failed schema. No chat-weight promotion. See docs/CORE04_STATUS.md and actual workflow logs.
 
-Required not yet evidenced at file creation: final live deployment validation, final GitHub CI result, unattended schedule firing, authenticated live LLM provider run.
+Current Critical unresolved: general autonomous AI research, arbitrary application-wide source change pipeline, independently validated model improvement inherited by the chat model, external independent validation, long-horizon RSI evidence. Browser-local model compatibility and published deployment must be verified separately for this release. A workflow, source-code presence or model self-description is not completion evidence.
 
-Local passing tests do not change these Unknowns into Pass. Do not downgrade Critical criteria after results to certify completion.
+No acceptance threshold was lowered after results. Original overall completion remains unaccepted even when bounded subsystem tests pass.
