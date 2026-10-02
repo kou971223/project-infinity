@@ -28,7 +28,7 @@ with sync_playwright() as p:
  assert page.evaluate('fakeWorkers[0].commands[0].device')=='cpu'
  page.evaluate("fakeWorkers[0].emit({type:'progress',file:'model.onnx',progress:54})")
  assert '54' in page.locator('#progress').inner_text()
- # CHG test correction: a future-tense explanation may contain 起動済み; it must not announce readiness.
+ # Future-tense help may contain 起動済み; it must not announce readiness.
  assert not page.locator('#progress').inner_text().startswith('起動済み')
  assert page.locator('body').get_attribute('data-phase')=='loading'
  assert page.locator('.message.assistant').count()==0
@@ -46,11 +46,12 @@ with sync_playwright() as p:
  assert page.evaluate('fakeWorkers.length')==1
  page.locator('#input').fill('入力変換中');page.locator('#input').dispatch_event('keydown',{'key':'Enter','isComposing':True,'keyCode':229})
  assert page.locator('.message.user').count()==0
- page.locator('#send').click();page.evaluate('window.stale=fakeWorkers[0].onmessage');page.locator('#new').click()
+ # Do not return a function from evaluate: Playwright invokes function-valued expressions with its argument.
+ page.locator('#send').click();page.evaluate('() => {window.stale=fakeWorkers[0].onmessage;}');page.locator('#new').click()
  page.evaluate("stale({data:{type:'done',text:'DO NOT APPEND',turn:2}})")
  assert page.locator('.message.assistant').count()==0
  assert page.evaluate('fakeWorkers[0].dead') is True
- page.locator('#cpu').click();page.evaluate('window.stale=fakeWorkers.at(-1).onmessage');page.locator('#stop').click()
+ page.locator('#cpu').click();page.evaluate('() => {window.stale=fakeWorkers.at(-1).onmessage;}');page.locator('#stop').click()
  page.evaluate("stale({data:{type:'ready',device:'wasm'}})");assert page.locator('body').get_attribute('data-phase')=='stopped'
  page.locator('#input').fill('消してはいけない未送信文');page.locator('#send').click()
  page.evaluate("fakeWorkers.at(-1).emit({type:'error',message:'Injected load failure'})")
