@@ -1,0 +1,49 @@
+name: Published site real-browser verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/live-browser.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pinf-published-browser-check
+  cancel-in-progress: false
+jobs:
+  live-browser:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install isolated browser tools, without paid APIs
+        run: |
+          python3 -m venv .browserenv
+          .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
+          .browserenv/bin/python -m playwright install --with-deps chromium
+      - name: Capture exact deployed revision and generated code
+        run: |
+          python3 - <<'PY'
+          import urllib.request,json,hashlib
+          base='https://project-infinity-core.onrender.com'
+          def get(path):
+              with urllib.request.urlopen(base+path,timeout=30) as r:
+                  b=r.read(100001)
+                  assert r.status==200 and len(b)<100000
+                  return b
+          health=json.loads(get('/health'))
+          assert health['version']=='0.6.0' and health['zeroCostMode'] is True
+          policy=get('/backend-policy.js').decode()
+          assert '"recoverProbe":true' in policy and '"recoverLoad":true' in policy
+          kernel=get('/model-backend.js')
+          assert hashlib.sha256(kernel).hexdigest()=='60ef374909bc5e293ea1245b7d5e4ecf86a7387ab2e42ed8c0e91637d8281270'
+          print(json.dumps({'deployedHealth':health,'loaderHash':hashlib.sha256(kernel).hexdigest(),'validatedCodeServed':True}))
+          PY
+      - name: Real two-turn inference on the published site, not mocked
+        env:
+          BROWSER_BASE_URL: https://project-infinity-core.onrender.com
+        run: |
+          .browserenv/bin/python test/browser_check.py
+          cat reports/browser-check.json
