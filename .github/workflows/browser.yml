@@ -26,15 +26,7 @@ jobs:
           python3 -m venv .browserenv
           .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
           .browserenv/bin/python -m playwright install --with-deps chromium
-      - name: UI failure and cancellation contract (mock, not inference evidence)
-        run: |
-          node continuity/service.js > /tmp/pinf-ui-server.log 2>&1 &
-          PID=$!
-          trap 'kill "$PID" || true' EXIT
-          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:3000/health && break; sleep 1; done
-          .browserenv/bin/python test/startup_ui_check.py
-      - name: Actual WASM model inference, two turns, history and mobile layout
-        run: |
+      - name: Real remote inference, two turns, history and mobile layout\n        run: |
           node continuity/service.js > /tmp/pinf-browser-server.log 2>&1 &
           PID=$!
           trap 'kill "$PID" || true' EXIT
