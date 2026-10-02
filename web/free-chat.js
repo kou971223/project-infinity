@@ -1,16 +1,17 @@
 const $=id=>document.getElementById(id);
+const layout=document.createElement('style');layout.textContent='.intro.ready h1,.intro.ready p,.intro.ready .actions{display:none}.intro.ready{padding:10px 16px}.message{scroll-margin-bottom:160px}';document.head.append(layout);
 let worker=null,ready=false,busy=false,timer=null,messages=[],partial=null;
 try{const x=JSON.parse(localStorage.getItem('pinf-local-chat-v1')||'[]');if(Array.isArray(x))messages=x.filter(m=>['user','assistant'].includes(m.role)&&typeof m.content==='string').slice(-20);}catch{}
 function save(){try{localStorage.setItem('pinf-local-chat-v1',JSON.stringify(messages.slice(-20)));}catch{$('error').textContent='保存容量が不足しています。会話は画面に残りますが、再読込すると失われる場合があります。';}}
 function render(){const list=$('messages');list.replaceChildren();for(const m of messages){const el=document.createElement('div');el.className='message '+m.role;const role=document.createElement('span');role.className='role';role.textContent=m.role==='user'?'あなた':'端末内AI';el.append(role,document.createTextNode(m.content));list.append(el);}if(partial!==null){const el=document.createElement('div');el.className='message';el.textContent=partial||'考えています…';list.append(el);}}
 function setBusy(x){busy=x;$('send').disabled=x||!ready;$('load').disabled=x||ready;$('cpu').disabled=x||ready;$('stop').hidden=!x;}
-function stop(message='処理を停止しました。再開にはAIを起動してください。'){clearTimeout(timer);worker?.terminate();worker=null;ready=false;partial=null;setBusy(false);$('progress').textContent=message;render();}
+function stop(message='処理を停止しました。再開にはAIを起動してください。'){clearTimeout(timer);worker?.terminate();worker=null;ready=false;partial=null;$('intro').classList.remove('ready');setBusy(false);$('progress').textContent=message;render();}
 function start(device){if(busy||ready)return;worker?.terminate();worker=new Worker('/chat-worker.js',{type:'module'});$('error').textContent='';$('progress').textContent='モデルを読み込んでいます。初回は時間がかかります。';setBusy(true);timer=setTimeout(()=>stop('読込が時間上限に達しました。通信・空きメモリを確認してください。'),300000);
  worker.onerror=e=>{stop();$('error').textContent=e.message||'端末内AIを起動できませんでした。';};
  worker.onmessage=({data})=>{if(data.type==='progress'){$('progress').textContent='モデル読込 '+(data.file||'')+(data.progress===null?'':' '+Math.round(data.progress)+'%');}
- else if(data.type==='ready'){clearTimeout(timer);ready=true;setBusy(false);$('progress').textContent='起動済み：'+(data.device==='webgpu'?'端末GPU':'端末CPU');$('input').placeholder='Project ∞ にメッセージ';}
+ else if(data.type==='ready'){clearTimeout(timer);ready=true;$('intro').classList.add('ready');setBusy(false);$('progress').textContent='起動済み：'+(data.device==='webgpu'?'端末GPU':'端末CPU');$('input').placeholder='Project ∞ にメッセージ';}
  else if(data.type==='delta'){partial=data.text;render();}
- else if(data.type==='done'){clearTimeout(timer);messages.push({role:'assistant',content:data.text});partial=null;setBusy(false);save();render();$('messages').lastElementChild?.scrollIntoView({block:'nearest'});}
+ else if(data.type==='done'){clearTimeout(timer);messages.push({role:'assistant',content:data.text});partial=null;setBusy(false);save();render();$('messages').lastElementChild?.scrollIntoView({block:'end'});}
  else if(data.type==='error'){clearTimeout(timer);partial=null;setBusy(false);$('error').textContent=data.message;render();}};
  worker.postMessage({type:'load',device});}
 $('load').onclick=()=>start('auto');$('cpu').onclick=()=>start('cpu');$('stop').onclick=()=>stop();
