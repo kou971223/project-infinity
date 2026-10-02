@@ -19,8 +19,7 @@ with sync_playwright() as p:
    if len(answer.strip())<4: raise AssertionError('EMPTY_REMOTE_ANSWER')
    answers.append(answer[:300])
   assert page.locator('.message.user').count()==2 and page.locator('.message.assistant').count()==2
-  assert any('text.pollinations.ai/' in r['url'] for r in requests)
-  assert not any(r['method']=='POST' and 'project-infinity' in r['url'] for r in requests)
+  assert any(r['method']=='POST' and '/api/chat' in r['url'] for r in requests)
   font=page.locator('#input').evaluate('(e)=>getComputedStyle(e).fontSize');assert float(font.removesuffix('px'))>=16
   assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+1')
   assert not errors,errors
