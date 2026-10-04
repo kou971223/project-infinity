@@ -41,7 +41,7 @@ npm run verify:oracle
 npm start
 ```
 
-候補ブランチの自動検証後にmainへ統合。既存Renderはmainの更新で自動Deploy。本番CIは**そのcommit SHA**の稼働を待ち、実推論2ターン・文脈保持・履歴・本番APIを再検証します。
+候補ブランチの自動検証後にmainへ統合。本番CIは**そのcommit SHA**の稼働を待ち、実推論2ターン・文脈保持・履歴・本番APIを再検証します。2026-10-04の実測では、Renderの設定表示は `autoDeploy=yes` でもmain統合後にDeployが開始されず、既存連携から手動Deployして完了しました。自動Deploy連携の根本原因は未確認です。今後のコード公開時も、設定表示だけでなくDeploy開始とコミット一致を確認してください。普段の会話利用にはDeploy操作は不要です。
 
 `/health` はビルドの生存確認であり、外部モデルの成功保証ではありません。`/api/project/status` は統合研究状態。`/lab` は既存の限定コード実験。旧有料API経路は削除しました。
 
