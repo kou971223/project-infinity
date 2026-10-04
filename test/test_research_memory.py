@@ -3,7 +3,7 @@ spec=importlib.util.spec_from_file_location('research_memory_cycle',pathlib.Path
 class ResearchMemory(unittest.TestCase):
  def program(self):return dict(task='percentage',expression=['div',['mul',['var','amount'],['var','rate']],['const','100']],hypothesis='exact percentage')
  def record(self):
-  p=self.program();r=dict(schema='PINF-RESEARCH-2',baseCommit='local',runId='local',at=m.now(),parents=dict(knowledge=None,programs=None),cards=[],task='percentage',programCandidate=p,validationCompleted=True,knowledgeEvidence=dict(verifiedCards=[]));r['frozenHash']=m.digest({k:r[k] for k in ['cards','task','programCandidate']});cs=m.cases('percentage',123);r['programEvidence']=dict(protocol='PINF-PROGRAM-TEST-1',candidateHash=m.digest(p),seed=123,nodes=m.program_nodes(p),cases=[dict(c,reply=c['expected']) for c in cs],passed=True);return r
+  p=self.program();r=dict(schema='PINF-RESEARCH-2',baseCommit=m.os.environ.get('GITHUB_SHA','local'),runId=m.os.environ.get('GITHUB_RUN_ID','local'),at=m.now(),parents=dict(knowledge=None,programs=None),cards=[],task='percentage',programCandidate=p,validationCompleted=True,knowledgeEvidence=dict(verifiedCards=[]));r['frozenHash']=m.digest({k:r[k] for k in ['cards','task','programCandidate']});cs=m.cases('percentage',123);r['programEvidence']=dict(protocol='PINF-PROGRAM-TEST-1',candidateHash=m.digest(p),seed=123,nodes=m.program_nodes(p),cases=[dict(c,reply=c['expected']) for c in cs],passed=True);return r
  def test_independent_oracle_known_values(self):
   self.assertEqual(m.oracle('percentage',dict(amount='0.1',rate='20')),'1/50');self.assertEqual(m.oracle('discount',dict(amount='1000',rate='20')),'800');self.assertEqual(m.oracle('mean',dict(a='1',b='2',c='4')),'7/3');self.assertEqual(m.oracle('rectangle',dict(width='1.5',height='2.5')),'15/4')
  def test_frozen_candidate_cannot_change(self):
@@ -27,3 +27,7 @@ class ResearchMemory(unittest.TestCase):
   for expr in [['eval','process.env'],['var','__proto__']]:
    p=self.program();p['expression']=expr
    with self.assertRaises(ValueError):m.program_nodes(p)
+
+ def test_publication_rejects_foreign_job(self):
+  r=self.record();r['runId']='foreign-job'
+  with self.assertRaises(ValueError):m.checked(r)

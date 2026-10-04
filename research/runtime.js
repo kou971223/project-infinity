@@ -17,7 +17,7 @@ export function retrieve(cards,query){
 }
 export function createResearchMemory({fetcher=globalThis.fetch,clock=Date.now,ttl=300000}={}){
  let knowledge=null,programs=null,until=0,pending,errors={},blocked=new Set();
- async function refresh(){if(clock()<until)return;if(pending)return pending;until=clock()+ttl;
+ async function refresh(){if(pending)return pending;if(clock()<until)return;until=clock()+ttl;
   pending=(async()=>{await Promise.all([['knowledge/active.json',verifyKnowledge],['programs/active.json',verifyProgramRecord]].map(async([path,verify])=>{
    try{const r=await fetcher(ROOT+path,{redirect:'error',signal:AbortSignal.timeout(7000)});if(r.status===404){errors[path]='NOT_YET_ADOPTED';return;}if(!r.ok)throw Error('HTTP_'+r.status);const x=verify(JSON.parse(await boundedText(r,160000)));if(blocked.has(x.artifactHash))throw Error('QUARANTINED');const old=path.startsWith('knowledge')?knowledge:programs;if(old&&x.generation<old.generation)throw Error('STALE_GENERATION');if(path.startsWith('knowledge'))knowledge=x;else programs=x;delete errors[path];}catch(e){errors[path]=e.message;}
   }));})().finally(()=>{pending=null;});return pending;
