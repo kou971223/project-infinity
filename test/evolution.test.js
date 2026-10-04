@@ -10,7 +10,7 @@ test('runtime failure rolls back and quarantines the rejected artifact',async()=
 import http from 'node:http';import {createApplication} from '../src/app-server.js';
 test('accepted generation reaches actual chat API; contextual chat still uses model',async t=>{
  let remote=0;const server=await createApplication({legacyFactory:()=>http.createServer((q,r)=>r.end('legacy')),fetcher:async(url)=>{
-  if(String(url).includes('/dialogue/active.json'))return new Response(JSON.stringify(envelope()));remote++;return new Response(JSON.stringify({model:'test',choices:[{finish_reason:'stop',message:{content:'文脈を保持した回答'}}]}));
+  if(String(url).includes('/dialogue/active.json'))return new Response(JSON.stringify(envelope()));if(String(url).includes('raw.githubusercontent.com'))return new Response('',{status:404});remote++;return new Response(JSON.stringify({model:'test',choices:[{finish_reason:'stop',message:{content:'文脈を保持した回答'}}]}));
  }});await new Promise(r=>server.listen(0,'127.0.0.1',r));t.after(()=>server.close());const b='http://127.0.0.1:'+server.address().port;
  const send=messages=>fetch(b+'/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages})}).then(r=>r.json());
  const x=await send([{role:'user',content:'9007199254740993 + 2'}]);assert.equal(x.reply,'9007199254740995');assert.equal(x.evolution.generation,1);assert.equal(remote,0);

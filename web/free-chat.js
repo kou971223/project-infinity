@@ -1,4 +1,4 @@
-import {KEY,loadState,newChat,contextFor} from './chat-state.js';
+import {KEY,loadState,newChat,contextFor,cleanCitations} from './chat-state.js';
 const $=id=>document.getElementById(id);
 let storage;try{storage=localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error('STORAGE_UNAVAILABLE');}};}
 let state=loadState(storage),request=null,sequence=0;
@@ -8,7 +8,8 @@ function render(){
  const list=$('messages');list.replaceChildren();
  for(const m of active().messages){const el=document.createElement('div');el.className='message '+m.role;
  const role=document.createElement('span');role.className='role';role.textContent=m.role==='user'?'あなた':'Project ∞';
- el.append(role,document.createTextNode(m.content));if(m.status==='failed'||m.status==='cancelled'){const label=document.createElement('small');label.textContent='\n未回答 · 再試行できます';el.append(label);}list.append(el);}
+ el.append(role,document.createTextNode(m.content));if(m.status==='failed'||m.status==='cancelled'){const label=document.createElement('small');label.textContent='\n未回答 · 再試行できます';el.append(label);}
+ if(m.citations?.length){const box=document.createElement('small');box.textContent='\n回答時に参照した資料（論文は要旨のみ・主張の独立再現ではありません）';for(const c of cleanCitations(m.citations)){const a=document.createElement('a');a.href=c.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='\n'+c.title+' · '+date(c.checkedAt);box.append(a);}el.append(box);}list.append(el);}
  $('empty').hidden=active().messages.length>0;
  const select=$('history');select.replaceChildren();for(const c of state.chats.slice().reverse()){const o=document.createElement('option');o.value=c.id;o.textContent=c.title;select.append(o);}select.value=state.activeId;
  controls();
@@ -28,7 +29,7 @@ async function ask(retry=false){
  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:contextFor(chat)}),signal:controller.signal});
  let data;try{data=await r.json();}catch{throw Error('INVALID_RESPONSE');}if(!r.ok)throw Error(data.error||'HTTP_'+r.status);
  if(typeof data.reply!=='string'||!data.reply.trim())throw Error('EMPTY_RESPONSE');
- if(request?.id!==id)return;turn.status='complete';chat.messages.push({role:'assistant',content:data.reply,status:'complete'});save();if(data.evolution)$('notice').textContent='会話能力 第'+data.evolution.generation+'世代 · '+(data.evolution.reply!==undefined?'検証済み機能で回答':'外部AIで回答')+'（モデル重みの学習ではありません）';
+ if(request?.id!==id)return;turn.status='complete';chat.messages.push({role:'assistant',content:data.reply,status:'complete',citations:cleanCitations(data.citations)});save();if(data.evolution)$('notice').textContent=(data.program?'生成プログラム 第'+data.program.generation+'世代で回答':'会話能力 第'+data.evolution.generation+'世代 · '+(data.evolution.reply!==undefined?'検証済み機能で回答':'外部AIで回答'))+(data.citations?.length?' · 研究資料 '+data.citations.length+'件を参照':'')+'（モデル重みの学習ではありません）';
  }catch(e){if(request?.id!==id)return;turn.status='failed';save();$('error').textContent=errorText(controller.signal.aborted?'UPSTREAM_TIMEOUT':e.message);}
  finally{clearTimeout(timeout);if(request?.id===id){request=null;$('progress').textContent='';render();$('scroll').scrollTop=$('scroll').scrollHeight;}}
 }

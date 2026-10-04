@@ -2,7 +2,8 @@
 export const KEY='pinf-conversations-v2';
 export const LEGACY_KEY='pinf-remote-chat-v1';
 export function newChat(){return {id:crypto.randomUUID(),title:'新しい会話',updatedAt:new Date().toISOString(),messages:[]};}
-export function cleanMessages(messages){return (Array.isArray(messages)?messages:[]).filter(m=>m&&['user','assistant'].includes(m.role)&&typeof m.content==='string'&&m.content.length<=8000).map(m=>({role:m.role,content:m.content,status:['pending','failed','cancelled'].includes(m.status)?'failed':'complete'})).slice(-200);}
+export function cleanCitations(x){return (Array.isArray(x)?x:[]).filter(c=>c&&typeof c.title==='string'&&typeof c.url==='string'&&(/^https:\/\/arxiv\.org\/abs\/\d{4}\.\d{4,5}(?:v\d+)?$/.test(c.url)||/^https:\/\/huggingface\.co\/docs\/transformers\.js\/v3\.8\.1\/guides\/(webgpu|dtypes)$/.test(c.url))).slice(0,3).map(c=>({title:c.title.slice(0,300),url:c.url,checkedAt:String(c.checkedAt||'').slice(0,40),kind:String(c.kind||'').slice(0,50)}));}
+export function cleanMessages(messages){return (Array.isArray(messages)?messages:[]).filter(m=>m&&['user','assistant'].includes(m.role)&&typeof m.content==='string'&&m.content.length<=8000).map(m=>({role:m.role,content:m.content,status:['pending','failed','cancelled'].includes(m.status)?'failed':'complete',...(m.citations?{citations:cleanCitations(m.citations)}:{})})).slice(-200);}
 export function loadState(storage){
   try{const data=JSON.parse(storage.getItem(KEY)||'null');
     if(data?.version===2&&Array.isArray(data.chats)){

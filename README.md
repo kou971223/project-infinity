@@ -50,3 +50,5 @@ npm start
 ## 会話に反映する研究
 
 `evolution/` は、検証済みの回答補助能力を `dialogue/active.json` から実会話へ継承します。独立比較で採用された世代だけが有効になります。世代・実際の反映状態は `/api/evolution/status` と回答後の画面で確認できます。最初の範囲は整数計算・長さ換算で、モデル重みの学習や汎用知能の向上とは区別します。固定評価・採用条件・失敗時の扱いは `docs/CHAT_EVOLUTION.md` を参照してください。
+
+Research memory v2 connects source-checked public excerpts and independently tested model-generated arithmetic programs to chat. See [scope and limitations](docs/RESEARCH_MEMORY_V2.md). Runtime status: `/api/research-memory/status`.

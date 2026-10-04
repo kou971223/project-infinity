@@ -9,7 +9,9 @@ export function createProjectStatus(fetcher=globalThis.fetch){
     ['learning','部分学習・世代・Lineage','autonomy/status.json','PINF-AUTONOMY-1'],
     ['runtime','限定コードの検証・採用','runtime/latest.json','PINF-RUNTIME-PUBLIC-1'],
     ['source','公開コードの仮説・Candidate・独立検証','source/status.json','PINF-SOURCE-1'],
-    ['dialogue','会話へ反映する検証済み能力','dialogue/status.json','PINF-CHAT-EVOLUTION-1']];
+    ['dialogue','会話へ反映する検証済み能力','dialogue/status.json','PINF-CHAT-EVOLUTION-1'],
+    ['knowledge','会話で参照する研究知識','knowledge/status.json','PINF-KNOWLEDGE-1'],
+    ['programs','生成プログラムの独立評価・採用','programs/status.json','PINF-PROGRAMS-1']];
    const lanes=await Promise.all(definitions.map(async([id,label,path,schema])=>{
     try{const r=await fetcher(BASE+path,{signal:AbortSignal.timeout(10000),redirect:'error'});if(!r.ok)throw Error('HTTP_'+r.status);
      const x=JSON.parse(await boundedText(r,80000));if(x.schema!==schema)throw Error('RECORD_SCHEMA');
