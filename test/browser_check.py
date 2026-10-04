@@ -3,11 +3,16 @@ import json, os, pathlib, time
 from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BASE=os.environ.get('BROWSER_BASE_URL','http://127.0.0.1:3000')
-ENGINE=os.environ.get('BROWSER_ENGINE','chromium');started=time.monotonic();errors=[];requests=[]
+ENGINE=os.environ.get('BROWSER_ENGINE','chromium');started=time.monotonic();errors=[];requests=[];api_failures=[]
 with sync_playwright() as p:
  browser=getattr(p,ENGINE).launch(headless=True)
  ctx=browser.new_context(viewport={'width':390,'height':844},device_scale_factor=1,is_mobile=True,has_touch=True)
  page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda r:requests.append({'method':r.method,'url':r.url}))
+ def observe_response(r):
+  if '/api/chat' in r.url and r.status>=400:
+   try:api_failures.append({'status':r.status,'error':r.json().get('error')})
+   except Exception:api_failures.append({'status':r.status,'error':'unreadable'})
+ page.on('response',observe_response)
  try:
   # Exact-release gate is optional locally, mandatory in post-deploy CI.
   health=ctx.request.get(BASE+'/health',timeout=90000).json()
@@ -19,7 +24,7 @@ with sync_playwright() as p:
   for prompt in ['この会話の合言葉は「青い灯台583」です。合言葉だけを返してください。','さっき覚えた合言葉だけを答えてください。']:
    page.locator('#input').fill(prompt);page.locator('#send').click()
    page.wait_for_function("document.querySelectorAll('.message.assistant').length > %d || !!document.querySelector('#error').textContent"%len(answers),timeout=90000)
-   err=page.locator('#error').inner_text();assert not err,err
+   err=page.locator('#error').inner_text();assert not err,{'ui':err,'apiFailures':api_failures}
    answer=page.locator('.message.assistant').last.inner_text();assert '青い灯台583' in answer,answer
    answers.append(answer[:300])
   assert page.locator('.message.user').count()==2 and page.locator('.message.assistant').count()==2

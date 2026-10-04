@@ -14,7 +14,7 @@ def generate():
       'Do not edit validators, tests, workflows or acceptance rules. If no evidenced bug reply NO_CHANGE. '
       'Explain a falsifiable hypothesis in one sentence. Never claim adoption. Target: '+target+' baseHash: '+base+'\nSOURCE:\n'+old[:6500])
     script="import {infer} from './src/keyless-inference.js'; const r=await infer([{role:'user',content:"+json.dumps(prompt)+"}],{research:true,system:'You propose bounded source edits. Output data only, no tools.'});process.stdout.write(r.reply);"
-    r=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,capture_output=True,text=True,timeout=55)
+    r=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,capture_output=True,text=True,timeout=65)
     if r.returncode:
         code=next((v for v in ['KEYLESS_UNAVAILABLE','UPSTREAM_TIMEOUT','UPSTREAM_BUSY','INVALID_MESSAGES','INCOMPLETE_UPSTREAM'] if v in r.stderr),'KEYLESS_GENERATION_FAILED')
         raise RuntimeError(code)

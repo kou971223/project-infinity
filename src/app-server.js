@@ -1,12 +1,14 @@
 /** Keyless local-chat surface. Existing laboratory endpoints remain available. */
 import {infer,PROVIDER} from './keyless-inference.js';
 import {createEvolution} from '../evolution/runtime.js';
+import {createResearchMemory} from '../research/runtime.js';
 import {createInferenceQueue} from './request-pacer.js';
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,...options}={}) {
+export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,inferer=infer,...options}={}) {
   const evolution=createEvolution({fetcher});
+  const memory=createResearchMemory({fetcher});
   const factory=legacyFactory||(await import('./server.js')).createServer;
   const server=factory({...options,fetcher});const old=server.listeners('request')[0];server.removeListener('request',old);
   let cached=null,cacheUntil=0,inflight=0;const clients=new Map(),queue=createInferenceQueue();
@@ -46,6 +48,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
         foundationTraining:'separate partial-weight CPU experiment; consult run evidence',
         independentExternalValidation:false,overallProjectAccepted:false});
       if(req.method==='GET'&&url.pathname==='/api/evolution/status'){await evolution.refresh();return json(res,200,evolution.status());}
+      if(req.method==='GET'&&url.pathname==='/api/research-memory/status'){await memory.refresh();return json(res,200,memory.status());}
       if(req.method==='POST'&&url.pathname==='/api/chat'){
         const origin=req.headers.origin;
         if(origin&&new URL(origin).host!==req.headers.host)return json(res,403,{error:'ORIGIN_DENIED'});
@@ -60,9 +63,12 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
         if(inflight>=4||count.n>=20)return json(res,429,{error:'RATE_LIMITED',retryAfterSeconds:60});
         count.n++;clients.set(client,count);inflight++;
         const abort=new AbortController(),onClose=()=>{if(!res.writableEnded)abort.abort();};res.on('close',onClose);
-        try{const learned=await evolution.answer(body.messages.at(-1).content);
+        try{const text=body.messages.at(-1).content;
+          const [learned,program,cards]=await Promise.all([evolution.answer(text),memory.answer(text),memory.search(text)]);
+          const direct=body.messages.length===1||/^計算[:：]/.test(text.trim());
+          if(program&&direct){if(!res.destroyed)return json(res,200,{reply:program.reply,provider:'Project ∞ verified generated program',paid:false,program,researchMemory:memory.status(),evolution:evolution.status()});return;}
           if(learned.reply!==null&&(body.messages.length===1||/^計算[:：]/.test(body.messages.at(-1).content.trim()))){if(!res.destroyed)return json(res,200,{reply:learned.reply,provider:'Project ∞ verified capability',paid:false,evolution:learned});return;}
-          const knowledge=await evolution.context();const answer=await queue(()=>infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse,knowledge}),abort.signal);if(!res.destroyed)return json(res,200,{...answer,evolution:evolution.status()});}
+          const knowledge=(await evolution.context())+'\n採用済み研究の状態：'+JSON.stringify(memory.status())+'\n'+memory.context(cards);const answer=await queue(()=>inferer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse,knowledge}),abort.signal);if(!res.destroyed)return json(res,200,{...answer,evolution:evolution.status(),researchMemory:memory.status(),citations:cards.map(({title,url,checkedAt,kind})=>({title,url,checkedAt,kind}))});}
         catch(e){if(!res.destroyed)return json(res,e.status||502,{error:e.message,retryable:e.status!==400});}
         finally{inflight--;res.off('close',onClose);}
         return;
