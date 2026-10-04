@@ -1,0 +1,25 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {baseline,CAPABILITIES,PROTOCOL,hash,exactAnswer,selfTest,validatePolicy,validateEnvelope,createEvolution} from '../evolution/runtime.js';
+const old=baseline(),policy={schema:PROTOCOL,generation:1,capabilities:CAPABILITIES,parentHash:hash(old)};
+function envelope(){const x={schema:PROTOCOL,active:structuredClone(policy),history:[structuredClone(old)],decision:'ADOPT',evidence:{protocol:PROTOCOL,passed:true,candidateHash:hash(policy),pairs:Array.from({length:8},()=>({expected:"42",baseline:{ok:true,reply:"41",ms:1000},candidate:{ok:true,reply:"42",ms:1}}))}};return {...x,artifactHash:hash(x)};}
+test('exact arithmetic preserves precision, signs and routing boundaries',()=>{selfTest(policy);assert.equal(exactAnswer('99999999999999999999 × 99999999999999999999',policy),'9999999999999999999800000000000000000001');for(const q of ['1/3','1 / 0','1+2を説明して','1e99+1','0.1 + 0.2'])assert.equal(exactAnswer(q,policy),null);assert.equal(exactAnswer('1+2',old),null);});
+test('metric conversions preserve decimals and zero without floating-point drift',()=>{for(const [q,a] of [['0 mm to m','0 m'],['1.01 cm to mm','10.1 mm'],['10.000 mm to cm','1 cm'],['-0.1 m to mm','-100 mm']])assert.equal(exactAnswer(q,policy),a);});
+test('unknown capability, forged artifact and false approval are rejected',()=>{assert.throws(()=>validatePolicy({...policy,capabilities:['eval']}));const x=envelope();x.active.generation=99;assert.throws(()=>validateEnvelope(x));const y=envelope();y.evidence.passed=false;y.artifactHash=hash(Object.fromEntries(Object.entries(y).filter(([k])=>k!=='artifactHash')));assert.throws(()=>validateEnvelope(y));});
+test('accepted research survives a fresh instance; offline preserves healthy version',async()=>{let fail=false;const fetcher=async()=>{if(fail)throw Error('offline');return new Response(JSON.stringify(envelope()));};const runtime=createEvolution({fetcher,ttl:0});assert.equal((await runtime.answer('11+12')).reply,'23');fail=true;assert.equal((await runtime.answer('11+12')).reply,'23');fail=false;assert.equal((await createEvolution({fetcher}).answer('11+12')).generation,1);});
+test('runtime failure rolls back and quarantines the rejected artifact',async()=>{let broken=false;const runtime=createEvolution({fetcher:async()=>new Response(JSON.stringify(envelope())),ttl:0,check:p=>{if(broken&&p.generation===1)throw Error('regression');return selfTest(p);}});await runtime.answer('1+2');broken=true;const x=await runtime.answer('1+2');assert.equal(x.generation,0);assert.equal(x.decision,'ROLLED_BACK');assert.equal(x.reply,null);});
+import http from 'node:http';import {createApplication} from '../src/app-server.js';
+test('accepted generation reaches actual chat API; contextual chat still uses model',async t=>{
+ let remote=0;const server=await createApplication({legacyFactory:()=>http.createServer((q,r)=>r.end('legacy')),fetcher:async(url)=>{
+  if(String(url).includes('/dialogue/active.json'))return new Response(JSON.stringify(envelope()));remote++;return new Response(JSON.stringify({model:'test',choices:[{finish_reason:'stop',message:{content:'文脈を保持した回答'}}]}));
+ }});await new Promise(r=>server.listen(0,'127.0.0.1',r));t.after(()=>server.close());const b='http://127.0.0.1:'+server.address().port;
+ const send=messages=>fetch(b+'/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages})}).then(r=>r.json());
+ const x=await send([{role:'user',content:'9007199254740993 + 2'}]);assert.equal(x.reply,'9007199254740995');assert.equal(x.evolution.generation,1);assert.equal(remote,0);
+ const y=await send([{role:'user',content:'答えを出さずヒントだけください'},{role:'assistant',content:'はい'},{role:'user',content:'1+2'}]);assert.equal(y.reply,'文脈を保持した回答');assert.equal(remote,1);
+});
+import {createInferenceQueue} from '../src/request-pacer.js';
+test('inference serializes cooldown from completion and recovers after cancellation',async()=>{
+ let now=1000,inside=0;const waits=[];const queue=createInferenceQueue({gapMs:16,clock:()=>now,wait:async n=>{waits.push(n);now+=n;}});
+ const job=async()=>{assert.equal(inside++,0);await Promise.resolve();now+=50;inside--;return now;};
+ assert.deepEqual(await Promise.all([queue(job),queue(job)]),[1050,1116]);assert.deepEqual(waits,[16]);
+ const c=new AbortController();c.abort(Error('cancel'));await assert.rejects(queue(job,c.signal));assert.equal(await queue(job),1182);
+});

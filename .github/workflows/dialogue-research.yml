@@ -1,0 +1,86 @@
+name: Verified dialogue evolution
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 */6 * * *'
+  pull_request:
+    branches: [main]
+    paths: ['evolution/**', '.github/workflows/dialogue-research.yml']
+  workflow_run:
+    workflows: ['Published site exact-revision verification']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: dialogue-research-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  propose:
+    if: github.event.repository.private == false && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 3
+    outputs:
+      data: ${{ steps.pack.outputs.data }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - run: python3 evolution/cycle.py propose
+      - id: pack
+        run: |
+          python3 - <<'PY'
+          import base64,pathlib,os
+          data=pathlib.Path('reports/dialogue.json').read_bytes();assert len(data)<60000
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('data='+base64.b64encode(data).decode()+'\n')
+          PY
+  independent:
+    needs: propose
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    outputs:
+      data: ${{ steps.pack.outputs.data }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '22'}
+      - env:
+          DATA: ${{ needs.propose.outputs.data }}
+        run: |
+          python3 - <<'PY'
+          import base64,pathlib,os,json
+          data=base64.b64decode(os.environ['DATA'],validate=True);assert len(data)<60000;json.loads(data)
+          pathlib.Path('reports').mkdir(exist_ok=True);pathlib.Path('reports/dialogue.json').write_bytes(data)
+          PY
+      - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_*.py'
+      - name: New hidden samples, real baseline, independent exact Python oracle
+        run: python3 evolution/cycle.py validate
+      - id: pack
+        run: |
+          python3 - <<'PY'
+          import base64,pathlib,os
+          data=pathlib.Path('reports/dialogue.json').read_bytes();assert len(data)<60000
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('data='+base64.b64encode(data).decode()+'\n')
+          PY
+  preserve:
+    needs: independent
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - env:
+          DATA: ${{ needs.independent.outputs.data }}
+        run: |
+          python3 - <<'PY'
+          import base64,pathlib,os,json
+          data=base64.b64decode(os.environ['DATA'],validate=True);assert len(data)<60000;json.loads(data)
+          pathlib.Path('reports').mkdir(exist_ok=True);pathlib.Path('reports/dialogue.json').write_bytes(data)
+          PY
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 evolution/cycle.py publish

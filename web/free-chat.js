@@ -28,7 +28,7 @@ async function ask(retry=false){
  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:contextFor(chat)}),signal:controller.signal});
  let data;try{data=await r.json();}catch{throw Error('INVALID_RESPONSE');}if(!r.ok)throw Error(data.error||'HTTP_'+r.status);
  if(typeof data.reply!=='string'||!data.reply.trim())throw Error('EMPTY_RESPONSE');
- if(request?.id!==id)return;turn.status='complete';chat.messages.push({role:'assistant',content:data.reply,status:'complete'});save();
+ if(request?.id!==id)return;turn.status='complete';chat.messages.push({role:'assistant',content:data.reply,status:'complete'});save();if(data.evolution)$('notice').textContent='会話能力 第'+data.evolution.generation+'世代 · '+(data.evolution.reply!==undefined?'検証済み機能で回答':'外部AIで回答')+'（モデル重みの学習ではありません）';
  }catch(e){if(request?.id!==id)return;turn.status='failed';save();$('error').textContent=errorText(controller.signal.aborted?'UPSTREAM_TIMEOUT':e.message);}
  finally{clearTimeout(timeout);if(request?.id===id){request=null;$('progress').textContent='';render();$('scroll').scrollTop=$('scroll').scrollHeight;}}
 }
