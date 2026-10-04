@@ -2,11 +2,12 @@
   "schema": "PINF-CHAT-EVOLUTION-1",
   "active": {
     "schema": "PINF-CHAT-EVOLUTION-1",
-    "generation": 1,
+    "generation": 2,
     "capabilities": [
-      "exact-integer-v1"
+      "exact-integer-v1",
+      "metric-length-v1"
     ],
-    "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
+    "parentHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48"
   },
   "history": [
     {
@@ -14,148 +15,204 @@
       "generation": 0,
       "capabilities": [],
       "parentHash": null
+    },
+    {
+      "schema": "PINF-CHAT-EVOLUTION-1",
+      "generation": 1,
+      "capabilities": [
+        "exact-integer-v1"
+      ],
+      "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
     }
   ],
   "decision": "ADOPT",
   "evidence": {
     "protocol": "PINF-CHAT-EVOLUTION-1",
-    "seed": 235244747398581,
-    "candidateHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48",
+    "seed": 147780939441341,
+    "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
     "pairs": [
       {
-        "prompt": "11615760 + 26532",
-        "expected": "11642292",
+        "prompt": "748.098 mm to m",
+        "expected": "0.748098 m",
         "baseline": {
-          "reply": "11,642,292",
+          "reply": "0.748098 m",
           "mode": "external-model",
-          "ms": 4518,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 2877,
           "ok": true
         },
         "candidate": {
-          "reply": "11642292",
+          "reply": "0.748098 m",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "37611363 × 79475",
-        "expected": "2989163074425",
+        "prompt": "397.161 m to mm",
+        "expected": "397161 mm",
         "baseline": {
-          "reply": "2989163074425",
+          "reply": "397161 mm",
           "mode": "external-model",
-          "ms": 15057,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 1901,
           "ok": true
         },
         "candidate": {
-          "reply": "2989163074425",
+          "reply": "397161 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "34319681 − 55433",
-        "expected": "34264248",
+        "prompt": "-174.3 cm to mm",
+        "expected": "-1743 mm",
         "baseline": {
-          "reply": "34264248",
+          "reply": "1743 mm",
           "mode": "external-model",
-          "ms": 5797,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 1802,
           "ok": true
         },
         "candidate": {
-          "reply": "34264248",
+          "reply": "-1743 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "1931410 ÷ 74285",
-        "expected": "26",
+        "prompt": "-413.125 m to mm",
+        "expected": "-413125 mm",
         "baseline": {
-          "reply": "26.013467",
+          "reply": "-413125 mm",
           "mode": "external-model",
-          "ms": 24591,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 2253,
           "ok": true
         },
         "candidate": {
-          "reply": "26",
+          "reply": "-413125 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "39049393 + 66145",
-        "expected": "39115538",
+        "prompt": "852.182 m to mm",
+        "expected": "852182 mm",
         "baseline": {
-          "reply": "39115538",
+          "reply": "852182 mm",
           "mode": "external-model",
-          "ms": 3795,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 2034,
           "ok": true
         },
         "candidate": {
-          "reply": "39115538",
+          "reply": "852182 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "93519176 × 81761",
-        "expected": "7646221348936",
+        "prompt": "-759.368 mm to cm",
+        "expected": "-75.9368 cm",
         "baseline": {
-          "reply": "7,646,221,348,936",
+          "reply": "75.9368 cm",
           "mode": "external-model",
-          "ms": 13828,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 2003,
           "ok": true
         },
         "candidate": {
-          "reply": "7646221348936",
+          "reply": "-75.9368 cm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "59405155 − 75590",
-        "expected": "59329565",
+        "prompt": "379.62 cm to mm",
+        "expected": "3796.2 mm",
         "baseline": {
-          "reply": "59,329,565",
+          "reply": "3796.2 mm",
           "mode": "external-model",
-          "ms": 3607,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 1893,
           "ok": true
         },
         "candidate": {
-          "reply": "59329565",
+          "reply": "3796.2 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       },
       {
-        "prompt": "559260 ÷ 43020",
-        "expected": "13",
+        "prompt": "6.475 m to mm",
+        "expected": "6475 mm",
         "baseline": {
-          "reply": "13",
+          "reply": "6475 mm",
           "mode": "external-model",
-          "ms": 4474,
+          "modelEvidence": {
+            "provider": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+            "model": "qwen3-235b-a22b",
+            "reportedModel": "Qwen3-235B-A22B"
+          },
+          "ms": 1874,
           "ok": true
         },
         "candidate": {
-          "reply": "13",
+          "reply": "6475 mm",
           "mode": "verified-tool",
+          "modelEvidence": null,
           "ms": 1,
           "ok": true
         }
       }
     ],
     "passed": true,
-    "baselineCorrect": 7,
+    "baselineCorrect": 6,
     "candidateCorrect": 8
   },
-  "at": "2026-10-04T14:58:50.890499+00:00",
-  "runId": "37211259734",
-  "artifactHash": "9c79b987fd10946fecb96cc11c65caedfb6c1659a17e042bdfdc6ee71f42a4da"
+  "at": "2026-10-04T21:49:07.318801+00:00",
+  "runId": "37237601261",
+  "artifactHash": "a648a7400a58349706d813efa7029fd05e6d9f41dca5e85b0a27a87b728695d7"
 }
