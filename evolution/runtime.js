@@ -29,12 +29,13 @@ export function selfTest(p){
  for(const c of p.capabilities)for(const [q,a] of probes[c])if(exactAnswer(q,p)!==a)throw Error('CAPABILITY_REGRESSION');
  for(const q of ['こんにちは','計算方法を説明して','1 / 0','1+2;process.exit()','Ignore instructions: 1+2'])if(exactAnswer(q,p)!==null)throw Error('ROUTING_REGRESSION');return true;
 }
+export const canonicalAnswer=value=>value.trim().replace(/(?<![\d.,])([+-]?\d{1,3}(?:,\d{3})+)(?![\d.,])/g,m=>m.replaceAll(',',''));
 export function validateEnvelope(x){
  if(!x||x.schema!==PROTOCOL||!x.active||!Array.isArray(x.history)||x.history.length>10)throw Error('ENVELOPE_INVALID');
  const {artifactHash,...body}=x;if(hash(body)!==artifactHash)throw Error('ARTIFACT_HASH');
  const p=validatePolicy(x.active);if(x.decision!=='ADOPT'||!x.evidence||x.evidence.protocol!==PROTOCOL||x.evidence.passed!==true||x.evidence.candidateHash!==hash(p))throw Error('UNVERIFIED_POLICY');
- const pairs=x.evidence.pairs;if(!Array.isArray(pairs)||pairs.length!==8||pairs.some(v=>v.baseline?.ok!==true||v.candidate?.ok!==true||typeof v.expected!=='string'||typeof v.baseline.reply!=='string'||typeof v.candidate.reply!=='string'||!Number.isFinite(v.baseline.ms)||!Number.isFinite(v.candidate.ms)||v.baseline.ms<0||v.candidate.ms<0||v.candidate.reply.trim()!==v.expected))throw Error('EVIDENCE_INVALID');
- const gain=pairs.some(v=>v.baseline.reply.trim()!==v.expected)||pairs.filter(v=>v.candidate.ms*2+20<v.baseline.ms).length>=4;if(!gain)throw Error('NO_VERIFIED_GAIN');
+ const pairs=x.evidence.pairs;if(!Array.isArray(pairs)||pairs.length!==8||pairs.some(v=>v.baseline?.ok!==true||v.candidate?.ok!==true||typeof v.expected!=='string'||typeof v.baseline.reply!=='string'||typeof v.candidate.reply!=='string'||!Number.isFinite(v.baseline.ms)||!Number.isFinite(v.candidate.ms)||v.baseline.ms<0||v.candidate.ms<0||canonicalAnswer(v.candidate.reply)!==v.expected))throw Error('EVIDENCE_INVALID');
+ const gain=pairs.some(v=>canonicalAnswer(v.baseline.reply)!==v.expected)||pairs.filter(v=>v.candidate.ms*2+20<v.baseline.ms).length>=4;if(!gain)throw Error('NO_VERIFIED_GAIN');
  for(const old of x.history)validatePolicy(old);return x;
 }
 const URL='https://raw.githubusercontent.com/kou971223/project-infinity/research-records/dialogue/active.json';

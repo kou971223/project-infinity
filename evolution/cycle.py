@@ -1,5 +1,5 @@
 """Frozen finite proposals; independent Python arithmetic oracle; no generated executable code."""
-import base64,datetime,decimal,hashlib,json,os,pathlib,secrets,subprocess,sys,time,urllib.request,urllib.error
+import base64,datetime,decimal,hashlib,json,os,pathlib,secrets,subprocess,sys,time,re,urllib.request,urllib.error
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 PROTOCOL='PINF-CHAT-EVOLUTION-1'
 CAPS=['exact-integer-v1','metric-length-v1']
@@ -21,11 +21,15 @@ def check_policy(p):
  if set(p)!=set(base()) or p['schema']!=PROTOCOL or type(p['generation'])!=int or p['generation']<0 or p['generation']>100000 or not isinstance(p['capabilities'],list) or len(set(p['capabilities']))!=len(p['capabilities']) or any(c not in CAPS for c in p['capabilities']):raise ValueError('POLICY')
  return p
 
+def canonical_answer(value):
+ # Presentation-only thousands separators, never arbitrary prose or malformed grouping.
+ return re.sub(r'(?<![\d.,])([+-]?\d{1,3}(?:,\d{3})+)(?![\d.,])',lambda m:m[0].replace(',',''),value.strip())
+
 def judge(e):
  if e.get('protocol')!=PROTOCOL or len(e.get('pairs',[]))!=8:return False
  pairs=e['pairs']
  if any(not p['baseline'].get('ok') or not p['candidate'].get('ok') for p in pairs):return False
- old=sum(p['baseline']['reply'].strip()==p['expected'] for p in pairs);new=sum(p['candidate']['reply'].strip()==p['expected'] for p in pairs)
+ old=sum(canonical_answer(p['baseline']['reply'])==p['expected'] for p in pairs);new=sum(canonical_answer(p['candidate']['reply'])==p['expected'] for p in pairs)
  faster=sum(p['candidate']['ms']*2+20<p['baseline']['ms'] for p in pairs)
  return new==len(pairs) and new>=old and (new>old or faster>=4)
 
@@ -74,7 +78,7 @@ def validate(r):
   pairs.append(dict(prompt=q,expected=expected,**outputs))
   if any(not v.get('ok') for v in outputs.values()) or time.monotonic()>deadline:break
  e=dict(protocol=PROTOCOL,seed=seed,candidateHash=digest(candidate),pairs=pairs)
- e['passed']=judge(e);e['baselineCorrect']=sum(p['baseline'].get('reply','').strip()==p['expected'] for p in pairs);e['candidateCorrect']=sum(p['candidate'].get('reply','').strip()==p['expected'] for p in pairs)
+ e['passed']=judge(e);e['baselineCorrect']=sum(canonical_answer(p['baseline'].get('reply',''))==p['expected'] for p in pairs);e['candidateCorrect']=sum(canonical_answer(p['candidate'].get('reply',''))==p['expected'] for p in pairs)
  r['evidence']=e;r['decision']=('ADOPT' if e['passed'] else 'REJECT_OR_DEFER') if new else ('MONITOR_PASS' if e['passed'] else 'MONITOR_FAILED')
  # Monitoring identical tools has no speed gain; correctness is the monitoring condition.
  if not new:r['decision']='MONITOR_PASS' if len(pairs)==8 and e['candidateCorrect']==8 else 'MONITOR_FAILED'

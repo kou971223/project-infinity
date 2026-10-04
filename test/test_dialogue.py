@@ -10,3 +10,9 @@ class DialogueGate(unittest.TestCase):
   e=self.evidence();e['pairs'].pop();self.assertFalse(m.judge(e));e=self.evidence();e['protocol']='loose';self.assertFalse(m.judge(e))
  def test_oracle_samples_are_reproducible_and_seed_sensitive(self):
   a=m.cases('exact-integer-v1',123);self.assertEqual(len(a),8);self.assertEqual(a,m.cases('exact-integer-v1',123));self.assertNotEqual(a,m.cases('exact-integer-v1',124))
+
+ def test_grouped_numbers_do_not_create_false_accuracy_gain(self):
+  e=self.evidence()
+  for p in e['pairs']:
+   p.update(expected='1234567');p['baseline'].update(reply='1,234,567',ms=1);p['candidate'].update(reply='1234567')
+  self.assertFalse(m.judge(e));self.assertEqual(m.canonical_answer('-1,234'),'-1234');self.assertEqual(m.canonical_answer('12,34'),'12,34')
