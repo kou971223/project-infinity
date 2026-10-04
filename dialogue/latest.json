@@ -1,0 +1,167 @@
+{
+  "schema": "PINF-CHAT-EVOLUTION-1",
+  "at": "2026-10-04T14:58:50.890499+00:00",
+  "baseCommit": "4069c44bd70294604b82628e973cb47f389f1e48",
+  "runId": "37211259734",
+  "parentArtifactHash": null,
+  "baseline": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 0,
+    "capabilities": [],
+    "parentHash": null
+  },
+  "candidate": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 1,
+    "capabilities": [
+      "exact-integer-v1"
+    ],
+    "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
+  },
+  "candidateHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48",
+  "hypothesis": "A fixed exact-answer capability improves correctness or halves latency without changing general-chat routing.",
+  "decision": "ADOPT",
+  "newCapability": "exact-integer-v1",
+  "history": [],
+  "testedCapability": "exact-integer-v1",
+  "evidence": {
+    "protocol": "PINF-CHAT-EVOLUTION-1",
+    "seed": 235244747398581,
+    "candidateHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48",
+    "pairs": [
+      {
+        "prompt": "11615760 + 26532",
+        "expected": "11642292",
+        "baseline": {
+          "reply": "11,642,292",
+          "mode": "external-model",
+          "ms": 4518,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "11642292",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "37611363 × 79475",
+        "expected": "2989163074425",
+        "baseline": {
+          "reply": "2989163074425",
+          "mode": "external-model",
+          "ms": 15057,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "2989163074425",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "34319681 − 55433",
+        "expected": "34264248",
+        "baseline": {
+          "reply": "34264248",
+          "mode": "external-model",
+          "ms": 5797,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "34264248",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "1931410 ÷ 74285",
+        "expected": "26",
+        "baseline": {
+          "reply": "26.013467",
+          "mode": "external-model",
+          "ms": 24591,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "26",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "39049393 + 66145",
+        "expected": "39115538",
+        "baseline": {
+          "reply": "39115538",
+          "mode": "external-model",
+          "ms": 3795,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "39115538",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "93519176 × 81761",
+        "expected": "7646221348936",
+        "baseline": {
+          "reply": "7,646,221,348,936",
+          "mode": "external-model",
+          "ms": 13828,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "7646221348936",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "59405155 − 75590",
+        "expected": "59329565",
+        "baseline": {
+          "reply": "59,329,565",
+          "mode": "external-model",
+          "ms": 3607,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "59329565",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "559260 ÷ 43020",
+        "expected": "13",
+        "baseline": {
+          "reply": "13",
+          "mode": "external-model",
+          "ms": 4474,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "13",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      }
+    ],
+    "passed": true,
+    "baselineCorrect": 7,
+    "candidateCorrect": 8
+  },
+  "applied": true,
+  "recordHash": "7c4ad34231b747a64f2d788129c59df15d619288afa0fa78140d0c98fcb16d32"
+}
