@@ -1,6 +1,10 @@
 name: Keyless public source research
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Published site exact-revision verification']
+    types: [completed]
+    branches: [main]
   schedule:
     - cron: '23 */6 * * *'
 permissions:
@@ -10,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   propose:
-    if: github.event.repository.private == false
+    if: github.event.repository.private == false && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-22.04
     timeout-minutes: 3
     outputs:

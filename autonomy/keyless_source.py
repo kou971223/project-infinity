@@ -20,7 +20,10 @@ def generate():
     raw=r.stdout.strip()
     if raw.startswith('```'):raw=raw.split('\n',1)[1].rsplit('```',1)[0].strip()
     if raw=='NO_CHANGE':return {'decision':'NO_CHANGE','target':target,'hypothesis':None}
-    edit=json.loads(raw);patch=expand_edit(edit,ROOT)
+    try:
+        edit=json.loads(raw);patch=expand_edit(edit,ROOT)
+    except (ValueError,TypeError,KeyError) as e:
+        return {'decision':'CANDIDATE_REJECTED','target':target,'reason':type(e).__name__+': '+str(e)[:180],'generatedHash':digest(raw),'generatedText':raw[:8000]}
     return {'decision':'CANDIDATE_FROZEN','target':target,'patch':patch,'candidateHash':digest(patch),'hypothesis':patch['hypothesis']}
 
 def validate(record):
@@ -32,7 +35,7 @@ def validate(record):
         result=verify_patch_in_docker(patch,ROOT);record['validation']=result
         passed=result.get('status')=='executed' and all(result['results'][k]['exitCode']==0 and result['results'][k]['limit'] is None for k in ['baseline','candidate'])
         record['decision']='REVIEW_REQUIRED' if passed else 'REJECT_OR_UNVERIFIED'
-    elif record.get('decision') not in ['NO_CHANGE','GENERATION_FAILED']:
+    elif record.get('decision') not in ['NO_CHANGE','GENERATION_FAILED','CANDIDATE_REJECTED']:
         raise ValueError('MISSING_CANDIDATE')
     record['applied']=False;record['overallProjectAccepted']=False
     return record
@@ -51,7 +54,7 @@ def main():
         from publish import call
         record=json.loads(file.read_text())
         if record.get('baseCommit')!=os.environ.get('GITHUB_SHA') or record.get('runId')!=os.environ.get('GITHUB_RUN_ID'):raise ValueError('ORIGIN')
-        if record.get('decision') not in ['REVIEW_REQUIRED','REJECT_OR_UNVERIFIED','NO_CHANGE','GENERATION_FAILED'] or record.get('applied') is not False:raise ValueError('NO_SELF_PROMOTION')
+        if record.get('decision') not in ['REVIEW_REQUIRED','REJECT_OR_UNVERIFIED','NO_CHANGE','GENERATION_FAILED','CANDIDATE_REJECTED'] or record.get('applied') is not False:raise ValueError('NO_SELF_PROMOTION')
         rid=record['runId']+'-'+os.environ.get('GITHUB_RUN_ATTEMPT','1')
         if not re.fullmatch('[0-9]+-[0-9]+',rid):raise ValueError('RUN_ID')
         for attempt in range(3):
