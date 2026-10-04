@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
+      - run: npm ci --ignore-scripts
       - run: npm test
       - run: python3 -m unittest discover -s test -p 'test_*.py' -v
       - name: Install pinned CPU-only learning dependencies (no API key)
@@ -59,6 +60,7 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
+      - run: npm ci --ignore-scripts
       - name: Preserve evidence on data-only branch; never main
         env:
           GH_TOKEN: ${{ github.token }}

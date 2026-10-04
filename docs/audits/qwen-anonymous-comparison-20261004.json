@@ -1,0 +1,113 @@
+{
+  "at": "2026-10-04T21:32:30.249Z",
+  "conditions": {
+    "credentials": false,
+    "payment": false,
+    "syntheticOnly": true,
+    "legacy": {
+      "name": "Pollinations.AI",
+      "model": "openai-fast",
+      "reportedModel": "GPT-OSS 20B Reasoning LLM (OVH)",
+      "identitySource": "https://text.pollinations.ai/models",
+      "checkedAt": "2026-10-04",
+      "tier": "anonymous",
+      "endpoint": "https://text.pollinations.ai/openai",
+      "modelIdentity": "provider-reported; weights not independently inspected",
+      "guaranteedFreeAvailability": false
+    },
+    "candidate": {
+      "name": "Qwen official public demo (Hugging Face / Alibaba Cloud)",
+      "model": "qwen3-235b-a22b",
+      "reportedModel": "Qwen3-235B-A22B",
+      "identitySource": "https://huggingface.co/spaces/Qwen/Qwen3-Demo/blob/main/app.py",
+      "checkedAt": "2026-10-04",
+      "tier": "anonymous public demo",
+      "endpoint": "https://qwen-qwen3-demo.hf.space",
+      "modelIdentity": "official demo configuration and response header; weights not independently inspected",
+      "guaranteedFreeAvailability": false,
+      "conditions": "No user account, API key or payment used; shared public demo availability and limits apply."
+    },
+    "client": "@gradio/client@2.7.1",
+    "spaceCommit": "60e1db0778067d36b8a2793c350bf85cd461a298",
+    "scope": "Current availability and these three tasks only; no general intelligence or permanent availability conclusion."
+  },
+  "implementationHash": "6ccd7cf7ae536f75527d02234f28e804f05335f55518802c516875bac69e8307",
+  "cases": [
+    {
+      "id": "japanese-instruction",
+      "messages": [
+        {
+          "role": "user",
+          "content": "「接続確認」とだけ答えてください。"
+        }
+      ],
+      "expected": "接続確認",
+      "legacy": {
+        "ok": false,
+        "error": "UPSTREAM_HTTP_500",
+        "ms": 7880
+      },
+      "candidate": {
+        "ok": true,
+        "reply": "接続確認",
+        "reportedModel": "Qwen3-235B-A22B",
+        "correct": true,
+        "ms": 24234
+      }
+    },
+    {
+      "id": "context-recall",
+      "messages": [
+        {
+          "role": "user",
+          "content": "合言葉は「青い灯台583」です。合言葉だけ答えてください。"
+        },
+        {
+          "role": "assistant",
+          "content": "青い灯台583"
+        },
+        {
+          "role": "user",
+          "content": "さっきの合言葉だけを答えてください。"
+        }
+      ],
+      "expected": "青い灯台583",
+      "legacy": {
+        "ok": false,
+        "error": "UPSTREAM_HTTP_500",
+        "ms": 9137
+      },
+      "candidate": {
+        "ok": true,
+        "reply": "青い灯台583",
+        "reportedModel": "Qwen3-235B-A22B",
+        "correct": true,
+        "ms": 24266
+      }
+    },
+    {
+      "id": "exact-multiplication",
+      "messages": [
+        {
+          "role": "user",
+          "content": "17かける19を計算して数字だけ答えてください。"
+        }
+      ],
+      "expected": "323",
+      "legacy": {
+        "ok": true,
+        "reply": "323",
+        "reportedModel": "gpt-oss-20b",
+        "correct": true,
+        "ms": 5912
+      },
+      "candidate": {
+        "ok": true,
+        "reply": "323",
+        "reportedModel": "Qwen3-235B-A22B",
+        "correct": true,
+        "ms": 26303
+      }
+    }
+  ]
+}

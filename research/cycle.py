@@ -69,7 +69,7 @@ def cases(task,seed):
 def generate_program(task):
  prompt='Generate one bounded arithmetic program. Reply JSON with exactly task, expression, hypothesis. No Markdown. Task: '+task+'. '+DESCRIPTIONS[task]+' Variables: '+', '.join(TASKS[task])+'. Tree grammar: ["var",name], ["const",integerString], or [op,left,right] where op is add/sub/mul/div. At most 48 nodes and depth 8. No code, files, tools, authority or validator edits. hypothesis must state the intended behavior, not claim passing.'
  script="import {infer} from './src/keyless-inference.js';const r=await infer([{role:'user',content:"+json.dumps(prompt)+"}],{research:true,system:'Generate data-only arithmetic trees. No execution or adoption authority.'});process.stdout.write(r.reply);"
- r=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,capture_output=True,text=True,timeout=55)
+ r=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,capture_output=True,text=True,timeout=65)
  if r.returncode:raise ValueError(next((x for x in ['KEYLESS_UNAVAILABLE','UPSTREAM_TIMEOUT','UPSTREAM_BUSY','INCOMPLETE_UPSTREAM'] if x in r.stderr),'GENERATION_FAILED'))
  raw=r.stdout.strip()
  if raw.startswith('```'):raw=raw.split('\n',1)[1].rsplit('```',1)[0].strip()

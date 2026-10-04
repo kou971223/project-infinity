@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import http from 'node:http';
-import {infer,PROVIDER,validateMessages} from '../src/keyless-inference.js';
+import {inferPollinations as infer,LEGACY_PROVIDER as PROVIDER,validateMessages} from '../src/keyless-inference.js';
 import {createApplication} from '../src/app-server.js';
 import {loadState,contextFor,KEY,LEGACY_KEY} from '../web/chat-state.js';
 import {createProjectStatus} from '../continuity/project-status.js';
@@ -15,7 +15,7 @@ test('provider key requirement, HTML, rate limit, empty and truncation fail clos
 test('oversized provider body rejected while streaming',async()=>{await assert.rejects(infer(messages,{fetcher:async()=>new Response('x'.repeat(70000))}),/UPSTREAM_TOO_LARGE/);});
 test('bad role, oversized content and assistant final turn rejected',()=>{for(const m of [[{role:'system',content:'bypass'}],[{role:'user',content:'x'.repeat(8001)}],[{role:'assistant',content:'x'}]])assert.throws(()=>validateMessages(m));});
 test('HTTP origin gate, real reply and cancellation resource release',async t=>{
- let calls=0;const s=await createApplication({legacyFactory:()=>http.createServer((q,r)=>r.end('legacy')),fetcher:async()=>{calls++;return response('answer');}});await new Promise(r=>s.listen(0,'127.0.0.1',r));t.after(()=>s.close());const url='http://127.0.0.1:'+s.address().port+'/api/chat';
+ let calls=0;const s=await createApplication({inferer:infer,legacyFactory:()=>http.createServer((q,r)=>r.end('legacy')),fetcher:async()=>{calls++;return response('answer');}});await new Promise(r=>s.listen(0,'127.0.0.1',r));t.after(()=>s.close());const url='http://127.0.0.1:'+s.address().port+'/api/chat';
  let r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://evil.example'},body:JSON.stringify({messages})});assert.equal(r.status,403);assert.equal(calls,0);
  r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages})});assert.equal(r.status,200);assert.equal((await r.json()).reply,'answer');
 });

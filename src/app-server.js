@@ -6,7 +6,7 @@ import {createInferenceQueue} from './request-pacer.js';
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,...options}={}) {
+export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,inferer=infer,...options}={}) {
   const evolution=createEvolution({fetcher});
   const memory=createResearchMemory({fetcher});
   const factory=legacyFactory||(await import('./server.js')).createServer;
@@ -68,7 +68,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
           const direct=body.messages.length===1||/^計算[:：]/.test(text.trim());
           if(program&&direct){if(!res.destroyed)return json(res,200,{reply:program.reply,provider:'Project ∞ verified generated program',paid:false,program,researchMemory:memory.status(),evolution:evolution.status()});return;}
           if(learned.reply!==null&&(body.messages.length===1||/^計算[:：]/.test(body.messages.at(-1).content.trim()))){if(!res.destroyed)return json(res,200,{reply:learned.reply,provider:'Project ∞ verified capability',paid:false,evolution:learned});return;}
-          const knowledge=(await evolution.context())+'\n採用済み研究の状態：'+JSON.stringify(memory.status())+'\n'+memory.context(cards);const answer=await queue(()=>infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse,knowledge}),abort.signal);if(!res.destroyed)return json(res,200,{...answer,evolution:evolution.status(),researchMemory:memory.status(),citations:cards.map(({title,url,checkedAt,kind})=>({title,url,checkedAt,kind}))});}
+          const knowledge=(await evolution.context())+'\n採用済み研究の状態：'+JSON.stringify(memory.status())+'\n'+memory.context(cards);const answer=await queue(()=>inferer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse,knowledge}),abort.signal);if(!res.destroyed)return json(res,200,{...answer,evolution:evolution.status(),researchMemory:memory.status(),citations:cards.map(({title,url,checkedAt,kind})=>({title,url,checkedAt,kind}))});}
         catch(e){if(!res.destroyed)return json(res,e.status||502,{error:e.message,retryable:e.status!==400});}
         finally{inflight--;res.off('close',onClose);}
         return;

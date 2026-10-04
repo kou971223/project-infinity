@@ -55,7 +55,7 @@ def cases(cap,seed):
  return out
 
 def run(prompt,policy):
- p=subprocess.run(['node','evolution/runner.js'],cwd=ROOT,input=json.dumps(dict(prompt=prompt,policy=policy)),text=True,capture_output=True,timeout=55)
+ p=subprocess.run(['node','evolution/runner.js'],cwd=ROOT,input=json.dumps(dict(prompt=prompt,policy=policy)),text=True,capture_output=True,timeout=65)
  if p.returncode:raise ValueError('RUNNER_ERROR')
  return json.loads(p.stdout)
 
