@@ -1,11 +1,13 @@
 /** Keyless local-chat surface. Existing laboratory endpoints remain available. */
+import {infer,PROVIDER} from './keyless-inference.js';
+import {createPacer} from './request-pacer.js';
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,...options}={}) {
   const factory=legacyFactory||(await import('./server.js')).createServer;
   const server=factory({...options,fetcher});const old=server.listeners('request')[0];server.removeListener('request',old);
-  let cached=null,cacheUntil=0;
+  let cached=null,cacheUntil=0,inflight=0;const clients=new Map(),pace=createPacer();
   const json=(res,status,x)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(x));};
   async function researchRecord(){
     if(Date.now()<cacheUntil)return cached;
@@ -29,30 +31,36 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
   server.on('request',async(req,res)=>{
     try{
       const url=new URL(req.url,'http://localhost');
-      const files={'/':'web/index.html','/free-chat.js':'web/free-chat.js','/chat-worker.js':'web/chat-worker.js','/model-backend.js':'continuity/backend.js','/backend-policy.js':'web/backend-policy.js'};
+      const files={'/':'web/index.html','/free-chat.js':'web/free-chat.js','/chat-state.js':'web/chat-state.js','/chat-worker.js':'web/chat-worker.js','/model-backend.js':'continuity/backend.js','/backend-policy.js':'web/backend-policy.js'};
       if(req.method==='GET'&&Object.hasOwn(files,url.pathname)){
         const html=url.pathname==='/';res.writeHead(200,{'Content-Type':html?'text/html; charset=utf-8':'text/javascript; charset=utf-8',
           'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'});
         return res.end(fs.readFileSync(path.join(ROOT,files[url.pathname])));
       }
-      if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,version:'0.4.0',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
-      if(req.method==='GET'&&['/api/free/status','/api/status'].includes(url.pathname))return json(res,200,{version:'0.4.0',zeroCostMode:true,
-        chat:'browser keyless remote inference; no local model startup',model:'Pollinations text API model=openai',
+      if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,version:'0.8.0',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
+      if(req.method==='GET'&&['/api/free/status','/api/status'].includes(url.pathname))return json(res,200,{version:'0.8.0',zeroCostMode:true,
+        chat:'browser keyless remote inference; no local model startup',model:PROVIDER,conversationStorage:'this browser only; no cloud sync',
         research:await researchRecord(),paidInferenceEnabled:false,fullAppSelfRewrite:false,
         foundationTraining:'separate partial-weight CPU experiment; consult run evidence',
         independentExternalValidation:false,overallProjectAccepted:false});
       if(req.method==='POST'&&url.pathname==='/api/chat'){
-        let raw='';for await(const chunk of req){raw+=chunk;if(Buffer.byteLength(raw)>24000)return json(res,413,{error:'INPUT_TOO_LARGE'});}
-        let body;try{body=JSON.parse(raw||'{}');}catch{return json(res,400,{error:'INVALID_JSON'});}
-        if(!Array.isArray(body.messages)||!body.messages.length||body.messages.length>10)return json(res,400,{error:'INVALID_MESSAGES'});
-        const clean=body.messages.map(m=>({role:m?.role,content:typeof m?.content==='string'?m.content.slice(0,2000):''}));
-        if(clean.some(m=>!['user','assistant'].includes(m.role)||!m.content))return json(res,400,{error:'INVALID_MESSAGES'});
-        const recent=clean.slice(-8).map(m=>(m.role==='user'?'ユーザー: ':'AI: ')+m.content).join('\n');
-        const prompt='以下の会話に日本語で簡潔かつ正確に回答してください。事実と不確実性を区別してください。\n\n'+recent+'\nAI:';
-        const q=new URLSearchParams({model:'openai',private:'true',referrer:'project-infinity-core.onrender.com',system:'You are Project Infinity. Reply in Japanese. Be concise and accurate. Do not claim you browsed the web or changed yourself unless the supplied conversation proves it.'});
-        try{const upstream=await fetcher('https://text.pollinations.ai/'+encodeURIComponent(prompt)+'?'+q,{signal:AbortSignal.timeout(45000),headers:{Referer:'https://project-infinity-core.onrender.com/'}});
-          if(!upstream.ok)return json(res,502,{error:'UPSTREAM_'+upstream.status});const reply=(await upstream.text()).trim().slice(0,8000);if(!reply)return json(res,502,{error:'EMPTY_UPSTREAM'});return json(res,200,{reply,provider:'pollinations',paid:false});}
-        catch(e){return json(res,502,{error:'UPSTREAM_FAILED'});}
+        const origin=req.headers.origin;
+        if(origin&&new URL(origin).host!==req.headers.host)return json(res,403,{error:'ORIGIN_DENIED'});
+        if(!String(req.headers['content-type']||'').startsWith('application/json'))return json(res,415,{error:'JSON_REQUIRED'});
+        let n=0;const chunks=[];for await(const chunk of req){n+=chunk.length;if(n>65536)return json(res,413,{error:'INPUT_TOO_LARGE'});chunks.push(chunk);}
+        let body;try{body=JSON.parse(Buffer.concat(chunks).toString()||'{}');}catch{return json(res,400,{error:'INVALID_JSON'});}
+        const {validateMessages}=await import('./keyless-inference.js');
+        try{validateMessages(body.messages);}catch(e){return json(res,e.status,{error:e.message});}
+        const now=Date.now(),client=req.socket.remoteAddress||'unknown';
+        for(const [key,value] of clients)if(value.until<now)clients.delete(key);
+        const count=clients.get(client)||{until:now+60000,n:0};
+        if(inflight>=4||count.n>=20)return json(res,429,{error:'RATE_LIMITED',retryAfterSeconds:60});
+        count.n++;clients.set(client,count);inflight++;
+        const abort=new AbortController(),onClose=()=>{if(!res.writableEnded)abort.abort();};res.on('close',onClose);
+        try{await pace(abort.signal);const answer=await infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse});if(!res.destroyed)return json(res,200,answer);}
+        catch(e){if(!res.destroyed)return json(res,e.status||502,{error:e.message,retryable:e.status!==400});}
+        finally{inflight--;res.off('close',onClose);}
+        return;
       }
       if(req.method==='GET'&&url.pathname==='/lab'){req.url='/';return old(req,res);}
       return old(req,res);

@@ -1,0 +1,96 @@
+name: Keyless public source research
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Published site exact-revision verification']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: pinf-keyless-source
+  cancel-in-progress: false
+jobs:
+  propose:
+    if: github.event.repository.private == false && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 3
+    outputs:
+      record: ${{ steps.record.outputs.record }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - run: python3 autonomy/keyless_source.py generate
+      - id: record
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os
+          data=pathlib.Path('reports/source-candidate.json').read_bytes()
+          assert len(data)<50000
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('record='+base64.b64encode(data).decode()+'\n')
+          PY
+  validate:
+    needs: propose
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    outputs:
+      record: ${{ steps.record.outputs.record }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Decode frozen data; candidate cannot modify this validator
+        env:
+          RECORD: ${{ needs.propose.outputs.record }}
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os,json
+          data=base64.b64decode(os.environ['RECORD'],validate=True)
+          assert len(data)<50000
+          json.loads(data)
+          pathlib.Path('reports/source-candidate.json').write_bytes(data)
+          PY
+      - run: |
+          docker pull node:22.16.0-bookworm-slim
+          echo "PINF_NODE_IMAGE=$(docker image inspect node:22.16.0-bookworm-slim --format '{{.Id}}')" >> "$GITHUB_ENV"
+      - run: python3 test/docker_boundary.py
+      - run: python3 autonomy/keyless_source.py validate
+      - id: record
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os
+          data=pathlib.Path('reports/source-candidate.json').read_bytes()
+          assert len(data)<60000
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('record='+base64.b64encode(data).decode()+'\n')
+          PY
+  archive:
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.repository == 'kou971223/project-infinity'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - env:
+          RECORD: ${{ needs.validate.outputs.record }}
+        run: |
+          python3 - <<'PY'
+          import pathlib,base64,os,json
+          data=base64.b64decode(os.environ['RECORD'],validate=True)
+          assert len(data)<60000
+          json.loads(data)
+          pathlib.Path('reports/source-candidate.json').write_bytes(data)
+          PY
+      - name: Write data branch only; no app code execution or main promotion
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 autonomy/keyless_source.py publish

@@ -18,14 +18,8 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - run: python3 -m unittest discover -s test -p 'test_*.py' -v
       - run: npm run verify:cycle
       - run: npm run verify:oracle
       - run: npm run research
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: verification-${{ github.run_id }}
-          path: |
-            reports/rehearsal.json
-            reports/python-oracle-result.json
-            reports/latest.json
-          retention-days: 7
+      - run: cat reports/python-oracle-result.json

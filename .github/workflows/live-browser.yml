@@ -1,49 +1,47 @@
-name: Published site real-browser verification
+name: Published site exact-revision verification
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/live-browser.yml']
 permissions:
   contents: read
 concurrency:
   group: pinf-published-browser-check
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   live-browser:
     if: github.event.repository.private == false
     runs-on: ubuntu-22.04
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Install isolated browser tools, without paid APIs
+      - name: Wait for the exact main commit to be live
+        env:
+          EXPECTED_REVISION: ${{ github.sha }}
+        run: |
+          python3 -u - <<'PY'
+          import json,os,time,urllib.request
+          expected=os.environ['EXPECTED_REVISION']
+          for attempt in range(30):
+              try:
+                  with urllib.request.urlopen('https://project-infinity-core.onrender.com/health',timeout=20) as r: x=json.load(r)
+                  if x['revision']==expected and x['version']=='0.8.0':
+                      print(json.dumps(x));break
+              except Exception as e: print(type(e).__name__)
+              time.sleep(10)
+          else: raise SystemExit('DEPLOY_REVISION_NOT_OBSERVED')
+          PY
+      - name: Install isolated browser tools
         run: |
           python3 -m venv .browserenv
           .browserenv/bin/pip install --no-cache-dir playwright==1.56.0
-          .browserenv/bin/python -m playwright install --with-deps chromium
-      - name: Capture exact deployed revision and generated code
-        run: |
-          python3 - <<'PY'
-          import urllib.request,json,hashlib
-          base='https://project-infinity-core.onrender.com'
-          def get(path):
-              with urllib.request.urlopen(base+path,timeout=30) as r:
-                  b=r.read(100001)
-                  assert r.status==200 and len(b)<100000
-                  return b
-          health=json.loads(get('/health'))
-          assert health['version']=='0.6.0' and health['zeroCostMode'] is True
-          policy=get('/backend-policy.js').decode()
-          assert '"recoverProbe":true' in policy and '"recoverLoad":true' in policy
-          kernel=get('/model-backend.js')
-          assert hashlib.sha256(kernel).hexdigest()=='60ef374909bc5e293ea1245b7d5e4ecf86a7387ab2e42ed8c0e91637d8281270'
-          print(json.dumps({'deployedHealth':health,'loaderHash':hashlib.sha256(kernel).hexdigest(),'validatedCodeServed':True}))
-          PY
-      - name: Real two-turn inference on the published site, not mocked
+          .browserenv/bin/python -m playwright install --with-deps chromium webkit
+      - name: Real two turns, mobile history and production API
         env:
           BROWSER_BASE_URL: https://project-infinity-core.onrender.com
+          EXPECTED_REVISION: ${{ github.sha }}
         run: |
           .browserenv/bin/python test/browser_check.py
-          cat reports/browser-check.json
+          BROWSER_ENGINE=webkit .browserenv/bin/python test/browser_check.py
