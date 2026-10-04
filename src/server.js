@@ -2,7 +2,6 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { randomUUID,timingSafeEqual } from 'node:crypto';
 import { pathToFileURL,fileURLToPath } from 'node:url';
 import { execute } from './program.js';
 import { Archive,hash } from './archive.js';
@@ -29,11 +28,6 @@ export function createServer({dataDir=path.join(ROOT,'.runtime','web'),fetcher=g
   let latest=null,busy=false,nextLab=0;
   const reply=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data));};
   const body=async req=>{let size=0,parts=[];for await(const p of req){size+=p.length;if(size>65536)throw new Error('BODY_LIMIT');parts.push(p);}return JSON.parse(Buffer.concat(parts).toString()||'{}');};
-  const owner=req=>{
-    const secret=process.env.OWNER_TOKEN, supplied=(req.headers.authorization||'').replace(/^Bearer /,'');
-    if(!secret||supplied.length!==secret.length)return false;
-    return timingSafeEqual(Buffer.from(secret),Buffer.from(supplied));
-  };
   const server=http.createServer(async(req,res)=>{
     try{
       const url=new URL(req.url,'http://localhost');
@@ -46,7 +40,7 @@ export function createServer({dataDir=path.join(ROOT,'.runtime','web'),fetcher=g
       if(req.method==='GET'&&url.pathname==='/health')return reply(res,200,{ok:true,version:'0.2.0',revision:process.env.RENDER_GIT_COMMIT||'local',module:archive.active().id});
       if(req.method==='GET'&&url.pathname==='/api/status')return reply(res,200,{
         version:'0.2.0',activeModule:archive.active().id,audit:archive.verify(),busy,
-        capabilities:{executableProgramSynthesis:true,isolatedEvaluation:true,boundedAdoption:true,rollback:true,externalModelConfigured:!!(process.env.OPENAI_API_KEY&&process.env.OPENAI_MODEL),foundationTraining:false,arbitraryAppRewrite:false},
+        capabilities:{executableProgramSynthesis:true,isolatedEvaluation:true,boundedAdoption:true,rollback:true,externalModelConfigured:false,foundationTraining:false,arbitraryAppRewrite:false},
         storage:process.env.RENDER?'ephemeral local runtime; committed release evidence survives redeploy':'local-filesystem',
         schedule:'see GitHub Actions; a cron definition is not evidence of completed future runs',
         humanOrExternalIndependentReplication:false,defaultGenerator:'enumerative program synthesis, not an LLM'
@@ -66,23 +60,11 @@ export function createServer({dataDir=path.join(ROOT,'.runtime','web'),fetcher=g
           return reply(res,200,latest);
         }finally{busy=false;}
       }
-      if(req.method==='POST'&&url.pathname==='/api/chat'){
-        if(!owner(req))return reply(res,401,{error:'OWNER_AUTH_REQUIRED'});
-        if(!process.env.OPENAI_API_KEY||!process.env.OPENAI_MODEL)return reply(res,503,{error:'MODEL_NOT_CONNECTED'});
-        const input=await body(req);
-        if(!Array.isArray(input.messages)||input.messages.length>24||input.messages.some(m=>!['user','assistant'].includes(m.role)||typeof m.content!=='string'||m.content.length>12000))return reply(res,400,{error:'INVALID_MESSAGES'});
-        const messages=input.messages.map(m=>({role:m.role,content:m.content}));
-        const result=await fetcher('https://api.openai.com/v1/responses',{
-          method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+process.env.OPENAI_API_KEY},signal:AbortSignal.timeout(45000),
-          body:JSON.stringify({model:process.env.OPENAI_MODEL,instructions:'Answer in Japanese. Distinguish evidence from guesses. Never claim weight training, autonomous full-app rewriting or scientific improvements occurred without evidence.',input:messages,max_output_tokens:1800,store:false})
-        });
-        if(!result.ok)return reply(res,502,{error:'MODEL_PROVIDER_ERROR',providerStatus:result.status});
-        const r=await result.json();if(r.status&&r.status!=='completed')return reply(res,502,{error:'MODEL_INCOMPLETE'});
-        return reply(res,200,{reply:extractGuarded(archive,r),module:archive.active().id});
-      }
+      if(req.method==='POST'&&url.pathname==='/api/chat')return reply(res,410,{error:'USE_KEYLESS_APPLICATION'});
       return reply(res,404,{error:'NOT_FOUND'});
     }catch(e){return reply(res,400,{error:['BODY_LIMIT','INPUT_SIZE','OUTPUT_CONTRACT','STEP_LIMIT'].includes(e.message)?e.message:'REQUEST_FAILED'});}
   });
+  server.extractResponse=response=>extractGuarded(archive,response);
   server.requestTimeout=70000;return server;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){createServer().listen(Number(process.env.PORT||3000),'0.0.0.0',()=>console.log('Project Infinity Core 0.2 ready'));}

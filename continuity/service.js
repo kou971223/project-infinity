@@ -1,4 +1,5 @@
 /** Read-only public evidence integration. Never accepts publication credentials or user text. */
+import {createProjectStatus} from './project-status.js';
 import {createHash} from 'node:crypto';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export function brief(record){
@@ -11,7 +12,7 @@ export function brief(record){
 export async function createContinuityApplication({factory=null,fetcher=globalThis.fetch,...options}={}){
  const build=factory||(await import('../autonomy/app.js')).createAutonomyApplication;
  const server=await build({...options,fetcher}),old=server.listeners('request')[0];server.removeListener('request',old);
- let cache=null,until=0;
+ let cache=null,until=0;const projectStatus=createProjectStatus(fetcher);
  const json=(res,x)=>{res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(x));};
  async function status(){
   if(cache&&Date.now()<until)return cache;
@@ -26,8 +27,9 @@ export async function createContinuityApplication({factory=null,fetcher=globalTh
  server.on('request',async(req,res)=>{
   try{
    const url=new URL(req.url,'http://localhost');
-   if(req.method==='GET'&&url.pathname==='/health')return json(res,{ok:true,version:'0.6.0',uiRevision:'ios-startup-1',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
+   if(req.method==='GET'&&url.pathname==='/health')return json(res,{ok:true,version:'0.8.0',uiRevision:'keyless-history-1',revision:process.env.RENDER_GIT_COMMIT||'local',zeroCostMode:true});
    if(req.method==='GET'&&url.pathname==='/api/runtime/status')return json(res,await status());
+   if(req.method==='GET'&&url.pathname==='/api/project/status')return json(res,await projectStatus());
    if(req.method==='GET'&&url.pathname==='/continuity-ui.js'){res.writeHead(200,{'Content-Type':'text/javascript','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});return res.end(fs.readFileSync(path.join(ROOT,'continuity/ui.js')));}
    if(req.method==='GET'&&url.pathname==='/'){
     const html=fs.readFileSync(path.join(ROOT,'web/index.html'),'utf8');res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'});
