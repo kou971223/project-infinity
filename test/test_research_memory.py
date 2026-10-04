@@ -31,3 +31,10 @@ class ResearchMemory(unittest.TestCase):
  def test_publication_rejects_foreign_job(self):
   r=self.record();r['runId']='foreign-job'
   with self.assertRaises(ValueError):m.checked(r)
+ def test_synthesis_solves_examples_without_access_to_hidden_samples(self):
+  import sys
+  sys.path.insert(0,str(m.ROOT/'research'))
+  from synthesize import synthesize
+  for task in ['percentage','discount','rectangle']:
+   p,report=synthesize(task,m.TASKS[task],m.cases(task,982)[3:7]);self.assertIsNotNone(p);m.program_nodes(p);self.assertLessEqual(report['cost'],7)
+  p,report=synthesize('percentage',m.TASKS['percentage'],m.cases('percentage',982)[3:7],max_states=1);self.assertIsNone(p);self.assertEqual(report['stop'],'BUDGET')

@@ -88,7 +88,14 @@ def propose():
    reason=str(e)[:200];r['generationAttempts'].append(dict(ok=False,reason=reason))
    if attempt==0 and reason in ['KEYLESS_UNAVAILABLE','UPSTREAM_TIMEOUT','UPSTREAM_BUSY','INCOMPLETE_UPSTREAM']:time.sleep(35)
    else:break
- if 'programCandidate' not in r:r['programFailure']=r['generationAttempts'][-1]['reason']
+ if 'programCandidate' not in r:
+  r['programFailure']=r['generationAttempts'][-1]['reason']
+  from synthesize import synthesize
+  training_seed=secrets.randbits(48);training=cases(task,training_seed)[3:7]
+  candidate,search=synthesize(task,TASKS[task],training,max_states=50000)
+  r['synthesis']=dict(trainingSeed=training_seed,trainingExamples=training,**search)
+  if candidate:r['programCandidate']=candidate;r['candidateOrigin']='local_enumerative_synthesis'
+ else:r['candidateOrigin']='anonymous_external_model'
  r['frozenHash']=digest({k:r[k] for k in ['cards','task','programCandidate'] if k in r});return r
 def validate(r):
  if r['schema']!='PINF-RESEARCH-2' or r['baseCommit']!=os.environ.get('GITHUB_SHA','local') or r['frozenHash']!=digest({k:r[k] for k in ['cards','task','programCandidate'] if k in r}):raise ValueError('FROZEN_ORIGIN')

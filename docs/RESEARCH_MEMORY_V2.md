@@ -12,7 +12,7 @@ This extends the fixed capability-selection lane. It does not establish unrestri
 
 ## Generated programs, not feature switches
 
-The external anonymous model proposes a new expression tree plus a falsifiable hypothesis. Candidate values are data. The trusted interpreter permits rational addition, subtraction, multiplication and division only, with 48 nodes, depth 8, bounded numeric input and intermediate sizes. There is no eval, JS execution, network, filesystem, credential, validator edit or self-promotion operation.
+The external anonymous model proposes a new expression tree plus a falsifiable hypothesis. If it fails, a bounded local enumerative synthesizer searches expression trees using four training examples and rational arithmetic. It does not contain a table of task formulas or see the later 64 validation samples. A 12-second / 50,000-state budget can yield no solution; that is a deferral, not adoption. Candidate values are data. The trusted interpreter permits rational addition, subtraction, multiplication and division only, with 48 nodes, depth 8, bounded numeric input and intermediate sizes. There is no eval, JS execution, network, filesystem, credential, validator edit or self-promotion operation.
 
 Current trusted task contracts are percentage, discounted amount, three-value mean and rectangle area. This task space remains finite. New contracts require a separately reviewed PR. Programs can vary and simplify within the grammar; after every task is covered, only equally correct programs with fewer nodes can replace their parent. NO_GAIN is an ordinary result, not a failed product.
 

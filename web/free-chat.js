@@ -17,7 +17,7 @@ function render(){
 function controls(){const busy=!!request;$('send').disabled=busy||!$('input').value.trim();$('send').textContent=busy?'回答中…':'送信';$('stop').hidden=!busy;
  const last=active().messages.at(-1);$('retry').hidden=busy||!last||last.role!=='user'||!['failed','cancelled'].includes(last.status);}
 function cancel(){if(request){const old=request;request=null;sequence++;old.turn.status='cancelled';old.controller.abort();save();}controls();}
-const errorText=code=>({UPSTREAM_BUSY:'外部AIが混雑しています。少し待って再試行してください。',RATE_LIMITED:'短時間の送信上限に達しました。1分後に再試行してください。',KEYLESS_UNAVAILABLE:'提供元でキー不要推論を利用できません。キーや課金へ自動切替はしません。',UPSTREAM_TIMEOUT:'回答が時間内に届きませんでした。再試行できます。',CANCELLED:'停止しました。'})[code]||'回答を取得できませんでした。入力と履歴は残っています。再試行できます。';
+const errorText=code=>({UPSTREAM_BUSY:'外部AIが混雑しています。少し待って再試行してください。',RATE_LIMITED:'短時間の送信上限に達しました。1分後に再試行してください。',KEYLESS_UNAVAILABLE:'提供元でキー不要推論を利用できません。キーや課金へ自動切替はしません。',UPSTREAM_TIMEOUT:'回答が時間内に届きませんでした。再試行できます。',UPSTREAM_HTTP_500:'外部AIのサーバーで障害が起きています。履歴は残っています。時間をおいて再試行してください。',INCOMPLETE_UPSTREAM:'提供元の回答が途中で打ち切られました。再試行できます。',CANCELLED:'停止しました。'})[code]||'回答を取得できませんでした。入力と履歴は残っています。再試行できます。';
 async function ask(retry=false){
  if(request)return;const chat=active();let turn;
  if(retry){turn=chat.messages.at(-1);if(turn?.role!=='user'||!['failed','cancelled'].includes(turn.status))return;turn.status='pending';}
