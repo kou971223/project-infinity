@@ -70,6 +70,7 @@ def validate(r):
    outputs[label]=run(q,policy)
    if needs_remote and not outputs[label].get('ok') and time.monotonic()+90<deadline:
     first=outputs[label];time.sleep(35);last=time.monotonic();outputs[label]=run(q,policy);outputs[label]['attempts']=[first,{k:v for k,v in outputs[label].items()}];outputs[label]['ms']+=first['ms']+35000
+  last=time.monotonic()
   pairs.append(dict(prompt=q,expected=expected,**outputs))
   if any(not v.get('ok') for v in outputs.values()) or time.monotonic()>deadline:break
  e=dict(protocol=PROTOCOL,seed=seed,candidateHash=digest(candidate),pairs=pairs)

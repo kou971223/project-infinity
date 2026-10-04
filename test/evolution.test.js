@@ -16,3 +16,10 @@ test('accepted generation reaches actual chat API; contextual chat still uses mo
  const x=await send([{role:'user',content:'9007199254740993 + 2'}]);assert.equal(x.reply,'9007199254740995');assert.equal(x.evolution.generation,1);assert.equal(remote,0);
  const y=await send([{role:'user',content:'答えを出さずヒントだけください'},{role:'assistant',content:'はい'},{role:'user',content:'1+2'}]);assert.equal(y.reply,'文脈を保持した回答');assert.equal(remote,1);
 });
+import {createInferenceQueue} from '../src/request-pacer.js';
+test('inference serializes cooldown from completion and recovers after cancellation',async()=>{
+ let now=1000,inside=0;const waits=[];const queue=createInferenceQueue({gapMs:16,clock:()=>now,wait:async n=>{waits.push(n);now+=n;}});
+ const job=async()=>{assert.equal(inside++,0);await Promise.resolve();now+=50;inside--;return now;};
+ assert.deepEqual(await Promise.all([queue(job),queue(job)]),[1050,1116]);assert.deepEqual(waits,[16]);
+ const c=new AbortController();c.abort(Error('cancel'));await assert.rejects(queue(job,c.signal));assert.equal(await queue(job),1182);
+});
