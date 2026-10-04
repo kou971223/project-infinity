@@ -65,3 +65,17 @@ Source research is also triggered only after successful exact-revision published
 
 Additional eligible-provider check: Murakumo officially advertises unauthenticated free chat. Current `/v1/models` includes `murakumo/free` and `mishima` (provider reports prism-ml/Ternary-Bonsai-2-27B-gguf, PTQ1). Actual anonymous request to `murakumo/free` returned 422 model_or_context_mismatch (16.61 s); documented stable alias `murakumo-main` returned 410 model_retired (11.5 s). These results do not establish a more practical replacement. The operator also discloses community hosts/free providers may see/log prompts. No user conversation was sent in these synthetic checks and no Murakumo route was added to the app. Sources: https://murakumo.cloud/free ; https://api.murakumo.cloud/v1/models ; https://murakumo.cloud/docs .
 Final listed-selector check: anonymous `mishima` request timed out after 51.48 seconds in this environment. No model-quality advantage or practical improvement was verified; retain the working, browser-tested Pollinations path.
+
+## First production acceptance
+
+Final application candidate `7d385db653073459932cfd2aee93828f598ca530` passed Core CI 37205982340 and real browser CI 37205982206 before PR #12 was merged as `057de11659435fcf547745682c3c26eb968339e8`.
+
+Main CI 37206160292 passed Node 88/88, Python 43/43 and the independent Python oracle's 288 cases with zero mismatches. Main mobile/failure-injection/browser CI 37206160289 passed. Production CI 37206160318 observed the exact deployed SHA and passed Chromium and WebKit real two-turn recall, history reload/switch, new-conversation preservation and the live API arithmetic check (17×19 = 323).
+
+The audit browser separately completed two real turns recalling `星の港742`, created a new conversation without losing the old one, switched back and reloaded the saved conversation. The pre-0.8 test conversation also migrated successfully. This remains remote-browser evidence, not physical iPhone evidence.
+
+Render reported `autoDeploy=yes` / trigger `commit`, but no new deployment was registered after the merge during observation. Existing deployment history also showed API-triggered releases. A manual recovery deploy through the existing Render connection produced `dep-db15dapsrm7s73a5nfcg`, live at 2026-10-04T13:38:29Z with the correct SHA. The underlying automatic Git-provider integration issue was not diagnosed; do not assume future merges deploy automatically. Render documents that auto-deploy requires a connected Git provider, but the audit did not establish whether a public-URL-only connection is this service's cause: https://render.com/docs/deploys . No plan or spending setting was changed.
+
+Learning run 37206160298 preserved the generation-3 hold. Its fresh CPU process loaded the archived accepted weight hash and generated Japanese text (`inherited_and_generated`); this is inheritance-path evidence only, not general capability improvement or hosted-chat weight transfer. The source-research workflow runs after successful production verification and records its explicit outcome separately; successful workflow execution must not be relabeled successful candidate adoption.
+
+Documentation-only follow-up releases have their own exact-SHA CI results in Actions. Overall status remains EXPERIMENTAL_PARTIAL.
