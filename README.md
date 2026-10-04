@@ -46,3 +46,7 @@ npm start
 `/health` はビルドの生存確認であり、外部モデルの成功保証ではありません。`/api/project/status` は統合研究状態。`/lab` は既存の限定コード実験。旧有料API経路は削除しました。
 
 **Completion Status: EXPERIMENTAL / PARTIAL。** 無限進化・永久稼働・エラーゼロ・RSI・全体完成は実証していません。監査内容は `docs/AUDIT_CORE08.md` を参照してください。
+
+## 会話に反映する研究
+
+`evolution/` は、検証済みの回答補助能力を `dialogue/active.json` から実会話へ継承します。独立比較で採用された世代だけが有効になります。世代・実際の反映状態は `/api/evolution/status` と回答後の画面で確認できます。最初の範囲は整数計算・長さ換算で、モデル重みの学習や汎用知能の向上とは区別します。固定評価・採用条件・失敗時の扱いは `docs/CHAT_EVOLUTION.md` を参照してください。

@@ -1,0 +1,67 @@
+{
+  "schema": "PINF-CHAT-EVOLUTION-1",
+  "at": "2026-10-04T14:31:30.026832+00:00",
+  "baseCommit": "local",
+  "runId": "local",
+  "parentArtifactHash": null,
+  "baseline": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 0,
+    "capabilities": [],
+    "parentHash": null
+  },
+  "candidate": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 1,
+    "capabilities": [
+      "exact-integer-v1"
+    ],
+    "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
+  },
+  "candidateHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48",
+  "hypothesis": "A fixed exact-answer capability improves correctness or halves latency without changing general-chat routing.",
+  "decision": "REJECT_OR_DEFER",
+  "newCapability": "exact-integer-v1",
+  "history": [],
+  "evidence": {
+    "protocol": "PINF-CHAT-EVOLUTION-1",
+    "seed": 19082463049228,
+    "candidateHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48",
+    "pairs": [
+      {
+        "prompt": "27878310 + 52918",
+        "expected": "27931228",
+        "baseline": {
+          "reply": "27931228",
+          "mode": "external-model",
+          "ms": 13343,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "27931228",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "13449812 × 17140",
+        "expected": "230529777680",
+        "baseline": {
+          "ok": false,
+          "error": "KEYLESS_UNAVAILABLE",
+          "ms": 14268
+        },
+        "candidate": {
+          "reply": "230529777680",
+          "mode": "verified-tool",
+          "ms": 1,
+          "ok": true
+        }
+      }
+    ],
+    "passed": false,
+    "baselineCorrect": 1,
+    "candidateCorrect": 2
+  }
+}

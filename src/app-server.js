@@ -1,10 +1,12 @@
 /** Keyless local-chat surface. Existing laboratory endpoints remain available. */
 import {infer,PROVIDER} from './keyless-inference.js';
+import {createEvolution} from '../evolution/runtime.js';
 import {createPacer} from './request-pacer.js';
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,...options}={}) {
+  const evolution=createEvolution({fetcher});
   const factory=legacyFactory||(await import('./server.js')).createServer;
   const server=factory({...options,fetcher});const old=server.listeners('request')[0];server.removeListener('request',old);
   let cached=null,cacheUntil=0,inflight=0;const clients=new Map(),pace=createPacer();
@@ -43,6 +45,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
         research:await researchRecord(),paidInferenceEnabled:false,fullAppSelfRewrite:false,
         foundationTraining:'separate partial-weight CPU experiment; consult run evidence',
         independentExternalValidation:false,overallProjectAccepted:false});
+      if(req.method==='GET'&&url.pathname==='/api/evolution/status'){await evolution.refresh();return json(res,200,evolution.status());}
       if(req.method==='POST'&&url.pathname==='/api/chat'){
         const origin=req.headers.origin;
         if(origin&&new URL(origin).host!==req.headers.host)return json(res,403,{error:'ORIGIN_DENIED'});
@@ -57,7 +60,9 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
         if(inflight>=4||count.n>=20)return json(res,429,{error:'RATE_LIMITED',retryAfterSeconds:60});
         count.n++;clients.set(client,count);inflight++;
         const abort=new AbortController(),onClose=()=>{if(!res.writableEnded)abort.abort();};res.on('close',onClose);
-        try{await pace(abort.signal);const answer=await infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse});if(!res.destroyed)return json(res,200,answer);}
+        try{const learned=await evolution.answer(body.messages.at(-1).content);
+          if(learned.reply!==null&&(body.messages.length===1||/^計算[:：]/.test(body.messages.at(-1).content.trim()))){if(!res.destroyed)return json(res,200,{reply:learned.reply,provider:'Project ∞ verified capability',paid:false,evolution:learned});return;}
+          await pace(abort.signal);const knowledge=await evolution.context();const answer=await infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse,knowledge});if(!res.destroyed)return json(res,200,{...answer,evolution:evolution.status()});}
         catch(e){if(!res.destroyed)return json(res,e.status||502,{error:e.message,retryable:e.status!==400});}
         finally{inflight--;res.off('close',onClose);}
         return;
