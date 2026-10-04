@@ -59,12 +59,12 @@ def validate(r):
  if r['schema']!=PROTOCOL or r['baseCommit']!=os.environ.get('GITHUB_SHA','local') or digest(check_policy(r['candidate']))!=r['candidateHash']:raise ValueError('ORIGIN')
  old=check_policy(r['baseline']);candidate=r['candidate'];new=r['newCapability']
  if new and (candidate['capabilities']!=old['capabilities']+[new] or new not in CAPS or new in old['capabilities'] or candidate['generation']!=old['generation']+1 or candidate['parentHash']!=digest(old)):raise ValueError('CANDIDATE_AUTHORITY')
- seed=secrets.randbits(48);pairs=[];last=0;deadline=time.monotonic()+600
- for q,expected in cases(new or CAPS[0],seed):
+ seed=secrets.randbits(48);tested=new or CAPS[int(os.environ.get('GITHUB_RUN_NUMBER','0'))%len(CAPS)];r['testedCapability']=tested;pairs=[];last=0;deadline=time.monotonic()+600
+ for q,expected in cases(tested,seed):
   outputs={}
   for label,policy in [('baseline',old),('candidate',candidate)]:
    # An inactive capability uses the real unchanged anonymous inference path.
-   needs_remote=(new or CAPS[0]) not in policy['capabilities']
+   needs_remote=tested not in policy['capabilities']
    if needs_remote:
     time.sleep(max(0,30-(time.monotonic()-last)));last=time.monotonic()
    outputs[label]=run(q,policy)
@@ -92,7 +92,7 @@ def publish(r):
    if digest(check_policy(r['candidate']))!=r['evidence']['candidateHash']:raise ValueError('CANDIDATE_HASH')
    active=dict(schema=PROTOCOL,active=r['candidate'],history=(r['history']+[r['baseline']])[-10:],decision='ADOPT',evidence=r['evidence'],at=r['at'],runId=r['runId'])
    active['artifactHash']=digest(active);paths['dialogue/active.json']=active
-  r['applied']=r['decision']=='ADOPT';r['recordHash']=digest(r)
+  r['applied']=r['decision']=='ADOPT';r['recordHash']=digest({k:v for k,v in r.items() if k!='recordHash'})
   rid=r['runId']+'-'+os.environ.get('GITHUB_RUN_ATTEMPT','1')
   if not __import__('re').fullmatch(r'\d+-\d+',rid):raise ValueError('RUN_ID')
   summary=dict(schema=PROTOCOL,at=r['at'],runId=r['runId'],decision=r['decision'],applied=r['applied'],generationAfter=(active or {}).get('active',base())['generation'],summary='実会話に継承する回答補助の研究。基盤モデルの重み学習ではありません。')
