@@ -78,4 +78,8 @@ Render reported `autoDeploy=yes` / trigger `commit`, but no new deployment was r
 
 Learning run 37206160298 preserved the generation-3 hold. Its fresh CPU process loaded the archived accepted weight hash and generated Japanese text (`inherited_and_generated`); this is inheritance-path evidence only, not general capability improvement or hosted-chat weight transfer. The source-research workflow runs after successful production verification and records its explicit outcome separately; successful workflow execution must not be relabeled successful candidate adoption.
 
-Documentation-only follow-up releases have their own exact-SHA CI results in Actions. Overall status remains EXPERIMENTAL_PARTIAL.
+Follow-up releases have their own exact-SHA CI results in Actions. Overall status remains EXPERIMENTAL_PARTIAL.
+
+## Source-generation token budget correction
+
+First production source run 37206499808 safely archived GENERATION_FAILED / INCOMPLETE_UPSTREAM. A direct public-code diagnostic received HTTP 200 but finish_reason=length, 1,500 completion tokens and no final answer. The default reasoning budget was exhausted before candidate text existed. Requesting a tiny edit with the documented max_tokens=3000 and reasoning_effort=low returned finish_reason=stop, 736 completion tokens and a JSON proposal in the actual anonymous endpoint test. This profile is now used only by public-code research; chat request defaults and the strict finish_reason=stop gate are unchanged. The JSON proposal still requires exact-snippet/schema validation and independent sandbox execution; response completion is not proof of a valid improvement. Failed records remain in the archive.

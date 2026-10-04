@@ -22,12 +22,12 @@ export async function boundedText(response,maxBytes=65536){
   }finally{await reader.cancel().catch(()=>{});}
   return Buffer.concat(parts).toString('utf8');
 }
-export async function infer(messages,{fetcher=globalThis.fetch,signal,system,extract}={}){
+export async function infer(messages,{fetcher=globalThis.fetch,signal,system,extract,research=false}={}){
   const clean=validateMessages(messages);
   const instruction=system||'あなたはProject ∞の会話アシスタントです。日本語で質問に正確に答えてください。事実と推測を区別してください。Web検索や自分の改修・学習を実行したと主張しないでください。会話モデルの重みはこのアプリでは更新できません。';
   try{
     const r=await fetcher(PROVIDER.endpoint,{method:'POST',redirect:'error',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({model:PROVIDER.model,private:true,messages:[{role:'system',content:instruction},...clean]}),
+      body:JSON.stringify({model:PROVIDER.model,private:true,...(research?{max_tokens:3000,reasoning_effort:'low'}:{}),messages:[{role:'system',content:instruction},...clean]}),
       signal:signal?AbortSignal.any([signal,AbortSignal.timeout(45000)]):AbortSignal.timeout(45000)});
     if(!r.ok)throw new InferenceError(r.status===429?'UPSTREAM_BUSY':r.status===401||r.status===402?'KEYLESS_UNAVAILABLE':'UPSTREAM_HTTP_'+r.status,r.status===429?503:502);
     let data;try{data=JSON.parse(await boundedText(r));}catch(e){if(e instanceof InferenceError)throw e;throw new InferenceError('INVALID_UPSTREAM');}
