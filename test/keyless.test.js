@@ -28,3 +28,5 @@ test('corrupt storage recovers without throwing',()=>assert.equal(loadState({get
 test('unified archive distinguishes epoch hold from adoption and unavailable records',async()=>{
  const status=createProjectStatus(async url=>url.includes('autonomy')?new Response(JSON.stringify({schema:'PINF-AUTONOMY-1',at:new Date().toISOString(),decision:'DEFER_EPOCH_HOLDOUT_REVIEW',generationAfter:3})):new Response('',{status:404}));const x=await status();assert.equal(x.lanes[0].generationAfter,3);assert.equal(x.lanes[1].available,false);assert.equal(x.chatModelUpdated,false);assert.equal(x.overallProjectAccepted,false);
 });
+import {createPacer} from '../src/request-pacer.js';
+test('anonymous requests reserve separated start slots even for concurrent calls',async()=>{const waits=[];const pace=createPacer({intervalMs:16000,clock:()=>1000,wait:async ms=>waits.push(ms)});await Promise.all([pace(),pace(),pace()]);assert.deepEqual(waits,[16000,32000]);});

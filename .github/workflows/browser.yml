@@ -2,7 +2,7 @@ name: Keyless chat and mobile browser verification
 on:
   workflow_dispatch:
   push:
-    branches: [main, 'candidate/core-0.8-audit']
+    branches: [main]
   pull_request:
     branches: [main]
 permissions:

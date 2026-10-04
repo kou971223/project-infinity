@@ -53,3 +53,8 @@ General source changes require an independently reviewed PR with full CI before 
 ## Acceptance evidence
 
 Candidate automatic tests, browser runs, merge SHA and production post-deploy results are tracked in the PR/Actions. Before those results exist, this document is an audit and implementation description, not a declaration that release validation passed.
+
+## Candidate failure correction
+
+Initial browser fault-injection passed both engines, but burst real-inference requests encountered HTTP 401/402. Legacy endpoint-linked official documentation specifies one anonymous request per 15 seconds. Added a server-side 16-second start-slot pacer, removed duplicate candidate push/PR browser runs, and separated source-generation schedule from release test bursts. This respects the public quota rather than retrying with credentials or alternate identities. Non-success responses still fail closed. Successful reruns are required; this change alone is not proof of upstream reliability.
+Source: https://github.com/pollinations/pollinations/blob/master/APIDOCS.md (anonymous limits section; accessed through the legacy endpoint redirect).

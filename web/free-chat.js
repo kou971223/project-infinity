@@ -21,10 +21,10 @@ async function ask(retry=false){
  if(request)return;const chat=active();let turn;
  if(retry){turn=chat.messages.at(-1);if(turn?.role!=='user'||!['failed','cancelled'].includes(turn.status))return;turn.status='pending';}
  else{const content=$('input').value.trim();if(!content)return;
- if(chat.messages.length>=200){$('error').textContent='この会話は保存上限です。「新しい会話」を使ってください。';return;}
+ if(chat.messages.length>=199){$('error').textContent='この会話は保存上限です。「新しい会話」を使ってください。';return;}
  turn={role:'user',content,status:'pending'};chat.messages.push(turn);if(chat.messages.filter(m=>m.role==='user').length===1)chat.title=content.slice(0,40);$('input').value='';$('input').style.height='auto';}
  chat.updatedAt=new Date().toISOString();const id=++sequence,controller=new AbortController();request={id,controller,turn,chatId:chat.id};
- const timeout=setTimeout(()=>controller.abort('timeout'),55000);save();render();$('error').textContent='';$('progress').textContent='回答を生成しています…';
+ const timeout=setTimeout(()=>controller.abort('timeout'),75000);save();render();$('error').textContent='';$('progress').textContent='無料枠の送信間隔を調整し、回答を生成しています…';
  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:contextFor(chat)}),signal:controller.signal});
  let data;try{data=await r.json();}catch{throw Error('INVALID_RESPONSE');}if(!r.ok)throw Error(data.error||'HTTP_'+r.status);
  if(typeof data.reply!=='string'||!data.reply.trim())throw Error('EMPTY_RESPONSE');

@@ -1,12 +1,13 @@
 /** Keyless local-chat surface. Existing laboratory endpoints remain available. */
 import {infer,PROVIDER} from './keyless-inference.js';
+import {createPacer} from './request-pacer.js';
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export async function createApplication({legacyFactory=null,fetcher=globalThis.fetch,...options}={}) {
   const factory=legacyFactory||(await import('./server.js')).createServer;
   const server=factory({...options,fetcher});const old=server.listeners('request')[0];server.removeListener('request',old);
-  let cached=null,cacheUntil=0,inflight=0;const clients=new Map();
+  let cached=null,cacheUntil=0,inflight=0;const clients=new Map(),pace=createPacer();
   const json=(res,status,x)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(x));};
   async function researchRecord(){
     if(Date.now()<cacheUntil)return cached;
@@ -56,7 +57,7 @@ export async function createApplication({legacyFactory=null,fetcher=globalThis.f
         if(inflight>=4||count.n>=20)return json(res,429,{error:'RATE_LIMITED',retryAfterSeconds:60});
         count.n++;clients.set(client,count);inflight++;
         const abort=new AbortController(),onClose=()=>{if(!res.writableEnded)abort.abort();};res.on('close',onClose);
-        try{const answer=await infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse});if(!res.destroyed)return json(res,200,answer);}
+        try{await pace(abort.signal);const answer=await infer(body.messages,{fetcher,signal:abort.signal,extract:server.extractResponse});if(!res.destroyed)return json(res,200,answer);}
         catch(e){if(!res.destroyed)return json(res,e.status||502,{error:e.message,retryable:e.status!==400});}
         finally{inflight--;res.off('close',onClose);}
         return;

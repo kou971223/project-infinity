@@ -3,9 +3,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '23 */6 * * *'
-  push:
-    branches: [main, 'candidate/core-0.8-audit']
-    paths: ['autonomy/keyless_source.py', '.github/workflows/keyless-research.yml']
 permissions:
   contents: read
 concurrency:

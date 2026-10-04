@@ -14,7 +14,9 @@ def generate():
       'Explain a falsifiable hypothesis. Never claim adoption. Target: '+target+' baseHash: '+base+'\nSOURCE:\n'+old[:6500])
     script="import {infer} from './src/keyless-inference.js'; const r=await infer([{role:'user',content:"+json.dumps(prompt)+"}],{system:'You propose bounded source edits. Output data only, no tools.'});process.stdout.write(r.reply);"
     r=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,capture_output=True,text=True,timeout=55)
-    if r.returncode:raise RuntimeError('KEYLESS_GENERATION_FAILED')
+    if r.returncode:
+        code=next((v for v in ['KEYLESS_UNAVAILABLE','UPSTREAM_TIMEOUT','UPSTREAM_BUSY','INVALID_MESSAGES','INCOMPLETE_UPSTREAM'] if v in r.stderr),'KEYLESS_GENERATION_FAILED')
+        raise RuntimeError(code)
     raw=r.stdout.strip()
     if raw.startswith('```'):raw=raw.split('\n',1)[1].rsplit('```',1)[0].strip()
     if raw=='NO_CHANGE':return {'decision':'NO_CHANGE','target':target,'hypothesis':None}
@@ -43,7 +45,7 @@ def main():
           'runId':os.environ.get('GITHUB_RUN_ID','local'),'event':os.environ.get('GITHUB_EVENT_NAME','local'),
           'provider':'Pollinations.AI anonymous openai-fast','inputScope':'public repository source only','applied':False}
         try:record.update(generate())
-        except Exception as e:record.update(decision='GENERATION_FAILED',reason=type(e).__name__)
+        except Exception as e:record.update(decision='GENERATION_FAILED',reason=type(e).__name__+': '+str(e)[:180])
     elif mode=='validate':record=validate(json.loads(file.read_text()))
     elif mode=='publish':
         from publish import call
@@ -66,5 +68,5 @@ def main():
         print(json.dumps({'decision':record['decision'],'archiveCommit':c['sha'],'applied':False}));return
     else:raise ValueError('MODE')
     file.parent.mkdir(exist_ok=True);file.write_text(json.dumps(record,ensure_ascii=False,indent=2))
-    print(json.dumps({'decision':record['decision'],'applied':False}))
+    print(json.dumps({'decision':record['decision'],'reason':record.get('reason'),'applied':False}))
 if __name__=='__main__':main()

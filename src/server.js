@@ -65,6 +65,6 @@ export function createServer({dataDir=path.join(ROOT,'.runtime','web'),fetcher=g
     }catch(e){return reply(res,400,{error:['BODY_LIMIT','INPUT_SIZE','OUTPUT_CONTRACT','STEP_LIMIT'].includes(e.message)?e.message:'REQUEST_FAILED'});}
   });
   server.extractResponse=response=>extractGuarded(archive,response);
-  server.requestTimeout=70000;return server;
+  server.requestTimeout=90000;return server;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){createServer().listen(Number(process.env.PORT||3000),'0.0.0.0',()=>console.log('Project Infinity Core 0.2 ready'));}
