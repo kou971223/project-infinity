@@ -2,14 +2,74 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2610.02331",
+      "title": "World Editing: Intervening on Executable Worlds at Increasing Depth",
+      "excerpt": "arXiv:2610.02331v1 Announce Type: new Abstract: Interactive world models are increasingly capable of generating environments and acting within them, yet deliberately editing an existing executable world remains underexplored. We formulate world editing as intervening on an existing world while preserving properties that should remain unchanged, and introduce intervention depth as an axis describing how strongly an edit couples world entities, dynamics, and systems. We instantiate this capability through industry-grade game modding and introduce IGMWorld, together with IGMBench, a benchmark of ",
+      "excerptHash": "4271dec7ce336587782aa9ffe848cc8785d623d329114a13fccf81debce5e75a",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.762069+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02330",
+      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
+      "excerpt": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decisions. In long-horizon tool use, final-outcome rewards provide weak credit assignment over long interaction traces. Step-level rewards can offer more targeted feedback, but obtaining reliable step supervision often requires human or LLM judgment, or additional rollouts to estimate the downstream effect of an intermediate decision. In this paper, we argue that effective tool-use ",
+      "excerptHash": "7bec54704d5bab1a15059ae8f3d4c8a2d6c278c8339730f263588a5464485312",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.761481+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02300",
+      "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
+      "excerpt": "arXiv:2610.02300v1 Announce Type: new Abstract: Training-free safeguards for text-to-image generation often rely on a reusable safety signal, such as an unsafe direction or global toxic subspace, applied broadly across prompts. We provide a controlled geometric analysis of this global-unsafety assumption and reveal a consistent coverage-selectivity trade-off: compact unsafe subspaces fail to cover heterogeneous unsafe semantics, whereas broader aggregation increasingly distorts safety-adjacent benign prompts. Motivated by this finding, we propose CALM (Counterfactual Adaptive Local Modulation)",
+      "excerptHash": "492be04c66a2795eda67614d292f3c39c7f7a1caabb712a7252d16cbcd6df5b3",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.760874+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02281",
+      "title": "The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?",
+      "excerpt": "arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed at scale with LLMs, provide a useful signal about how companies disclose their response to AI? We test this by applying a reproducible two-stage classification pipeline to 9,821 annual reports from 1,362 UK listed companies (2020-2025, with partial 2026 data). We first validate the method against 474 human-annotated passages, finding high recall and moderate label-level agreement. We then report th",
+      "excerptHash": "ee4bf6465196f0092a9362fb096dea87de09153fedef14561497d41d50c179e0",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.760270+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02267",
+      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "excerpt": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection. System-1 decision models answer such questions in a single forward pass with class probabilities, promising large cost and latency savings over LLM calls. We present a paired evaluation of an open-weight (Laya) and a hosted (Jev) System-1 model on 11 agent decision points built from 18 public sources: 7,283 base cases plus 6,640 robustness variants, with byte-identical inputs",
+      "excerptHash": "31f0b1aa9f07f111b4dcb52417b725c3f2b2efc57fe6449b7063f7ab5984526f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.759677+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02260",
+      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+      "excerpt": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements and physical laws. However, existing constrained samplers often face a trade-off: \\textit{enforcing constraints can substantially displace samples from the pretrained data distribution}. To address this trade-off, we introduce \\textbf{MintFlow}, a training-free constrained sampling framework that formulates constraint enforcement as a minimal intervention on the pretrained flow ",
+      "excerptHash": "73730492ddc8b8e538a87d0d7b614818e0ee1fd2d259d0090cd4d5aac41be916",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-05T06:10:07.759028+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
+    },
+    {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
       "title": "Transformers.js 3.8.1 quantization dtypes",
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-04T21:49:12.021168+00:00",
+      "checkedAt": "2026-10-05T06:10:07.391901+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "ccbc83233f8feff412206b92259b4bf71c343049eb664f67dcfb2d4e769c2033"
+      "sourceHash": "ed1a91185c91319785b48454c022a0360cc4156ec0a8c5b30332ccf34b5b5108"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
@@ -17,19 +77,19 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-04T21:49:11.826383+00:00",
+      "checkedAt": "2026-10-05T06:10:07.083207+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "fe0f423a310637049d02ae4a16c95e6562ae4d7627b9fd48c565c04716dad006"
+      "sourceHash": "034e66b1704bc199d51696c11e4edeaf700efa6ce91b554d63865d7fe12eb63f"
     }
   ],
   "evidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "passed": true,
-    "verified": 2
+    "verified": 8
   },
-  "generation": 1,
-  "parentHash": null,
-  "at": "2026-10-04T21:49:12.131384+00:00",
-  "runId": "37237601358",
-  "artifactHash": "19afa87057bf626a61ae1bfca998c9dcd43a3fb866cf1a5daf9a0fad2d8ec062"
+  "generation": 2,
+  "parentHash": "19afa87057bf626a61ae1bfca998c9dcd43a3fb866cf1a5daf9a0fad2d8ec062",
+  "at": "2026-10-05T06:10:07.763038+00:00",
+  "runId": "37271041634",
+  "artifactHash": "95de9635e6661a9fa364ca801773704d9bdc7f3610bf99c8eb062fb79c5ff79c"
 }
