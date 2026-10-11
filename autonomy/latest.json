@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "38172518528",
+  "runId": "38185995614",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-11T20:31:26Z",
+  "at": "2026-10-11T23:54:53Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "f0a8ab97671a7fdcfd459eaf64ae533145e7c28342e254460f31d3deb62214fa",
-  "cycleNumber": 45,
+  "parentRecordHash": "0491867e76f30e3a9dbf6071bff4c619236b2ba49a995bd27aad7a79440d169e",
+  "cycleNumber": 46,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "a8797e88367795ab0c9f2f5b21ce381dbcc35b739a10e23594bbda75e72f69ae",
+    "hash": "fd0f1f908f517a1060cdc0a70022d66ea8991db0e8ea7db45f6961b895096f84",
     "items": [
       {
         "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-11T20:31:27Z"
+    "accessedAt": "2026-10-11T23:54:54Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.729,
+  "elapsedSeconds": 0.512,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "0491867e76f30e3a9dbf6071bff4c619236b2ba49a995bd27aad7a79440d169e"
+  "recordHash": "a773b65919477a20ecbfd47b5dbe553f75e930df8e7102958b1a0f81699c45db"
 }
