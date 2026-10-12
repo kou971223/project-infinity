@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2610.12598",
+      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+      "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
+      "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.198580+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12596",
+      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+      "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
+      "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.198083+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12593",
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
+      "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.197603+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12542",
+      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+      "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
+      "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.197106+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12536",
+      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+      "excerpt": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner sea",
+      "excerptHash": "57acb7828def217cd1f31220c3c66c4cb7e187b6e7a9f7704be80e6e5e543d56",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.196612+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12493",
+      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+      "excerpt": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the mo",
+      "excerptHash": "966c825bdbe2fc80aaa88ac0791634d6428584f2eb7fca7d7a74cfc4cb6db214",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.196107+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.125467+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "97b69b7d1b4ba67ee86e05e0b54e68040a6346d4598f7164c43154e66d4deb31"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-12T06:28:03.984280+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "e7508a66f987e165f6f40ae51c899392856365559ad9067cb6192e7f23cabdea"
+    },
+    {
       "url": "https://arxiv.org/abs/2610.08900",
       "title": "Humanize: Judgement Engineering for Agentic Coding",
       "excerpt": "arXiv:2610.08900v1 Announce Type: new Abstract: Agentic coding makes code generation cheap, but reliable completion remains difficult: the agent that writes the code is a weak judge of whether it is done. We present Humanize, a multi-agent orchestration workflow for agentic coding built around judgement engineering: explicit, mechanically enforced decisions at the boundaries between planning, implementation, review, and learning. A human approves a plan contract, a builder agent implements it in rounds, and a reviewer agent from another vendor decides completion; deterministic hooks, not a mod",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-10-08T06:36:31.358786+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "1e6ae007326a420f7f0acd54f4ac8fe89baff9ec342b60cae2c211737115e033"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-08T06:36:31.317089+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "791847baab55f77f57a74454ff7ebddee68e7035b50dfd2847a16acf7aedc50e"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-08T06:36:31.264851+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "0dd2639806d204d750afaeb26f154b7d87c0760ab177bb158c54c6e1b1863741"
     },
     {
       "url": "https://arxiv.org/abs/2610.02331",
@@ -145,11 +205,11 @@
   "evidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "passed": true,
-    "verified": 14
+    "verified": 20
   },
-  "generation": 3,
-  "parentHash": "95de9635e6661a9fa364ca801773704d9bdc7f3610bf99c8eb062fb79c5ff79c",
-  "at": "2026-10-08T06:36:31.362995+00:00",
-  "runId": "37738531555",
-  "artifactHash": "40cca141b3d7f979a5bec24e0ca9fb0eebeae4109de29a274d3510342a2ad915"
+  "generation": 4,
+  "parentHash": "40cca141b3d7f979a5bec24e0ca9fb0eebeae4109de29a274d3510342a2ad915",
+  "at": "2026-10-12T06:28:04.199317+00:00",
+  "runId": "38212635299",
+  "artifactHash": "f4582eb2a7f27297211674b5bf2bf72d76765766cb4043aa80f3a71f61351f0c"
 }

@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-10-11T22:25:15.301323+00:00",
+  "at": "2026-10-12T06:28:04.199317+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "38180332291",
+  "runId": "38212635299",
   "parents": {
     "knowledge": "40cca141b3d7f979a5bec24e0ca9fb0eebeae4109de29a274d3510342a2ad915",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-11T22:25:10.745928+00:00",
+      "checkedAt": "2026-10-12T06:28:03.984280+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "7a8fda3a80eb5fb1facfe45975a45ec7d1086263fe719e7bb755559d3ea6356a"
+      "sourceHash": "e7508a66f987e165f6f40ae51c899392856365559ad9067cb6192e7f23cabdea"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,13 +24,73 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-11T22:25:11.096491+00:00",
+      "checkedAt": "2026-10-12T06:28:04.125467+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "c2db66ae0b199dbe69c9356b5a4126e9ee4bc6cd87f71d33bcb1ca349a486d3f"
+      "sourceHash": "97b69b7d1b4ba67ee86e05e0b54e68040a6346d4598f7164c43154e66d4deb31"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12493",
+      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+      "excerpt": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the mo",
+      "excerptHash": "966c825bdbe2fc80aaa88ac0791634d6428584f2eb7fca7d7a74cfc4cb6db214",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.196107+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12536",
+      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+      "excerpt": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner sea",
+      "excerptHash": "57acb7828def217cd1f31220c3c66c4cb7e187b6e7a9f7704be80e6e5e543d56",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.196612+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12542",
+      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+      "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
+      "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.197106+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12593",
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
+      "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.197603+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12596",
+      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+      "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
+      "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.198083+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12598",
+      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+      "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
+      "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T06:28:04.198580+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
     }
   ],
   "sourceFailures": [],
-  "task": "mean",
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -44,76 +104,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 2463841999755,
+    "trainingSeed": 88312346517301,
     "trainingExamples": [
       {
         "args": {
-          "a": "6542.49",
-          "b": "4306.75",
-          "c": "3339.53"
+          "width": "-7646.40",
+          "height": "1297.26"
         },
-        "expected": "472959/100"
+        "expected": "-1239921108/125"
       },
       {
         "args": {
-          "a": "-9370.64",
-          "b": "2582.81",
-          "c": "445.80"
+          "width": "-8761.43",
+          "height": "-2586.53"
         },
-        "expected": "-211401/100"
+        "expected": "226617015379/10000"
       },
       {
         "args": {
-          "a": "-8680.87",
-          "b": "-1462.04",
-          "c": "-2837.32"
+          "width": "-1852.16",
+          "height": "-1388.57"
         },
-        "expected": "-1298023/300"
+        "expected": "1607408632/625"
       },
       {
         "args": {
-          "a": "-5862.56",
-          "b": "1599.47",
-          "c": "7604.62"
+          "width": "-5989.92",
+          "height": "-9409.29"
         },
-        "expected": "334153/300"
+        "expected": "35225558973/625"
       }
     ],
-    "examined": 15345,
-    "states": 6008,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "ed4d13663ce6e6156acaa66f0550bb337bc59f2adafb50852d1f1dbb71bf689c",
+  "frozenHash": "924466818ff21e8048800861ab66ad87b975426b84391a69f10615702ca9dd77",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -123,9 +165,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-11T22:25:10.745928+00:00",
+        "checkedAt": "2026-10-12T06:28:03.984280+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "7a8fda3a80eb5fb1facfe45975a45ec7d1086263fe719e7bb755559d3ea6356a"
+        "sourceHash": "e7508a66f987e165f6f40ae51c899392856365559ad9067cb6192e7f23cabdea"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -133,9 +175,69 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-11T22:25:11.096491+00:00",
+        "checkedAt": "2026-10-12T06:28:04.125467+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "c2db66ae0b199dbe69c9356b5a4126e9ee4bc6cd87f71d33bcb1ca349a486d3f"
+        "sourceHash": "97b69b7d1b4ba67ee86e05e0b54e68040a6346d4598f7164c43154e66d4deb31"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12493",
+        "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+        "excerpt": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the mo",
+        "excerptHash": "966c825bdbe2fc80aaa88ac0791634d6428584f2eb7fca7d7a74cfc4cb6db214",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.196107+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12536",
+        "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+        "excerpt": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner sea",
+        "excerptHash": "57acb7828def217cd1f31220c3c66c4cb7e187b6e7a9f7704be80e6e5e543d56",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.196612+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12542",
+        "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+        "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
+        "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.197106+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12593",
+        "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+        "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
+        "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.197603+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12596",
+        "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+        "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
+        "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.198083+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12598",
+        "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+        "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
+        "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T06:28:04.198580+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
       }
     ],
     "rejected": [],
@@ -143,593 +245,529 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 99310579644234,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 270092358700393,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "4776.22",
-          "b": "1181.38",
-          "c": "-4648.40"
+          "width": "839.00",
+          "height": "-4269.76"
         },
-        "expected": "2182/5",
-        "reply": "2182/5"
+        "expected": "-89558216/25",
+        "reply": "-89558216/25"
       },
       {
         "args": {
-          "a": "-2087.59",
-          "b": "9394.06",
-          "c": "-365.42"
+          "width": "-2463.54",
+          "height": "-584.92"
         },
-        "expected": "138821/60",
-        "reply": "138821/60"
+        "expected": "1801217271/1250",
+        "reply": "1801217271/1250"
       },
       {
         "args": {
-          "a": "-9804.84",
-          "b": "-7707.82",
-          "c": "-8864.69"
+          "width": "-2633.78",
+          "height": "1845.89"
         },
-        "expected": "-175849/20",
-        "reply": "-175849/20"
+        "expected": "-24308340821/5000",
+        "reply": "-24308340821/5000"
       },
       {
         "args": {
-          "a": "-3695.82",
-          "b": "5290.52",
-          "c": "9619.80"
+          "width": "-2571.26",
+          "height": "-5461.05"
         },
-        "expected": "22429/6",
-        "reply": "22429/6"
+        "expected": "14041779423/1000",
+        "reply": "14041779423/1000"
       },
       {
         "args": {
-          "a": "4106.82",
-          "b": "4295.09",
-          "c": "9509.95"
+          "width": "6878.90",
+          "height": "-9387.45"
         },
-        "expected": "298531/50",
-        "reply": "298531/50"
+        "expected": "-12915065961/200",
+        "reply": "-12915065961/200"
       },
       {
         "args": {
-          "a": "263.63",
-          "b": "-2709.40",
-          "c": "5701.56"
+          "width": "-907.57",
+          "height": "5257.26"
         },
-        "expected": "325579/300",
-        "reply": "325579/300"
+        "expected": "-23856657291/5000",
+        "reply": "-23856657291/5000"
       },
       {
         "args": {
-          "a": "-354.56",
-          "b": "376.76",
-          "c": "9561.73"
+          "width": "8948.21",
+          "height": "4029.64"
         },
-        "expected": "958393/300",
-        "reply": "958393/300"
+        "expected": "90145162361/2500",
+        "reply": "90145162361/2500"
       },
       {
         "args": {
-          "a": "1555.86",
-          "b": "-8001.11",
-          "c": "-4668.45"
+          "width": "-6950.73",
+          "height": "-6473.55"
         },
-        "expected": "-111137/30",
-        "reply": "-111137/30"
+        "expected": "89991796383/2000",
+        "reply": "89991796383/2000"
       },
       {
         "args": {
-          "a": "-2428.12",
-          "b": "-1522.59",
-          "c": "1916.03"
+          "width": "640.28",
+          "height": "-6670.42"
         },
-        "expected": "-50867/75",
-        "reply": "-50867/75"
+        "expected": "-5338670647/1250",
+        "reply": "-5338670647/1250"
       },
       {
         "args": {
-          "a": "4939.06",
-          "b": "-5246.83",
-          "c": "-2463.68"
+          "width": "-6771.19",
+          "height": "-6711.86"
         },
-        "expected": "-55429/60",
-        "reply": "-55429/60"
+        "expected": "227236396567/5000",
+        "reply": "227236396567/5000"
       },
       {
         "args": {
-          "a": "2254.18",
-          "b": "-8219.79",
-          "c": "3991.20"
+          "width": "-8652.64",
+          "height": "1588.22"
         },
-        "expected": "-197441/300",
-        "reply": "-197441/300"
+        "expected": "-8588934938/625",
+        "reply": "-8588934938/625"
       },
       {
         "args": {
-          "a": "1979.20",
-          "b": "7990.94",
-          "c": "-7084.44"
+          "width": "8658.41",
+          "height": "-6895.87"
         },
-        "expected": "9619/10",
-        "reply": "9619/10"
+        "expected": "-597072697667/10000",
+        "reply": "-597072697667/10000"
       },
       {
         "args": {
-          "a": "6690.83",
-          "b": "-5707.05",
-          "c": "2580.51"
+          "width": "6497.75",
+          "height": "7371.91"
         },
-        "expected": "356429/300",
-        "reply": "356429/300"
+        "expected": "19160331281/400",
+        "reply": "19160331281/400"
       },
       {
         "args": {
-          "a": "-2486.62",
-          "b": "4279.90",
-          "c": "-5172.94"
+          "width": "-5362.47",
+          "height": "-3903.53"
         },
-        "expected": "-168983/150",
-        "reply": "-168983/150"
+        "expected": "209325625191/10000",
+        "reply": "209325625191/10000"
       },
       {
         "args": {
-          "a": "7683.67",
-          "b": "9137.64",
-          "c": "-7109.04"
+          "width": "3131.44",
+          "height": "3827.98"
         },
-        "expected": "971227/300",
-        "reply": "971227/300"
+        "expected": "7491931057/625",
+        "reply": "7491931057/625"
       },
       {
         "args": {
-          "a": "-1941.74",
-          "b": "-1528.61",
-          "c": "7329.93"
+          "width": "-2424.43",
+          "height": "-9781.60"
         },
-        "expected": "192979/150",
-        "reply": "192979/150"
+        "expected": "2964350561/125",
+        "reply": "2964350561/125"
       },
       {
         "args": {
-          "a": "9375.15",
-          "b": "-8579.61",
-          "c": "-6918.22"
+          "width": "1080.10",
+          "height": "4532.90"
         },
-        "expected": "-153067/75",
-        "reply": "-153067/75"
+        "expected": "489598529/100",
+        "reply": "489598529/100"
       },
       {
         "args": {
-          "a": "5282.57",
-          "b": "-8865.36",
-          "c": "1966.37"
+          "width": "2767.28",
+          "height": "8209.21"
         },
-        "expected": "-80821/150",
-        "reply": "-80821/150"
+        "expected": "28396478311/1250",
+        "reply": "28396478311/1250"
       },
       {
         "args": {
-          "a": "-2322.88",
-          "b": "-707.68",
-          "c": "6467.03"
+          "width": "-1060.15",
+          "height": "-7081.56"
         },
-        "expected": "114549/100",
-        "reply": "114549/100"
+        "expected": "3753757917/500",
+        "reply": "3753757917/500"
       },
       {
         "args": {
-          "a": "7787.45",
-          "b": "-9773.13",
-          "c": "5226.52"
+          "width": "918.93",
+          "height": "-3382.67"
         },
-        "expected": "27007/25",
-        "reply": "27007/25"
+        "expected": "-31084369431/10000",
+        "reply": "-31084369431/10000"
       },
       {
         "args": {
-          "a": "5478.53",
-          "b": "-2673.73",
-          "c": "2760.51"
+          "width": "-144.35",
+          "height": "-1431.66"
         },
-        "expected": "556531/300",
-        "reply": "556531/300"
+        "expected": "206660121/1000",
+        "reply": "206660121/1000"
       },
       {
         "args": {
-          "a": "-124.66",
-          "b": "-1055.48",
-          "c": "-913.97"
+          "width": "-5421.27",
+          "height": "3118.88"
         },
-        "expected": "-209411/300",
-        "reply": "-209411/300"
+        "expected": "-10567681611/625",
+        "reply": "-10567681611/625"
       },
       {
         "args": {
-          "a": "5834.16",
-          "b": "3786.47",
-          "c": "4456.65"
+          "width": "7349.74",
+          "height": "9058.90"
         },
-        "expected": "351932/75",
-        "reply": "351932/75"
+        "expected": "33290279843/500",
+        "reply": "33290279843/500"
       },
       {
         "args": {
-          "a": "9264.81",
-          "b": "1236.28",
-          "c": "7811.67"
+          "width": "2486.41",
+          "height": "354.55"
         },
-        "expected": "457819/75",
-        "reply": "457819/75"
+        "expected": "1763113331/2000",
+        "reply": "1763113331/2000"
       },
       {
         "args": {
-          "a": "-1705.90",
-          "b": "1149.12",
-          "c": "5074.83"
+          "width": "-4892.38",
+          "height": "-4650.31"
         },
-        "expected": "90361/60",
-        "reply": "90361/60"
+        "expected": "113755418189/5000",
+        "reply": "113755418189/5000"
       },
       {
         "args": {
-          "a": "-6755.15",
-          "b": "-2932.42",
-          "c": "-8384.60"
+          "width": "2606.51",
+          "height": "-8270.02"
         },
-        "expected": "-1807217/300",
-        "reply": "-1807217/300"
+        "expected": "-107779449151/5000",
+        "reply": "-107779449151/5000"
       },
       {
         "args": {
-          "a": "4658.62",
-          "b": "6951.33",
-          "c": "-255.73"
+          "width": "1806.49",
+          "height": "-6174.51"
         },
-        "expected": "189237/50",
-        "reply": "189237/50"
+        "expected": "-111541905699/10000",
+        "reply": "-111541905699/10000"
       },
       {
         "args": {
-          "a": "7799.16",
-          "b": "6730.19",
-          "c": "-7700.91"
+          "width": "-7697.26",
+          "height": "-4158.25"
         },
-        "expected": "170711/75",
-        "reply": "170711/75"
+        "expected": "6401426279/200",
+        "reply": "6401426279/200"
       },
       {
         "args": {
-          "a": "-4549.69",
-          "b": "7913.07",
-          "c": "-628.12"
+          "width": "-140.04",
+          "height": "6476.51"
         },
-        "expected": "136763/150",
-        "reply": "136763/150"
+        "expected": "-2267426151/2500",
+        "reply": "-2267426151/2500"
       },
       {
         "args": {
-          "a": "-8459.57",
-          "b": "-6100.66",
-          "c": "6280.73"
+          "width": "3192.99",
+          "height": "2999.66"
         },
-        "expected": "-16559/6",
-        "reply": "-16559/6"
+        "expected": "47889421917/5000",
+        "reply": "47889421917/5000"
       },
       {
         "args": {
-          "a": "-1464.41",
-          "b": "-5315.49",
-          "c": "3933.94"
+          "width": "2255.48",
+          "height": "7703.74"
         },
-        "expected": "-71149/75",
-        "reply": "-71149/75"
+        "expected": "21719539369/1250",
+        "reply": "21719539369/1250"
       },
       {
         "args": {
-          "a": "-5352.09",
-          "b": "-3339.75",
-          "c": "-3993.19"
+          "width": "-477.23",
+          "height": "3288.28"
         },
-        "expected": "-1268503/300",
-        "reply": "-1268503/300"
+        "expected": "-3923164661/2500",
+        "reply": "-3923164661/2500"
       },
       {
         "args": {
-          "a": "2007.28",
-          "b": "-4157.47",
-          "c": "-8106.98"
+          "width": "8324.07",
+          "height": "-2925.22"
         },
-        "expected": "-1025717/300",
-        "reply": "-1025717/300"
+        "expected": "-121748680227/5000",
+        "reply": "-121748680227/5000"
       },
       {
         "args": {
-          "a": "7672.98",
-          "b": "-3060.60",
-          "c": "-9723.04"
+          "width": "-6625.31",
+          "height": "9075.56"
         },
-        "expected": "-255533/150",
-        "reply": "-255533/150"
+        "expected": "-150320996059/2500",
+        "reply": "-150320996059/2500"
       },
       {
         "args": {
-          "a": "4796.36",
-          "b": "1077.32",
-          "c": "-9859.72"
+          "width": "9033.49",
+          "height": "4939.65"
         },
-        "expected": "-33217/25",
-        "reply": "-33217/25"
+        "expected": "89244557757/2000",
+        "reply": "89244557757/2000"
       },
       {
         "args": {
-          "a": "-9929.19",
-          "b": "2476.20",
-          "c": "-8772.47"
+          "width": "7013.08",
+          "height": "-6592.44"
         },
-        "expected": "-811273/150",
-        "reply": "-811273/150"
+        "expected": "-28895818197/625",
+        "reply": "-28895818197/625"
       },
       {
         "args": {
-          "a": "-9732.97",
-          "b": "-2966.96",
-          "c": "-2188.17"
+          "width": "261.70",
+          "height": "-7640.85"
         },
-        "expected": "-49627/10",
-        "reply": "-49627/10"
+        "expected": "-399922089/200",
+        "reply": "-399922089/200"
       },
       {
         "args": {
-          "a": "2723.39",
-          "b": "5153.96",
-          "c": "5277.97"
+          "width": "-3971.42",
+          "height": "6905.33"
         },
-        "expected": "328883/75",
-        "reply": "328883/75"
+        "expected": "-137119828343/5000",
+        "reply": "-137119828343/5000"
       },
       {
         "args": {
-          "a": "5184.21",
-          "b": "6608.25",
-          "c": "2295.17"
+          "width": "-1346.11",
+          "height": "1192.17"
         },
-        "expected": "1408763/300",
-        "reply": "1408763/300"
+        "expected": "-16047919587/10000",
+        "reply": "-16047919587/10000"
       },
       {
         "args": {
-          "a": "-171.56",
-          "b": "9917.30",
-          "c": "-4088.27"
+          "width": "2052.05",
+          "height": "-8017.00"
         },
-        "expected": "565747/300",
-        "reply": "565747/300"
+        "expected": "-329025697/20",
+        "reply": "-329025697/20"
       },
       {
         "args": {
-          "a": "-6476.57",
-          "b": "-749.06",
-          "c": "62.77"
+          "width": "3365.43",
+          "height": "-4340.55"
         },
-        "expected": "-119381/50",
-        "reply": "-119381/50"
+        "expected": "-29215634373/2000",
+        "reply": "-29215634373/2000"
       },
       {
         "args": {
-          "a": "-564.09",
-          "b": "5703.53",
-          "c": "1832.43"
+          "width": "7158.61",
+          "height": "-792.80"
         },
-        "expected": "697187/300",
-        "reply": "697187/300"
+        "expected": "-709418251/125",
+        "reply": "-709418251/125"
       },
       {
         "args": {
-          "a": "-9218.34",
-          "b": "1272.04",
-          "c": "3913.13"
+          "width": "4928.34",
+          "height": "-2222.46"
         },
-        "expected": "-134439/100",
-        "reply": "-134439/100"
+        "expected": "-27382596291/2500",
+        "reply": "-27382596291/2500"
       },
       {
         "args": {
-          "a": "-5939.10",
-          "b": "-3632.79",
-          "c": "-3573.06"
+          "width": "5923.23",
+          "height": "7991.86"
         },
-        "expected": "-87633/20",
-        "reply": "-87633/20"
+        "expected": "236688124539/5000",
+        "reply": "236688124539/5000"
       },
       {
         "args": {
-          "a": "-1938.99",
-          "b": "-1354.96",
-          "c": "3770.16"
+          "width": "2930.27",
+          "height": "2473.34"
         },
-        "expected": "47621/300",
-        "reply": "47621/300"
+        "expected": "36237770009/5000",
+        "reply": "36237770009/5000"
       },
       {
         "args": {
-          "a": "5395.45",
-          "b": "-3586.75",
-          "c": "-9169.07"
+          "width": "-4207.30",
+          "height": "8472.99"
         },
-        "expected": "-736037/300",
-        "reply": "-736037/300"
+        "expected": "-35648410827/1000",
+        "reply": "-35648410827/1000"
       },
       {
         "args": {
-          "a": "-9772.76",
-          "b": "4199.90",
-          "c": "1975.45"
+          "width": "-1669.56",
+          "height": "-3162.44"
         },
-        "expected": "-359741/300",
-        "reply": "-359741/300"
+        "expected": "3299927079/625",
+        "reply": "3299927079/625"
       },
       {
         "args": {
-          "a": "196.06",
-          "b": "-730.74",
-          "c": "6261.24"
+          "width": "8457.61",
+          "height": "-475.60"
         },
-        "expected": "143164/75",
-        "reply": "143164/75"
+        "expected": "-1005609829/250",
+        "reply": "-1005609829/250"
       },
       {
         "args": {
-          "a": "-1014.85",
-          "b": "-8423.36",
-          "c": "4664.86"
+          "width": "-1758.95",
+          "height": "-7428.98"
         },
-        "expected": "-95467/60",
-        "reply": "-95467/60"
+        "expected": "13067204371/1000",
+        "reply": "13067204371/1000"
       },
       {
         "args": {
-          "a": "-3376.16",
-          "b": "4824.41",
-          "c": "-2071.52"
+          "width": "-5937.23",
+          "height": "-540.87"
         },
-        "expected": "-62327/300",
-        "reply": "-62327/300"
+        "expected": "32112695901/10000",
+        "reply": "32112695901/10000"
       },
       {
         "args": {
-          "a": "-8182.76",
-          "b": "-3470.85",
-          "c": "28.57"
+          "width": "-5882.41",
+          "height": "-9471.94"
         },
-        "expected": "-290626/75",
-        "reply": "-290626/75"
+        "expected": "278589172877/5000",
+        "reply": "278589172877/5000"
       },
       {
         "args": {
-          "a": "5762.23",
-          "b": "6479.17",
-          "c": "7447.41"
+          "width": "-141.06",
+          "height": "-9793.69"
         },
-        "expected": "1968881/300",
-        "reply": "1968881/300"
+        "expected": "6907489557/5000",
+        "reply": "6907489557/5000"
       },
       {
         "args": {
-          "a": "5989.20",
-          "b": "-293.26",
-          "c": "-7356.55"
+          "width": "8024.37",
+          "height": "4231.82"
         },
-        "expected": "-166061/300",
-        "reply": "-166061/300"
+        "expected": "169788447267/5000",
+        "reply": "169788447267/5000"
       },
       {
         "args": {
-          "a": "303.49",
-          "b": "1241.23",
-          "c": "-1814.04"
+          "width": "8607.75",
+          "height": "5943.78"
         },
-        "expected": "-6733/75",
-        "reply": "-6733/75"
+        "expected": "10232514459/200",
+        "reply": "10232514459/200"
       },
       {
         "args": {
-          "a": "3378.19",
-          "b": "-330.89",
-          "c": "-2741.77"
+          "width": "-5749.19",
+          "height": "3003.58"
         },
-        "expected": "30553/300",
-        "reply": "30553/300"
+        "expected": "-86340760501/5000",
+        "reply": "-86340760501/5000"
       },
       {
         "args": {
-          "a": "6683.58",
-          "b": "1052.46",
-          "c": "3433.16"
+          "width": "-5015.72",
+          "height": "6918.52"
         },
-        "expected": "55846/15",
-        "reply": "55846/15"
+        "expected": "-21688349459/625",
+        "reply": "-21688349459/625"
       },
       {
         "args": {
-          "a": "-1411.32",
-          "b": "-9372.20",
-          "c": "2849.91"
+          "width": "9446.70",
+          "height": "2973.67"
         },
-        "expected": "-793361/300",
-        "reply": "-793361/300"
+        "expected": "28091368389/1000",
+        "reply": "28091368389/1000"
       },
       {
         "args": {
-          "a": "1369.81",
-          "b": "-3662.87",
-          "c": "3515.95"
+          "width": "802.10",
+          "height": "-7638.45"
         },
-        "expected": "40763/100",
-        "reply": "40763/100"
+        "expected": "-1225360149/200",
+        "reply": "-1225360149/200"
       },
       {
         "args": {
-          "a": "3720.52",
-          "b": "10.52",
-          "c": "7199.83"
+          "width": "-3492.45",
+          "height": "-250.24"
         },
-        "expected": "1093087/300",
-        "reply": "1093087/300"
+        "expected": "109243836/125",
+        "reply": "109243836/125"
       },
       {
         "args": {
-          "a": "8767.42",
-          "b": "3417.32",
-          "c": "7325.62"
+          "width": "-7275.75",
+          "height": "-7329.44"
         },
-        "expected": "487759/75",
-        "reply": "487759/75"
+        "expected": "1333179327/25",
+        "reply": "1333179327/25"
       },
       {
         "args": {
-          "a": "-2655.91",
-          "b": "1798.66",
-          "c": "2351.03"
+          "width": "-3729.03",
+          "height": "-4276.87"
         },
-        "expected": "74689/150",
-        "reply": "74689/150"
+        "expected": "159485765361/10000",
+        "reply": "159485765361/10000"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "NO_CHANGE",
+    "knowledge": "ADOPT",
     "programs": "NO_GAIN"
   },
-  "recordHash": "b9beaf480c43425e97928741df5f9c70d44bb8a3017043f88cff75456b497a91"
+  "recordHash": "1a5c312700ff8c9c47386c41113e868908c40b2a063dd3cb1b5108f56ebdd96c"
 }
