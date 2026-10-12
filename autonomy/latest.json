@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "38185995614",
+  "runId": "38212450937",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-11T23:54:53Z",
+  "at": "2026-10-12T06:26:24Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "0491867e76f30e3a9dbf6071bff4c619236b2ba49a995bd27aad7a79440d169e",
-  "cycleNumber": 46,
+  "parentRecordHash": "a773b65919477a20ecbfd47b5dbe553f75e930df8e7102958b1a0f81699c45db",
+  "cycleNumber": 47,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "fd0f1f908f517a1060cdc0a70022d66ea8991db0e8ea7db45f6961b895096f84",
+    "hash": "52cfb1b87bec05be0f69e32349b58e729fe8a233750d6954a01932c715c43e95",
     "items": [
       {
-        "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
-        "url": "http://arxiv.org/abs/2610.12448v1",
-        "updated": "2026-10-08T17:58:36Z",
+        "title": "Prediction Is Not a Sufficient Memory State",
+        "url": "http://arxiv.org/abs/2610.13881v1",
+        "updated": "2026-10-09T17:27:06Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
-        "url": "http://arxiv.org/abs/2610.12449v1",
-        "updated": "2026-10-08T17:58:36Z",
+        "title": "SLICE: Sequential Likelihood-Free Inference via Conformal E-Values",
+        "url": "http://arxiv.org/abs/2610.13855v1",
+        "updated": "2026-10-09T17:04:51Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-11T23:54:54Z"
+    "accessedAt": "2026-10-12T06:26:25Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.512,
+  "elapsedSeconds": 0.424,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "a773b65919477a20ecbfd47b5dbe553f75e930df8e7102958b1a0f81699c45db"
+  "recordHash": "c5945611424f579ebac83eefea8ec4af96a3f2791221bb8638c62e2ec043c979"
 }
