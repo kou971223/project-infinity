@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-10-12T00:30:54.348Z",
-  "runId": "38188252277",
+  "at": "2026-10-12T07:19:29.606Z",
+  "runId": "38217054684",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-63498c2c-76af-47a4-a495-1923b18201f3",
-    "at": "2026-10-12T00:30:35.328Z",
+    "exp": "EXP-6dc72262-e819-49d4-a402-457d88f1d5ad",
+    "at": "2026-10-12T07:19:13.165Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -95,6 +95,21 @@
         "title": "Transformers.js 3.8.1 dtypes",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "status": "official_document_body_retrieved_not_independent_validation"
+      },
+      {
+        "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+        "url": "https://arxiv.org/abs/2610.12493",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+        "url": "https://arxiv.org/abs/2610.12536",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+        "url": "https://arxiv.org/abs/2610.12542",
+        "status": "metadata_only_not_fulltext_verified"
       }
     ],
     "sources": [
@@ -102,11 +117,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-12T00:30:34Z",
+        "at": "2026-10-12T07:19:12Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "05a1eb642cef8fe754532533a1c7694f4924a415c656c059bf5a1e875326f9da",
+        "sha256": "75139f6aee6f537c97ca52d32a4bba8e03701de5c0dcb5538c9ff75caf1db41b",
         "bytes": 106583,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -116,11 +131,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-12T00:30:34Z",
+        "at": "2026-10-12T07:19:12Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "4ae6b24653c2614be7f21bacfa4a36282d15a4979e0f5804a9c228a35795ad5c",
+        "sha256": "d0a833c8c3808f32ea3de53bd36feff20d6bf86cecf8e37c86c3cc2203c5d244",
         "bytes": 108212,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -130,12 +145,12 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-10-12T00:30:35Z",
+        "at": "2026-10-12T07:19:12Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "9143d41be01f2397e77162eb9bda3a7705ac9e0043fb7aefa4533081386b0d47",
-        "bytes": 892,
+        "sha256": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629",
+        "bytes": 691395,
         "scope": "feed_only"
       }
     ],
@@ -150,5 +165,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "2dbbe4f8f8cfc5d005c8d2b21784f9d5df43f261c131af5668a727bea745f174"
+  "recordHash": "ac8da1e488cda21c0033b8eeff104aded626706928983f48558a4c2682958a51"
 }
