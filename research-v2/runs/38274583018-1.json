@@ -1,0 +1,780 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-12T16:02:34.415338+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "38274583018",
+  "parents": {
+    "knowledge": "f4582eb2a7f27297211674b5bf2bf72d76765766cb4043aa80f3a71f61351f0c",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-12T16:02:33.908720+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "848668d1556892186139de8d21b9cf8fdf3cdc292c28972ef38818aca03ecc61"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.279291+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "58c18daaf5a8967eb27db016cfd2e1afa8eff7de1051f75c329c705794366836"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12493",
+      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+      "excerpt": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the mo",
+      "excerptHash": "966c825bdbe2fc80aaa88ac0791634d6428584f2eb7fca7d7a74cfc4cb6db214",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.412114+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12536",
+      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+      "excerpt": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner sea",
+      "excerptHash": "57acb7828def217cd1f31220c3c66c4cb7e187b6e7a9f7704be80e6e5e543d56",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.412630+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12542",
+      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+      "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
+      "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.413121+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12593",
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
+      "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.413611+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12596",
+      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+      "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
+      "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.414081+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12598",
+      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+      "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
+      "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-12T16:02:34.414569+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "percentage",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 177854473831904,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "2314.16",
+          "rate": "-1201.80"
+        },
+        "expected": "-173822343/6250"
+      },
+      {
+        "args": {
+          "amount": "-672.33",
+          "rate": "-2275.95"
+        },
+        "expected": "3060378927/200000"
+      },
+      {
+        "args": {
+          "amount": "9877.27",
+          "rate": "-2551.40"
+        },
+        "expected": "-12600433339/50000"
+      },
+      {
+        "args": {
+          "amount": "-4374.56",
+          "rate": "-7636.39"
+        },
+        "expected": "20878653899/62500"
+      }
+    ],
+    "examined": 347,
+    "states": 188,
+    "cost": 5
+  },
+  "programCandidate": {
+    "task": "percentage",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "49eb6546061fd2c31d027d209db98ffbd80a6e95758dabda3d79c89c87d86d1c",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-12T16:02:33.908720+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "848668d1556892186139de8d21b9cf8fdf3cdc292c28972ef38818aca03ecc61"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.279291+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "58c18daaf5a8967eb27db016cfd2e1afa8eff7de1051f75c329c705794366836"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12493",
+        "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+        "excerpt": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a debugging tool, useful for obtaining anecdotal insights into, for example, features learned by the mo",
+        "excerptHash": "966c825bdbe2fc80aaa88ac0791634d6428584f2eb7fca7d7a74cfc4cb6db214",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.412114+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12536",
+        "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+        "excerpt": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate-score medians rose between the first and final generations in all six tasks, and selected-winner sea",
+        "excerptHash": "57acb7828def217cd1f31220c3c66c4cb7e187b6e7a9f7704be80e6e5e543d56",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.412630+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12542",
+        "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+        "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
+        "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.413121+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12593",
+        "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+        "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
+        "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.413611+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12596",
+        "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+        "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
+        "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.414081+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.12598",
+        "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+        "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
+        "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-12T16:02:34.414569+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 19150526503635,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "6909.39",
+          "rate": "5460.59"
+        },
+        "expected": "377293459401/1000000",
+        "reply": "377293459401/1000000"
+      },
+      {
+        "args": {
+          "amount": "635.68",
+          "rate": "5490.31"
+        },
+        "expected": "2181300163/62500",
+        "reply": "2181300163/62500"
+      },
+      {
+        "args": {
+          "amount": "-8907.18",
+          "rate": "350.32"
+        },
+        "expected": "-1950227061/62500",
+        "reply": "-1950227061/62500"
+      },
+      {
+        "args": {
+          "amount": "-5143.39",
+          "rate": "-4701.88"
+        },
+        "expected": "60459006433/250000",
+        "reply": "60459006433/250000"
+      },
+      {
+        "args": {
+          "amount": "4363.85",
+          "rate": "-2267.09"
+        },
+        "expected": "-19786481393/200000",
+        "reply": "-19786481393/200000"
+      },
+      {
+        "args": {
+          "amount": "288.27",
+          "rate": "9355.59"
+        },
+        "expected": "26969359293/1000000",
+        "reply": "26969359293/1000000"
+      },
+      {
+        "args": {
+          "amount": "-9038.28",
+          "rate": "-6014.09"
+        },
+        "expected": "135892573413/250000",
+        "reply": "135892573413/250000"
+      },
+      {
+        "args": {
+          "amount": "-7111.72",
+          "rate": "1084.97"
+        },
+        "expected": "-19290007121/250000",
+        "reply": "-19290007121/250000"
+      },
+      {
+        "args": {
+          "amount": "2284.68",
+          "rate": "-6234.30"
+        },
+        "expected": "-3560845131/25000",
+        "reply": "-3560845131/25000"
+      },
+      {
+        "args": {
+          "amount": "3143.36",
+          "rate": "-7146.01"
+        },
+        "expected": "-7019525623/31250",
+        "reply": "-7019525623/31250"
+      },
+      {
+        "args": {
+          "amount": "-4046.78",
+          "rate": "-7464.30"
+        },
+        "expected": "15103189977/50000",
+        "reply": "15103189977/50000"
+      },
+      {
+        "args": {
+          "amount": "-5198.85",
+          "rate": "-8784.78"
+        },
+        "expected": "45670753503/100000",
+        "reply": "45670753503/100000"
+      },
+      {
+        "args": {
+          "amount": "4457.00",
+          "rate": "-4507.06"
+        },
+        "expected": "-1004398321/5000",
+        "reply": "-1004398321/5000"
+      },
+      {
+        "args": {
+          "amount": "-1300.12",
+          "rate": "-1674.34"
+        },
+        "expected": "2721053651/125000",
+        "reply": "2721053651/125000"
+      },
+      {
+        "args": {
+          "amount": "-8740.85",
+          "rate": "-4574.85"
+        },
+        "expected": "15995231049/40000",
+        "reply": "15995231049/40000"
+      },
+      {
+        "args": {
+          "amount": "968.06",
+          "rate": "7688.60"
+        },
+        "expected": "1860756529/25000",
+        "reply": "1860756529/25000"
+      },
+      {
+        "args": {
+          "amount": "-6555.89",
+          "rate": "-5236.44"
+        },
+        "expected": "85823811579/250000",
+        "reply": "85823811579/250000"
+      },
+      {
+        "args": {
+          "amount": "5193.96",
+          "rate": "7167.35"
+        },
+        "expected": "18613464603/50000",
+        "reply": "18613464603/50000"
+      },
+      {
+        "args": {
+          "amount": "-3947.89",
+          "rate": "6957.82"
+        },
+        "expected": "-137343539999/500000",
+        "reply": "-137343539999/500000"
+      },
+      {
+        "args": {
+          "amount": "-6352.09",
+          "rate": "-3645.19"
+        },
+        "expected": "231545749471/1000000",
+        "reply": "231545749471/1000000"
+      },
+      {
+        "args": {
+          "amount": "497.90",
+          "rate": "1934.55"
+        },
+        "expected": "192642489/20000",
+        "reply": "192642489/20000"
+      },
+      {
+        "args": {
+          "amount": "6515.73",
+          "rate": "-8680.51"
+        },
+        "expected": "-565598594223/1000000",
+        "reply": "-565598594223/1000000"
+      },
+      {
+        "args": {
+          "amount": "9649.81",
+          "rate": "6317.53"
+        },
+        "expected": "609629641693/1000000",
+        "reply": "609629641693/1000000"
+      },
+      {
+        "args": {
+          "amount": "4372.19",
+          "rate": "1145.80"
+        },
+        "expected": "2504827651/50000",
+        "reply": "2504827651/50000"
+      },
+      {
+        "args": {
+          "amount": "4066.68",
+          "rate": "-9738.53"
+        },
+        "expected": "-99008712951/250000",
+        "reply": "-99008712951/250000"
+      },
+      {
+        "args": {
+          "amount": "8059.60",
+          "rate": "-1212.78"
+        },
+        "expected": "-1221815211/12500",
+        "reply": "-1221815211/12500"
+      },
+      {
+        "args": {
+          "amount": "2297.61",
+          "rate": "-5804.67"
+        },
+        "expected": "-133368678387/1000000",
+        "reply": "-133368678387/1000000"
+      },
+      {
+        "args": {
+          "amount": "-3305.42",
+          "rate": "9819.75"
+        },
+        "expected": "-6491679609/20000",
+        "reply": "-6491679609/20000"
+      },
+      {
+        "args": {
+          "amount": "6814.91",
+          "rate": "-5512.83"
+        },
+        "expected": "-375694402953/1000000",
+        "reply": "-375694402953/1000000"
+      },
+      {
+        "args": {
+          "amount": "-6751.68",
+          "rate": "-7503.69"
+        },
+        "expected": "15832035531/31250",
+        "reply": "15832035531/31250"
+      },
+      {
+        "args": {
+          "amount": "-950.04",
+          "rate": "9770.59"
+        },
+        "expected": "-23206128309/250000",
+        "reply": "-23206128309/250000"
+      },
+      {
+        "args": {
+          "amount": "-1909.52",
+          "rate": "-2857.08"
+        },
+        "expected": "1704891063/31250",
+        "reply": "1704891063/31250"
+      },
+      {
+        "args": {
+          "amount": "-8964.70",
+          "rate": "-9367.07"
+        },
+        "expected": "83972972429/100000",
+        "reply": "83972972429/100000"
+      },
+      {
+        "args": {
+          "amount": "-399.84",
+          "rate": "-617.07"
+        },
+        "expected": "154205793/62500",
+        "reply": "154205793/62500"
+      },
+      {
+        "args": {
+          "amount": "-3834.15",
+          "rate": "442.62"
+        },
+        "expected": "-1697071473/100000",
+        "reply": "-1697071473/100000"
+      },
+      {
+        "args": {
+          "amount": "-9392.56",
+          "rate": "-2462.44"
+        },
+        "expected": "7227692327/31250",
+        "reply": "7227692327/31250"
+      },
+      {
+        "args": {
+          "amount": "1586.08",
+          "rate": "7578.17"
+        },
+        "expected": "7512239921/62500",
+        "reply": "7512239921/62500"
+      },
+      {
+        "args": {
+          "amount": "-2003.88",
+          "rate": "-8922.16"
+        },
+        "expected": "5587168119/31250",
+        "reply": "5587168119/31250"
+      },
+      {
+        "args": {
+          "amount": "922.47",
+          "rate": "-6184.99"
+        },
+        "expected": "-57054677253/1000000",
+        "reply": "-57054677253/1000000"
+      },
+      {
+        "args": {
+          "amount": "-5996.95",
+          "rate": "5198.80"
+        },
+        "expected": "-1558847183/5000",
+        "reply": "-1558847183/5000"
+      },
+      {
+        "args": {
+          "amount": "1391.65",
+          "rate": "-1893.79"
+        },
+        "expected": "-5270985707/200000",
+        "reply": "-5270985707/200000"
+      },
+      {
+        "args": {
+          "amount": "1963.78",
+          "rate": "-2968.42"
+        },
+        "expected": "-14573309569/250000",
+        "reply": "-14573309569/250000"
+      },
+      {
+        "args": {
+          "amount": "7687.18",
+          "rate": "-7426.60"
+        },
+        "expected": "-14272402747/25000",
+        "reply": "-14272402747/25000"
+      },
+      {
+        "args": {
+          "amount": "2912.80",
+          "rate": "-1268.24"
+        },
+        "expected": "-115441546/3125",
+        "reply": "-115441546/3125"
+      },
+      {
+        "args": {
+          "amount": "869.41",
+          "rate": "-6748.24"
+        },
+        "expected": "-7333734173/125000",
+        "reply": "-7333734173/125000"
+      },
+      {
+        "args": {
+          "amount": "3438.39",
+          "rate": "-7352.31"
+        },
+        "expected": "-252801091809/1000000",
+        "reply": "-252801091809/1000000"
+      },
+      {
+        "args": {
+          "amount": "2763.34",
+          "rate": "6762.70"
+        },
+        "expected": "9343819709/50000",
+        "reply": "9343819709/50000"
+      },
+      {
+        "args": {
+          "amount": "-1464.88",
+          "rate": "-5946.39"
+        },
+        "expected": "10888434729/125000",
+        "reply": "10888434729/125000"
+      },
+      {
+        "args": {
+          "amount": "5243.80",
+          "rate": "7165.48"
+        },
+        "expected": "4696793003/12500",
+        "reply": "4696793003/12500"
+      },
+      {
+        "args": {
+          "amount": "2794.54",
+          "rate": "-321.97"
+        },
+        "expected": "-4498790219/500000",
+        "reply": "-4498790219/500000"
+      },
+      {
+        "args": {
+          "amount": "5987.33",
+          "rate": "4430.62"
+        },
+        "expected": "132637920223/500000",
+        "reply": "132637920223/500000"
+      },
+      {
+        "args": {
+          "amount": "8796.88",
+          "rate": "1377.11"
+        },
+        "expected": "15142839271/125000",
+        "reply": "15142839271/125000"
+      },
+      {
+        "args": {
+          "amount": "-9183.06",
+          "rate": "9379.41"
+        },
+        "expected": "-430658423973/500000",
+        "reply": "-430658423973/500000"
+      },
+      {
+        "args": {
+          "amount": "-7112.02",
+          "rate": "6288.33"
+        },
+        "expected": "-223613643633/500000",
+        "reply": "-223613643633/500000"
+      },
+      {
+        "args": {
+          "amount": "4577.78",
+          "rate": "-7908.05"
+        },
+        "expected": "-36201313129/100000",
+        "reply": "-36201313129/100000"
+      },
+      {
+        "args": {
+          "amount": "7613.76",
+          "rate": "9904.66"
+        },
+        "expected": "11783078769/15625",
+        "reply": "11783078769/15625"
+      },
+      {
+        "args": {
+          "amount": "-3408.75",
+          "rate": "-1894.75"
+        },
+        "expected": "20667933/320",
+        "reply": "20667933/320"
+      },
+      {
+        "args": {
+          "amount": "9711.79",
+          "rate": "-584.32"
+        },
+        "expected": "-886686427/15625",
+        "reply": "-886686427/15625"
+      },
+      {
+        "args": {
+          "amount": "3653.79",
+          "rate": "-4313.27"
+        },
+        "expected": "-157597827933/1000000",
+        "reply": "-157597827933/1000000"
+      },
+      {
+        "args": {
+          "amount": "1344.82",
+          "rate": "-3623.24"
+        },
+        "expected": "-6090757021/125000",
+        "reply": "-6090757021/125000"
+      },
+      {
+        "args": {
+          "amount": "-6802.99",
+          "rate": "6394.47"
+        },
+        "expected": "-435015154653/1000000",
+        "reply": "-435015154653/1000000"
+      }
+    ],
+    "nodes": 5,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "df175b1234f2a92f8aeec2d2f1b44741ae003d80cb2d48d045aa39e21c512daa"
+}
