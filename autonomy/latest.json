@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "38483997561",
+  "runId": "38499341814",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-13T23:24:48Z",
+  "at": "2026-10-14T02:08:15Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "3ff1ac56baa597fca45cdeb4a6176f61407e9032ceafd663e31ec7d0394db94a",
-  "cycleNumber": 53,
+  "parentRecordHash": "18bf379b6f37c1d28a786d9dfc34025c2507ed5e66436d2209c41c5dfc80d92e",
+  "cycleNumber": 54,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,23 +1132,9 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "fetched",
-    "hash": "ec65b8a754babd166dfca39681f2f6e28a8fbc8fddb73b143bc1eeeebbeb0aa1",
-    "items": [
-      {
-        "title": "Prediction Is Not a Sufficient Memory State",
-        "url": "http://arxiv.org/abs/2610.13881v1",
-        "updated": "2026-10-09T17:27:06Z",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "SLICE: Sequential Likelihood-Free Inference via Conformal E-Values",
-        "url": "http://arxiv.org/abs/2610.13855v1",
-        "updated": "2026-10-09T17:04:51Z",
-        "status": "metadata_only_not_fulltext_verified"
-      }
-    ],
-    "accessedAt": "2026-10-13T23:24:48Z"
+    "access": "unavailable",
+    "errorType": "TimeoutError",
+    "items": []
   },
   "agenda": {
     "source": [
@@ -1160,12 +1146,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.594,
+  "elapsedSeconds": 12.184,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "18bf379b6f37c1d28a786d9dfc34025c2507ed5e66436d2209c41c5dfc80d92e"
+  "recordHash": "6f89ec05246082156954dfd8086f282031bdfdd68d2008ddfc1e6bebe6dd4109"
 }
