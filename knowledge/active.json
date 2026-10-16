@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2610.20679",
+      "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+      "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
+      "excerptHash": "8f4107ab5708d737e9664d824d9931061da463f2df47082f82264203758bff9d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.712853+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20676",
+      "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+      "excerpt": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to IntentShield's corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not in",
+      "excerptHash": "250da019a17f3ed8ed8dc8f918537f06ad38ffa20c58a6f8a944ff579a16c211",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.712358+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20675",
+      "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+      "excerpt": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions",
+      "excerptHash": "f30de4d0b0c4ca3c731035b43021c5f06f8ddfa4a6c8fe1e32641a70960f2240",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.711875+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20669",
+      "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+      "excerpt": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally expensive. Active guidance steps require additional reward evaluations and, for gradient-based proposals, value-gradient computations. Sparse guidance reduces this cost by guiding only a subset of timesteps, but commonly used schedules are fixed heuristics whose effectiveness can vary substantially across tasks. We propose VISTA, a training-free method that automatic",
+      "excerptHash": "3cd54fadc4b654a2d5d30b4a9b14d8b9cb0f2ca89e99285d07e9613c55ce40e9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.711381+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20667",
+      "title": "Evaluating Model Capabilities After Benchmark Saturation",
+      "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
+      "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.710894+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20665",
+      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+      "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
+      "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.710371+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.508713+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "43b29cc44afcd2f7d1d059dfdb4265ae09db973734b33e916c340e98d525a517"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T04:56:58.389686+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "dc324bbdb11bd3740fc3f1e9deff377dc54e79107fc06b006ce0732ca52d77e4"
+    },
+    {
       "url": "https://arxiv.org/abs/2610.12598",
       "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
       "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-10-12T06:28:04.196107+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-12T06:28:04.125467+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "97b69b7d1b4ba67ee86e05e0b54e68040a6346d4598f7164c43154e66d4deb31"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-12T06:28:03.984280+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "e7508a66f987e165f6f40ae51c899392856365559ad9067cb6192e7f23cabdea"
     },
     {
       "url": "https://arxiv.org/abs/2610.08900",
@@ -180,36 +240,16 @@
       "checkedAt": "2026-10-05T06:10:07.760270+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02267",
-      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
-      "excerpt": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection. System-1 decision models answer such questions in a single forward pass with class probabilities, promising large cost and latency savings over LLM calls. We present a paired evaluation of an open-weight (Laya) and a hosted (Jev) System-1 model on 11 agent decision points built from 18 public sources: 7,283 base cases plus 6,640 robustness variants, with byte-identical inputs",
-      "excerptHash": "31f0b1aa9f07f111b4dcb52417b725c3f2b2efc57fe6449b7063f7ab5984526f",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.759677+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02260",
-      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
-      "excerpt": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements and physical laws. However, existing constrained samplers often face a trade-off: \\textit{enforcing constraints can substantially displace samples from the pretrained data distribution}. To address this trade-off, we introduce \\textbf{MintFlow}, a training-free constrained sampling framework that formulates constraint enforcement as a minimal intervention on the pretrained flow ",
-      "excerptHash": "73730492ddc8b8e538a87d0d7b614818e0ee1fd2d259d0090cd4d5aac41be916",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.759028+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
     }
   ],
   "evidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "passed": true,
-    "verified": 20
+    "verified": 24
   },
-  "generation": 4,
-  "parentHash": "40cca141b3d7f979a5bec24e0ca9fb0eebeae4109de29a274d3510342a2ad915",
-  "at": "2026-10-12T06:28:04.199317+00:00",
-  "runId": "38212635299",
-  "artifactHash": "f4582eb2a7f27297211674b5bf2bf72d76765766cb4043aa80f3a71f61351f0c"
+  "generation": 5,
+  "parentHash": "f4582eb2a7f27297211674b5bf2bf72d76765766cb4043aa80f3a71f61351f0c",
+  "at": "2026-10-16T04:56:58.713641+00:00",
+  "runId": "38853220464",
+  "artifactHash": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d"
 }
