@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-10-16T12:22:36.421Z",
-  "runId": "38900013260",
+  "at": "2026-10-16T17:23:18.121Z",
+  "runId": "38939211303",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-20894b9b-32cf-4db0-a2aa-d1a1b411fe62",
-    "at": "2026-10-16T12:22:23.033Z",
+    "exp": "EXP-972a21b9-3566-46d8-9dbc-895face880e5",
+    "at": "2026-10-16T17:22:58.937Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -117,12 +117,12 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-16T12:22:22Z",
+        "at": "2026-10-16T17:22:58Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "0ca194a231e176847ac7a4df5393b97fb0a7277f25e37499416b0944d501eb50",
-        "bytes": 106657,
+        "sha256": "0ca1a557d4c5d415eb95148a348daacc644f1529c2a96b1f302f68760e5d6b8a",
+        "bytes": 106670,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "sourceStatus": "available_at_access"
@@ -131,12 +131,12 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-16T12:22:22Z",
+        "at": "2026-10-16T17:22:58Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "b0a6416545e234d5d9393a6a16706c785c9a66ea9fb38b36a2f945cffd4be72a",
-        "bytes": 108286,
+        "sha256": "657607776d4e351d7a1d38953e388db87cb60daa44764c96187dff653fef61af",
+        "bytes": 108299,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
         "sourceStatus": "available_at_access"
@@ -145,7 +145,7 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-10-16T12:22:22Z",
+        "at": "2026-10-16T17:22:58Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
@@ -165,5 +165,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "62eb52f87684cf9a22229f41e1fd01deb5c11872bce8ed0b67967249c54b8e02"
+  "recordHash": "4a1aca60d3888d178559617c7d71763134534c4cea40b40d433a66bb55fe10a8"
 }
