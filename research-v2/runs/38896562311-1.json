@@ -1,0 +1,787 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-16T11:51:47.658099+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "38896562311",
+  "parents": {
+    "knowledge": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.307036+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "f1a52d7ae68fa2294dd99555093d6b644624545f26a8e256d0d001d8655813b6"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.574373+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "a31dc6f0184488c80a6c37572539939cf7f2534db2b126a700376d4a793e9dd4"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20665",
+      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+      "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
+      "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.653764+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20667",
+      "title": "Evaluating Model Capabilities After Benchmark Saturation",
+      "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
+      "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.654447+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20669",
+      "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+      "excerpt": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally expensive. Active guidance steps require additional reward evaluations and, for gradient-based proposals, value-gradient computations. Sparse guidance reduces this cost by guiding only a subset of timesteps, but commonly used schedules are fixed heuristics whose effectiveness can vary substantially across tasks. We propose VISTA, a training-free method that automatic",
+      "excerptHash": "3cd54fadc4b654a2d5d30b4a9b14d8b9cb0f2ca89e99285d07e9613c55ce40e9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.655114+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20675",
+      "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+      "excerpt": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions",
+      "excerptHash": "f30de4d0b0c4ca3c731035b43021c5f06f8ddfa4a6c8fe1e32641a70960f2240",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.655767+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20676",
+      "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+      "excerpt": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to IntentShield's corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not in",
+      "excerptHash": "250da019a17f3ed8ed8dc8f918537f06ad38ffa20c58a6f8a944ff579a16c211",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.656426+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20679",
+      "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+      "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
+      "excerptHash": "8f4107ab5708d737e9664d824d9931061da463f2df47082f82264203758bff9d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T11:51:47.657081+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "discount",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 183497289232167,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "-9879.13",
+          "rate": "-3459.47"
+        },
+        "expected": "-351644668611/1000000"
+      },
+      {
+        "args": {
+          "amount": "-8957.35",
+          "rate": "7894.24"
+        },
+        "expected": "4363483479/6250"
+      },
+      {
+        "args": {
+          "amount": "7961.53",
+          "rate": "7144.91"
+        },
+        "expected": "-560882623123/1000000"
+      },
+      {
+        "args": {
+          "amount": "9954.43",
+          "rate": "8595.09"
+        },
+        "expected": "-845637787487/1000000"
+      }
+    ],
+    "examined": 55145,
+    "states": 23794,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "discount",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "sub",
+          [
+            "const",
+            "100"
+          ],
+          [
+            "var",
+            "rate"
+          ]
+        ],
+        [
+          "var",
+          "amount"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "77954cd5d4625639e8c28717444b614027d197ef4e28f8267200c8e6e7d6170d",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.307036+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "f1a52d7ae68fa2294dd99555093d6b644624545f26a8e256d0d001d8655813b6"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.574373+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "a31dc6f0184488c80a6c37572539939cf7f2534db2b126a700376d4a793e9dd4"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20665",
+        "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+        "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
+        "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.653764+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20667",
+        "title": "Evaluating Model Capabilities After Benchmark Saturation",
+        "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
+        "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.654447+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20669",
+        "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+        "excerpt": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally expensive. Active guidance steps require additional reward evaluations and, for gradient-based proposals, value-gradient computations. Sparse guidance reduces this cost by guiding only a subset of timesteps, but commonly used schedules are fixed heuristics whose effectiveness can vary substantially across tasks. We propose VISTA, a training-free method that automatic",
+        "excerptHash": "3cd54fadc4b654a2d5d30b4a9b14d8b9cb0f2ca89e99285d07e9613c55ce40e9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.655114+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20675",
+        "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+        "excerpt": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions",
+        "excerptHash": "f30de4d0b0c4ca3c731035b43021c5f06f8ddfa4a6c8fe1e32641a70960f2240",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.655767+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20676",
+        "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+        "excerpt": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to IntentShield's corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not in",
+        "excerptHash": "250da019a17f3ed8ed8dc8f918537f06ad38ffa20c58a6f8a944ff579a16c211",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.656426+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20679",
+        "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+        "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
+        "excerptHash": "8f4107ab5708d737e9664d824d9931061da463f2df47082f82264203758bff9d",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T11:51:47.657081+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
+    "seed": 249242436256315,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "99/100",
+        "reply": "99/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "-101/100",
+        "reply": "-101/100"
+      },
+      {
+        "args": {
+          "amount": "-5769.53",
+          "rate": "4751.34"
+        },
+        "expected": "134180228351/500000",
+        "reply": "134180228351/500000"
+      },
+      {
+        "args": {
+          "amount": "-899.76",
+          "rate": "537.08"
+        },
+        "expected": "122895969/31250",
+        "reply": "122895969/31250"
+      },
+      {
+        "args": {
+          "amount": "2755.72",
+          "rate": "8340.81"
+        },
+        "expected": "-56773412333/250000",
+        "reply": "-56773412333/250000"
+      },
+      {
+        "args": {
+          "amount": "-7985.25",
+          "rate": "8761.91"
+        },
+        "expected": "27667006731/40000",
+        "reply": "27667006731/40000"
+      },
+      {
+        "args": {
+          "amount": "-145.61",
+          "rate": "227.03"
+        },
+        "expected": "184968383/1000000",
+        "reply": "184968383/1000000"
+      },
+      {
+        "args": {
+          "amount": "-7932.08",
+          "rate": "-9917.59"
+        },
+        "expected": "-99325406609/125000",
+        "reply": "-99325406609/125000"
+      },
+      {
+        "args": {
+          "amount": "-5681.03",
+          "rate": "-7304.51"
+        },
+        "expected": "-420652434453/1000000",
+        "reply": "-420652434453/1000000"
+      },
+      {
+        "args": {
+          "amount": "3322.13",
+          "rate": "1455.17"
+        },
+        "expected": "-45020509121/1000000",
+        "reply": "-45020509121/1000000"
+      },
+      {
+        "args": {
+          "amount": "5132.67",
+          "rate": "-3271.37"
+        },
+        "expected": "173041296579/1000000",
+        "reply": "173041296579/1000000"
+      },
+      {
+        "args": {
+          "amount": "8342.31",
+          "rate": "-7987.34"
+        },
+        "expected": "337335486777/500000",
+        "reply": "337335486777/500000"
+      },
+      {
+        "args": {
+          "amount": "-8599.02",
+          "rate": "-9125.06"
+        },
+        "expected": "-198316188603/250000",
+        "reply": "-198316188603/250000"
+      },
+      {
+        "args": {
+          "amount": "6896.44",
+          "rate": "3693.17"
+        },
+        "expected": "-61950203287/250000",
+        "reply": "-61950203287/250000"
+      },
+      {
+        "args": {
+          "amount": "-1427.13",
+          "rate": "6343.74"
+        },
+        "expected": "44553143331/500000",
+        "reply": "44553143331/500000"
+      },
+      {
+        "args": {
+          "amount": "5658.09",
+          "rate": "2994.97"
+        },
+        "expected": "-163800008073/1000000",
+        "reply": "-163800008073/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4545.79",
+          "rate": "1053.57"
+        },
+        "expected": "43347289703/1000000",
+        "reply": "43347289703/1000000"
+      },
+      {
+        "args": {
+          "amount": "5963.80",
+          "rate": "-2400.57"
+        },
+        "expected": "7456449683/50000",
+        "reply": "7456449683/50000"
+      },
+      {
+        "args": {
+          "amount": "1365.35",
+          "rate": "1171.39"
+        },
+        "expected": "-2925644673/200000",
+        "reply": "-2925644673/200000"
+      },
+      {
+        "args": {
+          "amount": "-609.76",
+          "rate": "5952.51"
+        },
+        "expected": "2230391561/62500",
+        "reply": "2230391561/62500"
+      },
+      {
+        "args": {
+          "amount": "974.04",
+          "rate": "2590.85"
+        },
+        "expected": "-1213093767/50000",
+        "reply": "-1213093767/50000"
+      },
+      {
+        "args": {
+          "amount": "-1757.23",
+          "rate": "9641.87"
+        },
+        "expected": "167672602201/1000000",
+        "reply": "167672602201/1000000"
+      },
+      {
+        "args": {
+          "amount": "-3906.88",
+          "rate": "-6629.26"
+        },
+        "expected": "-4107876767/15625",
+        "reply": "-4107876767/15625"
+      },
+      {
+        "args": {
+          "amount": "-8556.52",
+          "rate": "-3588.33"
+        },
+        "expected": "-78898173529/250000",
+        "reply": "-78898173529/250000"
+      },
+      {
+        "args": {
+          "amount": "1787.99",
+          "rate": "-5279.90"
+        },
+        "expected": "9619207401/100000",
+        "reply": "9619207401/100000"
+      },
+      {
+        "args": {
+          "amount": "-2597.39",
+          "rate": "5635.57"
+        },
+        "expected": "143780341623/1000000",
+        "reply": "143780341623/1000000"
+      },
+      {
+        "args": {
+          "amount": "-7849.52",
+          "rate": "-4442.94"
+        },
+        "expected": "-22287436493/62500",
+        "reply": "-22287436493/62500"
+      },
+      {
+        "args": {
+          "amount": "986.88",
+          "rate": "-3299.41"
+        },
+        "expected": "524189022/15625",
+        "reply": "524189022/15625"
+      },
+      {
+        "args": {
+          "amount": "1866.94",
+          "rate": "-2349.85"
+        },
+        "expected": "4573722959/100000",
+        "reply": "4573722959/100000"
+      },
+      {
+        "args": {
+          "amount": "-4702.46",
+          "rate": "8321.97"
+        },
+        "expected": "193317425231/500000",
+        "reply": "193317425231/500000"
+      },
+      {
+        "args": {
+          "amount": "4932.68",
+          "rate": "-4584.02"
+        },
+        "expected": "28880964717/125000",
+        "reply": "28880964717/125000"
+      },
+      {
+        "args": {
+          "amount": "5615.80",
+          "rate": "5817.56"
+        },
+        "expected": "-4013584181/12500",
+        "reply": "-4013584181/12500"
+      },
+      {
+        "args": {
+          "amount": "754.43",
+          "rate": "9823.51"
+        },
+        "expected": "-73357076493/1000000",
+        "reply": "-73357076493/1000000"
+      },
+      {
+        "args": {
+          "amount": "4903.66",
+          "rate": "1748.17"
+        },
+        "expected": "-40410326511/500000",
+        "reply": "-40410326511/500000"
+      },
+      {
+        "args": {
+          "amount": "-2598.23",
+          "rate": "8347.71"
+        },
+        "expected": "214294475533/1000000",
+        "reply": "214294475533/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4831.52",
+          "rate": "-5899.40"
+        },
+        "expected": "-905819409/3125",
+        "reply": "-905819409/3125"
+      },
+      {
+        "args": {
+          "amount": "7842.62",
+          "rate": "6548.44"
+        },
+        "expected": "-63215830641/125000",
+        "reply": "-63215830641/125000"
+      },
+      {
+        "args": {
+          "amount": "7356.00",
+          "rate": "2360.17"
+        },
+        "expected": "-415645263/2500",
+        "reply": "-415645263/2500"
+      },
+      {
+        "args": {
+          "amount": "244.45",
+          "rate": "1660.84"
+        },
+        "expected": "-190773669/50000",
+        "reply": "-190773669/50000"
+      },
+      {
+        "args": {
+          "amount": "4253.49",
+          "rate": "4445.51"
+        },
+        "expected": "-184835833299/1000000",
+        "reply": "-184835833299/1000000"
+      },
+      {
+        "args": {
+          "amount": "-7496.69",
+          "rate": "-5261.12"
+        },
+        "expected": "-25119159183/62500",
+        "reply": "-25119159183/62500"
+      },
+      {
+        "args": {
+          "amount": "1882.84",
+          "rate": "-8418.60"
+        },
+        "expected": "2004895103/12500",
+        "reply": "2004895103/12500"
+      },
+      {
+        "args": {
+          "amount": "3961.74",
+          "rate": "-2207.86"
+        },
+        "expected": "22857853191/250000",
+        "reply": "22857853191/250000"
+      },
+      {
+        "args": {
+          "amount": "-6272.60",
+          "rate": "4996.91"
+        },
+        "expected": "15358178833/50000",
+        "reply": "15358178833/50000"
+      },
+      {
+        "args": {
+          "amount": "6526.03",
+          "rate": "2038.30"
+        },
+        "expected": "-12649403949/100000",
+        "reply": "-12649403949/100000"
+      },
+      {
+        "args": {
+          "amount": "4199.41",
+          "rate": "-1679.15"
+        },
+        "expected": "14942760603/200000",
+        "reply": "14942760603/200000"
+      },
+      {
+        "args": {
+          "amount": "8287.46",
+          "rate": "-1920.65"
+        },
+        "expected": "16746056049/100000",
+        "reply": "16746056049/100000"
+      },
+      {
+        "args": {
+          "amount": "-4711.62",
+          "rate": "-806.18"
+        },
+        "expected": "-10673939529/250000",
+        "reply": "-10673939529/250000"
+      },
+      {
+        "args": {
+          "amount": "-953.75",
+          "rate": "4591.24"
+        },
+        "expected": "85670403/2000",
+        "reply": "85670403/2000"
+      },
+      {
+        "args": {
+          "amount": "-4016.05",
+          "rate": "9569.28"
+        },
+        "expected": "4753637743/12500",
+        "reply": "4753637743/12500"
+      },
+      {
+        "args": {
+          "amount": "-7665.89",
+          "rate": "9932.27"
+        },
+        "expected": "753731002703/1000000",
+        "reply": "753731002703/1000000"
+      },
+      {
+        "args": {
+          "amount": "-6253.22",
+          "rate": "9804.34"
+        },
+        "expected": "151708432437/250000",
+        "reply": "151708432437/250000"
+      },
+      {
+        "args": {
+          "amount": "1850.96",
+          "rate": "9567.27"
+        },
+        "expected": "-21904422599/125000",
+        "reply": "-21904422599/125000"
+      },
+      {
+        "args": {
+          "amount": "9447.52",
+          "rate": "-8133.01"
+        },
+        "expected": "48613454147/62500",
+        "reply": "48613454147/62500"
+      },
+      {
+        "args": {
+          "amount": "6326.35",
+          "rate": "4203.44"
+        },
+        "expected": "-6489949411/25000",
+        "reply": "-6489949411/25000"
+      },
+      {
+        "args": {
+          "amount": "-3265.78",
+          "rate": "-3849.29"
+        },
+        "expected": "-64487561481/500000",
+        "reply": "-64487561481/500000"
+      },
+      {
+        "args": {
+          "amount": "-5395.99",
+          "rate": "-1475.83"
+        },
+        "expected": "-85031629217/1000000",
+        "reply": "-85031629217/1000000"
+      },
+      {
+        "args": {
+          "amount": "5230.82",
+          "rate": "146.96"
+        },
+        "expected": "-153524567/62500",
+        "reply": "-153524567/62500"
+      },
+      {
+        "args": {
+          "amount": "-5324.62",
+          "rate": "1168.06"
+        },
+        "expected": "14217534093/250000",
+        "reply": "14217534093/250000"
+      },
+      {
+        "args": {
+          "amount": "-9246.22",
+          "rate": "6039.69"
+        },
+        "expected": "274598402359/500000",
+        "reply": "274598402359/500000"
+      },
+      {
+        "args": {
+          "amount": "-965.46",
+          "rate": "-3963.99"
+        },
+        "expected": "-19618098927/500000",
+        "reply": "-19618098927/500000"
+      },
+      {
+        "args": {
+          "amount": "-5563.65",
+          "rate": "-1273.06"
+        },
+        "expected": "-7639225269/100000",
+        "reply": "-7639225269/100000"
+      },
+      {
+        "args": {
+          "amount": "5538.16",
+          "rate": "1151.00"
+        },
+        "expected": "-72757577/1250",
+        "reply": "-72757577/1250"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "fe91b61b3b33c977a5a01e916342a540e5912b6c45b7aff7d7ee08016d9c1e31"
+}
