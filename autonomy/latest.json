@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "38896373513",
+  "runId": "38935449292",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-16T11:50:38Z",
+  "at": "2026-10-16T16:54:25Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "baac66b0cb706777caaa7adfc4bd065a2b7428e2510854ef6cb301aa18d98541",
-  "cycleNumber": 67,
+  "parentRecordHash": "b2360e01e142402aa61f55461a62fddffc455b8b9a5b3c0512aa6d1a08a9ce47",
+  "cycleNumber": 68,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,23 +1132,9 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "fetched",
-    "hash": "4869de14e9dbcf7ee418063ebcaf7179345b9ebf3ef2ad9222f1dcf02ff8bfff",
-    "items": [
-      {
-        "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
-        "url": "http://arxiv.org/abs/2610.22355v1",
-        "updated": "2026-10-15T17:58:04Z",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "Speculative Forcing for Efficient Autoregressive Video Generation",
-        "url": "http://arxiv.org/abs/2610.22347v1",
-        "updated": "2026-10-15T17:57:01Z",
-        "status": "metadata_only_not_fulltext_verified"
-      }
-    ],
-    "accessedAt": "2026-10-16T11:50:39Z"
+    "access": "unavailable",
+    "errorType": "HTTPError",
+    "items": []
   },
   "agenda": {
     "source": [
@@ -1160,12 +1146,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.555,
+  "elapsedSeconds": 0.606,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "b2360e01e142402aa61f55461a62fddffc455b8b9a5b3c0512aa6d1a08a9ce47"
+  "recordHash": "e4f4e2b289306036f43516585f71ba213fa7a71b2e86492f4d39819a464ee036"
 }
