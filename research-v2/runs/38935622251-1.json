@@ -1,0 +1,855 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-16T16:54:58.100783+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "38935622251",
+  "parents": {
+    "knowledge": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T16:54:57.748189+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "91a03dd6a6a5e9f5cc62d82f47dcb0b7ee2eabab4e3afd2a1f7dd738ba790458"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-16T16:54:57.825173+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "4beccafebd480d08324b3f6d5d68cd3cd7aed84566d76e7f39b3af722df0e588"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20665",
+      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+      "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
+      "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.095870+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20667",
+      "title": "Evaluating Model Capabilities After Benchmark Saturation",
+      "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
+      "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.096645+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20669",
+      "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+      "excerpt": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally expensive. Active guidance steps require additional reward evaluations and, for gradient-based proposals, value-gradient computations. Sparse guidance reduces this cost by guiding only a subset of timesteps, but commonly used schedules are fixed heuristics whose effectiveness can vary substantially across tasks. We propose VISTA, a training-free method that automatic",
+      "excerptHash": "3cd54fadc4b654a2d5d30b4a9b14d8b9cb0f2ca89e99285d07e9613c55ce40e9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.097408+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20675",
+      "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+      "excerpt": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions",
+      "excerptHash": "f30de4d0b0c4ca3c731035b43021c5f06f8ddfa4a6c8fe1e32641a70960f2240",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.098153+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20676",
+      "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+      "excerpt": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to IntentShield's corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not in",
+      "excerptHash": "250da019a17f3ed8ed8dc8f918537f06ad38ffa20c58a6f8a944ff579a16c211",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.098880+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20679",
+      "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+      "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
+      "excerptHash": "8f4107ab5708d737e9664d824d9931061da463f2df47082f82264203758bff9d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-16T16:54:58.099613+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "mean",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 256611610486413,
+    "trainingExamples": [
+      {
+        "args": {
+          "a": "-8778.61",
+          "b": "1567.75",
+          "c": "-3014.80"
+        },
+        "expected": "-511283/150"
+      },
+      {
+        "args": {
+          "a": "-6843.28",
+          "b": "5774.46",
+          "c": "-7610.62"
+        },
+        "expected": "-216986/75"
+      },
+      {
+        "args": {
+          "a": "8138.86",
+          "b": "-6823.12",
+          "c": "3414.69"
+        },
+        "expected": "157681/100"
+      },
+      {
+        "args": {
+          "a": "9670.57",
+          "b": "6506.90",
+          "c": "-5126.84"
+        },
+        "expected": "1105063/300"
+      }
+    ],
+    "examined": 15345,
+    "states": 6007,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "mean",
+    "expression": [
+      "div",
+      [
+        "add",
+        [
+          "add",
+          [
+            "var",
+            "a"
+          ],
+          [
+            "var",
+            "b"
+          ]
+        ],
+        [
+          "var",
+          "c"
+        ]
+      ],
+      [
+        "const",
+        "3"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "eedbec67bb482ea78a7fccf624f5744e9e98152ad316b8da78e0b9425fb3f107",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-16T16:54:57.748189+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "91a03dd6a6a5e9f5cc62d82f47dcb0b7ee2eabab4e3afd2a1f7dd738ba790458"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-16T16:54:57.825173+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "4beccafebd480d08324b3f6d5d68cd3cd7aed84566d76e7f39b3af722df0e588"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20665",
+        "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+        "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
+        "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.095870+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20667",
+        "title": "Evaluating Model Capabilities After Benchmark Saturation",
+        "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
+        "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.096645+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20669",
+        "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+        "excerpt": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally expensive. Active guidance steps require additional reward evaluations and, for gradient-based proposals, value-gradient computations. Sparse guidance reduces this cost by guiding only a subset of timesteps, but commonly used schedules are fixed heuristics whose effectiveness can vary substantially across tasks. We propose VISTA, a training-free method that automatic",
+        "excerptHash": "3cd54fadc4b654a2d5d30b4a9b14d8b9cb0f2ca89e99285d07e9613c55ce40e9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.097408+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20675",
+        "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+        "excerpt": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions",
+        "excerptHash": "f30de4d0b0c4ca3c731035b43021c5f06f8ddfa4a6c8fe1e32641a70960f2240",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.098153+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20676",
+        "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+        "excerpt": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to IntentShield's corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not in",
+        "excerptHash": "250da019a17f3ed8ed8dc8f918537f06ad38ffa20c58a6f8a944ff579a16c211",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.098880+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.20679",
+        "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+        "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
+        "excerptHash": "8f4107ab5708d737e9664d824d9931061da463f2df47082f82264203758bff9d",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-16T16:54:58.099613+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 217470789438182,
+    "cases": [
+      {
+        "args": {
+          "a": "0",
+          "b": "0",
+          "c": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "a": "1",
+          "b": "1",
+          "c": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
+        },
+        "expected": "-1",
+        "reply": "-1"
+      },
+      {
+        "args": {
+          "a": "5668.75",
+          "b": "7967.77",
+          "c": "-5371.12"
+        },
+        "expected": "41327/15",
+        "reply": "41327/15"
+      },
+      {
+        "args": {
+          "a": "-8226.71",
+          "b": "-100.18",
+          "c": "696.16"
+        },
+        "expected": "-763073/300",
+        "reply": "-763073/300"
+      },
+      {
+        "args": {
+          "a": "1962.24",
+          "b": "-6839.52",
+          "c": "-1680.34"
+        },
+        "expected": "-327881/150",
+        "reply": "-327881/150"
+      },
+      {
+        "args": {
+          "a": "-2719.41",
+          "b": "-506.62",
+          "c": "4190.19"
+        },
+        "expected": "24104/75",
+        "reply": "24104/75"
+      },
+      {
+        "args": {
+          "a": "-6634.61",
+          "b": "-3895.96",
+          "c": "-9079.82"
+        },
+        "expected": "-1961039/300",
+        "reply": "-1961039/300"
+      },
+      {
+        "args": {
+          "a": "8021.85",
+          "b": "-2936.82",
+          "c": "4456.24"
+        },
+        "expected": "954127/300",
+        "reply": "954127/300"
+      },
+      {
+        "args": {
+          "a": "-9458.96",
+          "b": "-8002.02",
+          "c": "-1261.10"
+        },
+        "expected": "-468052/75",
+        "reply": "-468052/75"
+      },
+      {
+        "args": {
+          "a": "5396.69",
+          "b": "5403.43",
+          "c": "-1287.17"
+        },
+        "expected": "190259/60",
+        "reply": "190259/60"
+      },
+      {
+        "args": {
+          "a": "-2269.42",
+          "b": "-7115.47",
+          "c": "-2589.28"
+        },
+        "expected": "-399139/100",
+        "reply": "-399139/100"
+      },
+      {
+        "args": {
+          "a": "-1536.89",
+          "b": "28.94",
+          "c": "5051.53"
+        },
+        "expected": "177179/150",
+        "reply": "177179/150"
+      },
+      {
+        "args": {
+          "a": "1104.35",
+          "b": "-7327.63",
+          "c": "-4862.18"
+        },
+        "expected": "-554273/150",
+        "reply": "-554273/150"
+      },
+      {
+        "args": {
+          "a": "-736.22",
+          "b": "-8076.66",
+          "c": "-9597.42"
+        },
+        "expected": "-184103/30",
+        "reply": "-184103/30"
+      },
+      {
+        "args": {
+          "a": "-981.45",
+          "b": "3092.17",
+          "c": "-8639.62"
+        },
+        "expected": "-21763/10",
+        "reply": "-21763/10"
+      },
+      {
+        "args": {
+          "a": "-8016.96",
+          "b": "437.51",
+          "c": "7190.37"
+        },
+        "expected": "-9727/75",
+        "reply": "-9727/75"
+      },
+      {
+        "args": {
+          "a": "5195.85",
+          "b": "-4473.33",
+          "c": "-8712.44"
+        },
+        "expected": "-199748/75",
+        "reply": "-199748/75"
+      },
+      {
+        "args": {
+          "a": "8125.06",
+          "b": "-4876.40",
+          "c": "5194.91"
+        },
+        "expected": "844357/300",
+        "reply": "844357/300"
+      },
+      {
+        "args": {
+          "a": "-3743.05",
+          "b": "-9999.97",
+          "c": "-6761.35"
+        },
+        "expected": "-683479/100",
+        "reply": "-683479/100"
+      },
+      {
+        "args": {
+          "a": "-7502.18",
+          "b": "-2789.22",
+          "c": "-4718.70"
+        },
+        "expected": "-150101/30",
+        "reply": "-150101/30"
+      },
+      {
+        "args": {
+          "a": "-422.21",
+          "b": "9656.23",
+          "c": "-9312.25"
+        },
+        "expected": "-7823/300",
+        "reply": "-7823/300"
+      },
+      {
+        "args": {
+          "a": "6102.53",
+          "b": "-5910.46",
+          "c": "6846.22"
+        },
+        "expected": "703829/300",
+        "reply": "703829/300"
+      },
+      {
+        "args": {
+          "a": "-7518.94",
+          "b": "-6471.26",
+          "c": "1701.51"
+        },
+        "expected": "-409623/100",
+        "reply": "-409623/100"
+      },
+      {
+        "args": {
+          "a": "9174.17",
+          "b": "-9876.90",
+          "c": "-9625.72"
+        },
+        "expected": "-206569/60",
+        "reply": "-206569/60"
+      },
+      {
+        "args": {
+          "a": "2105.04",
+          "b": "-438.16",
+          "c": "-5167.20"
+        },
+        "expected": "-87508/75",
+        "reply": "-87508/75"
+      },
+      {
+        "args": {
+          "a": "5992.97",
+          "b": "3685.53",
+          "c": "-7559.52"
+        },
+        "expected": "105949/150",
+        "reply": "105949/150"
+      },
+      {
+        "args": {
+          "a": "-576.94",
+          "b": "7013.79",
+          "c": "9537.49"
+        },
+        "expected": "266239/50",
+        "reply": "266239/50"
+      },
+      {
+        "args": {
+          "a": "208.35",
+          "b": "465.86",
+          "c": "5250.41"
+        },
+        "expected": "296231/150",
+        "reply": "296231/150"
+      },
+      {
+        "args": {
+          "a": "8021.30",
+          "b": "2140.96",
+          "c": "9701.46"
+        },
+        "expected": "165531/25",
+        "reply": "165531/25"
+      },
+      {
+        "args": {
+          "a": "8913.77",
+          "b": "-1608.92",
+          "c": "-2939.49"
+        },
+        "expected": "36378/25",
+        "reply": "36378/25"
+      },
+      {
+        "args": {
+          "a": "1814.79",
+          "b": "1319.07",
+          "c": "-7144.85"
+        },
+        "expected": "-401099/300",
+        "reply": "-401099/300"
+      },
+      {
+        "args": {
+          "a": "82.84",
+          "b": "-1066.08",
+          "c": "-4104.16"
+        },
+        "expected": "-8479/5",
+        "reply": "-8479/5"
+      },
+      {
+        "args": {
+          "a": "9513.49",
+          "b": "-4364.74",
+          "c": "7849.85"
+        },
+        "expected": "64993/15",
+        "reply": "64993/15"
+      },
+      {
+        "args": {
+          "a": "-202.20",
+          "b": "8880.84",
+          "c": "-9188.14"
+        },
+        "expected": "-1019/6",
+        "reply": "-1019/6"
+      },
+      {
+        "args": {
+          "a": "3634.63",
+          "b": "-6573.94",
+          "c": "-5470.32"
+        },
+        "expected": "-280321/100",
+        "reply": "-280321/100"
+      },
+      {
+        "args": {
+          "a": "-7548.54",
+          "b": "-2097.81",
+          "c": "2489.47"
+        },
+        "expected": "-178922/75",
+        "reply": "-178922/75"
+      },
+      {
+        "args": {
+          "a": "8967.83",
+          "b": "6219.72",
+          "c": "2992.34"
+        },
+        "expected": "1817989/300",
+        "reply": "1817989/300"
+      },
+      {
+        "args": {
+          "a": "2795.94",
+          "b": "2823.44",
+          "c": "4029.68"
+        },
+        "expected": "482453/150",
+        "reply": "482453/150"
+      },
+      {
+        "args": {
+          "a": "-4742.32",
+          "b": "9298.99",
+          "c": "4665.47"
+        },
+        "expected": "461107/150",
+        "reply": "461107/150"
+      },
+      {
+        "args": {
+          "a": "-5049.10",
+          "b": "-6840.81",
+          "c": "-9049.82"
+        },
+        "expected": "-697991/100",
+        "reply": "-697991/100"
+      },
+      {
+        "args": {
+          "a": "3997.72",
+          "b": "-4239.50",
+          "c": "-8020.75"
+        },
+        "expected": "-826253/300",
+        "reply": "-826253/300"
+      },
+      {
+        "args": {
+          "a": "-924.05",
+          "b": "3414.62",
+          "c": "-1606.01"
+        },
+        "expected": "22114/75",
+        "reply": "22114/75"
+      },
+      {
+        "args": {
+          "a": "-3755.66",
+          "b": "-3094.42",
+          "c": "-5497.46"
+        },
+        "expected": "-617377/150",
+        "reply": "-617377/150"
+      },
+      {
+        "args": {
+          "a": "-7329.35",
+          "b": "9993.80",
+          "c": "577.26"
+        },
+        "expected": "108057/100",
+        "reply": "108057/100"
+      },
+      {
+        "args": {
+          "a": "7562.98",
+          "b": "-7693.81",
+          "c": "-4547.20"
+        },
+        "expected": "-467803/300",
+        "reply": "-467803/300"
+      },
+      {
+        "args": {
+          "a": "-7376.31",
+          "b": "274.11",
+          "c": "-5161.16"
+        },
+        "expected": "-306584/75",
+        "reply": "-306584/75"
+      },
+      {
+        "args": {
+          "a": "-5670.52",
+          "b": "5317.44",
+          "c": "-4707.25"
+        },
+        "expected": "-506033/300",
+        "reply": "-506033/300"
+      },
+      {
+        "args": {
+          "a": "8568.69",
+          "b": "-4640.07",
+          "c": "9355.49"
+        },
+        "expected": "1328411/300",
+        "reply": "1328411/300"
+      },
+      {
+        "args": {
+          "a": "-2949.42",
+          "b": "-6018.25",
+          "c": "-8438.86"
+        },
+        "expected": "-1740653/300",
+        "reply": "-1740653/300"
+      },
+      {
+        "args": {
+          "a": "3123.99",
+          "b": "-8298.13",
+          "c": "-2254.90"
+        },
+        "expected": "-185726/75",
+        "reply": "-185726/75"
+      },
+      {
+        "args": {
+          "a": "-6185.37",
+          "b": "-4616.82",
+          "c": "-4992.46"
+        },
+        "expected": "-315893/60",
+        "reply": "-315893/60"
+      },
+      {
+        "args": {
+          "a": "4129.57",
+          "b": "4187.83",
+          "c": "2486.95"
+        },
+        "expected": "72029/20",
+        "reply": "72029/20"
+      },
+      {
+        "args": {
+          "a": "-5963.16",
+          "b": "-1601.16",
+          "c": "7890.75"
+        },
+        "expected": "10881/100",
+        "reply": "10881/100"
+      },
+      {
+        "args": {
+          "a": "-1626.10",
+          "b": "2051.59",
+          "c": "-3922.21"
+        },
+        "expected": "-87418/75",
+        "reply": "-87418/75"
+      },
+      {
+        "args": {
+          "a": "7010.32",
+          "b": "6212.11",
+          "c": "995.97"
+        },
+        "expected": "71092/15",
+        "reply": "71092/15"
+      },
+      {
+        "args": {
+          "a": "-735.71",
+          "b": "-889.03",
+          "c": "-8020.73"
+        },
+        "expected": "-964547/300",
+        "reply": "-964547/300"
+      },
+      {
+        "args": {
+          "a": "123.19",
+          "b": "2779.04",
+          "c": "-5021.19"
+        },
+        "expected": "-17658/25",
+        "reply": "-17658/25"
+      },
+      {
+        "args": {
+          "a": "4555.28",
+          "b": "1002.95",
+          "c": "1271.61"
+        },
+        "expected": "170746/75",
+        "reply": "170746/75"
+      },
+      {
+        "args": {
+          "a": "914.54",
+          "b": "2337.80",
+          "c": "4696.13"
+        },
+        "expected": "264949/100",
+        "reply": "264949/100"
+      },
+      {
+        "args": {
+          "a": "-6695.11",
+          "b": "907.41",
+          "c": "-7139.96"
+        },
+        "expected": "-215461/50",
+        "reply": "-215461/50"
+      },
+      {
+        "args": {
+          "a": "-5577.16",
+          "b": "-9615.43",
+          "c": "-613.13"
+        },
+        "expected": "-395143/75",
+        "reply": "-395143/75"
+      },
+      {
+        "args": {
+          "a": "-8877.02",
+          "b": "6052.59",
+          "c": "-7397.63"
+        },
+        "expected": "-511103/150",
+        "reply": "-511103/150"
+      },
+      {
+        "args": {
+          "a": "319.10",
+          "b": "5224.25",
+          "c": "-820.43"
+        },
+        "expected": "118073/75",
+        "reply": "118073/75"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "ea3c4d3ca4bb25ec13fc046d08a5ff9e66a994b54de7cb734e97c0708f977c35"
+}
