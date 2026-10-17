@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39008524516",
+  "runId": "39027455577",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-17T06:04:33Z",
+  "at": "2026-10-17T11:07:26Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "ff547dec5b602c66b18d7001e11e27c18463da8d7ff16766f1e202a4b0f27066",
-  "cycleNumber": 72,
+  "parentRecordHash": "343d5c4a19f6680412d717fbed4b7cd7309fd4c480c23ad8777d60727eba5bb9",
+  "cycleNumber": 73,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "TimeoutError",
-    "items": []
+    "access": "fetched",
+    "hash": "aff23767cdc4e710ec2a4557f4d696de992868df9e9f853b13189da3639b728e",
+    "items": [
+      {
+        "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
+        "url": "http://arxiv.org/abs/2610.22355v1",
+        "updated": "2026-10-15T17:58:04Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Speculative Forcing for Efficient Autoregressive Video Generation",
+        "url": "http://arxiv.org/abs/2610.22347v1",
+        "updated": "2026-10-15T17:57:01Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-17T11:07:27Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 12.377,
+  "elapsedSeconds": 0.541,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "343d5c4a19f6680412d717fbed4b7cd7309fd4c480c23ad8777d60727eba5bb9"
+  "recordHash": "af3d26bcdb779eb1c337e2a87ffeea8ebe6268de214d2b5f5430003a0a2edc84"
 }
