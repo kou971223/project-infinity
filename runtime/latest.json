@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-10-19T01:15:06.607Z",
-  "runId": "39184453619",
+  "at": "2026-10-19T07:43:35.847Z",
+  "runId": "39217795834",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-3619325d-0e93-49fd-ab76-8cd47d36e608",
-    "at": "2026-10-19T01:14:50.034Z",
+    "exp": "EXP-6302c4ed-cb25-4122-ba4d-b14b75ec2514",
+    "at": "2026-10-19T07:43:26.646Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -80,7 +80,7 @@
     "taxonomy": "E1 application reliability",
     "overallProjectAccepted": false,
     "decision": "NO_CHANGE",
-    "elapsedMs": 7
+    "elapsedMs": 6
   },
   "sources": {
     "schema": "PINF-SOURCES-1",
@@ -102,11 +102,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-19T01:14:49Z",
+        "at": "2026-10-19T07:43:26Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "d66835cc99900bcb0a32ac1b2328cdf36b07a709f4e676d5f62232f87a970c04",
+        "sha256": "9aec24282c1a9bc554db389a55a94619b051846ed1382d9292f677a2a3bcf663",
         "bytes": 106670,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -116,11 +116,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-10-19T01:14:49Z",
+        "at": "2026-10-19T07:43:26Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "70b2c9133f6a24062a3e91ee693fd10c08f7cc45d94a72ba375a22d9eeaf5aec",
+        "sha256": "0ef5017102bada5798d5c2ac701271ebae19ae43a6e39b7d093cbbd6382252f5",
         "bytes": 108299,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -130,11 +130,11 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-10-19T01:14:49Z",
+        "at": "2026-10-19T07:43:26Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "38b216e81d07196d8f50d47fc00998053ef07b077d2bf0253341f816fdabf407",
+        "sha256": "0afd667d22efdd16cc565280f4105b8018ff3e4aeaab4244d8b7d8999628a94e",
         "bytes": 892,
         "scope": "feed_only"
       }
@@ -150,5 +150,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "2520ac26168cfd53766dcaf7906dd33b9417c35fb3820b30a9ae9b4d334442bd"
+  "recordHash": "493838aa9df64af75561348a7b2f95de13ce9e5c54342dbd72b8213882a7b553"
 }
