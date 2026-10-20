@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39418998701",
+  "runId": "39466308480",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-20T12:00:57Z",
+  "at": "2026-10-20T17:28:41Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "fed4fba5a125fced5bc72bdf42ebac2e2c4506ae73b4781d9f881fe68ba6cde3",
-  "cycleNumber": 92,
+  "parentRecordHash": "b92299e4cc1415e322559765bee9715f40d9a6feecff6b30b01dbf31ee076dd2",
+  "cycleNumber": 93,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "HTTPError",
-    "items": []
+    "access": "fetched",
+    "hash": "3bb519d99073339042e0a3d96c58d61edf4d7e1223484930249fba45b71f65e3",
+    "items": [
+      {
+        "title": "WeAct: Dynamic Weight Switching as Agent Actions",
+        "url": "http://arxiv.org/abs/2610.26847v1",
+        "updated": "2026-10-19T17:59:19Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "MemT-1.0: Towards Memory-Native Evolution",
+        "url": "http://arxiv.org/abs/2610.26825v1",
+        "updated": "2026-10-19T17:54:35Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-20T17:28:42Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.598,
+  "elapsedSeconds": 1.333,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "b92299e4cc1415e322559765bee9715f40d9a6feecff6b30b01dbf31ee076dd2"
+  "recordHash": "0f271dd913a6b1c7d61772787cb5c731b7c294aa19a6d68502e0438d5672ea78"
 }
