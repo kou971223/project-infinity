@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39336041302",
+  "runId": "39352220828",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-19T22:36:28Z",
+  "at": "2026-10-20T01:13:57Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "9e6cd2f70ab4ae891ed6c0fe6a28f6d19a0887cd00e6ba3c7763152c840b9057",
-  "cycleNumber": 89,
+  "parentRecordHash": "217a409304011b4762ca09caa1cac4232eef581e224d7ee2612b39e8171b34cd",
+  "cycleNumber": 90,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "8b852f7a568b51f4a6a3a4ffe7adf4ecc16cbfb33f3a75ecc82d497620bf5bc3",
+    "hash": "103ce48585eda18238e98f85d1d0f75d8aeed073783dc8184f279aa552439f9a",
     "items": [
       {
-        "title": "Sampling the XY model with an attention-based neural network",
-        "url": "http://arxiv.org/abs/2610.23783v1",
-        "updated": "2026-10-16T17:16:35Z",
+        "title": "RAFT: Redundancy-Aware Input Filtering for Temporal Graph Neural Network Training",
+        "url": "http://arxiv.org/abs/2610.24875v1",
+        "updated": "2026-10-17T21:26:41Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "From Flow-Box Invariants to Global Conservation Laws: Machine Learning-Assisted Detection of Singularities and Near-Integrability",
-        "url": "http://arxiv.org/abs/2610.23760v1",
-        "updated": "2026-10-16T17:02:39Z",
+        "title": "Arbitrary-Scale Anisotropic 3D MRI Super-Resolution with Gaussian Prototypes",
+        "url": "http://arxiv.org/abs/2610.24858v1",
+        "updated": "2026-10-17T20:18:08Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-19T22:36:29Z"
+    "accessedAt": "2026-10-20T01:13:58Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.846,
+  "elapsedSeconds": 0.701,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "217a409304011b4762ca09caa1cac4232eef581e224d7ee2612b39e8171b34cd"
+  "recordHash": "19f9318dd5d0270dbce95be34dc878d6af5ca2e2e75dbfcd5e51427f4c4304a0"
 }
