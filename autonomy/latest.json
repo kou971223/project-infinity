@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39519030177",
+  "runId": "39548303553",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-21T00:04:56Z",
+  "at": "2026-10-21T05:13:55Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "3c59788b3420a8f36f26326a1d125fa4cc5d67748f3455460a337b62b8335a27",
-  "cycleNumber": 95,
+  "parentRecordHash": "965118e2c2024137b84167f869c46a5c9fd4f743eac72e3c50617a6fd4d99aa7",
+  "cycleNumber": 96,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "HTTPError",
-    "items": []
+    "access": "fetched",
+    "hash": "b8eacdd8cd668ac601db1540431d5a55a4dba6c497d861756a622c6f7f1d6157",
+    "items": [
+      {
+        "title": "Planning under Noise with Neural Operators",
+        "url": "http://arxiv.org/abs/2610.28623v1",
+        "updated": "2026-10-20T17:58:30Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Continuous-Time Policy Gradient from Discrete Data: Convergence Analysis and Model-Free Algorithms",
+        "url": "http://arxiv.org/abs/2610.28580v1",
+        "updated": "2026-10-20T17:33:08Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-21T05:13:56Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.438,
+  "elapsedSeconds": 0.417,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "965118e2c2024137b84167f869c46a5c9fd4f743eac72e3c50617a6fd4d99aa7"
+  "recordHash": "f032065293a43e87170311d345d0a6bf72b5792a284d5cc736becb734b82b127"
 }
