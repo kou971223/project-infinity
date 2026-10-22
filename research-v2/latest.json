@@ -1,10 +1,10 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-10-22T05:18:47.597830+00:00",
+  "at": "2026-10-22T12:20:46.787643+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "39727285387",
+  "runId": "39777530487",
   "parents": {
-    "knowledge": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d",
+    "knowledge": "c999bd21ca17178e8b81e8fd0105d7c733ad9bba1bc0f53e970018d84d792b03",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
   },
   "cards": [
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.087605+00:00",
+      "checkedAt": "2026-10-22T12:20:46.294949+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "52994936e8a5be617f3b699d4af8f1b18f6c733b94e6aacb22d2b9e98e20c243"
+      "sourceHash": "c9fdc024ad4eaa6f2d9eccaa89eced7e17cbf68fe7ad71867fdb19eeef07a507"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,9 +24,9 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.417070+00:00",
+      "checkedAt": "2026-10-22T12:20:46.698171+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "52d7d1f5b6b1def177d181a645637a1ed26294bc52b72d842ecbe9ace164d2e6"
+      "sourceHash": "b21891b4723608b6bf7509045c1afa92ff365c8ab89cf89e9a96b04b7ca9da35"
     },
     {
       "url": "https://arxiv.org/abs/2610.28686",
@@ -34,7 +34,7 @@
       "excerpt": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approxima",
       "excerptHash": "e24f38ff473ae9541c24d9181f862e9c7959f51cb9daccbd0292c20e3203169d",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.595118+00:00",
+      "checkedAt": "2026-10-22T12:20:46.783697+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     },
@@ -44,7 +44,7 @@
       "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours",
       "excerptHash": "202a0661263243537f908f162d1c5f25e9810946a5f16a7014e463155cb02f22",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.595559+00:00",
+      "checkedAt": "2026-10-22T12:20:46.784299+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     },
@@ -54,7 +54,7 @@
       "excerpt": "arXiv:2610.28706v1 Announce Type: new Abstract: LLM-driven evolutionary search is a promising paradigm for scientific discovery, but existing methods remain costly and slow, often applying expensive reasoning uniformly while underusing evidence from failed, redundant, and saturated trials. We introduce Speculative Evolution (SpecEvo), a multi-LLM framework that coordinates lightweight and frontier models through continual consolidation of search evidence. Lightweight models power both parallel Speculators, which generate and refine candidate programs, and an Advisor, which distills accumulated",
       "excerptHash": "1ca27608e5249ecd140231abe200b58f1519a327502f05474ee33a5576db9780",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.595984+00:00",
+      "checkedAt": "2026-10-22T12:20:46.784853+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     },
@@ -64,7 +64,7 @@
       "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-th",
       "excerptHash": "f8224241c8c260bd8361f6f8470fdb61b3d4c8c3d6ccaaf6b34e21a8fc6b3450",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.596398+00:00",
+      "checkedAt": "2026-10-22T12:20:46.785448+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     },
@@ -74,7 +74,7 @@
       "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To a",
       "excerptHash": "9c13337d17a0687c27455a8caa4951c1b6983c87167e8af49b20913a833d9427",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.596817+00:00",
+      "checkedAt": "2026-10-22T12:20:46.785999+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     },
@@ -84,13 +84,13 @@
       "excerpt": "arXiv:2610.28826v1 Announce Type: new Abstract: Automated judges of clinical artificial intelligence (AI) outputs are necessary, but large language model (LLM) judges are costly and slow at scale. We compared Jev, a decision language model that returns structured judgments, with frontier and open-weight LLM judges in four use cases. On 118 pediatric answers, Jev's agreement with physicians' ordinal quality ratings (Gwet's AC2 0.50; expected score 0.53) matched or exceeded that of seven of 12 LLM judges, including frontier models, Claude Opus 5.5 (0.49) and GPT-6 (0.38). On physician-graded bin",
       "excerptHash": "ca68379ddb3c439f995b08ce348040c6bc0f1bbf5961338a1c3bd364bcdc8f89",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T05:18:47.597229+00:00",
+      "checkedAt": "2026-10-22T12:20:46.786572+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
     }
   ],
   "sourceFailures": [],
-  "task": "rectangle",
+  "task": "percentage",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,58 +104,65 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 229097109899238,
+    "trainingSeed": 98918009306900,
     "trainingExamples": [
       {
         "args": {
-          "width": "-8775.65",
-          "height": "-4909.74"
+          "amount": "-6033.58",
+          "rate": "5032.51"
         },
-        "expected": "43086159831/1000"
+        "expected": "-151820258429/500000"
       },
       {
         "args": {
-          "width": "1220.18",
-          "height": "3125.42"
+          "amount": "-3099.79",
+          "rate": "-6250.37"
         },
-        "expected": "9533937439/2500"
+        "expected": "193748344223/1000000"
       },
       {
         "args": {
-          "width": "-4010.43",
-          "height": "-8326.17"
+          "amount": "-7027.84",
+          "rate": "-166.23"
         },
-        "expected": "333915219531/10000"
+        "expected": "182537163/15625"
       },
       {
         "args": {
-          "width": "-9588.13",
-          "height": "7428.33"
+          "amount": "3148.29",
+          "rate": "5298.73"
         },
-        "expected": "-712237937229/10000"
+        "expected": "166819386717/1000000"
       }
     ],
-    "examined": 13,
-    "states": 11,
-    "cost": 3
+    "examined": 347,
+    "states": 188,
+    "cost": 5
   },
   "programCandidate": {
-    "task": "rectangle",
+    "task": "percentage",
     "expression": [
-      "mul",
+      "div",
       [
-        "var",
-        "width"
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
       ],
       [
-        "var",
-        "height"
+        "const",
+        "100"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "97d09cf3f1f69605a1ad3405451cdb7b288f9362bee42ed5619997060aa23a5d",
+  "frozenHash": "9d09ef6b16de664e18274dfcf88f5bba54f009bc9a93b6026107a7e977504742",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -165,9 +172,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.087605+00:00",
+        "checkedAt": "2026-10-22T12:20:46.294949+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "52994936e8a5be617f3b699d4af8f1b18f6c733b94e6aacb22d2b9e98e20c243"
+        "sourceHash": "c9fdc024ad4eaa6f2d9eccaa89eced7e17cbf68fe7ad71867fdb19eeef07a507"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -175,9 +182,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.417070+00:00",
+        "checkedAt": "2026-10-22T12:20:46.698171+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "52d7d1f5b6b1def177d181a645637a1ed26294bc52b72d842ecbe9ace164d2e6"
+        "sourceHash": "b21891b4723608b6bf7509045c1afa92ff365c8ab89cf89e9a96b04b7ca9da35"
       },
       {
         "url": "https://arxiv.org/abs/2610.28686",
@@ -185,7 +192,7 @@
         "excerpt": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approxima",
         "excerptHash": "e24f38ff473ae9541c24d9181f862e9c7959f51cb9daccbd0292c20e3203169d",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.595118+00:00",
+        "checkedAt": "2026-10-22T12:20:46.783697+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       },
@@ -195,7 +202,7 @@
         "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours",
         "excerptHash": "202a0661263243537f908f162d1c5f25e9810946a5f16a7014e463155cb02f22",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.595559+00:00",
+        "checkedAt": "2026-10-22T12:20:46.784299+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       },
@@ -205,7 +212,7 @@
         "excerpt": "arXiv:2610.28706v1 Announce Type: new Abstract: LLM-driven evolutionary search is a promising paradigm for scientific discovery, but existing methods remain costly and slow, often applying expensive reasoning uniformly while underusing evidence from failed, redundant, and saturated trials. We introduce Speculative Evolution (SpecEvo), a multi-LLM framework that coordinates lightweight and frontier models through continual consolidation of search evidence. Lightweight models power both parallel Speculators, which generate and refine candidate programs, and an Advisor, which distills accumulated",
         "excerptHash": "1ca27608e5249ecd140231abe200b58f1519a327502f05474ee33a5576db9780",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.595984+00:00",
+        "checkedAt": "2026-10-22T12:20:46.784853+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       },
@@ -215,7 +222,7 @@
         "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-th",
         "excerptHash": "f8224241c8c260bd8361f6f8470fdb61b3d4c8c3d6ccaaf6b34e21a8fc6b3450",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.596398+00:00",
+        "checkedAt": "2026-10-22T12:20:46.785448+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       },
@@ -225,7 +232,7 @@
         "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To a",
         "excerptHash": "9c13337d17a0687c27455a8caa4951c1b6983c87167e8af49b20913a833d9427",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.596817+00:00",
+        "checkedAt": "2026-10-22T12:20:46.785999+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       },
@@ -235,7 +242,7 @@
         "excerpt": "arXiv:2610.28826v1 Announce Type: new Abstract: Automated judges of clinical artificial intelligence (AI) outputs are necessary, but large language model (LLM) judges are costly and slow at scale. We compared Jev, a decision language model that returns structured judgments, with frontier and open-weight LLM judges in four use cases. On 118 pediatric answers, Jev's agreement with physicians' ordinal quality ratings (Gwet's AC2 0.50; expected score 0.53) matched or exceeded that of seven of 12 LLM judges, including frontier models, Claude Opus 5.5 (0.49) and GPT-6 (0.38). On physician-graded bin",
         "excerptHash": "ca68379ddb3c439f995b08ce348040c6bc0f1bbf5961338a1c3bd364bcdc8f89",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T05:18:47.597229+00:00",
+        "checkedAt": "2026-10-22T12:20:46.786572+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
       }
@@ -245,529 +252,529 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
-    "seed": 54182831518080,
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 217421959793028,
     "cases": [
       {
         "args": {
-          "width": "0",
-          "height": "0"
+          "amount": "0",
+          "rate": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "width": "1",
-          "height": "1"
+          "amount": "1",
+          "rate": "1"
         },
-        "expected": "1",
-        "reply": "1"
+        "expected": "1/100",
+        "reply": "1/100"
       },
       {
         "args": {
-          "width": "-1",
-          "height": "-1"
+          "amount": "-1",
+          "rate": "-1"
         },
-        "expected": "1",
-        "reply": "1"
+        "expected": "1/100",
+        "reply": "1/100"
       },
       {
         "args": {
-          "width": "7941.77",
-          "height": "7063.99"
+          "amount": "-1891.97",
+          "rate": "8288.66"
         },
-        "expected": "561005838623/10000",
-        "reply": "561005838623/10000"
+        "expected": "-78409480301/500000",
+        "reply": "-78409480301/500000"
       },
       {
         "args": {
-          "width": "-5288.22",
-          "height": "8167.12"
+          "amount": "1364.18",
+          "rate": "-5111.52"
         },
-        "expected": "-26993454579/625",
-        "reply": "-26993454579/625"
+        "expected": "-2179072923/31250",
+        "reply": "-2179072923/31250"
       },
       {
         "args": {
-          "width": "4496.48",
-          "height": "-1141.51"
+          "amount": "-1026.35",
+          "rate": "-9593.21"
         },
-        "expected": "-3207985553/625",
-        "reply": "-3207985553/625"
+        "expected": "19691982167/200000",
+        "reply": "19691982167/200000"
       },
       {
         "args": {
-          "width": "-1834.83",
-          "height": "-5095.23"
+          "amount": "9408.56",
+          "rate": "1064.07"
         },
-        "expected": "93488808609/10000",
-        "reply": "93488808609/10000"
+        "expected": "12514208049/125000",
+        "reply": "12514208049/125000"
       },
       {
         "args": {
-          "width": "-6775.11",
-          "height": "-6750.95"
+          "amount": "5379.81",
+          "rate": "497.21"
         },
-        "expected": "91476857709/2000",
-        "reply": "91476857709/2000"
+        "expected": "26748953301/1000000",
+        "reply": "26748953301/1000000"
       },
       {
         "args": {
-          "width": "3925.33",
-          "height": "1922.46"
+          "amount": "-937.98",
+          "rate": "-8321.61"
         },
-        "expected": "37731449559/5000",
-        "reply": "37731449559/5000"
+        "expected": "39027518739/500000",
+        "reply": "39027518739/500000"
       },
       {
         "args": {
-          "width": "2947.43",
-          "height": "9496.20"
+          "amount": "-9406.73",
+          "rate": "2273.91"
         },
-        "expected": "13994692383/500",
-        "reply": "13994692383/500"
+        "expected": "-213900574143/1000000",
+        "reply": "-213900574143/1000000"
       },
       {
         "args": {
-          "width": "4497.79",
-          "height": "4763.60"
+          "amount": "5591.39",
+          "rate": "773.40"
         },
-        "expected": "5356418111/250",
-        "reply": "5356418111/250"
+        "expected": "2162190513/50000",
+        "reply": "2162190513/50000"
       },
       {
         "args": {
-          "width": "8701.87",
-          "height": "-656.90"
+          "amount": "-6646.94",
+          "rate": "4273.77"
         },
-        "expected": "-5716258403/1000",
-        "reply": "-5716258403/1000"
+        "expected": "-142037463819/500000",
+        "reply": "-142037463819/500000"
       },
       {
         "args": {
-          "width": "-4188.68",
-          "height": "-6479.23"
+          "amount": "-9631.73",
+          "rate": "422.40"
         },
-        "expected": "67848552791/2500",
-        "reply": "67848552791/2500"
+        "expected": "-127138836/3125",
+        "reply": "-127138836/3125"
       },
       {
         "args": {
-          "width": "3648.44",
-          "height": "-1486.82"
+          "amount": "-2778.71",
+          "rate": "-4764.26"
         },
-        "expected": "-6780716951/1250",
-        "reply": "-6780716951/1250"
+        "expected": "66192484523/500000",
+        "reply": "66192484523/500000"
       },
       {
         "args": {
-          "width": "2906.78",
-          "height": "1355.28"
+          "amount": "-5425.85",
+          "rate": "-7377.79"
         },
-        "expected": "2462187999/625",
-        "reply": "2462187999/625"
+        "expected": "80061563743/200000",
+        "reply": "80061563743/200000"
       },
       {
         "args": {
-          "width": "9395.40",
-          "height": "-9517.50"
+          "amount": "4721.50",
+          "rate": "3051.77"
         },
-        "expected": "-178841439/2",
-        "reply": "-178841439/2"
+        "expected": "2881786411/20000",
+        "reply": "2881786411/20000"
       },
       {
         "args": {
-          "width": "-6116.42",
-          "height": "2479.82"
+          "amount": "-3751.35",
+          "rate": "-8558.45"
         },
-        "expected": "-37919051611/2500",
-        "reply": "-37919051611/2500"
+        "expected": "12842296563/40000",
+        "reply": "12842296563/40000"
       },
       {
         "args": {
-          "width": "2418.80",
-          "height": "-4467.07"
+          "amount": "-651.96",
+          "rate": "-1042.09"
         },
-        "expected": "-2701237229/250",
-        "reply": "-2701237229/250"
+        "expected": "1698502491/250000",
+        "reply": "1698502491/250000"
       },
       {
         "args": {
-          "width": "4296.77",
-          "height": "623.50"
+          "amount": "9482.44",
+          "rate": "3755.46"
         },
-        "expected": "535807219/200",
-        "reply": "535807219/200"
+        "expected": "44513655153/125000",
+        "reply": "44513655153/125000"
       },
       {
         "args": {
-          "width": "-3108.61",
-          "height": "939.42"
+          "amount": "-5296.82",
+          "rate": "107.18"
         },
-        "expected": "-14601452031/5000",
-        "reply": "-14601452031/5000"
+        "expected": "-1419282919/250000",
+        "reply": "-1419282919/250000"
       },
       {
         "args": {
-          "width": "-8345.46",
-          "height": "6032.68"
+          "amount": "394.23",
+          "rate": "8914.31"
         },
-        "expected": "-62931862041/1250",
-        "reply": "-62931862041/1250"
+        "expected": "35142884313/1000000",
+        "reply": "35142884313/1000000"
       },
       {
         "args": {
-          "width": "1802.72",
-          "height": "-9561.60"
+          "amount": "1477.03",
+          "rate": "-836.49"
         },
-        "expected": "-2154610944/125",
-        "reply": "-2154610944/125"
+        "expected": "-12355208247/1000000",
+        "reply": "-12355208247/1000000"
       },
       {
         "args": {
-          "width": "8703.59",
-          "height": "-9742.52"
+          "amount": "6658.89",
+          "rate": "8702.73"
         },
-        "expected": "-211987249117/2500",
-        "reply": "-211987249117/2500"
+        "expected": "579505217697/1000000",
+        "reply": "579505217697/1000000"
       },
       {
         "args": {
-          "width": "4664.97",
-          "height": "-6677.88"
+          "amount": "9787.28",
+          "rate": "-697.14"
         },
-        "expected": "-77880274659/2500",
-        "reply": "-77880274659/2500"
+        "expected": "-4264440237/62500",
+        "reply": "-4264440237/62500"
       },
       {
         "args": {
-          "width": "-2985.38",
-          "height": "571.59"
+          "amount": "-7600.24",
+          "rate": "7495.22"
         },
-        "expected": "-8532066771/5000",
-        "reply": "-8532066771/5000"
+        "expected": "-35603419283/62500",
+        "reply": "-35603419283/62500"
       },
       {
         "args": {
-          "width": "5399.10",
-          "height": "-4698.32"
+          "amount": "5464.74",
+          "rate": "8006.06"
         },
-        "expected": "-3170837439/125",
-        "reply": "-3170837439/125"
+        "expected": "109377590811/250000",
+        "reply": "109377590811/250000"
       },
       {
         "args": {
-          "width": "-3255.84",
-          "height": "9809.35"
+          "amount": "4188.96",
+          "rate": "-6028.39"
         },
-        "expected": "-3992209263/125",
-        "reply": "-3992209263/125"
+        "expected": "-15782927859/62500",
+        "reply": "-15782927859/62500"
       },
       {
         "args": {
-          "width": "-3395.43",
-          "height": "-2735.24"
+          "amount": "-3682.10",
+          "rate": "-8039.46"
         },
-        "expected": "23218289883/2500",
-        "reply": "23218289883/2500"
+        "expected": "14801047833/50000",
+        "reply": "14801047833/50000"
       },
       {
         "args": {
-          "width": "-3544.17",
-          "height": "8127.77"
+          "amount": "6344.21",
+          "rate": "-2773.09"
         },
-        "expected": "-288061986009/10000",
-        "reply": "-288061986009/10000"
+        "expected": "-175930653089/1000000",
+        "reply": "-175930653089/1000000"
       },
       {
         "args": {
-          "width": "4109.50",
-          "height": "9516.26"
+          "amount": "-1371.13",
+          "rate": "1817.03"
         },
-        "expected": "3910707047/100",
-        "reply": "3910707047/100"
+        "expected": "-24913843439/1000000",
+        "reply": "-24913843439/1000000"
       },
       {
         "args": {
-          "width": "-6360.91",
-          "height": "-2816.02"
+          "amount": "2617.13",
+          "rate": "-5370.04"
         },
-        "expected": "89562248891/5000",
-        "reply": "89562248891/5000"
+        "expected": "-35135231963/250000",
+        "reply": "-35135231963/250000"
       },
       {
         "args": {
-          "width": "-1683.30",
-          "height": "-4252.49"
+          "amount": "-4758.04",
+          "rate": "3836.99"
         },
-        "expected": "7158216417/1000",
-        "reply": "7158216417/1000"
+        "expected": "-45641379749/250000",
+        "reply": "-45641379749/250000"
       },
       {
         "args": {
-          "width": "8250.71",
-          "height": "-4998.66"
+          "amount": "-1589.40",
+          "rate": "6547.11"
         },
-        "expected": "-206212470243/5000",
-        "reply": "-206212470243/5000"
+        "expected": "-5202988317/50000",
+        "reply": "-5202988317/50000"
       },
       {
         "args": {
-          "width": "-4482.71",
-          "height": "-7233.99"
+          "amount": "9760.07",
+          "rate": "1990.91"
         },
-        "expected": "324278793129/10000",
-        "reply": "324278793129/10000"
+        "expected": "194314209637/1000000",
+        "reply": "194314209637/1000000"
       },
       {
         "args": {
-          "width": "-682.94",
-          "height": "3068.70"
+          "amount": "7456.81",
+          "rate": "-596.32"
         },
-        "expected": "-1047868989/500",
-        "reply": "-1047868989/500"
+        "expected": "-2779153087/62500",
+        "reply": "-2779153087/62500"
       },
       {
         "args": {
-          "width": "-2812.24",
-          "height": "-202.99"
+          "amount": "-97.47",
+          "rate": "-4330.49"
         },
-        "expected": "713570747/1250",
-        "reply": "713570747/1250"
+        "expected": "4220928603/1000000",
+        "reply": "4220928603/1000000"
       },
       {
         "args": {
-          "width": "6509.24",
-          "height": "3546.33"
+          "amount": "-1761.95",
+          "rate": "8239.13"
         },
-        "expected": "57709782723/2500",
-        "reply": "57709782723/2500"
+        "expected": "-29033870207/200000",
+        "reply": "-29033870207/200000"
       },
       {
         "args": {
-          "width": "-3875.45",
-          "height": "3927.14"
+          "amount": "4265.51",
+          "rate": "2795.61"
         },
-        "expected": "-15219434713/1000",
-        "reply": "-15219434713/1000"
+        "expected": "119247024111/1000000",
+        "reply": "119247024111/1000000"
       },
       {
         "args": {
-          "width": "-6840.18",
-          "height": "230.13"
+          "amount": "5832.57",
+          "rate": "-3589.96"
         },
-        "expected": "-7870653117/5000",
-        "reply": "-7870653117/5000"
+        "expected": "-52346732493/250000",
+        "reply": "-52346732493/250000"
       },
       {
         "args": {
-          "width": "-8603.64",
-          "height": "7007.71"
+          "amount": "-4871.41",
+          "rate": "-3079.66"
         },
-        "expected": "-150729535161/2500",
-        "reply": "-150729535161/2500"
+        "expected": "75011432603/500000",
+        "reply": "75011432603/500000"
       },
       {
         "args": {
-          "width": "-6594.39",
-          "height": "-5182.91"
+          "amount": "7090.83",
+          "rate": "9034.37"
         },
-        "expected": "341781298749/10000",
-        "reply": "341781298749/10000"
+        "expected": "640611818271/1000000",
+        "reply": "640611818271/1000000"
       },
       {
         "args": {
-          "width": "-7582.71",
-          "height": "6964.65"
+          "amount": "6001.98",
+          "rate": "-6202.76"
         },
-        "expected": "-105621842403/2000",
-        "reply": "-105621842403/2000"
+        "expected": "-46536051831/125000",
+        "reply": "-46536051831/125000"
       },
       {
         "args": {
-          "width": "-2101.88",
-          "height": "-6239.03"
+          "amount": "9145.62",
+          "rate": "-9380.92"
         },
-        "expected": "32784230941/2500",
-        "reply": "32784230941/2500"
+        "expected": "-107242911963/125000",
+        "reply": "-107242911963/125000"
       },
       {
         "args": {
-          "width": "3938.01",
-          "height": "2487.29"
+          "amount": "-9300.69",
+          "rate": "453.94"
         },
-        "expected": "97949728929/10000",
-        "reply": "97949728929/10000"
+        "expected": "-21109776093/500000",
+        "reply": "-21109776093/500000"
       },
       {
         "args": {
-          "width": "3511.01",
-          "height": "9328.19"
+          "amount": "-2402.70",
+          "rate": "-2823.24"
         },
-        "expected": "327513683719/10000",
-        "reply": "327513683719/10000"
+        "expected": "1695849687/25000",
+        "reply": "1695849687/25000"
       },
       {
         "args": {
-          "width": "5769.65",
-          "height": "3158.68"
+          "amount": "-7323.94",
+          "rate": "-5729.58"
         },
-        "expected": "9112239031/500",
-        "reply": "9112239031/500"
+        "expected": "104907750363/250000",
+        "reply": "104907750363/250000"
       },
       {
         "args": {
-          "width": "-1597.13",
-          "height": "6221.56"
+          "amount": "-4354.87",
+          "rate": "7156.73"
         },
-        "expected": "-24841600307/2500",
-        "reply": "-24841600307/2500"
+        "expected": "-311666287751/1000000",
+        "reply": "-311666287751/1000000"
       },
       {
         "args": {
-          "width": "5147.09",
-          "height": "-3665.45"
+          "amount": "-8085.39",
+          "rate": "-593.60"
         },
-        "expected": "-37732802081/2000",
-        "reply": "-37732802081/2000"
+        "expected": "299967969/6250",
+        "reply": "299967969/6250"
       },
       {
         "args": {
-          "width": "4079.08",
-          "height": "7501.50"
+          "amount": "4489.16",
+          "rate": "5282.49"
         },
-        "expected": "1529960931/50",
-        "reply": "1529960931/50"
+        "expected": "59284857021/250000",
+        "reply": "59284857021/250000"
       },
       {
         "args": {
-          "width": "-625.14",
-          "height": "50.72"
+          "amount": "-3928.36",
+          "rate": "7351.98"
         },
-        "expected": "-19816938/625",
-        "reply": "-19816938/625"
+        "expected": "-36101530191/125000",
+        "reply": "-36101530191/125000"
       },
       {
         "args": {
-          "width": "7606.00",
-          "height": "-9550.51"
+          "amount": "631.25",
+          "rate": "5844.08"
         },
-        "expected": "-3632058953/50",
-        "reply": "-3632058953/50"
+        "expected": "7378151/200",
+        "reply": "7378151/200"
       },
       {
         "args": {
-          "width": "4355.27",
-          "height": "-4539.35"
+          "amount": "-2747.25",
+          "rate": "4054.15"
         },
-        "expected": "-39540189749/2000",
-        "reply": "-39540189749/2000"
+        "expected": "-891021087/8000",
+        "reply": "-891021087/8000"
       },
       {
         "args": {
-          "width": "4772.29",
-          "height": "2124.41"
+          "amount": "7940.44",
+          "rate": "-4697.05"
         },
-        "expected": "101383005989/10000",
-        "reply": "101383005989/10000"
+        "expected": "-18648321851/50000",
+        "reply": "-18648321851/50000"
       },
       {
         "args": {
-          "width": "-7820.89",
-          "height": "-4505.95"
+          "amount": "-2639.24",
+          "rate": "-3245.67"
         },
-        "expected": "70481078591/2000",
-        "reply": "70481078591/2000"
+        "expected": "21415255227/250000",
+        "reply": "21415255227/250000"
       },
       {
         "args": {
-          "width": "4610.80",
-          "height": "-1574.93"
+          "amount": "2486.69",
+          "rate": "-5239.43"
         },
-        "expected": "-1815421811/250",
-        "reply": "-1815421811/250"
+        "expected": "-130288381867/1000000",
+        "reply": "-130288381867/1000000"
       },
       {
         "args": {
-          "width": "4210.26",
-          "height": "-8870.37"
+          "amount": "-4264.44",
+          "rate": "8902.41"
         },
-        "expected": "-186732819981/5000",
-        "reply": "-186732819981/5000"
+        "expected": "-94909483251/250000",
+        "reply": "-94909483251/250000"
       },
       {
         "args": {
-          "width": "-3497.68",
-          "height": "7944.76"
+          "amount": "6858.44",
+          "rate": "4073.41"
         },
-        "expected": "-17367642598/625",
-        "reply": "-17367642598/625"
+        "expected": "69843095201/250000",
+        "reply": "69843095201/250000"
       },
       {
         "args": {
-          "width": "4905.61",
-          "height": "2361.28"
+          "amount": "-5899.68",
+          "rate": "-7781.80"
         },
-        "expected": "7239699238/625",
-        "reply": "7239699238/625"
+        "expected": "1434691557/3125",
+        "reply": "1434691557/3125"
       },
       {
         "args": {
-          "width": "-1836.26",
-          "height": "-4409.49"
+          "amount": "-7753.54",
+          "rate": "3836.62"
         },
-        "expected": "40484850537/5000",
-        "reply": "40484850537/5000"
+        "expected": "-74368466587/250000",
+        "reply": "-74368466587/250000"
       },
       {
         "args": {
-          "width": "-7794.60",
-          "height": "-6332.39"
+          "amount": "1304.16",
+          "rate": "7158.57"
         },
-        "expected": "24679223547/500",
-        "reply": "24679223547/500"
+        "expected": "5834950407/62500",
+        "reply": "5834950407/62500"
       },
       {
         "args": {
-          "width": "8942.69",
-          "height": "-7087.52"
+          "amount": "393.85",
+          "rate": "6332.17"
         },
-        "expected": "-39613433893/625",
-        "reply": "-39613433893/625"
+        "expected": "4987850309/200000",
+        "reply": "4987850309/200000"
       },
       {
         "args": {
-          "width": "3383.81",
-          "height": "9885.81"
+          "amount": "4420.64",
+          "rate": "-5633.00"
         },
-        "expected": "334517027361/10000",
-        "reply": "334517027361/10000"
+        "expected": "-155634157/625",
+        "reply": "-155634157/625"
       },
       {
         "args": {
-          "width": "9841.89",
-          "height": "-461.07"
+          "amount": "3615.59",
+          "rate": "682.50"
         },
-        "expected": "-45378002223/10000",
-        "reply": "-45378002223/10000"
+        "expected": "98705607/4000",
+        "reply": "98705607/4000"
       },
       {
         "args": {
-          "width": "8958.77",
-          "height": "2464.61"
+          "amount": "5850.46",
+          "rate": "1747.12"
         },
-        "expected": "220798741297/10000",
-        "reply": "220798741297/10000"
+        "expected": "6388409797/62500",
+        "reply": "6388409797/62500"
       }
     ],
-    "nodes": 3,
+    "nodes": 5,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "ADOPT",
+    "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "353b19f94d366c7918c7328af62e3b80b42c472790b778831b0bd75c277609cf"
+  "recordHash": "2d0172492e4743c6fc178484dec6516bc526424d0f1cd457981d176a02a67684"
 }
