@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39688037497",
+  "runId": "39707487902",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-21T22:40:07Z",
+  "at": "2026-10-22T01:45:49Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "7232f36a8b5bf1874e189f35ef82a9e95e0089c7260c361106abdb72e4ebe7b2",
-  "cycleNumber": 100,
+  "parentRecordHash": "9631b8b8919e693d7d0ffd51f95c8f868ce1d27e765e18e5e2e8e9192c0a11a2",
+  "cycleNumber": 101,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "bb2db31b6d4d864b9255e6834af763b6fff8004ad9dcc93440be7d338d7c5758",
+    "hash": "5f418850d9953a91679baf8a868e1dba05427f9d0db21910f8c23df407a9dedf",
     "items": [
       {
-        "title": "Planning under Noise with Neural Operators",
-        "url": "http://arxiv.org/abs/2610.28623v1",
-        "updated": "2026-10-20T17:58:30Z",
+        "title": "Near Minimax Rate for Quantile Distributional Reinforcement Learning",
+        "url": "http://arxiv.org/abs/2610.29595v1",
+        "updated": "2026-10-21T11:35:36Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Continuous-Time Policy Gradient from Discrete Data: Convergence Analysis and Model-Free Algorithms",
-        "url": "http://arxiv.org/abs/2610.28580v1",
-        "updated": "2026-10-20T17:33:08Z",
+        "title": "Fast Bayesian Optimization Through Linear Models",
+        "url": "http://arxiv.org/abs/2610.29580v1",
+        "updated": "2026-10-21T11:22:11Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-21T22:40:07Z"
+    "accessedAt": "2026-10-22T01:45:49Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.381,
+  "elapsedSeconds": 0.806,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "9631b8b8919e693d7d0ffd51f95c8f868ce1d27e765e18e5e2e8e9192c0a11a2"
+  "recordHash": "1748e4d56484ed33a7a70ef2d7b0498e2b56ef8ca3b03404d7e4586e876a3e9b"
 }
