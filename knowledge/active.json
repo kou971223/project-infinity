@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2610.28826",
+      "title": "Decision language models as affordable and rapid alternatives to LLM judges of clinical generative AI",
+      "excerpt": "arXiv:2610.28826v1 Announce Type: new Abstract: Automated judges of clinical artificial intelligence (AI) outputs are necessary, but large language model (LLM) judges are costly and slow at scale. We compared Jev, a decision language model that returns structured judgments, with frontier and open-weight LLM judges in four use cases. On 118 pediatric answers, Jev's agreement with physicians' ordinal quality ratings (Gwet's AC2 0.50; expected score 0.53) matched or exceeded that of seven of 12 LLM judges, including frontier models, Claude Opus 5.5 (0.49) and GPT-6 (0.38). On physician-graded bin",
+      "excerptHash": "ca68379ddb3c439f995b08ce348040c6bc0f1bbf5961338a1c3bd364bcdc8f89",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.597229+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28815",
+      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
+      "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To a",
+      "excerptHash": "9c13337d17a0687c27455a8caa4951c1b6983c87167e8af49b20913a833d9427",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.596817+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28763",
+      "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
+      "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-th",
+      "excerptHash": "f8224241c8c260bd8361f6f8470fdb61b3d4c8c3d6ccaaf6b34e21a8fc6b3450",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.596398+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28706",
+      "title": "SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery",
+      "excerpt": "arXiv:2610.28706v1 Announce Type: new Abstract: LLM-driven evolutionary search is a promising paradigm for scientific discovery, but existing methods remain costly and slow, often applying expensive reasoning uniformly while underusing evidence from failed, redundant, and saturated trials. We introduce Speculative Evolution (SpecEvo), a multi-LLM framework that coordinates lightweight and frontier models through continual consolidation of search evidence. Lightweight models power both parallel Speculators, which generate and refine candidate programs, and an Advisor, which distills accumulated",
+      "excerptHash": "1ca27608e5249ecd140231abe200b58f1519a327502f05474ee33a5576db9780",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.595984+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28698",
+      "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+      "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours",
+      "excerptHash": "202a0661263243537f908f162d1c5f25e9810946a5f16a7014e463155cb02f22",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.595559+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28686",
+      "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
+      "excerpt": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approxima",
+      "excerptHash": "e24f38ff473ae9541c24d9181f862e9c7959f51cb9daccbd0292c20e3203169d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.595118+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.417070+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "52d7d1f5b6b1def177d181a645637a1ed26294bc52b72d842ecbe9ace164d2e6"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-22T05:18:47.087605+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "52994936e8a5be617f3b699d4af8f1b18f6c733b94e6aacb22d2b9e98e20c243"
+    },
+    {
       "url": "https://arxiv.org/abs/2610.20679",
       "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
       "excerpt": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for selective VLM safety. CNRF constructs context-matched benign-harmful counterfactual pairs, uses their representation differences as capability-related risk directions, and estimates neighborhood support separately from risk. This separatio",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-10-16T04:56:58.710371+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-16T04:56:58.508713+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "43b29cc44afcd2f7d1d059dfdb4265ae09db973734b33e916c340e98d525a517"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-16T04:56:58.389686+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "dc324bbdb11bd3740fc3f1e9deff377dc54e79107fc06b006ce0732ca52d77e4"
     },
     {
       "url": "https://arxiv.org/abs/2610.12598",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-10-08T06:36:31.360082+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "1e6ae007326a420f7f0acd54f4ac8fe89baff9ec342b60cae2c211737115e033"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.08808",
-      "title": "Accelerating Floating-Point Satisfiability Solving via Gradient Normalization",
-      "excerpt": "arXiv:2610.08808v1 Announce Type: new Abstract: Satisfiability Modulo Theories (SMT) solvers are foundational to software verification, program analysis, and compiler testing, particularly over the theory of Quantifier-Free Floating-Point (QF_FP). While recent optimization-based SMT solvers have successfully applied gradient descent to continuous relaxations of logical formulas, they are fundamentally bottlenecked by gradient domination, a phenomenon where a small subset of difficult clauses hijacks the optimization trajectory, preventing the solver from satisfying the broader formula and trap",
-      "excerptHash": "efb76750b598b639010b9afd08aaf7d6e5be4b768cb3540cc9449fe4b837a653",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-08T06:36:31.359433+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "1e6ae007326a420f7f0acd54f4ac8fe89baff9ec342b60cae2c211737115e033"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.08793",
-      "title": "Adaptive Workflow Intelligence: A Cognitive Architecture for Context-Driven Enterprise Automation",
-      "excerpt": "arXiv:2610.08793v1 Announce Type: new Abstract: Enterprise systems increasingly rely on automated workflows, yet many AI-driven solutions remain brittle under non-stationary conditions, evolving policies, and delayed operational feedback. While reinforcement learning and large language model (LLM) agents offer partial adaptability, they do not by themselves provide persistent reflection mechanisms or straightforward integration with policy-constrained enterprise operations. This paper introduces Adaptive Workflow Intelligence (AWI), a cognitive architecture for context-driven enterprise agents",
-      "excerptHash": "67fbcf6861b22e16825d4a154ac1435945580b184a8e3ccd383079c533becbeb",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-08T06:36:31.358786+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "1e6ae007326a420f7f0acd54f4ac8fe89baff9ec342b60cae2c211737115e033"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02331",
-      "title": "World Editing: Intervening on Executable Worlds at Increasing Depth",
-      "excerpt": "arXiv:2610.02331v1 Announce Type: new Abstract: Interactive world models are increasingly capable of generating environments and acting within them, yet deliberately editing an existing executable world remains underexplored. We formulate world editing as intervening on an existing world while preserving properties that should remain unchanged, and introduce intervention depth as an axis describing how strongly an edit couples world entities, dynamics, and systems. We instantiate this capability through industry-grade game modding and introduce IGMWorld, together with IGMBench, a benchmark of ",
-      "excerptHash": "4271dec7ce336587782aa9ffe848cc8785d623d329114a13fccf81debce5e75a",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.762069+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02330",
-      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
-      "excerpt": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decisions. In long-horizon tool use, final-outcome rewards provide weak credit assignment over long interaction traces. Step-level rewards can offer more targeted feedback, but obtaining reliable step supervision often requires human or LLM judgment, or additional rollouts to estimate the downstream effect of an intermediate decision. In this paper, we argue that effective tool-use ",
-      "excerptHash": "7bec54704d5bab1a15059ae8f3d4c8a2d6c278c8339730f263588a5464485312",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.761481+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02300",
-      "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
-      "excerpt": "arXiv:2610.02300v1 Announce Type: new Abstract: Training-free safeguards for text-to-image generation often rely on a reusable safety signal, such as an unsafe direction or global toxic subspace, applied broadly across prompts. We provide a controlled geometric analysis of this global-unsafety assumption and reveal a consistent coverage-selectivity trade-off: compact unsafe subspaces fail to cover heterogeneous unsafe semantics, whereas broader aggregation increasingly distorts safety-adjacent benign prompts. Motivated by this finding, we propose CALM (Counterfactual Adaptive Local Modulation)",
-      "excerptHash": "492be04c66a2795eda67614d292f3c39c7f7a1caabb712a7252d16cbcd6df5b3",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.760874+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.02281",
-      "title": "The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?",
-      "excerpt": "arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed at scale with LLMs, provide a useful signal about how companies disclose their response to AI? We test this by applying a reproducible two-stage classification pipeline to 9,821 annual reports from 1,362 UK listed companies (2020-2025, with partial 2026 data). We first validate the method against 474 human-annotated passages, finding high recall and moderate label-level agreement. We then report th",
-      "excerptHash": "ee4bf6465196f0092a9362fb096dea87de09153fedef14561497d41d50c179e0",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-05T06:10:07.760270+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 5,
-  "parentHash": "f4582eb2a7f27297211674b5bf2bf72d76765766cb4043aa80f3a71f61351f0c",
-  "at": "2026-10-16T04:56:58.713641+00:00",
-  "runId": "38853220464",
-  "artifactHash": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d"
+  "generation": 6,
+  "parentHash": "604309e04017e30736b23f10d26502b27d3398f740225c3da919bddf3eb3ac7d",
+  "at": "2026-10-22T05:18:47.597830+00:00",
+  "runId": "39727285387",
+  "artifactHash": "c999bd21ca17178e8b81e8fd0105d7c733ad9bba1bc0f53e970018d84d792b03"
 }
