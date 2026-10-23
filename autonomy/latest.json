@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39886239759",
+  "runId": "39920771488",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-23T01:50:55Z",
+  "at": "2026-10-23T07:53:39Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "92750b23d2ae506e9a418db7a8977e4c4c32f57dcd815cef96075d03e89e7a38",
-  "cycleNumber": 106,
+  "parentRecordHash": "514264de515da2e8c14675e748777b0d767ba3ecc43c4b5129a2a3cac7df5395",
+  "cycleNumber": 107,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "TimeoutError",
-    "items": []
+    "access": "fetched",
+    "hash": "35bd36618324b5d0229b2674462cda67c78967e7bd78de5a57a302c30dfd5ed6",
+    "items": [
+      {
+        "title": "Is Spectral Self-Supervised Learning a Minimax Optimal Method of Density Ratio Estimation?",
+        "url": "http://arxiv.org/abs/2610.31603v1",
+        "updated": "2026-10-22T17:35:36Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "SympFormer: Inertial Attention Blocks from Damped Hamiltonian Dynamics on Spaces of Probability Measures",
+        "url": "http://arxiv.org/abs/2610.31600v1",
+        "updated": "2026-10-22T17:32:11Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-23T07:53:40Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 12.485,
+  "elapsedSeconds": 0.531,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "514264de515da2e8c14675e748777b0d767ba3ecc43c4b5129a2a3cac7df5395"
+  "recordHash": "d8f5762f272e9c4d2e51e8fc8c2fd6ff016f98c446a379bbe322a35e73695afa"
 }
