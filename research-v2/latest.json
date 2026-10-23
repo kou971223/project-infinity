@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-10-22T21:54:09.517592+00:00",
+  "at": "2026-10-23T05:17:38.482280+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "39860881408",
+  "runId": "39904931637",
   "parents": {
     "knowledge": "c999bd21ca17178e8b81e8fd0105d7c733ad9bba1bc0f53e970018d84d792b03",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.078854+00:00",
+      "checkedAt": "2026-10-23T05:17:38.091964+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "9d1724f6d3fd8aa78f68e7bb75e6f1b1cbd0a1f612ae3262334beb42d1594ed2"
+      "sourceHash": "20c08c62c78a1fce0d2813198a9222261f932828f780e42a74555b4ae016745c"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,73 +24,73 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.255754+00:00",
+      "checkedAt": "2026-10-23T05:17:38.387282+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "7905315d944489578cd84f578ffbdda89ca3407a46d016ff37395f24b9c36427"
+      "sourceHash": "672ed71baebe0571d593e4242b75d1d29db41d8b4d9a22da0c1e0994b6dea6ff"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28686",
-      "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
-      "excerpt": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approxima",
-      "excerptHash": "e24f38ff473ae9541c24d9181f862e9c7959f51cb9daccbd0292c20e3203169d",
+      "url": "https://arxiv.org/abs/2610.30151",
+      "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
+      "excerpt": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we",
+      "excerptHash": "805ec861d4caf830eb61642b1da889c0440bedc3541cedb03cbd7a810c5bd3d0",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.513800+00:00",
+      "checkedAt": "2026-10-23T05:17:38.478964+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28698",
-      "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
-      "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours",
-      "excerptHash": "202a0661263243537f908f162d1c5f25e9810946a5f16a7014e463155cb02f22",
+      "url": "https://arxiv.org/abs/2610.30157",
+      "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
+      "excerpt": "arXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external systems such as files, APIs, databases, and cloud services. Two competing paradigms have emerged: CLI (Command Line Interface), where agents execute shell commands directly, and MCP (Model Context Protocol), a structured JSON-RPC protocol providing governed, typed tool access. This paper presents a comparative analysis across 14 evaluation dimensions, supported by worked examples, security assessment against established compliance frameworks, and economic modeling. Our analysis indicates that",
+      "excerptHash": "c21a3ac65bfc9d9064de4361290b880b6d13442e0a846dd9ba3c4af6fa17cfc6",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.514401+00:00",
+      "checkedAt": "2026-10-23T05:17:38.479453+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28706",
-      "title": "SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery",
-      "excerpt": "arXiv:2610.28706v1 Announce Type: new Abstract: LLM-driven evolutionary search is a promising paradigm for scientific discovery, but existing methods remain costly and slow, often applying expensive reasoning uniformly while underusing evidence from failed, redundant, and saturated trials. We introduce Speculative Evolution (SpecEvo), a multi-LLM framework that coordinates lightweight and frontier models through continual consolidation of search evidence. Lightweight models power both parallel Speculators, which generate and refine candidate programs, and an Advisor, which distills accumulated",
-      "excerptHash": "1ca27608e5249ecd140231abe200b58f1519a327502f05474ee33a5576db9780",
+      "url": "https://arxiv.org/abs/2610.30170",
+      "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
+      "excerpt": "arXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent national hazard mapping to guide proactive mitigation, including fuel management, land-use planning, infrastructure protection, and evacuation routing. However, process-based wildfire simulation frameworks (e.g., BurnP3 and BurnP3+) rely on computationally intensive Monte Carlo simulations to model burn probability, fire intensity, and rate of spread. These workflows can take days to weeks to process a single regional modelling unit. To overcome these computational bottlenecks, we present th",
+      "excerptHash": "4bc43af2d7dc1ce368714a16e56aa9feb6f202e71f4b37de786a53f621185576",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.514952+00:00",
+      "checkedAt": "2026-10-23T05:17:38.479938+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28763",
-      "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
-      "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-th",
-      "excerptHash": "f8224241c8c260bd8361f6f8470fdb61b3d4c8c3d6ccaaf6b34e21a8fc6b3450",
+      "url": "https://arxiv.org/abs/2610.30173",
+      "title": "Neural Networks with Differentiable Belief-Function Layers",
+      "excerpt": "arXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}\\kappa)^{-1}$, where $\\kappa$ is the conflict mass, puts a $(1{-}\\kappa)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which ",
+      "excerptHash": "3618cfc93b8fcc1851fe39078a16e916dfa178611251e6da9fae04b325adbd01",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.515524+00:00",
+      "checkedAt": "2026-10-23T05:17:38.480404+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28815",
-      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
-      "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To a",
-      "excerptHash": "9c13337d17a0687c27455a8caa4951c1b6983c87167e8af49b20913a833d9427",
+      "url": "https://arxiv.org/abs/2610.30176",
+      "title": "When Stable and Preferred Semantics Agree: A Path-Based Approach",
+      "excerpt": "arXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred and stable semantics agree in abstract argumentation frameworks. Our approach is based on suitably chosen sets of paths in the attack graph and binary relations induced by them. We establish a general path-based criterion for semantic agreement and instantiate it with several classes of paths, obtaining sufficient conditions expressed in terms of well-foundedness of the corresponding relations. The resulting conditions strictly generalize two principal structural criteria for preferred an",
+      "excerptHash": "4653e1d6cd72a3b6d408c37d08f47edbdf579b938a2d9fb7e896ae36dc15d6b7",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.516098+00:00",
+      "checkedAt": "2026-10-23T05:17:38.480879+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     },
     {
-      "url": "https://arxiv.org/abs/2610.28826",
-      "title": "Decision language models as affordable and rapid alternatives to LLM judges of clinical generative AI",
-      "excerpt": "arXiv:2610.28826v1 Announce Type: new Abstract: Automated judges of clinical artificial intelligence (AI) outputs are necessary, but large language model (LLM) judges are costly and slow at scale. We compared Jev, a decision language model that returns structured judgments, with frontier and open-weight LLM judges in four use cases. On 118 pediatric answers, Jev's agreement with physicians' ordinal quality ratings (Gwet's AC2 0.50; expected score 0.53) matched or exceeded that of seven of 12 LLM judges, including frontier models, Claude Opus 5.5 (0.49) and GPT-6 (0.38). On physician-graded bin",
-      "excerptHash": "ca68379ddb3c439f995b08ce348040c6bc0f1bbf5961338a1c3bd364bcdc8f89",
+      "url": "https://arxiv.org/abs/2610.30205",
+      "title": "Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail?",
+      "excerpt": "arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed action. We test whether the same holds in games (Sokoban, Connect Four, Othello), where a move can fail by being illegal or by being legal but losing, both verified exactly. On fixed probe items built by perturbing a correct move, the record backfires: pooled over 8 instruction-tuned models (135M-1.7B) it makes the failed move more likely (correctiv",
+      "excerptHash": "c4029ad9a0383bb01bd2171cb4c43d80bfe8dd6c521d5adda0d9d1bd06c5f801",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-22T21:54:09.516644+00:00",
+      "checkedAt": "2026-10-23T05:17:38.481351+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
     }
   ],
   "sourceFailures": [],
-  "task": "mean",
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,76 +104,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 13872449334680,
+    "trainingSeed": 147157034953807,
     "trainingExamples": [
       {
         "args": {
-          "a": "3783.31",
-          "b": "4927.78",
-          "c": "4641.46"
+          "width": "1487.16",
+          "height": "-5323.75"
         },
-        "expected": "89017/20"
+        "expected": "-158345361/20"
       },
       {
         "args": {
-          "a": "-2845.61",
-          "b": "6221.40",
-          "c": "5786.41"
+          "width": "6552.23",
+          "height": "2239.16"
         },
-        "expected": "45811/15"
+        "expected": "36678728317/2500"
       },
       {
         "args": {
-          "a": "-4294.82",
-          "b": "8260.10",
-          "c": "-6122.45"
+          "width": "3270.72",
+          "height": "8116.39"
         },
-        "expected": "-215717/300"
+        "expected": "16591524438/625"
       },
       {
         "args": {
-          "a": "7246.08",
-          "b": "56.26",
-          "c": "-5997.88"
+          "width": "6742.20",
+          "height": "-8574.53"
         },
-        "expected": "21741/50"
+        "expected": "-28905598083/500"
       }
     ],
-    "examined": 15345,
-    "states": 6009,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "af1ab22c6f424bdc9ac3eb939a3b96029b86b9ff1a814f5e02d59fd76dca3e67",
+  "frozenHash": "5d36627dc7a3d6a02a52f7b03ef73445823ab96f0da63f32db506b4488eaba56",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -183,9 +165,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.078854+00:00",
+        "checkedAt": "2026-10-23T05:17:38.091964+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "9d1724f6d3fd8aa78f68e7bb75e6f1b1cbd0a1f612ae3262334beb42d1594ed2"
+        "sourceHash": "20c08c62c78a1fce0d2813198a9222261f932828f780e42a74555b4ae016745c"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -193,69 +175,69 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.255754+00:00",
+        "checkedAt": "2026-10-23T05:17:38.387282+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "7905315d944489578cd84f578ffbdda89ca3407a46d016ff37395f24b9c36427"
+        "sourceHash": "672ed71baebe0571d593e4242b75d1d29db41d8b4d9a22da0c1e0994b6dea6ff"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28686",
-        "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
-        "excerpt": "arXiv:2610.28686v1 Announce Type: new Abstract: Query clarification is essential for retrieval-augmented generation (RAG) systems that face ambiguous user queries. We consider multi-turn grounded conversational scenarios where a user query is either ill-formed or ambiguous in the context of the prior dialog or, more interestingly, it may be well-formed but when posed against retrieved documents there are multiple relevant interpretations. The task is to recognize both such cases and then generate an appropriate clarification request to the user. We present ClariEdge, a new dataset of approxima",
-        "excerptHash": "e24f38ff473ae9541c24d9181f862e9c7959f51cb9daccbd0292c20e3203169d",
+        "url": "https://arxiv.org/abs/2610.30151",
+        "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
+        "excerpt": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we",
+        "excerptHash": "805ec861d4caf830eb61642b1da889c0440bedc3541cedb03cbd7a810c5bd3d0",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.513800+00:00",
+        "checkedAt": "2026-10-23T05:17:38.478964+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28698",
-        "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
-        "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours",
-        "excerptHash": "202a0661263243537f908f162d1c5f25e9810946a5f16a7014e463155cb02f22",
+        "url": "https://arxiv.org/abs/2610.30157",
+        "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
+        "excerpt": "arXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external systems such as files, APIs, databases, and cloud services. Two competing paradigms have emerged: CLI (Command Line Interface), where agents execute shell commands directly, and MCP (Model Context Protocol), a structured JSON-RPC protocol providing governed, typed tool access. This paper presents a comparative analysis across 14 evaluation dimensions, supported by worked examples, security assessment against established compliance frameworks, and economic modeling. Our analysis indicates that",
+        "excerptHash": "c21a3ac65bfc9d9064de4361290b880b6d13442e0a846dd9ba3c4af6fa17cfc6",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.514401+00:00",
+        "checkedAt": "2026-10-23T05:17:38.479453+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28706",
-        "title": "SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery",
-        "excerpt": "arXiv:2610.28706v1 Announce Type: new Abstract: LLM-driven evolutionary search is a promising paradigm for scientific discovery, but existing methods remain costly and slow, often applying expensive reasoning uniformly while underusing evidence from failed, redundant, and saturated trials. We introduce Speculative Evolution (SpecEvo), a multi-LLM framework that coordinates lightweight and frontier models through continual consolidation of search evidence. Lightweight models power both parallel Speculators, which generate and refine candidate programs, and an Advisor, which distills accumulated",
-        "excerptHash": "1ca27608e5249ecd140231abe200b58f1519a327502f05474ee33a5576db9780",
+        "url": "https://arxiv.org/abs/2610.30170",
+        "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
+        "excerpt": "arXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent national hazard mapping to guide proactive mitigation, including fuel management, land-use planning, infrastructure protection, and evacuation routing. However, process-based wildfire simulation frameworks (e.g., BurnP3 and BurnP3+) rely on computationally intensive Monte Carlo simulations to model burn probability, fire intensity, and rate of spread. These workflows can take days to weeks to process a single regional modelling unit. To overcome these computational bottlenecks, we present th",
+        "excerptHash": "4bc43af2d7dc1ce368714a16e56aa9feb6f202e71f4b37de786a53f621185576",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.514952+00:00",
+        "checkedAt": "2026-10-23T05:17:38.479938+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28763",
-        "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
-        "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best models on scientific ML benchmarks, spanning 20 benchmarks across 11 domains. Rather than ranking agents on a leaderboard, Agent4Sci asks what kinds of progress agents can make on these tasks under in-th",
-        "excerptHash": "f8224241c8c260bd8361f6f8470fdb61b3d4c8c3d6ccaaf6b34e21a8fc6b3450",
+        "url": "https://arxiv.org/abs/2610.30173",
+        "title": "Neural Networks with Differentiable Belief-Function Layers",
+        "excerpt": "arXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}\\kappa)^{-1}$, where $\\kappa$ is the conflict mass, puts a $(1{-}\\kappa)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which ",
+        "excerptHash": "3618cfc93b8fcc1851fe39078a16e916dfa178611251e6da9fae04b325adbd01",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.515524+00:00",
+        "checkedAt": "2026-10-23T05:17:38.480404+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28815",
-        "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
-        "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To a",
-        "excerptHash": "9c13337d17a0687c27455a8caa4951c1b6983c87167e8af49b20913a833d9427",
+        "url": "https://arxiv.org/abs/2610.30176",
+        "title": "When Stable and Preferred Semantics Agree: A Path-Based Approach",
+        "excerpt": "arXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred and stable semantics agree in abstract argumentation frameworks. Our approach is based on suitably chosen sets of paths in the attack graph and binary relations induced by them. We establish a general path-based criterion for semantic agreement and instantiate it with several classes of paths, obtaining sufficient conditions expressed in terms of well-foundedness of the corresponding relations. The resulting conditions strictly generalize two principal structural criteria for preferred an",
+        "excerptHash": "4653e1d6cd72a3b6d408c37d08f47edbdf579b938a2d9fb7e896ae36dc15d6b7",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.516098+00:00",
+        "checkedAt": "2026-10-23T05:17:38.480879+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       },
       {
-        "url": "https://arxiv.org/abs/2610.28826",
-        "title": "Decision language models as affordable and rapid alternatives to LLM judges of clinical generative AI",
-        "excerpt": "arXiv:2610.28826v1 Announce Type: new Abstract: Automated judges of clinical artificial intelligence (AI) outputs are necessary, but large language model (LLM) judges are costly and slow at scale. We compared Jev, a decision language model that returns structured judgments, with frontier and open-weight LLM judges in four use cases. On 118 pediatric answers, Jev's agreement with physicians' ordinal quality ratings (Gwet's AC2 0.50; expected score 0.53) matched or exceeded that of seven of 12 LLM judges, including frontier models, Claude Opus 5.5 (0.49) and GPT-6 (0.38). On physician-graded bin",
-        "excerptHash": "ca68379ddb3c439f995b08ce348040c6bc0f1bbf5961338a1c3bd364bcdc8f89",
+        "url": "https://arxiv.org/abs/2610.30205",
+        "title": "Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail?",
+        "excerpt": "arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed action. We test whether the same holds in games (Sokoban, Connect Four, Othello), where a move can fail by being illegal or by being legal but losing, both verified exactly. On fixed probe items built by perturbing a correct move, the record backfires: pooled over 8 instruction-tuned models (135M-1.7B) it makes the failed move more likely (correctiv",
+        "excerptHash": "c4029ad9a0383bb01bd2171cb4c43d80bfe8dd6c521d5adda0d9d1bd06c5f801",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-22T21:54:09.516644+00:00",
+        "checkedAt": "2026-10-23T05:17:38.481351+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "bcfb952d717f7a0f945e12e68e4a71135a6b3783842189ee7cbf07483c944457"
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
       }
     ],
     "rejected": [],
@@ -263,593 +245,529 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 694960318025,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 132731252555413,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "7756.29",
-          "b": "2399.41",
-          "c": "-5873.55"
+          "width": "-5606.54",
+          "height": "4840.75"
         },
-        "expected": "85643/60",
-        "reply": "85643/60"
+        "expected": "-5427971701/200",
+        "reply": "-5427971701/200"
       },
       {
         "args": {
-          "a": "-4504.08",
-          "b": "6048.03",
-          "c": "-6043.72"
+          "width": "7198.65",
+          "height": "-2073.35"
         },
-        "expected": "-449977/300",
-        "reply": "-449977/300"
+        "expected": "-5970128391/400",
+        "reply": "-5970128391/400"
       },
       {
         "args": {
-          "a": "-7899.83",
-          "b": "8736.18",
-          "c": "-3846.61"
+          "width": "5481.09",
+          "height": "7444.14"
         },
-        "expected": "-50171/50",
-        "reply": "-50171/50"
+        "expected": "204010006563/5000",
+        "reply": "204010006563/5000"
       },
       {
         "args": {
-          "a": "7631.33",
-          "b": "9075.18",
-          "c": "-2374.42"
+          "width": "-5350.34",
+          "height": "-5562.16"
         },
-        "expected": "1433209/300",
-        "reply": "1433209/300"
+        "expected": "18599654459/625",
+        "reply": "18599654459/625"
       },
       {
         "args": {
-          "a": "-9952.38",
-          "b": "8645.37",
-          "c": "1953.85"
+          "width": "-8437.69",
+          "height": "-3836.40"
         },
-        "expected": "16171/75",
-        "reply": "16171/75"
+        "expected": "8092588479/250",
+        "reply": "8092588479/250"
       },
       {
         "args": {
-          "a": "-2168.28",
-          "b": "236.34",
-          "c": "-7775.72"
+          "width": "3733.61",
+          "height": "-8596.41"
         },
-        "expected": "-485383/150",
-        "reply": "-485383/150"
+        "expected": "-320956423401/10000",
+        "reply": "-320956423401/10000"
       },
       {
         "args": {
-          "a": "2099.95",
-          "b": "4165.23",
-          "c": "-5520.49"
+          "width": "-7492.88",
+          "height": "-4202.68"
         },
-        "expected": "24823/100",
-        "reply": "24823/100"
+        "expected": "19681360574/625",
+        "reply": "19681360574/625"
       },
       {
         "args": {
-          "a": "-6241.37",
-          "b": "-4788.59",
-          "c": "6370.55"
+          "width": "8227.74",
+          "height": "-7906.07"
         },
-        "expected": "-465941/300",
-        "reply": "-465941/300"
+        "expected": "-325245441909/5000",
+        "reply": "-325245441909/5000"
       },
       {
         "args": {
-          "a": "7693.89",
-          "b": "9698.45",
-          "c": "7987.99"
+          "width": "5988.53",
+          "height": "9177.11"
         },
-        "expected": "846011/100",
-        "reply": "846011/100"
+        "expected": "549573985483/10000",
+        "reply": "549573985483/10000"
       },
       {
         "args": {
-          "a": "3117.13",
-          "b": "9817.85",
-          "c": "9124.50"
+          "width": "4647.56",
+          "height": "8359.06"
         },
-        "expected": "183829/25",
-        "reply": "183829/25"
+        "expected": "48561541117/1250",
+        "reply": "48561541117/1250"
       },
       {
         "args": {
-          "a": "-8974.02",
-          "b": "2886.26",
-          "c": "1624.41"
+          "width": "-3390.38",
+          "height": "-8881.05"
         },
-        "expected": "-89267/60",
-        "reply": "-89267/60"
+        "expected": "30110134299/1000",
+        "reply": "30110134299/1000"
       },
       {
         "args": {
-          "a": "8228.69",
-          "b": "-6726.91",
-          "c": "-1291.95"
+          "width": "-3957.50",
+          "height": "-1453.00"
         },
-        "expected": "20983/300",
-        "reply": "20983/300"
+        "expected": "11500495/2",
+        "reply": "11500495/2"
       },
       {
         "args": {
-          "a": "1594.42",
-          "b": "-3876.15",
-          "c": "6445.81"
+          "width": "-301.10",
+          "height": "6539.79"
         },
-        "expected": "104102/75",
-        "reply": "104102/75"
+        "expected": "-1969130769/1000",
+        "reply": "-1969130769/1000"
       },
       {
         "args": {
-          "a": "-5743.48",
-          "b": "-3903.55",
-          "c": "2859.81"
+          "width": "5816.63",
+          "height": "-5023.91"
         },
-        "expected": "-339361/150",
-        "reply": "-339361/150"
+        "expected": "-292222256233/10000",
+        "reply": "-292222256233/10000"
       },
       {
         "args": {
-          "a": "3251.21",
-          "b": "2834.07",
-          "c": "5368.75"
+          "width": "-1212.15",
+          "height": "-720.61"
         },
-        "expected": "381801/100",
-        "reply": "381801/100"
+        "expected": "1746974823/2000",
+        "reply": "1746974823/2000"
       },
       {
         "args": {
-          "a": "1060.59",
-          "b": "-2202.76",
-          "c": "-7472.90"
+          "width": "-3505.15",
+          "height": "-6109.01"
         },
-        "expected": "-287169/100",
-        "reply": "-287169/100"
+        "expected": "42825992803/2000",
+        "reply": "42825992803/2000"
       },
       {
         "args": {
-          "a": "9200.65",
-          "b": "-6854.75",
-          "c": "6850.44"
+          "width": "5249.29",
+          "height": "-4002.33"
         },
-        "expected": "459817/150",
-        "reply": "459817/150"
+        "expected": "-210093908457/10000",
+        "reply": "-210093908457/10000"
       },
       {
         "args": {
-          "a": "-4964.19",
-          "b": "4076.76",
-          "c": "1578.78"
+          "width": "3381.85",
+          "height": "-7944.73"
         },
-        "expected": "4609/20",
-        "reply": "4609/20"
+        "expected": "-53735770301/2000",
+        "reply": "-53735770301/2000"
       },
       {
         "args": {
-          "a": "-9982.15",
-          "b": "-9056.76",
-          "c": "-1340.60"
+          "width": "-1595.88",
+          "height": "-1210.63"
         },
-        "expected": "-679317/100",
-        "reply": "-679317/100"
+        "expected": "4830050511/2500",
+        "reply": "4830050511/2500"
       },
       {
         "args": {
-          "a": "2701.34",
-          "b": "4802.27",
-          "c": "-1435.06"
+          "width": "-1856.27",
+          "height": "-3068.07"
         },
-        "expected": "40457/20",
-        "reply": "40457/20"
+        "expected": "56951662989/10000",
+        "reply": "56951662989/10000"
       },
       {
         "args": {
-          "a": "6861.93",
-          "b": "7740.75",
-          "c": "2856.60"
+          "width": "-4746.25",
+          "height": "2112.29"
         },
-        "expected": "145494/25",
-        "reply": "145494/25"
+        "expected": "-802036513/80",
+        "reply": "-802036513/80"
       },
       {
         "args": {
-          "a": "2535.48",
-          "b": "-9012.72",
-          "c": "6929.46"
+          "width": "9431.48",
+          "height": "9560.36"
         },
-        "expected": "7537/50",
-        "reply": "7537/50"
+        "expected": "56355215083/625",
+        "reply": "56355215083/625"
       },
       {
         "args": {
-          "a": "4064.95",
-          "b": "6724.20",
-          "c": "-754.78"
+          "width": "-1894.99",
+          "height": "-1964.20"
         },
-        "expected": "334479/100",
-        "reply": "334479/100"
+        "expected": "1861069679/500",
+        "reply": "1861069679/500"
       },
       {
         "args": {
-          "a": "4715.62",
-          "b": "5051.28",
-          "c": "-5029.16"
+          "width": "-7943.09",
+          "height": "-8614.55"
         },
-        "expected": "236887/150",
-        "reply": "236887/150"
+        "expected": "136852291919/2000",
+        "reply": "136852291919/2000"
       },
       {
         "args": {
-          "a": "1169.41",
-          "b": "1862.62",
-          "c": "-4264.77"
+          "width": "7377.85",
+          "height": "2004.95"
         },
-        "expected": "-61637/150",
-        "reply": "-61637/150"
+        "expected": "5916888143/400",
+        "reply": "5916888143/400"
       },
       {
         "args": {
-          "a": "1033.36",
-          "b": "2477.94",
-          "c": "8361.34"
+          "width": "-4401.24",
+          "height": "-2505.97"
         },
-        "expected": "296816/75",
-        "reply": "296816/75"
+        "expected": "27573438507/2500",
+        "reply": "27573438507/2500"
       },
       {
         "args": {
-          "a": "1904.17",
-          "b": "-8632.51",
-          "c": "799.56"
+          "width": "1917.23",
+          "height": "5979.78"
         },
-        "expected": "-98813/50",
-        "reply": "-98813/50"
+        "expected": "57323068047/5000",
+        "reply": "57323068047/5000"
       },
       {
         "args": {
-          "a": "9068.44",
-          "b": "5793.07",
-          "c": "-817.36"
+          "width": "3776.97",
+          "height": "-7340.04"
         },
-        "expected": "280883/60",
-        "reply": "280883/60"
+        "expected": "-69307777197/2500",
+        "reply": "-69307777197/2500"
       },
       {
         "args": {
-          "a": "6840.84",
-          "b": "-4886.70",
-          "c": "-1144.76"
+          "width": "-4740.17",
+          "height": "7215.03"
         },
-        "expected": "40469/150",
-        "reply": "40469/150"
+        "expected": "-342004687551/10000",
+        "reply": "-342004687551/10000"
       },
       {
         "args": {
-          "a": "5744.35",
-          "b": "6.69",
-          "c": "6322.05"
+          "width": "1168.47",
+          "height": "-2340.44"
         },
-        "expected": "1207309/300",
-        "reply": "1207309/300"
+        "expected": "-6836834817/2500",
+        "reply": "-6836834817/2500"
       },
       {
         "args": {
-          "a": "-4971.94",
-          "b": "-8588.93",
-          "c": "843.82"
+          "width": "7596.46",
+          "height": "-2117.25"
         },
-        "expected": "-254341/60",
-        "reply": "-254341/60"
+        "expected": "-3216720987/200",
+        "reply": "-3216720987/200"
       },
       {
         "args": {
-          "a": "-3091.73",
-          "b": "8886.77",
-          "c": "-8454.16"
+          "width": "-5327.75",
+          "height": "-7983.95"
         },
-        "expected": "-66478/75",
-        "reply": "-66478/75"
+        "expected": "3402919169/80",
+        "reply": "3402919169/80"
       },
       {
         "args": {
-          "a": "8165.16",
-          "b": "6888.55",
-          "c": "9475.85"
+          "width": "880.79",
+          "height": "-5142.61"
         },
-        "expected": "204413/25",
-        "reply": "204413/25"
+        "expected": "-45295594619/10000",
+        "reply": "-45295594619/10000"
       },
       {
         "args": {
-          "a": "-4510.06",
-          "b": "-61.09",
-          "c": "-4018.83"
+          "width": "3178.66",
+          "height": "5996.45"
         },
-        "expected": "-429499/150",
-        "reply": "-429499/150"
+        "expected": "19060675757/1000",
+        "reply": "19060675757/1000"
       },
       {
         "args": {
-          "a": "-6032.70",
-          "b": "-2695.39",
-          "c": "7216.05"
+          "width": "-9799.05",
+          "height": "-3644.08"
         },
-        "expected": "-37801/75",
-        "reply": "-37801/75"
+        "expected": "8927130531/250",
+        "reply": "8927130531/250"
       },
       {
         "args": {
-          "a": "-753.67",
-          "b": "5847.64",
-          "c": "-6310.86"
+          "width": "-2397.00",
+          "height": "-3812.33"
         },
-        "expected": "-40563/100",
-        "reply": "-40563/100"
+        "expected": "913815501/100",
+        "reply": "913815501/100"
       },
       {
         "args": {
-          "a": "959.80",
-          "b": "-9026.20",
-          "c": "3941.62"
+          "width": "-5948.36",
+          "height": "-8769.12"
         },
-        "expected": "-206239/150",
-        "reply": "-206239/150"
+        "expected": "32601176652/625",
+        "reply": "32601176652/625"
       },
       {
         "args": {
-          "a": "8736.54",
-          "b": "1076.66",
-          "c": "4286.20"
+          "width": "6744.53",
+          "height": "-8191.68"
         },
-        "expected": "23499/5",
-        "reply": "23499/5"
+        "expected": "-34530644694/625",
+        "reply": "-34530644694/625"
       },
       {
         "args": {
-          "a": "4586.91",
-          "b": "-928.55",
-          "c": "8076.68"
+          "width": "-6222.35",
+          "height": "272.40"
         },
-        "expected": "97792/25",
-        "reply": "97792/25"
+        "expected": "-84748407/50",
+        "reply": "-84748407/50"
       },
       {
         "args": {
-          "a": "-2426.72",
-          "b": "9135.18",
-          "c": "4721.62"
+          "width": "1595.39",
+          "height": "-5460.58"
         },
-        "expected": "285752/75",
-        "reply": "285752/75"
+        "expected": "-43558773631/5000",
+        "reply": "-43558773631/5000"
       },
       {
         "args": {
-          "a": "8287.74",
-          "b": "-512.62",
-          "c": "-9234.88"
+          "width": "-6402.83",
+          "height": "-3771.71"
         },
-        "expected": "-36494/75",
-        "reply": "-36494/75"
+        "expected": "241496179393/10000",
+        "reply": "241496179393/10000"
       },
       {
         "args": {
-          "a": "-6010.91",
-          "b": "2599.91",
-          "c": "1198.97"
+          "width": "9769.27",
+          "height": "9123.71"
         },
-        "expected": "-221203/300",
-        "reply": "-221203/300"
+        "expected": "891319863917/10000",
+        "reply": "891319863917/10000"
       },
       {
         "args": {
-          "a": "5894.36",
-          "b": "3545.54",
-          "c": "7940.99"
+          "width": "-7881.10",
+          "height": "7422.73"
         },
-        "expected": "579363/100",
-        "reply": "579363/100"
+        "expected": "-58499277403/1000",
+        "reply": "-58499277403/1000"
       },
       {
         "args": {
-          "a": "-5483.34",
-          "b": "-2175.30",
-          "c": "-7163.35"
+          "width": "-451.37",
+          "height": "6085.49"
         },
-        "expected": "-1482199/300",
-        "reply": "-1482199/300"
+        "expected": "-27468076213/10000",
+        "reply": "-27468076213/10000"
       },
       {
         "args": {
-          "a": "6863.26",
-          "b": "9485.16",
-          "c": "-1372.82"
+          "width": "3632.96",
+          "height": "3589.27"
         },
-        "expected": "74878/15",
-        "reply": "74878/15"
+        "expected": "8149796462/625",
+        "reply": "8149796462/625"
       },
       {
         "args": {
-          "a": "5921.32",
-          "b": "6288.77",
-          "c": "8677.07"
+          "width": "-5738.27",
+          "height": "-1945.50"
         },
-        "expected": "522179/75",
-        "reply": "522179/75"
+        "expected": "2232760857/200",
+        "reply": "2232760857/200"
       },
       {
         "args": {
-          "a": "3406.27",
-          "b": "-7194.66",
-          "c": "-2235.91"
+          "width": "-9969.14",
+          "height": "3303.86"
         },
-        "expected": "-20081/10",
-        "reply": "-20081/10"
+        "expected": "-82341607201/2500",
+        "reply": "-82341607201/2500"
       },
       {
         "args": {
-          "a": "569.78",
-          "b": "1970.54",
-          "c": "-4098.30"
+          "width": "9344.38",
+          "height": "-2533.35"
         },
-        "expected": "-77899/150",
-        "reply": "-77899/150"
+        "expected": "-23672585073/1000",
+        "reply": "-23672585073/1000"
       },
       {
         "args": {
-          "a": "-5368.41",
-          "b": "-11.13",
-          "c": "-3273.48"
+          "width": "1790.49",
+          "height": "8307.42"
         },
-        "expected": "-144217/50",
-        "reply": "-144217/50"
+        "expected": "74371762179/5000",
+        "reply": "74371762179/5000"
       },
       {
         "args": {
-          "a": "-1923.37",
-          "b": "-6894.39",
-          "c": "-108.35"
+          "width": "-2313.72",
+          "height": "4273.30"
         },
-        "expected": "-297537/100",
-        "reply": "-297537/100"
+        "expected": "-2471804919/250",
+        "reply": "-2471804919/250"
       },
       {
         "args": {
-          "a": "3237.03",
-          "b": "-7286.98",
-          "c": "-3212.67"
+          "width": "-7224.35",
+          "height": "6470.60"
         },
-        "expected": "-363131/150",
-        "reply": "-363131/150"
+        "expected": "-4674587911/100",
+        "reply": "-4674587911/100"
       },
       {
         "args": {
-          "a": "3371.35",
-          "b": "-898.00",
-          "c": "4488.74"
+          "width": "-8366.70",
+          "height": "-7335.39"
         },
-        "expected": "696209/300",
-        "reply": "696209/300"
+        "expected": "61373007513/1000",
+        "reply": "61373007513/1000"
       },
       {
         "args": {
-          "a": "-9645.81",
-          "b": "4926.41",
-          "c": "9600.26"
+          "width": "-7583.73",
+          "height": "2330.04"
         },
-        "expected": "244043/150",
-        "reply": "244043/150"
+        "expected": "-44175985623/2500",
+        "reply": "-44175985623/2500"
       },
       {
         "args": {
-          "a": "-2609.34",
-          "b": "8186.43",
-          "c": "-8345.45"
+          "width": "5879.61",
+          "height": "-3192.70"
         },
-        "expected": "-69209/75",
-        "reply": "-69209/75"
+        "expected": "-18771830847/1000",
+        "reply": "-18771830847/1000"
       },
       {
         "args": {
-          "a": "8006.97",
-          "b": "-8249.97",
-          "c": "-7449.47"
+          "width": "619.74",
+          "height": "-8060.54"
         },
-        "expected": "-769247/300",
-        "reply": "-769247/300"
+        "expected": "-12488597649/2500",
+        "reply": "-12488597649/2500"
       },
       {
         "args": {
-          "a": "5941.61",
-          "b": "-7401.45",
-          "c": "-7165.24"
+          "width": "2940.63",
+          "height": "-5305.64"
         },
-        "expected": "-215627/75",
-        "reply": "-215627/75"
+        "expected": "-39004810383/2500",
+        "reply": "-39004810383/2500"
       },
       {
         "args": {
-          "a": "-1211.22",
-          "b": "1907.46",
-          "c": "1671.23"
+          "width": "6382.63",
+          "height": "8180.30"
         },
-        "expected": "236747/300",
-        "reply": "236747/300"
+        "expected": "52211828189/1000",
+        "reply": "52211828189/1000"
       },
       {
         "args": {
-          "a": "-5828.47",
-          "b": "-1990.25",
-          "c": "-1831.76"
+          "width": "-2778.48",
+          "height": "-3226.77"
         },
-        "expected": "-241262/75",
-        "reply": "-241262/75"
+        "expected": "11206894887/1250",
+        "reply": "11206894887/1250"
       },
       {
         "args": {
-          "a": "-763.19",
-          "b": "4198.90",
-          "c": "-9390.88"
+          "width": "3539.58",
+          "height": "9111.10"
         },
-        "expected": "-595517/300",
-        "reply": "-595517/300"
+        "expected": "16124733669/500",
+        "reply": "16124733669/500"
       },
       {
         "args": {
-          "a": "6774.93",
-          "b": "-1536.18",
-          "c": "4093.83"
+          "width": "7253.27",
+          "height": "3409.24"
         },
-        "expected": "155543/50",
-        "reply": "155543/50"
+        "expected": "61820345537/2500",
+        "reply": "61820345537/2500"
       },
       {
         "args": {
-          "a": "-7052.65",
-          "b": "-6655.64",
-          "c": "-4375.60"
+          "width": "2490.98",
+          "height": "-8475.02"
         },
-        "expected": "-1808389/300",
-        "reply": "-1808389/300"
+        "expected": "-52777763299/2500",
+        "reply": "-52777763299/2500"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "NO_CHANGE",
+    "knowledge": "ADOPT",
     "programs": "NO_GAIN"
   },
-  "recordHash": "e8ab1cbae6f7fa3586c7f0e21ffafcb7d20d46b1d92fc592a7a2b8c203c6f461"
+  "recordHash": "2ea090650c4da4bde37f6330de3f39ae97ac1f09aabdb8a6938f056817500dc4"
 }
