@@ -1,0 +1,202 @@
+{
+  "schema": "PINF-CHAT-EVOLUTION-1",
+  "at": "2026-10-23T05:23:39.703395+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "39905500052",
+  "parentArtifactHash": "a648a7400a58349706d813efa7029fd05e6d9f41dca5e85b0a27a87b728695d7",
+  "baseline": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 2,
+    "capabilities": [
+      "exact-integer-v1",
+      "metric-length-v1"
+    ],
+    "parentHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48"
+  },
+  "candidate": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 2,
+    "capabilities": [
+      "exact-integer-v1",
+      "metric-length-v1"
+    ],
+    "parentHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48"
+  },
+  "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
+  "hypothesis": "A fixed exact-answer capability improves correctness or halves latency without changing general-chat routing.",
+  "decision": "MONITOR_PASS",
+  "newCapability": null,
+  "history": [
+    {
+      "schema": "PINF-CHAT-EVOLUTION-1",
+      "generation": 0,
+      "capabilities": [],
+      "parentHash": null
+    },
+    {
+      "schema": "PINF-CHAT-EVOLUTION-1",
+      "generation": 1,
+      "capabilities": [
+        "exact-integer-v1"
+      ],
+      "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
+    }
+  ],
+  "testedCapability": "exact-integer-v1",
+  "evidence": {
+    "protocol": "PINF-CHAT-EVOLUTION-1",
+    "seed": 18139901089701,
+    "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
+    "pairs": [
+      {
+        "prompt": "66720162 + 75776",
+        "expected": "66795938",
+        "baseline": {
+          "reply": "66795938",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "66795938",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "33271441 × 51048",
+        "expected": "1698440520168",
+        "baseline": {
+          "reply": "1698440520168",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "1698440520168",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "34880863 − 84288",
+        "expected": "34796575",
+        "baseline": {
+          "reply": "34796575",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "34796575",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "3145102 ÷ 92503",
+        "expected": "34",
+        "baseline": {
+          "reply": "34",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "34",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "39418281 + 44701",
+        "expected": "39462982",
+        "baseline": {
+          "reply": "39462982",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "39462982",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "41876234 × 66300",
+        "expected": "2776394314200",
+        "baseline": {
+          "reply": "2776394314200",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "2776394314200",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "98137306 − 62482",
+        "expected": "98074824",
+        "baseline": {
+          "reply": "98074824",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "98074824",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "1118923 ÷ 86071",
+        "expected": "13",
+        "baseline": {
+          "reply": "13",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "13",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      }
+    ],
+    "passed": false,
+    "baselineCorrect": 8,
+    "candidateCorrect": 8
+  },
+  "applied": false,
+  "recordHash": "5e3673b54879e892af40c2918ab45b3886c6c68f8c7386f4dd5a924a68c8e49e"
+}
