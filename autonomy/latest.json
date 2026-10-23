@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "39866657081",
+  "runId": "39886239759",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-22T22:41:10Z",
+  "at": "2026-10-23T01:50:55Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "e0f03e9c360c2432c1a2f927bc13742d26e576feddae1ecc7f04631dfdb96f30",
-  "cycleNumber": 105,
+  "parentRecordHash": "92750b23d2ae506e9a418db7a8977e4c4c32f57dcd815cef96075d03e89e7a38",
+  "cycleNumber": 106,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,23 +1132,9 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "fetched",
-    "hash": "8f61482e124bad9e207b0ac9bbf02eb4680d36fd8240890b14a0b76f594b4e20",
-    "items": [
-      {
-        "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
-        "url": "http://arxiv.org/abs/2610.30128v1",
-        "updated": "2026-10-21T17:58:06Z",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "The Dynamics of RMSProp Beyond the Stability Threshold",
-        "url": "http://arxiv.org/abs/2610.30078v1",
-        "updated": "2026-10-21T17:28:29Z",
-        "status": "metadata_only_not_fulltext_verified"
-      }
-    ],
-    "accessedAt": "2026-10-22T22:41:10Z"
+    "access": "unavailable",
+    "errorType": "TimeoutError",
+    "items": []
   },
   "agenda": {
     "source": [
@@ -1160,12 +1146,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.567,
+  "elapsedSeconds": 12.485,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "92750b23d2ae506e9a418db7a8977e4c4c32f57dcd815cef96075d03e89e7a38"
+  "recordHash": "514264de515da2e8c14675e748777b0d767ba3ecc43c4b5129a2a3cac7df5395"
 }
