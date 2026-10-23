@@ -1,0 +1,780 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-23T12:01:47.484005+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "39950270379",
+  "parents": {
+    "knowledge": "d4d57e71d3acfa4dde215e46b0851fb2fa17b215b1e22c501a5f5fcc6d090eae",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.197521+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "5439bffac0d93e226bbb62c67840bf2efa99f6efaea0d6c8a1429dd680a244fd"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.394211+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "58494759736aa7d10356ce36aef939f1dd50d389420f75ec7a694bbd5d4ead9f"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30151",
+      "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
+      "excerpt": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we",
+      "excerptHash": "805ec861d4caf830eb61642b1da889c0440bedc3541cedb03cbd7a810c5bd3d0",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.480302+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30157",
+      "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
+      "excerpt": "arXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external systems such as files, APIs, databases, and cloud services. Two competing paradigms have emerged: CLI (Command Line Interface), where agents execute shell commands directly, and MCP (Model Context Protocol), a structured JSON-RPC protocol providing governed, typed tool access. This paper presents a comparative analysis across 14 evaluation dimensions, supported by worked examples, security assessment against established compliance frameworks, and economic modeling. Our analysis indicates that",
+      "excerptHash": "c21a3ac65bfc9d9064de4361290b880b6d13442e0a846dd9ba3c4af6fa17cfc6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.480858+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30170",
+      "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
+      "excerpt": "arXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent national hazard mapping to guide proactive mitigation, including fuel management, land-use planning, infrastructure protection, and evacuation routing. However, process-based wildfire simulation frameworks (e.g., BurnP3 and BurnP3+) rely on computationally intensive Monte Carlo simulations to model burn probability, fire intensity, and rate of spread. These workflows can take days to weeks to process a single regional modelling unit. To overcome these computational bottlenecks, we present th",
+      "excerptHash": "4bc43af2d7dc1ce368714a16e56aa9feb6f202e71f4b37de786a53f621185576",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.481430+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30173",
+      "title": "Neural Networks with Differentiable Belief-Function Layers",
+      "excerpt": "arXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}\\kappa)^{-1}$, where $\\kappa$ is the conflict mass, puts a $(1{-}\\kappa)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which ",
+      "excerptHash": "3618cfc93b8fcc1851fe39078a16e916dfa178611251e6da9fae04b325adbd01",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.481970+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30176",
+      "title": "When Stable and Preferred Semantics Agree: A Path-Based Approach",
+      "excerpt": "arXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred and stable semantics agree in abstract argumentation frameworks. Our approach is based on suitably chosen sets of paths in the attack graph and binary relations induced by them. We establish a general path-based criterion for semantic agreement and instantiate it with several classes of paths, obtaining sufficient conditions expressed in terms of well-foundedness of the corresponding relations. The resulting conditions strictly generalize two principal structural criteria for preferred an",
+      "excerptHash": "4653e1d6cd72a3b6d408c37d08f47edbdf579b938a2d9fb7e896ae36dc15d6b7",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.482523+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30205",
+      "title": "Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail?",
+      "excerpt": "arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed action. We test whether the same holds in games (Sokoban, Connect Four, Othello), where a move can fail by being illegal or by being legal but losing, both verified exactly. On fixed probe items built by perturbing a correct move, the record backfires: pooled over 8 instruction-tuned models (135M-1.7B) it makes the failed move more likely (correctiv",
+      "excerptHash": "c4029ad9a0383bb01bd2171cb4c43d80bfe8dd6c521d5adda0d9d1bd06c5f801",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-23T12:01:47.483087+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "percentage",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 60055131109095,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "-4830.32",
+          "rate": "-6362.17"
+        },
+        "expected": "38414146243/125000"
+      },
+      {
+        "args": {
+          "amount": "-1698.89",
+          "rate": "-3100.12"
+        },
+        "expected": "13166907167/250000"
+      },
+      {
+        "args": {
+          "amount": "-1304.16",
+          "rate": "-1442.60"
+        },
+        "expected": "58793163/3125"
+      },
+      {
+        "args": {
+          "amount": "4942.45",
+          "rate": "-8983.84"
+        },
+        "expected": "-5550272501/12500"
+      }
+    ],
+    "examined": 347,
+    "states": 188,
+    "cost": 5
+  },
+  "programCandidate": {
+    "task": "percentage",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "c5036c8e72dc31a347520f7c5e02fefe6ceaa9f532618fd7eda4ca354ffae58d",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.197521+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "5439bffac0d93e226bbb62c67840bf2efa99f6efaea0d6c8a1429dd680a244fd"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.394211+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "58494759736aa7d10356ce36aef939f1dd50d389420f75ec7a694bbd5d4ead9f"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30151",
+        "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
+        "excerpt": "arXiv:2610.30151v1 Announce Type: new Abstract: Every interaction between AI agents begins with a handshake: the initiating agent must locate its counterpart, learn what it can do, and establish a session before the first useful message can be sent. Surveys of agent communication protocols name handshake overhead as an efficiency criterion, yet none report measurements. This paper presents the first empirical, phase-decomposed benchmark of the handshake in three major agent protocols: MCP (in both its 2025 initialize and 2026 discover eras), A2A, and ACP. Using each protocol's official SDK, we",
+        "excerptHash": "805ec861d4caf830eb61642b1da889c0440bedc3541cedb03cbd7a810c5bd3d0",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.480302+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30157",
+        "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
+        "excerpt": "arXiv:2610.30157v1 Announce Type: new Abstract: AI agents require interfaces to interact with external systems such as files, APIs, databases, and cloud services. Two competing paradigms have emerged: CLI (Command Line Interface), where agents execute shell commands directly, and MCP (Model Context Protocol), a structured JSON-RPC protocol providing governed, typed tool access. This paper presents a comparative analysis across 14 evaluation dimensions, supported by worked examples, security assessment against established compliance frameworks, and economic modeling. Our analysis indicates that",
+        "excerptHash": "c21a3ac65bfc9d9064de4361290b880b6d13442e0a846dd9ba3c4af6fa17cfc6",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.480858+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30170",
+        "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
+        "excerpt": "arXiv:2610.30170v1 Announce Type: new Abstract: Canada's increasing wildfire activity requires frequent national hazard mapping to guide proactive mitigation, including fuel management, land-use planning, infrastructure protection, and evacuation routing. However, process-based wildfire simulation frameworks (e.g., BurnP3 and BurnP3+) rely on computationally intensive Monte Carlo simulations to model burn probability, fire intensity, and rate of spread. These workflows can take days to weeks to process a single regional modelling unit. To overcome these computational bottlenecks, we present th",
+        "excerptHash": "4bc43af2d7dc1ce368714a16e56aa9feb6f202e71f4b37de786a53f621185576",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.481430+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30173",
+        "title": "Neural Networks with Differentiable Belief-Function Layers",
+        "excerpt": "arXiv:2610.30173v1 Announce Type: new Abstract: Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}\\kappa)^{-1}$, where $\\kappa$ is the conflict mass, puts a $(1{-}\\kappa)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which ",
+        "excerptHash": "3618cfc93b8fcc1851fe39078a16e916dfa178611251e6da9fae04b325adbd01",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.481970+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30176",
+        "title": "When Stable and Preferred Semantics Agree: A Path-Based Approach",
+        "excerpt": "arXiv:2610.30176v1 Announce Type: new Abstract: We investigate structural conditions under which preferred and stable semantics agree in abstract argumentation frameworks. Our approach is based on suitably chosen sets of paths in the attack graph and binary relations induced by them. We establish a general path-based criterion for semantic agreement and instantiate it with several classes of paths, obtaining sufficient conditions expressed in terms of well-foundedness of the corresponding relations. The resulting conditions strictly generalize two principal structural criteria for preferred an",
+        "excerptHash": "4653e1d6cd72a3b6d408c37d08f47edbdf579b938a2d9fb7e896ae36dc15d6b7",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.482523+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30205",
+        "title": "Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail?",
+        "excerpt": "arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed action. We test whether the same holds in games (Sokoban, Connect Four, Othello), where a move can fail by being illegal or by being legal but losing, both verified exactly. On fixed probe items built by perturbing a correct move, the record backfires: pooled over 8 instruction-tuned models (135M-1.7B) it makes the failed move more likely (correctiv",
+        "excerptHash": "c4029ad9a0383bb01bd2171cb4c43d80bfe8dd6c521d5adda0d9d1bd06c5f801",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-23T12:01:47.483087+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 151379034213527,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-8437.41",
+          "rate": "9883.91"
+        },
+        "expected": "-833946010731/1000000",
+        "reply": "-833946010731/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2303.75",
+          "rate": "3233.49"
+        },
+        "expected": "-595932207/8000",
+        "reply": "-595932207/8000"
+      },
+      {
+        "args": {
+          "amount": "-9032.80",
+          "rate": "-4331.35"
+        },
+        "expected": "978105457/2500",
+        "reply": "978105457/2500"
+      },
+      {
+        "args": {
+          "amount": "-9260.30",
+          "rate": "1867.10"
+        },
+        "expected": "-1728990613/10000",
+        "reply": "-1728990613/10000"
+      },
+      {
+        "args": {
+          "amount": "-6594.86",
+          "rate": "-4676.71"
+        },
+        "expected": "154211238553/500000",
+        "reply": "154211238553/500000"
+      },
+      {
+        "args": {
+          "amount": "-246.69",
+          "rate": "5453.83"
+        },
+        "expected": "-13454053227/1000000",
+        "reply": "-13454053227/1000000"
+      },
+      {
+        "args": {
+          "amount": "-9511.30",
+          "rate": "-9466.52"
+        },
+        "expected": "22509727919/25000",
+        "reply": "22509727919/25000"
+      },
+      {
+        "args": {
+          "amount": "7353.63",
+          "rate": "4222.31"
+        },
+        "expected": "310493054853/1000000",
+        "reply": "310493054853/1000000"
+      },
+      {
+        "args": {
+          "amount": "-8433.36",
+          "rate": "1349.38"
+        },
+        "expected": "-7112379573/62500",
+        "reply": "-7112379573/62500"
+      },
+      {
+        "args": {
+          "amount": "-910.41",
+          "rate": "6810.86"
+        },
+        "expected": "-31003375263/500000",
+        "reply": "-31003375263/500000"
+      },
+      {
+        "args": {
+          "amount": "-47.19",
+          "rate": "7527.27"
+        },
+        "expected": "-3552118713/1000000",
+        "reply": "-3552118713/1000000"
+      },
+      {
+        "args": {
+          "amount": "2486.01",
+          "rate": "-5415.07"
+        },
+        "expected": "-134619181707/1000000",
+        "reply": "-134619181707/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2042.36",
+          "rate": "-6573.06"
+        },
+        "expected": "16780693527/125000",
+        "reply": "16780693527/125000"
+      },
+      {
+        "args": {
+          "amount": "-4720.24",
+          "rate": "8684.50"
+        },
+        "expected": "-1024823107/2500",
+        "reply": "-1024823107/2500"
+      },
+      {
+        "args": {
+          "amount": "-7407.52",
+          "rate": "2596.07"
+        },
+        "expected": "-12019025279/62500",
+        "reply": "-12019025279/62500"
+      },
+      {
+        "args": {
+          "amount": "-5530.41",
+          "rate": "-9352.93"
+        },
+        "expected": "517255376013/1000000",
+        "reply": "517255376013/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2125.51",
+          "rate": "1349.24"
+        },
+        "expected": "-7169557781/250000",
+        "reply": "-7169557781/250000"
+      },
+      {
+        "args": {
+          "amount": "-4331.51",
+          "rate": "-8763.82"
+        },
+        "expected": "189802869841/500000",
+        "reply": "189802869841/500000"
+      },
+      {
+        "args": {
+          "amount": "-5233.00",
+          "rate": "-3030.48"
+        },
+        "expected": "198231273/1250",
+        "reply": "198231273/1250"
+      },
+      {
+        "args": {
+          "amount": "-781.76",
+          "rate": "2659.11"
+        },
+        "expected": "-649620573/31250",
+        "reply": "-649620573/31250"
+      },
+      {
+        "args": {
+          "amount": "-4665.78",
+          "rate": "8719.18"
+        },
+        "expected": "-101704439151/250000",
+        "reply": "-101704439151/250000"
+      },
+      {
+        "args": {
+          "amount": "9686.26",
+          "rate": "-3310.41"
+        },
+        "expected": "-160327459833/500000",
+        "reply": "-160327459833/500000"
+      },
+      {
+        "args": {
+          "amount": "-3173.65",
+          "rate": "-9990.43"
+        },
+        "expected": "63412256339/200000",
+        "reply": "63412256339/200000"
+      },
+      {
+        "args": {
+          "amount": "-753.04",
+          "rate": "6277.37"
+        },
+        "expected": "-5908888381/125000",
+        "reply": "-5908888381/125000"
+      },
+      {
+        "args": {
+          "amount": "-4475.48",
+          "rate": "7709.54"
+        },
+        "expected": "-43129865099/125000",
+        "reply": "-43129865099/125000"
+      },
+      {
+        "args": {
+          "amount": "-1373.47",
+          "rate": "5896.69"
+        },
+        "expected": "-80989268143/1000000",
+        "reply": "-80989268143/1000000"
+      },
+      {
+        "args": {
+          "amount": "6774.19",
+          "rate": "4218.91"
+        },
+        "expected": "285796979329/1000000",
+        "reply": "285796979329/1000000"
+      },
+      {
+        "args": {
+          "amount": "-5982.21",
+          "rate": "6101.98"
+        },
+        "expected": "-182516628879/500000",
+        "reply": "-182516628879/500000"
+      },
+      {
+        "args": {
+          "amount": "-3297.94",
+          "rate": "-3861.06"
+        },
+        "expected": "31833860541/250000",
+        "reply": "31833860541/250000"
+      },
+      {
+        "args": {
+          "amount": "5206.99",
+          "rate": "3417.24"
+        },
+        "expected": "44483836269/250000",
+        "reply": "44483836269/250000"
+      },
+      {
+        "args": {
+          "amount": "9428.58",
+          "rate": "-9351.04"
+        },
+        "expected": "-13776098238/15625",
+        "reply": "-13776098238/15625"
+      },
+      {
+        "args": {
+          "amount": "-4386.80",
+          "rate": "7610.61"
+        },
+        "expected": "-8346555987/25000",
+        "reply": "-8346555987/25000"
+      },
+      {
+        "args": {
+          "amount": "-5198.09",
+          "rate": "5313.15"
+        },
+        "expected": "-55236463767/200000",
+        "reply": "-55236463767/200000"
+      },
+      {
+        "args": {
+          "amount": "-8983.64",
+          "rate": "1120.16"
+        },
+        "expected": "-1572361591/15625",
+        "reply": "-1572361591/15625"
+      },
+      {
+        "args": {
+          "amount": "6104.69",
+          "rate": "-3764.32"
+        },
+        "expected": "-14362504163/62500",
+        "reply": "-14362504163/62500"
+      },
+      {
+        "args": {
+          "amount": "5023.87",
+          "rate": "-9408.65"
+        },
+        "expected": "-94535668951/200000",
+        "reply": "-94535668951/200000"
+      },
+      {
+        "args": {
+          "amount": "-4933.53",
+          "rate": "-2562.28"
+        },
+        "expected": "31602713121/250000",
+        "reply": "31602713121/250000"
+      },
+      {
+        "args": {
+          "amount": "6001.32",
+          "rate": "96.66"
+        },
+        "expected": "725109489/125000",
+        "reply": "725109489/125000"
+      },
+      {
+        "args": {
+          "amount": "109.13",
+          "rate": "8487.60"
+        },
+        "expected": "231562947/25000",
+        "reply": "231562947/25000"
+      },
+      {
+        "args": {
+          "amount": "5160.41",
+          "rate": "9900.93"
+        },
+        "expected": "510928581813/1000000",
+        "reply": "510928581813/1000000"
+      },
+      {
+        "args": {
+          "amount": "3885.33",
+          "rate": "-915.68"
+        },
+        "expected": "-2223574359/62500",
+        "reply": "-2223574359/62500"
+      },
+      {
+        "args": {
+          "amount": "-4376.54",
+          "rate": "6210.32"
+        },
+        "expected": "-16987321183/62500",
+        "reply": "-16987321183/62500"
+      },
+      {
+        "args": {
+          "amount": "-2001.98",
+          "rate": "-3250.23"
+        },
+        "expected": "32534477277/500000",
+        "reply": "32534477277/500000"
+      },
+      {
+        "args": {
+          "amount": "2861.48",
+          "rate": "4898.41"
+        },
+        "expected": "35041755617/250000",
+        "reply": "35041755617/250000"
+      },
+      {
+        "args": {
+          "amount": "4187.72",
+          "rate": "-9738.27"
+        },
+        "expected": "-101952870111/250000",
+        "reply": "-101952870111/250000"
+      },
+      {
+        "args": {
+          "amount": "2802.78",
+          "rate": "6116.93"
+        },
+        "expected": "85722045327/500000",
+        "reply": "85722045327/500000"
+      },
+      {
+        "args": {
+          "amount": "-530.56",
+          "rate": "-8744.17"
+        },
+        "expected": "724891693/15625",
+        "reply": "724891693/15625"
+      },
+      {
+        "args": {
+          "amount": "-2051.43",
+          "rate": "-9129.07"
+        },
+        "expected": "187276480701/1000000",
+        "reply": "187276480701/1000000"
+      },
+      {
+        "args": {
+          "amount": "-8338.11",
+          "rate": "9196.76"
+        },
+        "expected": "-191708991309/250000",
+        "reply": "-191708991309/250000"
+      },
+      {
+        "args": {
+          "amount": "8342.36",
+          "rate": "-2948.11"
+        },
+        "expected": "-61485487349/250000",
+        "reply": "-61485487349/250000"
+      },
+      {
+        "args": {
+          "amount": "-2943.43",
+          "rate": "3478.06"
+        },
+        "expected": "-51187130729/500000",
+        "reply": "-51187130729/500000"
+      },
+      {
+        "args": {
+          "amount": "-219.83",
+          "rate": "1893.91"
+        },
+        "expected": "-4163382353/1000000",
+        "reply": "-4163382353/1000000"
+      },
+      {
+        "args": {
+          "amount": "-5568.67",
+          "rate": "5844.97"
+        },
+        "expected": "-325487090899/1000000",
+        "reply": "-325487090899/1000000"
+      },
+      {
+        "args": {
+          "amount": "5293.63",
+          "rate": "-9211.82"
+        },
+        "expected": "-243819833533/500000",
+        "reply": "-243819833533/500000"
+      },
+      {
+        "args": {
+          "amount": "-5991.69",
+          "rate": "-9518.74"
+        },
+        "expected": "285166696353/500000",
+        "reply": "285166696353/500000"
+      },
+      {
+        "args": {
+          "amount": "-6485.64",
+          "rate": "-3855.91"
+        },
+        "expected": "62520110331/250000",
+        "reply": "62520110331/250000"
+      },
+      {
+        "args": {
+          "amount": "-5828.13",
+          "rate": "-9031.27"
+        },
+        "expected": "526354156251/1000000",
+        "reply": "526354156251/1000000"
+      },
+      {
+        "args": {
+          "amount": "1701.06",
+          "rate": "-2926.30"
+        },
+        "expected": "-2488905939/50000",
+        "reply": "-2488905939/50000"
+      },
+      {
+        "args": {
+          "amount": "-9529.12",
+          "rate": "-6912.95"
+        },
+        "expected": "8234291263/12500",
+        "reply": "8234291263/12500"
+      },
+      {
+        "args": {
+          "amount": "8667.02",
+          "rate": "-3839.02"
+        },
+        "expected": "-83182157801/250000",
+        "reply": "-83182157801/250000"
+      },
+      {
+        "args": {
+          "amount": "-7398.93",
+          "rate": "1663.23"
+        },
+        "expected": "-123061223439/1000000",
+        "reply": "-123061223439/1000000"
+      }
+    ],
+    "nodes": 5,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "714d5eef365325b53f3b180f7fe7dd3e8e8d46b5490ea057fbf45aa73970e3b8"
+}
