@@ -1,0 +1,202 @@
+{
+  "schema": "PINF-CHAT-EVOLUTION-1",
+  "at": "2026-10-24T21:11:57.082129+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "40133145832",
+  "parentArtifactHash": "a648a7400a58349706d813efa7029fd05e6d9f41dca5e85b0a27a87b728695d7",
+  "baseline": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 2,
+    "capabilities": [
+      "exact-integer-v1",
+      "metric-length-v1"
+    ],
+    "parentHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48"
+  },
+  "candidate": {
+    "schema": "PINF-CHAT-EVOLUTION-1",
+    "generation": 2,
+    "capabilities": [
+      "exact-integer-v1",
+      "metric-length-v1"
+    ],
+    "parentHash": "e12c3b077f2fd50db4b58485b7b0cdd93e7b74b50d579174fcf677d745b79f48"
+  },
+  "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
+  "hypothesis": "A fixed exact-answer capability improves correctness or halves latency without changing general-chat routing.",
+  "decision": "MONITOR_PASS",
+  "newCapability": null,
+  "history": [
+    {
+      "schema": "PINF-CHAT-EVOLUTION-1",
+      "generation": 0,
+      "capabilities": [],
+      "parentHash": null
+    },
+    {
+      "schema": "PINF-CHAT-EVOLUTION-1",
+      "generation": 1,
+      "capabilities": [
+        "exact-integer-v1"
+      ],
+      "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
+    }
+  ],
+  "testedCapability": "metric-length-v1",
+  "evidence": {
+    "protocol": "PINF-CHAT-EVOLUTION-1",
+    "seed": 130572543520304,
+    "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
+    "pairs": [
+      {
+        "prompt": "157.389 mm to m",
+        "expected": "0.157389 m",
+        "baseline": {
+          "reply": "0.157389 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "0.157389 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "213.692 mm to m",
+        "expected": "0.213692 m",
+        "baseline": {
+          "reply": "0.213692 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "0.213692 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "-594.033 mm to cm",
+        "expected": "-59.4033 cm",
+        "baseline": {
+          "reply": "-59.4033 cm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "-59.4033 cm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "-76.524 mm to m",
+        "expected": "-0.076524 m",
+        "baseline": {
+          "reply": "-0.076524 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "-0.076524 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "244.46 cm to mm",
+        "expected": "2444.6 mm",
+        "baseline": {
+          "reply": "2444.6 mm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "2444.6 mm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "-86.231 mm to cm",
+        "expected": "-8.6231 cm",
+        "baseline": {
+          "reply": "-8.6231 cm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "-8.6231 cm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "-74.202 m to mm",
+        "expected": "-74202 mm",
+        "baseline": {
+          "reply": "-74202 mm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "-74202 mm",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      },
+      {
+        "prompt": "423.327 mm to m",
+        "expected": "0.423327 m",
+        "baseline": {
+          "reply": "0.423327 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        },
+        "candidate": {
+          "reply": "0.423327 m",
+          "mode": "verified-tool",
+          "modelEvidence": null,
+          "ms": 1,
+          "ok": true
+        }
+      }
+    ],
+    "passed": false,
+    "baselineCorrect": 8,
+    "candidateCorrect": 8
+  },
+  "applied": false,
+  "recordHash": "35c398673cfdd01170ec6576b1867fdab48a9b19be1dd466a6579277c64abdd4"
+}
