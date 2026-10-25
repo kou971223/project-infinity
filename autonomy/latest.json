@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40194356313",
+  "runId": "40215285496",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-25T12:44:00Z",
+  "at": "2026-10-25T17:12:40Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "8b84ecf649b9580885dee13b5157faf7470156cfb06c78dba1d716978611644e",
-  "cycleNumber": 120,
+  "parentRecordHash": "b4c86063f7d8b087cd93456bcf9b0a32390fb2d023f0a6d00c5c766c51bd08b2",
+  "cycleNumber": 121,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "a9b4df46debb16ee5af202d829229177ada7dfa211e20998f1572354d3618bd1",
+    "hash": "92ae3d55f9b50325acda661db8222e126c17231dca8cb801e469844478884acb",
     "items": [
       {
         "title": "Is Spectral Self-Supervised Learning a Minimax Optimal Method of Density Ratio Estimation?",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-25T12:44:01Z"
+    "accessedAt": "2026-10-25T17:12:40Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.463,
+  "elapsedSeconds": 0.496,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "b4c86063f7d8b087cd93456bcf9b0a32390fb2d023f0a6d00c5c766c51bd08b2"
+  "recordHash": "50f307a0d6e427cfe4feb9f14cb96739ed9b9cea45117e6686a481f4180b6d40"
 }
