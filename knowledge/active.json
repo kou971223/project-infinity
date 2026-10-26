@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2610.31882",
+      "title": "TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules",
+      "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
+      "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.089070+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31846",
+      "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
+      "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
+      "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.088549+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31810",
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+      "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
+      "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.087990+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31808",
+      "title": "Patronizing and Condescending Language Detection in English and Mandarin",
+      "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
+      "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.087449+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31789",
+      "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
+      "excerpt": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to ",
+      "excerptHash": "5dbb45f7a27449ec7b8151a44b8491c55906a5a462ad5394291c87afbf361575",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.086899+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31701",
+      "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
+      "excerpt": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decisi",
+      "excerptHash": "92559082ef3e81a43d784f71220495a9aacda7fff388c8613c47b4513871f5aa",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-26T05:14:12.086349+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-26T05:14:11.987481+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "8c86828c903945941ff234adc1bf7b0e848f3bd47964e70b18c4b655bbc66c30"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-26T05:14:11.713770+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "80aca653592d573690f0910c07f2b7d0aad0dc1ce03f5e5538f09346c85838bb"
+    },
+    {
       "url": "https://arxiv.org/abs/2610.30205",
       "title": "Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail?",
       "excerpt": "arXiv:2610.30205v1 Announce Type: new Abstract: When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed action. We test whether the same holds in games (Sokoban, Connect Four, Othello), where a move can fail by being illegal or by being legal but losing, both verified exactly. On fixed probe items built by perturbing a correct move, the record backfires: pooled over 8 instruction-tuned models (135M-1.7B) it makes the failed move more likely (correctiv",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-10-23T05:17:38.478964+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-23T05:17:38.387282+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "672ed71baebe0571d593e4242b75d1d29db41d8b4d9a22da0c1e0994b6dea6ff"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-23T05:17:38.091964+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "20c08c62c78a1fce0d2813198a9222261f932828f780e42a74555b4ae016745c"
     },
     {
       "url": "https://arxiv.org/abs/2610.28826",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-10-16T04:56:58.711381+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.20667",
-      "title": "Evaluating Model Capabilities After Benchmark Saturation",
-      "excerpt": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies. Yet benchmark items produce far more information than the scores we typically extract from them: a full transcript of how each model solved the task. We investigate whether these transcripts can be used to assess model capabilities even after benchmark scores have saturated. We simulate saturation re",
-      "excerptHash": "a9c52e0678f372d795be3005bf9920895920f4f85e87cd6fe4dfd59755a645d7",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-16T04:56:58.710894+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.20665",
-      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
-      "excerpt": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may arrive too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale Offline Recursive Self-Improvement (TORSI): a slow teacher studi",
-      "excerptHash": "b1290d1e126ce257e25aaa3207d39db11778099a4f2ef15da0d47c6376d4731e",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-16T04:56:58.710371+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.12598",
-      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
-      "excerpt": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to distinguish trajectories with substantially different debugging quality. We investigate whether the current policy can judge its own trajectories and use these judgments to improve task performance without a separately trained reward model. To this end, we introduce Behavioral Self-Rewarding (BSR), a reward-refinement method that reuses the policy to compare observable debugging b",
-      "excerptHash": "98e5d7c2477d55c1c0eac964bfb922ba18ee76fd3a35a0a9d9e5041b739b032f",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-12T06:28:04.198580+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.12596",
-      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
-      "excerpt": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and performance on long tasks is hard to dissect into stored knowledge, reasoning and luck. We introduce SpireBench, in which models play the complete commercial deck-builder Slay the Spire (StS), where early decisions decide long-term success. Across 20 large language models (LLMs) at the game's highest difficulty, frontier models beat heuristic baselines and match the average human ",
-      "excerptHash": "75ed9e03bfba8ae52d644d0dc1216c3a6dbc215e33bd9b7b8bef67f258ebbf47",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-12T06:28:04.198083+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.12593",
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
-      "excerpt": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only executable and verifiable trajectories, but also interactions that provide learning value for the current task agent. Existing methods increasingly incorporate environment feedback, data validation, or learner failures, but still face a feedback-to-decision gap: observed weaknesses do not directly specify how future synthesis should change, or whether they can be represented by the ",
-      "excerptHash": "641bab8b3968734d5f14c1241dc0dd5ba90757e9ca1184de04c4ca5eb1166b68",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-12T06:28:04.197603+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.12542",
-      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
-      "excerpt": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart list scheduler with no search tree as the control; and a textbook-UCT MCTS arm as a registered follo",
-      "excerptHash": "4aa0b9e884685a29aada39de94b1d08e4fe4d7b54ead5609f5224799a5b62da2",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-12T06:28:04.197106+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 7,
-  "parentHash": "c999bd21ca17178e8b81e8fd0105d7c733ad9bba1bc0f53e970018d84d792b03",
-  "at": "2026-10-23T05:17:38.482280+00:00",
-  "runId": "39904931637",
-  "artifactHash": "d4d57e71d3acfa4dde215e46b0851fb2fa17b215b1e22c501a5f5fcc6d090eae"
+  "generation": 8,
+  "parentHash": "d4d57e71d3acfa4dde215e46b0851fb2fa17b215b1e22c501a5f5fcc6d090eae",
+  "at": "2026-10-26T05:14:12.090049+00:00",
+  "runId": "40273114929",
+  "artifactHash": "ff1d66a76a2eb59a7c91a9a839ac3a0e4ce6edb3e19249a66b7dc09f39337f82"
 }
