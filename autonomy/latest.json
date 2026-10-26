@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40254876654",
+  "runId": "40282502378",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-26T01:35:35Z",
+  "at": "2026-10-26T06:54:42Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "e860c6c8b4e5d9e848bc51e6805355ca5af8440364123c7b44bc83e0936f2ade",
-  "cycleNumber": 124,
+  "parentRecordHash": "db25e6182ae8dfb8877a10460039fae406c859cc5e747265248aab5baa0e82e8",
+  "cycleNumber": 125,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "c7c8109b94d081e558ddf962881b7d99cedf39397a40e0467425d3141aa90abe",
+    "hash": "529f1521adf838e5eda9c71198fdca22a823be1b7709a1aab1786e0e2e1c6c4e",
     "items": [
       {
-        "title": "Let's Do Turbulence Right: In Space and Time!",
-        "url": "http://arxiv.org/abs/2610.32601v1",
-        "updated": "2026-10-23T13:26:50Z",
+        "title": "On the continuity of conditional distributions and stratification for derivative pricing",
+        "url": "http://arxiv.org/abs/2610.32970v1",
+        "updated": "2026-10-23T17:57:09Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "From Freehand Demonstrations to Autonomous Robotic Ultrasound: An Anatomy-Anchored Learning Framework",
-        "url": "http://arxiv.org/abs/2610.32525v1",
-        "updated": "2026-10-23T11:58:26Z",
+        "title": "NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding",
+        "url": "http://arxiv.org/abs/2610.32881v1",
+        "updated": "2026-10-23T16:47:29Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-26T01:35:36Z"
+    "accessedAt": "2026-10-26T06:54:42Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.866,
+  "elapsedSeconds": 0.363,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "db25e6182ae8dfb8877a10460039fae406c859cc5e747265248aab5baa0e82e8"
+  "recordHash": "55b5ee29fdf1677c35d5fc09e60c858ca061e638ff0d2c1ab0f510349ec35e2e"
 }
