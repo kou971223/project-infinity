@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-10-27T05:32:04.802126+00:00",
+  "at": "2026-10-27T12:38:03.145897+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "40455837899",
+  "runId": "40505279492",
   "parents": {
     "knowledge": "ff1d66a76a2eb59a7c91a9a839ac3a0e4ce6edb3e19249a66b7dc09f39337f82",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.478621+00:00",
+      "checkedAt": "2026-10-27T12:38:02.786871+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "ed5883a42aa8507aea8c5e1b8fd915845e32d5de2603167c9a7810b1adea8f76"
+      "sourceHash": "97518662ca4c10793ec254d7892039ea362d3fa995e16872c4a59e1d7b98f473"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,9 +24,9 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.695273+00:00",
+      "checkedAt": "2026-10-27T12:38:02.972675+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "6e366f81dc0247d3e9a0c1d97e1d112ba426541fad7508e5688b874f830b3e1f"
+      "sourceHash": "29b517ea6ffbd7e0b0e5c7f99206ca14bedfdf930a240d802f7c39cee0976b2a"
     },
     {
       "url": "https://arxiv.org/abs/2610.31701",
@@ -34,7 +34,7 @@
       "excerpt": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decisi",
       "excerptHash": "92559082ef3e81a43d784f71220495a9aacda7fff388c8613c47b4513871f5aa",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.798922+00:00",
+      "checkedAt": "2026-10-27T12:38:03.142860+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     },
@@ -44,7 +44,7 @@
       "excerpt": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to ",
       "excerptHash": "5dbb45f7a27449ec7b8151a44b8491c55906a5a462ad5394291c87afbf361575",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.799422+00:00",
+      "checkedAt": "2026-10-27T12:38:03.143313+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     },
@@ -54,7 +54,7 @@
       "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
       "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.799922+00:00",
+      "checkedAt": "2026-10-27T12:38:03.143750+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     },
@@ -64,7 +64,7 @@
       "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
       "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.800404+00:00",
+      "checkedAt": "2026-10-27T12:38:03.144177+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     },
@@ -74,7 +74,7 @@
       "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
       "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.800893+00:00",
+      "checkedAt": "2026-10-27T12:38:03.144600+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     },
@@ -84,13 +84,13 @@
       "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
       "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-27T05:32:04.801365+00:00",
+      "checkedAt": "2026-10-27T12:38:03.145056+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
     }
   ],
   "sourceFailures": [],
-  "task": "mean",
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,76 +104,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 76445902527638,
+    "trainingSeed": 72044206825262,
     "trainingExamples": [
       {
         "args": {
-          "a": "-9668.61",
-          "b": "4670.81",
-          "c": "1861.61"
+          "width": "6543.14",
+          "height": "-7036.02"
         },
-        "expected": "-313619/300"
+        "expected": "-115094159757/2500"
       },
       {
         "args": {
-          "a": "7817.47",
-          "b": "-5486.08",
-          "c": "423.79"
+          "width": "8335.93",
+          "height": "-4597.36"
         },
-        "expected": "137759/150"
+        "expected": "-47904088931/1250"
       },
       {
         "args": {
-          "a": "7545.52",
-          "b": "8028.14",
-          "c": "-5077.34"
+          "width": "6588.21",
+          "height": "6900.97"
         },
-        "expected": "262408/75"
+        "expected": "454650395637/10000"
       },
       {
         "args": {
-          "a": "239.83",
-          "b": "-9860.26",
-          "c": "-8200.59"
+          "width": "-7896.57",
+          "height": "1665.03"
         },
-        "expected": "-297017/50"
+        "expected": "-131480259471/10000"
       }
     ],
-    "examined": 15345,
-    "states": 6006,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "b65841841362f60f2ba97d8033cde76a6bc1ded26b998e24b6bcc8ab398d6c7e",
+  "frozenHash": "f82c9b98d15867ba696d2f96909c5c6f4fc210dbc4d15da7a1cb01919ca634c2",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -183,9 +165,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.478621+00:00",
+        "checkedAt": "2026-10-27T12:38:02.786871+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "ed5883a42aa8507aea8c5e1b8fd915845e32d5de2603167c9a7810b1adea8f76"
+        "sourceHash": "97518662ca4c10793ec254d7892039ea362d3fa995e16872c4a59e1d7b98f473"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -193,9 +175,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.695273+00:00",
+        "checkedAt": "2026-10-27T12:38:02.972675+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "6e366f81dc0247d3e9a0c1d97e1d112ba426541fad7508e5688b874f830b3e1f"
+        "sourceHash": "29b517ea6ffbd7e0b0e5c7f99206ca14bedfdf930a240d802f7c39cee0976b2a"
       },
       {
         "url": "https://arxiv.org/abs/2610.31701",
@@ -203,7 +185,7 @@
         "excerpt": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decisi",
         "excerptHash": "92559082ef3e81a43d784f71220495a9aacda7fff388c8613c47b4513871f5aa",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.798922+00:00",
+        "checkedAt": "2026-10-27T12:38:03.142860+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       },
@@ -213,7 +195,7 @@
         "excerpt": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to ",
         "excerptHash": "5dbb45f7a27449ec7b8151a44b8491c55906a5a462ad5394291c87afbf361575",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.799422+00:00",
+        "checkedAt": "2026-10-27T12:38:03.143313+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       },
@@ -223,7 +205,7 @@
         "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
         "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.799922+00:00",
+        "checkedAt": "2026-10-27T12:38:03.143750+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       },
@@ -233,7 +215,7 @@
         "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
         "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.800404+00:00",
+        "checkedAt": "2026-10-27T12:38:03.144177+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       },
@@ -243,7 +225,7 @@
         "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
         "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.800893+00:00",
+        "checkedAt": "2026-10-27T12:38:03.144600+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       },
@@ -253,7 +235,7 @@
         "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
         "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-27T05:32:04.801365+00:00",
+        "checkedAt": "2026-10-27T12:38:03.145056+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
       }
@@ -263,587 +245,523 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 158490229935597,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 273512101988876,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "-6279.90",
-          "b": "1517.29",
-          "c": "-678.55"
+          "width": "-5725.67",
+          "height": "8371.95"
         },
-        "expected": "-45343/25",
-        "reply": "-45343/25"
+        "expected": "-95870045913/2000",
+        "reply": "-95870045913/2000"
       },
       {
         "args": {
-          "a": "-7588.11",
-          "b": "-1253.24",
-          "c": "2121.81"
+          "width": "6623.30",
+          "height": "2365.82"
         },
-        "expected": "-335977/150",
-        "reply": "-335977/150"
+        "expected": "7834767803/500",
+        "reply": "7834767803/500"
       },
       {
         "args": {
-          "a": "3904.78",
-          "b": "1525.09",
-          "c": "157.06"
+          "width": "7982.43",
+          "height": "-5580.76"
         },
-        "expected": "186231/100",
-        "reply": "186231/100"
+        "expected": "-111370065117/2500",
+        "reply": "-111370065117/2500"
       },
       {
         "args": {
-          "a": "9554.00",
-          "b": "952.70",
-          "c": "1620.07"
+          "width": "-7530.25",
+          "height": "9740.42"
         },
-        "expected": "1212677/300",
-        "reply": "1212677/300"
+        "expected": "-14669559541/200",
+        "reply": "-14669559541/200"
       },
       {
         "args": {
-          "a": "4913.41",
-          "b": "-3495.87",
-          "c": "7102.76"
+          "width": "7538.24",
+          "height": "-9724.07"
         },
-        "expected": "28401/10",
-        "reply": "28401/10"
+        "expected": "-45813983398/625",
+        "reply": "-45813983398/625"
       },
       {
         "args": {
-          "a": "-6251.67",
-          "b": "-9030.38",
-          "c": "-1451.32"
+          "width": "-7528.78",
+          "height": "1415.96"
         },
-        "expected": "-557779/100",
-        "reply": "-557779/100"
+        "expected": "-13325564161/1250",
+        "reply": "-13325564161/1250"
       },
       {
         "args": {
-          "a": "-9491.19",
-          "b": "5421.57",
-          "c": "-8739.66"
+          "width": "6813.51",
+          "height": "-5067.45"
         },
-        "expected": "-106744/25",
-        "reply": "-106744/25"
+        "expected": "-69054242499/2000",
+        "reply": "-69054242499/2000"
       },
       {
         "args": {
-          "a": "7682.24",
-          "b": "-4967.51",
-          "c": "2147.62"
+          "width": "-3136.59",
+          "height": "102.43"
         },
-        "expected": "97247/60",
-        "reply": "97247/60"
+        "expected": "-3212809137/10000",
+        "reply": "-3212809137/10000"
       },
       {
         "args": {
-          "a": "-1188.08",
-          "b": "3429.65",
-          "c": "-2192.10"
+          "width": "8989.58",
+          "height": "1102.54"
         },
-        "expected": "1649/100",
-        "reply": "1649/100"
+        "expected": "24778428833/2500",
+        "reply": "24778428833/2500"
       },
       {
         "args": {
-          "a": "8281.29",
-          "b": "-4582.29",
-          "c": "9215.20"
+          "width": "6682.79",
+          "height": "-3735.82"
         },
-        "expected": "64571/15",
-        "reply": "64571/15"
+        "expected": "-124828502689/5000",
+        "reply": "-124828502689/5000"
       },
       {
         "args": {
-          "a": "-3874.25",
-          "b": "2183.52",
-          "c": "-6543.52"
+          "width": "-3722.48",
+          "height": "1708.13"
         },
-        "expected": "-10979/4",
-        "reply": "-10979/4"
+        "expected": "-7948099703/1250",
+        "reply": "-7948099703/1250"
       },
       {
         "args": {
-          "a": "-9798.77",
-          "b": "-3228.07",
-          "c": "3744.01"
+          "width": "-1933.03",
+          "height": "1372.75"
         },
-        "expected": "-928283/300",
-        "reply": "-928283/300"
+        "expected": "-1061426773/400",
+        "reply": "-1061426773/400"
       },
       {
         "args": {
-          "a": "-870.98",
-          "b": "-517.31",
-          "c": "5159.13"
+          "width": "5710.78",
+          "height": "-9288.40"
         },
-        "expected": "94271/75",
-        "reply": "94271/75"
+        "expected": "-6630501119/125",
+        "reply": "-6630501119/125"
       },
       {
         "args": {
-          "a": "-3680.07",
-          "b": "1968.65",
-          "c": "9303.72"
+          "width": "-6647.92",
+          "height": "2801.49"
         },
-        "expected": "75923/30",
-        "reply": "75923/30"
+        "expected": "-23280101751/1250",
+        "reply": "-23280101751/1250"
       },
       {
         "args": {
-          "a": "-9165.18",
-          "b": "5620.77",
-          "c": "2691.66"
+          "width": "3614.83",
+          "height": "1510.10"
         },
-        "expected": "-1137/4",
-        "reply": "-1137/4"
+        "expected": "5458754783/1000",
+        "reply": "5458754783/1000"
       },
       {
         "args": {
-          "a": "-4028.84",
-          "b": "-9482.47",
-          "c": "-7060.69"
+          "width": "-7120.17",
+          "height": "8939.75"
         },
-        "expected": "-20572/3",
-        "reply": "-20572/3"
+        "expected": "-25461015903/400",
+        "reply": "-25461015903/400"
       },
       {
         "args": {
-          "a": "-1990.54",
-          "b": "-6282.55",
-          "c": "-5290.92"
+          "width": "3161.21",
+          "height": "-5420.09"
         },
-        "expected": "-1356401/300",
-        "reply": "-1356401/300"
+        "expected": "-171340427089/10000",
+        "reply": "-171340427089/10000"
       },
       {
         "args": {
-          "a": "-551.78",
-          "b": "3556.67",
-          "c": "-7186.17"
+          "width": "6428.86",
+          "height": "-3294.58"
         },
-        "expected": "-34844/25",
-        "reply": "-34844/25"
+        "expected": "-52950983947/2500",
+        "reply": "-52950983947/2500"
       },
       {
         "args": {
-          "a": "-3141.74",
-          "b": "781.51",
-          "c": "-8091.57"
+          "width": "3816.50",
+          "height": "9223.16"
         },
-        "expected": "-52259/15",
-        "reply": "-52259/15"
+        "expected": "1760009507/50",
+        "reply": "1760009507/50"
       },
       {
         "args": {
-          "a": "-129.23",
-          "b": "9094.46",
-          "c": "3729.80"
+          "width": "4812.91",
+          "height": "6497.53"
         },
-        "expected": "1269503/300",
-        "reply": "1269503/300"
+        "expected": "312720271123/10000",
+        "reply": "312720271123/10000"
       },
       {
         "args": {
-          "a": "43.75",
-          "b": "-318.28",
-          "c": "343.72"
+          "width": "-3152.46",
+          "height": "8966.72"
         },
-        "expected": "6919/300",
-        "reply": "6919/300"
+        "expected": "-17667016332/625",
+        "reply": "-17667016332/625"
       },
       {
         "args": {
-          "a": "9818.06",
-          "b": "6838.68",
-          "c": "8009.87"
+          "width": "-6752.96",
+          "height": "-6600.82"
         },
-        "expected": "2466661/300",
-        "reply": "2466661/300"
+        "expected": "27859420892/625",
+        "reply": "27859420892/625"
       },
       {
         "args": {
-          "a": "-807.15",
-          "b": "-4866.48",
-          "c": "7100.09"
+          "width": "-3972.01",
+          "height": "4616.37"
         },
-        "expected": "71323/150",
-        "reply": "71323/150"
+        "expected": "-183362678037/10000",
+        "reply": "-183362678037/10000"
       },
       {
         "args": {
-          "a": "-421.46",
-          "b": "-1177.23",
-          "c": "6832.53"
+          "width": "-5806.86",
+          "height": "-9249.37"
         },
-        "expected": "130846/75",
-        "reply": "130846/75"
+        "expected": "268548983391/5000",
+        "reply": "268548983391/5000"
       },
       {
         "args": {
-          "a": "-7569.47",
-          "b": "9877.50",
-          "c": "1854.48"
+          "width": "-4582.47",
+          "height": "-7976.60"
         },
-        "expected": "416251/300",
-        "reply": "416251/300"
+        "expected": "18276265101/500",
+        "reply": "18276265101/500"
       },
       {
         "args": {
-          "a": "8333.05",
-          "b": "2563.22",
-          "c": "-9835.97"
+          "width": "-8081.14",
+          "height": "2463.71"
         },
-        "expected": "10603/30",
-        "reply": "10603/30"
+        "expected": "-99547927147/5000",
+        "reply": "-99547927147/5000"
       },
       {
         "args": {
-          "a": "-9929.11",
-          "b": "-9518.39",
-          "c": "7100.45"
+          "width": "1868.52",
+          "height": "3936.10"
         },
-        "expected": "-246941/60",
-        "reply": "-246941/60"
+        "expected": "1838670393/250",
+        "reply": "1838670393/250"
       },
       {
         "args": {
-          "a": "-5143.56",
-          "b": "9974.89",
-          "c": "-1491.02"
+          "width": "-9640.40",
+          "height": "-5756.89"
         },
-        "expected": "334031/300",
-        "reply": "334031/300"
+        "expected": "13874680589/250",
+        "reply": "13874680589/250"
       },
       {
         "args": {
-          "a": "-4398.19",
-          "b": "-3919.23",
-          "c": "-775.95"
+          "width": "-631.54",
+          "height": "-6877.63"
         },
-        "expected": "-909337/300",
-        "reply": "-909337/300"
+        "expected": "21717492251/5000",
+        "reply": "21717492251/5000"
       },
       {
         "args": {
-          "a": "642.56",
-          "b": "3566.43",
-          "c": "-8183.37"
+          "width": "5969.04",
+          "height": "-9482.96"
         },
-        "expected": "-198719/150",
-        "reply": "-198719/150"
+        "expected": "-35377604724/625",
+        "reply": "-35377604724/625"
       },
       {
         "args": {
-          "a": "6228.42",
-          "b": "4010.47",
-          "c": "9916.28"
+          "width": "1736.98",
+          "height": "-2848.60"
         },
-        "expected": "671839/100",
-        "reply": "671839/100"
+        "expected": "-1236990307/250",
+        "reply": "-1236990307/250"
       },
       {
         "args": {
-          "a": "3932.29",
-          "b": "276.90",
-          "c": "-9066.66"
+          "width": "-9364.83",
+          "height": "8957.57"
         },
-        "expected": "-485747/300",
-        "reply": "-485747/300"
+        "expected": "-838861202631/10000",
+        "reply": "-838861202631/10000"
       },
       {
         "args": {
-          "a": "-3794.88",
-          "b": "7390.29",
-          "c": "-646.14"
+          "width": "5627.08",
+          "height": "3115.01"
         },
-        "expected": "98309/100",
-        "reply": "98309/100"
+        "expected": "43821026177/2500",
+        "reply": "43821026177/2500"
       },
       {
         "args": {
-          "a": "4472.88",
-          "b": "3740.27",
-          "c": "-9791.55"
+          "width": "2644.36",
+          "height": "7338.79"
         },
-        "expected": "-7892/15",
-        "reply": "-7892/15"
+        "expected": "48516006811/2500",
+        "reply": "48516006811/2500"
       },
       {
         "args": {
-          "a": "8322.03",
-          "b": "1048.61",
-          "c": "5509.77"
+          "width": "-6727.83",
+          "height": "-4684.66"
         },
-        "expected": "1488041/300",
-        "reply": "1488041/300"
+        "expected": "157587980439/5000",
+        "reply": "157587980439/5000"
       },
       {
         "args": {
-          "a": "7740.48",
-          "b": "3651.73",
-          "c": "3936.44"
+          "width": "-598.89",
+          "height": "-9299.18"
         },
-        "expected": "102191/20",
-        "reply": "102191/20"
+        "expected": "27845929551/5000",
+        "reply": "27845929551/5000"
       },
       {
         "args": {
-          "a": "1990.21",
-          "b": "-3438.15",
-          "c": "-2610.77"
+          "width": "4231.82",
+          "height": "-1876.27"
         },
-        "expected": "-405871/300",
-        "reply": "-405871/300"
+        "expected": "-39700184557/5000",
+        "reply": "-39700184557/5000"
       },
       {
         "args": {
-          "a": "9039.03",
-          "b": "6772.40",
-          "c": "-6785.36"
+          "width": "569.10",
+          "height": "-8256.16"
         },
-        "expected": "300869/100",
-        "reply": "300869/100"
+        "expected": "-587322582/125",
+        "reply": "-587322582/125"
       },
       {
         "args": {
-          "a": "536.61",
-          "b": "-1913.06",
-          "c": "5777.99"
+          "width": "4422.75",
+          "height": "-2129.51"
         },
-        "expected": "73359/50",
-        "reply": "73359/50"
+        "expected": "-3767316141/400",
+        "reply": "-3767316141/400"
       },
       {
         "args": {
-          "a": "1711.52",
-          "b": "-2784.39",
-          "c": "-8163.69"
+          "width": "8533.70",
+          "height": "7636.49"
         },
-        "expected": "-230914/75",
-        "reply": "-230914/75"
+        "expected": "65167514713/1000",
+        "reply": "65167514713/1000"
       },
       {
         "args": {
-          "a": "2005.86",
-          "b": "2418.84",
-          "c": "-5867.93"
+          "width": "-4939.22",
+          "height": "-4167.23"
         },
-        "expected": "-144323/300",
-        "reply": "-144323/300"
+        "expected": "102914328803/5000",
+        "reply": "102914328803/5000"
       },
       {
         "args": {
-          "a": "7384.59",
-          "b": "5584.09",
-          "c": "450.01"
+          "width": "-4172.12",
+          "height": "7761.50"
         },
-        "expected": "1341869/300",
-        "reply": "1341869/300"
+        "expected": "-1619095469/50",
+        "reply": "-1619095469/50"
       },
       {
         "args": {
-          "a": "556.51",
-          "b": "-383.19",
-          "c": "6441.51"
+          "width": "1758.03",
+          "height": "6800.51"
         },
-        "expected": "661483/300",
-        "reply": "661483/300"
+        "expected": "119555005953/10000",
+        "reply": "119555005953/10000"
       },
       {
         "args": {
-          "a": "6289.49",
-          "b": "3340.93",
-          "c": "5357.37"
+          "width": "-7043.73",
+          "height": "-7807.02"
         },
-        "expected": "499593/100",
-        "reply": "499593/100"
+        "expected": "274952704923/5000",
+        "reply": "274952704923/5000"
       },
       {
         "args": {
-          "a": "-275.99",
-          "b": "-678.62",
-          "c": "-7383.36"
+          "width": "9072.18",
+          "height": "1361.21"
         },
-        "expected": "-833797/300",
-        "reply": "-833797/300"
+        "expected": "61745710689/5000",
+        "reply": "61745710689/5000"
       },
       {
         "args": {
-          "a": "-2992.13",
-          "b": "-1686.15",
-          "c": "7339.45"
+          "width": "-4524.85",
+          "height": "4815.51"
         },
-        "expected": "266117/300",
-        "reply": "266117/300"
+        "expected": "-43578920847/2000",
+        "reply": "-43578920847/2000"
       },
       {
         "args": {
-          "a": "-7464.73",
-          "b": "5983.28",
-          "c": "5736.88"
+          "width": "-8130.28",
+          "height": "-7702.27"
         },
-        "expected": "425543/300",
-        "reply": "425543/300"
+        "expected": "156554029339/2500",
+        "reply": "156554029339/2500"
       },
       {
         "args": {
-          "a": "-871.40",
-          "b": "-3070.39",
-          "c": "8811.11"
+          "width": "-8533.09",
+          "height": "-6628.51"
         },
-        "expected": "121733/75",
-        "reply": "121733/75"
+        "expected": "565616723959/10000",
+        "reply": "565616723959/10000"
       },
       {
         "args": {
-          "a": "-4713.47",
-          "b": "2769.49",
-          "c": "6256.27"
+          "width": "-7684.29",
+          "height": "-9445.80"
         },
-        "expected": "143743/100",
-        "reply": "143743/100"
+        "expected": "36292133241/500",
+        "reply": "36292133241/500"
       },
       {
         "args": {
-          "a": "-8017.29",
-          "b": "-8463.41",
-          "c": "2142.61"
+          "width": "8690.36",
+          "height": "6103.96"
         },
-        "expected": "-1433809/300",
-        "reply": "-1433809/300"
+        "expected": "33153506141/625",
+        "reply": "33153506141/625"
       },
       {
         "args": {
-          "a": "2450.39",
-          "b": "-5826.12",
-          "c": "-2375.70"
+          "width": "-528.59",
+          "height": "271.72"
         },
-        "expected": "-575143/300",
-        "reply": "-575143/300"
+        "expected": "-359071187/2500",
+        "reply": "-359071187/2500"
       },
       {
         "args": {
-          "a": "-5596.66",
-          "b": "5351.02",
-          "c": "2965.18"
+          "width": "19.38",
+          "height": "6942.42"
         },
-        "expected": "135977/150",
-        "reply": "135977/150"
+        "expected": "336360249/2500",
+        "reply": "336360249/2500"
       },
       {
         "args": {
-          "a": "-1547.81",
-          "b": "-3602.65",
-          "c": "8078.46"
+          "width": "-1523.54",
+          "height": "9198.05"
         },
-        "expected": "976",
-        "reply": "976"
+        "expected": "-14013597097/1000",
+        "reply": "-14013597097/1000"
       },
       {
         "args": {
-          "a": "-3206.57",
-          "b": "6414.11",
-          "c": "3159.94"
+          "width": "8000.80",
+          "height": "378.90"
         },
-        "expected": "159187/75",
-        "reply": "159187/75"
+        "expected": "75787578/25",
+        "reply": "75787578/25"
       },
       {
         "args": {
-          "a": "-2566.97",
-          "b": "1599.96",
-          "c": "-9233.96"
+          "width": "1214.42",
+          "height": "-894.06"
         },
-        "expected": "-1020097/300",
-        "reply": "-1020097/300"
+        "expected": "-2714410863/2500",
+        "reply": "-2714410863/2500"
       },
       {
         "args": {
-          "a": "4584.33",
-          "b": "1444.06",
-          "c": "-1056.07"
+          "width": "-4752.97",
+          "height": "-1199.86"
         },
-        "expected": "41436/25",
-        "reply": "41436/25"
+        "expected": "28514492921/5000",
+        "reply": "28514492921/5000"
       },
       {
         "args": {
-          "a": "-5204.28",
-          "b": "8766.82",
-          "c": "-6604.64"
+          "width": "3754.28",
+          "height": "-9703.31"
         },
-        "expected": "-30421/30",
-        "reply": "-30421/30"
+        "expected": "-91072356667/2500",
+        "reply": "-91072356667/2500"
       },
       {
         "args": {
-          "a": "6339.69",
-          "b": "-3553.24",
-          "c": "-1556.90"
+          "width": "7839.15",
+          "height": "-9710.33"
         },
-        "expected": "8197/20",
-        "reply": "8197/20"
+        "expected": "-152241466839/2000",
+        "reply": "-152241466839/2000"
       },
       {
         "args": {
-          "a": "-5644.66",
-          "b": "-7974.52",
-          "c": "4685.17"
+          "width": "-2718.18",
+          "height": "7555.77"
         },
-        "expected": "-893401/300",
-        "reply": "-893401/300"
+        "expected": "-102689714493/5000",
+        "reply": "-102689714493/5000"
       },
       {
         "args": {
-          "a": "-3935.10",
-          "b": "758.44",
-          "c": "-3025.58"
+          "width": "-9686.91",
+          "height": "3620.20"
         },
-        "expected": "-155056/75",
-        "reply": "-155056/75"
+        "expected": "-17534275791/500",
+        "reply": "-17534275791/500"
       },
       {
         "args": {
-          "a": "-8904.70",
-          "b": "2217.68",
-          "c": "8074.21"
+          "width": "-679.56",
+          "height": "-9687.28"
         },
-        "expected": "138719/300",
-        "reply": "138719/300"
+        "expected": "4114429998/625",
+        "reply": "4114429998/625"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
@@ -851,5 +769,5 @@
     "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "7282c533c2292c32f8f221535f394758fa502cb483dbbc10eed5e67c70b19535"
+  "recordHash": "73e332501cf53320c81559533534a88591d4052a3a5355353a928ee94c728c01"
 }
