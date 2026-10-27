@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40423782562",
+  "runId": "40455618575",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-27T00:03:19Z",
+  "at": "2026-10-27T05:30:27Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "1d1eb3209e23eeb8ee85aa6266ce4d208714a32b668519bce87c45a1cd13daab",
-  "cycleNumber": 128,
+  "parentRecordHash": "bc5dc111674d5f3642db8a3245df57fe363dc047af8dd7b651e5a38523e2a641",
+  "cycleNumber": 129,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "TimeoutError",
-    "items": []
+    "access": "fetched",
+    "hash": "d5d68253b0669e5eb26725b35915bb601f69f6fe22a565ac388ce11dd23b1148",
+    "items": [
+      {
+        "title": "On the stability of learning",
+        "url": "http://arxiv.org/abs/2610.35856v1",
+        "updated": "2026-10-26T17:58:14Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Differentiable Contact Dynamics for Legged Locomotion: Policy Learning and Contact-Implicit Trajectory Optimization",
+        "url": "http://arxiv.org/abs/2610.35852v1",
+        "updated": "2026-10-26T17:57:14Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-27T05:30:31Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 12.258,
+  "elapsedSeconds": 3.791,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "bc5dc111674d5f3642db8a3245df57fe363dc047af8dd7b651e5a38523e2a641"
+  "recordHash": "0ad0376574b72720f629c3c608e5ddc99c2822034c7c39ba44500f17ebb83c4d"
 }
