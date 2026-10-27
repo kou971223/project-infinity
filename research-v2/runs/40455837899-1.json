@@ -1,0 +1,855 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-27T05:32:04.802126+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "40455837899",
+  "parents": {
+    "knowledge": "ff1d66a76a2eb59a7c91a9a839ac3a0e4ce6edb3e19249a66b7dc09f39337f82",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.478621+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "ed5883a42aa8507aea8c5e1b8fd915845e32d5de2603167c9a7810b1adea8f76"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.695273+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "6e366f81dc0247d3e9a0c1d97e1d112ba426541fad7508e5688b874f830b3e1f"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31701",
+      "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
+      "excerpt": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decisi",
+      "excerptHash": "92559082ef3e81a43d784f71220495a9aacda7fff388c8613c47b4513871f5aa",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.798922+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31789",
+      "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
+      "excerpt": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to ",
+      "excerptHash": "5dbb45f7a27449ec7b8151a44b8491c55906a5a462ad5394291c87afbf361575",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.799422+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31808",
+      "title": "Patronizing and Condescending Language Detection in English and Mandarin",
+      "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
+      "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.799922+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31810",
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+      "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
+      "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.800404+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31846",
+      "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
+      "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
+      "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.800893+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31882",
+      "title": "TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules",
+      "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
+      "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-27T05:32:04.801365+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "mean",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 76445902527638,
+    "trainingExamples": [
+      {
+        "args": {
+          "a": "-9668.61",
+          "b": "4670.81",
+          "c": "1861.61"
+        },
+        "expected": "-313619/300"
+      },
+      {
+        "args": {
+          "a": "7817.47",
+          "b": "-5486.08",
+          "c": "423.79"
+        },
+        "expected": "137759/150"
+      },
+      {
+        "args": {
+          "a": "7545.52",
+          "b": "8028.14",
+          "c": "-5077.34"
+        },
+        "expected": "262408/75"
+      },
+      {
+        "args": {
+          "a": "239.83",
+          "b": "-9860.26",
+          "c": "-8200.59"
+        },
+        "expected": "-297017/50"
+      }
+    ],
+    "examined": 15345,
+    "states": 6006,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "mean",
+    "expression": [
+      "div",
+      [
+        "add",
+        [
+          "add",
+          [
+            "var",
+            "a"
+          ],
+          [
+            "var",
+            "b"
+          ]
+        ],
+        [
+          "var",
+          "c"
+        ]
+      ],
+      [
+        "const",
+        "3"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "b65841841362f60f2ba97d8033cde76a6bc1ded26b998e24b6bcc8ab398d6c7e",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.478621+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "ed5883a42aa8507aea8c5e1b8fd915845e32d5de2603167c9a7810b1adea8f76"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.695273+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "6e366f81dc0247d3e9a0c1d97e1d112ba426541fad7508e5688b874f830b3e1f"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31701",
+        "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
+        "excerpt": "arXiv:2610.31701v1 Announce Type: new Abstract: Enterprise customer journeys are shaped not only by product experiences and marketing, but also by recurring resource-allocation decisions. In B2B go-to-market (GTM) organizations, territory carving determines which accounts receive seller coverage, which seller-account relationships are preserved, and how limited field capacity is distributed. Yet the process often remains manual, making it difficult to compare opportunities, value continuity, and evaluate tradeoffs among growth, balance, capacity, and feasibility. We present a production decisi",
+        "excerptHash": "92559082ef3e81a43d784f71220495a9aacda7fff388c8613c47b4513871f5aa",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.798922+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31789",
+        "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
+        "excerpt": "arXiv:2610.31789v1 Announce Type: new Abstract: Scientific computing increasingly relies on large language model-based agents for performance engineering tasks such as instrumentation, analysis, and workflow porting. However, agent effectiveness depends heavily on the surrounding harness, which typically relies on manually written skills and curated memory. This limits autonomous learning, forcing agents to repeatedly rediscover solutions rather than retain and reuse knowledge from prior executions. We introduce Phronix, a capability-centric learning paradigm that enables agentic harnesses to ",
+        "excerptHash": "5dbb45f7a27449ec7b8151a44b8491c55906a5a462ad5394291c87afbf361575",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.799422+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31808",
+        "title": "Patronizing and Condescending Language Detection in English and Mandarin",
+        "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
+        "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.799922+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31810",
+        "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+        "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
+        "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.800404+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31846",
+        "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
+        "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
+        "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.800893+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.31882",
+        "title": "TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules",
+        "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
+        "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-27T05:32:04.801365+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 158490229935597,
+    "cases": [
+      {
+        "args": {
+          "a": "0",
+          "b": "0",
+          "c": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "a": "1",
+          "b": "1",
+          "c": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
+        },
+        "expected": "-1",
+        "reply": "-1"
+      },
+      {
+        "args": {
+          "a": "-6279.90",
+          "b": "1517.29",
+          "c": "-678.55"
+        },
+        "expected": "-45343/25",
+        "reply": "-45343/25"
+      },
+      {
+        "args": {
+          "a": "-7588.11",
+          "b": "-1253.24",
+          "c": "2121.81"
+        },
+        "expected": "-335977/150",
+        "reply": "-335977/150"
+      },
+      {
+        "args": {
+          "a": "3904.78",
+          "b": "1525.09",
+          "c": "157.06"
+        },
+        "expected": "186231/100",
+        "reply": "186231/100"
+      },
+      {
+        "args": {
+          "a": "9554.00",
+          "b": "952.70",
+          "c": "1620.07"
+        },
+        "expected": "1212677/300",
+        "reply": "1212677/300"
+      },
+      {
+        "args": {
+          "a": "4913.41",
+          "b": "-3495.87",
+          "c": "7102.76"
+        },
+        "expected": "28401/10",
+        "reply": "28401/10"
+      },
+      {
+        "args": {
+          "a": "-6251.67",
+          "b": "-9030.38",
+          "c": "-1451.32"
+        },
+        "expected": "-557779/100",
+        "reply": "-557779/100"
+      },
+      {
+        "args": {
+          "a": "-9491.19",
+          "b": "5421.57",
+          "c": "-8739.66"
+        },
+        "expected": "-106744/25",
+        "reply": "-106744/25"
+      },
+      {
+        "args": {
+          "a": "7682.24",
+          "b": "-4967.51",
+          "c": "2147.62"
+        },
+        "expected": "97247/60",
+        "reply": "97247/60"
+      },
+      {
+        "args": {
+          "a": "-1188.08",
+          "b": "3429.65",
+          "c": "-2192.10"
+        },
+        "expected": "1649/100",
+        "reply": "1649/100"
+      },
+      {
+        "args": {
+          "a": "8281.29",
+          "b": "-4582.29",
+          "c": "9215.20"
+        },
+        "expected": "64571/15",
+        "reply": "64571/15"
+      },
+      {
+        "args": {
+          "a": "-3874.25",
+          "b": "2183.52",
+          "c": "-6543.52"
+        },
+        "expected": "-10979/4",
+        "reply": "-10979/4"
+      },
+      {
+        "args": {
+          "a": "-9798.77",
+          "b": "-3228.07",
+          "c": "3744.01"
+        },
+        "expected": "-928283/300",
+        "reply": "-928283/300"
+      },
+      {
+        "args": {
+          "a": "-870.98",
+          "b": "-517.31",
+          "c": "5159.13"
+        },
+        "expected": "94271/75",
+        "reply": "94271/75"
+      },
+      {
+        "args": {
+          "a": "-3680.07",
+          "b": "1968.65",
+          "c": "9303.72"
+        },
+        "expected": "75923/30",
+        "reply": "75923/30"
+      },
+      {
+        "args": {
+          "a": "-9165.18",
+          "b": "5620.77",
+          "c": "2691.66"
+        },
+        "expected": "-1137/4",
+        "reply": "-1137/4"
+      },
+      {
+        "args": {
+          "a": "-4028.84",
+          "b": "-9482.47",
+          "c": "-7060.69"
+        },
+        "expected": "-20572/3",
+        "reply": "-20572/3"
+      },
+      {
+        "args": {
+          "a": "-1990.54",
+          "b": "-6282.55",
+          "c": "-5290.92"
+        },
+        "expected": "-1356401/300",
+        "reply": "-1356401/300"
+      },
+      {
+        "args": {
+          "a": "-551.78",
+          "b": "3556.67",
+          "c": "-7186.17"
+        },
+        "expected": "-34844/25",
+        "reply": "-34844/25"
+      },
+      {
+        "args": {
+          "a": "-3141.74",
+          "b": "781.51",
+          "c": "-8091.57"
+        },
+        "expected": "-52259/15",
+        "reply": "-52259/15"
+      },
+      {
+        "args": {
+          "a": "-129.23",
+          "b": "9094.46",
+          "c": "3729.80"
+        },
+        "expected": "1269503/300",
+        "reply": "1269503/300"
+      },
+      {
+        "args": {
+          "a": "43.75",
+          "b": "-318.28",
+          "c": "343.72"
+        },
+        "expected": "6919/300",
+        "reply": "6919/300"
+      },
+      {
+        "args": {
+          "a": "9818.06",
+          "b": "6838.68",
+          "c": "8009.87"
+        },
+        "expected": "2466661/300",
+        "reply": "2466661/300"
+      },
+      {
+        "args": {
+          "a": "-807.15",
+          "b": "-4866.48",
+          "c": "7100.09"
+        },
+        "expected": "71323/150",
+        "reply": "71323/150"
+      },
+      {
+        "args": {
+          "a": "-421.46",
+          "b": "-1177.23",
+          "c": "6832.53"
+        },
+        "expected": "130846/75",
+        "reply": "130846/75"
+      },
+      {
+        "args": {
+          "a": "-7569.47",
+          "b": "9877.50",
+          "c": "1854.48"
+        },
+        "expected": "416251/300",
+        "reply": "416251/300"
+      },
+      {
+        "args": {
+          "a": "8333.05",
+          "b": "2563.22",
+          "c": "-9835.97"
+        },
+        "expected": "10603/30",
+        "reply": "10603/30"
+      },
+      {
+        "args": {
+          "a": "-9929.11",
+          "b": "-9518.39",
+          "c": "7100.45"
+        },
+        "expected": "-246941/60",
+        "reply": "-246941/60"
+      },
+      {
+        "args": {
+          "a": "-5143.56",
+          "b": "9974.89",
+          "c": "-1491.02"
+        },
+        "expected": "334031/300",
+        "reply": "334031/300"
+      },
+      {
+        "args": {
+          "a": "-4398.19",
+          "b": "-3919.23",
+          "c": "-775.95"
+        },
+        "expected": "-909337/300",
+        "reply": "-909337/300"
+      },
+      {
+        "args": {
+          "a": "642.56",
+          "b": "3566.43",
+          "c": "-8183.37"
+        },
+        "expected": "-198719/150",
+        "reply": "-198719/150"
+      },
+      {
+        "args": {
+          "a": "6228.42",
+          "b": "4010.47",
+          "c": "9916.28"
+        },
+        "expected": "671839/100",
+        "reply": "671839/100"
+      },
+      {
+        "args": {
+          "a": "3932.29",
+          "b": "276.90",
+          "c": "-9066.66"
+        },
+        "expected": "-485747/300",
+        "reply": "-485747/300"
+      },
+      {
+        "args": {
+          "a": "-3794.88",
+          "b": "7390.29",
+          "c": "-646.14"
+        },
+        "expected": "98309/100",
+        "reply": "98309/100"
+      },
+      {
+        "args": {
+          "a": "4472.88",
+          "b": "3740.27",
+          "c": "-9791.55"
+        },
+        "expected": "-7892/15",
+        "reply": "-7892/15"
+      },
+      {
+        "args": {
+          "a": "8322.03",
+          "b": "1048.61",
+          "c": "5509.77"
+        },
+        "expected": "1488041/300",
+        "reply": "1488041/300"
+      },
+      {
+        "args": {
+          "a": "7740.48",
+          "b": "3651.73",
+          "c": "3936.44"
+        },
+        "expected": "102191/20",
+        "reply": "102191/20"
+      },
+      {
+        "args": {
+          "a": "1990.21",
+          "b": "-3438.15",
+          "c": "-2610.77"
+        },
+        "expected": "-405871/300",
+        "reply": "-405871/300"
+      },
+      {
+        "args": {
+          "a": "9039.03",
+          "b": "6772.40",
+          "c": "-6785.36"
+        },
+        "expected": "300869/100",
+        "reply": "300869/100"
+      },
+      {
+        "args": {
+          "a": "536.61",
+          "b": "-1913.06",
+          "c": "5777.99"
+        },
+        "expected": "73359/50",
+        "reply": "73359/50"
+      },
+      {
+        "args": {
+          "a": "1711.52",
+          "b": "-2784.39",
+          "c": "-8163.69"
+        },
+        "expected": "-230914/75",
+        "reply": "-230914/75"
+      },
+      {
+        "args": {
+          "a": "2005.86",
+          "b": "2418.84",
+          "c": "-5867.93"
+        },
+        "expected": "-144323/300",
+        "reply": "-144323/300"
+      },
+      {
+        "args": {
+          "a": "7384.59",
+          "b": "5584.09",
+          "c": "450.01"
+        },
+        "expected": "1341869/300",
+        "reply": "1341869/300"
+      },
+      {
+        "args": {
+          "a": "556.51",
+          "b": "-383.19",
+          "c": "6441.51"
+        },
+        "expected": "661483/300",
+        "reply": "661483/300"
+      },
+      {
+        "args": {
+          "a": "6289.49",
+          "b": "3340.93",
+          "c": "5357.37"
+        },
+        "expected": "499593/100",
+        "reply": "499593/100"
+      },
+      {
+        "args": {
+          "a": "-275.99",
+          "b": "-678.62",
+          "c": "-7383.36"
+        },
+        "expected": "-833797/300",
+        "reply": "-833797/300"
+      },
+      {
+        "args": {
+          "a": "-2992.13",
+          "b": "-1686.15",
+          "c": "7339.45"
+        },
+        "expected": "266117/300",
+        "reply": "266117/300"
+      },
+      {
+        "args": {
+          "a": "-7464.73",
+          "b": "5983.28",
+          "c": "5736.88"
+        },
+        "expected": "425543/300",
+        "reply": "425543/300"
+      },
+      {
+        "args": {
+          "a": "-871.40",
+          "b": "-3070.39",
+          "c": "8811.11"
+        },
+        "expected": "121733/75",
+        "reply": "121733/75"
+      },
+      {
+        "args": {
+          "a": "-4713.47",
+          "b": "2769.49",
+          "c": "6256.27"
+        },
+        "expected": "143743/100",
+        "reply": "143743/100"
+      },
+      {
+        "args": {
+          "a": "-8017.29",
+          "b": "-8463.41",
+          "c": "2142.61"
+        },
+        "expected": "-1433809/300",
+        "reply": "-1433809/300"
+      },
+      {
+        "args": {
+          "a": "2450.39",
+          "b": "-5826.12",
+          "c": "-2375.70"
+        },
+        "expected": "-575143/300",
+        "reply": "-575143/300"
+      },
+      {
+        "args": {
+          "a": "-5596.66",
+          "b": "5351.02",
+          "c": "2965.18"
+        },
+        "expected": "135977/150",
+        "reply": "135977/150"
+      },
+      {
+        "args": {
+          "a": "-1547.81",
+          "b": "-3602.65",
+          "c": "8078.46"
+        },
+        "expected": "976",
+        "reply": "976"
+      },
+      {
+        "args": {
+          "a": "-3206.57",
+          "b": "6414.11",
+          "c": "3159.94"
+        },
+        "expected": "159187/75",
+        "reply": "159187/75"
+      },
+      {
+        "args": {
+          "a": "-2566.97",
+          "b": "1599.96",
+          "c": "-9233.96"
+        },
+        "expected": "-1020097/300",
+        "reply": "-1020097/300"
+      },
+      {
+        "args": {
+          "a": "4584.33",
+          "b": "1444.06",
+          "c": "-1056.07"
+        },
+        "expected": "41436/25",
+        "reply": "41436/25"
+      },
+      {
+        "args": {
+          "a": "-5204.28",
+          "b": "8766.82",
+          "c": "-6604.64"
+        },
+        "expected": "-30421/30",
+        "reply": "-30421/30"
+      },
+      {
+        "args": {
+          "a": "6339.69",
+          "b": "-3553.24",
+          "c": "-1556.90"
+        },
+        "expected": "8197/20",
+        "reply": "8197/20"
+      },
+      {
+        "args": {
+          "a": "-5644.66",
+          "b": "-7974.52",
+          "c": "4685.17"
+        },
+        "expected": "-893401/300",
+        "reply": "-893401/300"
+      },
+      {
+        "args": {
+          "a": "-3935.10",
+          "b": "758.44",
+          "c": "-3025.58"
+        },
+        "expected": "-155056/75",
+        "reply": "-155056/75"
+      },
+      {
+        "args": {
+          "a": "-8904.70",
+          "b": "2217.68",
+          "c": "8074.21"
+        },
+        "expected": "138719/300",
+        "reply": "138719/300"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "7282c533c2292c32f8f221535f394758fa502cb483dbbc10eed5e67c70b19535"
+}
