@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40392634718",
+  "runId": "40423782562",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-26T20:06:44Z",
+  "at": "2026-10-27T00:03:19Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "7ad5c2aebd137cbb72850c25c4beb65feee88cabf4f58039424a3b5235d9ed48",
-  "cycleNumber": 127,
+  "parentRecordHash": "1d1eb3209e23eeb8ee85aa6266ce4d208714a32b668519bce87c45a1cd13daab",
+  "cycleNumber": 128,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,23 +1132,9 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "fetched",
-    "hash": "53accb79d86fa7bd1e8505453b6a2023291177f76e0242fc51f3f7a42b4bf90f",
-    "items": [
-      {
-        "title": "On the continuity of conditional distributions and stratification for derivative pricing",
-        "url": "http://arxiv.org/abs/2610.32970v1",
-        "updated": "2026-10-23T17:57:09Z",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding",
-        "url": "http://arxiv.org/abs/2610.32881v1",
-        "updated": "2026-10-23T16:47:29Z",
-        "status": "metadata_only_not_fulltext_verified"
-      }
-    ],
-    "accessedAt": "2026-10-26T20:06:45Z"
+    "access": "unavailable",
+    "errorType": "TimeoutError",
+    "items": []
   },
   "agenda": {
     "source": [
@@ -1160,12 +1146,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.676,
+  "elapsedSeconds": 12.258,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "1d1eb3209e23eeb8ee85aa6266ce4d208714a32b668519bce87c45a1cd13daab"
+  "recordHash": "bc5dc111674d5f3642db8a3245df57fe363dc047af8dd7b651e5a38523e2a641"
 }
