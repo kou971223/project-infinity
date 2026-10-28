@@ -1,0 +1,773 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-10-28T22:49:45.108676+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "40782885214",
+  "parents": {
+    "knowledge": "0d73637b06c72c1ac23fd376520fa5ebd5421f5525f1f13486ab8ad18e401450",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-28T22:49:44.691922+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "d633fac6d4e743798b823c3bea0ec5d4d846d02bee108f3b70be1669ecaeb98e"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-10-28T22:49:44.925221+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "75767907c03b4ac94f001d817ee71247360b216a5425f5c52058f922f6f119e7"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.35942",
+      "title": "Counting the Bandages: On measuring the time that AI saves",
+      "excerpt": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect cost. I give a baseline model of checking in which, until the model is good enough not to check, a c",
+      "excerptHash": "1a733d9235585d01e7f6d6bb5f72921879a2cf315a45bd210bccb99dd0eccec7",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.104371+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.35984",
+      "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
+      "excerpt": "arXiv:2610.35984v1 Announce Type: new Abstract: Deep learning models are highly effective in a wide range of domains, particu larly in plant disease diagnosis. However, their performance is often limited by challenges such as insufficient data and class imbalance. In our work, we propose a comprehensive data generation strategy to overcome these limitations. First, we apply various data generation techniques, including traditional augmentation methods, CutMix, MixUp, and synthetic image generation using Deep Convolu tional Generative Adversarial Networks (DCGANs), to create new data samples. S",
+      "excerptHash": "434fb1be7016bdc15081d2fe35a8cd4ba48e41f3ccf1defdc925adda05f2aceb",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.105084+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.36077",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "excerpt": "arXiv:2610.36077v1 Announce Type: new Abstract: Multimodal intelligence can be viewed as human-guided co-evolution between worlds and agents through interaction. However, scaling this process faces two bottlenecks: constructing heterogeneous, verifiable environments is costly, and manual Harness iteration cannot keep pace with growing task diversity and complexity. A key insight is that tasks with different modalities and surface forms can share the same underlying capability requirements. We therefore introduce The Trinity, a recursive self-improvement framework coupling world generation with",
+      "excerptHash": "4024aba39ddfb511c8fe02e81ada62c022603fb3adf9ef28140f3635ac394acc",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.105723+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.36100",
+      "title": "CohortFlow: A Steerable Clinical Cohort Curation Agent with Localized Semantic Correction",
+      "excerpt": "arXiv:2610.36100v1 Announce Type: new Abstract: Language model agents for clinical cohort curation should accommodate evolving eligibility criteria without repeatedly processing unchanged requirements. We introduce CohortFlow, a steerable agent that represents natural language corrections as localized updates to a structured cohort specification and reconciles them with a persistent execution graph. Explicitly recorded semantic dependencies enable affected computations to be selectively invalidated while preserving valid prior results. On 100 scenarios derived from clinical-trial eligibility c",
+      "excerptHash": "02337e347ce7f5baac56e28aa291ccaf90de9dcd9a1c3db9ae830028dbfe7594",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.106382+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.36116",
+      "title": "Why and How to Do Science When AI Is Better at It: A Framework Grounded in Human Understanding and Direction",
+      "excerpt": "arXiv:2610.36116v1 Announce Type: new Abstract: As AI begins to match or exceed human researchers at core scientific tasks, two questions become pressing: \\emph{why} should humans keep doing science, and \\emph{how} should they use AI when they do? This paper argues that the second can be answered only by answering the first. It holds that one indispensable aim of science is \\emph{durable, collective human understanding of the world, pursued in service of human ends and values}. From this principle it derives a two-part test for when a research task can be delegated to AI. The first part, \\emph",
+      "excerptHash": "a060c9f79b2bd44cc3b3379fe4b16f83f80d493589c33973e59a793f6e7df6ae",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.107033+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.36146",
+      "title": "From Structural Feedback to Prompt Policies: Learning Faithful Text-to-Image Prompt Editors",
+      "excerpt": "arXiv:2610.36146v1 Announce Type: new Abstract: Prompt optimization should improve the image a user receives without changing the scene the user requested. Yet stylistic rewriting can weaken object attributes and relations even when global text--image similarity remains high. We propose StruPO, a structure-aware prompt editor that uses a calibrated scene graph as a shared representation for policy conditioning and image-grounded supervision. The graph exposes what should be preserved, while deletion, reordering, and insertion provide a token-aligned way to modify the prompt. This turns structu",
+      "excerptHash": "d2e84d246986738837d2c03d025703b0368bb69d1d8a9a984dab77efe9459831",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-10-28T22:49:45.107666+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "rectangle",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 184416526671018,
+    "trainingExamples": [
+      {
+        "args": {
+          "width": "-6055.69",
+          "height": "35.41"
+        },
+        "expected": "-2144319829/10000"
+      },
+      {
+        "args": {
+          "width": "-4325.79",
+          "height": "-3264.62"
+        },
+        "expected": "70610302749/5000"
+      },
+      {
+        "args": {
+          "width": "-4764.58",
+          "height": "4815.88"
+        },
+        "expected": "-28682056913/1250"
+      },
+      {
+        "args": {
+          "width": "7236.11",
+          "height": "8505.46"
+        },
+        "expected": "307732220803/5000"
+      }
+    ],
+    "examined": 13,
+    "states": 11,
+    "cost": 3
+  },
+  "programCandidate": {
+    "task": "rectangle",
+    "expression": [
+      "mul",
+      [
+        "var",
+        "width"
+      ],
+      [
+        "var",
+        "height"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "b469a15c3228b96eb4b45c88ed73f1c3d638a0e23709a00b6db394c45939e093",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-28T22:49:44.691922+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "d633fac6d4e743798b823c3bea0ec5d4d846d02bee108f3b70be1669ecaeb98e"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-10-28T22:49:44.925221+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "75767907c03b4ac94f001d817ee71247360b216a5425f5c52058f922f6f119e7"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.35942",
+        "title": "Counting the Bandages: On measuring the time that AI saves",
+        "excerpt": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect cost. I give a baseline model of checking in which, until the model is good enough not to check, a c",
+        "excerptHash": "1a733d9235585d01e7f6d6bb5f72921879a2cf315a45bd210bccb99dd0eccec7",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.104371+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.35984",
+        "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
+        "excerpt": "arXiv:2610.35984v1 Announce Type: new Abstract: Deep learning models are highly effective in a wide range of domains, particu larly in plant disease diagnosis. However, their performance is often limited by challenges such as insufficient data and class imbalance. In our work, we propose a comprehensive data generation strategy to overcome these limitations. First, we apply various data generation techniques, including traditional augmentation methods, CutMix, MixUp, and synthetic image generation using Deep Convolu tional Generative Adversarial Networks (DCGANs), to create new data samples. S",
+        "excerptHash": "434fb1be7016bdc15081d2fe35a8cd4ba48e41f3ccf1defdc925adda05f2aceb",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.105084+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.36077",
+        "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+        "excerpt": "arXiv:2610.36077v1 Announce Type: new Abstract: Multimodal intelligence can be viewed as human-guided co-evolution between worlds and agents through interaction. However, scaling this process faces two bottlenecks: constructing heterogeneous, verifiable environments is costly, and manual Harness iteration cannot keep pace with growing task diversity and complexity. A key insight is that tasks with different modalities and surface forms can share the same underlying capability requirements. We therefore introduce The Trinity, a recursive self-improvement framework coupling world generation with",
+        "excerptHash": "4024aba39ddfb511c8fe02e81ada62c022603fb3adf9ef28140f3635ac394acc",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.105723+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.36100",
+        "title": "CohortFlow: A Steerable Clinical Cohort Curation Agent with Localized Semantic Correction",
+        "excerpt": "arXiv:2610.36100v1 Announce Type: new Abstract: Language model agents for clinical cohort curation should accommodate evolving eligibility criteria without repeatedly processing unchanged requirements. We introduce CohortFlow, a steerable agent that represents natural language corrections as localized updates to a structured cohort specification and reconciles them with a persistent execution graph. Explicitly recorded semantic dependencies enable affected computations to be selectively invalidated while preserving valid prior results. On 100 scenarios derived from clinical-trial eligibility c",
+        "excerptHash": "02337e347ce7f5baac56e28aa291ccaf90de9dcd9a1c3db9ae830028dbfe7594",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.106382+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.36116",
+        "title": "Why and How to Do Science When AI Is Better at It: A Framework Grounded in Human Understanding and Direction",
+        "excerpt": "arXiv:2610.36116v1 Announce Type: new Abstract: As AI begins to match or exceed human researchers at core scientific tasks, two questions become pressing: \\emph{why} should humans keep doing science, and \\emph{how} should they use AI when they do? This paper argues that the second can be answered only by answering the first. It holds that one indispensable aim of science is \\emph{durable, collective human understanding of the world, pursued in service of human ends and values}. From this principle it derives a two-part test for when a research task can be delegated to AI. The first part, \\emph",
+        "excerptHash": "a060c9f79b2bd44cc3b3379fe4b16f83f80d493589c33973e59a793f6e7df6ae",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.107033+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.36146",
+        "title": "From Structural Feedback to Prompt Policies: Learning Faithful Text-to-Image Prompt Editors",
+        "excerpt": "arXiv:2610.36146v1 Announce Type: new Abstract: Prompt optimization should improve the image a user receives without changing the scene the user requested. Yet stylistic rewriting can weaken object attributes and relations even when global text--image similarity remains high. We propose StruPO, a structure-aware prompt editor that uses a calibrated scene graph as a shared representation for policy conditioning and image-grounded supervision. The graph exposes what should be preserved, while deletion, reordering, and insertion provide a token-aligned way to modify the prompt. This turns structu",
+        "excerptHash": "d2e84d246986738837d2c03d025703b0368bb69d1d8a9a984dab77efe9459831",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-10-28T22:49:45.107666+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 47619624066587,
+    "cases": [
+      {
+        "args": {
+          "width": "0",
+          "height": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "width": "1",
+          "height": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "width": "-1",
+          "height": "-1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "width": "1982.15",
+          "height": "9100.80"
+        },
+        "expected": "450978768/25",
+        "reply": "450978768/25"
+      },
+      {
+        "args": {
+          "width": "-1932.07",
+          "height": "-9312.85"
+        },
+        "expected": "35986156199/2000",
+        "reply": "35986156199/2000"
+      },
+      {
+        "args": {
+          "width": "9816.75",
+          "height": "-2762.98"
+        },
+        "expected": "-5424696783/200",
+        "reply": "-5424696783/200"
+      },
+      {
+        "args": {
+          "width": "521.77",
+          "height": "-3470.29"
+        },
+        "expected": "-18106932133/10000",
+        "reply": "-18106932133/10000"
+      },
+      {
+        "args": {
+          "width": "-1334.61",
+          "height": "-9966.87"
+        },
+        "expected": "133018843707/10000",
+        "reply": "133018843707/10000"
+      },
+      {
+        "args": {
+          "width": "3096.38",
+          "height": "5911.78"
+        },
+        "expected": "45762793391/2500",
+        "reply": "45762793391/2500"
+      },
+      {
+        "args": {
+          "width": "-1016.21",
+          "height": "1595.14"
+        },
+        "expected": "-8104986097/5000",
+        "reply": "-8104986097/5000"
+      },
+      {
+        "args": {
+          "width": "9648.08",
+          "height": "-3833.90"
+        },
+        "expected": "-4623721739/125",
+        "reply": "-4623721739/125"
+      },
+      {
+        "args": {
+          "width": "9666.33",
+          "height": "4132.63"
+        },
+        "expected": "399473653479/10000",
+        "reply": "399473653479/10000"
+      },
+      {
+        "args": {
+          "width": "-9377.99",
+          "height": "-6438.24"
+        },
+        "expected": "37736093961/625",
+        "reply": "37736093961/625"
+      },
+      {
+        "args": {
+          "width": "2050.47",
+          "height": "7191.86"
+        },
+        "expected": "73733465871/5000",
+        "reply": "73733465871/5000"
+      },
+      {
+        "args": {
+          "width": "6542.38",
+          "height": "9283.04"
+        },
+        "expected": "37958234522/625",
+        "reply": "37958234522/625"
+      },
+      {
+        "args": {
+          "width": "-3305.58",
+          "height": "6777.03"
+        },
+        "expected": "-112010074137/5000",
+        "reply": "-112010074137/5000"
+      },
+      {
+        "args": {
+          "width": "6932.47",
+          "height": "-7514.42"
+        },
+        "expected": "-260467456087/5000",
+        "reply": "-260467456087/5000"
+      },
+      {
+        "args": {
+          "width": "3188.94",
+          "height": "6078.67"
+        },
+        "expected": "96922569549/5000",
+        "reply": "96922569549/5000"
+      },
+      {
+        "args": {
+          "width": "-6216.65",
+          "height": "946.10"
+        },
+        "expected": "-1176314513/200",
+        "reply": "-1176314513/200"
+      },
+      {
+        "args": {
+          "width": "-6668.39",
+          "height": "9761.82"
+        },
+        "expected": "-325478114349/5000",
+        "reply": "-325478114349/5000"
+      },
+      {
+        "args": {
+          "width": "7415.96",
+          "height": "5567.50"
+        },
+        "expected": "412883573/10",
+        "reply": "412883573/10"
+      },
+      {
+        "args": {
+          "width": "781.57",
+          "height": "7513.37"
+        },
+        "expected": "58722245909/10000",
+        "reply": "58722245909/10000"
+      },
+      {
+        "args": {
+          "width": "6445.92",
+          "height": "8691.83"
+        },
+        "expected": "35016775521/625",
+        "reply": "35016775521/625"
+      },
+      {
+        "args": {
+          "width": "7940.71",
+          "height": "6579.37"
+        },
+        "expected": "522448691527/10000",
+        "reply": "522448691527/10000"
+      },
+      {
+        "args": {
+          "width": "8179.41",
+          "height": "1603.81"
+        },
+        "expected": "131182195521/10000",
+        "reply": "131182195521/10000"
+      },
+      {
+        "args": {
+          "width": "-5184.68",
+          "height": "-3344.53"
+        },
+        "expected": "43350794501/2500",
+        "reply": "43350794501/2500"
+      },
+      {
+        "args": {
+          "width": "-2546.50",
+          "height": "-1232.83"
+        },
+        "expected": "627880319/200",
+        "reply": "627880319/200"
+      },
+      {
+        "args": {
+          "width": "6515.10",
+          "height": "6619.45"
+        },
+        "expected": "8625275739/200",
+        "reply": "8625275739/200"
+      },
+      {
+        "args": {
+          "width": "-1008.40",
+          "height": "-9526.91"
+        },
+        "expected": "2401734011/250",
+        "reply": "2401734011/250"
+      },
+      {
+        "args": {
+          "width": "-1842.85",
+          "height": "-4059.98"
+        },
+        "expected": "7481934143/1000",
+        "reply": "7481934143/1000"
+      },
+      {
+        "args": {
+          "width": "-341.27",
+          "height": "-1397.00"
+        },
+        "expected": "47675419/100",
+        "reply": "47675419/100"
+      },
+      {
+        "args": {
+          "width": "9811.72",
+          "height": "-1146.68"
+        },
+        "expected": "-7031814431/625",
+        "reply": "-7031814431/625"
+      },
+      {
+        "args": {
+          "width": "5978.59",
+          "height": "4290.66"
+        },
+        "expected": "128260484847/5000",
+        "reply": "128260484847/5000"
+      },
+      {
+        "args": {
+          "width": "-9735.32",
+          "height": "-4219.11"
+        },
+        "expected": "102685964913/2500",
+        "reply": "102685964913/2500"
+      },
+      {
+        "args": {
+          "width": "-4073.52",
+          "height": "1043.19"
+        },
+        "expected": "-5311819161/1250",
+        "reply": "-5311819161/1250"
+      },
+      {
+        "args": {
+          "width": "-8170.46",
+          "height": "3056.41"
+        },
+        "expected": "-124861378243/5000",
+        "reply": "-124861378243/5000"
+      },
+      {
+        "args": {
+          "width": "-2937.80",
+          "height": "2494.04"
+        },
+        "expected": "-915873839/125",
+        "reply": "-915873839/125"
+      },
+      {
+        "args": {
+          "width": "-8344.69",
+          "height": "2606.89"
+        },
+        "expected": "-217536889141/10000",
+        "reply": "-217536889141/10000"
+      },
+      {
+        "args": {
+          "width": "-1304.40",
+          "height": "-3883.69"
+        },
+        "expected": "1266471309/250",
+        "reply": "1266471309/250"
+      },
+      {
+        "args": {
+          "width": "-4014.83",
+          "height": "903.26"
+        },
+        "expected": "-18132176729/5000",
+        "reply": "-18132176729/5000"
+      },
+      {
+        "args": {
+          "width": "-2945.72",
+          "height": "-283.50"
+        },
+        "expected": "41755581/50",
+        "reply": "41755581/50"
+      },
+      {
+        "args": {
+          "width": "2237.73",
+          "height": "-7255.52"
+        },
+        "expected": "-10147434231/625",
+        "reply": "-10147434231/625"
+      },
+      {
+        "args": {
+          "width": "8756.06",
+          "height": "2936.06"
+        },
+        "expected": "64270793809/2500",
+        "reply": "64270793809/2500"
+      },
+      {
+        "args": {
+          "width": "4352.99",
+          "height": "1533.67"
+        },
+        "expected": "66760501733/10000",
+        "reply": "66760501733/10000"
+      },
+      {
+        "args": {
+          "width": "-4130.90",
+          "height": "-4612.75"
+        },
+        "expected": "762192359/40",
+        "reply": "762192359/40"
+      },
+      {
+        "args": {
+          "width": "-3492.69",
+          "height": "-7659.13"
+        },
+        "expected": "267509667597/10000",
+        "reply": "267509667597/10000"
+      },
+      {
+        "args": {
+          "width": "-8142.91",
+          "height": "7995.25"
+        },
+        "expected": "-26041840471/400",
+        "reply": "-26041840471/400"
+      },
+      {
+        "args": {
+          "width": "6548.60",
+          "height": "-67.43"
+        },
+        "expected": "-220786049/500",
+        "reply": "-220786049/500"
+      },
+      {
+        "args": {
+          "width": "-6455.13",
+          "height": "-254.19"
+        },
+        "expected": "16408294947/10000",
+        "reply": "16408294947/10000"
+      },
+      {
+        "args": {
+          "width": "-8325.03",
+          "height": "-5987.21"
+        },
+        "expected": "498437028663/10000",
+        "reply": "498437028663/10000"
+      },
+      {
+        "args": {
+          "width": "-9665.37",
+          "height": "-4320.99"
+        },
+        "expected": "417639671163/10000",
+        "reply": "417639671163/10000"
+      },
+      {
+        "args": {
+          "width": "-1106.25",
+          "height": "3229.40"
+        },
+        "expected": "-14290095/4",
+        "reply": "-14290095/4"
+      },
+      {
+        "args": {
+          "width": "-2687.61",
+          "height": "-1587.33"
+        },
+        "expected": "42661239813/10000",
+        "reply": "42661239813/10000"
+      },
+      {
+        "args": {
+          "width": "3326.74",
+          "height": "9086.59"
+        },
+        "expected": "151143612083/5000",
+        "reply": "151143612083/5000"
+      },
+      {
+        "args": {
+          "width": "5391.39",
+          "height": "-2716.42"
+        },
+        "expected": "-73226398119/5000",
+        "reply": "-73226398119/5000"
+      },
+      {
+        "args": {
+          "width": "8125.39",
+          "height": "8583.34"
+        },
+        "expected": "348714925013/5000",
+        "reply": "348714925013/5000"
+      },
+      {
+        "args": {
+          "width": "6342.75",
+          "height": "8906.79"
+        },
+        "expected": "22597416909/400",
+        "reply": "22597416909/400"
+      },
+      {
+        "args": {
+          "width": "-2216.25",
+          "height": "134.11"
+        },
+        "expected": "-23777703/80",
+        "reply": "-23777703/80"
+      },
+      {
+        "args": {
+          "width": "-5691.77",
+          "height": "-9264.02"
+        },
+        "expected": "263643355577/5000",
+        "reply": "263643355577/5000"
+      },
+      {
+        "args": {
+          "width": "1551.70",
+          "height": "8095.65"
+        },
+        "expected": "2512404021/200",
+        "reply": "2512404021/200"
+      },
+      {
+        "args": {
+          "width": "7547.40",
+          "height": "-2547.78"
+        },
+        "expected": "-4807278693/250",
+        "reply": "-4807278693/250"
+      },
+      {
+        "args": {
+          "width": "2049.42",
+          "height": "6011.09"
+        },
+        "expected": "61596240339/5000",
+        "reply": "61596240339/5000"
+      },
+      {
+        "args": {
+          "width": "-4270.74",
+          "height": "-3534.09"
+        },
+        "expected": "75465897633/5000",
+        "reply": "75465897633/5000"
+      },
+      {
+        "args": {
+          "width": "1495.70",
+          "height": "-9173.29"
+        },
+        "expected": "-13720489853/1000",
+        "reply": "-13720489853/1000"
+      }
+    ],
+    "nodes": 3,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "0cef0abacaa8f890f7a47d520e70a1749198f950a05c191d889069529759275b"
+}
