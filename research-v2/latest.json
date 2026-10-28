@@ -1,10 +1,10 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-10-28T06:14:26.441427+00:00",
+  "at": "2026-10-28T13:29:21.436867+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "40642632101",
+  "runId": "40696833132",
   "parents": {
-    "knowledge": "ff1d66a76a2eb59a7c91a9a839ac3a0e4ce6edb3e19249a66b7dc09f39337f82",
+    "knowledge": "0d73637b06c72c1ac23fd376520fa5ebd5421f5525f1f13486ab8ad18e401450",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
   },
   "cards": [
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-28T06:14:25.938796+00:00",
+      "checkedAt": "2026-10-28T13:29:20.761068+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "ba83a3f04b5f1220b07917c7ce1c8961456eab033d17c4c9ec5183c2546e3bda"
+      "sourceHash": "91e48e39c0e5234686dd7d9dddb7a5a5f443cd586130d3da763eefd04a996351"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,9 +24,9 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.234976+00:00",
+      "checkedAt": "2026-10-28T13:29:21.010445+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "a90d682466ef41b87d65cb83f76ce069b07230b478e2d5ea3275391890002a66"
+      "sourceHash": "de330bc7102a0b240bf75bab57e8cda07c1f3e66e167388a0e918cca8df1ca0a"
     },
     {
       "url": "https://arxiv.org/abs/2610.35942",
@@ -34,7 +34,7 @@
       "excerpt": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect cost. I give a baseline model of checking in which, until the model is good enough not to check, a c",
       "excerptHash": "1a733d9235585d01e7f6d6bb5f72921879a2cf315a45bd210bccb99dd0eccec7",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.437829+00:00",
+      "checkedAt": "2026-10-28T13:29:21.432695+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     },
@@ -44,7 +44,7 @@
       "excerpt": "arXiv:2610.35984v1 Announce Type: new Abstract: Deep learning models are highly effective in a wide range of domains, particu larly in plant disease diagnosis. However, their performance is often limited by challenges such as insufficient data and class imbalance. In our work, we propose a comprehensive data generation strategy to overcome these limitations. First, we apply various data generation techniques, including traditional augmentation methods, CutMix, MixUp, and synthetic image generation using Deep Convolu tional Generative Adversarial Networks (DCGANs), to create new data samples. S",
       "excerptHash": "434fb1be7016bdc15081d2fe35a8cd4ba48e41f3ccf1defdc925adda05f2aceb",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.438388+00:00",
+      "checkedAt": "2026-10-28T13:29:21.433351+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     },
@@ -54,7 +54,7 @@
       "excerpt": "arXiv:2610.36077v1 Announce Type: new Abstract: Multimodal intelligence can be viewed as human-guided co-evolution between worlds and agents through interaction. However, scaling this process faces two bottlenecks: constructing heterogeneous, verifiable environments is costly, and manual Harness iteration cannot keep pace with growing task diversity and complexity. A key insight is that tasks with different modalities and surface forms can share the same underlying capability requirements. We therefore introduce The Trinity, a recursive self-improvement framework coupling world generation with",
       "excerptHash": "4024aba39ddfb511c8fe02e81ada62c022603fb3adf9ef28140f3635ac394acc",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.438915+00:00",
+      "checkedAt": "2026-10-28T13:29:21.433980+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     },
@@ -64,7 +64,7 @@
       "excerpt": "arXiv:2610.36100v1 Announce Type: new Abstract: Language model agents for clinical cohort curation should accommodate evolving eligibility criteria without repeatedly processing unchanged requirements. We introduce CohortFlow, a steerable agent that represents natural language corrections as localized updates to a structured cohort specification and reconciles them with a persistent execution graph. Explicitly recorded semantic dependencies enable affected computations to be selectively invalidated while preserving valid prior results. On 100 scenarios derived from clinical-trial eligibility c",
       "excerptHash": "02337e347ce7f5baac56e28aa291ccaf90de9dcd9a1c3db9ae830028dbfe7594",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.439448+00:00",
+      "checkedAt": "2026-10-28T13:29:21.434581+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     },
@@ -74,7 +74,7 @@
       "excerpt": "arXiv:2610.36116v1 Announce Type: new Abstract: As AI begins to match or exceed human researchers at core scientific tasks, two questions become pressing: \\emph{why} should humans keep doing science, and \\emph{how} should they use AI when they do? This paper argues that the second can be answered only by answering the first. It holds that one indispensable aim of science is \\emph{durable, collective human understanding of the world, pursued in service of human ends and values}. From this principle it derives a two-part test for when a research task can be delegated to AI. The first part, \\emph",
       "excerptHash": "a060c9f79b2bd44cc3b3379fe4b16f83f80d493589c33973e59a793f6e7df6ae",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.439972+00:00",
+      "checkedAt": "2026-10-28T13:29:21.435199+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     },
@@ -84,13 +84,13 @@
       "excerpt": "arXiv:2610.36146v1 Announce Type: new Abstract: Prompt optimization should improve the image a user receives without changing the scene the user requested. Yet stylistic rewriting can weaken object attributes and relations even when global text--image similarity remains high. We propose StruPO, a structure-aware prompt editor that uses a calibrated scene graph as a shared representation for policy conditioning and image-grounded supervision. The graph exposes what should be preserved, while deletion, reordering, and insertion provide a token-aligned way to modify the prompt. This turns structu",
       "excerptHash": "d2e84d246986738837d2c03d025703b0368bb69d1d8a9a984dab77efe9459831",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.440507+00:00",
+      "checkedAt": "2026-10-28T13:29:21.435817+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
     }
   ],
   "sourceFailures": [],
-  "task": "discount",
+  "task": "mean",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,72 +104,76 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 25133218029983,
+    "trainingSeed": 205965704049203,
     "trainingExamples": [
       {
         "args": {
-          "amount": "5092.51",
-          "rate": "5364.00"
+          "a": "3176.39",
+          "b": "-3719.27",
+          "c": "7766.85"
         },
-        "expected": "-167543579/625"
+        "expected": "240799/100"
       },
       {
         "args": {
-          "amount": "7227.01",
-          "rate": "7035.42"
+          "a": "8807.34",
+          "b": "7685.30",
+          "c": "-6039.56"
         },
-        "expected": "-250611748471/500000"
+        "expected": "87109/25"
       },
       {
         "args": {
-          "amount": "-6727.57",
-          "rate": "-8703.36"
+          "a": "2787.32",
+          "b": "7024.65",
+          "c": "-827.67"
         },
-        "expected": "-37015762897/62500"
+        "expected": "89843/30"
       },
       {
         "args": {
-          "amount": "6926.39",
-          "rate": "-7128.92"
+          "a": "-9700.52",
+          "b": "1401.24",
+          "c": "7371.41"
         },
-        "expected": "125175797997/250000"
+        "expected": "-30929/100"
       }
     ],
-    "examined": 55145,
-    "states": 23806,
+    "examined": 15345,
+    "states": 6013,
     "cost": 7
   },
   "programCandidate": {
-    "task": "discount",
+    "task": "mean",
     "expression": [
       "div",
       [
-        "mul",
+        "add",
         [
-          "sub",
+          "add",
           [
-            "const",
-            "100"
+            "var",
+            "a"
           ],
           [
             "var",
-            "rate"
+            "b"
           ]
         ],
         [
           "var",
-          "amount"
+          "c"
         ]
       ],
       [
         "const",
-        "100"
+        "3"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "3b785d8c2444cae7600c686c319775bcade8883dff94c06cd78792e1c000273e",
+  "frozenHash": "8557cdfb07b9fa04c17bcc3fa3b4dae3c8a99d9a29f75eab9c34cfac009ba984",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -179,9 +183,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-28T06:14:25.938796+00:00",
+        "checkedAt": "2026-10-28T13:29:20.761068+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "ba83a3f04b5f1220b07917c7ce1c8961456eab033d17c4c9ec5183c2546e3bda"
+        "sourceHash": "91e48e39c0e5234686dd7d9dddb7a5a5f443cd586130d3da763eefd04a996351"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -189,9 +193,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.234976+00:00",
+        "checkedAt": "2026-10-28T13:29:21.010445+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "a90d682466ef41b87d65cb83f76ce069b07230b478e2d5ea3275391890002a66"
+        "sourceHash": "de330bc7102a0b240bf75bab57e8cda07c1f3e66e167388a0e918cca8df1ca0a"
       },
       {
         "url": "https://arxiv.org/abs/2610.35942",
@@ -199,7 +203,7 @@
         "excerpt": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect cost. I give a baseline model of checking in which, until the model is good enough not to check, a c",
         "excerptHash": "1a733d9235585d01e7f6d6bb5f72921879a2cf315a45bd210bccb99dd0eccec7",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.437829+00:00",
+        "checkedAt": "2026-10-28T13:29:21.432695+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       },
@@ -209,7 +213,7 @@
         "excerpt": "arXiv:2610.35984v1 Announce Type: new Abstract: Deep learning models are highly effective in a wide range of domains, particu larly in plant disease diagnosis. However, their performance is often limited by challenges such as insufficient data and class imbalance. In our work, we propose a comprehensive data generation strategy to overcome these limitations. First, we apply various data generation techniques, including traditional augmentation methods, CutMix, MixUp, and synthetic image generation using Deep Convolu tional Generative Adversarial Networks (DCGANs), to create new data samples. S",
         "excerptHash": "434fb1be7016bdc15081d2fe35a8cd4ba48e41f3ccf1defdc925adda05f2aceb",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.438388+00:00",
+        "checkedAt": "2026-10-28T13:29:21.433351+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       },
@@ -219,7 +223,7 @@
         "excerpt": "arXiv:2610.36077v1 Announce Type: new Abstract: Multimodal intelligence can be viewed as human-guided co-evolution between worlds and agents through interaction. However, scaling this process faces two bottlenecks: constructing heterogeneous, verifiable environments is costly, and manual Harness iteration cannot keep pace with growing task diversity and complexity. A key insight is that tasks with different modalities and surface forms can share the same underlying capability requirements. We therefore introduce The Trinity, a recursive self-improvement framework coupling world generation with",
         "excerptHash": "4024aba39ddfb511c8fe02e81ada62c022603fb3adf9ef28140f3635ac394acc",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.438915+00:00",
+        "checkedAt": "2026-10-28T13:29:21.433980+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       },
@@ -229,7 +233,7 @@
         "excerpt": "arXiv:2610.36100v1 Announce Type: new Abstract: Language model agents for clinical cohort curation should accommodate evolving eligibility criteria without repeatedly processing unchanged requirements. We introduce CohortFlow, a steerable agent that represents natural language corrections as localized updates to a structured cohort specification and reconciles them with a persistent execution graph. Explicitly recorded semantic dependencies enable affected computations to be selectively invalidated while preserving valid prior results. On 100 scenarios derived from clinical-trial eligibility c",
         "excerptHash": "02337e347ce7f5baac56e28aa291ccaf90de9dcd9a1c3db9ae830028dbfe7594",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.439448+00:00",
+        "checkedAt": "2026-10-28T13:29:21.434581+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       },
@@ -239,7 +243,7 @@
         "excerpt": "arXiv:2610.36116v1 Announce Type: new Abstract: As AI begins to match or exceed human researchers at core scientific tasks, two questions become pressing: \\emph{why} should humans keep doing science, and \\emph{how} should they use AI when they do? This paper argues that the second can be answered only by answering the first. It holds that one indispensable aim of science is \\emph{durable, collective human understanding of the world, pursued in service of human ends and values}. From this principle it derives a two-part test for when a research task can be delegated to AI. The first part, \\emph",
         "excerptHash": "a060c9f79b2bd44cc3b3379fe4b16f83f80d493589c33973e59a793f6e7df6ae",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.439972+00:00",
+        "checkedAt": "2026-10-28T13:29:21.435199+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       },
@@ -249,7 +253,7 @@
         "excerpt": "arXiv:2610.36146v1 Announce Type: new Abstract: Prompt optimization should improve the image a user receives without changing the scene the user requested. Yet stylistic rewriting can weaken object attributes and relations even when global text--image similarity remains high. We propose StruPO, a structure-aware prompt editor that uses a calibrated scene graph as a shared representation for policy conditioning and image-grounded supervision. The graph exposes what should be preserved, while deletion, reordering, and insertion provide a token-aligned way to modify the prompt. This turns structu",
         "excerptHash": "d2e84d246986738837d2c03d025703b0368bb69d1d8a9a984dab77efe9459831",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-10-28T06:14:26.440507+00:00",
+        "checkedAt": "2026-10-28T13:29:21.435817+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
       }
@@ -259,520 +263,584 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
-    "seed": 155489699499528,
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 65050572424170,
     "cases": [
       {
         "args": {
-          "amount": "0",
-          "rate": "0"
+          "a": "0",
+          "b": "0",
+          "c": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "amount": "1",
-          "rate": "1"
+          "a": "1",
+          "b": "1",
+          "c": "1"
         },
-        "expected": "99/100",
-        "reply": "99/100"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "amount": "-1",
-          "rate": "-1"
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
         },
-        "expected": "-101/100",
-        "reply": "-101/100"
+        "expected": "-1",
+        "reply": "-1"
       },
       {
         "args": {
-          "amount": "-3887.81",
-          "rate": "5361.03"
+          "a": "1926.59",
+          "b": "7967.41",
+          "c": "7783.76"
         },
-        "expected": "204538850443/1000000",
-        "reply": "204538850443/1000000"
+        "expected": "441944/75",
+        "reply": "441944/75"
       },
       {
         "args": {
-          "amount": "5842.25",
-          "rate": "4989.24"
+          "a": "6085.83",
+          "b": "4619.92",
+          "c": "-8437.50"
         },
-        "expected": "-2856416239/10000",
-        "reply": "-2856416239/10000"
+        "expected": "9073/12",
+        "reply": "9073/12"
       },
       {
         "args": {
-          "amount": "-2413.43",
-          "rate": "-9357.30"
+          "a": "8881.46",
+          "b": "-4306.67",
+          "c": "-5997.12"
         },
-        "expected": "-22824531539/100000",
-        "reply": "-22824531539/100000"
+        "expected": "-47411/100",
+        "reply": "-47411/100"
       },
       {
         "args": {
-          "amount": "-1652.94",
-          "rate": "-2707.70"
+          "a": "-6665.77",
+          "b": "-6708.75",
+          "c": "-7825.35"
         },
-        "expected": "-2320479819/50000",
-        "reply": "-2320479819/50000"
+        "expected": "-2119987/300",
+        "reply": "-2119987/300"
       },
       {
         "args": {
-          "amount": "7658.19",
-          "rate": "617.11"
+          "a": "238.11",
+          "b": "-7183.25",
+          "c": "3180.14"
         },
-        "expected": "-39601266309/1000000",
-        "reply": "-39601266309/1000000"
+        "expected": "-1255",
+        "reply": "-1255"
       },
       {
         "args": {
-          "amount": "-9069.53",
-          "rate": "-8725.25"
+          "a": "-8546.98",
+          "b": "-7540.75",
+          "c": "-9325.86"
         },
-        "expected": "-32016347853/40000",
-        "reply": "-32016347853/40000"
+        "expected": "-2541359/300",
+        "reply": "-2541359/300"
       },
       {
         "args": {
-          "amount": "-390.46",
-          "rate": "1097.70"
+          "a": "7873.72",
+          "b": "8360.46",
+          "c": "-5027.95"
         },
-        "expected": "194780971/50000",
-        "reply": "194780971/50000"
+        "expected": "373541/100",
+        "reply": "373541/100"
       },
       {
         "args": {
-          "amount": "-7295.52",
-          "rate": "-9153.89"
+          "a": "-1504.23",
+          "b": "4701.61",
+          "c": "7802.42"
         },
-        "expected": "-42194962233/62500",
-        "reply": "-42194962233/62500"
+        "expected": "18333/5",
+        "reply": "18333/5"
       },
       {
         "args": {
-          "amount": "-3253.05",
-          "rate": "-8301.66"
+          "a": "-4065.61",
+          "b": "3525.11",
+          "c": "-5120.68"
         },
-        "expected": "-27331020063/100000",
-        "reply": "-27331020063/100000"
+        "expected": "-94353/50",
+        "reply": "-94353/50"
       },
       {
         "args": {
-          "amount": "-2894.16",
-          "rate": "4121.84"
+          "a": "3783.07",
+          "b": "-8496.40",
+          "c": "-9623.62"
         },
-        "expected": "1818726321/15625",
-        "reply": "1818726321/15625"
+        "expected": "-286739/60",
+        "reply": "-286739/60"
       },
       {
         "args": {
-          "amount": "8841.88",
-          "rate": "-3380.67"
+          "a": "-9361.24",
+          "b": "8071.19",
+          "c": "6847.87"
         },
-        "expected": "76939166149/250000",
-        "reply": "76939166149/250000"
+        "expected": "277891/150",
+        "reply": "277891/150"
       },
       {
         "args": {
-          "amount": "8370.32",
-          "rate": "903.77"
+          "a": "-9065.38",
+          "b": "1842.75",
+          "c": "-3072.79"
         },
-        "expected": "-8409765133/125000",
-        "reply": "-8409765133/125000"
+        "expected": "-514771/150",
+        "reply": "-514771/150"
       },
       {
         "args": {
-          "amount": "-64.74",
-          "rate": "5204.14"
+          "a": "5898.70",
+          "b": "-937.24",
+          "c": "6504.80"
         },
-        "expected": "826105059/250000",
-        "reply": "826105059/250000"
+        "expected": "573313/150",
+        "reply": "573313/150"
       },
       {
         "args": {
-          "amount": "-3601.26",
-          "rate": "-4897.35"
+          "a": "-2183.39",
+          "b": "-9974.96",
+          "c": "-2532.23"
         },
-        "expected": "-17996756661/100000",
-        "reply": "-17996756661/100000"
+        "expected": "-244843/50",
+        "reply": "-244843/50"
       },
       {
         "args": {
-          "amount": "364.66",
-          "rate": "-1053.63"
+          "a": "-1683.23",
+          "b": "7582.21",
+          "c": "-3553.90"
         },
-        "expected": "2103413579/500000",
-        "reply": "2103413579/500000"
+        "expected": "58627/75",
+        "reply": "58627/75"
       },
       {
         "args": {
-          "amount": "430.31",
-          "rate": "-1756.00"
+          "a": "2081.86",
+          "b": "-2720.91",
+          "c": "-3865.23"
         },
-        "expected": "4991596/625",
-        "reply": "4991596/625"
+        "expected": "-112607/75",
+        "reply": "-112607/75"
       },
       {
         "args": {
-          "amount": "9462.61",
-          "rate": "7955.55"
+          "a": "2054.15",
+          "b": "4200.69",
+          "c": "3872.27"
         },
-        "expected": "-148668011971/200000",
-        "reply": "-148668011971/200000"
+        "expected": "1012711/300",
+        "reply": "1012711/300"
       },
       {
         "args": {
-          "amount": "7293.73",
-          "rate": "-7385.20"
+          "a": "6318.42",
+          "b": "-4124.30",
+          "c": "595.39"
         },
-        "expected": "13648756949/25000",
-        "reply": "13648756949/25000"
+        "expected": "278951/300",
+        "reply": "278951/300"
       },
       {
         "args": {
-          "amount": "7035.39",
-          "rate": "-9116.91"
+          "a": "-1353.92",
+          "b": "2108.16",
+          "c": "9881.41"
         },
-        "expected": "648445564449/1000000",
-        "reply": "648445564449/1000000"
+        "expected": "212713/60",
+        "reply": "212713/60"
       },
       {
         "args": {
-          "amount": "-7858.28",
-          "rate": "-3744.16"
+          "a": "-5691.14",
+          "b": "8762.44",
+          "c": "-8804.54"
         },
-        "expected": "-4720075882/15625",
-        "reply": "-4720075882/15625"
+        "expected": "-47777/25",
+        "reply": "-47777/25"
       },
       {
         "args": {
-          "amount": "-8762.36",
-          "rate": "9330.25"
+          "a": "-5348.29",
+          "b": "-2545.54",
+          "c": "-3370.72"
         },
-        "expected": "8087877339/10000",
-        "reply": "8087877339/10000"
+        "expected": "-75097/20",
+        "reply": "-75097/20"
       },
       {
         "args": {
-          "amount": "5358.19",
-          "rate": "9728.95"
+          "a": "5639.67",
+          "b": "652.08",
+          "c": "-3077.29"
         },
-        "expected": "-103187487201/200000",
-        "reply": "-103187487201/200000"
+        "expected": "160723/150",
+        "reply": "160723/150"
       },
       {
         "args": {
-          "amount": "7558.18",
-          "rate": "7929.57"
+          "a": "-6631.32",
+          "b": "2963.06",
+          "c": "-3520.48"
         },
-        "expected": "-295886496913/500000",
-        "reply": "-295886496913/500000"
+        "expected": "-359437/150",
+        "reply": "-359437/150"
       },
       {
         "args": {
-          "amount": "-2956.74",
-          "rate": "-551.22"
+          "a": "-7036.18",
+          "b": "-5507.16",
+          "c": "-4029.87"
         },
-        "expected": "-4813720557/250000",
-        "reply": "-4813720557/250000"
+        "expected": "-1657321/300",
+        "reply": "-1657321/300"
       },
       {
         "args": {
-          "amount": "-7714.40",
-          "rate": "-7372.10"
+          "a": "-5828.02",
+          "b": "570.15",
+          "c": "-222.39"
         },
-        "expected": "-720534603/1250",
-        "reply": "-720534603/1250"
+        "expected": "-274013/150",
+        "reply": "-274013/150"
       },
       {
         "args": {
-          "amount": "-5341.02",
-          "rate": "-2260.74"
+          "a": "-7862.41",
+          "b": "5609.48",
+          "c": "-1932.56"
         },
-        "expected": "-31521898887/250000",
-        "reply": "-31521898887/250000"
+        "expected": "-418549/300",
+        "reply": "-418549/300"
       },
       {
         "args": {
-          "amount": "5676.67",
-          "rate": "9313.54"
+          "a": "-9555.44",
+          "b": "5902.66",
+          "c": "-2644.38"
         },
-        "expected": "-261511130559/500000",
-        "reply": "-261511130559/500000"
+        "expected": "-157429/75",
+        "reply": "-157429/75"
       },
       {
         "args": {
-          "amount": "8593.31",
-          "rate": "-3369.56"
+          "a": "7636.48",
+          "b": "-938.82",
+          "c": "9044.52"
         },
-        "expected": "74537511609/250000",
-        "reply": "74537511609/250000"
+        "expected": "787109/150",
+        "reply": "787109/150"
       },
       {
         "args": {
-          "amount": "7452.99",
-          "rate": "2315.82"
+          "a": "9250.20",
+          "b": "-8983.55",
+          "c": "6729.05"
         },
-        "expected": "-82572421509/500000",
-        "reply": "-82572421509/500000"
+        "expected": "23319/10",
+        "reply": "23319/10"
       },
       {
         "args": {
-          "amount": "5318.65",
-          "rate": "3439.80"
+          "a": "-3787.65",
+          "b": "2858.67",
+          "c": "8391.95"
         },
-        "expected": "-1776322727/10000",
-        "reply": "-1776322727/10000"
+        "expected": "746297/300",
+        "reply": "746297/300"
       },
       {
         "args": {
-          "amount": "2853.08",
-          "rate": "4448.85"
+          "a": "-3459.80",
+          "b": "3392.54",
+          "c": "6850.24"
         },
-        "expected": "-6203808479/50000",
-        "reply": "-6203808479/50000"
+        "expected": "339149/150",
+        "reply": "339149/150"
       },
       {
         "args": {
-          "amount": "3199.97",
-          "rate": "9229.10"
+          "a": "6704.65",
+          "b": "6271.39",
+          "c": "-3127.32"
         },
-        "expected": "-29212846127/100000",
-        "reply": "-29212846127/100000"
+        "expected": "246218/75",
+        "reply": "246218/75"
       },
       {
         "args": {
-          "amount": "-5710.15",
-          "rate": "-1732.14"
+          "a": "9854.73",
+          "b": "-9101.28",
+          "c": "-1018.14"
         },
-        "expected": "-10461794221/100000",
-        "reply": "-10461794221/100000"
+        "expected": "-8823/100",
+        "reply": "-8823/100"
       },
       {
         "args": {
-          "amount": "4231.08",
-          "rate": "4272.27"
+          "a": "-893.69",
+          "b": "1981.64",
+          "c": "978.27"
         },
-        "expected": "-44133020379/250000",
-        "reply": "-44133020379/250000"
+        "expected": "34437/50",
+        "reply": "34437/50"
       },
       {
         "args": {
-          "amount": "6491.29",
-          "rate": "-8103.34"
+          "a": "-4037.20",
+          "b": "9079.45",
+          "c": "7648.68"
         },
-        "expected": "266251294543/500000",
-        "reply": "266251294543/500000"
+        "expected": "423031/100",
+        "reply": "423031/100"
       },
       {
         "args": {
-          "amount": "5868.85",
-          "rate": "-7870.96"
+          "a": "8124.67",
+          "b": "-2684.78",
+          "c": "-6512.53"
         },
-        "expected": "11695092149/25000",
-        "reply": "11695092149/25000"
+        "expected": "-26816/75",
+        "reply": "-26816/75"
       },
       {
         "args": {
-          "amount": "5087.13",
-          "rate": "-9540.37"
+          "a": "3911.51",
+          "b": "5492.94",
+          "c": "4847.12"
         },
-        "expected": "490418154381/1000000",
-        "reply": "490418154381/1000000"
+        "expected": "1425157/300",
+        "reply": "1425157/300"
       },
       {
         "args": {
-          "amount": "-9990.27",
-          "rate": "3854.97"
+          "a": "451.83",
+          "b": "-6679.38",
+          "c": "-5593.43"
         },
-        "expected": "375131641419/1000000",
-        "reply": "375131641419/1000000"
+        "expected": "-591049/150",
+        "reply": "-591049/150"
       },
       {
         "args": {
-          "amount": "6452.53",
-          "rate": "5212.22"
+          "a": "-5990.87",
+          "b": "-3755.38",
+          "c": "-607.62"
         },
-        "expected": "-164933764583/500000",
-        "reply": "-164933764583/500000"
+        "expected": "-345129/100",
+        "reply": "-345129/100"
       },
       {
         "args": {
-          "amount": "-8761.55",
-          "rate": "-3259.19"
+          "a": "-6559.68",
+          "b": "-8597.23",
+          "c": "2209.09"
         },
-        "expected": "-58863422289/200000",
-        "reply": "-58863422289/200000"
+        "expected": "-215797/50",
+        "reply": "-215797/50"
       },
       {
         "args": {
-          "amount": "9179.09",
-          "rate": "1652.86"
+          "a": "2807.54",
+          "b": "1790.16",
+          "c": "4465.44"
         },
-        "expected": "-71269208487/500000",
-        "reply": "-71269208487/500000"
+        "expected": "453157/150",
+        "reply": "453157/150"
       },
       {
         "args": {
-          "amount": "657.58",
-          "rate": "7614.34"
+          "a": "8811.55",
+          "b": "-1437.47",
+          "c": "8177.81"
         },
-        "expected": "-12353199243/250000",
-        "reply": "-12353199243/250000"
+        "expected": "1555189/300",
+        "reply": "1555189/300"
       },
       {
         "args": {
-          "amount": "-3815.11",
-          "rate": "4917.82"
+          "a": "-8067.84",
+          "b": "-520.64",
+          "c": "3002.59"
         },
-        "expected": "91902566301/500000",
-        "reply": "91902566301/500000"
+        "expected": "-558589/300",
+        "reply": "-558589/300"
       },
       {
         "args": {
-          "amount": "-8609.94",
-          "rate": "1761.08"
+          "a": "3009.35",
+          "b": "-9481.53",
+          "c": "5521.70"
         },
-        "expected": "17877248919/125000",
-        "reply": "17877248919/125000"
+        "expected": "-23762/75",
+        "reply": "-23762/75"
       },
       {
         "args": {
-          "amount": "9148.41",
-          "rate": "3971.86"
+          "a": "1651.12",
+          "b": "7506.79",
+          "c": "6429.69"
         },
-        "expected": "-177106813713/500000",
-        "reply": "-177106813713/500000"
+        "expected": "77938/15",
+        "reply": "77938/15"
       },
       {
         "args": {
-          "amount": "-7401.69",
-          "rate": "-6018.02"
+          "a": "2530.00",
+          "b": "-4517.46",
+          "c": "-199.85"
         },
-        "expected": "-226418437269/500000",
-        "reply": "-226418437269/500000"
+        "expected": "-218731/300",
+        "reply": "-218731/300"
       },
       {
         "args": {
-          "amount": "-2732.32",
-          "rate": "-9175.65"
+          "a": "-1624.59",
+          "b": "5374.29",
+          "c": "7537.05"
         },
-        "expected": "-3168005501/12500",
-        "reply": "-3168005501/12500"
+        "expected": "15049/4",
+        "reply": "15049/4"
       },
       {
         "args": {
-          "amount": "2130.05",
-          "rate": "-5644.61"
+          "a": "-8126.75",
+          "b": "8367.20",
+          "c": "4888.68"
         },
-        "expected": "24472613061/200000",
-        "reply": "24472613061/200000"
+        "expected": "170971/100",
+        "reply": "170971/100"
       },
       {
         "args": {
-          "amount": "-2537.81",
-          "rate": "4178.71"
+          "a": "-6435.11",
+          "b": "-8035.34",
+          "c": "1002.08"
         },
-        "expected": "103509910251/1000000",
-        "reply": "103509910251/1000000"
+        "expected": "-1346837/300",
+        "reply": "-1346837/300"
       },
       {
         "args": {
-          "amount": "9081.17",
-          "rate": "-4897.86"
+          "a": "-9857.82",
+          "b": "9947.34",
+          "c": "6507.70"
         },
-        "expected": "226932081481/500000",
-        "reply": "226932081481/500000"
+        "expected": "329861/150",
+        "reply": "329861/150"
       },
       {
         "args": {
-          "amount": "-5936.63",
-          "rate": "2495.10"
+          "a": "6498.52",
+          "b": "528.08",
+          "c": "-6133.93"
         },
-        "expected": "14218822513/100000",
-        "reply": "14218822513/100000"
+        "expected": "89267/300",
+        "reply": "89267/300"
       },
       {
         "args": {
-          "amount": "9113.90",
-          "rate": "6925.03"
+          "a": "-4034.21",
+          "b": "-8295.94",
+          "c": "4405.97"
         },
-        "expected": "-62202640917/100000",
-        "reply": "-62202640917/100000"
+        "expected": "-396209/150",
+        "reply": "-396209/150"
       },
       {
         "args": {
-          "amount": "-9833.03",
-          "rate": "6262.55"
+          "a": "4750.06",
+          "b": "-9763.49",
+          "c": "-3314.55"
         },
-        "expected": "121193078053/200000",
-        "reply": "121193078053/200000"
+        "expected": "-416399/150",
+        "reply": "-416399/150"
       },
       {
         "args": {
-          "amount": "-2160.68",
-          "rate": "-2653.02"
+          "a": "947.99",
+          "b": "4985.06",
+          "c": "-1606.53"
         },
-        "expected": "-7435494067/125000",
-        "reply": "-7435494067/125000"
+        "expected": "108163/75",
+        "reply": "108163/75"
       },
       {
         "args": {
-          "amount": "-5751.16",
-          "rate": "9473.14"
+          "a": "2231.33",
+          "b": "-4847.07",
+          "c": "-8095.63"
         },
-        "expected": "67383034803/125000",
-        "reply": "67383034803/125000"
+        "expected": "-1071137/300",
+        "reply": "-1071137/300"
       },
       {
         "args": {
-          "amount": "-8464.30",
-          "rate": "-5331.19"
+          "a": "7310.87",
+          "b": "5720.39",
+          "c": "8407.04"
         },
-        "expected": "-45971221517/100000",
-        "reply": "-45971221517/100000"
+        "expected": "71461/10",
+        "reply": "71461/10"
       },
       {
         "args": {
-          "amount": "-1527.52",
-          "rate": "7752.04"
+          "a": "324.95",
+          "b": "704.11",
+          "c": "4527.57"
         },
-        "expected": "1826350647/15625",
-        "reply": "1826350647/15625"
+        "expected": "185221/100",
+        "reply": "185221/100"
       },
       {
         "args": {
-          "amount": "-8751.75",
-          "rate": "-4405.00"
+          "a": "-3976.56",
+          "b": "-8094.25",
+          "c": "-6198.76"
         },
-        "expected": "-31541307/80",
-        "reply": "-31541307/80"
+        "expected": "-1826957/300",
+        "reply": "-1826957/300"
       },
       {
         "args": {
-          "amount": "6955.65",
-          "rate": "4288.45"
+          "a": "-5016.82",
+          "b": "2447.62",
+          "c": "-5585.11"
         },
-        "expected": "-11653356897/40000",
-        "reply": "-11653356897/40000"
+        "expected": "-815431/300",
+        "reply": "-815431/300"
       },
       {
         "args": {
-          "amount": "911.88",
-          "rate": "-4752.07"
+          "a": "-4378.01",
+          "b": "5996.06",
+          "c": "-9970.45"
         },
-        "expected": "11061263979/250000",
-        "reply": "11061263979/250000"
+        "expected": "-41762/15",
+        "reply": "-41762/15"
       },
       {
         "args": {
-          "amount": "-1209.65",
-          "rate": "6492.59"
+          "a": "3563.05",
+          "b": "-4804.66",
+          "c": "3235.72"
         },
-        "expected": "15465592987/200000",
-        "reply": "15465592987/200000"
+        "expected": "199411/300",
+        "reply": "199411/300"
       }
     ],
     "nodes": 7,
@@ -780,8 +848,8 @@
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "ADOPT",
+    "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "baa8ab6466ac850ee04344f8e12a48fb0fb6cc8c44d81156cbf89c830fca8547"
+  "recordHash": "7321eaf5e9d26ff91a96706b51975e0619b9b5472f9b077fd71981a35bf6257e"
 }
