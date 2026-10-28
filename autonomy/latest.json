@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40610322440",
+  "runId": "40649157959",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-28T00:41:43Z",
+  "at": "2026-10-28T07:18:49Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "1a7a45ec197228cd747a1f24a662f7896394642bb82e738ba384ad25e74d5ce7",
-  "cycleNumber": 133,
+  "parentRecordHash": "27e0069d494d9ce0a516c26ddc727505a61e3cf10a59f57851e634466b39d99a",
+  "cycleNumber": 134,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "22e1be90727aa765c9d59d9b1db1a4a990e96c16416923ebddaddedbf51deb33",
+    "hash": "fdc256abf146464995ca76cdc2ab6f8a509ee18ab4cf8647bcdb81574557bf8d",
     "items": [
       {
-        "title": "On the stability of learning",
-        "url": "http://arxiv.org/abs/2610.35856v1",
-        "updated": "2026-10-26T17:58:14Z",
+        "title": "EgoThumb: A Vision-Driven Supernumerary Robotic Thumb for Autonomous Grasp and Holding Assistance",
+        "url": "http://arxiv.org/abs/2610.37582v1",
+        "updated": "2026-10-27T17:22:25Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Differentiable Contact Dynamics for Legged Locomotion: Policy Learning and Contact-Implicit Trajectory Optimization",
-        "url": "http://arxiv.org/abs/2610.35852v1",
-        "updated": "2026-10-26T17:57:14Z",
+        "title": "AMOR: Adaptive Modal Operator Refinement for Operator Learning on Arbitrary Meshes and Irregular 3D Geometries",
+        "url": "http://arxiv.org/abs/2610.37485v1",
+        "updated": "2026-10-27T16:11:54Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-28T00:41:44Z"
+    "accessedAt": "2026-10-28T07:18:49Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.566,
+  "elapsedSeconds": 0.544,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "27e0069d494d9ce0a516c26ddc727505a61e3cf10a59f57851e634466b39d99a"
+  "recordHash": "418b66edb773d05e0ff36d7e03cd8862df8f96aa511a1f624391c1e87e2baac7"
 }
