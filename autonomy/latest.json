@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "40978248900",
+  "runId": "41013470492",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-30T00:13:42Z",
+  "at": "2026-10-30T06:20:58Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "670f6d5fd492ce6455a6663657f9f2da9f92e8c1aecea3cd013979af6eb8e05b",
-  "cycleNumber": 141,
+  "parentRecordHash": "25b83945794c7c1a41f53ed784223950f9ac71b77b2669429c0ed4d8ae3a0bae",
+  "cycleNumber": 142,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "HTTPError",
-    "items": []
+    "access": "fetched",
+    "hash": "168fee228f62bf67d0352f5e6e3bc23af53f913fede33f6669b3d1ac2208c9e4",
+    "items": [
+      {
+        "title": "world2vec: Mechanistic world models through latent dynamics learning",
+        "url": "http://arxiv.org/abs/2610.40637v1",
+        "updated": "2026-10-29T17:58:23Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "An ODE-based Sampler for Discrete Diffusion Models",
+        "url": "http://arxiv.org/abs/2610.40618v1",
+        "updated": "2026-10-29T17:55:25Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-10-30T06:20:59Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.254,
+  "elapsedSeconds": 0.676,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "25b83945794c7c1a41f53ed784223950f9ac71b77b2669429c0ed4d8ae3a0bae"
+  "recordHash": "1c2458d199df9244bbd88d414646ea4b014f9d66aec65861bac4142f6ca96568"
 }
