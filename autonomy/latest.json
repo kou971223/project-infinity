@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "41190590584",
+  "runId": "41216747883",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-10-31T09:55:39Z",
+  "at": "2026-10-31T15:50:58Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "992130be6aba9a92268210b3e6556a4c8b1fac4ff108e87892dae9ec2c0fcc35",
-  "cycleNumber": 147,
+  "parentRecordHash": "b7e815f6da6b9a930eeb5c4029567a61220fad953b69ab21ab81ec40cf56f456",
+  "cycleNumber": 148,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "53ac50b5efed759719cd5cfdbf0013cf33f3afa518d7ff8da8ee176c60a534a1",
+    "hash": "f9ca007b0e48462c8925ffecfe1a61d4d2c4b01b4510be63e2cb3ba2236d8edd",
     "items": [
       {
         "title": "world2vec: Mechanistic world models through latent dynamics learning",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-10-31T09:55:40Z"
+    "accessedAt": "2026-10-31T15:50:59Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.598,
+  "elapsedSeconds": 0.458,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "b7e815f6da6b9a930eeb5c4029567a61220fad953b69ab21ab81ec40cf56f456"
+  "recordHash": "67bca8f7054946fe4870d9e7616fd2d107b9dac9171320e7eaa8b62921b398d1"
 }
