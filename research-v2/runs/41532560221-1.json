@@ -1,0 +1,787 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-02T21:54:29.062153+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "41532560221",
+  "parents": {
+    "knowledge": "723e98a19febfa98e0f7dbab87a7c2e8236e47d5d37d760dacb4dfff29609a34",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-02T21:54:28.729811+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "ca1eee9e4b107fa242a4260f8768a064ed0fd3ad24ac80a4fad84ed2eb6b2866"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-02T21:54:28.883552+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "385a2420cc8f394c5af2479015fca78a448b244025aaba8d15bc69b7c0057456"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40758",
+      "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
+      "excerpt": "arXiv:2610.40758v1 Announce Type: new Abstract: Self-evolving agents rewrite a persistent state from feedback, but it is largely untested whether this lets them learn a rule nobody told them. An agent can also pass by writing down each correction as an exception, and its list then grows with every new rule. We introduce CLR-Bench, a Curriculum of Latent Rules benchmark. Each chain adds one hidden rule per level on top of the earlier ones. A rule acts on an opaque label that stands for a named grouping published on the Web, such as the founding members of an airline alliance. The task gives one",
+      "excerptHash": "63a6840c8c9c8d53c914ed71b9a3a4940f43c4cc0d3325504b35810c479403aa",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.059177+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40798",
+      "title": "Beyond Plausible Prediction: Safety Sufficiency in Web World Models",
+      "excerpt": "arXiv:2610.40798v1 Announce Type: new Abstract: Web world models increasingly predict the consequences of candidate actions before agents act, yet a plausible predicted future does not necessarily support the correct safety decision. In a matched human evaluation of 3,000 predictions from ten frozen open models, 86.1% are judged semantically plausible. However, several models exhibit highly asymmetric authorisation behaviour, combining low false-safe execution with poor recall of clarifiable ASK cases and a strong preference for BLOCK. This motivates safety sufficiency: whether a predictive in",
+      "excerptHash": "789ee8a7e01f6a1c2d7333d56b3abe8eace026334e963a8c551fd15694d389fc",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.059658+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40831",
+      "title": "Circumventing the Computational Hardness of Computational Arbitrage",
+      "excerpt": "arXiv:2610.40831v1 Announce Type: new Abstract: AI model marketplaces host providers with heterogeneous costs and capabilities. These differences create an opportunity for computational arbitrage (Olmedo et al., 2026), in which an intermediary purchases inference from a portfolio of models and resells it to users at a profit. Beyond creating profit opportunities for the arbitrageur, computational arbitrage offers financial value to both consumers and providers and could therefore significantly influence AI model markets. While prior work empirically demonstrates the feasibility of computationa",
+      "excerptHash": "501f5a49de8aa00ac5b1fc8f2e0eddd634ce42b006a07e2060e50feb8108ef96",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.060106+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40883",
+      "title": "Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models",
+      "excerpt": "arXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a speaker says and how they say it, yet the two channels do not always agree. We ask whether that disagreement degrades speech emotion recognition. Mapping text and audio into a shared valence-arousal-dominance space, we convert the distance between them into a continuous, threshold-free incongruence score with a two-component Gaussian mixture, and validate the score against human judgement. We evaluate three audiocapable models on acted, conversational and spontaneous speech (eNTERFACE'05",
+      "excerptHash": "af53d8bc94004098dad8b9f9e244772c51cd850ca3ef0f170ce868d1fe52fa6f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.060552+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40890",
+      "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
+      "excerpt": "arXiv:2610.40890v1 Announce Type: new Abstract: Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks. We present an exploratory case study of what potentially harmful surveillance assistance looks like in ChatGPT's public web interface. We contribute a taxonomy of seven surveillance risk categories based on prior LLM risk research and r",
+      "excerptHash": "5b9be845725a707109c8d524a4a56e9e0d02cf502db45ea02d682ec849687a6b",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.061008+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.40906",
+      "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
+      "excerpt": "arXiv:2610.40906v1 Announce Type: new Abstract: Recent scientific agents build knowledge recursively by retrieving evidence, constructing an intermediate state, and judging whether that state contains sufficient information. These agents are evaluated end-to-end, usually without ground truth, so the effect of each design choice is unknown. Here, we examined two design axes: (1) what the recursion builds (the state of evidence) and (2) what controls it (the judge that decides when to stop). To measure them, we defined consensus scientific claim verification and measured these effects on this ta",
+      "excerptHash": "f4e493e1ab94326cf38e609e83fdfefa27eaf85d3bc77469ddadb362b01791e2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-02T21:54:29.061455+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "discount",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 81773269660551,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "1189.86",
+          "rate": "2132.24"
+        },
+        "expected": "-1511300679/62500"
+      },
+      {
+        "args": {
+          "amount": "-7046.00",
+          "rate": "2613.78"
+        },
+        "expected": "442802347/2500"
+      },
+      {
+        "args": {
+          "amount": "9267.76",
+          "rate": "-9521.92"
+        },
+        "expected": "13933382078/15625"
+      },
+      {
+        "args": {
+          "amount": "3099.86",
+          "rate": "3913.81"
+        },
+        "expected": "-59111385333/500000"
+      }
+    ],
+    "examined": 55145,
+    "states": 23812,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "discount",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "sub",
+          [
+            "const",
+            "100"
+          ],
+          [
+            "var",
+            "rate"
+          ]
+        ],
+        [
+          "var",
+          "amount"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "a8b2d452fee38ccd34deea8eb70b0c57f2d6c8523f3cdb6cad1957523244faea",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-02T21:54:28.729811+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "ca1eee9e4b107fa242a4260f8768a064ed0fd3ad24ac80a4fad84ed2eb6b2866"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-02T21:54:28.883552+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "385a2420cc8f394c5af2479015fca78a448b244025aaba8d15bc69b7c0057456"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40758",
+        "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
+        "excerpt": "arXiv:2610.40758v1 Announce Type: new Abstract: Self-evolving agents rewrite a persistent state from feedback, but it is largely untested whether this lets them learn a rule nobody told them. An agent can also pass by writing down each correction as an exception, and its list then grows with every new rule. We introduce CLR-Bench, a Curriculum of Latent Rules benchmark. Each chain adds one hidden rule per level on top of the earlier ones. A rule acts on an opaque label that stands for a named grouping published on the Web, such as the founding members of an airline alliance. The task gives one",
+        "excerptHash": "63a6840c8c9c8d53c914ed71b9a3a4940f43c4cc0d3325504b35810c479403aa",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.059177+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40798",
+        "title": "Beyond Plausible Prediction: Safety Sufficiency in Web World Models",
+        "excerpt": "arXiv:2610.40798v1 Announce Type: new Abstract: Web world models increasingly predict the consequences of candidate actions before agents act, yet a plausible predicted future does not necessarily support the correct safety decision. In a matched human evaluation of 3,000 predictions from ten frozen open models, 86.1% are judged semantically plausible. However, several models exhibit highly asymmetric authorisation behaviour, combining low false-safe execution with poor recall of clarifiable ASK cases and a strong preference for BLOCK. This motivates safety sufficiency: whether a predictive in",
+        "excerptHash": "789ee8a7e01f6a1c2d7333d56b3abe8eace026334e963a8c551fd15694d389fc",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.059658+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40831",
+        "title": "Circumventing the Computational Hardness of Computational Arbitrage",
+        "excerpt": "arXiv:2610.40831v1 Announce Type: new Abstract: AI model marketplaces host providers with heterogeneous costs and capabilities. These differences create an opportunity for computational arbitrage (Olmedo et al., 2026), in which an intermediary purchases inference from a portfolio of models and resells it to users at a profit. Beyond creating profit opportunities for the arbitrageur, computational arbitrage offers financial value to both consumers and providers and could therefore significantly influence AI model markets. While prior work empirically demonstrates the feasibility of computationa",
+        "excerptHash": "501f5a49de8aa00ac5b1fc8f2e0eddd634ce42b006a07e2060e50feb8108ef96",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.060106+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40883",
+        "title": "Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models",
+        "excerpt": "arXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a speaker says and how they say it, yet the two channels do not always agree. We ask whether that disagreement degrades speech emotion recognition. Mapping text and audio into a shared valence-arousal-dominance space, we convert the distance between them into a continuous, threshold-free incongruence score with a two-component Gaussian mixture, and validate the score against human judgement. We evaluate three audiocapable models on acted, conversational and spontaneous speech (eNTERFACE'05",
+        "excerptHash": "af53d8bc94004098dad8b9f9e244772c51cd850ca3ef0f170ce868d1fe52fa6f",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.060552+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40890",
+        "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
+        "excerpt": "arXiv:2610.40890v1 Announce Type: new Abstract: Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks. We present an exploratory case study of what potentially harmful surveillance assistance looks like in ChatGPT's public web interface. We contribute a taxonomy of seven surveillance risk categories based on prior LLM risk research and r",
+        "excerptHash": "5b9be845725a707109c8d524a4a56e9e0d02cf502db45ea02d682ec849687a6b",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.061008+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.40906",
+        "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
+        "excerpt": "arXiv:2610.40906v1 Announce Type: new Abstract: Recent scientific agents build knowledge recursively by retrieving evidence, constructing an intermediate state, and judging whether that state contains sufficient information. These agents are evaluated end-to-end, usually without ground truth, so the effect of each design choice is unknown. Here, we examined two design axes: (1) what the recursion builds (the state of evidence) and (2) what controls it (the judge that decides when to stop). To measure them, we defined consensus scientific claim verification and measured these effects on this ta",
+        "excerptHash": "f4e493e1ab94326cf38e609e83fdfefa27eaf85d3bc77469ddadb362b01791e2",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-02T21:54:29.061455+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
+    "seed": 279486181140471,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "99/100",
+        "reply": "99/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "-101/100",
+        "reply": "-101/100"
+      },
+      {
+        "args": {
+          "amount": "6810.33",
+          "rate": "4063.10"
+        },
+        "expected": "-26990018823/100000",
+        "reply": "-26990018823/100000"
+      },
+      {
+        "args": {
+          "amount": "6799.03",
+          "rate": "8246.93"
+        },
+        "expected": "-553912214779/1000000",
+        "reply": "-553912214779/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2772.85",
+          "rate": "-6030.94"
+        },
+        "expected": "-17000176979/100000",
+        "reply": "-17000176979/100000"
+      },
+      {
+        "args": {
+          "amount": "5919.28",
+          "rate": "-5306.91"
+        },
+        "expected": "40006267781/125000",
+        "reply": "40006267781/125000"
+      },
+      {
+        "args": {
+          "amount": "-4100.08",
+          "rate": "-4815.97"
+        },
+        "expected": "-25194837847/125000",
+        "reply": "-25194837847/125000"
+      },
+      {
+        "args": {
+          "amount": "7377.89",
+          "rate": "-3138.54"
+        },
+        "expected": "119467959403/500000",
+        "reply": "119467959403/500000"
+      },
+      {
+        "args": {
+          "amount": "7845.74",
+          "rate": "-2458.52"
+        },
+        "expected": "25091853381/125000",
+        "reply": "25091853381/125000"
+      },
+      {
+        "args": {
+          "amount": "-6937.16",
+          "rate": "5422.20"
+        },
+        "expected": "4615119119/12500",
+        "reply": "4615119119/12500"
+      },
+      {
+        "args": {
+          "amount": "-8434.57",
+          "rate": "-2219.50"
+        },
+        "expected": "-3912797023/20000",
+        "reply": "-3912797023/20000"
+      },
+      {
+        "args": {
+          "amount": "-7397.85",
+          "rate": "4744.24"
+        },
+        "expected": "8589347721/25000",
+        "reply": "8589347721/25000"
+      },
+      {
+        "args": {
+          "amount": "-4566.04",
+          "rate": "-1146.75"
+        },
+        "expected": "-569271037/10000",
+        "reply": "-569271037/10000"
+      },
+      {
+        "args": {
+          "amount": "2021.11",
+          "rate": "-6064.69"
+        },
+        "expected": "124595166059/1000000",
+        "reply": "124595166059/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4641.44",
+          "rate": "5978.96"
+        },
+        "expected": "4263568766/15625",
+        "reply": "4263568766/15625"
+      },
+      {
+        "args": {
+          "amount": "-8774.18",
+          "rate": "2652.23"
+        },
+        "expected": "111968627107/500000",
+        "reply": "111968627107/500000"
+      },
+      {
+        "args": {
+          "amount": "4907.40",
+          "rate": "-1559.37"
+        },
+        "expected": "4071596169/50000",
+        "reply": "4071596169/50000"
+      },
+      {
+        "args": {
+          "amount": "-6351.94",
+          "rate": "-7600.79"
+        },
+        "expected": "-244574780163/500000",
+        "reply": "-244574780163/500000"
+      },
+      {
+        "args": {
+          "amount": "-6667.61",
+          "rate": "9291.79"
+        },
+        "expected": "612872709219/1000000",
+        "reply": "612872709219/1000000"
+      },
+      {
+        "args": {
+          "amount": "8783.17",
+          "rate": "1348.84"
+        },
+        "expected": "-27421935057/250000",
+        "reply": "-27421935057/250000"
+      },
+      {
+        "args": {
+          "amount": "-7432.82",
+          "rate": "8046.23"
+        },
+        "expected": "295314486343/500000",
+        "reply": "295314486343/500000"
+      },
+      {
+        "args": {
+          "amount": "6075.61",
+          "rate": "-5402.42"
+        },
+        "expected": "167152789881/500000",
+        "reply": "167152789881/500000"
+      },
+      {
+        "args": {
+          "amount": "-9699.23",
+          "rate": "8700.23"
+        },
+        "expected": "834156088229/1000000",
+        "reply": "834156088229/1000000"
+      },
+      {
+        "args": {
+          "amount": "-154.88",
+          "rate": "8538.42"
+        },
+        "expected": "204209764/15625",
+        "reply": "204209764/15625"
+      },
+      {
+        "args": {
+          "amount": "-8371.42",
+          "rate": "-7119.72"
+        },
+        "expected": "-75549135503/125000",
+        "reply": "-75549135503/125000"
+      },
+      {
+        "args": {
+          "amount": "1128.90",
+          "rate": "5419.12"
+        },
+        "expected": "-750594321/12500",
+        "reply": "-750594321/12500"
+      },
+      {
+        "args": {
+          "amount": "1305.39",
+          "rate": "-4654.47"
+        },
+        "expected": "62064375933/1000000",
+        "reply": "62064375933/1000000"
+      },
+      {
+        "args": {
+          "amount": "-6677.32",
+          "rate": "-8297.90"
+        },
+        "expected": "-14018866407/25000",
+        "reply": "-14018866407/25000"
+      },
+      {
+        "args": {
+          "amount": "-6465.97",
+          "rate": "8046.81"
+        },
+        "expected": "513838350557/1000000",
+        "reply": "513838350557/1000000"
+      },
+      {
+        "args": {
+          "amount": "2237.22",
+          "rate": "3445.71"
+        },
+        "expected": "-37425446631/500000",
+        "reply": "-37425446631/500000"
+      },
+      {
+        "args": {
+          "amount": "8523.57",
+          "rate": "-1167.19"
+        },
+        "expected": "108009826683/1000000",
+        "reply": "108009826683/1000000"
+      },
+      {
+        "args": {
+          "amount": "7953.49",
+          "rate": "-931.10"
+        },
+        "expected": "8200843539/100000",
+        "reply": "8200843539/100000"
+      },
+      {
+        "args": {
+          "amount": "-7390.89",
+          "rate": "-1688.04"
+        },
+        "expected": "-33038017389/250000",
+        "reply": "-33038017389/250000"
+      },
+      {
+        "args": {
+          "amount": "-8837.04",
+          "rate": "-5256.50"
+        },
+        "expected": "-1183390119/2500",
+        "reply": "-1183390119/2500"
+      },
+      {
+        "args": {
+          "amount": "4767.04",
+          "rate": "-2910.84"
+        },
+        "expected": "2242624174/15625",
+        "reply": "2242624174/15625"
+      },
+      {
+        "args": {
+          "amount": "5774.42",
+          "rate": "8626.83"
+        },
+        "expected": "-246187488443/500000",
+        "reply": "-246187488443/500000"
+      },
+      {
+        "args": {
+          "amount": "9714.52",
+          "rate": "-1477.43"
+        },
+        "expected": "38309938209/250000",
+        "reply": "38309938209/250000"
+      },
+      {
+        "args": {
+          "amount": "-8147.74",
+          "rate": "-6679.33"
+        },
+        "expected": "-276181091071/500000",
+        "reply": "-276181091071/500000"
+      },
+      {
+        "args": {
+          "amount": "-8377.37",
+          "rate": "6843.51"
+        },
+        "expected": "564928783687/1000000",
+        "reply": "564928783687/1000000"
+      },
+      {
+        "args": {
+          "amount": "9396.81",
+          "rate": "1421.62"
+        },
+        "expected": "-62095060161/500000",
+        "reply": "-62095060161/500000"
+      },
+      {
+        "args": {
+          "amount": "-4742.97",
+          "rate": "7501.65"
+        },
+        "expected": "70211607801/200000",
+        "reply": "70211607801/200000"
+      },
+      {
+        "args": {
+          "amount": "1929.61",
+          "rate": "379.81"
+        },
+        "expected": "-5399241741/1000000",
+        "reply": "-5399241741/1000000"
+      },
+      {
+        "args": {
+          "amount": "8870.69",
+          "rate": "8906.62"
+        },
+        "expected": "-390603979839/500000",
+        "reply": "-390603979839/500000"
+      },
+      {
+        "args": {
+          "amount": "7355.24",
+          "rate": "5783.69"
+        },
+        "expected": "-104512260089/250000",
+        "reply": "-104512260089/250000"
+      },
+      {
+        "args": {
+          "amount": "6775.46",
+          "rate": "-5110.66"
+        },
+        "expected": "88261546009/250000",
+        "reply": "88261546009/250000"
+      },
+      {
+        "args": {
+          "amount": "208.24",
+          "rate": "8741.35"
+        },
+        "expected": "-449868681/25000",
+        "reply": "-449868681/25000"
+      },
+      {
+        "args": {
+          "amount": "-9608.64",
+          "rate": "6233.51"
+        },
+        "expected": "18417090477/31250",
+        "reply": "18417090477/31250"
+      },
+      {
+        "args": {
+          "amount": "1581.37",
+          "rate": "-9007.83"
+        },
+        "expected": "144028491271/1000000",
+        "reply": "144028491271/1000000"
+      },
+      {
+        "args": {
+          "amount": "5249.49",
+          "rate": "-6869.00"
+        },
+        "expected": "3658369581/10000",
+        "reply": "3658369581/10000"
+      },
+      {
+        "args": {
+          "amount": "3155.50",
+          "rate": "-5338.99"
+        },
+        "expected": "3432546589/20000",
+        "reply": "3432546589/20000"
+      },
+      {
+        "args": {
+          "amount": "8539.50",
+          "rate": "-1921.62"
+        },
+        "expected": "1726362399/10000",
+        "reply": "1726362399/10000"
+      },
+      {
+        "args": {
+          "amount": "-5665.79",
+          "rate": "792.47"
+        },
+        "expected": "39233896013/1000000",
+        "reply": "39233896013/1000000"
+      },
+      {
+        "args": {
+          "amount": "9930.39",
+          "rate": "-8500.93"
+        },
+        "expected": "854105892627/1000000",
+        "reply": "854105892627/1000000"
+      },
+      {
+        "args": {
+          "amount": "9735.59",
+          "rate": "8912.34"
+        },
+        "expected": "-428966645903/500000",
+        "reply": "-428966645903/500000"
+      },
+      {
+        "args": {
+          "amount": "9115.13",
+          "rate": "6989.91"
+        },
+        "expected": "-628024253383/1000000",
+        "reply": "-628024253383/1000000"
+      },
+      {
+        "args": {
+          "amount": "8945.04",
+          "rate": "542.26"
+        },
+        "expected": "-2472520869/62500",
+        "reply": "-2472520869/62500"
+      },
+      {
+        "args": {
+          "amount": "5345.55",
+          "rate": "6610.70"
+        },
+        "expected": "-6960654477/20000",
+        "reply": "-6960654477/20000"
+      },
+      {
+        "args": {
+          "amount": "5696.35",
+          "rate": "-4370.80"
+        },
+        "expected": "1273362079/5000",
+        "reply": "1273362079/5000"
+      },
+      {
+        "args": {
+          "amount": "-9506.38",
+          "rate": "3827.10"
+        },
+        "expected": "17715614449/50000",
+        "reply": "17715614449/50000"
+      },
+      {
+        "args": {
+          "amount": "-2603.81",
+          "rate": "-7112.05"
+        },
+        "expected": "-37557615821/200000",
+        "reply": "-37557615821/200000"
+      },
+      {
+        "args": {
+          "amount": "-5289.10",
+          "rate": "5396.40"
+        },
+        "expected": "700329731/2500",
+        "reply": "700329731/2500"
+      },
+      {
+        "args": {
+          "amount": "-8926.16",
+          "rate": "-9854.26"
+        },
+        "expected": "-55533323401/62500",
+        "reply": "-55533323401/62500"
+      },
+      {
+        "args": {
+          "amount": "-2939.66",
+          "rate": "9945.87"
+        },
+        "expected": "144717551021/500000",
+        "reply": "144717551021/500000"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "ca546d558a89fca5d0396d9e8db70397504739c8e5eaecac476bb2944895c5a3"
+}
