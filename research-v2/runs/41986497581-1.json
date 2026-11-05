@@ -1,0 +1,855 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-05T07:20:17.937631+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "41986497581",
+  "parents": {
+    "knowledge": "8804bb710a37135695b5766851b03d8ad797cf4e6b71063dbcb8368657162cd2",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.452913+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "6382499b11643dc4b0f3bf220ba480679af9e68eea8860bcfb40e05473fe2056"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.789202+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "638028f725311b52cbad5b6be662ef2992a7c7a72c5b5629433ebf839908a401"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05390",
+      "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+      "excerpt": "arXiv:2611.05390v1 Announce Type: new Abstract: Multi-agent language-model systems often add a reviewer to improve an upstream agent's decision. Yet a reviewer can both repair errors and replace decisions that were already correct. We study this as a problem of institutional jurisdiction: conditional on the same proposal, task information, model, and review output, when is the reviewer authorized to make its recommendation binding? We compare broad override authority with an evidence gate that permits replacement only after the reviewer produces a mechanically valid record of a binding-constra",
+      "excerptHash": "069d1efd818070c188724ad08dbce80efd5cd01116eed82aa58347d75a07b830",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.934897+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05391",
+      "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+      "excerpt": "arXiv:2611.05391v1 Announce Type: new Abstract: Tool descriptions tell an agent what an action can do, but they do not necessarily reveal whether that action is healthy or suitable at the moment of use. Execution harnesses often possess this information through monitors, traces, and recent failures while the model choosing the next action does not. We call this gap operational blindness. We introduce Agent Harness Awareness, a trust-separated design in which the host supplies a small, fresh, verified state snapshot before a consequential action while retaining measurement, enforcement, evaluat",
+      "excerptHash": "e918cd6d541e51f6d11ba59fec58f45b6edab011ed1f90b2661d6650abaca40e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.935328+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05392",
+      "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+      "excerpt": "arXiv:2611.05392v1 Announce Type: new Abstract: Agentic artificial intelligence (AI) systems powered by large language models (LLMs) execute as autonomous multi-step pipelines that dynamically invoke tools, integrate observations into memory, and iterate until a task is resolved or a resource budget is exhausted. Unlike classical workflows with fixed graphs, the aggregate compute, bandwidth, and end-to-end latency demands of such pipelines are unknown at dispatch time: they emerge at runtime from intermediate observations and stochastic token sampling, yielding heavy-tailed, multi-modal random",
+      "excerptHash": "e8c286c00cbc7cf006b6bcd3f1fba200b2794b0543a519357ec61bec4cc207c1",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.935755+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05393",
+      "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+      "excerpt": "arXiv:2611.05393v1 Announce Type: new Abstract: Large language models perform strongly on standard medical QA but degrade on harder reasoning tasks, where multi-agent debate often fails to beat strong single-model prompting. We argue that a key limitation is that existing systems select experts and retrieve knowledge from the question alone, rather than from gaps that emerge during reasoning. We propose challenge-aware adaptive recruitment: an external CHALLENGER inspects the evolving reasoning trace and identifies specific factual or expertise gaps. These signals trigger targeted knowledge re",
+      "excerptHash": "1eabd60d41cc52e6dc4a07f012b93ce5ed1284b1aaa0235f7b8fd4c86cd4afcb",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936166+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05394",
+      "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+      "excerpt": "arXiv:2611.05394v1 Announce Type: new Abstract: Tiered inference distributes large language model computation across a hierarchy of devices, from on-device and edge hardware to the datacenter, and is increasingly offered as the route to cheaper, lower-latency, and more private serving. Most such systems orchestrate frozen model checkpoints, and most decide what to resolve locally and what to escalate using a confidence signal produced by a forward-deployed model. We give a closed-form condition for when no threshold on that signal makes a tiered cascade worthwhile relative to sending every que",
+      "excerptHash": "644edb2017a4f41ac0ca65ce9c061e74aba291aac28cf9f2c826a1b8c643a79c",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936593+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05450",
+      "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+      "excerpt": "arXiv:2611.05450v1 Announce Type: new Abstract: As agents become more capable, they are moving beyond one-off tasks toward sustained assistance across successive user goals. Such assistance requires agents to discover how unfamiliar environments work, reuse what they learn across tasks, and keep that experience current as environments evolve. Existing benchmarks increasingly study experience reuse and adaptation, but provide limited insight into which parts of accumulated experience agents revise, retain, or lose. To address this gap, we introduce ReScopeBench, a benchmark for the experience l",
+      "excerptHash": "e64cd8af08b7672a3e42a54bd09529853b14b25b25407d1507540daa44cec6d8",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936999+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "mean",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 41043602484273,
+    "trainingExamples": [
+      {
+        "args": {
+          "a": "-9641.35",
+          "b": "-9281.71",
+          "c": "5205.36"
+        },
+        "expected": "-137177/30"
+      },
+      {
+        "args": {
+          "a": "-6274.61",
+          "b": "8188.39",
+          "c": "-2861.94"
+        },
+        "expected": "-23704/75"
+      },
+      {
+        "args": {
+          "a": "6287.84",
+          "b": "944.81",
+          "c": "-542.04"
+        },
+        "expected": "669061/300"
+      },
+      {
+        "args": {
+          "a": "2419.68",
+          "b": "4562.69",
+          "c": "1932.43"
+        },
+        "expected": "14858/5"
+      }
+    ],
+    "examined": 15345,
+    "states": 6007,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "mean",
+    "expression": [
+      "div",
+      [
+        "add",
+        [
+          "add",
+          [
+            "var",
+            "a"
+          ],
+          [
+            "var",
+            "b"
+          ]
+        ],
+        [
+          "var",
+          "c"
+        ]
+      ],
+      [
+        "const",
+        "3"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "474cf80513a0fb3caf0920c260120e42739df459fcfdbf54a9b0afaf3a84714e",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.452913+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "6382499b11643dc4b0f3bf220ba480679af9e68eea8860bcfb40e05473fe2056"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.789202+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "638028f725311b52cbad5b6be662ef2992a7c7a72c5b5629433ebf839908a401"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05390",
+        "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+        "excerpt": "arXiv:2611.05390v1 Announce Type: new Abstract: Multi-agent language-model systems often add a reviewer to improve an upstream agent's decision. Yet a reviewer can both repair errors and replace decisions that were already correct. We study this as a problem of institutional jurisdiction: conditional on the same proposal, task information, model, and review output, when is the reviewer authorized to make its recommendation binding? We compare broad override authority with an evidence gate that permits replacement only after the reviewer produces a mechanically valid record of a binding-constra",
+        "excerptHash": "069d1efd818070c188724ad08dbce80efd5cd01116eed82aa58347d75a07b830",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.934897+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05391",
+        "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+        "excerpt": "arXiv:2611.05391v1 Announce Type: new Abstract: Tool descriptions tell an agent what an action can do, but they do not necessarily reveal whether that action is healthy or suitable at the moment of use. Execution harnesses often possess this information through monitors, traces, and recent failures while the model choosing the next action does not. We call this gap operational blindness. We introduce Agent Harness Awareness, a trust-separated design in which the host supplies a small, fresh, verified state snapshot before a consequential action while retaining measurement, enforcement, evaluat",
+        "excerptHash": "e918cd6d541e51f6d11ba59fec58f45b6edab011ed1f90b2661d6650abaca40e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.935328+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05392",
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "excerpt": "arXiv:2611.05392v1 Announce Type: new Abstract: Agentic artificial intelligence (AI) systems powered by large language models (LLMs) execute as autonomous multi-step pipelines that dynamically invoke tools, integrate observations into memory, and iterate until a task is resolved or a resource budget is exhausted. Unlike classical workflows with fixed graphs, the aggregate compute, bandwidth, and end-to-end latency demands of such pipelines are unknown at dispatch time: they emerge at runtime from intermediate observations and stochastic token sampling, yielding heavy-tailed, multi-modal random",
+        "excerptHash": "e8c286c00cbc7cf006b6bcd3f1fba200b2794b0543a519357ec61bec4cc207c1",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.935755+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05393",
+        "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+        "excerpt": "arXiv:2611.05393v1 Announce Type: new Abstract: Large language models perform strongly on standard medical QA but degrade on harder reasoning tasks, where multi-agent debate often fails to beat strong single-model prompting. We argue that a key limitation is that existing systems select experts and retrieve knowledge from the question alone, rather than from gaps that emerge during reasoning. We propose challenge-aware adaptive recruitment: an external CHALLENGER inspects the evolving reasoning trace and identifies specific factual or expertise gaps. These signals trigger targeted knowledge re",
+        "excerptHash": "1eabd60d41cc52e6dc4a07f012b93ce5ed1284b1aaa0235f7b8fd4c86cd4afcb",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.936166+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05394",
+        "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+        "excerpt": "arXiv:2611.05394v1 Announce Type: new Abstract: Tiered inference distributes large language model computation across a hierarchy of devices, from on-device and edge hardware to the datacenter, and is increasingly offered as the route to cheaper, lower-latency, and more private serving. Most such systems orchestrate frozen model checkpoints, and most decide what to resolve locally and what to escalate using a confidence signal produced by a forward-deployed model. We give a closed-form condition for when no threshold on that signal makes a tiered cascade worthwhile relative to sending every que",
+        "excerptHash": "644edb2017a4f41ac0ca65ce9c061e74aba291aac28cf9f2c826a1b8c643a79c",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.936593+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.05450",
+        "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+        "excerpt": "arXiv:2611.05450v1 Announce Type: new Abstract: As agents become more capable, they are moving beyond one-off tasks toward sustained assistance across successive user goals. Such assistance requires agents to discover how unfamiliar environments work, reuse what they learn across tasks, and keep that experience current as environments evolve. Existing benchmarks increasingly study experience reuse and adaptation, but provide limited insight into which parts of accumulated experience agents revise, retain, or lose. To address this gap, we introduce ReScopeBench, a benchmark for the experience l",
+        "excerptHash": "e64cd8af08b7672a3e42a54bd09529853b14b25b25407d1507540daa44cec6d8",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-05T07:20:17.936999+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 246845089820027,
+    "cases": [
+      {
+        "args": {
+          "a": "0",
+          "b": "0",
+          "c": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "a": "1",
+          "b": "1",
+          "c": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
+        },
+        "expected": "-1",
+        "reply": "-1"
+      },
+      {
+        "args": {
+          "a": "-6189.89",
+          "b": "-8750.17",
+          "c": "-531.07"
+        },
+        "expected": "-1547113/300",
+        "reply": "-1547113/300"
+      },
+      {
+        "args": {
+          "a": "8241.69",
+          "b": "6473.89",
+          "c": "-4000.41"
+        },
+        "expected": "1071517/300",
+        "reply": "1071517/300"
+      },
+      {
+        "args": {
+          "a": "-8363.40",
+          "b": "-6862.56",
+          "c": "8850.36"
+        },
+        "expected": "-10626/5",
+        "reply": "-10626/5"
+      },
+      {
+        "args": {
+          "a": "-825.81",
+          "b": "-7390.43",
+          "c": "-6370.72"
+        },
+        "expected": "-121558/25",
+        "reply": "-121558/25"
+      },
+      {
+        "args": {
+          "a": "-1710.72",
+          "b": "4974.07",
+          "c": "-4808.35"
+        },
+        "expected": "-515",
+        "reply": "-515"
+      },
+      {
+        "args": {
+          "a": "-6605.65",
+          "b": "8825.79",
+          "c": "9436.65"
+        },
+        "expected": "1165679/300",
+        "reply": "1165679/300"
+      },
+      {
+        "args": {
+          "a": "-6954.55",
+          "b": "7196.49",
+          "c": "-8080.65"
+        },
+        "expected": "-783871/300",
+        "reply": "-783871/300"
+      },
+      {
+        "args": {
+          "a": "-8340.75",
+          "b": "-5773.28",
+          "c": "2427.29"
+        },
+        "expected": "-194779/50",
+        "reply": "-194779/50"
+      },
+      {
+        "args": {
+          "a": "-6559.66",
+          "b": "2883.31",
+          "c": "2019.91"
+        },
+        "expected": "-41411/75",
+        "reply": "-41411/75"
+      },
+      {
+        "args": {
+          "a": "5081.37",
+          "b": "1003.99",
+          "c": "-4406.52"
+        },
+        "expected": "41971/75",
+        "reply": "41971/75"
+      },
+      {
+        "args": {
+          "a": "-433.18",
+          "b": "3762.64",
+          "c": "6965.78"
+        },
+        "expected": "257381/75",
+        "reply": "257381/75"
+      },
+      {
+        "args": {
+          "a": "9549.01",
+          "b": "-6477.86",
+          "c": "-2915.41"
+        },
+        "expected": "7787/150",
+        "reply": "7787/150"
+      },
+      {
+        "args": {
+          "a": "-603.64",
+          "b": "3751.05",
+          "c": "-6227.18"
+        },
+        "expected": "-102659/100",
+        "reply": "-102659/100"
+      },
+      {
+        "args": {
+          "a": "-3029.47",
+          "b": "-7666.88",
+          "c": "-4057.52"
+        },
+        "expected": "-1475387/300",
+        "reply": "-1475387/300"
+      },
+      {
+        "args": {
+          "a": "8469.68",
+          "b": "9860.09",
+          "c": "3527.37"
+        },
+        "expected": "1092857/150",
+        "reply": "1092857/150"
+      },
+      {
+        "args": {
+          "a": "-8246.11",
+          "b": "-8422.75",
+          "c": "261.54"
+        },
+        "expected": "-410183/75",
+        "reply": "-410183/75"
+      },
+      {
+        "args": {
+          "a": "6737.67",
+          "b": "9174.39",
+          "c": "968.55"
+        },
+        "expected": "562687/100",
+        "reply": "562687/100"
+      },
+      {
+        "args": {
+          "a": "-9037.26",
+          "b": "-1755.78",
+          "c": "-8101.83"
+        },
+        "expected": "-629829/100",
+        "reply": "-629829/100"
+      },
+      {
+        "args": {
+          "a": "-2203.00",
+          "b": "7410.91",
+          "c": "4734.26"
+        },
+        "expected": "994217/300",
+        "reply": "994217/300"
+      },
+      {
+        "args": {
+          "a": "6459.28",
+          "b": "9950.98",
+          "c": "9462.45"
+        },
+        "expected": "2587271/300",
+        "reply": "2587271/300"
+      },
+      {
+        "args": {
+          "a": "8263.19",
+          "b": "5295.02",
+          "c": "6066.34"
+        },
+        "expected": "392491/60",
+        "reply": "392491/60"
+      },
+      {
+        "args": {
+          "a": "-4792.89",
+          "b": "-2180.00",
+          "c": "-5365.81"
+        },
+        "expected": "-41129/10",
+        "reply": "-41129/10"
+      },
+      {
+        "args": {
+          "a": "7892.64",
+          "b": "4314.33",
+          "c": "-9461.59"
+        },
+        "expected": "137269/150",
+        "reply": "137269/150"
+      },
+      {
+        "args": {
+          "a": "-6507.70",
+          "b": "-9863.58",
+          "c": "2433.58"
+        },
+        "expected": "-46459/10",
+        "reply": "-46459/10"
+      },
+      {
+        "args": {
+          "a": "-483.22",
+          "b": "4469.12",
+          "c": "1911.67"
+        },
+        "expected": "589757/300",
+        "reply": "589757/300"
+      },
+      {
+        "args": {
+          "a": "5082.16",
+          "b": "-1799.46",
+          "c": "-2998.48"
+        },
+        "expected": "4737/50",
+        "reply": "4737/50"
+      },
+      {
+        "args": {
+          "a": "9097.58",
+          "b": "-9157.15",
+          "c": "6044.17"
+        },
+        "expected": "29923/15",
+        "reply": "29923/15"
+      },
+      {
+        "args": {
+          "a": "922.72",
+          "b": "-3859.33",
+          "c": "-420.90"
+        },
+        "expected": "-111917/100",
+        "reply": "-111917/100"
+      },
+      {
+        "args": {
+          "a": "-7017.46",
+          "b": "-8682.54",
+          "c": "3156.14"
+        },
+        "expected": "-627193/150",
+        "reply": "-627193/150"
+      },
+      {
+        "args": {
+          "a": "-7594.71",
+          "b": "-6569.09",
+          "c": "3262.88"
+        },
+        "expected": "-90841/25",
+        "reply": "-90841/25"
+      },
+      {
+        "args": {
+          "a": "-461.57",
+          "b": "-9989.29",
+          "c": "1392.78"
+        },
+        "expected": "-75484/25",
+        "reply": "-75484/25"
+      },
+      {
+        "args": {
+          "a": "-5334.79",
+          "b": "910.88",
+          "c": "8540.79"
+        },
+        "expected": "102922/75",
+        "reply": "102922/75"
+      },
+      {
+        "args": {
+          "a": "-4403.04",
+          "b": "-5168.05",
+          "c": "798.80"
+        },
+        "expected": "-877229/300",
+        "reply": "-877229/300"
+      },
+      {
+        "args": {
+          "a": "843.33",
+          "b": "533.75",
+          "c": "8035.70"
+        },
+        "expected": "470639/150",
+        "reply": "470639/150"
+      },
+      {
+        "args": {
+          "a": "-6952.09",
+          "b": "-9616.84",
+          "c": "4940.81"
+        },
+        "expected": "-96901/25",
+        "reply": "-96901/25"
+      },
+      {
+        "args": {
+          "a": "7336.68",
+          "b": "-5630.55",
+          "c": "-882.23"
+        },
+        "expected": "8239/30",
+        "reply": "8239/30"
+      },
+      {
+        "args": {
+          "a": "-2620.01",
+          "b": "-9967.74",
+          "c": "7873.36"
+        },
+        "expected": "-471439/300",
+        "reply": "-471439/300"
+      },
+      {
+        "args": {
+          "a": "-697.10",
+          "b": "1630.44",
+          "c": "-1691.15"
+        },
+        "expected": "-75781/300",
+        "reply": "-75781/300"
+      },
+      {
+        "args": {
+          "a": "4801.00",
+          "b": "-8212.16",
+          "c": "-6656.43"
+        },
+        "expected": "-1006759/300",
+        "reply": "-1006759/300"
+      },
+      {
+        "args": {
+          "a": "7770.16",
+          "b": "1924.51",
+          "c": "5489.09"
+        },
+        "expected": "379594/75",
+        "reply": "379594/75"
+      },
+      {
+        "args": {
+          "a": "4107.48",
+          "b": "3436.98",
+          "c": "5404.98"
+        },
+        "expected": "107912/25",
+        "reply": "107912/25"
+      },
+      {
+        "args": {
+          "a": "-7221.75",
+          "b": "4179.89",
+          "c": "3925.74"
+        },
+        "expected": "22097/75",
+        "reply": "22097/75"
+      },
+      {
+        "args": {
+          "a": "742.84",
+          "b": "1701.32",
+          "c": "3351.03"
+        },
+        "expected": "193173/100",
+        "reply": "193173/100"
+      },
+      {
+        "args": {
+          "a": "921.83",
+          "b": "-7505.88",
+          "c": "-3336.75"
+        },
+        "expected": "-49604/15",
+        "reply": "-49604/15"
+      },
+      {
+        "args": {
+          "a": "-3914.96",
+          "b": "371.93",
+          "c": "-9553.22"
+        },
+        "expected": "-52385/12",
+        "reply": "-52385/12"
+      },
+      {
+        "args": {
+          "a": "-7593.59",
+          "b": "6660.23",
+          "c": "4132.87"
+        },
+        "expected": "319951/300",
+        "reply": "319951/300"
+      },
+      {
+        "args": {
+          "a": "-1846.56",
+          "b": "5556.32",
+          "c": "4662.25"
+        },
+        "expected": "279067/100",
+        "reply": "279067/100"
+      },
+      {
+        "args": {
+          "a": "-305.76",
+          "b": "3635.18",
+          "c": "-9674.08"
+        },
+        "expected": "-317233/150",
+        "reply": "-317233/150"
+      },
+      {
+        "args": {
+          "a": "-4441.45",
+          "b": "-6444.10",
+          "c": "5809.52"
+        },
+        "expected": "-169201/100",
+        "reply": "-169201/100"
+      },
+      {
+        "args": {
+          "a": "-49.23",
+          "b": "-157.02",
+          "c": "-2830.65"
+        },
+        "expected": "-10123/10",
+        "reply": "-10123/10"
+      },
+      {
+        "args": {
+          "a": "145.08",
+          "b": "-8358.75",
+          "c": "-267.72"
+        },
+        "expected": "-282713/100",
+        "reply": "-282713/100"
+      },
+      {
+        "args": {
+          "a": "2399.85",
+          "b": "7036.51",
+          "c": "3153.93"
+        },
+        "expected": "1259029/300",
+        "reply": "1259029/300"
+      },
+      {
+        "args": {
+          "a": "-2303.55",
+          "b": "7797.93",
+          "c": "280.01"
+        },
+        "expected": "577439/300",
+        "reply": "577439/300"
+      },
+      {
+        "args": {
+          "a": "2398.74",
+          "b": "-642.05",
+          "c": "6416.66"
+        },
+        "expected": "54489/20",
+        "reply": "54489/20"
+      },
+      {
+        "args": {
+          "a": "-6067.08",
+          "b": "-7836.13",
+          "c": "505.98"
+        },
+        "expected": "-1339723/300",
+        "reply": "-1339723/300"
+      },
+      {
+        "args": {
+          "a": "6307.74",
+          "b": "-7565.24",
+          "c": "-9817.67"
+        },
+        "expected": "-1107517/300",
+        "reply": "-1107517/300"
+      },
+      {
+        "args": {
+          "a": "-6474.67",
+          "b": "643.43",
+          "c": "-9668.97"
+        },
+        "expected": "-1550021/300",
+        "reply": "-1550021/300"
+      },
+      {
+        "args": {
+          "a": "182.65",
+          "b": "-4898.65",
+          "c": "-1698.56"
+        },
+        "expected": "-160364/75",
+        "reply": "-160364/75"
+      },
+      {
+        "args": {
+          "a": "-9344.60",
+          "b": "-8895.04",
+          "c": "263.31"
+        },
+        "expected": "-599211/100",
+        "reply": "-599211/100"
+      },
+      {
+        "args": {
+          "a": "2369.33",
+          "b": "-3610.02",
+          "c": "396.86"
+        },
+        "expected": "-84383/300",
+        "reply": "-84383/300"
+      },
+      {
+        "args": {
+          "a": "-9334.54",
+          "b": "-8639.91",
+          "c": "-3830.03"
+        },
+        "expected": "-181704/25",
+        "reply": "-181704/25"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "ADOPT",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "eb80f6d485a70e659bffb456fa49f7f14f41d673ab7e5b7fe29ffe4f8d37c6b1"
+}

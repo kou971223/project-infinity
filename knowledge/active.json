@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.05450",
+      "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+      "excerpt": "arXiv:2611.05450v1 Announce Type: new Abstract: As agents become more capable, they are moving beyond one-off tasks toward sustained assistance across successive user goals. Such assistance requires agents to discover how unfamiliar environments work, reuse what they learn across tasks, and keep that experience current as environments evolve. Existing benchmarks increasingly study experience reuse and adaptation, but provide limited insight into which parts of accumulated experience agents revise, retain, or lose. To address this gap, we introduce ReScopeBench, a benchmark for the experience l",
+      "excerptHash": "e64cd8af08b7672a3e42a54bd09529853b14b25b25407d1507540daa44cec6d8",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936999+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05394",
+      "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+      "excerpt": "arXiv:2611.05394v1 Announce Type: new Abstract: Tiered inference distributes large language model computation across a hierarchy of devices, from on-device and edge hardware to the datacenter, and is increasingly offered as the route to cheaper, lower-latency, and more private serving. Most such systems orchestrate frozen model checkpoints, and most decide what to resolve locally and what to escalate using a confidence signal produced by a forward-deployed model. We give a closed-form condition for when no threshold on that signal makes a tiered cascade worthwhile relative to sending every que",
+      "excerptHash": "644edb2017a4f41ac0ca65ce9c061e74aba291aac28cf9f2c826a1b8c643a79c",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936593+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05393",
+      "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+      "excerpt": "arXiv:2611.05393v1 Announce Type: new Abstract: Large language models perform strongly on standard medical QA but degrade on harder reasoning tasks, where multi-agent debate often fails to beat strong single-model prompting. We argue that a key limitation is that existing systems select experts and retrieve knowledge from the question alone, rather than from gaps that emerge during reasoning. We propose challenge-aware adaptive recruitment: an external CHALLENGER inspects the evolving reasoning trace and identifies specific factual or expertise gaps. These signals trigger targeted knowledge re",
+      "excerptHash": "1eabd60d41cc52e6dc4a07f012b93ce5ed1284b1aaa0235f7b8fd4c86cd4afcb",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.936166+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05392",
+      "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+      "excerpt": "arXiv:2611.05392v1 Announce Type: new Abstract: Agentic artificial intelligence (AI) systems powered by large language models (LLMs) execute as autonomous multi-step pipelines that dynamically invoke tools, integrate observations into memory, and iterate until a task is resolved or a resource budget is exhausted. Unlike classical workflows with fixed graphs, the aggregate compute, bandwidth, and end-to-end latency demands of such pipelines are unknown at dispatch time: they emerge at runtime from intermediate observations and stochastic token sampling, yielding heavy-tailed, multi-modal random",
+      "excerptHash": "e8c286c00cbc7cf006b6bcd3f1fba200b2794b0543a519357ec61bec4cc207c1",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.935755+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05391",
+      "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+      "excerpt": "arXiv:2611.05391v1 Announce Type: new Abstract: Tool descriptions tell an agent what an action can do, but they do not necessarily reveal whether that action is healthy or suitable at the moment of use. Execution harnesses often possess this information through monitors, traces, and recent failures while the model choosing the next action does not. We call this gap operational blindness. We introduce Agent Harness Awareness, a trust-separated design in which the host supplies a small, fresh, verified state snapshot before a consequential action while retaining measurement, enforcement, evaluat",
+      "excerptHash": "e918cd6d541e51f6d11ba59fec58f45b6edab011ed1f90b2661d6650abaca40e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.935328+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.05390",
+      "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+      "excerpt": "arXiv:2611.05390v1 Announce Type: new Abstract: Multi-agent language-model systems often add a reviewer to improve an upstream agent's decision. Yet a reviewer can both repair errors and replace decisions that were already correct. We study this as a problem of institutional jurisdiction: conditional on the same proposal, task information, model, and review output, when is the reviewer authorized to make its recommendation binding? We compare broad override authority with an evidence gate that permits replacement only after the reviewer produces a mechanically valid record of a binding-constra",
+      "excerptHash": "069d1efd818070c188724ad08dbce80efd5cd01116eed82aa58347d75a07b830",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.934897+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.789202+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "638028f725311b52cbad5b6be662ef2992a7c7a72c5b5629433ebf839908a401"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-05T07:20:17.452913+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "6382499b11643dc4b0f3bf220ba480679af9e68eea8860bcfb40e05473fe2056"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.03698",
       "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
       "excerpt": "arXiv:2611.03698v1 Announce Type: new Abstract: Recursive Self-Improvement (RSI) aims to enable AI systems to autonomously build and improve AI systems themselves, including models, harnesses, and underlying infrastructure. Within this broader agenda, a central capability is enabling agents to train and improve base models. However, existing studies on automated model training primarily focused on workflow- or harness-level optimizations, rather than internalizing the ability to conduct post-training into the model itself. Developing this capability requires executable model training environme",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-04T06:56:23.204035+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-04T06:56:22.856983+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "a4d552e4c752172bdc5861b3a64a9d9771e6cd6fe3f4d8d7ef7670bf3abe5925"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-04T06:56:22.518436+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "20b8eb88ae085bcfc09336d04d458c2738b4698c93396891de2e005254f250c8"
     },
     {
       "url": "https://arxiv.org/abs/2610.40906",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-10-28T06:14:26.438915+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.35984",
-      "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
-      "excerpt": "arXiv:2610.35984v1 Announce Type: new Abstract: Deep learning models are highly effective in a wide range of domains, particu larly in plant disease diagnosis. However, their performance is often limited by challenges such as insufficient data and class imbalance. In our work, we propose a comprehensive data generation strategy to overcome these limitations. First, we apply various data generation techniques, including traditional augmentation methods, CutMix, MixUp, and synthetic image generation using Deep Convolu tional Generative Adversarial Networks (DCGANs), to create new data samples. S",
-      "excerptHash": "434fb1be7016bdc15081d2fe35a8cd4ba48e41f3ccf1defdc925adda05f2aceb",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.438388+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.35942",
-      "title": "Counting the Bandages: On measuring the time that AI saves",
-      "excerpt": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defect cost. I give a baseline model of checking in which, until the model is good enough not to check, a c",
-      "excerptHash": "1a733d9235585d01e7f6d6bb5f72921879a2cf315a45bd210bccb99dd0eccec7",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-28T06:14:26.437829+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.31882",
-      "title": "TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules",
-      "excerpt": "arXiv:2610.31882v1 Announce Type: new Abstract: We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules. In this framework, a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools such as Cadence Virtuoso/Spectre, Calibre, Cadence EMX, and Ansys HFSS to design RF and mmWave modules. We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process. The agent semi-autonomously designed the sub-blocks including a 60 G",
-      "excerptHash": "509608cb827b819f503aa11ca192e24442795ddda42ee03c1b46f7f8f040d215",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-26T05:14:12.089070+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.31846",
-      "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
-      "excerpt": "arXiv:2610.31846v1 Announce Type: new Abstract: Intelligent agents should learn from their mistakes so that experience leads to continuous improvement. Yet today's agents recover from a mistake only temporarily: in-context reflections are easily forgotten across sessions and compete for limited context, while full-parameter fine-tuning is expensive and can interfere with existing capabilities. We introduce Self-Direction, a mechanism for agents to learn from mistakes that combines the benefits of temporary in-context retries and policy updates. When an agent fails a task, it reflects on its ow",
-      "excerptHash": "5bf5fee21a8f56f8d24cc47bac57936719e525ca14f7e8fa388c54c098a40bbd",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-26T05:14:12.088549+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.31810",
-      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
-      "excerpt": "arXiv:2610.31810v1 Announce Type: new Abstract: Even a carefully proofread paper can leave small gaps in its proofs or its stated assumptions. We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version. Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain ",
-      "excerptHash": "b70a0109090ef0bd68ea5fc99470cfb6a6ba78896cce6fb8e7de64512957a63e",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-26T05:14:12.087990+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.31808",
-      "title": "Patronizing and Condescending Language Detection in English and Mandarin",
-      "excerpt": "arXiv:2610.31808v1 Announce Type: new Abstract: Patronizing and condescending language (PCL) is a form of harmful language that belittles and assumes pity for vulnerable groups, reinforcing negative societal stereotypes. However, unlike overt hate speech, it is often difficult to detect, even for human judges. This paper proposes a system for the automated detection of PCL. Our first approach uses static word embeddings and a convolutional neural network for classification, while our second approach uses pre-trained BERT embeddings fine-tuned for the PCL task. Our second approach was considera",
-      "excerptHash": "c98de9f74b0e26f811cccf63f98456845945d4895ad3b13a593dbffa40f8e7cd",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-10-26T05:14:12.087449+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 11,
-  "parentHash": "723e98a19febfa98e0f7dbab87a7c2e8236e47d5d37d760dacb4dfff29609a34",
-  "at": "2026-11-04T06:56:23.208317+00:00",
-  "runId": "41788816312",
-  "artifactHash": "8804bb710a37135695b5766851b03d8ad797cf4e6b71063dbcb8368657162cd2"
+  "generation": 12,
+  "parentHash": "8804bb710a37135695b5766851b03d8ad797cf4e6b71063dbcb8368657162cd2",
+  "at": "2026-11-05T07:20:17.937631+00:00",
+  "runId": "41986497581",
+  "artifactHash": "b12b7cb307575a880b0c35b8a5ae14fe90e3db95b43ca42387d3f6646643bbe1"
 }
