@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "41922268596",
+  "runId": "41956981535",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-04T22:07:21Z",
+  "at": "2026-11-05T02:43:34Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "58a008486694dcdb3a08905a40cec7358c0e1ab7bbfa28f85456be3aad2412d8",
-  "cycleNumber": 164,
+  "parentRecordHash": "a9f67ea6957870a582e3e9742f6322ac4bafe3a9309fb57a535d6713f97c8c38",
+  "cycleNumber": 165,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "da16f3ebd0ba327e666b8de5a4295de9db83c06d103ac607c2aaa729e12d2f5c",
+    "hash": "62ac904727afdae4f2b185b8fb69883713a9df484ebe56cec8414b537d8ec754",
     "items": [
       {
-        "title": "Suppressing Misaligned Behaviors in Language Models, Durably",
-        "url": "http://arxiv.org/abs/2611.05358v1",
-        "updated": "2026-11-03T18:54:08Z",
+        "title": "Routes of Reasoning: Reading and Reshaping Test-Time Compute in MoE Models",
+        "url": "http://arxiv.org/abs/2611.05919v1",
+        "updated": "2026-11-04T04:13:02Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Interpretable Quantum Photonic Generative Models",
-        "url": "http://arxiv.org/abs/2611.05354v1",
-        "updated": "2026-11-03T18:52:34Z",
+        "title": "Learning Coarse Spaces for Two-Grid Methods from Smoothed Errors with Applications to High-Contrast Porous Media Flow",
+        "url": "http://arxiv.org/abs/2611.05837v1",
+        "updated": "2026-11-04T02:25:37Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-04T22:07:22Z"
+    "accessedAt": "2026-11-05T02:43:34Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.617,
+  "elapsedSeconds": 0.582,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "a9f67ea6957870a582e3e9742f6322ac4bafe3a9309fb57a535d6713f97c8c38"
+  "recordHash": "a117e613b14abb7faf04f85d966ebb038de4ac7c9b453164f2dc9c92f3d28a5b"
 }
