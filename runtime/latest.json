@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-11-05T03:28:48.829Z",
-  "runId": "41961801473",
+  "at": "2026-11-05T12:15:48.007Z",
+  "runId": "42025577243",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-b7e95169-90d7-4acb-aa00-068fa0470612",
-    "at": "2026-11-05T03:28:36.376Z",
+    "exp": "EXP-73176bb7-ce0d-452f-b7b1-cfa87333603d",
+    "at": "2026-11-05T12:15:30.947Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -80,7 +80,7 @@
     "taxonomy": "E1 application reliability",
     "overallProjectAccepted": false,
     "decision": "NO_CHANGE",
-    "elapsedMs": 7
+    "elapsedMs": 6
   },
   "sources": {
     "schema": "PINF-SOURCES-1",
@@ -97,18 +97,18 @@
         "status": "official_document_body_retrieved_not_independent_validation"
       },
       {
-        "title": "Alignment Faking Depends on the Value, Not Just the Model",
-        "url": "https://arxiv.org/abs/2611.03650",
+        "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+        "url": "https://arxiv.org/abs/2611.05390",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs",
-        "url": "https://arxiv.org/abs/2611.03651",
+        "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+        "url": "https://arxiv.org/abs/2611.05391",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication",
-        "url": "https://arxiv.org/abs/2611.03662",
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "url": "https://arxiv.org/abs/2611.05392",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
@@ -117,11 +117,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-05T03:28:35Z",
+        "at": "2026-11-05T12:15:30Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "9cd0106343d0cdc84a6304efbea54d049114895c89d1ae99cd5caeee7be16c56",
+        "sha256": "4fe1126af0220eeac1d02353b52c5fb13590c02cc71d833966d36b702b87e909",
         "bytes": 106536,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -131,11 +131,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-05T03:28:35Z",
+        "at": "2026-11-05T12:15:30Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "5ee57d91a2bb2c8c86ff7434b0bbb99fc22546ab2371a8fde3dd71f961950f81",
+        "sha256": "07150b5dcb0fbae39f320af1f75b810e1f829716431534173150af292ea3b527",
         "bytes": 108165,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -145,12 +145,12 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-11-05T03:28:36Z",
+        "at": "2026-11-05T12:15:30Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831",
-        "bytes": 889199,
+        "sha256": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c",
+        "bytes": 789674,
         "scope": "feed_only"
       }
     ],
@@ -165,5 +165,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "6ef65e4884ede220e23699c50336624e6121dde9e41cef4dd849db8b212e84f1"
+  "recordHash": "caccdc4c21c6b5abb1c7681b5df4c05a357680a8f2c3f7243b25d4343b412d77"
 }
