@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "41956981535",
+  "runId": "42018933014",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-05T02:43:34Z",
+  "at": "2026-11-05T11:26:45Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "a9f67ea6957870a582e3e9742f6322ac4bafe3a9309fb57a535d6713f97c8c38",
-  "cycleNumber": 165,
+  "parentRecordHash": "a117e613b14abb7faf04f85d966ebb038de4ac7c9b453164f2dc9c92f3d28a5b",
+  "cycleNumber": 166,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "62ac904727afdae4f2b185b8fb69883713a9df484ebe56cec8414b537d8ec754",
+    "hash": "174066181a62909d785699e78fffc562794200eef4585f124d4f5e8e23d77277",
     "items": [
       {
-        "title": "Routes of Reasoning: Reading and Reshaping Test-Time Compute in MoE Models",
-        "url": "http://arxiv.org/abs/2611.05919v1",
-        "updated": "2026-11-04T04:13:02Z",
+        "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
+        "url": "http://arxiv.org/abs/2611.06912v1",
+        "updated": "2026-11-04T18:57:47Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Learning Coarse Spaces for Two-Grid Methods from Smoothed Errors with Applications to High-Contrast Porous Media Flow",
-        "url": "http://arxiv.org/abs/2611.05837v1",
-        "updated": "2026-11-04T02:25:37Z",
+        "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
+        "url": "http://arxiv.org/abs/2611.06879v1",
+        "updated": "2026-11-04T18:35:35Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-05T02:43:34Z"
+    "accessedAt": "2026-11-05T11:26:46Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.582,
+  "elapsedSeconds": 0.464,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "a117e613b14abb7faf04f85d966ebb038de4ac7c9b453164f2dc9c92f3d28a5b"
+  "recordHash": "090cd93cab50497a78c72a644366848a17326ee0af1c6c2d25618bdda0b8a61e"
 }
