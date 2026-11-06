@@ -1,8 +1,8 @@
 {
   "schema": "PINF-CHAT-EVOLUTION-1",
-  "at": "2026-11-05T20:16:27.353443+00:00",
+  "at": "2026-11-06T07:25:27.939080+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "42101826402",
+  "runId": "42180769192",
   "parentArtifactHash": "a648a7400a58349706d813efa7029fd05e6d9f41dca5e85b0a27a87b728695d7",
   "baseline": {
     "schema": "PINF-CHAT-EVOLUTION-1",
@@ -42,24 +42,24 @@
       "parentHash": "f3b325807719351cac642c0f71e8322c7e5db8b89eefea4efeef42c6cb1d864b"
     }
   ],
-  "testedCapability": "metric-length-v1",
+  "testedCapability": "exact-integer-v1",
   "evidence": {
     "protocol": "PINF-CHAT-EVOLUTION-1",
-    "seed": 213756841752518,
+    "seed": 91954211695344,
     "candidateHash": "857190053d4624b4710225f5f6398f9c74186cc2c511fb816274278220e13257",
     "pairs": [
       {
-        "prompt": "636.727 cm to mm",
-        "expected": "6367.27 mm",
+        "prompt": "15889077 + 50095",
+        "expected": "15939172",
         "baseline": {
-          "reply": "6367.27 mm",
+          "reply": "15939172",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "6367.27 mm",
+          "reply": "15939172",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -67,17 +67,17 @@
         }
       },
       {
-        "prompt": "722.544 cm to mm",
-        "expected": "7225.44 mm",
+        "prompt": "67109038 × 57416",
+        "expected": "3853132525808",
         "baseline": {
-          "reply": "7225.44 mm",
+          "reply": "3853132525808",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "7225.44 mm",
+          "reply": "3853132525808",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -85,17 +85,17 @@
         }
       },
       {
-        "prompt": "188.196 cm to mm",
-        "expected": "1881.96 mm",
+        "prompt": "98143056 − 78692",
+        "expected": "98064364",
         "baseline": {
-          "reply": "1881.96 mm",
+          "reply": "98064364",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "1881.96 mm",
+          "reply": "98064364",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -103,17 +103,17 @@
         }
       },
       {
-        "prompt": "-778.521 mm to cm",
-        "expected": "-77.8521 cm",
+        "prompt": "1033036 ÷ 25196",
+        "expected": "41",
         "baseline": {
-          "reply": "-77.8521 cm",
+          "reply": "41",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "-77.8521 cm",
+          "reply": "41",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -121,17 +121,17 @@
         }
       },
       {
-        "prompt": "594.159 m to mm",
-        "expected": "594159 mm",
+        "prompt": "56801919 + 11256",
+        "expected": "56813175",
         "baseline": {
-          "reply": "594159 mm",
+          "reply": "56813175",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "594159 mm",
+          "reply": "56813175",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -139,17 +139,17 @@
         }
       },
       {
-        "prompt": "449.156 mm to cm",
-        "expected": "44.9156 cm",
+        "prompt": "55178571 × 26747",
+        "expected": "1475861238537",
         "baseline": {
-          "reply": "44.9156 cm",
+          "reply": "1475861238537",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "44.9156 cm",
+          "reply": "1475861238537",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -157,17 +157,17 @@
         }
       },
       {
-        "prompt": "-256.189 m to mm",
-        "expected": "-256189 mm",
+        "prompt": "84426183 − 88148",
+        "expected": "84338035",
         "baseline": {
-          "reply": "-256189 mm",
+          "reply": "84338035",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "-256189 mm",
+          "reply": "84338035",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -175,17 +175,17 @@
         }
       },
       {
-        "prompt": "-408.11 cm to mm",
-        "expected": "-4081.1 mm",
+        "prompt": "9125896 ÷ 97084",
+        "expected": "94",
         "baseline": {
-          "reply": "-4081.1 mm",
+          "reply": "94",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
           "ok": true
         },
         "candidate": {
-          "reply": "-4081.1 mm",
+          "reply": "94",
           "mode": "verified-tool",
           "modelEvidence": null,
           "ms": 1,
@@ -198,5 +198,5 @@
     "candidateCorrect": 8
   },
   "applied": false,
-  "recordHash": "1d9818882fc3680a0135d9983f31ed061b500a14e34c50991a51cb427f8ca60c"
+  "recordHash": "bb77b90a81951f17e48a63422505025bfed3ce3e08880e1fb02583153745ac69"
 }
