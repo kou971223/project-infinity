@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "42179953923",
+  "runId": "42241910340",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-06T07:18:32Z",
+  "at": "2026-11-06T15:19:38Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "6b4c461878949e9309a5783ee4f5973125843610f2eca8acbf9c0a4dcc13c38a",
-  "cycleNumber": 169,
+  "parentRecordHash": "5b18077b02d94f4b3cbc5f1bf896145290ea3846c8a7b9551f320e747ac67ba6",
+  "cycleNumber": 170,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "9222dc660bfcc3a55031e4ffde5c8d7454e1fb41bdd1fa2d709c4904ef97baaa",
+    "hash": "021103564bbda687077e23d9ec8fad1fd101c7a17d66a92f550363a8d20f9646",
     "items": [
       {
         "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-06T07:18:32Z"
+    "accessedAt": "2026-11-06T15:19:39Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.526,
+  "elapsedSeconds": 0.638,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "5b18077b02d94f4b3cbc5f1bf896145290ea3846c8a7b9551f320e747ac67ba6"
+  "recordHash": "0375cacd08aca03246d1b9456f30560b6453d2763e197f12dd863281cca8e4a9"
 }
