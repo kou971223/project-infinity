@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-07T06:32:21.882620+00:00",
+  "at": "2026-11-07T13:29:54.662657+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "42347446511",
+  "runId": "42377209007",
   "parents": {
     "knowledge": "3564c8e0f0aa83fa2716aa905e46acd4d65ca6d1f5b2f291437e1158f037f76b",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-07T06:32:21.443223+00:00",
+      "checkedAt": "2026-11-07T13:29:54.194786+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "4e79082d51f44e14592ed645532af0ed7c839bed8aa1c378de026ab38382a2cd"
+      "sourceHash": "2520c087c091eb2d7bedbacafb0c9947c48064e0e304a943d3a731ba68169d86"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,13 +24,13 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-07T06:32:21.790365+00:00",
+      "checkedAt": "2026-11-07T13:29:54.545263+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "666a66641b2b0d2f82dab70184ed1ae72d038cf327b5d580837af7cad553d969"
+      "sourceHash": "3feea6038b47deb8f5f28084c362d5929441d3eccb271f891d7e46983c4a19fb"
     }
   ],
   "sourceFailures": [],
-  "task": "mean",
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -44,76 +44,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 199135586288658,
+    "trainingSeed": 251583988735420,
     "trainingExamples": [
       {
         "args": {
-          "a": "-2073.99",
-          "b": "2859.93",
-          "c": "-1490.10"
+          "width": "-6842.18",
+          "height": "-5151.27"
         },
-        "expected": "-5868/25"
+        "expected": "176229582843/5000"
       },
       {
         "args": {
-          "a": "-6696.62",
-          "b": "2046.68",
-          "c": "-6374.21"
+          "width": "-5210.12",
+          "height": "4608.55"
         },
-        "expected": "-220483/60"
+        "expected": "-12005549263/500"
       },
       {
         "args": {
-          "a": "-5083.70",
-          "b": "-7104.77",
-          "c": "1809.87"
+          "width": "-7040.00",
+          "height": "-3613.01"
         },
-        "expected": "-51893/15"
+        "expected": "127177952/5"
       },
       {
         "args": {
-          "a": "3015.14",
-          "b": "-2311.14",
-          "c": "2621.29"
+          "width": "-1373.85",
+          "height": "-6311.92"
         },
-        "expected": "110843/100"
+        "expected": "2167907823/250"
       }
     ],
-    "examined": 15345,
-    "states": 6008,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "ab1010bff365021148b91821eab7c2edda75723182f72c33eef6e20594d478c0",
+  "frozenHash": "a4648be38920fb2d21c2a7df50b918f5c6772a4ce2e586fc244cbe54b70e2a3f",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -123,9 +105,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-07T06:32:21.443223+00:00",
+        "checkedAt": "2026-11-07T13:29:54.194786+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "4e79082d51f44e14592ed645532af0ed7c839bed8aa1c378de026ab38382a2cd"
+        "sourceHash": "2520c087c091eb2d7bedbacafb0c9947c48064e0e304a943d3a731ba68169d86"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -133,9 +115,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-07T06:32:21.790365+00:00",
+        "checkedAt": "2026-11-07T13:29:54.545263+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "666a66641b2b0d2f82dab70184ed1ae72d038cf327b5d580837af7cad553d969"
+        "sourceHash": "3feea6038b47deb8f5f28084c362d5929441d3eccb271f891d7e46983c4a19fb"
       }
     ],
     "rejected": [],
@@ -143,587 +125,523 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 19288921180942,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 226729882720096,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "2980.70",
-          "b": "6689.65",
-          "c": "-4112.95"
+          "width": "5982.00",
+          "height": "-650.81"
         },
-        "expected": "27787/15",
-        "reply": "27787/15"
+        "expected": "-194657271/50",
+        "reply": "-194657271/50"
       },
       {
         "args": {
-          "a": "1463.66",
-          "b": "131.48",
-          "c": "-7756.37"
+          "width": "7407.93",
+          "height": "-4586.36"
         },
-        "expected": "-616123/300",
-        "reply": "-616123/300"
+        "expected": "-84938584587/2500",
+        "reply": "-84938584587/2500"
       },
       {
         "args": {
-          "a": "6625.37",
-          "b": "-2962.02",
-          "c": "616.90"
+          "width": "-3370.66",
+          "height": "-7499.88"
         },
-        "expected": "5707/4",
-        "reply": "5707/4"
+        "expected": "31599431901/1250",
+        "reply": "31599431901/1250"
       },
       {
         "args": {
-          "a": "-2806.70",
-          "b": "9777.56",
-          "c": "-5712.37"
+          "width": "-3886.02",
+          "height": "-4347.82"
         },
-        "expected": "125849/300",
-        "reply": "125849/300"
+        "expected": "42239288691/2500",
+        "reply": "42239288691/2500"
       },
       {
         "args": {
-          "a": "-5809.65",
-          "b": "-9207.08",
-          "c": "2616.57"
+          "width": "5677.68",
+          "height": "-4593.63"
         },
-        "expected": "-310004/75",
-        "reply": "-310004/75"
+        "expected": "-32601451473/1250",
+        "reply": "-32601451473/1250"
       },
       {
         "args": {
-          "a": "-6110.20",
-          "b": "1950.46",
-          "c": "-4487.92"
+          "width": "3398.85",
+          "height": "5322.79"
         },
-        "expected": "-432383/150",
-        "reply": "-432383/150"
+        "expected": "36182729583/2000",
+        "reply": "36182729583/2000"
       },
       {
         "args": {
-          "a": "-5071.52",
-          "b": "1266.68",
-          "c": "-1567.98"
+          "width": "-4396.04",
+          "height": "-6789.44"
         },
-        "expected": "-89547/50",
-        "reply": "-89547/50"
+        "expected": "18654156136/625",
+        "reply": "18654156136/625"
       },
       {
         "args": {
-          "a": "1367.86",
-          "b": "3661.22",
-          "c": "2432.56"
+          "width": "-2677.32",
+          "height": "2856.26"
         },
-        "expected": "186541/75",
-        "reply": "186541/75"
+        "expected": "-9558902529/1250",
+        "reply": "-9558902529/1250"
       },
       {
         "args": {
-          "a": "-6111.88",
-          "b": "-6910.90",
-          "c": "7709.65"
+          "width": "-1739.48",
+          "height": "2039.93"
         },
-        "expected": "-531313/300",
-        "reply": "-531313/300"
+        "expected": "-8871043591/2500",
+        "reply": "-8871043591/2500"
       },
       {
         "args": {
-          "a": "-4696.08",
-          "b": "-7561.24",
-          "c": "4149.64"
+          "width": "3502.13",
+          "height": "-7714.16"
         },
-        "expected": "-67564/25",
-        "reply": "-67564/25"
+        "expected": "-33769988951/1250",
+        "reply": "-33769988951/1250"
       },
       {
         "args": {
-          "a": "-8277.39",
-          "b": "6707.69",
-          "c": "5903.09"
+          "width": "-3169.38",
+          "height": "-4190.73"
         },
-        "expected": "433339/300",
-        "reply": "433339/300"
+        "expected": "66410079237/5000",
+        "reply": "66410079237/5000"
       },
       {
         "args": {
-          "a": "8823.96",
-          "b": "-3485.05",
-          "c": "-9682.66"
+          "width": "-4207.53",
+          "height": "4193.21"
         },
-        "expected": "-17375/12",
-        "reply": "-17375/12"
+        "expected": "-176430568713/10000",
+        "reply": "-176430568713/10000"
       },
       {
         "args": {
-          "a": "4262.61",
-          "b": "-4184.47",
-          "c": "2664.96"
+          "width": "4469.38",
+          "height": "7026.18"
         },
-        "expected": "27431/30",
-        "reply": "27431/30"
+        "expected": "78506670921/2500",
+        "reply": "78506670921/2500"
       },
       {
         "args": {
-          "a": "-7845.96",
-          "b": "2111.90",
-          "c": "6744.22"
+          "width": "2276.03",
+          "height": "-5679.09"
         },
-        "expected": "8418/25",
-        "reply": "8418/25"
+        "expected": "-129257792127/10000",
+        "reply": "-129257792127/10000"
       },
       {
         "args": {
-          "a": "564.46",
-          "b": "3982.32",
-          "c": "6867.76"
+          "width": "4855.25",
+          "height": "-5124.10"
         },
-        "expected": "570727/150",
-        "reply": "570727/150"
+        "expected": "-995151461/40",
+        "reply": "-995151461/40"
       },
       {
         "args": {
-          "a": "5794.00",
-          "b": "8215.17",
-          "c": "3925.39"
+          "width": "8662.12",
+          "height": "9911.54"
         },
-        "expected": "448364/75",
-        "reply": "448364/75"
+        "expected": "107318686081/1250",
+        "reply": "107318686081/1250"
       },
       {
         "args": {
-          "a": "1888.43",
-          "b": "-8220.90",
-          "c": "-9402.55"
+          "width": "8649.10",
+          "height": "-8351.06"
         },
-        "expected": "-786751/150",
-        "reply": "-786751/150"
+        "expected": "-36114576523/500",
+        "reply": "-36114576523/500"
       },
       {
         "args": {
-          "a": "3539.13",
-          "b": "1888.91",
-          "c": "-6166.25"
+          "width": "5732.11",
+          "height": "2436.62"
         },
-        "expected": "-24607/100",
-        "reply": "-24607/100"
+        "expected": "69834869341/5000",
+        "reply": "69834869341/5000"
       },
       {
         "args": {
-          "a": "-9774.97",
-          "b": "-8071.58",
-          "c": "6098.87"
+          "width": "-430.24",
+          "height": "-9291.12"
         },
-        "expected": "-293692/75",
-        "reply": "-293692/75"
+        "expected": "2498382168/625",
+        "reply": "2498382168/625"
       },
       {
         "args": {
-          "a": "9713.62",
-          "b": "-2320.45",
-          "c": "-6762.96"
+          "width": "19.52",
+          "height": "2357.62"
         },
-        "expected": "21007/100",
-        "reply": "21007/100"
+        "expected": "28762964/625",
+        "reply": "28762964/625"
       },
       {
         "args": {
-          "a": "4121.72",
-          "b": "3525.67",
-          "c": "-3966.31"
+          "width": "9419.33",
+          "height": "-4702.21"
         },
-        "expected": "92027/75",
-        "reply": "92027/75"
+        "expected": "-442916677193/10000",
+        "reply": "-442916677193/10000"
       },
       {
         "args": {
-          "a": "-633.63",
-          "b": "5887.83",
-          "c": "-7989.63"
+          "width": "-7647.58",
+          "height": "2295.99"
         },
-        "expected": "-91181/100",
-        "reply": "-91181/100"
+        "expected": "-87793836021/5000",
+        "reply": "-87793836021/5000"
       },
       {
         "args": {
-          "a": "9188.07",
-          "b": "-81.59",
-          "c": "9617.69"
+          "width": "-2409.98",
+          "height": "-2555.07"
         },
-        "expected": "624139/100",
-        "reply": "624139/100"
+        "expected": "30788337993/5000",
+        "reply": "30788337993/5000"
       },
       {
         "args": {
-          "a": "8475.66",
-          "b": "-8185.19",
-          "c": "2721.61"
+          "width": "8533.44",
+          "height": "6856.73"
         },
-        "expected": "75302/75",
-        "reply": "75302/75"
+        "expected": "36569683782/625",
+        "reply": "36569683782/625"
       },
       {
         "args": {
-          "a": "-5665.88",
-          "b": "-4254.86",
-          "c": "-9442.12"
+          "width": "-3042.04",
+          "height": "-2841.95"
         },
-        "expected": "-968143/150",
-        "reply": "-968143/150"
+        "expected": "4322662789/500",
+        "reply": "4322662789/500"
       },
       {
         "args": {
-          "a": "-449.80",
-          "b": "685.35",
-          "c": "7992.99"
+          "width": "2696.25",
+          "height": "1598.78"
         },
-        "expected": "411427/150",
-        "reply": "411427/150"
+        "expected": "172428423/40",
+        "reply": "172428423/40"
       },
       {
         "args": {
-          "a": "5069.43",
-          "b": "1917.63",
-          "c": "-5222.02"
+          "width": "-9825.08",
+          "height": "3381.91"
         },
-        "expected": "44126/75",
-        "reply": "44126/75"
+        "expected": "-83068840757/2500",
+        "reply": "-83068840757/2500"
       },
       {
         "args": {
-          "a": "1648.46",
-          "b": "1213.59",
-          "c": "-348.01"
+          "width": "4449.52",
+          "height": "-1088.83"
         },
-        "expected": "62851/75",
-        "reply": "62851/75"
+        "expected": "-6055963577/1250",
+        "reply": "-6055963577/1250"
       },
       {
         "args": {
-          "a": "-7316.31",
-          "b": "-1129.95",
-          "c": "-8336.49"
+          "width": "4341.59",
+          "height": "-6479.80"
         },
-        "expected": "-22377/4",
-        "reply": "-22377/4"
+        "expected": "-14066317441/500",
+        "reply": "-14066317441/500"
       },
       {
         "args": {
-          "a": "-3650.04",
-          "b": "1895.11",
-          "c": "-3086.20"
+          "width": "-5867.66",
+          "height": "7797.47"
         },
-        "expected": "-161371/100",
-        "reply": "-161371/100"
+        "expected": "-228764514101/5000",
+        "reply": "-228764514101/5000"
       },
       {
         "args": {
-          "a": "6277.48",
-          "b": "7953.80",
-          "c": "6026.68"
+          "width": "3402.04",
+          "height": "-3306.31"
         },
-        "expected": "506449/75",
-        "reply": "506449/75"
+        "expected": "-28120497181/2500",
+        "reply": "-28120497181/2500"
       },
       {
         "args": {
-          "a": "7325.62",
-          "b": "-9524.70",
-          "c": "3277.42"
+          "width": "4235.94",
+          "height": "-5559.26"
         },
-        "expected": "53917/150",
-        "reply": "53917/150"
+        "expected": "-58871729511/2500",
+        "reply": "-58871729511/2500"
       },
       {
         "args": {
-          "a": "4150.19",
-          "b": "-2311.03",
-          "c": "-6559.06"
+          "width": "5590.07",
+          "height": "-3084.72"
         },
-        "expected": "-15733/10",
-        "reply": "-15733/10"
+        "expected": "-21554750913/1250",
+        "reply": "-21554750913/1250"
       },
       {
         "args": {
-          "a": "8583.64",
-          "b": "-5193.35",
-          "c": "-2803.26"
+          "width": "5382.26",
+          "height": "-2809.45"
         },
-        "expected": "58703/300",
-        "reply": "58703/300"
+        "expected": "-15121190357/1000",
+        "reply": "-15121190357/1000"
       },
       {
         "args": {
-          "a": "-4188.55",
-          "b": "-2568.16",
-          "c": "-9881.42"
+          "width": "6997.94",
+          "height": "-8393.86"
         },
-        "expected": "-1663813/300",
-        "reply": "-1663813/300"
+        "expected": "-146849321621/2500",
+        "reply": "-146849321621/2500"
       },
       {
         "args": {
-          "a": "-801.05",
-          "b": "-2113.03",
-          "c": "-1118.85"
+          "width": "6501.86",
+          "height": "-6394.28"
         },
-        "expected": "-134431/100",
-        "reply": "-134431/100"
+        "expected": "-51968391701/1250",
+        "reply": "-51968391701/1250"
       },
       {
         "args": {
-          "a": "4550.60",
-          "b": "7121.92",
-          "c": "-4685.57"
+          "width": "-8005.34",
+          "height": "-4317.43"
         },
-        "expected": "139739/60",
-        "reply": "139739/60"
+        "expected": "172812475381/5000",
+        "reply": "172812475381/5000"
       },
       {
         "args": {
-          "a": "-543.89",
-          "b": "6598.36",
-          "c": "4983.17"
+          "width": "-6729.64",
+          "height": "5185.43"
         },
-        "expected": "275941/75",
-        "reply": "275941/75"
+        "expected": "-87240192863/2500",
+        "reply": "-87240192863/2500"
       },
       {
         "args": {
-          "a": "948.44",
-          "b": "-159.53",
-          "c": "7874.60"
+          "width": "-1642.47",
+          "height": "119.01"
         },
-        "expected": "866351/300",
-        "reply": "866351/300"
+        "expected": "-1954703547/10000",
+        "reply": "-1954703547/10000"
       },
       {
         "args": {
-          "a": "-2434.98",
-          "b": "-5276.45",
-          "c": "2611.03"
+          "width": "3949.74",
+          "height": "-1000.69"
         },
-        "expected": "-25502/15",
-        "reply": "-25502/15"
+        "expected": "-19762326603/5000",
+        "reply": "-19762326603/5000"
       },
       {
         "args": {
-          "a": "6703.19",
-          "b": "-5295.71",
-          "c": "8350.75"
+          "width": "-1695.56",
+          "height": "4012.05"
         },
-        "expected": "975823/300",
-        "reply": "975823/300"
+        "expected": "-3401335749/500",
+        "reply": "-3401335749/500"
       },
       {
         "args": {
-          "a": "-8060.40",
-          "b": "-5215.32",
-          "c": "-2583.02"
+          "width": "-9325.10",
+          "height": "6843.84"
         },
-        "expected": "-792937/150",
-        "reply": "-792937/150"
+        "expected": "-7977436548/125",
+        "reply": "-7977436548/125"
       },
       {
         "args": {
-          "a": "9841.65",
-          "b": "-3691.07",
-          "c": "-584.55"
+          "width": "8589.12",
+          "height": "5877.18"
         },
-        "expected": "556603/300",
-        "reply": "556603/300"
+        "expected": "31549877676/625",
+        "reply": "31549877676/625"
       },
       {
         "args": {
-          "a": "-6620.66",
-          "b": "1122.42",
-          "c": "-7115.82"
+          "width": "-9073.57",
+          "height": "1430.36"
         },
-        "expected": "-630703/150",
-        "reply": "-630703/150"
+        "expected": "-32446178963/2500",
+        "reply": "-32446178963/2500"
       },
       {
         "args": {
-          "a": "-9819.56",
-          "b": "5397.18",
-          "c": "7081.79"
+          "width": "9406.57",
+          "height": "-3912.25"
         },
-        "expected": "88647/100",
-        "reply": "88647/100"
+        "expected": "-14720341393/400",
+        "reply": "-14720341393/400"
       },
       {
         "args": {
-          "a": "6198.93",
-          "b": "5409.05",
-          "c": "-8226.52"
+          "width": "-2367.04",
+          "height": "4702.48"
         },
-        "expected": "169073/150",
-        "reply": "169073/150"
+        "expected": "-6956848912/625",
+        "reply": "-6956848912/625"
       },
       {
         "args": {
-          "a": "7388.74",
-          "b": "-5726.55",
-          "c": "-6440.88"
+          "width": "7395.86",
+          "height": "-4584.44"
         },
-        "expected": "-477869/300",
-        "reply": "-477869/300"
+        "expected": "-42382345523/1250",
+        "reply": "-42382345523/1250"
       },
       {
         "args": {
-          "a": "-2056.43",
-          "b": "2558.73",
-          "c": "2186.28"
+          "width": "-7527.72",
+          "height": "7151.05"
         },
-        "expected": "134429/150",
-        "reply": "134429/150"
+        "expected": "-26915551053/500",
+        "reply": "-26915551053/500"
       },
       {
         "args": {
-          "a": "124.06",
-          "b": "-2176.96",
-          "c": "3644.29"
+          "width": "4600.88",
+          "height": "-9824.27"
         },
-        "expected": "159139/300",
-        "reply": "159139/300"
+        "expected": "-56500359197/1250",
+        "reply": "-56500359197/1250"
       },
       {
         "args": {
-          "a": "-2997.21",
-          "b": "6323.86",
-          "c": "-2744.62"
+          "width": "8384.60",
+          "height": "-6689.84"
         },
-        "expected": "19401/100",
-        "reply": "19401/100"
+        "expected": "-7011454058/125",
+        "reply": "-7011454058/125"
       },
       {
         "args": {
-          "a": "376.88",
-          "b": "-6085.45",
-          "c": "369.43"
+          "width": "7959.79",
+          "height": "-3267.81"
         },
-        "expected": "-266957/150",
-        "reply": "-266957/150"
+        "expected": "-260110813599/10000",
+        "reply": "-260110813599/10000"
       },
       {
         "args": {
-          "a": "9674.36",
-          "b": "3713.43",
-          "c": "-7596.31"
+          "width": "8742.69",
+          "height": "237.29"
         },
-        "expected": "144787/75",
-        "reply": "144787/75"
+        "expected": "20745529101/10000",
+        "reply": "20745529101/10000"
       },
       {
         "args": {
-          "a": "-809.13",
-          "b": "5877.34",
-          "c": "563.14"
+          "width": "-7161.79",
+          "height": "5304.10"
         },
-        "expected": "112627/60",
-        "reply": "112627/60"
+        "expected": "-37986850339/1000",
+        "reply": "-37986850339/1000"
       },
       {
         "args": {
-          "a": "-5952.72",
-          "b": "-7278.30",
-          "c": "-4243.27"
+          "width": "-8357.75",
+          "height": "7063.07"
         },
-        "expected": "-1747429/300",
-        "reply": "-1747429/300"
+        "expected": "-23612549317/400",
+        "reply": "-23612549317/400"
       },
       {
         "args": {
-          "a": "-5749.82",
-          "b": "-3476.97",
-          "c": "-107.39"
+          "width": "-4631.77",
+          "height": "-7452.52"
         },
-        "expected": "-466709/150",
-        "reply": "-466709/150"
+        "expected": "86295896401/2500",
+        "reply": "86295896401/2500"
       },
       {
         "args": {
-          "a": "2661.08",
-          "b": "-9349.20",
-          "c": "5073.94"
+          "width": "-3803.26",
+          "height": "-3730.77"
         },
-        "expected": "-26903/50",
-        "reply": "-26903/50"
+        "expected": "70945441551/5000",
+        "reply": "70945441551/5000"
       },
       {
         "args": {
-          "a": "7634.30",
-          "b": "-4089.17",
-          "c": "-4468.39"
+          "width": "-4290.43",
+          "height": "-5948.93"
         },
-        "expected": "-46163/150",
-        "reply": "-46163/150"
+        "expected": "255234677399/10000",
+        "reply": "255234677399/10000"
       },
       {
         "args": {
-          "a": "7857.64",
-          "b": "6147.49",
-          "c": "6199.14"
+          "width": "1415.00",
+          "height": "-1558.10"
         },
-        "expected": "2020427/300",
-        "reply": "2020427/300"
+        "expected": "-4409423/2",
+        "reply": "-4409423/2"
       },
       {
         "args": {
-          "a": "-3466.88",
-          "b": "-4475.39",
-          "c": "9293.40"
+          "width": "-3606.82",
+          "height": "-2381.67"
         },
-        "expected": "135113/300",
-        "reply": "135113/300"
+        "expected": "42951274947/5000",
+        "reply": "42951274947/5000"
       },
       {
         "args": {
-          "a": "-3705.64",
-          "b": "543.10",
-          "c": "2524.43"
+          "width": "349.46",
+          "height": "2000.84"
         },
-        "expected": "-63811/300",
-        "reply": "-63811/300"
+        "expected": "874016933/1250",
+        "reply": "874016933/1250"
       },
       {
         "args": {
-          "a": "8507.96",
-          "b": "6132.76",
-          "c": "8969.79"
+          "width": "-175.24",
+          "height": "8670.80"
         },
-        "expected": "787017/100",
-        "reply": "787017/100"
+        "expected": "-189933874/125",
+        "reply": "-189933874/125"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
@@ -731,5 +649,5 @@
     "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "14b31f2cb52cd4fdac906023b5edcc128c828548fefe175bbf5df71f4f3ddf2f"
+  "recordHash": "3279d68dd10b8521b8398b5d3f3d83a77f3d48e4ed1ed0628e138bcc18b1bdba"
 }
