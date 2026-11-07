@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "42322240915",
+  "runId": "42352406424",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-07T01:07:52Z",
+  "at": "2026-11-07T07:43:14Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "75b9b88dfcd69e8842e334c28f667e444d39218dae67a0623f1b160b0d619ec5",
-  "cycleNumber": 172,
+  "parentRecordHash": "1bb014f007a4a9a2bfa17a1ea1b653cdb919add11e9dfd8c8f4b01bdd16f0551",
+  "cycleNumber": 173,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "TimeoutError",
-    "items": []
+    "access": "fetched",
+    "hash": "5793fc1a26460e462a15d70edea40c8a35408c8c7db1f1a9c75bf59fc79af035",
+    "items": [
+      {
+        "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+        "url": "http://arxiv.org/abs/2611.08469v1",
+        "updated": "2026-11-05T18:55:31Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
+        "url": "http://arxiv.org/abs/2611.08457v1",
+        "updated": "2026-11-05T18:48:50Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-11-07T07:43:15Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 12.304,
+  "elapsedSeconds": 0.444,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "1bb014f007a4a9a2bfa17a1ea1b653cdb919add11e9dfd8c8f4b01bdd16f0551"
+  "recordHash": "83f199734d325c088552f425e210a77cba317c2ebb4461eb0a763ca9b983ce5e"
 }
