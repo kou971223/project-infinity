@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-08T06:39:36.131012+00:00",
+  "at": "2026-11-08T18:03:39.210844+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "42455642818",
+  "runId": "42508036399",
   "parents": {
     "knowledge": "3564c8e0f0aa83fa2716aa905e46acd4d65ca6d1f5b2f291437e1158f037f76b",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-08T06:39:35.768447+00:00",
+      "checkedAt": "2026-11-08T18:03:38.674821+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "ff4ae3e2c0001c74d8568c43d86329819c3fe0108d6835ecfd51d7488e3aabb1"
+      "sourceHash": "a852e6952d13577e39c232e12606b0acc5b4b33167a0e3c27eded0e317174e2e"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,13 +24,13 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-08T06:39:36.020218+00:00",
+      "checkedAt": "2026-11-08T18:03:39.091437+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "de3505007586820bfc2f7c762e95af999ce2733e164c6fdef1e65930216dcc4d"
+      "sourceHash": "df8d9a31686f0354ae9fa5f92dfb2b1453f5bf6d4e8f874511f286e9d7e172e9"
     }
   ],
   "sourceFailures": [],
-  "task": "discount",
+  "task": "mean",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -44,72 +44,76 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 196974780303460,
+    "trainingSeed": 25092411305319,
     "trainingExamples": [
       {
         "args": {
-          "amount": "8747.48",
-          "rate": "6292.50"
+          "a": "634.49",
+          "b": "-1334.64",
+          "c": "-2710.40"
         },
-        "expected": "-541687699/1000"
+        "expected": "-22737/20"
       },
       {
         "args": {
-          "amount": "6591.68",
-          "rate": "-3943.22"
+          "a": "-3108.73",
+          "b": "8915.72",
+          "c": "-7026.91"
         },
-        "expected": "4164314439/15625"
+        "expected": "-10166/25"
       },
       {
         "args": {
-          "amount": "-4872.36",
-          "rate": "2233.57"
+          "a": "-5737.96",
+          "b": "-8255.90",
+          "c": "-2041.93"
         },
-        "expected": "25988802813/250000"
+        "expected": "-1603579/300"
       },
       {
         "args": {
-          "amount": "-1055.24",
-          "rate": "2758.02"
+          "a": "-3836.61",
+          "b": "8304.84",
+          "c": "2167.04"
         },
-        "expected": "3506061281/125000"
+        "expected": "663527/300"
       }
     ],
-    "examined": 55145,
-    "states": 23826,
+    "examined": 15345,
+    "states": 6009,
     "cost": 7
   },
   "programCandidate": {
-    "task": "discount",
+    "task": "mean",
     "expression": [
       "div",
       [
-        "mul",
+        "add",
         [
-          "sub",
+          "add",
           [
-            "const",
-            "100"
+            "var",
+            "a"
           ],
           [
             "var",
-            "rate"
+            "b"
           ]
         ],
         [
           "var",
-          "amount"
+          "c"
         ]
       ],
       [
         "const",
-        "100"
+        "3"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "21cd6ad134b66e3bf9c35eecd484a02f06b206f669f3bea6158a77d6048f60f4",
+  "frozenHash": "8a2a6969742bcfbaa2dee09e68f8cf6d0cb8df9057f4933329cfd1e087e9aa28",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -119,9 +123,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-08T06:39:35.768447+00:00",
+        "checkedAt": "2026-11-08T18:03:38.674821+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "ff4ae3e2c0001c74d8568c43d86329819c3fe0108d6835ecfd51d7488e3aabb1"
+        "sourceHash": "a852e6952d13577e39c232e12606b0acc5b4b33167a0e3c27eded0e317174e2e"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -129,9 +133,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-08T06:39:36.020218+00:00",
+        "checkedAt": "2026-11-08T18:03:39.091437+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "de3505007586820bfc2f7c762e95af999ce2733e164c6fdef1e65930216dcc4d"
+        "sourceHash": "df8d9a31686f0354ae9fa5f92dfb2b1453f5bf6d4e8f874511f286e9d7e172e9"
       }
     ],
     "rejected": [],
@@ -139,520 +143,584 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
-    "seed": 53038317757004,
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 245002191960452,
     "cases": [
       {
         "args": {
-          "amount": "0",
-          "rate": "0"
+          "a": "0",
+          "b": "0",
+          "c": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "amount": "1",
-          "rate": "1"
+          "a": "1",
+          "b": "1",
+          "c": "1"
         },
-        "expected": "99/100",
-        "reply": "99/100"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "amount": "-1",
-          "rate": "-1"
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
         },
-        "expected": "-101/100",
-        "reply": "-101/100"
+        "expected": "-1",
+        "reply": "-1"
       },
       {
         "args": {
-          "amount": "-6735.16",
-          "rate": "-9938.98"
+          "a": "3282.90",
+          "b": "-269.43",
+          "c": "6443.95"
         },
-        "expected": "-84517670671/125000",
-        "reply": "-84517670671/125000"
+        "expected": "472871/150",
+        "reply": "472871/150"
       },
       {
         "args": {
-          "amount": "335.17",
-          "rate": "-3792.53"
+          "a": "-4224.20",
+          "b": "6296.39",
+          "c": "7492.99"
         },
-        "expected": "13046592801/1000000",
-        "reply": "13046592801/1000000"
+        "expected": "478259/150",
+        "reply": "478259/150"
       },
       {
         "args": {
-          "amount": "4700.73",
-          "rate": "-1802.23"
+          "a": "-3065.54",
+          "b": "1737.96",
+          "c": "-5973.08"
         },
-        "expected": "89418696279/1000000",
-        "reply": "89418696279/1000000"
+        "expected": "-365033/150",
+        "reply": "-365033/150"
       },
       {
         "args": {
-          "amount": "4270.94",
-          "rate": "-4594.18"
+          "a": "-2490.98",
+          "b": "9527.76",
+          "c": "9820.42"
         },
-        "expected": "50121402823/250000",
-        "reply": "50121402823/250000"
+        "expected": "84286/15",
+        "reply": "84286/15"
       },
       {
         "args": {
-          "amount": "-1516.41",
-          "rate": "349.55"
+          "a": "6921.58",
+          "b": "-1539.38",
+          "c": "6126.93"
         },
-        "expected": "756840231/200000",
-        "reply": "756840231/200000"
+        "expected": "1150913/300",
+        "reply": "1150913/300"
       },
       {
         "args": {
-          "amount": "1915.29",
-          "rate": "5802.66"
+          "a": "4236.99",
+          "b": "5759.96",
+          "c": "-8232.44"
         },
-        "expected": "-54611238357/500000",
-        "reply": "-54611238357/500000"
+        "expected": "58817/100",
+        "reply": "58817/100"
       },
       {
         "args": {
-          "amount": "7085.04",
-          "rate": "3551.75"
+          "a": "5139.64",
+          "b": "1052.60",
+          "c": "287.68"
         },
-        "expected": "-1222789341/5000",
-        "reply": "-1222789341/5000"
+        "expected": "161998/75",
+        "reply": "161998/75"
       },
       {
         "args": {
-          "amount": "-7992.30",
-          "rate": "7215.84"
+          "a": "2094.07",
+          "b": "-2854.58",
+          "c": "-5144.73"
         },
-        "expected": "1777247751/3125",
-        "reply": "1777247751/3125"
+        "expected": "-147631/75",
+        "reply": "-147631/75"
       },
       {
         "args": {
-          "amount": "-350.66",
-          "rate": "-4583.92"
+          "a": "2682.88",
+          "b": "6122.94",
+          "c": "4996.71"
         },
-        "expected": "-1026539617/62500",
-        "reply": "-1026539617/62500"
+        "expected": "1380253/300",
+        "reply": "1380253/300"
       },
       {
         "args": {
-          "amount": "3362.34",
-          "rate": "-6077.60"
+          "a": "-824.62",
+          "b": "8540.74",
+          "c": "9792.56"
         },
-        "expected": "649099737/3125",
-        "reply": "649099737/3125"
+        "expected": "437717/75",
+        "reply": "437717/75"
       },
       {
         "args": {
-          "amount": "-3126.90",
-          "rate": "8633.43"
+          "a": "8369.56",
+          "b": "-4755.36",
+          "c": "2232.41"
         },
-        "expected": "26683182267/100000",
-        "reply": "26683182267/100000"
+        "expected": "194887/100",
+        "reply": "194887/100"
       },
       {
         "args": {
-          "amount": "674.57",
-          "rate": "-3578.91"
+          "a": "-1892.71",
+          "b": "-3012.97",
+          "c": "-367.85"
         },
-        "expected": "24816823187/1000000",
-        "reply": "24816823187/1000000"
+        "expected": "-527353/300",
+        "reply": "-527353/300"
       },
       {
         "args": {
-          "amount": "-5976.35",
-          "rate": "-9116.41"
+          "a": "1761.70",
+          "b": "8876.09",
+          "c": "6128.09"
         },
-        "expected": "-110160983807/200000",
-        "reply": "-110160983807/200000"
+        "expected": "419147/75",
+        "reply": "419147/75"
       },
       {
         "args": {
-          "amount": "1493.14",
-          "rate": "-3976.79"
+          "a": "-8023.87",
+          "b": "-750.88",
+          "c": "1786.13"
         },
-        "expected": "30436091103/500000",
-        "reply": "30436091103/500000"
+        "expected": "-116477/50",
+        "reply": "-116477/50"
       },
       {
         "args": {
-          "amount": "5131.69",
-          "rate": "5183.81"
+          "a": "-6172.37",
+          "b": "8255.72",
+          "c": "-4135.69"
         },
-        "expected": "-260885369389/1000000",
-        "reply": "-260885369389/1000000"
+        "expected": "-102617/150",
+        "reply": "-102617/150"
       },
       {
         "args": {
-          "amount": "5689.24",
-          "rate": "6696.65"
+          "a": "9610.94",
+          "b": "9340.52",
+          "c": "3197.61"
         },
-        "expected": "-18764962523/50000",
-        "reply": "-18764962523/50000"
+        "expected": "2214907/300",
+        "reply": "2214907/300"
       },
       {
         "args": {
-          "amount": "318.18",
-          "rate": "6891.04"
+          "a": "5210.77",
+          "b": "2640.51",
+          "c": "53.42"
         },
-        "expected": "-337620798/15625",
-        "reply": "-337620798/15625"
+        "expected": "26349/10",
+        "reply": "26349/10"
       },
       {
         "args": {
-          "amount": "4521.64",
-          "rate": "3946.91"
+          "a": "5021.43",
+          "b": "5270.20",
+          "c": "9969.38"
         },
-        "expected": "-43485855331/250000",
-        "reply": "-43485855331/250000"
+        "expected": "675367/100",
+        "reply": "675367/100"
       },
       {
         "args": {
-          "amount": "8900.28",
-          "rate": "-5283.35"
+          "a": "-6289.88",
+          "b": "-7037.71",
+          "c": "-6189.30"
         },
-        "expected": "23956661169/50000",
-        "reply": "23956661169/50000"
+        "expected": "-650563/100",
+        "reply": "-650563/100"
       },
       {
         "args": {
-          "amount": "5268.37",
-          "rate": "-5647.98"
+          "a": "-3067.60",
+          "b": "-5517.89",
+          "c": "3958.02"
         },
-        "expected": "151412426963/500000",
-        "reply": "151412426963/500000"
+        "expected": "-154249/100",
+        "reply": "-154249/100"
       },
       {
         "args": {
-          "amount": "5961.49",
-          "rate": "-1977.46"
+          "a": "9131.39",
+          "b": "-7963.19",
+          "c": "2939.68"
         },
-        "expected": "61923785077/500000",
-        "reply": "61923785077/500000"
+        "expected": "102697/75",
+        "reply": "102697/75"
       },
       {
         "args": {
-          "amount": "-3615.45",
-          "rate": "6928.73"
+          "a": "7988.00",
+          "b": "6625.88",
+          "c": "-5195.60"
         },
-        "expected": "49377863757/200000",
-        "reply": "49377863757/200000"
+        "expected": "235457/75",
+        "reply": "235457/75"
       },
       {
         "args": {
-          "amount": "5575.79",
-          "rate": "-7337.49"
+          "a": "7146.87",
+          "b": "625.30",
+          "c": "3696.00"
         },
-        "expected": "414698823671/1000000",
-        "reply": "414698823671/1000000"
+        "expected": "1146817/300",
+        "reply": "1146817/300"
       },
       {
         "args": {
-          "amount": "-5412.85",
-          "rate": "-7754.32"
+          "a": "1731.17",
+          "b": "2687.97",
+          "c": "-8148.00"
         },
-        "expected": "-10628564003/25000",
-        "reply": "-10628564003/25000"
+        "expected": "-186443/150",
+        "reply": "-186443/150"
       },
       {
         "args": {
-          "amount": "8226.79",
-          "rate": "2610.23"
+          "a": "-1179.35",
+          "b": "8828.88",
+          "c": "-8192.13"
         },
-        "expected": "-206511350617/1000000",
-        "reply": "-206511350617/1000000"
+        "expected": "-2713/15",
+        "reply": "-2713/15"
       },
       {
         "args": {
-          "amount": "-2662.07",
-          "rate": "1422.53"
+          "a": "-1131.01",
+          "b": "-6530.77",
+          "c": "6733.75"
         },
-        "expected": "35206674371/1000000",
-        "reply": "35206674371/1000000"
+        "expected": "-92803/300",
+        "reply": "-92803/300"
       },
       {
         "args": {
-          "amount": "9190.70",
-          "rate": "-9516.84"
+          "a": "-3645.97",
+          "b": "870.76",
+          "c": "-5687.09"
         },
-        "expected": "22096372847/25000",
-        "reply": "22096372847/25000"
+        "expected": "-84623/30",
+        "reply": "-84623/30"
       },
       {
         "args": {
-          "amount": "-4858.88",
-          "rate": "-1013.24"
+          "a": "48.02",
+          "b": "-7769.12",
+          "c": "2016.51"
         },
-        "expected": "-845171808/15625",
-        "reply": "-845171808/15625"
+        "expected": "-190153/100",
+        "reply": "-190153/100"
       },
       {
         "args": {
-          "amount": "5172.70",
-          "rate": "-7755.31"
+          "a": "-7709.68",
+          "b": "1248.02",
+          "c": "8664.26"
         },
-        "expected": "40633162037/100000",
-        "reply": "40633162037/100000"
+        "expected": "3671/5",
+        "reply": "3671/5"
       },
       {
         "args": {
-          "amount": "-5460.47",
-          "rate": "5468.74"
+          "a": "253.82",
+          "b": "-7272.93",
+          "c": "-6993.54"
         },
-        "expected": "146579218539/500000",
-        "reply": "146579218539/500000"
+        "expected": "-280253/60",
+        "reply": "-280253/60"
       },
       {
         "args": {
-          "amount": "8991.92",
-          "rate": "1437.58"
+          "a": "6182.11",
+          "b": "8776.02",
+          "c": "-3428.96"
         },
-        "expected": "-7517132721/62500",
-        "reply": "-7517132721/62500"
+        "expected": "1152917/300",
+        "reply": "1152917/300"
       },
       {
         "args": {
-          "amount": "7533.49",
-          "rate": "-6112.33"
+          "a": "-3774.54",
+          "b": "327.77",
+          "c": "9432.28"
         },
-        "expected": "468005259317/1000000",
-        "reply": "468005259317/1000000"
+        "expected": "199517/100",
+        "reply": "199517/100"
       },
       {
         "args": {
-          "amount": "6476.35",
-          "rate": "2245.90"
+          "a": "521.46",
+          "b": "-3550.79",
+          "c": "-1061.95"
         },
-        "expected": "-2779519893/20000",
-        "reply": "-2779519893/20000"
+        "expected": "-34094/25",
+        "reply": "-34094/25"
       },
       {
         "args": {
-          "amount": "-6857.25",
-          "rate": "-3529.66"
+          "a": "9541.74",
+          "b": "540.21",
+          "c": "-1167.20"
         },
-        "expected": "-4977897207/20000",
-        "reply": "-4977897207/20000"
+        "expected": "35659/12",
+        "reply": "35659/12"
       },
       {
         "args": {
-          "amount": "3625.02",
-          "rate": "-9263.55"
+          "a": "-2374.01",
+          "b": "2000.06",
+          "c": "3063.31"
         },
-        "expected": "33943056021/100000",
-        "reply": "33943056021/100000"
+        "expected": "67234/75",
+        "reply": "67234/75"
       },
       {
         "args": {
-          "amount": "-3996.78",
-          "rate": "9194.24"
+          "a": "-2298.45",
+          "b": "-6945.22",
+          "c": "-6080.53"
         },
-        "expected": "11358648921/31250",
-        "reply": "11358648921/31250"
+        "expected": "-76621/15",
+        "reply": "-76621/15"
       },
       {
         "args": {
-          "amount": "-4769.66",
-          "rate": "-2211.08"
+          "a": "3534.66",
+          "b": "-7164.13",
+          "c": "7473.42"
         },
-        "expected": "-13778832291/125000",
-        "reply": "-13778832291/125000"
+        "expected": "76879/60",
+        "reply": "76879/60"
       },
       {
         "args": {
-          "amount": "595.24",
-          "rate": "9859.09"
+          "a": "703.71",
+          "b": "7371.28",
+          "c": "577.72"
         },
-        "expected": "-14522501829/250000",
-        "reply": "-14522501829/250000"
+        "expected": "865271/300",
+        "reply": "865271/300"
       },
       {
         "args": {
-          "amount": "-4220.23",
-          "rate": "1018.96"
+          "a": "7494.76",
+          "b": "-5437.94",
+          "c": "-4330.75"
         },
-        "expected": "4847778201/125000",
-        "reply": "4847778201/125000"
+        "expected": "-227393/300",
+        "reply": "-227393/300"
       },
       {
         "args": {
-          "amount": "7839.35",
-          "rate": "6218.88"
+          "a": "-5698.45",
+          "b": "4829.19",
+          "c": "4289.41"
         },
-        "expected": "-5996005241/12500",
-        "reply": "-5996005241/12500"
+        "expected": "22801/20",
+        "reply": "22801/20"
       },
       {
         "args": {
-          "amount": "8310.01",
-          "rate": "-7909.10"
+          "a": "-8793.15",
+          "b": "9506.29",
+          "c": "509.54"
         },
-        "expected": "66555701091/100000",
-        "reply": "66555701091/100000"
+        "expected": "10189/25",
+        "reply": "10189/25"
       },
       {
         "args": {
-          "amount": "-3007.56",
-          "rate": "3849.57"
+          "a": "-7626.91",
+          "b": "-5658.75",
+          "c": "7872.01"
         },
-        "expected": "28192641873/250000",
-        "reply": "28192641873/250000"
+        "expected": "-36091/20",
+        "reply": "-36091/20"
       },
       {
         "args": {
-          "amount": "-5749.83",
-          "rate": "-2820.07"
+          "a": "-4113.25",
+          "b": "-8141.40",
+          "c": "4354.22"
         },
-        "expected": "-167899060881/1000000",
-        "reply": "-167899060881/1000000"
+        "expected": "-790043/300",
+        "reply": "-790043/300"
       },
       {
         "args": {
-          "amount": "2243.49",
-          "rate": "-4550.68"
+          "a": "4796.11",
+          "b": "-9390.09",
+          "c": "8000.18"
         },
-        "expected": "26084385183/250000",
-        "reply": "26084385183/250000"
+        "expected": "5677/5",
+        "reply": "5677/5"
       },
       {
         "args": {
-          "amount": "-2284.29",
-          "rate": "-3063.48"
+          "a": "3550.41",
+          "b": "7068.53",
+          "c": "7235.67"
         },
-        "expected": "-18065764323/250000",
-        "reply": "-18065764323/250000"
+        "expected": "1785461/300",
+        "reply": "1785461/300"
       },
       {
         "args": {
-          "amount": "4088.01",
-          "rate": "-6362.77"
+          "a": "-5747.15",
+          "b": "13.28",
+          "c": "-643.72"
         },
-        "expected": "264198683877/1000000",
-        "reply": "264198683877/1000000"
+        "expected": "-637759/300",
+        "reply": "-637759/300"
       },
       {
         "args": {
-          "amount": "1246.64",
-          "rate": "-7569.04"
+          "a": "-5460.53",
+          "b": "-7192.82",
+          "c": "9740.81"
         },
-        "expected": "1493833129/15625",
-        "reply": "1493833129/15625"
+        "expected": "-145627/150",
+        "reply": "-145627/150"
       },
       {
         "args": {
-          "amount": "9965.87",
-          "rate": "-3154.04"
+          "a": "-9175.59",
+          "b": "7765.30",
+          "c": "-6696.37"
         },
-        "expected": "81073349037/250000",
-        "reply": "81073349037/250000"
+        "expected": "-135111/50",
+        "reply": "-135111/50"
       },
       {
         "args": {
-          "amount": "5579.88",
-          "rate": "-2443.35"
+          "a": "8241.40",
+          "b": "2248.30",
+          "c": "-3081.86"
         },
-        "expected": "7095793899/50000",
-        "reply": "7095793899/50000"
+        "expected": "61732/25",
+        "reply": "61732/25"
       },
       {
         "args": {
-          "amount": "543.56",
-          "rate": "-5935.24"
+          "a": "7839.01",
+          "b": "959.45",
+          "c": "-4336.34"
         },
-        "expected": "2050321909/62500",
-        "reply": "2050321909/62500"
+        "expected": "111553/75",
+        "reply": "111553/75"
       },
       {
         "args": {
-          "amount": "-668.97",
-          "rate": "5623.25"
+          "a": "-3375.17",
+          "b": "-6777.45",
+          "c": "4066.86"
         },
-        "expected": "1477955421/40000",
-        "reply": "1477955421/40000"
+        "expected": "-152144/75",
+        "reply": "-152144/75"
       },
       {
         "args": {
-          "amount": "-1014.94",
-          "rate": "4557.79"
+          "a": "4901.59",
+          "b": "-595.82",
+          "c": "3248.60"
         },
-        "expected": "22621946913/500000",
-        "reply": "22621946913/500000"
+        "expected": "755437/300",
+        "reply": "755437/300"
       },
       {
         "args": {
-          "amount": "7833.76",
-          "rate": "-5919.35"
+          "a": "-831.72",
+          "b": "8259.47",
+          "c": "-8866.60"
         },
-        "expected": "5894267907/12500",
-        "reply": "5894267907/12500"
+        "expected": "-28777/60",
+        "reply": "-28777/60"
       },
       {
         "args": {
-          "amount": "8018.45",
-          "rate": "338.50"
+          "a": "-2324.66",
+          "b": "-2019.31",
+          "c": "6555.54"
         },
-        "expected": "-76496013/4000",
-        "reply": "-76496013/4000"
+        "expected": "73719/100",
+        "reply": "73719/100"
       },
       {
         "args": {
-          "amount": "7359.61",
-          "rate": "-3691.55"
+          "a": "-4819.60",
+          "b": "3932.87",
+          "c": "-9107.62"
         },
-        "expected": "55808658591/200000",
-        "reply": "55808658591/200000"
+        "expected": "-66629/20",
+        "reply": "-66629/20"
       },
       {
         "args": {
-          "amount": "3131.65",
-          "rate": "-7691.83"
+          "a": "528.42",
+          "b": "6959.49",
+          "c": "419.19"
         },
-        "expected": "48802568839/200000",
-        "reply": "48802568839/200000"
+        "expected": "26357/10",
+        "reply": "26357/10"
       },
       {
         "args": {
-          "amount": "-1548.57",
-          "rate": "9693.31"
+          "a": "9920.27",
+          "b": "-6828.45",
+          "c": "-6041.20"
         },
-        "expected": "148559120667/1000000",
-        "reply": "148559120667/1000000"
+        "expected": "-147469/150",
+        "reply": "-147469/150"
       },
       {
         "args": {
-          "amount": "9029.55",
-          "rate": "-676.79"
+          "a": "-955.71",
+          "b": "699.49",
+          "c": "-6872.16"
         },
-        "expected": "14028128289/200000",
-        "reply": "14028128289/200000"
+        "expected": "-356419/150",
+        "reply": "-356419/150"
       },
       {
         "args": {
-          "amount": "-6781.93",
-          "rate": "3173.33"
+          "a": "-8032.62",
+          "b": "6394.31",
+          "c": "-1568.87"
         },
-        "expected": "208431089269/1000000",
-        "reply": "208431089269/1000000"
+        "expected": "-53453/50",
+        "reply": "-53453/50"
       },
       {
         "args": {
-          "amount": "-5044.37",
-          "rate": "-3632.05"
+          "a": "1999.81",
+          "b": "3678.77",
+          "c": "2565.87"
         },
-        "expected": "-37651682117/200000",
-        "reply": "-37651682117/200000"
+        "expected": "54963/20",
+        "reply": "54963/20"
       },
       {
         "args": {
-          "amount": "-1490.77",
-          "rate": "7676.00"
+          "a": "7612.59",
+          "b": "3381.28",
+          "c": "-5805.40"
         },
-        "expected": "141175919/1250",
-        "reply": "141175919/1250"
+        "expected": "172949/100",
+        "reply": "172949/100"
       }
     ],
     "nodes": 7,
@@ -663,5 +731,5 @@
     "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "0a71ac7ca277af16127508ea3e9dad7d28975dc3626e0ea551ee150d90d81d8a"
+  "recordHash": "7f8f246ebf8b9e08043730d91c6322b972d7262a34e09f313af2ee8f635f3697"
 }
