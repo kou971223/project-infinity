@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.08647",
+      "title": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
+      "excerpt": "arXiv:2611.08647v1 Announce Type: new Abstract: Intra-weight injection lets one model change another model's behaviour by editing its weights directly, without gradients. Such edits can range from altering lexical associations to enforcing output formats or updating factual knowledge. Despite growing interest in these approaches, there has been no systematic way to evaluate how well models perform them. We introduce IWIBench, which measures a large editor model's ability to modify the weights of a smaller target model (typically Gemma 3 4B IT) to achieve one of ten classical text-editing objec",
+      "excerptHash": "7e5637c98e79688db4527b3dc51eae8fedc009ae8d0fb078037f1af40a58640b",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.810399+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.08644",
+      "title": "Decision Context: Persistent Behavioral Learning for AI Agents",
+      "excerpt": "arXiv:2611.08644v1 Announce Type: new Abstract: LLM agents do not learn from corrections across sessions. A user fixes the same mistake at the start of every conversation. Existing agent memory systems primarily handle facts, such as preferences, entities, and conversational history, rather than procedural knowledge. We present Forge Decision Context (forge_dc), a system that captures behavioral signals from human corrections and self-assessed tool-call failures, compiles them into imperative RULE directives, and injects them at the decision points where they apply. We evaluate forge_dc alongs",
+      "excerptHash": "ed622cc375573dd39f80da623e83dda44b80480ff953422089a0184bd528363a",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.809791+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.08640",
+      "title": "Aspect-wise Pairwise Tournaments for Test-Time Selection",
+      "excerpt": "arXiv:2611.08640v1 Announce Type: new Abstract: Scaling test-time compute has proven highly effective at improving LLM reasoning. A popular method is best-of-n sampling, where a model generates many candidate solutions and one is selected. This motivates the question: how can we select the best candidate? When humans make choices, we find it more natural to compare two options than judge each in isolation. Additionally, when the options become complex, we like to judge the options one aspect at a time, such as comparing two job candidates on experience, communication, etc. In the test-time set",
+      "excerptHash": "f9a21d12cab829ed9bba4faf48f98c333b4e1c2ce15105e4e328c6b2c081bbe2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.809222+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.08626",
+      "title": "LLM-Based Feature Extraction for Multi-Criteria Inventory Classification",
+      "excerpt": "arXiv:2611.08626v1 Announce Type: new Abstract: E-commerce supply chains generate large volumes of customer feedback and operational data that remain underutilized in inventory management. Traditional inventory classification techniques such as ABC analysis rely primarily on annual dollar usage, while multi-criteria inventory classification (MCIC) methods extend this but still depend on structured quantitative data and do not utilize unstructured information available in modern supply chains. This paper proposes an LLM-based feature extraction approach that transforms unstructured sources such",
+      "excerptHash": "e833cb96151d7a32833667183d1ed0a198126d7bb3fb55ae5332f3d70397e655",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.808625+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.08613",
+      "title": "NormGym: Evaluating Normative Competence through Social Interaction",
+      "excerpt": "arXiv:2611.08613v1 Announce Type: new Abstract: Normative competence, the ability to infer socially enforced expectations from interaction and adjust behavior accordingly, is essential for agents operating in unfamiliar human communities. Yet existing evaluations largely test whether agents can recognize or apply norms they may already know, rather than whether they can acquire previously unknown norms from social interaction. We introduce NormGym, an interactive benchmark for normative competence in which a newcomer must infer a hidden, arbitrary norm while pursuing its own task in a multi-ag",
+      "excerptHash": "51afc5e07ea5c2a9cd1ce16daa95f6c74e99cec6f108d375b3edabb2827fa99a",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.808050+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.08572",
+      "title": "Enhancing Academic Advisement with Case-Based Reasoning",
+      "excerpt": "arXiv:2611.08572v1 Announce Type: new Abstract: This research involved the study of an application of Case-Based Reasoning (CBR) in the field of academic advising. Academic advisement has been recognised as an important function of higher education. However, there is a widespread desire to improve the advisement services provided by many educational institutions (e.g., colleges and universities) around the world. In the last ten years, CBR expert systems have made important contributions in many domains by applying CBR methodology to a variety of areas of human problem solving. However, to dat",
+      "excerptHash": "ff2098b949a1cd7f03b97233545a97b972cc4e98c5cbd8a6e44bd2ca1003c85b",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.807446+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.664675+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "69896ea2abfc403f75a84136b81f751e059d8854abf62892cdcf42be9da991ed"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-09T07:07:52.357467+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "f612a55d17a37ce33c637269fc24c9f3c586b40eb256459f27099bec5436981e"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.06995",
       "title": "Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization",
       "excerpt": "arXiv:2611.06995v1 Announce Type: new Abstract: Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to the differences in how AI agents and humans pursue a proof-making task. We present \"simulated collaboration\", a methodology that allows us to examine two key questions: (1) the relative attention AI agents pay to surface syntax or, conversely, deeper underlying semantics, and (2) how and where AI agent preferences for what to do next diverge from human preferences. On a set of nine major human col",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-06T07:20:38.877252+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.727851+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "4c6bf5b7be504bb4c93e44bcdf02b599b261e7485a370aa1c48d1da6ee0c0b18"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.520247+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "97cccb57b9429ef05fee1c34a8044b383df2867382aef49343056d4c06b90c39"
     },
     {
       "url": "https://arxiv.org/abs/2611.05450",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-04T06:56:23.205357+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03651",
-      "title": "CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs",
-      "excerpt": "arXiv:2611.03651v1 Announce Type: new Abstract: Geometric certificates make mathematical claims about specified estimator objects, while robotic action requires a physical transform, a service decision, and timely proof support. We present CARD, a proof-carrying interface that keeps these objects distinct and records how they combine. Its lifted-fiber formulation separates semantic motion from witness repair and characterizes when projected and proof-carrying costs coincide. Its actionability result gives an exact useful-service law: uniform sampling without replacement produces a hypergeometr",
-      "excerptHash": "8073a9c0b8e025321e8bad9a20d08092569a6decff8d12506915eee6c6527664",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.204718+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03650",
-      "title": "Alignment Faking Depends on the Value, Not Just the Model",
-      "excerpt": "arXiv:2611.03650v1 Announce Type: new Abstract: Language models can follow a directive when they believe they are monitored and abandon it when they believe they are not, a pattern termed Alignment Faking. Prior work establishes this for harmful-content objectives and a handful of moral-foundations values, leaving open how it distributes across a wider value space. We argue it is value-dependent: whether compliance survives a change in perceived oversight is a property of the model--value pairing, not of the model alone. Our framework profiles Alignment Faking per value, scoring each model-val",
-      "excerptHash": "904d5a1759344308dbb8f5d3e852be4693e4e3110fedf1c153da0bb46cffeb4a",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.204035+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.40906",
-      "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
-      "excerpt": "arXiv:2610.40906v1 Announce Type: new Abstract: Recent scientific agents build knowledge recursively by retrieving evidence, constructing an intermediate state, and judging whether that state contains sufficient information. These agents are evaluated end-to-end, usually without ground truth, so the effect of each design choice is unknown. Here, we examined two design axes: (1) what the recursion builds (the state of evidence) and (2) what controls it (the judge that decides when to stop). To measure them, we defined consensus scientific claim verification and measured these effects on this ta",
-      "excerptHash": "f4e493e1ab94326cf38e609e83fdfefa27eaf85d3bc77469ddadb362b01791e2",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-02T06:45:24.554611+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.40890",
-      "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
-      "excerpt": "arXiv:2610.40890v1 Announce Type: new Abstract: Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks. We present an exploratory case study of what potentially harmful surveillance assistance looks like in ChatGPT's public web interface. We contribute a taxonomy of seven surveillance risk categories based on prior LLM risk research and r",
-      "excerptHash": "5b9be845725a707109c8d524a4a56e9e0d02cf502db45ea02d682ec849687a6b",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-02T06:45:24.554218+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.40883",
-      "title": "Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models",
-      "excerpt": "arXiv:2610.40883v1 Announce Type: new Abstract: Voice-interactive large language models process both what a speaker says and how they say it, yet the two channels do not always agree. We ask whether that disagreement degrades speech emotion recognition. Mapping text and audio into a shared valence-arousal-dominance space, we convert the distance between them into a continuous, threshold-free incongruence score with a two-component Gaussian mixture, and validate the score against human judgement. We evaluate three audiocapable models on acted, conversational and spontaneous speech (eNTERFACE'05",
-      "excerptHash": "af53d8bc94004098dad8b9f9e244772c51cd850ca3ef0f170ce868d1fe52fa6f",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-02T06:45:24.553805+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
-    },
-    {
-      "url": "https://arxiv.org/abs/2610.40831",
-      "title": "Circumventing the Computational Hardness of Computational Arbitrage",
-      "excerpt": "arXiv:2610.40831v1 Announce Type: new Abstract: AI model marketplaces host providers with heterogeneous costs and capabilities. These differences create an opportunity for computational arbitrage (Olmedo et al., 2026), in which an intermediary purchases inference from a portfolio of models and resells it to users at a profit. Beyond creating profit opportunities for the arbitrageur, computational arbitrage offers financial value to both consumers and providers and could therefore significantly influence AI model markets. While prior work empirically demonstrates the feasibility of computationa",
-      "excerptHash": "501f5a49de8aa00ac5b1fc8f2e0eddd634ce42b006a07e2060e50feb8108ef96",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-02T06:45:24.553423+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b59705d165e3dc2b741631837d2737efbafee87d91dcd7ace1d4c08ffd155943"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 13,
-  "parentHash": "b12b7cb307575a880b0c35b8a5ae14fe90e3db95b43ca42387d3f6646643bbe1",
-  "at": "2026-11-06T07:20:38.879705+00:00",
-  "runId": "42180215137",
-  "artifactHash": "3564c8e0f0aa83fa2716aa905e46acd4d65ca6d1f5b2f291437e1158f037f76b"
+  "generation": 14,
+  "parentHash": "3564c8e0f0aa83fa2716aa905e46acd4d65ca6d1f5b2f291437e1158f037f76b",
+  "at": "2026-11-09T07:07:52.811315+00:00",
+  "runId": "42577315789",
+  "artifactHash": "6d1ead2c237dd9e2aff199e56b61c9f06a5a7aa85c3143549fb1131933177736"
 }
