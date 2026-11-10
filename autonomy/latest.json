@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "42679965731",
+  "runId": "42742210221",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-09T19:06:13Z",
+  "at": "2026-11-10T02:22:23Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "12a0a40ca4e0223aec0a014919e38a6657b4f1890807eea65636787b9fbb2596",
-  "cycleNumber": 183,
+  "parentRecordHash": "93fc52ce7f19f655c50183d4ce67e20120d7919dd542bf27cb7ab7b00574be62",
+  "cycleNumber": 184,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "5b3a67766847bfeaa0b2fa9defb47bad90100bb785631e8ed57da2aecfbc901a",
+    "hash": "37aa565aa86642b6a4d4c46aacbf579a6a39e9d68c15902cec945dc89970f42a",
     "items": [
       {
-        "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
-        "url": "http://arxiv.org/abs/2611.09888v1",
-        "updated": "2026-11-06T18:58:27Z",
+        "title": "GEAR: A GPU-Accelerated Global Solver for Bounded Continuous Nonlinear Programs via Linear Bound Propagation",
+        "url": "http://arxiv.org/abs/2611.10487v1",
+        "updated": "2026-11-07T05:29:20Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
-        "url": "http://arxiv.org/abs/2611.09882v1",
-        "updated": "2026-11-06T18:56:41Z",
+        "title": "Beyond Discrete Ancestry Groups: Distribution-Aware In-Context Learning for Cancer Outcome Prediction Across the Genetic Ancestry Continuum",
+        "url": "http://arxiv.org/abs/2611.10464v1",
+        "updated": "2026-11-07T04:27:40Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-09T19:06:14Z"
+    "accessedAt": "2026-11-10T02:22:24Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.7,
+  "elapsedSeconds": 0.487,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "93fc52ce7f19f655c50183d4ce67e20120d7919dd542bf27cb7ab7b00574be62"
+  "recordHash": "7b70b8ade4ff0c317049e46dbb1c623ad71b7cd67a99a733f30f82839190053d"
 }
