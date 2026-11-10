@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-11-10T01:29:09.818Z",
-  "runId": "42736056354",
+  "at": "2026-11-10T09:43:01.636Z",
+  "runId": "42792962798",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-1756a089-928d-41a5-aef4-56ee742dee85",
-    "at": "2026-11-10T01:28:56.880Z",
+    "exp": "EXP-19749117-3fc0-49ff-af44-1c5d0cc028b4",
+    "at": "2026-11-10T09:42:44.247Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -95,21 +95,6 @@
         "title": "Transformers.js 3.8.1 dtypes",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "status": "official_document_body_retrieved_not_independent_validation"
-      },
-      {
-        "title": "Enhancing Academic Advisement with Case-Based Reasoning",
-        "url": "https://arxiv.org/abs/2611.08572",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "NormGym: Evaluating Normative Competence through Social Interaction",
-        "url": "https://arxiv.org/abs/2611.08613",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "LLM-Based Feature Extraction for Multi-Criteria Inventory Classification",
-        "url": "https://arxiv.org/abs/2611.08626",
-        "status": "metadata_only_not_fulltext_verified"
       }
     ],
     "sources": [
@@ -117,12 +102,12 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-10T01:28:55Z",
+        "at": "2026-11-10T09:42:43Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "06274a0fe5b094ab3ba03906636db882741b6a831bf49edac23a5ecaa2d53b39",
-        "bytes": 107335,
+        "sha256": "15bbb0f4c1dcd6c26da60b9141effc02f32b8b95343a3bb55cdaf269be0a23bd",
+        "bytes": 107363,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "sourceStatus": "available_at_access"
@@ -131,12 +116,12 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-10T01:28:55Z",
+        "at": "2026-11-10T09:42:43Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "087f3c0c230ee2c1e1ee0f1bfa74e807404276abd3194cb1d002d9aeb8244072",
-        "bytes": 108964,
+        "sha256": "c15c457cda90187032ffcc054f7c63075828e7e1f62a376c2c8ff2e58756ae45",
+        "bytes": 108992,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
         "sourceStatus": "available_at_access"
@@ -145,16 +130,15 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-11-10T01:28:56Z",
+        "at": "2026-11-10T09:42:44Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
-        "access": "fetched",
-        "sha256": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8",
-        "bytes": 851944,
-        "scope": "feed_only"
+        "access": "unavailable",
+        "errorType": "ValueError",
+        "scope": "unverified"
       }
     ],
-    "sourceCount": 3,
+    "sourceCount": 2,
     "independentEvidenceCount": "not_established",
     "privateDataUsed": false,
     "limits": [
@@ -165,5 +149,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "cf4c5ff785138a01836db76165d89d2943b2e442eb10c8313fe77d0a5e824cd6"
+  "recordHash": "2b530ec0e115534c39b5ba028e970f84670745c6f622f3b097ef8e5aa4e79b46"
 }
