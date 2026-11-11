@@ -1,0 +1,780 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-11T07:01:57.017236+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "42976518550",
+  "parents": {
+    "knowledge": "6d1ead2c237dd9e2aff199e56b61c9f06a5a7aa85c3143549fb1131933177736",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-11T07:01:56.597174+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "03686452c2b635e4b030eb0a24c7bdd56ad110947252fa797103e3e0096742fe"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-11T07:01:56.876993+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "98b0f60bb9d01ef2aed2d0b8d439660c5786b39f5b7d41d80da448dd6ffb5c48"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12933",
+      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+      "excerpt": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision prove",
+      "excerptHash": "6810b82522e83587ce972441c564715d63261789b207f1ec8494e8bc156886a2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.013436+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12934",
+      "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+      "excerpt": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw record of 56 sites: four decades of Landsat, MODIS, VIIRS, and Sentinel-2 data, with cloud masking and ",
+      "excerptHash": "d6f734ce6d1dff45678e6b83135e38a464e803c69a70a904398b1b093348fc6f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.014036+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12935",
+      "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+      "excerpt": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 ",
+      "excerptHash": "66f1a76868566ce55ef63699c25aa77dca26f05228415f216ccb2f657bfefcce",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.014596+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12936",
+      "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+      "excerpt": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages ",
+      "excerptHash": "70e6f0ceb13cfd62d4e169401ad0efe7833b913f4854ca94bd2fbf68e7e69221",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.015179+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12937",
+      "title": "Tracing Psychometric Inference in Large Language Models",
+      "excerpt": "arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We address this question using a cross-persona paradigm across 14 model variants from two families (Llama 3 and Qwen 2.5, 0.5B-14B, base and instruct). Given responses on one psychological scale from real individuals (N = 272 Taiwanese university students), models predict responses on six other scales. At the behavioral level, larger variants reproduce and amplify human cross-scale correlations; amplificat",
+      "excerptHash": "c6ac9e791d8e98a701046e72950f81f1a3f7bbea75c40a3ab9d15dbe5087b122",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.015780+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12938",
+      "title": "Graph Visualizations in Prompts for Knowledge Graph Question Answering",
+      "excerpt": "arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluation over 1,500 WebQSP and CWQ questions and six VLMs within a fixed KGQA pipeline, we compare text-only prompting against text-plus-graph visualization at the per-question level and analyze performance changes as a function of reasoning complexity, model size, and image layout. Adding a graph image yields an average gain of 1.85 F1 points, driven by strong precision improvements on low-complexity qu",
+      "excerptHash": "d414c474c1b5d355e70444998a24e5da0b7a6f180d9c9cdce2cb06dc7a9cb7e9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.016344+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "percentage",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 103293788823284,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "6227.48",
+          "rate": "8992.38"
+        },
+        "expected": "69999833253/125000"
+      },
+      {
+        "args": {
+          "amount": "2335.52",
+          "rate": "5171.68"
+        },
+        "expected": "1887275324/15625"
+      },
+      {
+        "args": {
+          "amount": "4498.64",
+          "rate": "-1349.41"
+        },
+        "expected": "-7588137253/125000"
+      },
+      {
+        "args": {
+          "amount": "9019.78",
+          "rate": "-479.36"
+        },
+        "expected": "-675581522/15625"
+      }
+    ],
+    "examined": 347,
+    "states": 188,
+    "cost": 5
+  },
+  "programCandidate": {
+    "task": "percentage",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "4e644cfe9e96c64f1b27e0b805550d9244af85f7d0d0000c30f9245200f9c08a",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-11T07:01:56.597174+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "03686452c2b635e4b030eb0a24c7bdd56ad110947252fa797103e3e0096742fe"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-11T07:01:56.876993+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "98b0f60bb9d01ef2aed2d0b8d439660c5786b39f5b7d41d80da448dd6ffb5c48"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12933",
+        "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+        "excerpt": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision prove",
+        "excerptHash": "6810b82522e83587ce972441c564715d63261789b207f1ec8494e8bc156886a2",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.013436+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12934",
+        "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+        "excerpt": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw record of 56 sites: four decades of Landsat, MODIS, VIIRS, and Sentinel-2 data, with cloud masking and ",
+        "excerptHash": "d6f734ce6d1dff45678e6b83135e38a464e803c69a70a904398b1b093348fc6f",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.014036+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12935",
+        "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+        "excerpt": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 ",
+        "excerptHash": "66f1a76868566ce55ef63699c25aa77dca26f05228415f216ccb2f657bfefcce",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.014596+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12936",
+        "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+        "excerpt": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages ",
+        "excerptHash": "70e6f0ceb13cfd62d4e169401ad0efe7833b913f4854ca94bd2fbf68e7e69221",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.015179+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12937",
+        "title": "Tracing Psychometric Inference in Large Language Models",
+        "excerpt": "arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We address this question using a cross-persona paradigm across 14 model variants from two families (Llama 3 and Qwen 2.5, 0.5B-14B, base and instruct). Given responses on one psychological scale from real individuals (N = 272 Taiwanese university students), models predict responses on six other scales. At the behavioral level, larger variants reproduce and amplify human cross-scale correlations; amplificat",
+        "excerptHash": "c6ac9e791d8e98a701046e72950f81f1a3f7bbea75c40a3ab9d15dbe5087b122",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.015780+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.12938",
+        "title": "Graph Visualizations in Prompts for Knowledge Graph Question Answering",
+        "excerpt": "arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluation over 1,500 WebQSP and CWQ questions and six VLMs within a fixed KGQA pipeline, we compare text-only prompting against text-plus-graph visualization at the per-question level and analyze performance changes as a function of reasoning complexity, model size, and image layout. Adding a graph image yields an average gain of 1.85 F1 points, driven by strong precision improvements on low-complexity qu",
+        "excerptHash": "d414c474c1b5d355e70444998a24e5da0b7a6f180d9c9cdce2cb06dc7a9cb7e9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-11T07:01:57.016344+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 86615046394225,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-922.56",
+          "rate": "858.04"
+        },
+        "expected": "-123686466/15625",
+        "reply": "-123686466/15625"
+      },
+      {
+        "args": {
+          "amount": "8305.93",
+          "rate": "-3848.70"
+        },
+        "expected": "-31967032791/100000",
+        "reply": "-31967032791/100000"
+      },
+      {
+        "args": {
+          "amount": "-354.04",
+          "rate": "-5085.97"
+        },
+        "expected": "4501592047/250000",
+        "reply": "4501592047/250000"
+      },
+      {
+        "args": {
+          "amount": "7069.87",
+          "rate": "-3557.10"
+        },
+        "expected": "-25148234577/100000",
+        "reply": "-25148234577/100000"
+      },
+      {
+        "args": {
+          "amount": "-6705.49",
+          "rate": "8396.59"
+        },
+        "expected": "-563032502791/1000000",
+        "reply": "-563032502791/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4966.63",
+          "rate": "3911.46"
+        },
+        "expected": "-97133872899/500000",
+        "reply": "-97133872899/500000"
+      },
+      {
+        "args": {
+          "amount": "-3476.24",
+          "rate": "9820.90"
+        },
+        "expected": "-4267475677/12500",
+        "reply": "-4267475677/12500"
+      },
+      {
+        "args": {
+          "amount": "-9642.87",
+          "rate": "4286.94"
+        },
+        "expected": "-206692025589/500000",
+        "reply": "-206692025589/500000"
+      },
+      {
+        "args": {
+          "amount": "9516.30",
+          "rate": "-8393.09"
+        },
+        "expected": "-79871162367/100000",
+        "reply": "-79871162367/100000"
+      },
+      {
+        "args": {
+          "amount": "173.38",
+          "rate": "1442.42"
+        },
+        "expected": "625216949/250000",
+        "reply": "625216949/250000"
+      },
+      {
+        "args": {
+          "amount": "-4427.03",
+          "rate": "-3093.93"
+        },
+        "expected": "136969209279/1000000",
+        "reply": "136969209279/1000000"
+      },
+      {
+        "args": {
+          "amount": "3759.25",
+          "rate": "2769.00"
+        },
+        "expected": "41637453/400",
+        "reply": "41637453/400"
+      },
+      {
+        "args": {
+          "amount": "-3757.70",
+          "rate": "-88.67"
+        },
+        "expected": "333195259/100000",
+        "reply": "333195259/100000"
+      },
+      {
+        "args": {
+          "amount": "-5952.36",
+          "rate": "1455.12"
+        },
+        "expected": "-2706686901/31250",
+        "reply": "-2706686901/31250"
+      },
+      {
+        "args": {
+          "amount": "7150.26",
+          "rate": "-3582.58"
+        },
+        "expected": "-64040946177/250000",
+        "reply": "-64040946177/250000"
+      },
+      {
+        "args": {
+          "amount": "-9727.13",
+          "rate": "1665.26"
+        },
+        "expected": "-80991002519/500000",
+        "reply": "-80991002519/500000"
+      },
+      {
+        "args": {
+          "amount": "2378.85",
+          "rate": "6509.35"
+        },
+        "expected": "6193906899/40000",
+        "reply": "6193906899/40000"
+      },
+      {
+        "args": {
+          "amount": "-7702.09",
+          "rate": "-4762.92"
+        },
+        "expected": "91711096257/250000",
+        "reply": "91711096257/250000"
+      },
+      {
+        "args": {
+          "amount": "6850.56",
+          "rate": "7745.03"
+        },
+        "expected": "8290280112/15625",
+        "reply": "8290280112/15625"
+      },
+      {
+        "args": {
+          "amount": "-9287.74",
+          "rate": "-21.27"
+        },
+        "expected": "987751149/500000",
+        "reply": "987751149/500000"
+      },
+      {
+        "args": {
+          "amount": "-9561.03",
+          "rate": "9688.50"
+        },
+        "expected": "-18526407831/20000",
+        "reply": "-18526407831/20000"
+      },
+      {
+        "args": {
+          "amount": "-3814.39",
+          "rate": "-4287.95"
+        },
+        "expected": "32711827201/200000",
+        "reply": "32711827201/200000"
+      },
+      {
+        "args": {
+          "amount": "975.92",
+          "rate": "-2578.62"
+        },
+        "expected": "-1572829269/62500",
+        "reply": "-1572829269/62500"
+      },
+      {
+        "args": {
+          "amount": "-370.30",
+          "rate": "-6968.85"
+        },
+        "expected": "516113031/20000",
+        "reply": "516113031/20000"
+      },
+      {
+        "args": {
+          "amount": "7792.58",
+          "rate": "-6516.89"
+        },
+        "expected": "-253916933381/500000",
+        "reply": "-253916933381/500000"
+      },
+      {
+        "args": {
+          "amount": "9905.76",
+          "rate": "-2876.97"
+        },
+        "expected": "-17811608967/62500",
+        "reply": "-17811608967/62500"
+      },
+      {
+        "args": {
+          "amount": "-7645.68",
+          "rate": "897.49"
+        },
+        "expected": "-8577401679/125000",
+        "reply": "-8577401679/125000"
+      },
+      {
+        "args": {
+          "amount": "8715.82",
+          "rate": "26.48"
+        },
+        "expected": "144246821/62500",
+        "reply": "144246821/62500"
+      },
+      {
+        "args": {
+          "amount": "-3769.39",
+          "rate": "-8934.39"
+        },
+        "expected": "336772003221/1000000",
+        "reply": "336772003221/1000000"
+      },
+      {
+        "args": {
+          "amount": "-7090.91",
+          "rate": "8269.12"
+        },
+        "expected": "-18323620531/31250",
+        "reply": "-18323620531/31250"
+      },
+      {
+        "args": {
+          "amount": "8026.30",
+          "rate": "2928.20"
+        },
+        "expected": "1175130583/5000",
+        "reply": "1175130583/5000"
+      },
+      {
+        "args": {
+          "amount": "2039.66",
+          "rate": "-5605.54"
+        },
+        "expected": "-28583489291/250000",
+        "reply": "-28583489291/250000"
+      },
+      {
+        "args": {
+          "amount": "3823.18",
+          "rate": "-9087.35"
+        },
+        "expected": "-34742574773/100000",
+        "reply": "-34742574773/100000"
+      },
+      {
+        "args": {
+          "amount": "-1647.00",
+          "rate": "4779.31"
+        },
+        "expected": "-787152357/10000",
+        "reply": "-787152357/10000"
+      },
+      {
+        "args": {
+          "amount": "6582.52",
+          "rate": "3561.52"
+        },
+        "expected": "7326180197/31250",
+        "reply": "7326180197/31250"
+      },
+      {
+        "args": {
+          "amount": "3393.70",
+          "rate": "-9351.09"
+        },
+        "expected": "-31734794133/100000",
+        "reply": "-31734794133/100000"
+      },
+      {
+        "args": {
+          "amount": "-486.52",
+          "rate": "-4284.65"
+        },
+        "expected": "1042283959/50000",
+        "reply": "1042283959/50000"
+      },
+      {
+        "args": {
+          "amount": "-7830.09",
+          "rate": "9489.90"
+        },
+        "expected": "-74306771091/100000",
+        "reply": "-74306771091/100000"
+      },
+      {
+        "args": {
+          "amount": "-131.75",
+          "rate": "-5513.91"
+        },
+        "expected": "290583057/40000",
+        "reply": "290583057/40000"
+      },
+      {
+        "args": {
+          "amount": "-5156.37",
+          "rate": "5348.44"
+        },
+        "expected": "-68946338907/250000",
+        "reply": "-68946338907/250000"
+      },
+      {
+        "args": {
+          "amount": "5461.75",
+          "rate": "-4686.99"
+        },
+        "expected": "-10239667053/40000",
+        "reply": "-10239667053/40000"
+      },
+      {
+        "args": {
+          "amount": "-7178.63",
+          "rate": "6338.89"
+        },
+        "expected": "-455045459207/1000000",
+        "reply": "-455045459207/1000000"
+      },
+      {
+        "args": {
+          "amount": "-6785.02",
+          "rate": "-7660.50"
+        },
+        "expected": "5197664571/10000",
+        "reply": "5197664571/10000"
+      },
+      {
+        "args": {
+          "amount": "-9031.08",
+          "rate": "-2156.48"
+        },
+        "expected": "3043022406/15625",
+        "reply": "3043022406/15625"
+      },
+      {
+        "args": {
+          "amount": "-9390.06",
+          "rate": "-1205.53"
+        },
+        "expected": "56599995159/500000",
+        "reply": "56599995159/500000"
+      },
+      {
+        "args": {
+          "amount": "-6039.69",
+          "rate": "9335.74"
+        },
+        "expected": "-281924877603/500000",
+        "reply": "-281924877603/500000"
+      },
+      {
+        "args": {
+          "amount": "-4890.59",
+          "rate": "-5373.51"
+        },
+        "expected": "262796342709/1000000",
+        "reply": "262796342709/1000000"
+      },
+      {
+        "args": {
+          "amount": "713.52",
+          "rate": "6922.43"
+        },
+        "expected": "6174115317/125000",
+        "reply": "6174115317/125000"
+      },
+      {
+        "args": {
+          "amount": "1952.75",
+          "rate": "-5157.20"
+        },
+        "expected": "-100707223/1000",
+        "reply": "-100707223/1000"
+      },
+      {
+        "args": {
+          "amount": "6256.29",
+          "rate": "8575.51"
+        },
+        "expected": "536508774579/1000000",
+        "reply": "536508774579/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4247.23",
+          "rate": "-3323.64"
+        },
+        "expected": "35290658793/250000",
+        "reply": "35290658793/250000"
+      },
+      {
+        "args": {
+          "amount": "4009.43",
+          "rate": "-3550.85"
+        },
+        "expected": "-28473769031/200000",
+        "reply": "-28473769031/200000"
+      },
+      {
+        "args": {
+          "amount": "-3830.44",
+          "rate": "-9938.32"
+        },
+        "expected": "11896293269/31250",
+        "reply": "11896293269/31250"
+      },
+      {
+        "args": {
+          "amount": "270.46",
+          "rate": "6229.55"
+        },
+        "expected": "1684844093/100000",
+        "reply": "1684844093/100000"
+      },
+      {
+        "args": {
+          "amount": "-6510.12",
+          "rate": "-3557.12"
+        },
+        "expected": "3618324696/15625",
+        "reply": "3618324696/15625"
+      },
+      {
+        "args": {
+          "amount": "-788.03",
+          "rate": "-4572.72"
+        },
+        "expected": "4504300677/125000",
+        "reply": "4504300677/125000"
+      },
+      {
+        "args": {
+          "amount": "-4425.12",
+          "rate": "-9592.37"
+        },
+        "expected": "26529617709/62500",
+        "reply": "26529617709/62500"
+      },
+      {
+        "args": {
+          "amount": "2849.92",
+          "rate": "-2013.37"
+        },
+        "expected": "-896553661/15625",
+        "reply": "-896553661/15625"
+      },
+      {
+        "args": {
+          "amount": "7591.58",
+          "rate": "3502.25"
+        },
+        "expected": "5317522211/20000",
+        "reply": "5317522211/20000"
+      },
+      {
+        "args": {
+          "amount": "1638.21",
+          "rate": "-8682.17"
+        },
+        "expected": "-142232177157/1000000",
+        "reply": "-142232177157/1000000"
+      },
+      {
+        "args": {
+          "amount": "9414.88",
+          "rate": "-1296.35"
+        },
+        "expected": "-1525622461/12500",
+        "reply": "-1525622461/12500"
+      }
+    ],
+    "nodes": 5,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "ADOPT",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "e02805354ae6cb991e3be7eb7972475c99ed1568d7ecfed75cfa9523b048ee0c"
+}

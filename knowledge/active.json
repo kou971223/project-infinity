@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.12938",
+      "title": "Graph Visualizations in Prompts for Knowledge Graph Question Answering",
+      "excerpt": "arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluation over 1,500 WebQSP and CWQ questions and six VLMs within a fixed KGQA pipeline, we compare text-only prompting against text-plus-graph visualization at the per-question level and analyze performance changes as a function of reasoning complexity, model size, and image layout. Adding a graph image yields an average gain of 1.85 F1 points, driven by strong precision improvements on low-complexity qu",
+      "excerptHash": "d414c474c1b5d355e70444998a24e5da0b7a6f180d9c9cdce2cb06dc7a9cb7e9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.016344+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12937",
+      "title": "Tracing Psychometric Inference in Large Language Models",
+      "excerpt": "arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We address this question using a cross-persona paradigm across 14 model variants from two families (Llama 3 and Qwen 2.5, 0.5B-14B, base and instruct). Given responses on one psychological scale from real individuals (N = 272 Taiwanese university students), models predict responses on six other scales. At the behavioral level, larger variants reproduce and amplify human cross-scale correlations; amplificat",
+      "excerptHash": "c6ac9e791d8e98a701046e72950f81f1a3f7bbea75c40a3ab9d15dbe5087b122",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.015780+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12936",
+      "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
+      "excerpt": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple visual tasks via a Source-Agreement Graduated Trust semi-supervised learning framework that leverages ",
+      "excerptHash": "70e6f0ceb13cfd62d4e169401ad0efe7833b913f4854ca94bd2fbf68e7e69221",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.015179+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12935",
+      "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+      "excerpt": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 ",
+      "excerptHash": "66f1a76868566ce55ef63699c25aa77dca26f05228415f216ccb2f657bfefcce",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.014596+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12934",
+      "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+      "excerpt": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw record of 56 sites: four decades of Landsat, MODIS, VIIRS, and Sentinel-2 data, with cloud masking and ",
+      "excerptHash": "d6f734ce6d1dff45678e6b83135e38a464e803c69a70a904398b1b093348fc6f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.014036+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12933",
+      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+      "excerpt": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectives. Complete human-agent and agent-agent transcripts enable an audit that reconstructs decision prove",
+      "excerptHash": "6810b82522e83587ce972441c564715d63261789b207f1ec8494e8bc156886a2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-11T07:01:57.013436+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-11T07:01:56.876993+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "98b0f60bb9d01ef2aed2d0b8d439660c5786b39f5b7d41d80da448dd6ffb5c48"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-11T07:01:56.597174+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "03686452c2b635e4b030eb0a24c7bdd56ad110947252fa797103e3e0096742fe"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.08647",
       "title": "IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection",
       "excerpt": "arXiv:2611.08647v1 Announce Type: new Abstract: Intra-weight injection lets one model change another model's behaviour by editing its weights directly, without gradients. Such edits can range from altering lexical associations to enforcing output formats or updating factual knowledge. Despite growing interest in these approaches, there has been no systematic way to evaluate how well models perform them. We introduce IWIBench, which measures a large editor model's ability to modify the weights of a smaller target model (typically Gemma 3 4B IT) to achieve one of ten classical text-editing objec",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-09T07:07:52.807446+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-09T07:07:52.664675+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "69896ea2abfc403f75a84136b81f751e059d8854abf62892cdcf42be9da991ed"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-09T07:07:52.357467+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "f612a55d17a37ce33c637269fc24c9f3c586b40eb256459f27099bec5436981e"
     },
     {
       "url": "https://arxiv.org/abs/2611.06995",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-05T07:20:17.935755+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05391",
-      "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
-      "excerpt": "arXiv:2611.05391v1 Announce Type: new Abstract: Tool descriptions tell an agent what an action can do, but they do not necessarily reveal whether that action is healthy or suitable at the moment of use. Execution harnesses often possess this information through monitors, traces, and recent failures while the model choosing the next action does not. We call this gap operational blindness. We introduce Agent Harness Awareness, a trust-separated design in which the host supplies a small, fresh, verified state snapshot before a consequential action while retaining measurement, enforcement, evaluat",
-      "excerptHash": "e918cd6d541e51f6d11ba59fec58f45b6edab011ed1f90b2661d6650abaca40e",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.935328+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05390",
-      "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
-      "excerpt": "arXiv:2611.05390v1 Announce Type: new Abstract: Multi-agent language-model systems often add a reviewer to improve an upstream agent's decision. Yet a reviewer can both repair errors and replace decisions that were already correct. We study this as a problem of institutional jurisdiction: conditional on the same proposal, task information, model, and review output, when is the reviewer authorized to make its recommendation binding? We compare broad override authority with an evidence gate that permits replacement only after the reviewer produces a mechanically valid record of a binding-constra",
-      "excerptHash": "069d1efd818070c188724ad08dbce80efd5cd01116eed82aa58347d75a07b830",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.934897+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03698",
-      "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
-      "excerpt": "arXiv:2611.03698v1 Announce Type: new Abstract: Recursive Self-Improvement (RSI) aims to enable AI systems to autonomously build and improve AI systems themselves, including models, harnesses, and underlying infrastructure. Within this broader agenda, a central capability is enabling agents to train and improve base models. However, existing studies on automated model training primarily focused on workflow- or harness-level optimizations, rather than internalizing the ability to conduct post-training into the model itself. Developing this capability requires executable model training environme",
-      "excerptHash": "42819821cdc8d0e473e1ca3e345b6cc112e07bbc6dd38009ca6f21e8576d9a97",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.207271+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03685",
-      "title": "LOLPlay: Benchmarking Real-Time Visual Agents in League of Legends",
-      "excerpt": "arXiv:2611.03685v1 Announce Type: new Abstract: Visual agents need to coordinate reasoning and action while their environment evolves during inference. We introduce LOLPlay, a benchmark in native \\emph{League of Legends} with 36 champion-specific tasks spanning resource management, combat, cooperation, and objectives. Agents interact through screenshots and mouse--keyboard actions; automated initialization and 82 executable subgoal checks distinguish partial progress from completion. Across 324 task evaluations of three models at three reasoning-effort settings, GPT-6 Astra achieves the highes",
-      "excerptHash": "668d07f857eb0647275873445e5896a98f9b1a4117380ed1669f37a8a23a8ae3",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.206622+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03684",
-      "title": "Functional-Group Knowledge Is Structured in Language Models Before It Is Spoken",
-      "excerpt": "arXiv:2611.03684v1 Announce Type: new Abstract: Language models serve as the reasoning core of agents for chemistry and materials science, where they must interpret molecular structure before planning syntheses or proposing materials. Yet their outputs show only what they say, not what they know. Given a prompt such as ``The primary functional group in 1-Fluorobutane (CCCCF) is'', a small general-purpose model may answer ``the alkyne group'' instead of an alkyl fluoride. The output alone cannot tell whether the model failed to recognize the fluorine or recognized it and failed to say so. We ad",
-      "excerptHash": "1e202ea19b5da8ca999c3af78fab2b7d9788a2f39194807e0425d0ef54021087",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.206004+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.03662",
-      "title": "MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication",
-      "excerpt": "arXiv:2611.03662v1 Announce Type: new Abstract: The Model Context Protocol (MCP) connects large language model agents to external tools and services through official SDKs that implement message validation and session logic. Specification constraints omitted by these SDKs may propagate to downstream applications, highlighting the importance of SDK-level conformance testing. Yet existing MCP conformance tools mainly exercise running endpoints and reveal little about whether SDK models enforce specification requirements. We present MCPGuard, an automated LLM-based framework for detecting specific",
-      "excerptHash": "4e8e5b2cb84a922d75f84190bbf4ec8ed75e3231a915e4793f58c749612bbf45",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-04T06:56:23.205357+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 14,
-  "parentHash": "3564c8e0f0aa83fa2716aa905e46acd4d65ca6d1f5b2f291437e1158f037f76b",
-  "at": "2026-11-09T07:07:52.811315+00:00",
-  "runId": "42577315789",
-  "artifactHash": "6d1ead2c237dd9e2aff199e56b61c9f06a5a7aa85c3143549fb1131933177736"
+  "generation": 15,
+  "parentHash": "6d1ead2c237dd9e2aff199e56b61c9f06a5a7aa85c3143549fb1131933177736",
+  "at": "2026-11-11T07:01:57.017236+00:00",
+  "runId": "42976518550",
+  "artifactHash": "c478009fe5b8d91edfef9d5c744255504fe762b56d915e2dc3bb3bdca28e0003"
 }
