@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "43299398343",
+  "runId": "43344830649",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-12T20:21:44Z",
+  "at": "2026-11-13T01:26:27Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "49b3099f292587d2976498214f013e21806ee4c3b2daeab844da508c0183f083",
-  "cycleNumber": 193,
+  "parentRecordHash": "902a72f36f3d551aabf3a556e145a7f857bce0f75481b66c9bd9ce1d7f1fe1d5",
+  "cycleNumber": 194,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "6395f2552ceb692bfb6e42892db8738ea01523e117788bdc706e2b0553fd06b1",
+    "hash": "cee62d77e26976506e1b8c18a849fea75b01c5330740e390348c15ba8cb6c75d",
     "items": [
       {
         "title": "TorchCurves: Differentiable Parametric Curves",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-12T20:21:45Z"
+    "accessedAt": "2026-11-13T01:26:28Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.713,
+  "elapsedSeconds": 0.709,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "902a72f36f3d551aabf3a556e145a7f857bce0f75481b66c9bd9ce1d7f1fe1d5"
+  "recordHash": "ab3522283e218190c95862d6114c0a2d466682d2ac44beeee66ce0a529aa3341"
 }
