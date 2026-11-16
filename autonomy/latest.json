@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "43791680804",
+  "runId": "43845804679",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-16T02:22:11Z",
+  "at": "2026-11-16T10:07:10Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "60a3685b3037dc7943bafc8212e4438ed71ff0dacb9c652fc45c0d336a08a1d9",
-  "cycleNumber": 206,
+  "parentRecordHash": "155265d5b3e72d8a0d777b06edac84ec3bcab8c96ee5bbadf9744516a0417dc4",
+  "cycleNumber": 207,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "d76491c062666606dc0cb8c5ef9c7bd5b2a62fb7905181ce8f5f7e606e715428",
+    "hash": "41664245fbfe99d873e8f409436b4e071c2cd47f2e06c0bd9d31dbad05f4f7be",
     "items": [
       {
-        "title": "G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands",
-        "url": "http://arxiv.org/abs/2611.17814v1",
-        "updated": "2026-11-13T06:53:56Z",
+        "title": "Black-Box Uncertainty Quantification for Large Language Models via Ensemble-of-Ensembles",
+        "url": "http://arxiv.org/abs/2611.18453v1",
+        "updated": "2026-11-13T17:26:39Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Mobile Edge Deployment and Resource Management for Maritime Wireless Networks",
-        "url": "http://arxiv.org/abs/2611.17779v1",
-        "updated": "2026-11-13T05:41:13Z",
+        "title": "PACT: A Decoder-Confidence-Guided Two-Round Receiver for Joint Channel and Phase-Noise Estimation in Sub-THz OFDM",
+        "url": "http://arxiv.org/abs/2611.18450v1",
+        "updated": "2026-11-13T17:22:57Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-16T02:22:16Z"
+    "accessedAt": "2026-11-16T10:07:10Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 5.079,
+  "elapsedSeconds": 0.546,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "155265d5b3e72d8a0d777b06edac84ec3bcab8c96ee5bbadf9744516a0417dc4"
+  "recordHash": "0f0d81a9d32a9342af844c0e02236b741016c920aae82f13ed28c8d6d0b0a528"
 }
