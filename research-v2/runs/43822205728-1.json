@@ -1,0 +1,773 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-16T07:13:03.712605+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "43822205728",
+  "parents": {
+    "knowledge": "c478009fe5b8d91edfef9d5c744255504fe762b56d915e2dc3bb3bdca28e0003",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-16T07:13:02.738927+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "5e3820c1002f8d7331b978c50e13c5208766181d90303c47ec199c61eab9fa88"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.025118+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "66e98cc4ae3ef0148be627bd2a252274e966f3d90fbe1f1ed6b696294b600272"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17338",
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "excerpt": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer ",
+      "excerptHash": "2ed25ee0c694c42f88ee4a4ca2957cee599e4ee958a9ef038c6a53ca39e5eff6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710106+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17339",
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "excerpt": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two samp",
+      "excerptHash": "77ad7c4af3198f0231b8b048e32cb2b2bff3a2d18da5f750a37670e98ad8e8a4",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710511+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17340",
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "excerpt": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a representation alignment problem in the adapter-output space. The proposed training-free method sele",
+      "excerptHash": "42ed1483d81d8e552f252a18eb8445736f130cdfadcb6d153c2332481c3294cf",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710873+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17341",
+      "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+      "excerpt": "arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval object: a tabular population prior ranked medication class candidates from a sparse condition medica",
+      "excerptHash": "c59449f0f34b2061dd6fed2f895ee6d48ceaf4db476d2e2a52236d0b57548ecd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.711234+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17495",
+      "title": "An Operationalization of Opaque Serial Depth",
+      "excerpt": "arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpretable bottleneck. Our main contribution is a particular standard for what counts as such a bottleneck. ",
+      "excerptHash": "f248246883fe874aadc6ac0b5176189e27fb0c0800c7911954828d01fe195a94",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.711626+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17501",
+      "title": "Advancing Quantization for R&R Models with Microscaling Formats",
+      "excerpt": "arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity to precision loss. Unlike Large Language Models (LLMs) that frequently tolerate quantization-induced accuracy drops of 1% or more, production-grade R&R models enforce a stringent launch bar: model quality must remain within a 0.01% Normalized Entropy (NE) margin relative to the baseline, which commonly uses FP16 or FP32. This tight constraint has historically hindered the adoption of aggressive quantiz",
+      "excerptHash": "0e15b70a25b82aaa81fcffd00a0617393bbc3de86d4ba70343807854cc5d488e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.712007+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "rectangle",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 190297110590972,
+    "trainingExamples": [
+      {
+        "args": {
+          "width": "1690.73",
+          "height": "9505.86"
+        },
+        "expected": "80359213389/5000"
+      },
+      {
+        "args": {
+          "width": "-1333.08",
+          "height": "-434.61"
+        },
+        "expected": "1448424747/2500"
+      },
+      {
+        "args": {
+          "width": "647.72",
+          "height": "-6268.35"
+        },
+        "expected": "-2030067831/500"
+      },
+      {
+        "args": {
+          "width": "-8853.66",
+          "height": "7244.51"
+        },
+        "expected": "-320702142033/5000"
+      }
+    ],
+    "examined": 13,
+    "states": 11,
+    "cost": 3
+  },
+  "programCandidate": {
+    "task": "rectangle",
+    "expression": [
+      "mul",
+      [
+        "var",
+        "width"
+      ],
+      [
+        "var",
+        "height"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "7fe11d7badd7cc1ed13b4a7fd0a0211456a33ccafc5ed94514fb726e795fd2bb",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-16T07:13:02.738927+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "5e3820c1002f8d7331b978c50e13c5208766181d90303c47ec199c61eab9fa88"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.025118+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "66e98cc4ae3ef0148be627bd2a252274e966f3d90fbe1f1ed6b696294b600272"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17338",
+        "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+        "excerpt": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer ",
+        "excerptHash": "2ed25ee0c694c42f88ee4a4ca2957cee599e4ee958a9ef038c6a53ca39e5eff6",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.710106+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17339",
+        "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+        "excerpt": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two samp",
+        "excerptHash": "77ad7c4af3198f0231b8b048e32cb2b2bff3a2d18da5f750a37670e98ad8e8a4",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.710511+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17340",
+        "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+        "excerpt": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a representation alignment problem in the adapter-output space. The proposed training-free method sele",
+        "excerptHash": "42ed1483d81d8e552f252a18eb8445736f130cdfadcb6d153c2332481c3294cf",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.710873+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17341",
+        "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+        "excerpt": "arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval object: a tabular population prior ranked medication class candidates from a sparse condition medica",
+        "excerptHash": "c59449f0f34b2061dd6fed2f895ee6d48ceaf4db476d2e2a52236d0b57548ecd",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.711234+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17495",
+        "title": "An Operationalization of Opaque Serial Depth",
+        "excerpt": "arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpretable bottleneck. Our main contribution is a particular standard for what counts as such a bottleneck. ",
+        "excerptHash": "f248246883fe874aadc6ac0b5176189e27fb0c0800c7911954828d01fe195a94",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.711626+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.17501",
+        "title": "Advancing Quantization for R&R Models with Microscaling Formats",
+        "excerpt": "arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity to precision loss. Unlike Large Language Models (LLMs) that frequently tolerate quantization-induced accuracy drops of 1% or more, production-grade R&R models enforce a stringent launch bar: model quality must remain within a 0.01% Normalized Entropy (NE) margin relative to the baseline, which commonly uses FP16 or FP32. This tight constraint has historically hindered the adoption of aggressive quantiz",
+        "excerptHash": "0e15b70a25b82aaa81fcffd00a0617393bbc3de86d4ba70343807854cc5d488e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-16T07:13:03.712007+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 101525900159093,
+    "cases": [
+      {
+        "args": {
+          "width": "0",
+          "height": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "width": "1",
+          "height": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "width": "-1",
+          "height": "-1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "width": "-1804.25",
+          "height": "7518.85"
+        },
+        "expected": "-1085270809/80",
+        "reply": "-1085270809/80"
+      },
+      {
+        "args": {
+          "width": "-7700.90",
+          "height": "6757.65"
+        },
+        "expected": "-10407997377/200",
+        "reply": "-10407997377/200"
+      },
+      {
+        "args": {
+          "width": "6301.08",
+          "height": "9344.03"
+        },
+        "expected": "147193701381/2500",
+        "reply": "147193701381/2500"
+      },
+      {
+        "args": {
+          "width": "-6584.37",
+          "height": "7283.48"
+        },
+        "expected": "-119892818019/2500",
+        "reply": "-119892818019/2500"
+      },
+      {
+        "args": {
+          "width": "890.50",
+          "height": "-611.92"
+        },
+        "expected": "-13622869/25",
+        "reply": "-13622869/25"
+      },
+      {
+        "args": {
+          "width": "-2884.71",
+          "height": "8182.13"
+        },
+        "expected": "-236030722323/10000",
+        "reply": "-236030722323/10000"
+      },
+      {
+        "args": {
+          "width": "-7717.53",
+          "height": "3609.96"
+        },
+        "expected": "-69649936497/2500",
+        "reply": "-69649936497/2500"
+      },
+      {
+        "args": {
+          "width": "-3471.51",
+          "height": "1720.77"
+        },
+        "expected": "-59736702627/10000",
+        "reply": "-59736702627/10000"
+      },
+      {
+        "args": {
+          "width": "-3255.36",
+          "height": "2031.81"
+        },
+        "expected": "-4133920626/625",
+        "reply": "-4133920626/625"
+      },
+      {
+        "args": {
+          "width": "4725.33",
+          "height": "182.13"
+        },
+        "expected": "8606243529/10000",
+        "reply": "8606243529/10000"
+      },
+      {
+        "args": {
+          "width": "-8248.42",
+          "height": "-7574.33"
+        },
+        "expected": "312381275293/5000",
+        "reply": "312381275293/5000"
+      },
+      {
+        "args": {
+          "width": "-5639.79",
+          "height": "-638.47"
+        },
+        "expected": "36008367213/10000",
+        "reply": "36008367213/10000"
+      },
+      {
+        "args": {
+          "width": "9018.58",
+          "height": "6005.62"
+        },
+        "expected": "135405411049/2500",
+        "reply": "135405411049/2500"
+      },
+      {
+        "args": {
+          "width": "9608.55",
+          "height": "-8086.25"
+        },
+        "expected": "-1243154199/16",
+        "reply": "-1243154199/16"
+      },
+      {
+        "args": {
+          "width": "4337.56",
+          "height": "-2398.11"
+        },
+        "expected": "-26004865029/2500",
+        "reply": "-26004865029/2500"
+      },
+      {
+        "args": {
+          "width": "-1143.02",
+          "height": "-8926.01"
+        },
+        "expected": "51013039751/5000",
+        "reply": "51013039751/5000"
+      },
+      {
+        "args": {
+          "width": "-4648.82",
+          "height": "-9542.81"
+        },
+        "expected": "221814029921/5000",
+        "reply": "221814029921/5000"
+      },
+      {
+        "args": {
+          "width": "4721.00",
+          "height": "-1590.96"
+        },
+        "expected": "-187773054/25",
+        "reply": "-187773054/25"
+      },
+      {
+        "args": {
+          "width": "4043.05",
+          "height": "8671.46"
+        },
+        "expected": "35059146353/1000",
+        "reply": "35059146353/1000"
+      },
+      {
+        "args": {
+          "width": "-5971.71",
+          "height": "-9705.31"
+        },
+        "expected": "579572967801/10000",
+        "reply": "579572967801/10000"
+      },
+      {
+        "args": {
+          "width": "3559.16",
+          "height": "5828.66"
+        },
+        "expected": "25931416907/1250",
+        "reply": "25931416907/1250"
+      },
+      {
+        "args": {
+          "width": "1433.89",
+          "height": "2920.43"
+        },
+        "expected": "41875753727/10000",
+        "reply": "41875753727/10000"
+      },
+      {
+        "args": {
+          "width": "-4570.15",
+          "height": "-9878.28"
+        },
+        "expected": "22572610671/500",
+        "reply": "22572610671/500"
+      },
+      {
+        "args": {
+          "width": "-2324.45",
+          "height": "-7179.81"
+        },
+        "expected": "33378218709/2000",
+        "reply": "33378218709/2000"
+      },
+      {
+        "args": {
+          "width": "1328.96",
+          "height": "-7108.51"
+        },
+        "expected": "-5904328406/625",
+        "reply": "-5904328406/625"
+      },
+      {
+        "args": {
+          "width": "-4282.36",
+          "height": "-1316.77"
+        },
+        "expected": "14097207943/2500",
+        "reply": "14097207943/2500"
+      },
+      {
+        "args": {
+          "width": "-7354.56",
+          "height": "-4206.78"
+        },
+        "expected": "19336884948/625",
+        "reply": "19336884948/625"
+      },
+      {
+        "args": {
+          "width": "-7003.89",
+          "height": "460.42"
+        },
+        "expected": "-16123655169/5000",
+        "reply": "-16123655169/5000"
+      },
+      {
+        "args": {
+          "width": "-3051.85",
+          "height": "-919.36"
+        },
+        "expected": "350718602/125",
+        "reply": "350718602/125"
+      },
+      {
+        "args": {
+          "width": "9632.31",
+          "height": "3026.06"
+        },
+        "expected": "145739739993/5000",
+        "reply": "145739739993/5000"
+      },
+      {
+        "args": {
+          "width": "-5511.70",
+          "height": "-9466.74"
+        },
+        "expected": "26088915429/500",
+        "reply": "26088915429/500"
+      },
+      {
+        "args": {
+          "width": "4988.55",
+          "height": "-991.33"
+        },
+        "expected": "-9890598543/2000",
+        "reply": "-9890598543/2000"
+      },
+      {
+        "args": {
+          "width": "-189.53",
+          "height": "151.51"
+        },
+        "expected": "-287156903/10000",
+        "reply": "-287156903/10000"
+      },
+      {
+        "args": {
+          "width": "-9311.37",
+          "height": "8709.42"
+        },
+        "expected": "-405483160527/5000",
+        "reply": "-405483160527/5000"
+      },
+      {
+        "args": {
+          "width": "3236.62",
+          "height": "-5030.72"
+        },
+        "expected": "-10176580604/625",
+        "reply": "-10176580604/625"
+      },
+      {
+        "args": {
+          "width": "2149.87",
+          "height": "-6098.62"
+        },
+        "expected": "-65556200897/5000",
+        "reply": "-65556200897/5000"
+      },
+      {
+        "args": {
+          "width": "6810.83",
+          "height": "-5239.91"
+        },
+        "expected": "-356881362253/10000",
+        "reply": "-356881362253/10000"
+      },
+      {
+        "args": {
+          "width": "9881.11",
+          "height": "-8735.18"
+        },
+        "expected": "-431566372249/5000",
+        "reply": "-431566372249/5000"
+      },
+      {
+        "args": {
+          "width": "-4305.27",
+          "height": "5870.04"
+        },
+        "expected": "-63180267777/2500",
+        "reply": "-63180267777/2500"
+      },
+      {
+        "args": {
+          "width": "-1474.47",
+          "height": "7333.24"
+        },
+        "expected": "-27031605957/2500",
+        "reply": "-27031605957/2500"
+      },
+      {
+        "args": {
+          "width": "9926.62",
+          "height": "-36.21"
+        },
+        "expected": "-1797214551/5000",
+        "reply": "-1797214551/5000"
+      },
+      {
+        "args": {
+          "width": "9381.77",
+          "height": "-2185.77"
+        },
+        "expected": "-205063914129/10000",
+        "reply": "-205063914129/10000"
+      },
+      {
+        "args": {
+          "width": "-960.03",
+          "height": "-5108.54"
+        },
+        "expected": "24521758281/5000",
+        "reply": "24521758281/5000"
+      },
+      {
+        "args": {
+          "width": "9389.26",
+          "height": "9254.25"
+        },
+        "expected": "17378111871/200",
+        "reply": "17378111871/200"
+      },
+      {
+        "args": {
+          "width": "-801.70",
+          "height": "-7041.84"
+        },
+        "expected": "705680391/125",
+        "reply": "705680391/125"
+      },
+      {
+        "args": {
+          "width": "-9198.45",
+          "height": "4293.10"
+        },
+        "expected": "-7897973139/200",
+        "reply": "-7897973139/200"
+      },
+      {
+        "args": {
+          "width": "6405.27",
+          "height": "-2204.42"
+        },
+        "expected": "-70599526467/5000",
+        "reply": "-70599526467/5000"
+      },
+      {
+        "args": {
+          "width": "-839.67",
+          "height": "-4119.60"
+        },
+        "expected": "864776133/250",
+        "reply": "864776133/250"
+      },
+      {
+        "args": {
+          "width": "-5487.77",
+          "height": "731.32"
+        },
+        "expected": "-10033289891/2500",
+        "reply": "-10033289891/2500"
+      },
+      {
+        "args": {
+          "width": "-5367.42",
+          "height": "-452.74"
+        },
+        "expected": "6075114327/2500",
+        "reply": "6075114327/2500"
+      },
+      {
+        "args": {
+          "width": "503.86",
+          "height": "3739.89"
+        },
+        "expected": "9421904877/5000",
+        "reply": "9421904877/5000"
+      },
+      {
+        "args": {
+          "width": "-3474.53",
+          "height": "1924.94"
+        },
+        "expected": "-33441308891/5000",
+        "reply": "-33441308891/5000"
+      },
+      {
+        "args": {
+          "width": "4317.34",
+          "height": "-2279.67"
+        },
+        "expected": "-49210552389/5000",
+        "reply": "-49210552389/5000"
+      },
+      {
+        "args": {
+          "width": "6284.23",
+          "height": "-5475.11"
+        },
+        "expected": "-344068505153/10000",
+        "reply": "-344068505153/10000"
+      },
+      {
+        "args": {
+          "width": "9770.11",
+          "height": "-2902.37"
+        },
+        "expected": "-283564741607/10000",
+        "reply": "-283564741607/10000"
+      },
+      {
+        "args": {
+          "width": "-3072.48",
+          "height": "5479.17"
+        },
+        "expected": "-10521650151/625",
+        "reply": "-10521650151/625"
+      },
+      {
+        "args": {
+          "width": "2466.81",
+          "height": "2359.44"
+        },
+        "expected": "7275362733/1250",
+        "reply": "7275362733/1250"
+      },
+      {
+        "args": {
+          "width": "7199.84",
+          "height": "5395.96"
+        },
+        "expected": "24281280404/625",
+        "reply": "24281280404/625"
+      },
+      {
+        "args": {
+          "width": "-1197.26",
+          "height": "-7724.23"
+        },
+        "expected": "46239558049/5000",
+        "reply": "46239558049/5000"
+      },
+      {
+        "args": {
+          "width": "7533.27",
+          "height": "4780.14"
+        },
+        "expected": "180050426289/5000",
+        "reply": "180050426289/5000"
+      },
+      {
+        "args": {
+          "width": "5493.46",
+          "height": "7195.81"
+        },
+        "expected": "197649472013/5000",
+        "reply": "197649472013/5000"
+      }
+    ],
+    "nodes": 3,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "ADOPT",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "4d2c6b14ff400f52a940698609b38ac6a464695dc8767ef678feda109f20a321"
+}

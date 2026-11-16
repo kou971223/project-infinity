@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.17501",
+      "title": "Advancing Quantization for R&R Models with Microscaling Formats",
+      "excerpt": "arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity to precision loss. Unlike Large Language Models (LLMs) that frequently tolerate quantization-induced accuracy drops of 1% or more, production-grade R&R models enforce a stringent launch bar: model quality must remain within a 0.01% Normalized Entropy (NE) margin relative to the baseline, which commonly uses FP16 or FP32. This tight constraint has historically hindered the adoption of aggressive quantiz",
+      "excerptHash": "0e15b70a25b82aaa81fcffd00a0617393bbc3de86d4ba70343807854cc5d488e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.712007+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17495",
+      "title": "An Operationalization of Opaque Serial Depth",
+      "excerpt": "arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpretable bottleneck. Our main contribution is a particular standard for what counts as such a bottleneck. ",
+      "excerptHash": "f248246883fe874aadc6ac0b5176189e27fb0c0800c7911954828d01fe195a94",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.711626+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17341",
+      "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+      "excerpt": "arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval object: a tabular population prior ranked medication class candidates from a sparse condition medica",
+      "excerptHash": "c59449f0f34b2061dd6fed2f895ee6d48ceaf4db476d2e2a52236d0b57548ecd",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.711234+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17340",
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "excerpt": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a representation alignment problem in the adapter-output space. The proposed training-free method sele",
+      "excerptHash": "42ed1483d81d8e552f252a18eb8445736f130cdfadcb6d153c2332481c3294cf",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710873+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17339",
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "excerpt": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning three paradigms: length-normalized token-margin calibration, a lexical n-gram baseline, and two samp",
+      "excerptHash": "77ad7c4af3198f0231b8b048e32cb2b2bff3a2d18da5f750a37670e98ad8e8a4",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710511+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.17338",
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "excerpt": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater degradation than false-keep, while a non-deleting baseline can still fail when incorrect labels steer ",
+      "excerptHash": "2ed25ee0c694c42f88ee4a4ca2957cee599e4ee958a9ef038c6a53ca39e5eff6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.710106+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-16T07:13:03.025118+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "66e98cc4ae3ef0148be627bd2a252274e966f3d90fbe1f1ed6b696294b600272"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-16T07:13:02.738927+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "5e3820c1002f8d7331b978c50e13c5208766181d90303c47ec199c61eab9fa88"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.12938",
       "title": "Graph Visualizations in Prompts for Knowledge Graph Question Answering",
       "excerpt": "arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluation over 1,500 WebQSP and CWQ questions and six VLMs within a fixed KGQA pipeline, we compare text-only prompting against text-plus-graph visualization at the per-question level and analyze performance changes as a function of reasoning complexity, model size, and image layout. Adding a graph image yields an average gain of 1.85 F1 points, driven by strong precision improvements on low-complexity qu",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-11T07:01:57.013436+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "62e7b72fdaae5270e8a09c0f983e59e76a6936cbfcbe2348f341f3c9cefa5c4a"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-11T07:01:56.876993+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "98b0f60bb9d01ef2aed2d0b8d439660c5786b39f5b7d41d80da448dd6ffb5c48"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-11T07:01:56.597174+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "03686452c2b635e4b030eb0a24c7bdd56ad110947252fa797103e3e0096742fe"
     },
     {
       "url": "https://arxiv.org/abs/2611.08647",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-06T07:20:38.878033+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06972",
-      "title": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
-      "excerpt": "arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether a party should bear liability. While Large Language Models (LLMs) have shown promise in this area by leveraging executable skills for interpretable reasoning, existing approaches face three critical limitations: skill libraries become stale as real-world scenarios dynamically evolve, skill descriptions often suffer from a semantic execution gap where LLMs deviate from intended expert logic, and g",
-      "excerptHash": "604ff826b9adcd7e3509171b40b69d7e83b971ccb2e771a075886a76e21264d6",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.877651+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06962",
-      "title": "Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation",
-      "excerpt": "arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe AutoIP, a Lean library in which classical linear regularization theory, together with the functional analysis it rests on, has been autoformalized by AI agents. A machine-checked proof certifies only the formal statement it proves, so the remaining human task is to confirm that each formal statement says what was intended. We organize the library around this task: a reviewer compares the formal statem",
-      "excerptHash": "c0ebc745e413a692dfaf0872505316ac87bd642495a67797439e35d295612850",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.877252+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05450",
-      "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
-      "excerpt": "arXiv:2611.05450v1 Announce Type: new Abstract: As agents become more capable, they are moving beyond one-off tasks toward sustained assistance across successive user goals. Such assistance requires agents to discover how unfamiliar environments work, reuse what they learn across tasks, and keep that experience current as environments evolve. Existing benchmarks increasingly study experience reuse and adaptation, but provide limited insight into which parts of accumulated experience agents revise, retain, or lose. To address this gap, we introduce ReScopeBench, a benchmark for the experience l",
-      "excerptHash": "e64cd8af08b7672a3e42a54bd09529853b14b25b25407d1507540daa44cec6d8",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.936999+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05394",
-      "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
-      "excerpt": "arXiv:2611.05394v1 Announce Type: new Abstract: Tiered inference distributes large language model computation across a hierarchy of devices, from on-device and edge hardware to the datacenter, and is increasingly offered as the route to cheaper, lower-latency, and more private serving. Most such systems orchestrate frozen model checkpoints, and most decide what to resolve locally and what to escalate using a confidence signal produced by a forward-deployed model. We give a closed-form condition for when no threshold on that signal makes a tiered cascade worthwhile relative to sending every que",
-      "excerptHash": "644edb2017a4f41ac0ca65ce9c061e74aba291aac28cf9f2c826a1b8c643a79c",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.936593+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05393",
-      "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
-      "excerpt": "arXiv:2611.05393v1 Announce Type: new Abstract: Large language models perform strongly on standard medical QA but degrade on harder reasoning tasks, where multi-agent debate often fails to beat strong single-model prompting. We argue that a key limitation is that existing systems select experts and retrieve knowledge from the question alone, rather than from gaps that emerge during reasoning. We propose challenge-aware adaptive recruitment: an external CHALLENGER inspects the evolving reasoning trace and identifies specific factual or expertise gaps. These signals trigger targeted knowledge re",
-      "excerptHash": "1eabd60d41cc52e6dc4a07f012b93ce5ed1284b1aaa0235f7b8fd4c86cd4afcb",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.936166+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.05392",
-      "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
-      "excerpt": "arXiv:2611.05392v1 Announce Type: new Abstract: Agentic artificial intelligence (AI) systems powered by large language models (LLMs) execute as autonomous multi-step pipelines that dynamically invoke tools, integrate observations into memory, and iterate until a task is resolved or a resource budget is exhausted. Unlike classical workflows with fixed graphs, the aggregate compute, bandwidth, and end-to-end latency demands of such pipelines are unknown at dispatch time: they emerge at runtime from intermediate observations and stochastic token sampling, yielding heavy-tailed, multi-modal random",
-      "excerptHash": "e8c286c00cbc7cf006b6bcd3f1fba200b2794b0543a519357ec61bec4cc207c1",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-05T07:20:17.935755+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 15,
-  "parentHash": "6d1ead2c237dd9e2aff199e56b61c9f06a5a7aa85c3143549fb1131933177736",
-  "at": "2026-11-11T07:01:57.017236+00:00",
-  "runId": "42976518550",
-  "artifactHash": "c478009fe5b8d91edfef9d5c744255504fe762b56d915e2dc3bb3bdca28e0003"
+  "generation": 16,
+  "parentHash": "c478009fe5b8d91edfef9d5c744255504fe762b56d915e2dc3bb3bdca28e0003",
+  "at": "2026-11-16T07:13:03.712605+00:00",
+  "runId": "43822205728",
+  "artifactHash": "81f0923f64d27cdd8190445edf2477e23a6f532cecc98de340c65c3a5ad44f98"
 }
