@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "44015045212",
+  "runId": "44096096583",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-17T04:08:53Z",
+  "at": "2026-11-17T13:47:15Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "57593db06184a33698b81838147431c5d868e1d346d215323211526e42f0d39e",
-  "cycleNumber": 209,
+  "parentRecordHash": "a5c28a64887b963057d7dd0dd16d9cc4cbba99b4212f0894cc96c500827279af",
+  "cycleNumber": 210,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "4187ec12d33c9c67d170f2c99aa7a7134a8465497f8f64b8a5ad5f10ff187358",
+    "hash": "90b71f7a9249e2d7260f260087ee6f4c88c14ed72ab24173267dd9b1b8c1b32b",
     "items": [
       {
-        "title": "Counterfactual Screening of Rare Secondary Overloads in Power Grids with a Stochastic Surrogate for Electromagnetic Transient Simulations",
-        "url": "http://arxiv.org/abs/2611.20212v1",
-        "updated": "2026-11-15T19:17:59Z",
+        "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+        "url": "http://arxiv.org/abs/2611.21599v1",
+        "updated": "2026-11-16T18:58:29Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "DoF-Query Transformer for Adaptive Fusion of Egocentric Vision and Forearm HD-sEMG in Continuous Hand Kinematics",
-        "url": "http://arxiv.org/abs/2611.20196v1",
-        "updated": "2026-11-15T18:48:34Z",
+        "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
+        "url": "http://arxiv.org/abs/2611.21598v1",
+        "updated": "2026-11-16T18:58:20Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-17T04:08:54Z"
+    "accessedAt": "2026-11-17T13:47:15Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.501,
+  "elapsedSeconds": 0.562,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "a5c28a64887b963057d7dd0dd16d9cc4cbba99b4212f0894cc96c500827279af"
+  "recordHash": "0b30238a4544d57022d1cc16b99b763f2267496df1061c22885c55d72b56c47b"
 }
