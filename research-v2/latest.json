@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-17T21:18:05.037892+00:00",
+  "at": "2026-11-18T07:53:57.169799+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "44178317680",
+  "runId": "44262454587",
   "parents": {
     "knowledge": "81f0923f64d27cdd8190445edf2477e23a6f532cecc98de340c65c3a5ad44f98",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-17T21:18:04.638389+00:00",
+      "checkedAt": "2026-11-18T07:53:56.813435+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "e61e14a79d12b3b7f6e33d9ab7ff702f52c3d38979e0b0117352d43a7934f7ba"
+      "sourceHash": "01450562519d1c15bb1b10cbeca0db6625eb6499ec3e6bb77664e70afbaced90"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,18 +24,73 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-17T21:18:04.899089+00:00",
+      "checkedAt": "2026-11-18T07:53:57.095625+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "1eb1d000b14e22054a209599d34e74997b3eee34a2420d7a5e6949f961297afd"
-    }
-  ],
-  "sourceFailures": [
+      "sourceHash": "e99d4c04c78cdd8efbf3c4fbdfce2616c95fb94f42878489db7c91adae29410e"
+    },
     {
-      "url": "https://rss.arxiv.org/rss/cs.AI",
-      "error": "ValueError"
+      "url": "https://arxiv.org/abs/2611.21682",
+      "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+      "excerpt": "arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, existing nuclear-domain benchmarks provide limited content coverage or focus primarily on answer accuracy without systematically evaluating the quality of the underlying reasoning. This study introduces NEBench R1, a reasoning-oriented benchmark comprising 7,546 unique multiple-choice questions extracted from U.S. Nuclear Regulatory Commission (NRC) reactor operator licensing examinations covering ",
+      "excerptHash": "49551d88f1df7ca6611f04920981d400984c759955361d548da7ed9a184118ef",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.166249+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21799",
+      "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+      "excerpt": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though training contains no monitor-evasion examples. In covert side-task evaluations, traces in which a gpt-o",
+      "excerptHash": "9c6f2b58805c38cf4133a65d2b3ef4e544b84fc31128bb79b4390b2047e1ef31",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.166800+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21827",
+      "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+      "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
+      "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.167327+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21832",
+      "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+      "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
+      "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.167869+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21885",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
+      "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.168395+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21925",
+      "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+      "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
+      "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.168926+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
     }
   ],
-  "task": "mean",
+  "sourceFailures": [],
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -49,76 +104,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 27013879498632,
+    "trainingSeed": 273110361407840,
     "trainingExamples": [
       {
         "args": {
-          "a": "9266.10",
-          "b": "-5225.54",
-          "c": "-6108.92"
+          "width": "-9930.41",
+          "height": "-2937.43"
         },
-        "expected": "-51709/75"
+        "expected": "291698842463/10000"
       },
       {
         "args": {
-          "a": "-6287.84",
-          "b": "7941.01",
-          "c": "-6625.51"
+          "width": "-3662.77",
+          "height": "-4275.14"
         },
-        "expected": "-248617/150"
+        "expected": "78294272689/5000"
       },
       {
         "args": {
-          "a": "-1720.40",
-          "b": "1292.15",
-          "c": "8195.76"
+          "width": "3349.21",
+          "height": "-3792.75"
         },
-        "expected": "258917/100"
+        "expected": "-5081086491/400"
       },
       {
         "args": {
-          "a": "6668.07",
-          "b": "1266.94",
-          "c": "8065.41"
+          "width": "6149.76",
+          "height": "3145.40"
         },
-        "expected": "800021/150"
+        "expected": "2417931888/125"
       }
     ],
-    "examined": 15345,
-    "states": 6006,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "89aee5732298f37f4208dc437c569783849369ffdb0b85481c037ec0f648d9e2",
+  "frozenHash": "f4c7fee9cf9908ebf5f2a3abde1759f871e0ffb91f7142214d39e84fe5dc394f",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -128,9 +165,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-17T21:18:04.638389+00:00",
+        "checkedAt": "2026-11-18T07:53:56.813435+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "e61e14a79d12b3b7f6e33d9ab7ff702f52c3d38979e0b0117352d43a7934f7ba"
+        "sourceHash": "01450562519d1c15bb1b10cbeca0db6625eb6499ec3e6bb77664e70afbaced90"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -138,608 +175,599 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-17T21:18:04.899089+00:00",
+        "checkedAt": "2026-11-18T07:53:57.095625+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "1eb1d000b14e22054a209599d34e74997b3eee34a2420d7a5e6949f961297afd"
+        "sourceHash": "e99d4c04c78cdd8efbf3c4fbdfce2616c95fb94f42878489db7c91adae29410e"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21682",
+        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+        "excerpt": "arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, existing nuclear-domain benchmarks provide limited content coverage or focus primarily on answer accuracy without systematically evaluating the quality of the underlying reasoning. This study introduces NEBench R1, a reasoning-oriented benchmark comprising 7,546 unique multiple-choice questions extracted from U.S. Nuclear Regulatory Commission (NRC) reactor operator licensing examinations covering ",
+        "excerptHash": "49551d88f1df7ca6611f04920981d400984c759955361d548da7ed9a184118ef",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.166249+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21799",
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "excerpt": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though training contains no monitor-evasion examples. In covert side-task evaluations, traces in which a gpt-o",
+        "excerptHash": "9c6f2b58805c38cf4133a65d2b3ef4e544b84fc31128bb79b4390b2047e1ef31",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.166800+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21827",
+        "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+        "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
+        "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.167327+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21832",
+        "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+        "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
+        "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.167869+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21885",
+        "title": "Language Models Can Rewrite Their Own Weights",
+        "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
+        "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.168395+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21925",
+        "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+        "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
+        "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T07:53:57.168926+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
       }
     ],
     "rejected": [],
-    "failures": [
-      {
-        "url": "https://rss.arxiv.org/rss/cs.AI",
-        "error": "ValueError"
-      }
-    ]
+    "failures": []
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 205616222893004,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 89219016994617,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "-1882.65",
-          "b": "5409.12",
-          "c": "5496.89"
+          "width": "2954.45",
+          "height": "5266.49"
         },
-        "expected": "225584/75",
-        "reply": "225584/75"
+        "expected": "31119162761/2000",
+        "reply": "31119162761/2000"
       },
       {
         "args": {
-          "a": "-7987.08",
-          "b": "8492.25",
-          "c": "-9926.94"
+          "width": "-3636.92",
+          "height": "9502.01"
         },
-        "expected": "-314059/100",
-        "reply": "-314059/100"
+        "expected": "-86395125523/2500",
+        "reply": "-86395125523/2500"
       },
       {
         "args": {
-          "a": "2486.20",
-          "b": "-8060.93",
-          "c": "6644.96"
+          "width": "7692.40",
+          "height": "6810.01"
         },
-        "expected": "107023/300",
-        "reply": "107023/300"
+        "expected": "13096330231/250",
+        "reply": "13096330231/250"
       },
       {
         "args": {
-          "a": "-1089.59",
-          "b": "-3378.73",
-          "c": "-6780.22"
+          "width": "6460.49",
+          "height": "3708.67"
         },
-        "expected": "-562427/150",
-        "reply": "-562427/150"
+        "expected": "239598254483/10000",
+        "reply": "239598254483/10000"
       },
       {
         "args": {
-          "a": "4633.90",
-          "b": "2085.48",
-          "c": "1148.98"
+          "width": "3389.55",
+          "height": "9812.51"
         },
-        "expected": "196709/75",
-        "reply": "196709/75"
+        "expected": "66519986541/2000",
+        "reply": "66519986541/2000"
       },
       {
         "args": {
-          "a": "-3737.04",
-          "b": "531.97",
-          "c": "9909.68"
+          "width": "5917.72",
+          "height": "4488.36"
         },
-        "expected": "223487/100",
-        "reply": "223487/100"
+        "expected": "16600536087/625",
+        "reply": "16600536087/625"
       },
       {
         "args": {
-          "a": "-7791.02",
-          "b": "8104.90",
-          "c": "-1981.31"
+          "width": "-709.22",
+          "height": "-952.89"
         },
-        "expected": "-55581/100",
-        "reply": "-55581/100"
+        "expected": "3379043229/5000",
+        "reply": "3379043229/5000"
       },
       {
         "args": {
-          "a": "-4017.32",
-          "b": "1927.17",
-          "c": "544.96"
+          "width": "-5159.10",
+          "height": "4552.22"
         },
-        "expected": "-154519/300",
-        "reply": "-154519/300"
+        "expected": "-11742679101/500",
+        "reply": "-11742679101/500"
       },
       {
         "args": {
-          "a": "1226.96",
-          "b": "1044.32",
-          "c": "2723.05"
+          "width": "4828.34",
+          "height": "-8320.40"
         },
-        "expected": "499433/300",
-        "reply": "499433/300"
+        "expected": "-5021715017/125",
+        "reply": "-5021715017/125"
       },
       {
         "args": {
-          "a": "6254.15",
-          "b": "-5531.83",
-          "c": "8921.54"
+          "width": "3912.31",
+          "height": "-9971.10"
         },
-        "expected": "160731/50",
-        "reply": "160731/50"
+        "expected": "-39010034241/1000",
+        "reply": "-39010034241/1000"
       },
       {
         "args": {
-          "a": "-9897.53",
-          "b": "7572.86",
-          "c": "7402.33"
+          "width": "6894.73",
+          "height": "-2325.30"
         },
-        "expected": "253883/150",
-        "reply": "253883/150"
+        "expected": "-16032315669/1000",
+        "reply": "-16032315669/1000"
       },
       {
         "args": {
-          "a": "-1151.81",
-          "b": "-9244.72",
-          "c": "1751.42"
+          "width": "1648.09",
+          "height": "1845.25"
         },
-        "expected": "-864511/300",
-        "reply": "-864511/300"
+        "expected": "1216455229/400",
+        "reply": "1216455229/400"
       },
       {
         "args": {
-          "a": "-8455.25",
-          "b": "8330.12",
-          "c": "-4293.40"
+          "width": "4032.67",
+          "height": "9579.44"
         },
-        "expected": "-441853/300",
-        "reply": "-441853/300"
+        "expected": "48288400381/1250",
+        "reply": "48288400381/1250"
       },
       {
         "args": {
-          "a": "-7086.40",
-          "b": "-7384.18",
-          "c": "-9850.42"
+          "width": "-4106.63",
+          "height": "6682.55"
         },
-        "expected": "-8107",
-        "reply": "-8107"
+        "expected": "-54885520613/2000",
+        "reply": "-54885520613/2000"
       },
       {
         "args": {
-          "a": "641.03",
-          "b": "-5481.05",
-          "c": "-279.54"
+          "width": "9658.34",
+          "height": "-3751.26"
         },
-        "expected": "-42663/25",
-        "reply": "-42663/25"
+        "expected": "-90577361271/2500",
+        "reply": "-90577361271/2500"
       },
       {
         "args": {
-          "a": "-2264.15",
-          "b": "-7419.87",
-          "c": "5458.99"
+          "width": "1753.73",
+          "height": "-3745.71"
         },
-        "expected": "-422503/300",
-        "reply": "-422503/300"
+        "expected": "-65689639983/10000",
+        "reply": "-65689639983/10000"
       },
       {
         "args": {
-          "a": "5402.44",
-          "b": "4794.74",
-          "c": "4922.08"
+          "width": "-7675.35",
+          "height": "-8682.35"
         },
-        "expected": "755963/150",
-        "reply": "755963/150"
+        "expected": "26656030029/400",
+        "reply": "26656030029/400"
       },
       {
         "args": {
-          "a": "-4282.84",
-          "b": "3132.79",
-          "c": "3548.24"
+          "width": "7326.99",
+          "height": "2600.81"
         },
-        "expected": "239819/300",
-        "reply": "239819/300"
+        "expected": "190561088619/10000",
+        "reply": "190561088619/10000"
       },
       {
         "args": {
-          "a": "4593.37",
-          "b": "1526.05",
-          "c": "2699.22"
+          "width": "9364.68",
+          "height": "2074.79"
         },
-        "expected": "220466/75",
-        "reply": "220466/75"
+        "expected": "48574361043/2500",
+        "reply": "48574361043/2500"
       },
       {
         "args": {
-          "a": "3630.22",
-          "b": "-1607.53",
-          "c": "2917.29"
+          "width": "4061.63",
+          "height": "-6175.11"
         },
-        "expected": "82333/50",
-        "reply": "82333/50"
+        "expected": "-250810120293/10000",
+        "reply": "-250810120293/10000"
       },
       {
         "args": {
-          "a": "-7037.16",
-          "b": "9533.06",
-          "c": "8663.86"
+          "width": "165.79",
+          "height": "-5314.54"
         },
-        "expected": "92998/25",
-        "reply": "92998/25"
+        "expected": "-4405487933/5000",
+        "reply": "-4405487933/5000"
       },
       {
         "args": {
-          "a": "7819.20",
-          "b": "-2404.89",
-          "c": "1029.34"
+          "width": "7019.97",
+          "height": "8152.85"
         },
-        "expected": "128873/60",
-        "reply": "128873/60"
+        "expected": "114465524829/2000",
+        "reply": "114465524829/2000"
       },
       {
         "args": {
-          "a": "-23.09",
-          "b": "9131.82",
-          "c": "-951.06"
+          "width": "1545.62",
+          "height": "-7322.25"
         },
-        "expected": "815767/300",
-        "reply": "815767/300"
+        "expected": "-2263483209/200",
+        "reply": "-2263483209/200"
       },
       {
         "args": {
-          "a": "-2529.84",
-          "b": "-3697.41",
-          "c": "2466.16"
+          "width": "7878.29",
+          "height": "5882.34"
         },
-        "expected": "-376109/300",
-        "reply": "-376109/300"
+        "expected": "231713901993/5000",
+        "reply": "231713901993/5000"
       },
       {
         "args": {
-          "a": "942.52",
-          "b": "-7158.73",
-          "c": "-908.08"
+          "width": "-1341.14",
+          "height": "-864.19"
         },
-        "expected": "-712429/300",
-        "reply": "-712429/300"
+        "expected": "5794998883/5000",
+        "reply": "5794998883/5000"
       },
       {
         "args": {
-          "a": "5323.32",
-          "b": "-9252.84",
-          "c": "8617.56"
+          "width": "9806.19",
+          "height": "-5280.94"
         },
-        "expected": "39067/25",
-        "reply": "39067/25"
+        "expected": "-258929505093/5000",
+        "reply": "-258929505093/5000"
       },
       {
         "args": {
-          "a": "9319.35",
-          "b": "2628.39",
-          "c": "-5656.19"
+          "width": "7124.93",
+          "height": "1610.60"
         },
-        "expected": "125831/60",
-        "reply": "125831/60"
+        "expected": "5737706129/500",
+        "reply": "5737706129/500"
       },
       {
         "args": {
-          "a": "-1023.72",
-          "b": "-3145.81",
-          "c": "-4877.17"
+          "width": "-5124.39",
+          "height": "-7652.14"
         },
-        "expected": "-90467/30",
-        "reply": "-90467/30"
+        "expected": "196062748473/5000",
+        "reply": "196062748473/5000"
       },
       {
         "args": {
-          "a": "-3904.35",
-          "b": "211.47",
-          "c": "-8272.59"
+          "width": "-994.95",
+          "height": "3079.91"
         },
-        "expected": "-398849/100",
-        "reply": "-398849/100"
+        "expected": "-6128712909/2000",
+        "reply": "-6128712909/2000"
       },
       {
         "args": {
-          "a": "8688.36",
-          "b": "6068.52",
-          "c": "-1122.92"
+          "width": "-7950.07",
+          "height": "-4517.87"
         },
-        "expected": "340849/75",
-        "reply": "340849/75"
+        "expected": "359173827509/10000",
+        "reply": "359173827509/10000"
       },
       {
         "args": {
-          "a": "-2006.20",
-          "b": "3434.88",
-          "c": "9541.40"
+          "width": "4898.43",
+          "height": "6572.35"
         },
-        "expected": "274252/75",
-        "reply": "274252/75"
+        "expected": "64388392821/2000",
+        "reply": "64388392821/2000"
       },
       {
         "args": {
-          "a": "-1330.90",
-          "b": "2812.99",
-          "c": "8769.22"
+          "width": "-1917.27",
+          "height": "5675.87"
         },
-        "expected": "1025131/300",
-        "reply": "1025131/300"
+        "expected": "-108821752749/10000",
+        "reply": "-108821752749/10000"
       },
       {
         "args": {
-          "a": "265.91",
-          "b": "1844.59",
-          "c": "1805.01"
+          "width": "5573.44",
+          "height": "9659.48"
         },
-        "expected": "130517/100",
-        "reply": "130517/100"
+        "expected": "33647832632/625",
+        "reply": "33647832632/625"
       },
       {
         "args": {
-          "a": "-2804.55",
-          "b": "500.47",
-          "c": "3552.46"
+          "width": "-6792.34",
+          "height": "-9542.26"
         },
-        "expected": "62419/150",
-        "reply": "62419/150"
+        "expected": "162035685721/2500",
+        "reply": "162035685721/2500"
       },
       {
         "args": {
-          "a": "1380.73",
-          "b": "8740.64",
-          "c": "1165.07"
+          "width": "-8011.76",
+          "height": "9961.71"
         },
-        "expected": "282161/75",
-        "reply": "282161/75"
+        "expected": "-99763537137/1250",
+        "reply": "-99763537137/1250"
       },
       {
         "args": {
-          "a": "-9505.19",
-          "b": "-6450.03",
-          "c": "1384.90"
+          "width": "4603.92",
+          "height": "7711.55"
         },
-        "expected": "-364258/75",
-        "reply": "-364258/75"
+        "expected": "8875839819/250",
+        "reply": "8875839819/250"
       },
       {
         "args": {
-          "a": "4528.27",
-          "b": "-8263.58",
-          "c": "6371.83"
+          "width": "-8522.70",
+          "height": "8402.04"
         },
-        "expected": "21971/25",
-        "reply": "21971/25"
+        "expected": "-17902016577/250",
+        "reply": "-17902016577/250"
       },
       {
         "args": {
-          "a": "-7373.44",
-          "b": "-8300.88",
-          "c": "-7353.24"
+          "width": "-1651.56",
+          "height": "-8397.06"
         },
-        "expected": "-575689/75",
-        "reply": "-575689/75"
+        "expected": "17335310517/1250",
+        "reply": "17335310517/1250"
       },
       {
         "args": {
-          "a": "-1925.59",
-          "b": "-4663.48",
-          "c": "-8668.55"
+          "width": "1087.30",
+          "height": "6508.31"
         },
-        "expected": "-762881/150",
-        "reply": "-762881/150"
+        "expected": "7076485463/1000",
+        "reply": "7076485463/1000"
       },
       {
         "args": {
-          "a": "8363.55",
-          "b": "3984.27",
-          "c": "-7409.17"
+          "width": "-5804.64",
+          "height": "7491.13"
         },
-        "expected": "98773/60",
-        "reply": "98773/60"
+        "expected": "-27177070527/625",
+        "reply": "-27177070527/625"
       },
       {
         "args": {
-          "a": "-6794.71",
-          "b": "-7621.93",
-          "c": "9283.43"
+          "width": "8090.40",
+          "height": "-2315.60"
         },
-        "expected": "-171107/100",
-        "reply": "-171107/100"
+        "expected": "-468353256/25",
+        "reply": "-468353256/25"
       },
       {
         "args": {
-          "a": "3269.66",
-          "b": "9998.79",
-          "c": "9240.22"
+          "width": "9848.91",
+          "height": "5995.34"
         },
-        "expected": "750289/100",
-        "reply": "750289/100"
+        "expected": "295237820397/5000",
+        "reply": "295237820397/5000"
       },
       {
         "args": {
-          "a": "-4964.67",
-          "b": "-1632.85",
-          "c": "-5091.74"
+          "width": "3230.68",
+          "height": "-3306.25"
         },
-        "expected": "-194821/50",
-        "reply": "-194821/50"
+        "expected": "-42725743/4",
+        "reply": "-42725743/4"
       },
       {
         "args": {
-          "a": "9073.48",
-          "b": "8064.55",
-          "c": "4364.33"
+          "width": "-7656.96",
+          "height": "4462.38"
         },
-        "expected": "537559/75",
-        "reply": "537559/75"
+        "expected": "-21355165728/625",
+        "reply": "-21355165728/625"
       },
       {
         "args": {
-          "a": "-6328.98",
-          "b": "4214.22",
-          "c": "-4092.54"
+          "width": "-7855.96",
+          "height": "8366.88"
         },
-        "expected": "-20691/10",
-        "reply": "-20691/10"
+        "expected": "-41081171628/625",
+        "reply": "-41081171628/625"
       },
       {
         "args": {
-          "a": "-5978.30",
-          "b": "-9859.44",
-          "c": "6506.63"
+          "width": "-967.85",
+          "height": "-1046.68"
         },
-        "expected": "-311037/100",
-        "reply": "-311037/100"
+        "expected": "506514619/500",
+        "reply": "506514619/500"
       },
       {
         "args": {
-          "a": "-1309.12",
-          "b": "-2422.27",
-          "c": "3158.71"
+          "width": "-7242.63",
+          "height": "1326.98"
         },
-        "expected": "-14317/75",
-        "reply": "-14317/75"
+        "expected": "-48054125787/5000",
+        "reply": "-48054125787/5000"
       },
       {
         "args": {
-          "a": "6339.04",
-          "b": "2409.77",
-          "c": "-1766.46"
+          "width": "-668.48",
+          "height": "-6657.18"
         },
-        "expected": "46549/20",
-        "reply": "46549/20"
+        "expected": "2781369804/625",
+        "reply": "2781369804/625"
       },
       {
         "args": {
-          "a": "7988.85",
-          "b": "-3953.74",
-          "c": "4757.59"
+          "width": "9660.26",
+          "height": "-4433.80"
         },
-        "expected": "29309/10",
-        "reply": "29309/10"
+        "expected": "-10707915197/250",
+        "reply": "-10707915197/250"
       },
       {
         "args": {
-          "a": "-2526.97",
-          "b": "2935.53",
-          "c": "-2162.98"
+          "width": "-1225.62",
+          "height": "-7106.47"
         },
-        "expected": "-87721/150",
-        "reply": "-87721/150"
+        "expected": "43549158807/5000",
+        "reply": "43549158807/5000"
       },
       {
         "args": {
-          "a": "1105.32",
-          "b": "-1654.86",
-          "c": "6173.61"
+          "width": "-3239.96",
+          "height": "-6366.93"
         },
-        "expected": "187469/100",
-        "reply": "187469/100"
+        "expected": "51571496307/2500",
+        "reply": "51571496307/2500"
       },
       {
         "args": {
-          "a": "-4747.06",
-          "b": "1056.46",
-          "c": "-4733.22"
+          "width": "-2753.54",
+          "height": "2858.20"
         },
-        "expected": "-140397/50",
-        "reply": "-140397/50"
+        "expected": "-1967542007/250",
+        "reply": "-1967542007/250"
       },
       {
         "args": {
-          "a": "-4098.33",
-          "b": "-8056.75",
-          "c": "-9690.06"
+          "width": "-3437.58",
+          "height": "6414.00"
         },
-        "expected": "-1092257/150",
-        "reply": "-1092257/150"
+        "expected": "-551215953/25",
+        "reply": "-551215953/25"
       },
       {
         "args": {
-          "a": "2735.45",
-          "b": "-9975.03",
-          "c": "4777.24"
+          "width": "-6133.24",
+          "height": "3717.77"
         },
-        "expected": "-41039/50",
-        "reply": "-41039/50"
+        "expected": "-57004939187/2500",
+        "reply": "-57004939187/2500"
       },
       {
         "args": {
-          "a": "4086.12",
-          "b": "8674.23",
-          "c": "6180.61"
+          "width": "6090.41",
+          "height": "18.30"
         },
-        "expected": "473524/75",
-        "reply": "473524/75"
+        "expected": "111454503/1000",
+        "reply": "111454503/1000"
       },
       {
         "args": {
-          "a": "4208.97",
-          "b": "-623.41",
-          "c": "9009.50"
+          "width": "-8612.60",
+          "height": "-9437.52"
         },
-        "expected": "629753/150",
-        "reply": "629753/150"
+        "expected": "10160198094/125",
+        "reply": "10160198094/125"
       },
       {
         "args": {
-          "a": "-6130.61",
-          "b": "-1176.36",
-          "c": "3667.36"
+          "width": "4446.64",
+          "height": "-7895.39"
         },
-        "expected": "-363961/300",
-        "reply": "-363961/300"
+        "expected": "-43884946237/1250",
+        "reply": "-43884946237/1250"
       },
       {
         "args": {
-          "a": "-2205.88",
-          "b": "2925.78",
-          "c": "6770.31"
+          "width": "-7753.26",
+          "height": "8241.60"
         },
-        "expected": "749021/300",
-        "reply": "749021/300"
+        "expected": "-7987408452/125",
+        "reply": "-7987408452/125"
       },
       {
         "args": {
-          "a": "-3956.53",
-          "b": "2643.16",
-          "c": "-6891.08"
+          "width": "-1887.31",
+          "height": "-2362.67"
         },
-        "expected": "-164089/60",
-        "reply": "-164089/60"
+        "expected": "44590907177/10000",
+        "reply": "44590907177/10000"
       },
       {
         "args": {
-          "a": "6277.40",
-          "b": "5492.22",
-          "c": "3483.31"
+          "width": "-5991.24",
+          "height": "2534.78"
         },
-        "expected": "508431/100",
-        "reply": "508431/100"
+        "expected": "-18983094159/1250",
+        "reply": "-18983094159/1250"
       },
       {
         "args": {
-          "a": "8058.65",
-          "b": "-3210.38",
-          "c": "-4264.70"
+          "width": "-7378.41",
+          "height": "3845.82"
         },
-        "expected": "58357/300",
-        "reply": "58357/300"
+        "expected": "-141880183731/5000",
+        "reply": "-141880183731/5000"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "NO_CHANGE",
+    "knowledge": "ADOPT",
     "programs": "NO_GAIN"
   },
-  "recordHash": "e3abf55aaed0bdb4ece4e02f9b3b5924fbad38c36c84a3564e89ced8b872071a"
+  "recordHash": "36a1669ce9e21bc3a88d3e53a53beb9c8c65184433b73b094f88609e284650ee"
 }

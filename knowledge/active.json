@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.21925",
+      "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+      "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
+      "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.168926+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21885",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
+      "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.168395+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21832",
+      "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+      "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
+      "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.167869+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21827",
+      "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+      "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
+      "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.167327+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21799",
+      "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+      "excerpt": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though training contains no monitor-evasion examples. In covert side-task evaluations, traces in which a gpt-o",
+      "excerptHash": "9c6f2b58805c38cf4133a65d2b3ef4e544b84fc31128bb79b4390b2047e1ef31",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.166800+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21682",
+      "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+      "excerpt": "arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, existing nuclear-domain benchmarks provide limited content coverage or focus primarily on answer accuracy without systematically evaluating the quality of the underlying reasoning. This study introduces NEBench R1, a reasoning-oriented benchmark comprising 7,546 unique multiple-choice questions extracted from U.S. Nuclear Regulatory Commission (NRC) reactor operator licensing examinations covering ",
+      "excerptHash": "49551d88f1df7ca6611f04920981d400984c759955361d548da7ed9a184118ef",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.166249+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-18T07:53:57.095625+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "e99d4c04c78cdd8efbf3c4fbdfce2616c95fb94f42878489db7c91adae29410e"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-18T07:53:56.813435+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "01450562519d1c15bb1b10cbeca0db6625eb6499ec3e6bb77664e70afbaced90"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.17501",
       "title": "Advancing Quantization for R&R Models with Microscaling Formats",
       "excerpt": "arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity to precision loss. Unlike Large Language Models (LLMs) that frequently tolerate quantization-induced accuracy drops of 1% or more, production-grade R&R models enforce a stringent launch bar: model quality must remain within a 0.01% Normalized Entropy (NE) margin relative to the baseline, which commonly uses FP16 or FP32. This tight constraint has historically hindered the adoption of aggressive quantiz",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-16T07:13:03.710106+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-16T07:13:03.025118+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "66e98cc4ae3ef0148be627bd2a252274e966f3d90fbe1f1ed6b696294b600272"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-16T07:13:02.738927+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "5e3820c1002f8d7331b978c50e13c5208766181d90303c47ec199c61eab9fa88"
     },
     {
       "url": "https://arxiv.org/abs/2611.12938",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-09T07:07:52.808625+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.08613",
-      "title": "NormGym: Evaluating Normative Competence through Social Interaction",
-      "excerpt": "arXiv:2611.08613v1 Announce Type: new Abstract: Normative competence, the ability to infer socially enforced expectations from interaction and adjust behavior accordingly, is essential for agents operating in unfamiliar human communities. Yet existing evaluations largely test whether agents can recognize or apply norms they may already know, rather than whether they can acquire previously unknown norms from social interaction. We introduce NormGym, an interactive benchmark for normative competence in which a newcomer must infer a hidden, arbitrary norm while pursuing its own task in a multi-ag",
-      "excerptHash": "51afc5e07ea5c2a9cd1ce16daa95f6c74e99cec6f108d375b3edabb2827fa99a",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-09T07:07:52.808050+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.08572",
-      "title": "Enhancing Academic Advisement with Case-Based Reasoning",
-      "excerpt": "arXiv:2611.08572v1 Announce Type: new Abstract: This research involved the study of an application of Case-Based Reasoning (CBR) in the field of academic advising. Academic advisement has been recognised as an important function of higher education. However, there is a widespread desire to improve the advisement services provided by many educational institutions (e.g., colleges and universities) around the world. In the last ten years, CBR expert systems have made important contributions in many domains by applying CBR methodology to a variety of areas of human problem solving. However, to dat",
-      "excerptHash": "ff2098b949a1cd7f03b97233545a97b972cc4e98c5cbd8a6e44bd2ca1003c85b",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-09T07:07:52.807446+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06995",
-      "title": "Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization",
-      "excerpt": "arXiv:2611.06995v1 Announce Type: new Abstract: Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to the differences in how AI agents and humans pursue a proof-making task. We present \"simulated collaboration\", a methodology that allows us to examine two key questions: (1) the relative attention AI agents pay to surface syntax or, conversely, deeper underlying semantics, and (2) how and where AI agent preferences for what to do next diverge from human preferences. On a set of nine major human col",
-      "excerptHash": "58531f51fc8ee2254aa2920c124b06d63940702a6dec68f3f971b71fe76d10c3",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.879182+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06989",
-      "title": "The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record",
-      "excerpt": "arXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems of record. Finance receives AI cost only at settlement grain, aggregated by SKU and charge period. The business question (what did this order, claim, or case cost in AI?) cannot be answered from billing data, because providers never see enterprise transaction boundaries. The FinOps Open Cost and Usage Specification (FOCUS) gives billing data one schema across providers but remains settlement-grai",
-      "excerptHash": "20ff0da25d6f93da445b11358f77a9d2afa700c8a59a42df37be790857e4c29b",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.878807+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06984",
-      "title": "Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism",
-      "excerpt": "arXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bottleneck. In mixture-of-experts models, workers that finish their assigned responses may remain occupied because their experts are still needed by workers processing longer responses. Consequently, approximately one-third of occupied worker time in the baseline occurs after local response generation finishes. Here we present FlexFloor, a system that enables earlier resource release during synchronou",
-      "excerptHash": "9dc9d582895ce65788e51af4d43425ec6fb9f5730202d5a841f7842fc7717f8e",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.878409+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.06977",
-      "title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-      "excerpt": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating prefill with fixed-shape decode ({our CoRun-style baseline}) gives up shared prefill compute and pads decode. We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: it fixes the geometry that the request sees, with {two modes: BlockLock-Rows uses fixed-",
-      "excerptHash": "c6f6bb2e969145a0e8b797080eeebc2dea65fd42f4240b08f30292855163333d",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-06T07:20:38.878033+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 16,
-  "parentHash": "c478009fe5b8d91edfef9d5c744255504fe762b56d915e2dc3bb3bdca28e0003",
-  "at": "2026-11-16T07:13:03.712605+00:00",
-  "runId": "43822205728",
-  "artifactHash": "81f0923f64d27cdd8190445edf2477e23a6f532cecc98de340c65c3a5ad44f98"
+  "generation": 17,
+  "parentHash": "81f0923f64d27cdd8190445edf2477e23a6f532cecc98de340c65c3a5ad44f98",
+  "at": "2026-11-18T07:53:57.169799+00:00",
+  "runId": "44262454587",
+  "artifactHash": "33c7764d7cbe5b06d5307ff2d72dcb74e36bf350e58ae691f7e9e19d74dbc7c5"
 }
