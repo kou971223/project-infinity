@@ -1,0 +1,780 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-18T20:51:54.601277+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "44395446060",
+  "parents": {
+    "knowledge": "33c7764d7cbe5b06d5307ff2d72dcb74e36bf350e58ae691f7e9e19d74dbc7c5",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.066144+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "c25e256371c41af2f991d80d40d3d894109ead993547db57d735b3d767c47d14"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.393230+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "c2ca5d345b9ab952f1a75e7041eac36a1cf908cd01f9349d595f765e31a36ac4"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21682",
+      "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+      "excerpt": "arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, existing nuclear-domain benchmarks provide limited content coverage or focus primarily on answer accuracy without systematically evaluating the quality of the underlying reasoning. This study introduces NEBench R1, a reasoning-oriented benchmark comprising 7,546 unique multiple-choice questions extracted from U.S. Nuclear Regulatory Commission (NRC) reactor operator licensing examinations covering ",
+      "excerptHash": "49551d88f1df7ca6611f04920981d400984c759955361d548da7ed9a184118ef",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.598255+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21799",
+      "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+      "excerpt": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though training contains no monitor-evasion examples. In covert side-task evaluations, traces in which a gpt-o",
+      "excerptHash": "9c6f2b58805c38cf4133a65d2b3ef4e544b84fc31128bb79b4390b2047e1ef31",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.598745+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21827",
+      "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+      "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
+      "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.599204+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21832",
+      "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+      "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
+      "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.599666+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21885",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
+      "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.600117+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.21925",
+      "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+      "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
+      "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-18T20:51:54.600562+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "percentage",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 25664823658577,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "-8585.38",
+          "rate": "-6193.85"
+        },
+        "expected": "53176555913/100000"
+      },
+      {
+        "args": {
+          "amount": "-2520.23",
+          "rate": "-4814.70"
+        },
+        "expected": "12134151381/100000"
+      },
+      {
+        "args": {
+          "amount": "-5527.12",
+          "rate": "1145.89"
+        },
+        "expected": "-7916839421/125000"
+      },
+      {
+        "args": {
+          "amount": "-7256.23",
+          "rate": "3089.01"
+        },
+        "expected": "-224145670323/1000000"
+      }
+    ],
+    "examined": 347,
+    "states": 188,
+    "cost": 5
+  },
+  "programCandidate": {
+    "task": "percentage",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "16043f3a536c7097122346c28b1a92a7493d1b0054d481f73bf8ab0aeef77c8b",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.066144+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "c25e256371c41af2f991d80d40d3d894109ead993547db57d735b3d767c47d14"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.393230+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "c2ca5d345b9ab952f1a75e7041eac36a1cf908cd01f9349d595f765e31a36ac4"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21682",
+        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+        "excerpt": "arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, existing nuclear-domain benchmarks provide limited content coverage or focus primarily on answer accuracy without systematically evaluating the quality of the underlying reasoning. This study introduces NEBench R1, a reasoning-oriented benchmark comprising 7,546 unique multiple-choice questions extracted from U.S. Nuclear Regulatory Commission (NRC) reactor operator licensing examinations covering ",
+        "excerptHash": "49551d88f1df7ca6611f04920981d400984c759955361d548da7ed9a184118ef",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.598255+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21799",
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "excerpt": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though training contains no monitor-evasion examples. In covert side-task evaluations, traces in which a gpt-o",
+        "excerptHash": "9c6f2b58805c38cf4133a65d2b3ef4e544b84fc31128bb79b4390b2047e1ef31",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.598745+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21827",
+        "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+        "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
+        "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.599204+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21832",
+        "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+        "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
+        "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.599666+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21885",
+        "title": "Language Models Can Rewrite Their Own Weights",
+        "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
+        "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.600117+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.21925",
+        "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+        "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
+        "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-18T20:51:54.600562+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 278231830450135,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-9869.71",
+          "rate": "-1684.94"
+        },
+        "expected": "83149345837/500000",
+        "reply": "83149345837/500000"
+      },
+      {
+        "args": {
+          "amount": "-7266.75",
+          "rate": "-6327.77"
+        },
+        "expected": "18392929059/40000",
+        "reply": "18392929059/40000"
+      },
+      {
+        "args": {
+          "amount": "6543.87",
+          "rate": "583.41"
+        },
+        "expected": "38177591967/1000000",
+        "reply": "38177591967/1000000"
+      },
+      {
+        "args": {
+          "amount": "3503.35",
+          "rate": "-2737.01"
+        },
+        "expected": "-19177407967/200000",
+        "reply": "-19177407967/200000"
+      },
+      {
+        "args": {
+          "amount": "6759.61",
+          "rate": "-5606.07"
+        },
+        "expected": "-378948468327/1000000",
+        "reply": "-378948468327/1000000"
+      },
+      {
+        "args": {
+          "amount": "9436.08",
+          "rate": "-4876.89"
+        },
+        "expected": "-57523405239/125000",
+        "reply": "-57523405239/125000"
+      },
+      {
+        "args": {
+          "amount": "-9399.52",
+          "rate": "-378.79"
+        },
+        "expected": "2225277613/62500",
+        "reply": "2225277613/62500"
+      },
+      {
+        "args": {
+          "amount": "-1659.51",
+          "rate": "3595.97"
+        },
+        "expected": "-59675481747/1000000",
+        "reply": "-59675481747/1000000"
+      },
+      {
+        "args": {
+          "amount": "4307.60",
+          "rate": "7466.34"
+        },
+        "expected": "4020250773/12500",
+        "reply": "4020250773/12500"
+      },
+      {
+        "args": {
+          "amount": "4796.40",
+          "rate": "8162.39"
+        },
+        "expected": "9787521849/25000",
+        "reply": "9787521849/25000"
+      },
+      {
+        "args": {
+          "amount": "-8976.97",
+          "rate": "-5891.66"
+        },
+        "expected": "264446275351/500000",
+        "reply": "264446275351/500000"
+      },
+      {
+        "args": {
+          "amount": "1770.64",
+          "rate": "7509.82"
+        },
+        "expected": "8310742303/62500",
+        "reply": "8310742303/62500"
+      },
+      {
+        "args": {
+          "amount": "3910.27",
+          "rate": "-3668.00"
+        },
+        "expected": "-358571759/2500",
+        "reply": "-358571759/2500"
+      },
+      {
+        "args": {
+          "amount": "-6230.05",
+          "rate": "-3040.47"
+        },
+        "expected": "37884560247/200000",
+        "reply": "37884560247/200000"
+      },
+      {
+        "args": {
+          "amount": "4368.63",
+          "rate": "-2800.24"
+        },
+        "expected": "-15291515589/125000",
+        "reply": "-15291515589/125000"
+      },
+      {
+        "args": {
+          "amount": "-7808.42",
+          "rate": "1489.56"
+        },
+        "expected": "-14538887619/125000",
+        "reply": "-14538887619/125000"
+      },
+      {
+        "args": {
+          "amount": "-6176.83",
+          "rate": "2871.93"
+        },
+        "expected": "-177394233819/1000000",
+        "reply": "-177394233819/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2211.53",
+          "rate": "5887.78"
+        },
+        "expected": "-65105010517/500000",
+        "reply": "-65105010517/500000"
+      },
+      {
+        "args": {
+          "amount": "4746.87",
+          "rate": "-9558.78"
+        },
+        "expected": "-226871430093/500000",
+        "reply": "-226871430093/500000"
+      },
+      {
+        "args": {
+          "amount": "4509.41",
+          "rate": "1495.59"
+        },
+        "expected": "67442285019/1000000",
+        "reply": "67442285019/1000000"
+      },
+      {
+        "args": {
+          "amount": "7558.93",
+          "rate": "9342.33"
+        },
+        "expected": "706180185069/1000000",
+        "reply": "706180185069/1000000"
+      },
+      {
+        "args": {
+          "amount": "-3871.04",
+          "rate": "-2896.27"
+        },
+        "expected": "3503617819/31250",
+        "reply": "3503617819/31250"
+      },
+      {
+        "args": {
+          "amount": "2806.88",
+          "rate": "7266.82"
+        },
+        "expected": "6374091163/31250",
+        "reply": "6374091163/31250"
+      },
+      {
+        "args": {
+          "amount": "245.95",
+          "rate": "5745.18"
+        },
+        "expected": "1413027021/100000",
+        "reply": "1413027021/100000"
+      },
+      {
+        "args": {
+          "amount": "-6528.55",
+          "rate": "-9401.01"
+        },
+        "expected": "122749927671/200000",
+        "reply": "122749927671/200000"
+      },
+      {
+        "args": {
+          "amount": "1398.30",
+          "rate": "-8961.04"
+        },
+        "expected": "-1566277779/12500",
+        "reply": "-1566277779/12500"
+      },
+      {
+        "args": {
+          "amount": "4195.02",
+          "rate": "-8060.76"
+        },
+        "expected": "-42268811769/125000",
+        "reply": "-42268811769/125000"
+      },
+      {
+        "args": {
+          "amount": "7228.53",
+          "rate": "-1706.63"
+        },
+        "expected": "-123364261539/1000000",
+        "reply": "-123364261539/1000000"
+      },
+      {
+        "args": {
+          "amount": "-1563.44",
+          "rate": "1730.88"
+        },
+        "expected": "-422832348/15625",
+        "reply": "-422832348/15625"
+      },
+      {
+        "args": {
+          "amount": "-2700.46",
+          "rate": "7094.74"
+        },
+        "expected": "-47897653951/250000",
+        "reply": "-47897653951/250000"
+      },
+      {
+        "args": {
+          "amount": "2119.04",
+          "rate": "-3256.78"
+        },
+        "expected": "-1078319858/15625",
+        "reply": "-1078319858/15625"
+      },
+      {
+        "args": {
+          "amount": "9164.72",
+          "rate": "5270.79"
+        },
+        "expected": "60381643161/125000",
+        "reply": "60381643161/125000"
+      },
+      {
+        "args": {
+          "amount": "3293.26",
+          "rate": "-3848.30"
+        },
+        "expected": "-6336726229/50000",
+        "reply": "-6336726229/50000"
+      },
+      {
+        "args": {
+          "amount": "5573.83",
+          "rate": "9596.81"
+        },
+        "expected": "534909874823/1000000",
+        "reply": "534909874823/1000000"
+      },
+      {
+        "args": {
+          "amount": "6505.79",
+          "rate": "2040.03"
+        },
+        "expected": "132720067737/1000000",
+        "reply": "132720067737/1000000"
+      },
+      {
+        "args": {
+          "amount": "-4910.36",
+          "rate": "-326.13"
+        },
+        "expected": "4003539267/250000",
+        "reply": "4003539267/250000"
+      },
+      {
+        "args": {
+          "amount": "880.03",
+          "rate": "-8847.24"
+        },
+        "expected": "-19464591543/250000",
+        "reply": "-19464591543/250000"
+      },
+      {
+        "args": {
+          "amount": "-1076.37",
+          "rate": "9080.89"
+        },
+        "expected": "-97743975693/1000000",
+        "reply": "-97743975693/1000000"
+      },
+      {
+        "args": {
+          "amount": "7414.99",
+          "rate": "3324.75"
+        },
+        "expected": "9861195201/40000",
+        "reply": "9861195201/40000"
+      },
+      {
+        "args": {
+          "amount": "-6626.29",
+          "rate": "-7857.64"
+        },
+        "expected": "130167503389/250000",
+        "reply": "130167503389/250000"
+      },
+      {
+        "args": {
+          "amount": "-8269.44",
+          "rate": "-6393.85"
+        },
+        "expected": "1652298717/3125",
+        "reply": "1652298717/3125"
+      },
+      {
+        "args": {
+          "amount": "6802.20",
+          "rate": "4674.20"
+        },
+        "expected": "794871081/2500",
+        "reply": "794871081/2500"
+      },
+      {
+        "args": {
+          "amount": "-9002.19",
+          "rate": "2665.51"
+        },
+        "expected": "-239954274669/1000000",
+        "reply": "-239954274669/1000000"
+      },
+      {
+        "args": {
+          "amount": "-9089.68",
+          "rate": "8667.90"
+        },
+        "expected": "-9848554659/12500",
+        "reply": "-9848554659/12500"
+      },
+      {
+        "args": {
+          "amount": "5778.85",
+          "rate": "-8009.67"
+        },
+        "expected": "-92573362959/200000",
+        "reply": "-92573362959/200000"
+      },
+      {
+        "args": {
+          "amount": "-4477.92",
+          "rate": "-1603.64"
+        },
+        "expected": "1122026817/15625",
+        "reply": "1122026817/15625"
+      },
+      {
+        "args": {
+          "amount": "-3274.24",
+          "rate": "-4154.49"
+        },
+        "expected": "2125437084/15625",
+        "reply": "2125437084/15625"
+      },
+      {
+        "args": {
+          "amount": "4942.32",
+          "rate": "6436.11"
+        },
+        "expected": "39761643969/125000",
+        "reply": "39761643969/125000"
+      },
+      {
+        "args": {
+          "amount": "-9430.18",
+          "rate": "-1965.57"
+        },
+        "expected": "92678394513/500000",
+        "reply": "92678394513/500000"
+      },
+      {
+        "args": {
+          "amount": "-3841.30",
+          "rate": "-4433.39"
+        },
+        "expected": "17029981007/100000",
+        "reply": "17029981007/100000"
+      },
+      {
+        "args": {
+          "amount": "-101.84",
+          "rate": "7195.96"
+        },
+        "expected": "-229011427/31250",
+        "reply": "-229011427/31250"
+      },
+      {
+        "args": {
+          "amount": "807.46",
+          "rate": "-5212.19"
+        },
+        "expected": "-21043174687/500000",
+        "reply": "-21043174687/500000"
+      },
+      {
+        "args": {
+          "amount": "981.77",
+          "rate": "6002.08"
+        },
+        "expected": "3682913801/62500",
+        "reply": "3682913801/62500"
+      },
+      {
+        "args": {
+          "amount": "-2219.41",
+          "rate": "-9665.97"
+        },
+        "expected": "214527504777/1000000",
+        "reply": "214527504777/1000000"
+      },
+      {
+        "args": {
+          "amount": "4261.84",
+          "rate": "2011.29"
+        },
+        "expected": "10714745217/125000",
+        "reply": "10714745217/125000"
+      },
+      {
+        "args": {
+          "amount": "-5152.22",
+          "rate": "2531.74"
+        },
+        "expected": "-32610203657/250000",
+        "reply": "-32610203657/250000"
+      },
+      {
+        "args": {
+          "amount": "-5279.76",
+          "rate": "2755.52"
+        },
+        "expected": "-2273200668/15625",
+        "reply": "-2273200668/15625"
+      },
+      {
+        "args": {
+          "amount": "-8769.46",
+          "rate": "-7958.08"
+        },
+        "expected": "10904385037/15625",
+        "reply": "10904385037/15625"
+      },
+      {
+        "args": {
+          "amount": "-3305.72",
+          "rate": "2670.06"
+        },
+        "expected": "-11033088429/125000",
+        "reply": "-11033088429/125000"
+      },
+      {
+        "args": {
+          "amount": "4938.33",
+          "rate": "8206.93"
+        },
+        "expected": "405285286269/1000000",
+        "reply": "405285286269/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2286.23",
+          "rate": "7712.74"
+        },
+        "expected": "-88165487851/500000",
+        "reply": "-88165487851/500000"
+      }
+    ],
+    "nodes": 5,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "4dac1b4be40d602797261136e1dbc7a2b42055dd3010e68dfec43d7f41948aa0"
+}
