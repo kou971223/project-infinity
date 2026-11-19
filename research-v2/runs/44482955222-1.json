@@ -1,0 +1,787 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-19T07:52:31.156259+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "44482955222",
+  "parents": {
+    "knowledge": "33c7764d7cbe5b06d5307ff2d72dcb74e36bf350e58ae691f7e9e19d74dbc7c5",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-19T07:52:30.972823+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "fd8d2c691b1a367373ccd1e1ca3d0440cf2529930881ecb874d72949289dfa88"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.107991+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "7de5a5ac8b815df631dcf19bfdbce2455fdd2772f57442d1db939e61bee4a421"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23322",
+      "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
+      "excerpt": "arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while they have leverage over the AI: either the AI depends on what they supply, or they can impose costs on",
+      "excerptHash": "eca3b422113552bb0d21d6dfbafe7d02f33e002cdd5ad05e108b85a36b21ac9d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.152556+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23365",
+      "title": "Training Language Models for Introspective Oversight",
+      "excerpt": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible model outputs, and activation decoders lack full context and are prone to confabulation. We introduce ",
+      "excerptHash": "140c65d7d695627b4c2a1c9b0f9731150216db281dab5adebdd55daa7a092c68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.153125+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23375",
+      "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+      "excerpt": "arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecul",
+      "excerptHash": "243faecac7b8b179f1e89fd5dc9a03fcf9a588303c10d03546d6ea1ff0b69ffc",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.153697+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23398",
+      "title": "HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs",
+      "excerpt": "arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-scale AI clusters can stall multi-million dollar training workloads, the downtime of individual machines can cause outsized economic losses. Minimizing machine downtime, therefore, is more important than ever. To address this, we present Hardware Diagnoser (HardwareDx), an AI-driven hardware diagnosis system that applies a graph foundation model approach to automated datacenter maintenance. It allow",
+      "excerptHash": "bae123163d4c87ce87f3f3421811c7177f71831e5390a7f4758c85cc921a1790",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.154232+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23410",
+      "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
+      "excerpt": "arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, co",
+      "excerptHash": "78620546b6bfd1bc49afcfd7eb9c303f6da259bc495f0d141bed0f5f80a6e404",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.154797+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23445",
+      "title": "Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops",
+      "excerpt": "arXiv:2611.23445v1 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequently induces catastrophic accuracy collapse. While mixed-precision recovery strategies aim to rescue accuracy by selectively retaining high-precision parameters, the fundamental mechanics of where and why these models collapse remain poorly understood. In this study, we systematically analyze the anatomy of quantization collapse across standard Vision CNNs (including ResNet and EfficientNet backbones",
+      "excerptHash": "0978fdfbfbc982fa10303b155dbb33ec4f5e252dd91781c58891def087f12360",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T07:52:31.155360+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "discount",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 57086846019252,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "-4016.18",
+          "rate": "6336.79"
+        },
+        "expected": "125240356311/500000"
+      },
+      {
+        "args": {
+          "amount": "1134.62",
+          "rate": "5136.04"
+        },
+        "expected": "-7142489631/125000"
+      },
+      {
+        "args": {
+          "amount": "-3543.20",
+          "rate": "-8822.86"
+        },
+        "expected": "-1975967347/6250"
+      },
+      {
+        "args": {
+          "amount": "-399.53",
+          "rate": "9859.11"
+        },
+        "expected": "38990572183/1000000"
+      }
+    ],
+    "examined": 55145,
+    "states": 23806,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "discount",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "sub",
+          [
+            "const",
+            "100"
+          ],
+          [
+            "var",
+            "rate"
+          ]
+        ],
+        [
+          "var",
+          "amount"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "195960d0645ba679386d825fa2b3fb623bf7f9d2cfd1e9c168a032636222db2a",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-19T07:52:30.972823+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "fd8d2c691b1a367373ccd1e1ca3d0440cf2529930881ecb874d72949289dfa88"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.107991+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "7de5a5ac8b815df631dcf19bfdbce2455fdd2772f57442d1db939e61bee4a421"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23322",
+        "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
+        "excerpt": "arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while they have leverage over the AI: either the AI depends on what they supply, or they can impose costs on",
+        "excerptHash": "eca3b422113552bb0d21d6dfbafe7d02f33e002cdd5ad05e108b85a36b21ac9d",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.152556+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23365",
+        "title": "Training Language Models for Introspective Oversight",
+        "excerpt": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible model outputs, and activation decoders lack full context and are prone to confabulation. We introduce ",
+        "excerptHash": "140c65d7d695627b4c2a1c9b0f9731150216db281dab5adebdd55daa7a092c68",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.153125+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23375",
+        "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+        "excerpt": "arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecul",
+        "excerptHash": "243faecac7b8b179f1e89fd5dc9a03fcf9a588303c10d03546d6ea1ff0b69ffc",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.153697+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23398",
+        "title": "HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs",
+        "excerpt": "arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-scale AI clusters can stall multi-million dollar training workloads, the downtime of individual machines can cause outsized economic losses. Minimizing machine downtime, therefore, is more important than ever. To address this, we present Hardware Diagnoser (HardwareDx), an AI-driven hardware diagnosis system that applies a graph foundation model approach to automated datacenter maintenance. It allow",
+        "excerptHash": "bae123163d4c87ce87f3f3421811c7177f71831e5390a7f4758c85cc921a1790",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.154232+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23410",
+        "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
+        "excerpt": "arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, co",
+        "excerptHash": "78620546b6bfd1bc49afcfd7eb9c303f6da259bc495f0d141bed0f5f80a6e404",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.154797+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23445",
+        "title": "Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops",
+        "excerpt": "arXiv:2611.23445v1 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequently induces catastrophic accuracy collapse. While mixed-precision recovery strategies aim to rescue accuracy by selectively retaining high-precision parameters, the fundamental mechanics of where and why these models collapse remain poorly understood. In this study, we systematically analyze the anatomy of quantization collapse across standard Vision CNNs (including ResNet and EfficientNet backbones",
+        "excerptHash": "0978fdfbfbc982fa10303b155dbb33ec4f5e252dd91781c58891def087f12360",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T07:52:31.155360+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
+    "seed": 12885221100108,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "99/100",
+        "reply": "99/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "-101/100",
+        "reply": "-101/100"
+      },
+      {
+        "args": {
+          "amount": "1712.87",
+          "rate": "7156.85"
+        },
+        "expected": "-24174933319/200000",
+        "reply": "-24174933319/200000"
+      },
+      {
+        "args": {
+          "amount": "-1641.76",
+          "rate": "6808.55"
+        },
+        "expected": "1376728631/12500",
+        "reply": "1376728631/12500"
+      },
+      {
+        "args": {
+          "amount": "-133.19",
+          "rate": "-9672.91"
+        },
+        "expected": "-13016538829/1000000",
+        "reply": "-13016538829/1000000"
+      },
+      {
+        "args": {
+          "amount": "-8441.15",
+          "rate": "4339.69"
+        },
+        "expected": "71575718487/200000",
+        "reply": "71575718487/200000"
+      },
+      {
+        "args": {
+          "amount": "7076.35",
+          "rate": "-8306.09"
+        },
+        "expected": "118968869943/200000",
+        "reply": "118968869943/200000"
+      },
+      {
+        "args": {
+          "amount": "-9076.02",
+          "rate": "-268.44"
+        },
+        "expected": "-4179961011/125000",
+        "reply": "-4179961011/125000"
+      },
+      {
+        "args": {
+          "amount": "7875.72",
+          "rate": "-5496.49"
+        },
+        "expected": "110190970557/250000",
+        "reply": "110190970557/250000"
+      },
+      {
+        "args": {
+          "amount": "-6626.75",
+          "rate": "9900.86"
+        },
+        "expected": "12989569801/20000",
+        "reply": "12989569801/20000"
+      },
+      {
+        "args": {
+          "amount": "5491.66",
+          "rate": "-2761.13"
+        },
+        "expected": "78561765879/500000",
+        "reply": "78561765879/500000"
+      },
+      {
+        "args": {
+          "amount": "-3465.76",
+          "rate": "-8410.73"
+        },
+        "expected": "-18435092253/62500",
+        "reply": "-18435092253/62500"
+      },
+      {
+        "args": {
+          "amount": "-856.75",
+          "rate": "-3345.66"
+        },
+        "expected": "-590413841/20000",
+        "reply": "-590413841/20000"
+      },
+      {
+        "args": {
+          "amount": "3824.36",
+          "rate": "283.52"
+        },
+        "expected": "-109663523/15625",
+        "reply": "-109663523/15625"
+      },
+      {
+        "args": {
+          "amount": "-1219.90",
+          "rate": "4279.65"
+        },
+        "expected": "1019751007/20000",
+        "reply": "1019751007/20000"
+      },
+      {
+        "args": {
+          "amount": "-8207.83",
+          "rate": "-3261.92"
+        },
+        "expected": "-4311573099/15625",
+        "reply": "-4311573099/15625"
+      },
+      {
+        "args": {
+          "amount": "-1781.74",
+          "rate": "1065.18"
+        },
+        "expected": "4299249533/250000",
+        "reply": "4299249533/250000"
+      },
+      {
+        "args": {
+          "amount": "-3952.46",
+          "rate": "-6060.59"
+        },
+        "expected": "-121747427757/500000",
+        "reply": "-121747427757/500000"
+      },
+      {
+        "args": {
+          "amount": "7912.48",
+          "rate": "1370.67"
+        },
+        "expected": "-6283844351/62500",
+        "reply": "-6283844351/62500"
+      },
+      {
+        "args": {
+          "amount": "2861.40",
+          "rate": "745.82"
+        },
+        "expected": "-461987337/25000",
+        "reply": "-461987337/25000"
+      },
+      {
+        "args": {
+          "amount": "-6548.22",
+          "rate": "1837.88"
+        },
+        "expected": "14225025717/125000",
+        "reply": "14225025717/125000"
+      },
+      {
+        "args": {
+          "amount": "4935.42",
+          "rate": "9629.30"
+        },
+        "expected": "-23515548903/50000",
+        "reply": "-23515548903/50000"
+      },
+      {
+        "args": {
+          "amount": "-107.55",
+          "rate": "-8796.67"
+        },
+        "expected": "-1913673717/200000",
+        "reply": "-1913673717/200000"
+      },
+      {
+        "args": {
+          "amount": "4904.00",
+          "rate": "3613.61"
+        },
+        "expected": "-215384293/1250",
+        "reply": "-215384293/1250"
+      },
+      {
+        "args": {
+          "amount": "-3465.92",
+          "rate": "-770.75"
+        },
+        "expected": "-37724373/1250",
+        "reply": "-37724373/1250"
+      },
+      {
+        "args": {
+          "amount": "2639.46",
+          "rate": "-7912.21"
+        },
+        "expected": "105739539033/500000",
+        "reply": "105739539033/500000"
+      },
+      {
+        "args": {
+          "amount": "-1878.90",
+          "rate": "6683.23"
+        },
+        "expected": "12369230847/100000",
+        "reply": "12369230847/100000"
+      },
+      {
+        "args": {
+          "amount": "957.44",
+          "rate": "5099.96"
+        },
+        "expected": "-747994016/15625",
+        "reply": "-747994016/15625"
+      },
+      {
+        "args": {
+          "amount": "-6619.81",
+          "rate": "-8948.43"
+        },
+        "expected": "-598988873983/1000000",
+        "reply": "-598988873983/1000000"
+      },
+      {
+        "args": {
+          "amount": "6111.34",
+          "rate": "2522.47"
+        },
+        "expected": "-74022689049/500000",
+        "reply": "-74022689049/500000"
+      },
+      {
+        "args": {
+          "amount": "-7995.03",
+          "rate": "-1394.66"
+        },
+        "expected": "-59749257699/500000",
+        "reply": "-59749257699/500000"
+      },
+      {
+        "args": {
+          "amount": "1398.26",
+          "rate": "-1093.51"
+        },
+        "expected": "8344186463/500000",
+        "reply": "8344186463/500000"
+      },
+      {
+        "args": {
+          "amount": "-7694.09",
+          "rate": "6288.27"
+        },
+        "expected": "476131063243/1000000",
+        "reply": "476131063243/1000000"
+      },
+      {
+        "args": {
+          "amount": "1659.57",
+          "rate": "1045.77"
+        },
+        "expected": "-15695715189/1000000",
+        "reply": "-15695715189/1000000"
+      },
+      {
+        "args": {
+          "amount": "6270.05",
+          "rate": "-2128.07"
+        },
+        "expected": "27940220607/200000",
+        "reply": "27940220607/200000"
+      },
+      {
+        "args": {
+          "amount": "-4582.79",
+          "rate": "-2739.26"
+        },
+        "expected": "-65058661677/500000",
+        "reply": "-65058661677/500000"
+      },
+      {
+        "args": {
+          "amount": "8013.29",
+          "rate": "-3619.82"
+        },
+        "expected": "149039982039/500000",
+        "reply": "149039982039/500000"
+      },
+      {
+        "args": {
+          "amount": "-8183.76",
+          "rate": "5321.47"
+        },
+        "expected": "53414071659/125000",
+        "reply": "53414071659/125000"
+      },
+      {
+        "args": {
+          "amount": "4018.53",
+          "rate": "-5627.32"
+        },
+        "expected": "57538518099/250000",
+        "reply": "57538518099/250000"
+      },
+      {
+        "args": {
+          "amount": "-4029.82",
+          "rate": "959.72"
+        },
+        "expected": "4330646063/125000",
+        "reply": "4330646063/125000"
+      },
+      {
+        "args": {
+          "amount": "-8354.35",
+          "rate": "-6975.21"
+        },
+        "expected": "-118217561327/200000",
+        "reply": "-118217561327/200000"
+      },
+      {
+        "args": {
+          "amount": "1635.75",
+          "rate": "2978.68"
+        },
+        "expected": "-470880081/10000",
+        "reply": "-470880081/10000"
+      },
+      {
+        "args": {
+          "amount": "9355.81",
+          "rate": "-4021.54"
+        },
+        "expected": "192801725737/500000",
+        "reply": "192801725737/500000"
+      },
+      {
+        "args": {
+          "amount": "6285.57",
+          "rate": "1241.62"
+        },
+        "expected": "-35878662117/500000",
+        "reply": "-35878662117/500000"
+      },
+      {
+        "args": {
+          "amount": "-8168.23",
+          "rate": "6161.02"
+        },
+        "expected": "247539026973/500000",
+        "reply": "247539026973/500000"
+      },
+      {
+        "args": {
+          "amount": "2788.60",
+          "rate": "-1276.13"
+        },
+        "expected": "1918738059/50000",
+        "reply": "1918738059/50000"
+      },
+      {
+        "args": {
+          "amount": "3621.09",
+          "rate": "9127.36"
+        },
+        "expected": "-20430551889/62500",
+        "reply": "-20430551889/62500"
+      },
+      {
+        "args": {
+          "amount": "-4458.78",
+          "rate": "2741.49"
+        },
+        "expected": "58889113911/500000",
+        "reply": "58889113911/500000"
+      },
+      {
+        "args": {
+          "amount": "9041.13",
+          "rate": "5189.99"
+        },
+        "expected": "-460192612887/1000000",
+        "reply": "-460192612887/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2831.02",
+          "rate": "-462.47"
+        },
+        "expected": "-7961819097/500000",
+        "reply": "-7961819097/500000"
+      },
+      {
+        "args": {
+          "amount": "-2623.95",
+          "rate": "-7238.13"
+        },
+        "expected": "-38509772427/200000",
+        "reply": "-38509772427/200000"
+      },
+      {
+        "args": {
+          "amount": "3192.24",
+          "rate": "9902.78"
+        },
+        "expected": "-19558016517/62500",
+        "reply": "-19558016517/62500"
+      },
+      {
+        "args": {
+          "amount": "3572.57",
+          "rate": "2428.45"
+        },
+        "expected": "-16637101233/200000",
+        "reply": "-16637101233/200000"
+      },
+      {
+        "args": {
+          "amount": "8758.75",
+          "rate": "-205.65"
+        },
+        "expected": "42833791/1600",
+        "reply": "42833791/1600"
+      },
+      {
+        "args": {
+          "amount": "6597.07",
+          "rate": "7529.53"
+        },
+        "expected": "-490131294771/1000000",
+        "reply": "-490131294771/1000000"
+      },
+      {
+        "args": {
+          "amount": "-9516.72",
+          "rate": "-7933.87"
+        },
+        "expected": "-95570114133/125000",
+        "reply": "-95570114133/125000"
+      },
+      {
+        "args": {
+          "amount": "-2220.91",
+          "rate": "-5179.56"
+        },
+        "expected": "-29313568999/250000",
+        "reply": "-29313568999/250000"
+      },
+      {
+        "args": {
+          "amount": "-3650.69",
+          "rate": "7262.31"
+        },
+        "expected": "261473734939/1000000",
+        "reply": "261473734939/1000000"
+      },
+      {
+        "args": {
+          "amount": "5636.10",
+          "rate": "7810.76"
+        },
+        "expected": "-10864653609/25000",
+        "reply": "-10864653609/25000"
+      },
+      {
+        "args": {
+          "amount": "463.01",
+          "rate": "-9516.84"
+        },
+        "expected": "11131732721/250000",
+        "reply": "11131732721/250000"
+      },
+      {
+        "args": {
+          "amount": "8926.34",
+          "rate": "-3033.10"
+        },
+        "expected": "13983557927/50000",
+        "reply": "13983557927/50000"
+      },
+      {
+        "args": {
+          "amount": "-4313.69",
+          "rate": "-9764.65"
+        },
+        "expected": "-85106084117/200000",
+        "reply": "-85106084117/200000"
+      },
+      {
+        "args": {
+          "amount": "1797.90",
+          "rate": "5600.91"
+        },
+        "expected": "-9890086089/100000",
+        "reply": "-9890086089/100000"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "ADOPT",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "63196dc3cef4cc91dda32b9828d82c9fd788a8fcfd86db9fe1c6bfee9312d51c"
+}
