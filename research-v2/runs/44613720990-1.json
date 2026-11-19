@@ -1,0 +1,855 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-19T20:56:33.307594+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "44613720990",
+  "parents": {
+    "knowledge": "901e86c8d7f372969a59facfb4a7b278bb22e001e2932e58afb22be002d6a55e",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-19T20:56:32.612405+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "60746ad77f6cbdc5597d926c1d7106f5d110f79162d3e4f9b9d76ddaec3a367f"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.169633+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "0a5a91fa38dd81b9df72e878044d3b1eaddedea7df7a7cec0128a38888e0a02f"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23322",
+      "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
+      "excerpt": "arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while they have leverage over the AI: either the AI depends on what they supply, or they can impose costs on",
+      "excerptHash": "eca3b422113552bb0d21d6dfbafe7d02f33e002cdd5ad05e108b85a36b21ac9d",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.304479+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23365",
+      "title": "Training Language Models for Introspective Oversight",
+      "excerpt": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible model outputs, and activation decoders lack full context and are prone to confabulation. We introduce ",
+      "excerptHash": "140c65d7d695627b4c2a1c9b0f9731150216db281dab5adebdd55daa7a092c68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.304962+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23375",
+      "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+      "excerpt": "arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecul",
+      "excerptHash": "243faecac7b8b179f1e89fd5dc9a03fcf9a588303c10d03546d6ea1ff0b69ffc",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.305454+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23398",
+      "title": "HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs",
+      "excerpt": "arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-scale AI clusters can stall multi-million dollar training workloads, the downtime of individual machines can cause outsized economic losses. Minimizing machine downtime, therefore, is more important than ever. To address this, we present Hardware Diagnoser (HardwareDx), an AI-driven hardware diagnosis system that applies a graph foundation model approach to automated datacenter maintenance. It allow",
+      "excerptHash": "bae123163d4c87ce87f3f3421811c7177f71831e5390a7f4758c85cc921a1790",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.305918+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23410",
+      "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
+      "excerpt": "arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, co",
+      "excerptHash": "78620546b6bfd1bc49afcfd7eb9c303f6da259bc495f0d141bed0f5f80a6e404",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.306394+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.23445",
+      "title": "Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops",
+      "excerpt": "arXiv:2611.23445v1 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequently induces catastrophic accuracy collapse. While mixed-precision recovery strategies aim to rescue accuracy by selectively retaining high-precision parameters, the fundamental mechanics of where and why these models collapse remain poorly understood. In this study, we systematically analyze the anatomy of quantization collapse across standard Vision CNNs (including ResNet and EfficientNet backbones",
+      "excerptHash": "0978fdfbfbc982fa10303b155dbb33ec4f5e252dd91781c58891def087f12360",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-19T20:56:33.306857+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "mean",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 70015125781050,
+    "trainingExamples": [
+      {
+        "args": {
+          "a": "-4166.39",
+          "b": "-3003.95",
+          "c": "4419.40"
+        },
+        "expected": "-45849/50"
+      },
+      {
+        "args": {
+          "a": "-3385.82",
+          "b": "-2219.98",
+          "c": "-8405.12"
+        },
+        "expected": "-350273/75"
+      },
+      {
+        "args": {
+          "a": "-9816.05",
+          "b": "-9559.33",
+          "c": "672.28"
+        },
+        "expected": "-187031/30"
+      },
+      {
+        "args": {
+          "a": "-2010.09",
+          "b": "4548.91",
+          "c": "-4200.93"
+        },
+        "expected": "-166211/300"
+      }
+    ],
+    "examined": 15345,
+    "states": 6008,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "mean",
+    "expression": [
+      "div",
+      [
+        "add",
+        [
+          "add",
+          [
+            "var",
+            "a"
+          ],
+          [
+            "var",
+            "b"
+          ]
+        ],
+        [
+          "var",
+          "c"
+        ]
+      ],
+      [
+        "const",
+        "3"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "515e440c85e49e422788074cbfac744133a7abff49b2705b6c96a2002dc10a12",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-19T20:56:32.612405+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "60746ad77f6cbdc5597d926c1d7106f5d110f79162d3e4f9b9d76ddaec3a367f"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.169633+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "0a5a91fa38dd81b9df72e878044d3b1eaddedea7df7a7cec0128a38888e0a02f"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23322",
+        "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
+        "excerpt": "arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while they have leverage over the AI: either the AI depends on what they supply, or they can impose costs on",
+        "excerptHash": "eca3b422113552bb0d21d6dfbafe7d02f33e002cdd5ad05e108b85a36b21ac9d",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.304479+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23365",
+        "title": "Training Language Models for Introspective Oversight",
+        "excerpt": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible model outputs, and activation decoders lack full context and are prone to confabulation. We introduce ",
+        "excerptHash": "140c65d7d695627b4c2a1c9b0f9731150216db281dab5adebdd55daa7a092c68",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.304962+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23375",
+        "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+        "excerpt": "arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecul",
+        "excerptHash": "243faecac7b8b179f1e89fd5dc9a03fcf9a588303c10d03546d6ea1ff0b69ffc",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.305454+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23398",
+        "title": "HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs",
+        "excerpt": "arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-scale AI clusters can stall multi-million dollar training workloads, the downtime of individual machines can cause outsized economic losses. Minimizing machine downtime, therefore, is more important than ever. To address this, we present Hardware Diagnoser (HardwareDx), an AI-driven hardware diagnosis system that applies a graph foundation model approach to automated datacenter maintenance. It allow",
+        "excerptHash": "bae123163d4c87ce87f3f3421811c7177f71831e5390a7f4758c85cc921a1790",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.305918+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23410",
+        "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
+        "excerpt": "arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, co",
+        "excerptHash": "78620546b6bfd1bc49afcfd7eb9c303f6da259bc495f0d141bed0f5f80a6e404",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.306394+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.23445",
+        "title": "Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops",
+        "excerpt": "arXiv:2611.23445v1 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequently induces catastrophic accuracy collapse. While mixed-precision recovery strategies aim to rescue accuracy by selectively retaining high-precision parameters, the fundamental mechanics of where and why these models collapse remain poorly understood. In this study, we systematically analyze the anatomy of quantization collapse across standard Vision CNNs (including ResNet and EfficientNet backbones",
+        "excerptHash": "0978fdfbfbc982fa10303b155dbb33ec4f5e252dd91781c58891def087f12360",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-19T20:56:33.306857+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 2773099660037,
+    "cases": [
+      {
+        "args": {
+          "a": "0",
+          "b": "0",
+          "c": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "a": "1",
+          "b": "1",
+          "c": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
+        },
+        "expected": "-1",
+        "reply": "-1"
+      },
+      {
+        "args": {
+          "a": "-1948.58",
+          "b": "-2041.15",
+          "c": "1596.73"
+        },
+        "expected": "-2393/3",
+        "reply": "-2393/3"
+      },
+      {
+        "args": {
+          "a": "862.55",
+          "b": "-7548.34",
+          "c": "-9303.59"
+        },
+        "expected": "-799469/150",
+        "reply": "-799469/150"
+      },
+      {
+        "args": {
+          "a": "-1154.38",
+          "b": "-4425.04",
+          "c": "-5475.64"
+        },
+        "expected": "-184251/50",
+        "reply": "-184251/50"
+      },
+      {
+        "args": {
+          "a": "2315.46",
+          "b": "-1123.63",
+          "c": "9476.31"
+        },
+        "expected": "533407/150",
+        "reply": "533407/150"
+      },
+      {
+        "args": {
+          "a": "-4211.70",
+          "b": "8267.03",
+          "c": "5949.34"
+        },
+        "expected": "333489/100",
+        "reply": "333489/100"
+      },
+      {
+        "args": {
+          "a": "9993.32",
+          "b": "5650.53",
+          "c": "2858.68"
+        },
+        "expected": "616751/100",
+        "reply": "616751/100"
+      },
+      {
+        "args": {
+          "a": "-8756.01",
+          "b": "-8908.29",
+          "c": "-985.92"
+        },
+        "expected": "-310837/50",
+        "reply": "-310837/50"
+      },
+      {
+        "args": {
+          "a": "8318.64",
+          "b": "3604.18",
+          "c": "8430.30"
+        },
+        "expected": "508828/75",
+        "reply": "508828/75"
+      },
+      {
+        "args": {
+          "a": "4209.87",
+          "b": "-2834.41",
+          "c": "4578.62"
+        },
+        "expected": "148852/75",
+        "reply": "148852/75"
+      },
+      {
+        "args": {
+          "a": "126.55",
+          "b": "-2402.04",
+          "c": "-9209.49"
+        },
+        "expected": "-574249/150",
+        "reply": "-574249/150"
+      },
+      {
+        "args": {
+          "a": "7432.78",
+          "b": "-4757.09",
+          "c": "2432.75"
+        },
+        "expected": "127711/75",
+        "reply": "127711/75"
+      },
+      {
+        "args": {
+          "a": "9438.15",
+          "b": "-3918.47",
+          "c": "-7584.40"
+        },
+        "expected": "-17206/25",
+        "reply": "-17206/25"
+      },
+      {
+        "args": {
+          "a": "-1669.63",
+          "b": "-5615.43",
+          "c": "-4395.32"
+        },
+        "expected": "-194673/50",
+        "reply": "-194673/50"
+      },
+      {
+        "args": {
+          "a": "8522.11",
+          "b": "-5150.96",
+          "c": "5771.29"
+        },
+        "expected": "76187/25",
+        "reply": "76187/25"
+      },
+      {
+        "args": {
+          "a": "-8952.22",
+          "b": "-5288.37",
+          "c": "1136.18"
+        },
+        "expected": "-1310441/300",
+        "reply": "-1310441/300"
+      },
+      {
+        "args": {
+          "a": "-3189.32",
+          "b": "7336.78",
+          "c": "8744.36"
+        },
+        "expected": "644591/150",
+        "reply": "644591/150"
+      },
+      {
+        "args": {
+          "a": "-4505.06",
+          "b": "-851.10",
+          "c": "6309.94"
+        },
+        "expected": "47689/150",
+        "reply": "47689/150"
+      },
+      {
+        "args": {
+          "a": "5974.30",
+          "b": "-6601.11",
+          "c": "-2469.13"
+        },
+        "expected": "-51599/50",
+        "reply": "-51599/50"
+      },
+      {
+        "args": {
+          "a": "-8205.96",
+          "b": "-3359.98",
+          "c": "6051.12"
+        },
+        "expected": "-275741/150",
+        "reply": "-275741/150"
+      },
+      {
+        "args": {
+          "a": "3304.59",
+          "b": "-9473.17",
+          "c": "-1946.12"
+        },
+        "expected": "-27049/10",
+        "reply": "-27049/10"
+      },
+      {
+        "args": {
+          "a": "5250.66",
+          "b": "7095.97",
+          "c": "-3185.82"
+        },
+        "expected": "916081/300",
+        "reply": "916081/300"
+      },
+      {
+        "args": {
+          "a": "9960.83",
+          "b": "-7207.55",
+          "c": "4153.13"
+        },
+        "expected": "690641/300",
+        "reply": "690641/300"
+      },
+      {
+        "args": {
+          "a": "-2803.74",
+          "b": "-2411.02",
+          "c": "-6754.15"
+        },
+        "expected": "-1196891/300",
+        "reply": "-1196891/300"
+      },
+      {
+        "args": {
+          "a": "-5398.51",
+          "b": "8214.93",
+          "c": "1504.81"
+        },
+        "expected": "144041/100",
+        "reply": "144041/100"
+      },
+      {
+        "args": {
+          "a": "3009.05",
+          "b": "9373.51",
+          "c": "8201.17"
+        },
+        "expected": "2058373/300",
+        "reply": "2058373/300"
+      },
+      {
+        "args": {
+          "a": "-5513.88",
+          "b": "2110.02",
+          "c": "352.78"
+        },
+        "expected": "-76277/75",
+        "reply": "-76277/75"
+      },
+      {
+        "args": {
+          "a": "-9488.57",
+          "b": "-3680.94",
+          "c": "4862.56"
+        },
+        "expected": "-166139/60",
+        "reply": "-166139/60"
+      },
+      {
+        "args": {
+          "a": "8418.07",
+          "b": "-906.60",
+          "c": "-6303.08"
+        },
+        "expected": "120839/300",
+        "reply": "120839/300"
+      },
+      {
+        "args": {
+          "a": "4947.99",
+          "b": "-2523.42",
+          "c": "3535.74"
+        },
+        "expected": "198677/100",
+        "reply": "198677/100"
+      },
+      {
+        "args": {
+          "a": "-1518.38",
+          "b": "3673.25",
+          "c": "-874.32"
+        },
+        "expected": "8537/20",
+        "reply": "8537/20"
+      },
+      {
+        "args": {
+          "a": "6473.75",
+          "b": "4474.26",
+          "c": "-625.55"
+        },
+        "expected": "172041/50",
+        "reply": "172041/50"
+      },
+      {
+        "args": {
+          "a": "8947.21",
+          "b": "6667.97",
+          "c": "-8326.89"
+        },
+        "expected": "242943/100",
+        "reply": "242943/100"
+      },
+      {
+        "args": {
+          "a": "-566.28",
+          "b": "-6838.86",
+          "c": "9945.77"
+        },
+        "expected": "254063/300",
+        "reply": "254063/300"
+      },
+      {
+        "args": {
+          "a": "4523.98",
+          "b": "-8607.12",
+          "c": "516.55"
+        },
+        "expected": "-356659/300",
+        "reply": "-356659/300"
+      },
+      {
+        "args": {
+          "a": "-2332.46",
+          "b": "-5763.19",
+          "c": "-3158.54"
+        },
+        "expected": "-1125419/300",
+        "reply": "-1125419/300"
+      },
+      {
+        "args": {
+          "a": "-4879.50",
+          "b": "-5847.30",
+          "c": "4956.80"
+        },
+        "expected": "-5770/3",
+        "reply": "-5770/3"
+      },
+      {
+        "args": {
+          "a": "1590.99",
+          "b": "9631.87",
+          "c": "1462.53"
+        },
+        "expected": "1268539/300",
+        "reply": "1268539/300"
+      },
+      {
+        "args": {
+          "a": "1946.63",
+          "b": "5906.17",
+          "c": "-423.08"
+        },
+        "expected": "185743/75",
+        "reply": "185743/75"
+      },
+      {
+        "args": {
+          "a": "4954.92",
+          "b": "1812.93",
+          "c": "87.90"
+        },
+        "expected": "9141/4",
+        "reply": "9141/4"
+      },
+      {
+        "args": {
+          "a": "-5117.60",
+          "b": "-8630.43",
+          "c": "3645.15"
+        },
+        "expected": "-252572/75",
+        "reply": "-252572/75"
+      },
+      {
+        "args": {
+          "a": "-3486.54",
+          "b": "2162.99",
+          "c": "-8775.34"
+        },
+        "expected": "-1009889/300",
+        "reply": "-1009889/300"
+      },
+      {
+        "args": {
+          "a": "4572.15",
+          "b": "-6851.40",
+          "c": "-5892.10"
+        },
+        "expected": "-163427/60",
+        "reply": "-163427/60"
+      },
+      {
+        "args": {
+          "a": "1770.57",
+          "b": "6898.29",
+          "c": "9459.77"
+        },
+        "expected": "1812863/300",
+        "reply": "1812863/300"
+      },
+      {
+        "args": {
+          "a": "-4871.98",
+          "b": "8369.12",
+          "c": "8168.57"
+        },
+        "expected": "388857/100",
+        "reply": "388857/100"
+      },
+      {
+        "args": {
+          "a": "-7536.35",
+          "b": "-9199.04",
+          "c": "-5860.22"
+        },
+        "expected": "-753187/100",
+        "reply": "-753187/100"
+      },
+      {
+        "args": {
+          "a": "8079.64",
+          "b": "2379.99",
+          "c": "-3947.71"
+        },
+        "expected": "54266/25",
+        "reply": "54266/25"
+      },
+      {
+        "args": {
+          "a": "232.85",
+          "b": "-2582.86",
+          "c": "9972.36"
+        },
+        "expected": "152447/60",
+        "reply": "152447/60"
+      },
+      {
+        "args": {
+          "a": "4231.34",
+          "b": "3663.19",
+          "c": "4063.96"
+        },
+        "expected": "1195849/300",
+        "reply": "1195849/300"
+      },
+      {
+        "args": {
+          "a": "3992.11",
+          "b": "-5738.83",
+          "c": "-809.24"
+        },
+        "expected": "-63899/75",
+        "reply": "-63899/75"
+      },
+      {
+        "args": {
+          "a": "1443.34",
+          "b": "9561.27",
+          "c": "991.87"
+        },
+        "expected": "299912/75",
+        "reply": "299912/75"
+      },
+      {
+        "args": {
+          "a": "1041.69",
+          "b": "-7767.11",
+          "c": "9405.50"
+        },
+        "expected": "22334/25",
+        "reply": "22334/25"
+      },
+      {
+        "args": {
+          "a": "-4672.05",
+          "b": "-594.68",
+          "c": "-5868.09"
+        },
+        "expected": "-556741/150",
+        "reply": "-556741/150"
+      },
+      {
+        "args": {
+          "a": "8305.75",
+          "b": "8721.04",
+          "c": "-4740.64"
+        },
+        "expected": "245723/60",
+        "reply": "245723/60"
+      },
+      {
+        "args": {
+          "a": "7699.35",
+          "b": "5218.05",
+          "c": "-1547.06"
+        },
+        "expected": "568517/150",
+        "reply": "568517/150"
+      },
+      {
+        "args": {
+          "a": "1632.12",
+          "b": "-1945.72",
+          "c": "5191.63"
+        },
+        "expected": "162601/100",
+        "reply": "162601/100"
+      },
+      {
+        "args": {
+          "a": "3833.43",
+          "b": "-4754.93",
+          "c": "3190.08"
+        },
+        "expected": "113429/150",
+        "reply": "113429/150"
+      },
+      {
+        "args": {
+          "a": "-7991.88",
+          "b": "-2982.66",
+          "c": "-4090.19"
+        },
+        "expected": "-1506473/300",
+        "reply": "-1506473/300"
+      },
+      {
+        "args": {
+          "a": "-7079.62",
+          "b": "3120.56",
+          "c": "9017.09"
+        },
+        "expected": "168601/100",
+        "reply": "168601/100"
+      },
+      {
+        "args": {
+          "a": "931.12",
+          "b": "4760.20",
+          "c": "6880.87"
+        },
+        "expected": "419073/100",
+        "reply": "419073/100"
+      },
+      {
+        "args": {
+          "a": "3881.43",
+          "b": "-4988.32",
+          "c": "7694.84"
+        },
+        "expected": "131759/60",
+        "reply": "131759/60"
+      },
+      {
+        "args": {
+          "a": "-7202.92",
+          "b": "6324.46",
+          "c": "-2273.83"
+        },
+        "expected": "-315229/300",
+        "reply": "-315229/300"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "23e32177bea55946c3c0499528f7af133a258c683d906171abaa8874827a6124"
+}
