@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "44613531390",
+  "runId": "44661363347",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-19T20:56:14Z",
+  "at": "2026-11-20T02:31:54Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "e6caf348c618a973d387960ba56946d5408e2874598012caad5808d6cbc780e5",
-  "cycleNumber": 217,
+  "parentRecordHash": "ed38d167c612bf8f39bd4f3617fc73830ff77065df430eebcc69fa574549d798",
+  "cycleNumber": 218,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "eaa6f894dc557a2c3a297a8cb2a31f6622577aa7dca77246d2bd20db70a6a1af",
+    "hash": "185dd8f5511b7d584eaa4dd200bc16ec19b07524047acc1b12aac6e7dabe1c8b",
     "items": [
       {
-        "title": "Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation",
-        "url": "http://arxiv.org/abs/2611.24926v1",
-        "updated": "2026-11-18T18:53:53Z",
+        "title": "TAP: Tapping the Discriminative Potential of Frozen Representations for Class-Incremental Learning",
+        "url": "http://arxiv.org/abs/2611.25478v1",
+        "updated": "2026-11-19T04:08:23Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Data-driven simulation of the brain's response to stimulation: a system identification approach for closed-loop neuromodulation, piloted in adaptive deep brain stimulation",
-        "url": "http://arxiv.org/abs/2611.24818v1",
-        "updated": "2026-11-18T17:50:28Z",
+        "title": "FG-GraphBench: Benchmarking and Enhancing Fine-Grained Visual Understanding with Multimodal Scene Graphs",
+        "url": "http://arxiv.org/abs/2611.25408v1",
+        "updated": "2026-11-19T02:49:37Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-19T20:56:15Z"
+    "accessedAt": "2026-11-20T02:31:57Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.504,
+  "elapsedSeconds": 3.082,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "ed38d167c612bf8f39bd4f3617fc73830ff77065df430eebcc69fa574549d798"
+  "recordHash": "8791137e250b06557a9fd544a0a6c8288cc72a548e65f4f089a49798b6ea58bb"
 }
