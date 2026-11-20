@@ -1,0 +1,780 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-20T20:41:13.843652+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "44813569164",
+  "parents": {
+    "knowledge": "f4402cd08f15de6174c105dadc39c87cb24e6dc5fd495ba7007d79e0b4cc827a",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.442053+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "4d34476d6dde9518ceb14a6e5e12b0360e4c09180b4f7bc3796da980c5ed8a35"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.667279+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "f7fb62921b87e3990cd02d9b33c4cf896e42b1fb879cca9f1fa87e9df62f51b2"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25043",
+      "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
+      "excerpt": "arXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrated into self-driving laboratories (SDLs) to plan experiments and interpret results. However, analytical reasoning alone does not make a laboratory autonomous: autonomy in an SDL is achievable only when the agent can be trusted to act on physical hardware unsupervised and knows when to defer to a human. Here, we present an architecture that integrates an agent at the Analyze-Design interface of the Design-Make-Test-Analyze (DMTA) cycle, enabling agent-driven measurement selection and dat",
+      "excerptHash": "9e02ed5e1b0ee4ed5b734865decf34650af76ae656a89bfab34c33fbaf0e5f8e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.840225+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25070",
+      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
+      "excerpt": "arXiv:2611.25070v1 Announce Type: new Abstract: This paper presents an AI-driven framework, CodeReAct agent, designed to enhance industrial equipment maintenance through natural language (NL) interactions. The framework employs an advanced AI agentic approach to interpret human instructions, providing knowledge extraction, asset status summarization, and work order recommendations. It identifies patterns and trends and predicts work orders by standardizing industrial data into business objects (BOs) and utilizing analytical function API calls. The AI agent operates through a Thought-Action-Obs",
+      "excerptHash": "cca9ddf378031540efe8ff6b14093e86f90df5aecbc30042a5aab0e69f1e296b",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.840780+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25087",
+      "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
+      "excerpt": "arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmic research with two language-model agents, and report results on Market Split and maximum independent set (MIS). For Market Split, our randomized algorithm searches across multiple lattice bases, dividing computation between enumeration and continued basis reduction. Across ten random seeds per instance, it found the first reported CPU-only solutions to 18 of 33 previously open QOBLIB instances, solving 130 to 133 of the 156 benchmark instances per seed with a 24-hour cutoff on two CPU ",
+      "excerptHash": "376f937fafe8796b4de8e154819cf93466b0e4f03e670b6babe7f4a8fcccb55e",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.841293+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25088",
+      "title": "BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection",
+      "excerpt": "arXiv:2611.25088v1 Announce Type: new Abstract: Enabling AI systems to autonomously improve AI models requires agents capable of performing machine learning engineering (MLE). In practice, designing, training, and evaluating complex models demands modifying multi-file repositories to reproduce results, debug training runs, integrate datasets, and port frameworks. However, existing MLE benchmarks limit agents to single-file edits without full repository or shell access, and common repository-level software engineering benchmarks have rapidly saturated. To address this, we introduce the Code Com",
+      "excerptHash": "45fc32954dd6a3280acb2adb10d635358bf5849e6ea4e9561a5ada67dab60aa9",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.841827+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25109",
+      "title": "CoMPASS: A Multi-Turn Benchmark for Measuring LLM Reinforcement of Parasocial Behavior",
+      "excerpt": "arXiv:2611.25109v1 Announce Type: new Abstract: Users of conversational LLMs sometimes anthropomorphize these systems, form emotional attachments to them, and become dependent on them. This behavior, known as parasocial attachment, has been linked to multiple documented fatalities. However, public benchmarks for measuring whether LLMs reinforce users' parasocial attachment are lacking: existing work is single-turn, post hoc observational, or focused on extreme user states such as psychosis. We introduce CoMPASS, a multi-turn benchmark for measuring whether LLMs reinforce or resist users' gradu",
+      "excerptHash": "41feb94ca65d6f6dc836fc238e18e3d7e1fe8d201cdc20c4a7d8970f61b17545",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.842339+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.25111",
+      "title": "DSFlow: A Neuro-Symbolic Data Workflow Agent with Statistical Diagnostic Guardrails",
+      "excerpt": "arXiv:2611.25111v1 Announce Type: new Abstract: Data science workflows often require tools that presume non-trivial technical knowledge. Large language models (LLMs) reduce this barrier, but a gap remains between flexible general-purpose agents and statistically controlled pipelines. We introduce DSFlow, a LangGraph-based neuro-symbolic data-agent platform that combines reusable, LLM-selected skills with deterministic diagnostic guardrails. Skills provide extensible task knowledge. Symbolic validation can accept a proposed method, request clarification or replanning, override an unsuitable met",
+      "excerptHash": "e15fd1e103d9e18c0e2cb462554009306ae28878bf41c67a221dfd60217b0f85",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-20T20:41:13.842852+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "percentage",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 149701234632360,
+    "trainingExamples": [
+      {
+        "args": {
+          "amount": "4531.56",
+          "rate": "-2772.58"
+        },
+        "expected": "-15705140781/125000"
+      },
+      {
+        "args": {
+          "amount": "-8306.37",
+          "rate": "2023.82"
+        },
+        "expected": "-84052988667/500000"
+      },
+      {
+        "args": {
+          "amount": "-6168.85",
+          "rate": "8388.67"
+        },
+        "expected": "-103496893859/200000"
+      },
+      {
+        "args": {
+          "amount": "1816.47",
+          "rate": "469.97"
+        },
+        "expected": "8536864059/1000000"
+      }
+    ],
+    "examined": 347,
+    "states": 188,
+    "cost": 5
+  },
+  "programCandidate": {
+    "task": "percentage",
+    "expression": [
+      "div",
+      [
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
+      ],
+      [
+        "const",
+        "100"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "4b35075f847f3112adce537ca26260cc176602587048be9156999b1ab8d2ce91",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.442053+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "4d34476d6dde9518ceb14a6e5e12b0360e4c09180b4f7bc3796da980c5ed8a35"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.667279+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "f7fb62921b87e3990cd02d9b33c4cf896e42b1fb879cca9f1fa87e9df62f51b2"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25043",
+        "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
+        "excerpt": "arXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrated into self-driving laboratories (SDLs) to plan experiments and interpret results. However, analytical reasoning alone does not make a laboratory autonomous: autonomy in an SDL is achievable only when the agent can be trusted to act on physical hardware unsupervised and knows when to defer to a human. Here, we present an architecture that integrates an agent at the Analyze-Design interface of the Design-Make-Test-Analyze (DMTA) cycle, enabling agent-driven measurement selection and dat",
+        "excerptHash": "9e02ed5e1b0ee4ed5b734865decf34650af76ae656a89bfab34c33fbaf0e5f8e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.840225+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25070",
+        "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
+        "excerpt": "arXiv:2611.25070v1 Announce Type: new Abstract: This paper presents an AI-driven framework, CodeReAct agent, designed to enhance industrial equipment maintenance through natural language (NL) interactions. The framework employs an advanced AI agentic approach to interpret human instructions, providing knowledge extraction, asset status summarization, and work order recommendations. It identifies patterns and trends and predicts work orders by standardizing industrial data into business objects (BOs) and utilizing analytical function API calls. The AI agent operates through a Thought-Action-Obs",
+        "excerptHash": "cca9ddf378031540efe8ff6b14093e86f90df5aecbc30042a5aab0e69f1e296b",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.840780+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25087",
+        "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
+        "excerpt": "arXiv:2611.25087v1 Announce Type: new Abstract: We present SailSearch, a human-guided workflow for algorithmic research with two language-model agents, and report results on Market Split and maximum independent set (MIS). For Market Split, our randomized algorithm searches across multiple lattice bases, dividing computation between enumeration and continued basis reduction. Across ten random seeds per instance, it found the first reported CPU-only solutions to 18 of 33 previously open QOBLIB instances, solving 130 to 133 of the 156 benchmark instances per seed with a 24-hour cutoff on two CPU ",
+        "excerptHash": "376f937fafe8796b4de8e154819cf93466b0e4f03e670b6babe7f4a8fcccb55e",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.841293+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25088",
+        "title": "BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection",
+        "excerpt": "arXiv:2611.25088v1 Announce Type: new Abstract: Enabling AI systems to autonomously improve AI models requires agents capable of performing machine learning engineering (MLE). In practice, designing, training, and evaluating complex models demands modifying multi-file repositories to reproduce results, debug training runs, integrate datasets, and port frameworks. However, existing MLE benchmarks limit agents to single-file edits without full repository or shell access, and common repository-level software engineering benchmarks have rapidly saturated. To address this, we introduce the Code Com",
+        "excerptHash": "45fc32954dd6a3280acb2adb10d635358bf5849e6ea4e9561a5ada67dab60aa9",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.841827+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25109",
+        "title": "CoMPASS: A Multi-Turn Benchmark for Measuring LLM Reinforcement of Parasocial Behavior",
+        "excerpt": "arXiv:2611.25109v1 Announce Type: new Abstract: Users of conversational LLMs sometimes anthropomorphize these systems, form emotional attachments to them, and become dependent on them. This behavior, known as parasocial attachment, has been linked to multiple documented fatalities. However, public benchmarks for measuring whether LLMs reinforce users' parasocial attachment are lacking: existing work is single-turn, post hoc observational, or focused on extreme user states such as psychosis. We introduce CoMPASS, a multi-turn benchmark for measuring whether LLMs reinforce or resist users' gradu",
+        "excerptHash": "41feb94ca65d6f6dc836fc238e18e3d7e1fe8d201cdc20c4a7d8970f61b17545",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.842339+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.25111",
+        "title": "DSFlow: A Neuro-Symbolic Data Workflow Agent with Statistical Diagnostic Guardrails",
+        "excerpt": "arXiv:2611.25111v1 Announce Type: new Abstract: Data science workflows often require tools that presume non-trivial technical knowledge. Large language models (LLMs) reduce this barrier, but a gap remains between flexible general-purpose agents and statistically controlled pipelines. We introduce DSFlow, a LangGraph-based neuro-symbolic data-agent platform that combines reusable, LLM-selected skills with deterministic diagnostic guardrails. Skills provide extensible task knowledge. Symbolic validation can accept a proposed method, request clarification or replanning, override an unsuitable met",
+        "excerptHash": "e15fd1e103d9e18c0e2cb462554009306ae28878bf41c67a221dfd60217b0f85",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-20T20:41:13.842852+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 265894394013641,
+    "cases": [
+      {
+        "args": {
+          "amount": "0",
+          "rate": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "amount": "1",
+          "rate": "1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-1",
+          "rate": "-1"
+        },
+        "expected": "1/100",
+        "reply": "1/100"
+      },
+      {
+        "args": {
+          "amount": "-426.56",
+          "rate": "6252.27"
+        },
+        "expected": "-833427591/31250",
+        "reply": "-833427591/31250"
+      },
+      {
+        "args": {
+          "amount": "-476.50",
+          "rate": "8081.79"
+        },
+        "expected": "-770194587/20000",
+        "reply": "-770194587/20000"
+      },
+      {
+        "args": {
+          "amount": "-9340.46",
+          "rate": "-169.89"
+        },
+        "expected": "7934253747/500000",
+        "reply": "7934253747/500000"
+      },
+      {
+        "args": {
+          "amount": "-9380.41",
+          "rate": "-6537.04"
+        },
+        "expected": "76650144233/125000",
+        "reply": "76650144233/125000"
+      },
+      {
+        "args": {
+          "amount": "-2131.68",
+          "rate": "-6343.29"
+        },
+        "expected": "8451165267/62500",
+        "reply": "8451165267/62500"
+      },
+      {
+        "args": {
+          "amount": "-9259.95",
+          "rate": "-1389.78"
+        },
+        "expected": "12869293311/100000",
+        "reply": "12869293311/100000"
+      },
+      {
+        "args": {
+          "amount": "-7274.82",
+          "rate": "256.53"
+        },
+        "expected": "-9331047873/500000",
+        "reply": "-9331047873/500000"
+      },
+      {
+        "args": {
+          "amount": "1514.14",
+          "rate": "-32.94"
+        },
+        "expected": "-124689429/250000",
+        "reply": "-124689429/250000"
+      },
+      {
+        "args": {
+          "amount": "-6395.36",
+          "rate": "2704.47"
+        },
+        "expected": "-10810037037/62500",
+        "reply": "-10810037037/62500"
+      },
+      {
+        "args": {
+          "amount": "7275.21",
+          "rate": "5263.87"
+        },
+        "expected": "382957596627/1000000",
+        "reply": "382957596627/1000000"
+      },
+      {
+        "args": {
+          "amount": "-743.28",
+          "rate": "-1433.41"
+        },
+        "expected": "1331781231/125000",
+        "reply": "1331781231/125000"
+      },
+      {
+        "args": {
+          "amount": "2626.83",
+          "rate": "-9495.38"
+        },
+        "expected": "-124713745227/500000",
+        "reply": "-124713745227/500000"
+      },
+      {
+        "args": {
+          "amount": "1100.56",
+          "rate": "-7795.19"
+        },
+        "expected": "-10723842883/125000",
+        "reply": "-10723842883/125000"
+      },
+      {
+        "args": {
+          "amount": "-1441.92",
+          "rate": "6292.09"
+        },
+        "expected": "-1417607877/15625",
+        "reply": "-1417607877/15625"
+      },
+      {
+        "args": {
+          "amount": "-8899.77",
+          "rate": "8367.63"
+        },
+        "expected": "-744699824451/1000000",
+        "reply": "-744699824451/1000000"
+      },
+      {
+        "args": {
+          "amount": "-1744.76",
+          "rate": "-4162.11"
+        },
+        "expected": "18154707609/250000",
+        "reply": "18154707609/250000"
+      },
+      {
+        "args": {
+          "amount": "-1211.92",
+          "rate": "7316.43"
+        },
+        "expected": "-11083659807/125000",
+        "reply": "-11083659807/125000"
+      },
+      {
+        "args": {
+          "amount": "9771.40",
+          "rate": "6293.40"
+        },
+        "expected": "1537383219/2500",
+        "reply": "1537383219/2500"
+      },
+      {
+        "args": {
+          "amount": "1388.47",
+          "rate": "4764.87"
+        },
+        "expected": "66158790489/1000000",
+        "reply": "66158790489/1000000"
+      },
+      {
+        "args": {
+          "amount": "5367.49",
+          "rate": "9687.51"
+        },
+        "expected": "519976130499/1000000",
+        "reply": "519976130499/1000000"
+      },
+      {
+        "args": {
+          "amount": "3826.20",
+          "rate": "-6824.24"
+        },
+        "expected": "-1631931693/6250",
+        "reply": "-1631931693/6250"
+      },
+      {
+        "args": {
+          "amount": "-29.38",
+          "rate": "-3116.60"
+        },
+        "expected": "22891427/25000",
+        "reply": "22891427/25000"
+      },
+      {
+        "args": {
+          "amount": "5776.73",
+          "rate": "672.63"
+        },
+        "expected": "38856018999/1000000",
+        "reply": "38856018999/1000000"
+      },
+      {
+        "args": {
+          "amount": "1458.03",
+          "rate": "-3538.40"
+        },
+        "expected": "-644886669/12500",
+        "reply": "-644886669/12500"
+      },
+      {
+        "args": {
+          "amount": "-6746.59",
+          "rate": "-5241.48"
+        },
+        "expected": "88405291383/250000",
+        "reply": "88405291383/250000"
+      },
+      {
+        "args": {
+          "amount": "-6341.21",
+          "rate": "7152.84"
+        },
+        "expected": "-113394151341/250000",
+        "reply": "-113394151341/250000"
+      },
+      {
+        "args": {
+          "amount": "4812.20",
+          "rate": "-4667.46"
+        },
+        "expected": "-5615187753/25000",
+        "reply": "-5615187753/25000"
+      },
+      {
+        "args": {
+          "amount": "-6957.21",
+          "rate": "1247.07"
+        },
+        "expected": "-86761278747/1000000",
+        "reply": "-86761278747/1000000"
+      },
+      {
+        "args": {
+          "amount": "-2730.44",
+          "rate": "-9139.98"
+        },
+        "expected": "31195208739/125000",
+        "reply": "31195208739/125000"
+      },
+      {
+        "args": {
+          "amount": "-7968.08",
+          "rate": "-7663.78"
+        },
+        "expected": "38166007589/62500",
+        "reply": "38166007589/62500"
+      },
+      {
+        "args": {
+          "amount": "-8512.25",
+          "rate": "8099.22"
+        },
+        "expected": "-13788517089/20000",
+        "reply": "-13788517089/20000"
+      },
+      {
+        "args": {
+          "amount": "8238.24",
+          "rate": "-8778.86"
+        },
+        "expected": "-22600736127/31250",
+        "reply": "-22600736127/31250"
+      },
+      {
+        "args": {
+          "amount": "-416.97",
+          "rate": "9270.75"
+        },
+        "expected": "-1546249851/40000",
+        "reply": "-1546249851/40000"
+      },
+      {
+        "args": {
+          "amount": "8807.60",
+          "rate": "-9184.06"
+        },
+        "expected": "-10111190857/12500",
+        "reply": "-10111190857/12500"
+      },
+      {
+        "args": {
+          "amount": "3888.06",
+          "rate": "-4251.62"
+        },
+        "expected": "-41326384143/250000",
+        "reply": "-41326384143/250000"
+      },
+      {
+        "args": {
+          "amount": "8813.09",
+          "rate": "-6421.06"
+        },
+        "expected": "-282946898377/500000",
+        "reply": "-282946898377/500000"
+      },
+      {
+        "args": {
+          "amount": "9049.42",
+          "rate": "-4681.78"
+        },
+        "expected": "-105918483919/250000",
+        "reply": "-105918483919/250000"
+      },
+      {
+        "args": {
+          "amount": "-6448.45",
+          "rate": "-7712.91"
+        },
+        "expected": "99472628979/200000",
+        "reply": "99472628979/200000"
+      },
+      {
+        "args": {
+          "amount": "-323.01",
+          "rate": "7044.59"
+        },
+        "expected": "-22754730159/1000000",
+        "reply": "-22754730159/1000000"
+      },
+      {
+        "args": {
+          "amount": "-131.68",
+          "rate": "-7764.79"
+        },
+        "expected": "639042217/62500",
+        "reply": "639042217/62500"
+      },
+      {
+        "args": {
+          "amount": "5536.05",
+          "rate": "263.73"
+        },
+        "expected": "2920044933/200000",
+        "reply": "2920044933/200000"
+      },
+      {
+        "args": {
+          "amount": "-9069.46",
+          "rate": "-2889.36"
+        },
+        "expected": "16378084341/62500",
+        "reply": "16378084341/62500"
+      },
+      {
+        "args": {
+          "amount": "-9125.59",
+          "rate": "9279.69"
+        },
+        "expected": "-846826462671/1000000",
+        "reply": "-846826462671/1000000"
+      },
+      {
+        "args": {
+          "amount": "3475.28",
+          "rate": "4566.70"
+        },
+        "expected": "1983820147/12500",
+        "reply": "1983820147/12500"
+      },
+      {
+        "args": {
+          "amount": "-1900.21",
+          "rate": "-2649.99"
+        },
+        "expected": "50355374979/1000000",
+        "reply": "50355374979/1000000"
+      },
+      {
+        "args": {
+          "amount": "1877.31",
+          "rate": "6320.72"
+        },
+        "expected": "14832438579/125000",
+        "reply": "14832438579/125000"
+      },
+      {
+        "args": {
+          "amount": "6357.94",
+          "rate": "-6177.26"
+        },
+        "expected": "-98186621111/250000",
+        "reply": "-98186621111/250000"
+      },
+      {
+        "args": {
+          "amount": "8425.98",
+          "rate": "619.54"
+        },
+        "expected": "13050579123/250000",
+        "reply": "13050579123/250000"
+      },
+      {
+        "args": {
+          "amount": "2512.94",
+          "rate": "289.82"
+        },
+        "expected": "1820750677/250000",
+        "reply": "1820750677/250000"
+      },
+      {
+        "args": {
+          "amount": "-8739.97",
+          "rate": "-2104.44"
+        },
+        "expected": "45981856167/250000",
+        "reply": "45981856167/250000"
+      },
+      {
+        "args": {
+          "amount": "-9348.21",
+          "rate": "-5759.26"
+        },
+        "expected": "269193859623/500000",
+        "reply": "269193859623/500000"
+      },
+      {
+        "args": {
+          "amount": "-2720.01",
+          "rate": "-4263.75"
+        },
+        "expected": "927795411/8000",
+        "reply": "927795411/8000"
+      },
+      {
+        "args": {
+          "amount": "4468.36",
+          "rate": "-8026.27"
+        },
+        "expected": "-89660659543/250000",
+        "reply": "-89660659543/250000"
+      },
+      {
+        "args": {
+          "amount": "2244.71",
+          "rate": "-1931.72"
+        },
+        "expected": "-10840378003/250000",
+        "reply": "-10840378003/250000"
+      },
+      {
+        "args": {
+          "amount": "-8290.60",
+          "rate": "-5577.44"
+        },
+        "expected": "1445010127/3125",
+        "reply": "1445010127/3125"
+      },
+      {
+        "args": {
+          "amount": "-8639.61",
+          "rate": "3292.99"
+        },
+        "expected": "-284501493339/1000000",
+        "reply": "-284501493339/1000000"
+      },
+      {
+        "args": {
+          "amount": "2405.20",
+          "rate": "71.64"
+        },
+        "expected": "10769283/6250",
+        "reply": "10769283/6250"
+      },
+      {
+        "args": {
+          "amount": "4261.79",
+          "rate": "2294.14"
+        },
+        "expected": "48885714553/500000",
+        "reply": "48885714553/500000"
+      },
+      {
+        "args": {
+          "amount": "-9936.31",
+          "rate": "1764.62"
+        },
+        "expected": "-87669056761/500000",
+        "reply": "-87669056761/500000"
+      },
+      {
+        "args": {
+          "amount": "9585.49",
+          "rate": "9996.91"
+        },
+        "expected": "958252808359/1000000",
+        "reply": "958252808359/1000000"
+      },
+      {
+        "args": {
+          "amount": "9769.94",
+          "rate": "-9004.25"
+        },
+        "expected": "-17594196449/20000",
+        "reply": "-17594196449/20000"
+      }
+    ],
+    "nodes": 5,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "038b9d8f98b946734797cc0782adb74c2f8bd804f046e5328ce5af122a3102b0"
+}
