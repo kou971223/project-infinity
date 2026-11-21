@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-11-21T01:28:07.560Z",
-  "runId": "44850301358",
+  "at": "2026-11-21T09:43:05.603Z",
+  "runId": "44890858942",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-5aea010e-136d-450b-8b6d-1014052cc891",
-    "at": "2026-11-21T01:27:52.015Z",
+    "exp": "EXP-acfce581-396b-4061-bfd0-be921c2b9313",
+    "at": "2026-11-21T09:42:53.665Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -95,21 +95,6 @@
         "title": "Transformers.js 3.8.1 dtypes",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "status": "official_document_body_retrieved_not_independent_validation"
-      },
-      {
-        "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
-        "url": "https://arxiv.org/abs/2611.25043",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
-        "url": "https://arxiv.org/abs/2611.25070",
-        "status": "metadata_only_not_fulltext_verified"
-      },
-      {
-        "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
-        "url": "https://arxiv.org/abs/2611.25087",
-        "status": "metadata_only_not_fulltext_verified"
       }
     ],
     "sources": [
@@ -117,11 +102,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-21T01:27:51Z",
+        "at": "2026-11-21T09:42:52Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "35f5ec2e220f665aca003f8620397e9fabe3bc311925e9aecb6ff3b0f509b639",
+        "sha256": "7669c786ecc0d552dca4066eea2517d6d214fa4bddaf9879d5a9a5974e93689e",
         "bytes": 108565,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -131,11 +116,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-21T01:27:51Z",
+        "at": "2026-11-21T09:42:53Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "5ee59b4bc910c07f1f30e63fee59695c9f156122187d6403c43a69cc0a5e8f28",
+        "sha256": "baa8952dd848a8687f8df1e7521c02fc82d290ee6def91ae7d63e3243ce4bea7",
         "bytes": 110194,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -145,12 +130,12 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-11-21T01:27:51Z",
+        "at": "2026-11-21T09:42:53Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d",
-        "bytes": 875458,
+        "sha256": "a75f7758b0ddf5527e5b35ac1ac3ad0a662ea8163d370b2b108b4cb929befcdb",
+        "bytes": 892,
         "scope": "feed_only"
       }
     ],
@@ -165,5 +150,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "83eda99b3aae2d29a5dbb209c687bef023591d44f7565a93616f5ee75caa9dd2"
+  "recordHash": "f95eea789ab978472af9a5d6a421ba3a7957cb1ab538ec0e136675e9e72f90a6"
 }
