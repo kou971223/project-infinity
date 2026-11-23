@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "45084988143",
+  "runId": "45135845068",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-22T23:46:42Z",
+  "at": "2026-11-23T08:06:22Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "7d839561498cd6d043ff108a9e9d879d678a091fcc7a581c1e2a9c32d33fc237",
-  "cycleNumber": 228,
+  "parentRecordHash": "e2540e701e3ba2d99182378abc9ee41326ad3a74089d7af3a375cccec3678428",
+  "cycleNumber": 229,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "df69416845dc79c1ddc72b0c92124079d050439c6f5542206235ec40b6419246",
+    "hash": "15011dac9619fd6bfea84b1e1e67ad119dcb630384a2c3e03992f8a29469ec5b",
     "items": [
       {
-        "title": "Stochastic counterpart of Nesterov's method for sampling and provable non-acceleration of samplers with heavy-ball structure",
-        "url": "http://arxiv.org/abs/2611.26575v1",
-        "updated": "2026-11-19T18:42:01Z",
+        "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+        "url": "http://arxiv.org/abs/2611.27973v1",
+        "updated": "2026-11-20T18:51:29Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Learning Control-Relevant Koopman Representations from Input-Output Trajectories",
-        "url": "http://arxiv.org/abs/2611.26559v1",
-        "updated": "2026-11-19T18:26:11Z",
+        "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
+        "url": "http://arxiv.org/abs/2611.27970v1",
+        "updated": "2026-11-20T18:51:08Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-22T23:46:44Z"
+    "accessedAt": "2026-11-23T08:06:28Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 2.413,
+  "elapsedSeconds": 5.263,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "e2540e701e3ba2d99182378abc9ee41326ad3a74089d7af3a375cccec3678428"
+  "recordHash": "ccddc9b151d7c3d1a524d9af6665b89d6b2286837e52694526236dd924ce4d37"
 }
