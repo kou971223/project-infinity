@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-11-23T01:38:26.754Z",
-  "runId": "45095651563",
+  "at": "2026-11-23T10:41:56.826Z",
+  "runId": "45158408648",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-8c31e7c3-677e-481d-9903-598616b10a38",
-    "at": "2026-11-23T01:38:11.221Z",
+    "exp": "EXP-79d1304f-09a7-411f-8b73-5f1a146a4e0f",
+    "at": "2026-11-23T10:41:42.764Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -80,7 +80,7 @@
     "taxonomy": "E1 application reliability",
     "overallProjectAccepted": false,
     "decision": "NO_CHANGE",
-    "elapsedMs": 5
+    "elapsedMs": 3
   },
   "sources": {
     "schema": "PINF-SOURCES-1",
@@ -95,6 +95,21 @@
         "title": "Transformers.js 3.8.1 dtypes",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "status": "official_document_body_retrieved_not_independent_validation"
+      },
+      {
+        "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+        "url": "https://arxiv.org/abs/2611.26663",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
+        "url": "https://arxiv.org/abs/2611.26717",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
+        "url": "https://arxiv.org/abs/2611.26722",
+        "status": "metadata_only_not_fulltext_verified"
       }
     ],
     "sources": [
@@ -102,11 +117,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-23T01:38:10Z",
+        "at": "2026-11-23T10:41:42Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "b62ed6c4ce194d123e74b3e92d911cdd766993e47fe4077279cac8a99d150134",
+        "sha256": "6cd2464bc9038cfe52f24ff969340fafd43f40e67d4747c8a815e8367b967812",
         "bytes": 108565,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -116,11 +131,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-23T01:38:10Z",
+        "at": "2026-11-23T10:41:42Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "ee1d734112770394c183b3d21c80ae96b0171ed0dad27cdf8e38ce889ab54c25",
+        "sha256": "49f0bb792c20d4110fab22525eebecc1f285acfdb85edb381aaf4b477a25ca4f",
         "bytes": 110194,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -130,12 +145,12 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-11-23T01:38:11Z",
+        "at": "2026-11-23T10:41:42Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "ca19395e8c37a9018514678f64c6bae05274a39f03cdddd4fea0f3de42b155bd",
-        "bytes": 892,
+        "sha256": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376",
+        "bytes": 772192,
         "scope": "feed_only"
       }
     ],
@@ -150,5 +165,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "203fb5cbf9fb24643ad62fdb95bd053111f78c59ceeacec2687fa86cf5adcd66"
+  "recordHash": "9c00e6eeb3476f3e90efe9edd604531497f2e9f96a29e83734a9eeb5f6aff0a1"
 }
