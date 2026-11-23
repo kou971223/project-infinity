@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "45135845068",
+  "runId": "45259885643",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-23T08:06:22Z",
+  "at": "2026-11-23T20:30:17Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "e2540e701e3ba2d99182378abc9ee41326ad3a74089d7af3a375cccec3678428",
-  "cycleNumber": 229,
+  "parentRecordHash": "ccddc9b151d7c3d1a524d9af6665b89d6b2286837e52694526236dd924ce4d37",
+  "cycleNumber": 230,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "15011dac9619fd6bfea84b1e1e67ad119dcb630384a2c3e03992f8a29469ec5b",
+    "hash": "3cb196cc6043a61d563cb10c2f4987ccc2b8ded4fce956af2e203f349344e100",
     "items": [
       {
         "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-23T08:06:28Z"
+    "accessedAt": "2026-11-23T20:30:17Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 5.263,
+  "elapsedSeconds": 0.625,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "ccddc9b151d7c3d1a524d9af6665b89d6b2286837e52694526236dd924ce4d37"
+  "recordHash": "b0ce2591470cacc557c64b4b42094ec7364ef6419f86be59a967906db19621d8"
 }
