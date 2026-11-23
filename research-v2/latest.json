@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-22T19:56:50.859491+00:00",
+  "at": "2026-11-23T08:08:17.608219+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "45063582275",
+  "runId": "45136177337",
   "parents": {
     "knowledge": "f4402cd08f15de6174c105dadc39c87cb24e6dc5fd495ba7007d79e0b4cc827a",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-22T19:56:50.514678+00:00",
+      "checkedAt": "2026-11-23T08:08:16.942264+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "2f6cf24c43e942bc346791b973850d9b79014739baee47a4749a30477a1f9472"
+      "sourceHash": "8ca88612cddbd4c7bd762a5d5c4a505ef845fb7e57c2e0e6c78c34b2461e88a3"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,13 +24,73 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-22T19:56:50.797903+00:00",
+      "checkedAt": "2026-11-23T08:08:17.380184+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "76b5cae854f26848ab1c723e2f75429aa881b631f9b46bd74b99bb83759aed20"
+      "sourceHash": "4582cea6170a1c79af14832ffc075563b3be9f077430f5510980b3fcf2d3fea9"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26663",
+      "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+      "excerpt": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than a",
+      "excerptHash": "1caf0ec3c9fc59c40f92c7bdbfc17e7ae6362b167e89f9ff8ac2eea65e54d3ae",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.604434+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26717",
+      "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
+      "excerpt": "arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps each object valid but leaves the relationships between them ungrounded. We study an alternative paradigm, generation by simulation: rather than describing a relational artifact, we simulate a process that produces it and take the artifact to be its causal record. Language-model agents propose intent and a deterministic referee resolves outcomes against an explicit world model, so a relation is em",
+      "excerptHash": "68b247e42ea836fc8c75991f2512892ca851be2bc98332606fd381b23224aa97",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.605019+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26722",
+      "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
+      "excerpt": "arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine-tuning (SFT) optimises for producing the correct call, but never contrasts it with a plausible incorrect one. In an environment where even a minor formatting error can invalidate a call and an incorrect decision can derail the interaction, direct preference optimisation (DPO) targets exactly this contrast. DPO, therefore, requires preference pairs r",
+      "excerptHash": "1995cd1c0c4b6ef5768e3bcd2ac90eafa7ad25fabc3205506e7ece53f57ddbe4",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.605583+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26782",
+      "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
+      "excerpt": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: designing the simulation, writing reliable input scripts, executing them, and analyzing the results with separate tools. Here we present ChatAtom, a multi-agent large language model system that translates a natural-language request into a complete MD workflow without the user writing input scripts or a",
+      "excerptHash": "860144205994a970c988ae156515a410eb5fa9cadfb804eadf25e121d61924ac",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.606130+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26794",
+      "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
+      "excerpt": "arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards ",
+      "excerptHash": "8c1040e24cf498be1f42ec6d7afcc57f9ad7d435d8d831169d961fdbde195335",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.606799+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.26797",
+      "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
+      "excerpt": "arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evade our understanding. This thesis explores that puzzle through Associative Memory (AM), in which patterns are stored as energy minima and retrieved through attractor dynamics. Beyond their capacity, AMs form new minima known as spurious states, long regarded as a failure of memory. We argue that this failure is where creativity begins, and that memorization and generalization can coexist as outcome",
+      "excerptHash": "70120dd6e83aa58afc377bd4f52ffccc3c764c2ff9b4ae0292e6b38f21090cd2",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-23T08:08:17.607365+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
     }
   ],
   "sourceFailures": [],
-  "task": "percentage",
+  "task": "discount",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -44,54 +104,61 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 114649917295569,
+    "trainingSeed": 62761019125442,
     "trainingExamples": [
       {
         "args": {
-          "amount": "9968.67",
-          "rate": "4878.87"
+          "amount": "6426.29",
+          "rate": "-3058.84"
         },
-        "expected": "486358450029/1000000"
+        "expected": "50749054759/250000"
       },
       {
         "args": {
-          "amount": "-201.20",
-          "rate": "9500.35"
+          "amount": "-2452.97",
+          "rate": "-306.24"
         },
-        "expected": "-95573521/5000"
+        "expected": "-622809083/62500"
       },
       {
         "args": {
-          "amount": "-6594.38",
-          "rate": "7832.91"
+          "amount": "8665.66",
+          "rate": "3406.14"
         },
-        "expected": "-258265925229/500000"
+        "expected": "-71624712881/250000"
       },
       {
         "args": {
-          "amount": "1981.41",
-          "rate": "-8990.94"
+          "amount": "-2345.14",
+          "rate": "9046.61"
         },
-        "expected": "-89073692127/500000"
+        "expected": "104905264877/500000"
       }
     ],
-    "examined": 347,
-    "states": 188,
-    "cost": 5
+    "examined": 55145,
+    "states": 23801,
+    "cost": 7
   },
   "programCandidate": {
-    "task": "percentage",
+    "task": "discount",
     "expression": [
       "div",
       [
         "mul",
         [
-          "var",
-          "amount"
+          "sub",
+          [
+            "const",
+            "100"
+          ],
+          [
+            "var",
+            "rate"
+          ]
         ],
         [
           "var",
-          "rate"
+          "amount"
         ]
       ],
       [
@@ -102,7 +169,7 @@
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "cd5e8479269affcea9a6c870efb11509df1018b5eef2999c626b8d92b9f3343d",
+  "frozenHash": "6729268d3c894810d8270f70dbc52c769d22efb1f6aec4b032d4d3324a5147f2",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -112,9 +179,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-22T19:56:50.514678+00:00",
+        "checkedAt": "2026-11-23T08:08:16.942264+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "2f6cf24c43e942bc346791b973850d9b79014739baee47a4749a30477a1f9472"
+        "sourceHash": "8ca88612cddbd4c7bd762a5d5c4a505ef845fb7e57c2e0e6c78c34b2461e88a3"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -122,9 +189,69 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-22T19:56:50.797903+00:00",
+        "checkedAt": "2026-11-23T08:08:17.380184+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "76b5cae854f26848ab1c723e2f75429aa881b631f9b46bd74b99bb83759aed20"
+        "sourceHash": "4582cea6170a1c79af14832ffc075563b3be9f077430f5510980b3fcf2d3fea9"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26663",
+        "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+        "excerpt": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than a",
+        "excerptHash": "1caf0ec3c9fc59c40f92c7bdbfc17e7ae6362b167e89f9ff8ac2eea65e54d3ae",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.604434+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26717",
+        "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
+        "excerpt": "arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps each object valid but leaves the relationships between them ungrounded. We study an alternative paradigm, generation by simulation: rather than describing a relational artifact, we simulate a process that produces it and take the artifact to be its causal record. Language-model agents propose intent and a deterministic referee resolves outcomes against an explicit world model, so a relation is em",
+        "excerptHash": "68b247e42ea836fc8c75991f2512892ca851be2bc98332606fd381b23224aa97",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.605019+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26722",
+        "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
+        "excerpt": "arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine-tuning (SFT) optimises for producing the correct call, but never contrasts it with a plausible incorrect one. In an environment where even a minor formatting error can invalidate a call and an incorrect decision can derail the interaction, direct preference optimisation (DPO) targets exactly this contrast. DPO, therefore, requires preference pairs r",
+        "excerptHash": "1995cd1c0c4b6ef5768e3bcd2ac90eafa7ad25fabc3205506e7ece53f57ddbe4",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.605583+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26782",
+        "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
+        "excerpt": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: designing the simulation, writing reliable input scripts, executing them, and analyzing the results with separate tools. Here we present ChatAtom, a multi-agent large language model system that translates a natural-language request into a complete MD workflow without the user writing input scripts or a",
+        "excerptHash": "860144205994a970c988ae156515a410eb5fa9cadfb804eadf25e121d61924ac",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.606130+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26794",
+        "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
+        "excerpt": "arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards ",
+        "excerptHash": "8c1040e24cf498be1f42ec6d7afcc57f9ad7d435d8d831169d961fdbde195335",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.606799+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.26797",
+        "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
+        "excerpt": "arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evade our understanding. This thesis explores that puzzle through Associative Memory (AM), in which patterns are stored as energy minima and retrieved through attractor dynamics. Beyond their capacity, AMs form new minima known as spurious states, long regarded as a failure of memory. We argue that this failure is where creativity begins, and that memorization and generalization can coexist as outcome",
+        "excerptHash": "70120dd6e83aa58afc377bd4f52ffccc3c764c2ff9b4ae0292e6b38f21090cd2",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-23T08:08:17.607365+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
       }
     ],
     "rejected": [],
@@ -132,8 +259,8 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
-    "seed": 237322980677426,
+    "candidateHash": "c1dc18c52d1974dfed21804cde39729d94e18f15d8cdd7ca899a186768151df7",
+    "seed": 168266689469637,
     "cases": [
       {
         "args": {
@@ -148,513 +275,513 @@
           "amount": "1",
           "rate": "1"
         },
-        "expected": "1/100",
-        "reply": "1/100"
+        "expected": "99/100",
+        "reply": "99/100"
       },
       {
         "args": {
           "amount": "-1",
           "rate": "-1"
         },
-        "expected": "1/100",
-        "reply": "1/100"
+        "expected": "-101/100",
+        "reply": "-101/100"
       },
       {
         "args": {
-          "amount": "4545.39",
-          "rate": "-6220.36"
+          "amount": "1100.29",
+          "rate": "-142.85"
         },
-        "expected": "-70684905351/250000",
-        "reply": "-70684905351/250000"
+        "expected": "534410853/200000",
+        "reply": "534410853/200000"
       },
       {
         "args": {
-          "amount": "950.53",
-          "rate": "-4225.95"
+          "amount": "-1881.42",
+          "rate": "-1062.90"
         },
-        "expected": "-8033784507/200000",
-        "reply": "-8033784507/200000"
+        "expected": "-1093951659/50000",
+        "reply": "-1093951659/50000"
       },
       {
         "args": {
-          "amount": "-6851.80",
-          "rate": "-3713.11"
+          "amount": "-8530.47",
+          "rate": "-5872.09"
         },
-        "expected": "12720743549/50000",
-        "reply": "12720743549/50000"
+        "expected": "-509447345823/1000000",
+        "reply": "-509447345823/1000000"
       },
       {
         "args": {
-          "amount": "-6856.45",
-          "rate": "4062.68"
+          "amount": "6360.05",
+          "rate": "8133.21"
         },
-        "expected": "-13927781143/50000",
-        "reply": "-13927781143/50000"
+        "expected": "-102183234521/200000",
+        "reply": "-102183234521/200000"
       },
       {
         "args": {
-          "amount": "2082.71",
-          "rate": "-2188.51"
+          "amount": "-5310.47",
+          "rate": "9979.36"
         },
-        "expected": "-45580316621/1000000",
-        "reply": "-45580316621/1000000"
+        "expected": "16395014031/31250",
+        "reply": "16395014031/31250"
       },
       {
         "args": {
-          "amount": "9284.44",
-          "rate": "6613.30"
+          "amount": "-6611.96",
+          "rate": "8150.81"
         },
-        "expected": "15350196763/25000",
-        "reply": "15350196763/25000"
+        "expected": "133079084219/250000",
+        "reply": "133079084219/250000"
       },
       {
         "args": {
-          "amount": "-383.13",
-          "rate": "8303.84"
+          "amount": "-559.37",
+          "rate": "-3027.25"
         },
-        "expected": "-1988406387/62500",
-        "reply": "-1988406387/62500"
+        "expected": "-699715933/40000",
+        "reply": "-699715933/40000"
       },
       {
         "args": {
-          "amount": "-6222.63",
-          "rate": "-7198.50"
+          "amount": "9998.80",
+          "rate": "-4206.94"
         },
-        "expected": "8958720411/20000",
-        "reply": "8958720411/20000"
+        "expected": "5383028959/12500",
+        "reply": "5383028959/12500"
       },
       {
         "args": {
-          "amount": "-8507.64",
-          "rate": "-8318.38"
+          "amount": "2538.02",
+          "rate": "-5053.92"
         },
-        "expected": "88462228029/125000",
-        "reply": "88462228029/125000"
+        "expected": "2043867506/15625",
+        "reply": "2043867506/15625"
       },
       {
         "args": {
-          "amount": "-9751.19",
-          "rate": "7684.35"
+          "amount": "-6931.90",
+          "rate": "-1224.44"
         },
-        "expected": "-149863113753/200000",
-        "reply": "-149863113753/200000"
+        "expected": "-2295221409/25000",
+        "reply": "-2295221409/25000"
       },
       {
         "args": {
-          "amount": "3412.88",
-          "rate": "-9290.15"
+          "amount": "9460.28",
+          "rate": "-4390.89"
         },
-        "expected": "-7926541783/25000",
-        "reply": "-7926541783/25000"
+        "expected": "106212692123/250000",
+        "reply": "106212692123/250000"
       },
       {
         "args": {
-          "amount": "-8907.06",
-          "rate": "7024.05"
+          "amount": "-9339.87",
+          "rate": "-5528.01"
         },
-        "expected": "-62563634793/100000",
-        "reply": "-62563634793/100000"
+        "expected": "-525648817587/1000000",
+        "reply": "-525648817587/1000000"
       },
       {
         "args": {
-          "amount": "4775.57",
-          "rate": "-6888.31"
+          "amount": "1027.67",
+          "rate": "2269.59"
         },
-        "expected": "-328956065867/1000000",
-        "reply": "-328956065867/1000000"
+        "expected": "-22296225553/1000000",
+        "reply": "-22296225553/1000000"
       },
       {
         "args": {
-          "amount": "-6807.61",
-          "rate": "9838.93"
+          "amount": "6465.16",
+          "rate": "4936.08"
         },
-        "expected": "-669795982573/1000000",
-        "reply": "-669795982573/1000000"
+        "expected": "-9770634679/31250",
+        "reply": "-9770634679/31250"
       },
       {
         "args": {
-          "amount": "936.53",
-          "rate": "-3828.84"
+          "amount": "-3642.84",
+          "rate": "7184.59"
         },
-        "expected": "-8964558813/250000",
-        "reply": "-8964558813/250000"
+        "expected": "64520069589/250000",
+        "reply": "64520069589/250000"
       },
       {
         "args": {
-          "amount": "-2504.24",
-          "rate": "-3797.41"
+          "amount": "-9954.57",
+          "rate": "-9365.98"
         },
-        "expected": "11887032523/125000",
-        "reply": "11887032523/125000"
+        "expected": "-471148802643/500000",
+        "reply": "-471148802643/500000"
       },
       {
         "args": {
-          "amount": "9165.92",
-          "rate": "9912.67"
+          "amount": "8063.81",
+          "rate": "7389.75"
         },
-        "expected": "56786712629/62500",
-        "reply": "56786712629/62500"
+        "expected": "-23513263579/40000",
+        "reply": "-23513263579/40000"
       },
       {
         "args": {
-          "amount": "5302.66",
-          "rate": "-4840.28"
+          "amount": "354.35",
+          "rate": "2475.14"
         },
-        "expected": "-32082948931/125000",
-        "reply": "-32082948931/125000"
+        "expected": "-841630859/100000",
+        "reply": "-841630859/100000"
       },
       {
         "args": {
-          "amount": "1626.16",
-          "rate": "-9469.70"
+          "amount": "-4787.28",
+          "rate": "2567.00"
         },
-        "expected": "-1924905919/12500",
-        "reply": "-1924905919/12500"
+        "expected": "147627747/1250",
+        "reply": "147627747/1250"
       },
       {
         "args": {
-          "amount": "1032.91",
-          "rate": "3352.90"
+          "amount": "-2356.53",
+          "rate": "-9304.41"
         },
-        "expected": "3463243939/100000",
-        "reply": "3463243939/100000"
+        "expected": "-221617742973/1000000",
+        "reply": "-221617742973/1000000"
       },
       {
         "args": {
-          "amount": "-593.53",
-          "rate": "6730.24"
+          "amount": "2187.95",
+          "rate": "-5640.14"
         },
-        "expected": "-624156148/15625",
-        "reply": "-624156148/15625"
+        "expected": "12559139313/100000",
+        "reply": "12559139313/100000"
       },
       {
         "args": {
-          "amount": "-6489.04",
-          "rate": "3734.93"
+          "amount": "8451.98",
+          "rate": "4802.81"
         },
-        "expected": "-30295137709/125000",
-        "reply": "-30295137709/125000"
+        "expected": "-198740280319/500000",
+        "reply": "-198740280319/500000"
       },
       {
         "args": {
-          "amount": "-2142.17",
-          "rate": "-1780.74"
+          "amount": "9506.00",
+          "rate": "-2531.52"
         },
-        "expected": "19073239029/500000",
-        "reply": "19073239029/500000"
+        "expected": "156345182/625",
+        "reply": "156345182/625"
       },
       {
         "args": {
-          "amount": "949.92",
-          "rate": "9467.09"
+          "amount": "9213.14",
+          "rate": "4397.10"
         },
-        "expected": "5620611333/62500",
-        "reply": "5620611333/62500"
+        "expected": "-19794891947/50000",
+        "reply": "-19794891947/50000"
       },
       {
         "args": {
-          "amount": "-5968.64",
-          "rate": "5902.89"
+          "amount": "-4994.64",
+          "rate": "9115.35"
         },
-        "expected": "-5505035214/15625",
-        "reply": "-5505035214/15625"
+        "expected": "11257106931/25000",
+        "reply": "11257106931/25000"
       },
       {
         "args": {
-          "amount": "648.69",
-          "rate": "298.45"
+          "amount": "-9408.49",
+          "rate": "-7677.06"
         },
-        "expected": "387203061/200000",
-        "reply": "387203061/200000"
+        "expected": "-365851956197/500000",
+        "reply": "-365851956197/500000"
       },
       {
         "args": {
-          "amount": "2891.10",
-          "rate": "5265.33"
+          "amount": "5247.54",
+          "rate": "-1384.25"
         },
-        "expected": "15222595563/100000",
-        "reply": "15222595563/100000"
+        "expected": "1557732249/20000",
+        "reply": "1557732249/20000"
       },
       {
         "args": {
-          "amount": "1880.16",
-          "rate": "-3993.80"
+          "amount": "6546.23",
+          "rate": "-7053.58"
         },
-        "expected": "-234655719/3125",
-        "reply": "-234655719/3125"
+        "expected": "234144900017/500000",
+        "reply": "234144900017/500000"
       },
       {
         "args": {
-          "amount": "-2959.36",
-          "rate": "-7990.76"
+          "amount": "4288.52",
+          "rate": "8443.42"
         },
-        "expected": "3694927424/15625",
-        "reply": "3694927424/15625"
+        "expected": "-44726154423/125000",
+        "reply": "-44726154423/125000"
       },
       {
         "args": {
-          "amount": "2010.96",
-          "rate": "653.12"
+          "amount": "3064.21",
+          "rate": "-9838.50"
         },
-        "expected": "205218468/15625",
-        "reply": "205218468/15625"
+        "expected": "6090730217/20000",
+        "reply": "6090730217/20000"
       },
       {
         "args": {
-          "amount": "8783.92",
-          "rate": "-8536.44"
+          "amount": "-2001.71",
+          "rate": "-7505.09"
         },
-        "expected": "-23432314389/31250",
-        "reply": "-23432314389/31250"
+        "expected": "-152231847039/1000000",
+        "reply": "-152231847039/1000000"
       },
       {
         "args": {
-          "amount": "5234.54",
-          "rate": "7829.67"
+          "amount": "-5652.02",
+          "rate": "2473.66"
         },
-        "expected": "204923604009/500000",
-        "reply": "204923604009/500000"
+        "expected": "33539934483/250000",
+        "reply": "33539934483/250000"
       },
       {
         "args": {
-          "amount": "1653.17",
-          "rate": "619.88"
+          "amount": "-7872.38",
+          "rate": "-8741.95"
         },
-        "expected": "2561917549/250000",
-        "reply": "2561917549/250000"
+        "expected": "-69607190341/100000",
+        "reply": "-69607190341/100000"
       },
       {
         "args": {
-          "amount": "-5681.72",
-          "rate": "7903.29"
+          "amount": "-1116.49",
+          "rate": "3121.58"
         },
-        "expected": "-112260702147/250000",
-        "reply": "-112260702147/250000"
+        "expected": "16867819271/500000",
+        "reply": "16867819271/500000"
       },
       {
         "args": {
-          "amount": "-8073.71",
-          "rate": "3132.59"
+          "amount": "-3565.11",
+          "rate": "8517.29"
         },
-        "expected": "-252916232089/1000000",
-        "reply": "-252916232089/1000000"
+        "expected": "300085647519/1000000",
+        "reply": "300085647519/1000000"
       },
       {
         "args": {
-          "amount": "3922.55",
-          "rate": "1467.62"
+          "amount": "2926.66",
+          "rate": "4971.51"
         },
-        "expected": "5756812831/100000",
-        "reply": "5756812831/100000"
+        "expected": "-71286267283/500000",
+        "reply": "-71286267283/500000"
       },
       {
         "args": {
-          "amount": "4460.62",
-          "rate": "1928.09"
+          "amount": "9997.07",
+          "rate": "4971.06"
         },
-        "expected": "43002384079/500000",
-        "reply": "43002384079/500000"
+        "expected": "-243481638971/500000",
+        "reply": "-243481638971/500000"
       },
       {
         "args": {
-          "amount": "-332.61",
-          "rate": "-9618.52"
+          "amount": "1787.41",
+          "rate": "-2391.88"
         },
-        "expected": "7998039843/250000",
-        "reply": "7998039843/250000"
+        "expected": "11135028077/250000",
+        "reply": "11135028077/250000"
       },
       {
         "args": {
-          "amount": "-9152.95",
-          "rate": "-2355.48"
+          "amount": "2006.70",
+          "rate": "4898.44"
         },
-        "expected": "10779795333/50000",
-        "reply": "10779795333/50000"
+        "expected": "-2407257387/25000",
+        "reply": "-2407257387/25000"
       },
       {
         "args": {
-          "amount": "3171.11",
-          "rate": "-3306.42"
+          "amount": "-7279.78",
+          "rate": "-4452.17"
         },
-        "expected": "-52425107631/500000",
-        "reply": "-52425107631/500000"
+        "expected": "-165693980613/500000",
+        "reply": "-165693980613/500000"
       },
       {
         "args": {
-          "amount": "-3407.62",
-          "rate": "1499.36"
+          "amount": "3012.19",
+          "rate": "-5727.83"
         },
-        "expected": "-1596640351/31250",
-        "reply": "-1596640351/31250"
+        "expected": "175545312477/1000000",
+        "reply": "175545312477/1000000"
       },
       {
         "args": {
-          "amount": "3877.12",
-          "rate": "-8352.22"
+          "amount": "-88.57",
+          "rate": "-1049.24"
         },
-        "expected": "-5059774876/15625",
-        "reply": "-5059774876/15625"
+        "expected": "-254470467/250000",
+        "reply": "-254470467/250000"
       },
       {
         "args": {
-          "amount": "-1683.53",
-          "rate": "9650.39"
+          "amount": "-11.17",
+          "rate": "-153.84"
         },
-        "expected": "-162467210767/1000000",
-        "reply": "-162467210767/1000000"
+        "expected": "-3544241/125000",
+        "reply": "-3544241/125000"
       },
       {
         "args": {
-          "amount": "-4928.92",
-          "rate": "-977.83"
+          "amount": "7024.03",
+          "rate": "-1471.31"
         },
-        "expected": "12049114609/250000",
-        "reply": "12049114609/250000"
+        "expected": "110369285793/1000000",
+        "reply": "110369285793/1000000"
       },
       {
         "args": {
-          "amount": "4082.15",
-          "rate": "-7589.87"
+          "amount": "4543.01",
+          "rate": "3824.18"
         },
-        "expected": "-61965975641/200000",
-        "reply": "-61965975641/200000"
+        "expected": "-84594934909/500000",
+        "reply": "-84594934909/500000"
       },
       {
         "args": {
-          "amount": "9504.97",
-          "rate": "-3101.73"
+          "amount": "-6522.95",
+          "rate": "1039.21"
         },
-        "expected": "-294818505981/1000000",
-        "reply": "-294818505981/1000000"
+        "expected": "12252839739/200000",
+        "reply": "12252839739/200000"
       },
       {
         "args": {
-          "amount": "7828.23",
-          "rate": "-6250.12"
+          "amount": "-3017.26",
+          "rate": "6062.01"
         },
-        "expected": "-122318442219/250000",
-        "reply": "-122318442219/250000"
+        "expected": "89944671463/500000",
+        "reply": "89944671463/500000"
       },
       {
         "args": {
-          "amount": "742.42",
-          "rate": "5965.71"
+          "amount": "9598.94",
+          "rate": "-2945.13"
         },
-        "expected": "22145312091/500000",
-        "reply": "22145312091/500000"
+        "expected": "146150100811/500000",
+        "reply": "146150100811/500000"
       },
       {
         "args": {
-          "amount": "2560.42",
-          "rate": "-2216.45"
+          "amount": "-422.37",
+          "rate": "-1924.37"
         },
-        "expected": "-5675042909/100000",
-        "reply": "-5675042909/100000"
+        "expected": "-8550331569/1000000",
+        "reply": "-8550331569/1000000"
       },
       {
         "args": {
-          "amount": "8091.33",
-          "rate": "8811.58"
+          "amount": "-3565.88",
+          "rate": "1945.77"
         },
-        "expected": "356487008007/500000",
-        "reply": "356487008007/500000"
+        "expected": "16454485819/250000",
+        "reply": "16454485819/250000"
       },
       {
         "args": {
-          "amount": "-8553.20",
-          "rate": "9958.86"
+          "amount": "837.08",
+          "rate": "4801.24"
         },
-        "expected": "-10647515169/12500",
-        "reply": "-10647515169/12500"
+        "expected": "-2459571237/62500",
+        "reply": "-2459571237/62500"
       },
       {
         "args": {
-          "amount": "-6996.23",
-          "rate": "3591.00"
+          "amount": "5226.44",
+          "rate": "1785.18"
         },
-        "expected": "-2512346193/10000",
-        "reply": "-2512346193/10000"
+        "expected": "-11009365199/125000",
+        "reply": "-11009365199/125000"
       },
       {
         "args": {
-          "amount": "-8734.90",
-          "rate": "6632.17"
+          "amount": "1800.75",
+          "rate": "-6870.95"
         },
-        "expected": "-57931341733/100000",
-        "reply": "-57931341733/100000"
+        "expected": "1004235057/8000",
+        "reply": "1004235057/8000"
       },
       {
         "args": {
-          "amount": "827.10",
-          "rate": "-5641.50"
+          "amount": "-5296.40",
+          "rate": "2289.84"
         },
-        "expected": "-93321693/2000",
-        "reply": "-93321693/2000"
+        "expected": "362445893/3125",
+        "reply": "362445893/3125"
       },
       {
         "args": {
-          "amount": "-2201.32",
-          "rate": "280.35"
+          "amount": "-7508.73",
+          "rate": "3277.66"
         },
-        "expected": "-308570031/50000",
-        "reply": "-308570031/50000"
+        "expected": "119300954859/500000",
+        "reply": "119300954859/500000"
       },
       {
         "args": {
-          "amount": "-4604.82",
-          "rate": "-8028.72"
+          "amount": "1933.44",
+          "rate": "-4730.58"
         },
-        "expected": "23106756519/62500",
-        "reply": "23106756519/62500"
+        "expected": "1459318218/15625",
+        "reply": "1459318218/15625"
       },
       {
         "args": {
-          "amount": "-1675.85",
-          "rate": "9967.37"
+          "amount": "1628.46",
+          "rate": "-175.30"
         },
-        "expected": "-33407634029/200000",
-        "reply": "-33407634029/200000"
+        "expected": "224157519/50000",
+        "reply": "224157519/50000"
       },
       {
         "args": {
-          "amount": "5831.45",
-          "rate": "-9426.41"
+          "amount": "-6857.50",
+          "rate": "7623.92"
         },
-        "expected": "-109939277189/200000",
-        "reply": "-109939277189/200000"
+        "expected": "257976407/500",
+        "reply": "257976407/500"
       },
       {
         "args": {
-          "amount": "-6951.67",
-          "rate": "863.04"
+          "amount": "836.34",
+          "rate": "-3725.75"
         },
-        "expected": "-1874865399/31250",
-        "reply": "-1874865399/31250"
+        "expected": "639925551/20000",
+        "reply": "639925551/20000"
       },
       {
         "args": {
-          "amount": "-8136.72",
-          "rate": "3511.99"
+          "amount": "2318.57",
+          "rate": "-6942.31"
         },
-        "expected": "-35720099091/125000",
-        "reply": "-35720099091/125000"
+        "expected": "163280886967/1000000",
+        "reply": "163280886967/1000000"
       },
       {
         "args": {
-          "amount": "9942.63",
-          "rate": "3587.75"
+          "amount": "1014.06",
+          "rate": "-1734.50"
         },
-        "expected": "14268668313/40000",
-        "reply": "14268668313/40000"
+        "expected": "186029307/10000",
+        "reply": "186029307/10000"
       }
     ],
-    "nodes": 5,
+    "nodes": 7,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "NO_CHANGE",
+    "knowledge": "ADOPT",
     "programs": "NO_GAIN"
   },
-  "recordHash": "5cd5341478eb18de57b5c831a19baf5a9afa7226c41df51c84943f0e8147493e"
+  "recordHash": "70db94c7c06c9b6eabb9c71d5acb010cc08c4a939b2e5860551a9dfbdf2ce924"
 }
