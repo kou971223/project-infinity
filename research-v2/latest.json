@@ -1,8 +1,8 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-24T00:17:57.229066+00:00",
+  "at": "2026-11-24T10:22:35.692233+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "45295985770",
+  "runId": "45374178978",
   "parents": {
     "knowledge": "b06ce2e0ed64c9b8fa42464243636fa5869b2af8b455cc6a7538d6b012616bb5",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-24T00:17:56.718572+00:00",
+      "checkedAt": "2026-11-24T10:22:35.424754+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "0bdde60957fb22ad6b59842505465e39223d4c3f74d857f642169092c2f67fe4"
+      "sourceHash": "1ae6f0e53d954b159111df9c03859d3332ec591bf1994324a8ed2572858bd0a4"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,73 +24,18 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.005541+00:00",
+      "checkedAt": "2026-11-24T10:22:35.635501+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "9c5f1a2ba14333ea7e1f2064d840c36db0a96fd377852e353b5b8c388d299258"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26663",
-      "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
-      "excerpt": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than a",
-      "excerptHash": "1caf0ec3c9fc59c40f92c7bdbfc17e7ae6362b167e89f9ff8ac2eea65e54d3ae",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.225755+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26717",
-      "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
-      "excerpt": "arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps each object valid but leaves the relationships between them ungrounded. We study an alternative paradigm, generation by simulation: rather than describing a relational artifact, we simulate a process that produces it and take the artifact to be its causal record. Language-model agents propose intent and a deterministic referee resolves outcomes against an explicit world model, so a relation is em",
-      "excerptHash": "68b247e42ea836fc8c75991f2512892ca851be2bc98332606fd381b23224aa97",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.226468+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26722",
-      "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
-      "excerpt": "arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine-tuning (SFT) optimises for producing the correct call, but never contrasts it with a plausible incorrect one. In an environment where even a minor formatting error can invalidate a call and an incorrect decision can derail the interaction, direct preference optimisation (DPO) targets exactly this contrast. DPO, therefore, requires preference pairs r",
-      "excerptHash": "1995cd1c0c4b6ef5768e3bcd2ac90eafa7ad25fabc3205506e7ece53f57ddbe4",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.226902+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26782",
-      "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
-      "excerpt": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: designing the simulation, writing reliable input scripts, executing them, and analyzing the results with separate tools. Here we present ChatAtom, a multi-agent large language model system that translates a natural-language request into a complete MD workflow without the user writing input scripts or a",
-      "excerptHash": "860144205994a970c988ae156515a410eb5fa9cadfb804eadf25e121d61924ac",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.227351+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26794",
-      "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
-      "excerpt": "arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards ",
-      "excerptHash": "8c1040e24cf498be1f42ec6d7afcc57f9ad7d435d8d831169d961fdbde195335",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.227872+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.26797",
-      "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
-      "excerpt": "arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evade our understanding. This thesis explores that puzzle through Associative Memory (AM), in which patterns are stored as energy minima and retrieved through attractor dynamics. Beyond their capacity, AMs form new minima known as spurious states, long regarded as a failure of memory. We argue that this failure is where creativity begins, and that memorization and generalization can coexist as outcome",
-      "excerptHash": "70120dd6e83aa58afc377bd4f52ffccc3c764c2ff9b4ae0292e6b38f21090cd2",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-24T00:17:57.228314+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+      "sourceHash": "dec12fde7fea4828d5d8b867582f0a86bcd63c00a16f62bf87358408f396f174"
     }
   ],
-  "sourceFailures": [],
-  "task": "mean",
+  "sourceFailures": [
+    {
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "error": "ValueError"
+    }
+  ],
+  "task": "rectangle",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,76 +49,58 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 263804569548102,
+    "trainingSeed": 131166454755087,
     "trainingExamples": [
       {
         "args": {
-          "a": "-7253.30",
-          "b": "-4858.73",
-          "c": "8643.79"
+          "width": "-9786.11",
+          "height": "-1137.60"
         },
-        "expected": "-28902/25"
+        "expected": "1391584842/125"
       },
       {
         "args": {
-          "a": "9464.19",
-          "b": "2809.27",
-          "c": "-5031.50"
+          "width": "5458.21",
+          "height": "-3654.35"
         },
-        "expected": "181049/75"
+        "expected": "-39892419427/2000"
       },
       {
         "args": {
-          "a": "-6223.38",
-          "b": "3809.30",
-          "c": "-8954.42"
+          "width": "-8979.03",
+          "height": "6099.26"
         },
-        "expected": "-7579/2"
+        "expected": "-273827192589/5000"
       },
       {
         "args": {
-          "a": "8103.83",
-          "b": "5113.32",
-          "c": "3618.10"
+          "width": "3431.89",
+          "height": "9414.29"
         },
-        "expected": "22447/4"
+        "expected": "323088077081/10000"
       }
     ],
-    "examined": 15345,
-    "states": 6007,
-    "cost": 7
+    "examined": 13,
+    "states": 11,
+    "cost": 3
   },
   "programCandidate": {
-    "task": "mean",
+    "task": "rectangle",
     "expression": [
-      "div",
+      "mul",
       [
-        "add",
-        [
-          "add",
-          [
-            "var",
-            "a"
-          ],
-          [
-            "var",
-            "b"
-          ]
-        ],
-        [
-          "var",
-          "c"
-        ]
+        "var",
+        "width"
       ],
       [
-        "const",
-        "3"
+        "var",
+        "height"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "6b4bd266682d9aa653f7743ecae59e67bf13c83bd58fafbcf5f9f7d76a1d3956",
+  "frozenHash": "4bfda98bf589c881364ebaa6ca0279e02e122a644629336032fe70056d24e76b",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -183,9 +110,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-24T00:17:56.718572+00:00",
+        "checkedAt": "2026-11-24T10:22:35.424754+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "0bdde60957fb22ad6b59842505465e39223d4c3f74d857f642169092c2f67fe4"
+        "sourceHash": "1ae6f0e53d954b159111df9c03859d3332ec591bf1994324a8ed2572858bd0a4"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -193,657 +120,538 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.005541+00:00",
+        "checkedAt": "2026-11-24T10:22:35.635501+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "9c5f1a2ba14333ea7e1f2064d840c36db0a96fd377852e353b5b8c388d299258"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26663",
-        "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
-        "excerpt": "arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership (one versus two) with behavioral formation (calibrated to average human behavior versus customized by the participant) in a brainstorming experiment ($N$=168) with human-human dyads as reference. Two-AI rooms posted more ideas to the shared board, but human-authored ideas dropped substantially. With one AI partner, formation mattered: humans paired with an average-calibrated AI posted more than a",
-        "excerptHash": "1caf0ec3c9fc59c40f92c7bdbfc17e7ae6362b167e89f9ff8ac2eea65e54d3ae",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.225755+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26717",
-        "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
-        "excerpt": "arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps each object valid but leaves the relationships between them ungrounded. We study an alternative paradigm, generation by simulation: rather than describing a relational artifact, we simulate a process that produces it and take the artifact to be its causal record. Language-model agents propose intent and a deterministic referee resolves outcomes against an explicit world model, so a relation is em",
-        "excerptHash": "68b247e42ea836fc8c75991f2512892ca851be2bc98332606fd381b23224aa97",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.226468+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26722",
-        "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
-        "excerpt": "arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine-tuning (SFT) optimises for producing the correct call, but never contrasts it with a plausible incorrect one. In an environment where even a minor formatting error can invalidate a call and an incorrect decision can derail the interaction, direct preference optimisation (DPO) targets exactly this contrast. DPO, therefore, requires preference pairs r",
-        "excerptHash": "1995cd1c0c4b6ef5768e3bcd2ac90eafa7ad25fabc3205506e7ece53f57ddbe4",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.226902+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26782",
-        "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
-        "excerpt": "arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it cen- tral to materials design and discovery. Yet an MD study requires an expert-driven workflow: designing the simulation, writing reliable input scripts, executing them, and analyzing the results with separate tools. Here we present ChatAtom, a multi-agent large language model system that translates a natural-language request into a complete MD workflow without the user writing input scripts or a",
-        "excerptHash": "860144205994a970c988ae156515a410eb5fa9cadfb804eadf25e121d61924ac",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.227351+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26794",
-        "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
-        "excerpt": "arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards ",
-        "excerptHash": "8c1040e24cf498be1f42ec6d7afcc57f9ad7d435d8d831169d961fdbde195335",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.227872+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-      },
-      {
-        "url": "https://arxiv.org/abs/2611.26797",
-        "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
-        "excerpt": "arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evade our understanding. This thesis explores that puzzle through Associative Memory (AM), in which patterns are stored as energy minima and retrieved through attractor dynamics. Beyond their capacity, AMs form new minima known as spurious states, long regarded as a failure of memory. We argue that this failure is where creativity begins, and that memorization and generalization can coexist as outcome",
-        "excerptHash": "70120dd6e83aa58afc377bd4f52ffccc3c764c2ff9b4ae0292e6b38f21090cd2",
-        "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-24T00:17:57.228314+00:00",
-        "source": "https://rss.arxiv.org/rss/cs.AI",
-        "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
+        "sourceHash": "dec12fde7fea4828d5d8b867582f0a86bcd63c00a16f62bf87358408f396f174"
       }
     ],
     "rejected": [],
-    "failures": []
+    "failures": [
+      {
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "error": "ValueError"
+      }
+    ]
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
-    "seed": 173024247357751,
+    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
+    "seed": 109937768789950,
     "cases": [
       {
         "args": {
-          "a": "0",
-          "b": "0",
-          "c": "0"
+          "width": "0",
+          "height": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "a": "1",
-          "b": "1",
-          "c": "1"
+          "width": "1",
+          "height": "1"
         },
         "expected": "1",
         "reply": "1"
       },
       {
         "args": {
-          "a": "-1",
-          "b": "-1",
-          "c": "-1"
+          "width": "-1",
+          "height": "-1"
         },
-        "expected": "-1",
-        "reply": "-1"
+        "expected": "1",
+        "reply": "1"
       },
       {
         "args": {
-          "a": "-973.09",
-          "b": "-3033.09",
-          "c": "8319.81"
+          "width": "-2091.93",
+          "height": "6746.14"
         },
-        "expected": "431363/300",
-        "reply": "431363/300"
+        "expected": "-70562263251/5000",
+        "reply": "-70562263251/5000"
       },
       {
         "args": {
-          "a": "1192.27",
-          "b": "-2412.10",
-          "c": "6279.77"
+          "width": "-8078.23",
+          "height": "4577.07"
         },
-        "expected": "252997/150",
-        "reply": "252997/150"
+        "expected": "-369746241861/10000",
+        "reply": "-369746241861/10000"
       },
       {
         "args": {
-          "a": "170.25",
-          "b": "5003.34",
-          "c": "1041.46"
+          "width": "-1315.66",
+          "height": "4020.92"
         },
-        "expected": "124301/60",
-        "reply": "124301/60"
+        "expected": "-6612704509/1250",
+        "reply": "-6612704509/1250"
       },
       {
         "args": {
-          "a": "9168.88",
-          "b": "207.28",
-          "c": "8565.36"
+          "width": "-9292.22",
+          "height": "7200.00"
         },
-        "expected": "448538/75",
-        "reply": "448538/75"
+        "expected": "-66903984",
+        "reply": "-66903984"
       },
       {
         "args": {
-          "a": "-42.52",
-          "b": "-4145.80",
-          "c": "5159.12"
+          "width": "-8756.29",
+          "height": "-9513.17"
         },
-        "expected": "1618/5",
-        "reply": "1618/5"
+        "expected": "833000753393/10000",
+        "reply": "833000753393/10000"
       },
       {
         "args": {
-          "a": "7774.94",
-          "b": "4798.95",
-          "c": "-9093.95"
+          "width": "-5121.93",
+          "height": "5736.61"
         },
-        "expected": "57999/50",
-        "reply": "57999/50"
+        "expected": "-293825148573/10000",
+        "reply": "-293825148573/10000"
       },
       {
         "args": {
-          "a": "-9501.32",
-          "b": "1708.53",
-          "c": "-9718.02"
+          "width": "-5798.82",
+          "height": "-9672.29"
         },
-        "expected": "-1751081/300",
-        "reply": "-1751081/300"
+        "expected": "280439343489/5000",
+        "reply": "280439343489/5000"
       },
       {
         "args": {
-          "a": "-4899.22",
-          "b": "-4970.96",
-          "c": "-203.15"
+          "width": "5621.05",
+          "height": "2091.35"
         },
-        "expected": "-1007333/300",
-        "reply": "-1007333/300"
+        "expected": "4702233167/400",
+        "reply": "4702233167/400"
       },
       {
         "args": {
-          "a": "-6370.99",
-          "b": "5642.47",
-          "c": "-4140.87"
+          "width": "8413.05",
+          "height": "-6457.73"
         },
-        "expected": "-162313/100",
-        "reply": "-162313/100"
+        "expected": "-108658410753/2000",
+        "reply": "-108658410753/2000"
       },
       {
         "args": {
-          "a": "8493.33",
-          "b": "8041.81",
-          "c": "-6680.60"
+          "width": "-5743.36",
+          "height": "5668.22"
         },
-        "expected": "492727/150",
-        "reply": "492727/150"
+        "expected": "-20346642512/625",
+        "reply": "-20346642512/625"
       },
       {
         "args": {
-          "a": "-5935.69",
-          "b": "2961.47",
-          "c": "4896.56"
+          "width": "5562.74",
+          "height": "-9749.67"
         },
-        "expected": "32039/50",
-        "reply": "32039/50"
+        "expected": "-271174396479/5000",
+        "reply": "-271174396479/5000"
       },
       {
         "args": {
-          "a": "-4577.75",
-          "b": "-4141.95",
-          "c": "-9773.44"
+          "width": "-477.06",
+          "height": "-87.78"
         },
-        "expected": "-308219/50",
-        "reply": "-308219/50"
+        "expected": "104690817/2500",
+        "reply": "104690817/2500"
       },
       {
         "args": {
-          "a": "-6393.36",
-          "b": "-1145.52",
-          "c": "2704.18"
+          "width": "-4810.44",
+          "height": "2691.53"
         },
-        "expected": "-48347/30",
-        "reply": "-48347/30"
+        "expected": "-32368608933/2500",
+        "reply": "-32368608933/2500"
       },
       {
         "args": {
-          "a": "5971.42",
-          "b": "-6885.19",
-          "c": "-9462.12"
+          "width": "-1265.78",
+          "height": "-3305.59"
         },
-        "expected": "-345863/100",
-        "reply": "-345863/100"
+        "expected": "20920748551/5000",
+        "reply": "20920748551/5000"
       },
       {
         "args": {
-          "a": "-4576.63",
-          "b": "9617.72",
-          "c": "5913.94"
+          "width": "-6155.40",
+          "height": "-8583.39"
         },
-        "expected": "1095503/300",
-        "reply": "1095503/300"
+        "expected": "26417099403/500",
+        "reply": "26417099403/500"
       },
       {
         "args": {
-          "a": "2504.42",
-          "b": "-2649.22",
-          "c": "5062.42"
+          "width": "-164.21",
+          "height": "-3830.45"
         },
-        "expected": "245881/150",
-        "reply": "245881/150"
+        "expected": "1257996389/2000",
+        "reply": "1257996389/2000"
       },
       {
         "args": {
-          "a": "-223.69",
-          "b": "-7601.82",
-          "c": "-9984.66"
+          "width": "2038.08",
+          "height": "-3075.69"
         },
-        "expected": "-1781017/300",
-        "reply": "-1781017/300"
+        "expected": "-3917813922/625",
+        "reply": "-3917813922/625"
       },
       {
         "args": {
-          "a": "-8392.61",
-          "b": "1822.95",
-          "c": "-7076.64"
+          "width": "-5302.30",
+          "height": "-5162.99"
         },
-        "expected": "-136463/30",
-        "reply": "-136463/30"
+        "expected": "27375721877/1000",
+        "reply": "27375721877/1000"
       },
       {
         "args": {
-          "a": "1907.15",
-          "b": "-363.11",
-          "c": "-4241.66"
+          "width": "-1139.24",
+          "height": "8263.11"
         },
-        "expected": "-134881/150",
-        "reply": "-134881/150"
+        "expected": "-23534163591/2500",
+        "reply": "-23534163591/2500"
       },
       {
         "args": {
-          "a": "-7933.66",
-          "b": "686.70",
-          "c": "-8011.48"
+          "width": "7323.52",
+          "height": "-8346.40"
         },
-        "expected": "-381461/75",
-        "reply": "-381461/75"
+        "expected": "-7640628416/125",
+        "reply": "-7640628416/125"
       },
       {
         "args": {
-          "a": "9174.46",
-          "b": "6807.37",
-          "c": "2909.04"
+          "width": "859.02",
+          "height": "-3711.98"
         },
-        "expected": "1889087/300",
-        "reply": "1889087/300"
+        "expected": "-7971662649/2500",
+        "reply": "-7971662649/2500"
       },
       {
         "args": {
-          "a": "-6861.20",
-          "b": "3918.75",
-          "c": "-977.67"
+          "width": "-8822.37",
+          "height": "-8315.81"
         },
-        "expected": "-98003/75",
-        "reply": "-98003/75"
+        "expected": "733651526697/10000",
+        "reply": "733651526697/10000"
       },
       {
         "args": {
-          "a": "6056.69",
-          "b": "-779.39",
-          "c": "5037.76"
+          "width": "9151.42",
+          "height": "-7075.28"
         },
-        "expected": "515753/150",
-        "reply": "515753/150"
+        "expected": "-40468036811/625",
+        "reply": "-40468036811/625"
       },
       {
         "args": {
-          "a": "6083.14",
-          "b": "-9248.66",
-          "c": "69.28"
+          "width": "6467.12",
+          "height": "-5331.14"
         },
-        "expected": "-25802/25",
-        "reply": "-25802/25"
+        "expected": "-21548201323/625",
+        "reply": "-21548201323/625"
       },
       {
         "args": {
-          "a": "-2095.10",
-          "b": "-5046.14",
-          "c": "-657.84"
+          "width": "-8575.99",
+          "height": "-727.49"
         },
-        "expected": "-194977/75",
-        "reply": "-194977/75"
+        "expected": "62389469651/10000",
+        "reply": "62389469651/10000"
       },
       {
         "args": {
-          "a": "-1004.95",
-          "b": "-5580.81",
-          "c": "7829.33"
+          "width": "-5216.98",
+          "height": "7653.78"
         },
-        "expected": "124357/300",
-        "reply": "124357/300"
+        "expected": "-99824042961/2500",
+        "reply": "-99824042961/2500"
       },
       {
         "args": {
-          "a": "-45.95",
-          "b": "-3657.85",
-          "c": "7606.56"
+          "width": "-6367.24",
+          "height": "-8810.07"
         },
-        "expected": "32523/25",
-        "reply": "32523/25"
+        "expected": "140239575267/2500",
+        "reply": "140239575267/2500"
       },
       {
         "args": {
-          "a": "2276.25",
-          "b": "5641.09",
-          "c": "2126.16"
+          "width": "7493.88",
+          "height": "1572.21"
         },
-        "expected": "20087/6",
-        "reply": "20087/6"
+        "expected": "29454882687/2500",
+        "reply": "29454882687/2500"
       },
       {
         "args": {
-          "a": "-3737.95",
-          "b": "9386.88",
-          "c": "6629.67"
+          "width": "-4293.44",
+          "height": "-8453.16"
         },
-        "expected": "61393/15",
-        "reply": "61393/15"
+        "expected": "22683209544/625",
+        "reply": "22683209544/625"
       },
       {
         "args": {
-          "a": "-6457.94",
-          "b": "6089.99",
-          "c": "6592.05"
+          "width": "-7545.99",
+          "height": "-9835.86"
         },
-        "expected": "20747/10",
-        "reply": "20747/10"
+        "expected": "371106506007/5000",
+        "reply": "371106506007/5000"
       },
       {
         "args": {
-          "a": "5502.61",
-          "b": "7769.68",
-          "c": "-7381.37"
+          "width": "-3271.95",
+          "height": "6610.85"
         },
-        "expected": "49091/25",
-        "reply": "49091/25"
+        "expected": "-8652148263/400",
+        "reply": "-8652148263/400"
       },
       {
         "args": {
-          "a": "-9739.85",
-          "b": "7270.41",
-          "c": "5854.39"
+          "width": "1547.80",
+          "height": "-9333.89"
         },
-        "expected": "67699/60",
-        "reply": "67699/60"
+        "expected": "-7223497471/500",
+        "reply": "-7223497471/500"
       },
       {
         "args": {
-          "a": "4676.74",
-          "b": "-6450.23",
-          "c": "-7937.69"
+          "width": "-7798.74",
+          "height": "-7745.55"
         },
-        "expected": "-161853/50",
-        "reply": "-161853/50"
+        "expected": "60405530607/1000",
+        "reply": "60405530607/1000"
       },
       {
         "args": {
-          "a": "-5901.74",
-          "b": "771.21",
-          "c": "-5022.04"
+          "width": "3066.88",
+          "height": "6891.62"
         },
-        "expected": "-338419/100",
-        "reply": "-338419/100"
+        "expected": "13209857216/625",
+        "reply": "13209857216/625"
       },
       {
         "args": {
-          "a": "9801.31",
-          "b": "-9682.31",
-          "c": "5964.31"
+          "width": "7835.33",
+          "height": "7026.99"
         },
-        "expected": "202777/100",
-        "reply": "202777/100"
+        "expected": "550587855567/10000",
+        "reply": "550587855567/10000"
       },
       {
         "args": {
-          "a": "1555.36",
-          "b": "-6508.20",
-          "c": "8489.63"
+          "width": "8648.34",
+          "height": "5052.48"
         },
-        "expected": "117893/100",
-        "reply": "117893/100"
+        "expected": "27309728052/625",
+        "reply": "27309728052/625"
       },
       {
         "args": {
-          "a": "4358.78",
-          "b": "910.36",
-          "c": "5273.23"
+          "width": "-1728.47",
+          "height": "7377.52"
         },
-        "expected": "1054237/300",
-        "reply": "1054237/300"
+        "expected": "-15939777493/1250",
+        "reply": "-15939777493/1250"
       },
       {
         "args": {
-          "a": "-3437.01",
-          "b": "486.57",
-          "c": "-5811.52"
+          "width": "-9856.41",
+          "height": "-7863.87"
         },
-        "expected": "-219049/75",
-        "reply": "-219049/75"
+        "expected": "775095269067/10000",
+        "reply": "775095269067/10000"
       },
       {
         "args": {
-          "a": "898.08",
-          "b": "2238.40",
-          "c": "-7437.85"
+          "width": "290.56",
+          "height": "603.95"
         },
-        "expected": "-143379/100",
-        "reply": "-143379/100"
+        "expected": "21935464/125",
+        "reply": "21935464/125"
       },
       {
         "args": {
-          "a": "-295.44",
-          "b": "-6108.71",
-          "c": "5188.77"
+          "width": "4602.67",
+          "height": "-7878.57"
         },
-        "expected": "-60769/150",
-        "reply": "-60769/150"
+        "expected": "-362624577819/10000",
+        "reply": "-362624577819/10000"
       },
       {
         "args": {
-          "a": "-8676.59",
-          "b": "-7698.75",
-          "c": "2529.05"
+          "width": "-9785.07",
+          "height": "2934.80"
         },
-        "expected": "-461543/100",
-        "reply": "-461543/100"
+        "expected": "-7179305859/250",
+        "reply": "-7179305859/250"
       },
       {
         "args": {
-          "a": "3799.89",
-          "b": "9762.61",
-          "c": "-1252.00"
+          "width": "8630.59",
+          "height": "8321.44"
         },
-        "expected": "8207/2",
-        "reply": "8207/2"
+        "expected": "44886835531/625",
+        "reply": "44886835531/625"
       },
       {
         "args": {
-          "a": "2266.88",
-          "b": "-785.99",
-          "c": "2092.81"
+          "width": "-6569.63",
+          "height": "-4849.94"
         },
-        "expected": "35737/30",
-        "reply": "35737/30"
+        "expected": "159311556611/5000",
+        "reply": "159311556611/5000"
       },
       {
         "args": {
-          "a": "-334.33",
-          "b": "8653.45",
-          "c": "1030.48"
+          "width": "-201.19",
+          "height": "8732.01"
         },
-        "expected": "46748/15",
-        "reply": "46748/15"
+        "expected": "-17567930919/10000",
+        "reply": "-17567930919/10000"
       },
       {
         "args": {
-          "a": "-4234.07",
-          "b": "4435.82",
-          "c": "9525.47"
+          "width": "4237.21",
+          "height": "-4767.20"
         },
-        "expected": "486361/150",
-        "reply": "486361/150"
+        "expected": "-2524953439/125",
+        "reply": "-2524953439/125"
       },
       {
         "args": {
-          "a": "8755.80",
-          "b": "4996.78",
-          "c": "-4018.72"
+          "width": "7020.04",
+          "height": "-8745.98"
         },
-        "expected": "162231/50",
-        "reply": "162231/50"
+        "expected": "-76746411799/1250",
+        "reply": "-76746411799/1250"
       },
       {
         "args": {
-          "a": "-7897.80",
-          "b": "-8185.46",
-          "c": "4441.18"
+          "width": "-8497.11",
+          "height": "2436.81"
         },
-        "expected": "-291052/75",
-        "reply": "-291052/75"
+        "expected": "-207058426191/10000",
+        "reply": "-207058426191/10000"
       },
       {
         "args": {
-          "a": "-8598.55",
-          "b": "-9416.45",
-          "c": "9527.36"
+          "width": "-4509.84",
+          "height": "-7631.17"
         },
-        "expected": "-212191/75",
-        "reply": "-212191/75"
+        "expected": "43019194641/1250",
+        "reply": "43019194641/1250"
       },
       {
         "args": {
-          "a": "8643.37",
-          "b": "-7777.57",
-          "c": "7080.12"
+          "width": "-7975.01",
+          "height": "-7404.98"
         },
-        "expected": "66216/25",
-        "reply": "66216/25"
+        "expected": "295273947749/5000",
+        "reply": "295273947749/5000"
       },
       {
         "args": {
-          "a": "-5434.91",
-          "b": "6658.90",
-          "c": "-8420.39"
+          "width": "-3461.02",
+          "height": "-4798.89"
         },
-        "expected": "-11994/5",
-        "reply": "-11994/5"
+        "expected": "83045271339/5000",
+        "reply": "83045271339/5000"
       },
       {
         "args": {
-          "a": "4276.84",
-          "b": "1481.33",
-          "c": "1817.96"
+          "width": "-7672.88",
+          "height": "-904.51"
         },
-        "expected": "757613/300",
-        "reply": "757613/300"
+        "expected": "8675245861/1250",
+        "reply": "8675245861/1250"
       },
       {
         "args": {
-          "a": "5804.07",
-          "b": "-7169.22",
-          "c": "-4959.02"
+          "width": "966.45",
+          "height": "-3675.67"
         },
-        "expected": "-632417/300",
-        "reply": "-632417/300"
+        "expected": "-7104702543/2000",
+        "reply": "-7104702543/2000"
       },
       {
         "args": {
-          "a": "-7654.44",
-          "b": "8876.84",
-          "c": "8725.31"
+          "width": "-6014.71",
+          "height": "-663.67"
         },
-        "expected": "994771/300",
-        "reply": "994771/300"
+        "expected": "39917825857/10000",
+        "reply": "39917825857/10000"
       },
       {
         "args": {
-          "a": "8014.05",
-          "b": "-2673.65",
-          "c": "-6325.61"
+          "width": "9191.66",
+          "height": "-1054.54"
         },
-        "expected": "-98521/300",
-        "reply": "-98521/300"
+        "expected": "-24232432841/2500",
+        "reply": "-24232432841/2500"
       },
       {
         "args": {
-          "a": "8994.86",
-          "b": "3057.89",
-          "c": "-3925.13"
+          "width": "4120.23",
+          "height": "-7860.01"
         },
-        "expected": "406381/150",
-        "reply": "406381/150"
+        "expected": "-323850490023/10000",
+        "reply": "-323850490023/10000"
       },
       {
         "args": {
-          "a": "-7408.52",
-          "b": "-5219.72",
-          "c": "-325.77"
+          "width": "3609.97",
+          "height": "-9808.05"
         },
-        "expected": "-1295401/300",
-        "reply": "-1295401/300"
+        "expected": "-70813532517/2000",
+        "reply": "-70813532517/2000"
       },
       {
         "args": {
-          "a": "8956.50",
-          "b": "-2933.50",
-          "c": "-6422.64"
+          "width": "6418.99",
+          "height": "-5765.51"
         },
-        "expected": "-9991/75",
-        "reply": "-9991/75"
+        "expected": "-370087510349/10000",
+        "reply": "-370087510349/10000"
       },
       {
         "args": {
-          "a": "-6667.79",
-          "b": "4848.60",
-          "c": "-9141.12"
+          "width": "-8717.61",
+          "height": "-7860.80"
         },
-        "expected": "-1096031/300",
-        "reply": "-1096031/300"
+        "expected": "8565923586/125",
+        "reply": "8565923586/125"
       },
       {
         "args": {
-          "a": "9188.13",
-          "b": "-2768.93",
-          "c": "-8540.40"
+          "width": "3029.59",
+          "height": "229.56"
         },
-        "expected": "-10606/15",
-        "reply": "-10606/15"
+        "expected": "1738681701/2500",
+        "reply": "1738681701/2500"
       },
       {
         "args": {
-          "a": "9605.86",
-          "b": "-710.72",
-          "c": "2191.81"
+          "width": "-2521.42",
+          "height": "2225.45"
         },
-        "expected": "73913/20",
-        "reply": "73913/20"
+        "expected": "-5611294139/1000",
+        "reply": "-5611294139/1000"
       },
       {
         "args": {
-          "a": "-6144.47",
-          "b": "-304.53",
-          "c": "8925.90"
+          "width": "3176.25",
+          "height": "7405.06"
         },
-        "expected": "24769/30",
-        "reply": "24769/30"
+        "expected": "940812873/40",
+        "reply": "940812873/40"
       }
     ],
-    "nodes": 7,
+    "nodes": 3,
     "passed": true
   },
   "validationCompleted": true,
@@ -851,5 +659,5 @@
     "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "81bbaa6a70dc3a81408a5e5e08e12eb468735fa3a5a0f4070ca1a6a39133eea0"
+  "recordHash": "558f759caf42231ca79fae01659ad44c61225d98faf13ace2904ab24047fbe01"
 }
