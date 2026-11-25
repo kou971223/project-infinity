@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "45522401734",
+  "runId": "45594287172",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-25T01:00:50Z",
+  "at": "2026-11-25T10:22:53Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "36456c5cbd70e969962cffd7fb7179c5faca8a26686fb433df1b99d1442c9daf",
-  "cycleNumber": 233,
+  "parentRecordHash": "29cd77556e90750c68f284085d064e4880c0c828c4a821b3aef445bc9ddc0fb8",
+  "cycleNumber": 234,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1132,9 +1132,23 @@
   ],
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
-    "access": "unavailable",
-    "errorType": "TimeoutError",
-    "items": []
+    "access": "fetched",
+    "hash": "34e63ce4d6a030ab4eb51a910db446002954f8e5ea7708fbcf58b925453e4372",
+    "items": [
+      {
+        "title": "Exploratory Midtraining for Robot Policies",
+        "url": "http://arxiv.org/abs/2611.33130v1",
+        "updated": "2026-11-24T18:52:34Z",
+        "status": "metadata_only_not_fulltext_verified"
+      },
+      {
+        "title": "EventDiffusion: Learning Native Event Stream Distribution from Videos",
+        "url": "http://arxiv.org/abs/2611.33096v1",
+        "updated": "2026-11-24T18:32:39Z",
+        "status": "metadata_only_not_fulltext_verified"
+      }
+    ],
+    "accessedAt": "2026-11-25T10:23:05Z"
   },
   "agenda": {
     "source": [
@@ -1146,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 12.206,
+  "elapsedSeconds": 12.07,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "29cd77556e90750c68f284085d064e4880c0c828c4a821b3aef445bc9ddc0fb8"
+  "recordHash": "fb44c4ec922b426d52a35f46b8a96eaf117ba4af48de422d96a8d01661a1163e"
 }
