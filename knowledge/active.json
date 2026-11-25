@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.31347",
+      "title": "Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations",
+      "excerpt": "arXiv:2611.31347v1 Announce Type: new Abstract: Laya is an open decision model: given a text, a question and K named options with descriptions, it returns one probability per option in a single pass, and software may act on the answer unseen. We attack six Laya models with 81 programmatic edits of 566 synthetic items (injected sentences, label leaks, edited descriptions, decoy options, invisible and look-alike characters, floods) and report the share of correctly answered items hijacked or lost, with bootstrap intervals. Attack wordings that no defence was built from win the attacker's option ",
+      "excerptHash": "c5d769de72b1ed160f3d81cde0b5866f32e9f334dfc749c109b3d7276a19d93c",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.870261+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.31346",
+      "title": "What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations",
+      "excerpt": "arXiv:2611.31346v1 Announce Type: new Abstract: Recent advances in MLLMs have improved social understanding, enabling models to recognize emotions and distinguish truthful from deceptive behaviors. However, existing benchmarks largely focus on coarse-grained emotion recognition or binary truth-deception detection, overlooking the diverse ways people manipulate information in conversations, such as withholding, leakage, fabrication, evasion, and defensive counterclaim. Understanding these behaviors requires reasoning about underlying facts, participant knowledge, and conversational context, mak",
+      "excerptHash": "f384326860065edc7878549ca864119e946998146c582a5bb6a738667785f7ce",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.869668+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.31345",
+      "title": "Beyond Static Charts: Benchmarking Interactive Chart-to-Code Generation for MLLMs",
+      "excerpt": "arXiv:2611.31345v1 Announce Type: new Abstract: In recent years, multimodal large language models (MLLMs) have achieved significant progress in chart-to-code generation. However, existing benchmarks mainly focus on static charts, overlooking interactive charts that enable richer and more expressive data exploration. Unlike static chart-to-code generation, which emphasizes visual consistency, interactive chart-to-code evaluation targets behavioral consistency, requiring chart states to evolve correctly under sequences of user interactions, thereby rendering traditional one-step evaluation parad",
+      "excerptHash": "5eae4948827ae6a325dd12a99969d2bdb59ff8ac6309fd95f8d5034b3c923954",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.869111+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.31329",
+      "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+      "excerpt": "arXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. We propose the Conservative Overlap Fuzzy Rough Set (COFRS) model. Each object is described by its set of present attributes. The similarity of two objects is a weighted overlap on the attributes present in both, divided by the fixed number of attributes |A| instead of the size of their union, so missing values are penalised globally and are not matched as wildcards. From this similarity we define a ",
+      "excerptHash": "57afe8e0943c273f2275152221946e434d37d80c39e627d0a6195f7895ccc6ce",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.868537+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.31301",
+      "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+      "excerpt": "arXiv:2611.31301v1 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture, the voice, or encoding traces. We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinations of real or fake video and real or fake audio so each modality contribution can be measured directly. Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion. MOZAIC has 137,745 clips from 1",
+      "excerptHash": "c5af6cb2d4645c5653c2ef37fa0be2f43123a8c8ebb071b25867950c33c24802",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.867963+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.31284",
+      "title": "Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition",
+      "excerpt": "arXiv:2611.31284v1 Announce Type: new Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental question precedes execution: which agents are allowed to act. In this paper, we show that allocation is not an auxiliary concern but a structural component of governance. When multiple agents compete for execution under constrained resources, any allocation mechanism introduces unavoidable trade-offs between fairness, efficiency, and resistance to strategic manipulation. We formalize this through a se",
+      "excerptHash": "76ce5b32527a6a8aa9f106cb529930cf0680b6f85106f99cc2ccd817832432d8",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.867370+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.704462+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "399740b4249e3aa3944e8127bd55e0f2acc8a2f533c1e7dafa9379deffc1473a"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-25T09:03:59.064061+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "551a86fc2c9692ccea7e5d03eb8874d29319173f2785cebfedfdeedc8f947d26"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.26797",
       "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
       "excerpt": "arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evade our understanding. This thesis explores that puzzle through Associative Memory (AM), in which patterns are stored as energy minima and retrieved through attractor dynamics. Beyond their capacity, AMs form new minima known as spurious states, long regarded as a failure of memory. We argue that this failure is where creativity begins, and that memorization and generalization can coexist as outcome",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-23T08:08:17.604434+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "8d8b3b66a58d2ae623e202d6871e8c8cfa12b814c663cc417abbfedcefc9b376"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-23T08:08:17.380184+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "4582cea6170a1c79af14832ffc075563b3be9f077430f5510980b3fcf2d3fea9"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-23T08:08:16.942264+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "8ca88612cddbd4c7bd762a5d5c4a505ef845fb7e57c2e0e6c78c34b2461e88a3"
     },
     {
       "url": "https://arxiv.org/abs/2611.25111",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-19T07:52:31.153697+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23365",
-      "title": "Training Language Models for Introspective Oversight",
-      "excerpt": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible model outputs, and activation decoders lack full context and are prone to confabulation. We introduce ",
-      "excerptHash": "140c65d7d695627b4c2a1c9b0f9731150216db281dab5adebdd55daa7a092c68",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.153125+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23322",
-      "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
-      "excerpt": "arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while they have leverage over the AI: either the AI depends on what they supply, or they can impose costs on",
-      "excerptHash": "eca3b422113552bb0d21d6dfbafe7d02f33e002cdd5ad05e108b85a36b21ac9d",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.152556+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.21925",
-      "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
-      "excerpt": "arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applyi",
-      "excerptHash": "7b5710d21e48b14c5171859c496f7dec9bf1779090b7e9533192d1e0d9b799b9",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-18T07:53:57.168926+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.21885",
-      "title": "Language Models Can Rewrite Their Own Weights",
-      "excerpt": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and ed",
-      "excerptHash": "26897f1ae4ab8571f3b220a9b751c6aa41fc292522df4344ebfe5899e36ef904",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-18T07:53:57.168395+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.21832",
-      "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
-      "excerpt": "arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged fro",
-      "excerptHash": "c44202aed7c9d5132dd2a6471c84fb273ef212420c328f437bee6849ab667c90",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-18T07:53:57.167869+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.21827",
-      "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
-      "excerpt": "arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seeds) we first reproduce the known MSTAR result: with the central 96x96 pixels zeroed out, accuracy is still 73.3% (chance 10%). The same shortcut is present in ATRNet-STAR, which was collected across several scenes: with the vehicle removed, accuracy is 63.3% on the 40-class SOC split (chance 2.5%). Under the official scene",
-      "excerptHash": "22e575c930c3766f17229d9425044aea107e3940fd6e45f6714416d2271fb5e6",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-18T07:53:57.167327+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 20,
-  "parentHash": "f4402cd08f15de6174c105dadc39c87cb24e6dc5fd495ba7007d79e0b4cc827a",
-  "at": "2026-11-23T08:08:17.608219+00:00",
-  "runId": "45136177337",
-  "artifactHash": "b06ce2e0ed64c9b8fa42464243636fa5869b2af8b455cc6a7538d6b012616bb5"
+  "generation": 21,
+  "parentHash": "b06ce2e0ed64c9b8fa42464243636fa5869b2af8b455cc6a7538d6b012616bb5",
+  "at": "2026-11-25T09:03:59.871145+00:00",
+  "runId": "45581844649",
+  "artifactHash": "4fe9d513a7480667c18ab28c33f22c33ab04089acfea257e0ac41231eaa36ee1"
 }
