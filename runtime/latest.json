@@ -1,14 +1,14 @@
 {
   "schema": "PINF-RUNTIME-PUBLIC-1",
-  "at": "2026-11-26T04:59:10.398Z",
-  "runId": "45758565912",
+  "at": "2026-11-26T15:07:18.806Z",
+  "runId": "45845770923",
   "event": "schedule",
   "decision": "NO_CHANGE",
   "applied": false,
   "candidate": {
     "schema": "PINF-BACKEND-REPORT-1",
-    "exp": "EXP-53fbfc2e-1c38-4b5f-ae04-690327a43d19",
-    "at": "2026-11-26T04:58:57.169Z",
+    "exp": "EXP-b9aeead6-f771-4cf9-845d-9318725ce816",
+    "at": "2026-11-26T15:06:59.589Z",
     "protocol": {
       "id": "PINF-BACKEND-ACC-1",
       "candidateCount": 8,
@@ -80,7 +80,7 @@
     "taxonomy": "E1 application reliability",
     "overallProjectAccepted": false,
     "decision": "NO_CHANGE",
-    "elapsedMs": 7
+    "elapsedMs": 5
   },
   "sources": {
     "schema": "PINF-SOURCES-1",
@@ -97,18 +97,18 @@
         "status": "official_document_body_retrieved_not_independent_validation"
       },
       {
-        "title": "Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition",
-        "url": "https://arxiv.org/abs/2611.31284",
+        "title": "Context Scaling: A New Frontier of AI Scaling",
+        "url": "https://arxiv.org/abs/2611.33160",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
-        "url": "https://arxiv.org/abs/2611.31301",
+        "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+        "url": "https://arxiv.org/abs/2611.33161",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
-        "url": "https://arxiv.org/abs/2611.31329",
+        "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+        "url": "https://arxiv.org/abs/2611.33165",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
@@ -117,11 +117,11 @@
         "id": "HF-WEBGPU-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-26T04:58:56Z",
+        "at": "2026-11-26T15:06:58Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "f0b8c9abf68722b4e6ca0c56bc662addbf519951f38cd672e3fa1e95baf15a98",
+        "sha256": "28bb56b2b00a65191a5f264a6be06999cdd698cb5c75c08326ab5e1ac0ffecd5",
         "bytes": 110262,
         "scope": "documentation_body_retrieved",
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
@@ -131,11 +131,11 @@
         "id": "HF-DTYPES-3.8.1",
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
         "kind": "official_versioned_documentation",
-        "at": "2026-11-26T04:58:56Z",
+        "at": "2026-11-26T15:06:59Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "huggingface-docs",
         "access": "fetched",
-        "sha256": "cb19f6547c2c44999528f2f4adf06bff3124358b06b9df521970ac4e4d8781d7",
+        "sha256": "42bcd487e0e35624aad2653e65f2a53b32abe646ecd467e116f68deb4c473377",
         "bytes": 111891,
         "scope": "documentation_body_retrieved",
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages const messages = [ { role : \"system\" , content : \"You are a helpful assistant.\" }, { role : \"user\" , content : \"Tell me a funny joke.\" }, ]; // Generate a response const output = await generator (messages, { max_new_tokens : 128 }); console . log (output[ 0 ]. generated_text . at (- 1 ). content ); Per-module dtypes Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive ",
@@ -145,12 +145,12 @@
         "id": "ARXIV-AI-RSS",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "kind": "primary_abstract_feed",
-        "at": "2026-11-26T04:58:56Z",
+        "at": "2026-11-26T15:06:59Z",
         "claimVerification": "not_adjudicated",
         "dependencyCluster": "arxiv-feed",
         "access": "fetched",
-        "sha256": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c",
-        "bytes": 966350,
+        "sha256": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203",
+        "bytes": 865923,
         "scope": "feed_only"
       }
     ],
@@ -165,5 +165,5 @@
   },
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
-  "recordHash": "2722a4869cbae494ef41e68c7a897b3d45566d24be86155ed819c029b36dcdce"
+  "recordHash": "36d67887df4acdd0770d67cde6e4ecde9510a9c2a40535b68e460399d142760b"
 }
