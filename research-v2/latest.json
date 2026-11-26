@@ -1,10 +1,10 @@
 {
   "schema": "PINF-RESEARCH-2",
-  "at": "2026-11-26T08:51:21.469129+00:00",
+  "at": "2026-11-26T21:53:30.572371+00:00",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "runId": "45786677968",
+  "runId": "45901171155",
   "parents": {
-    "knowledge": "4fe9d513a7480667c18ab28c33f22c33ab04089acfea257e0ac41231eaa36ee1",
+    "knowledge": "ba5abbcdbdacb0e4660cc04d580c12dca6eb03d7c9e32739cac861f5bc31a5b9",
     "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
   },
   "cards": [
@@ -14,9 +14,9 @@
       "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
       "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.112536+00:00",
+      "checkedAt": "2026-11-26T21:53:30.230003+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "fe1b6d2f92afaa9297bce9ff68bac789eb2be0d9b78c89961ed68432bdf18da5"
+      "sourceHash": "48b4182eef8c4eb8edf781fc8fb1802b9c246e35f72fd65eabe33619576d970e"
     },
     {
       "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -24,9 +24,9 @@
       "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
       "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
       "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.406674+00:00",
+      "checkedAt": "2026-11-26T21:53:30.362699+00:00",
       "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "63ab14bfdc4f4394a1c463785e83966d5fffef9b80b9f1dbfccc17f4f5372f77"
+      "sourceHash": "6fbdaaf2e2bb31b58ae0ea9f001c3fe96756db55e4e23ca9442eb2c5195a924b"
     },
     {
       "url": "https://arxiv.org/abs/2611.33160",
@@ -34,7 +34,7 @@
       "excerpt": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling i",
       "excerptHash": "f83abb20f18495d8eed6da4ee232a7de17547f7464b03697914eddff1dd07f68",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.465108+00:00",
+      "checkedAt": "2026-11-26T21:53:30.568978+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     },
@@ -44,7 +44,7 @@
       "excerpt": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive sc",
       "excerptHash": "6eb03b6c14f2965595973f6b0ec9ce919901a77c0ac43f486888f5feb2c20c9f",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.465756+00:00",
+      "checkedAt": "2026-11-26T21:53:30.569526+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     },
@@ -54,7 +54,7 @@
       "excerpt": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources",
       "excerptHash": "06fd60902b7a2dbf3862688d4fd0cf00b2f99f86e7ede39ca28564438db5eb1a",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.466341+00:00",
+      "checkedAt": "2026-11-26T21:53:30.570032+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     },
@@ -64,7 +64,7 @@
       "excerpt": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against con",
       "excerptHash": "be3265789d20445ea73a21ccdce0890efce6f737568aa57184d9cd36312f25eb",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.466944+00:00",
+      "checkedAt": "2026-11-26T21:53:30.570548+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     },
@@ -74,7 +74,7 @@
       "excerpt": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights throug",
       "excerptHash": "85c6dd7b6579456e9a96d481767075f171436d644e0ce5e677fa19893539e75c",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.467544+00:00",
+      "checkedAt": "2026-11-26T21:53:30.571054+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     },
@@ -84,13 +84,13 @@
       "excerpt": "arXiv:2611.33303v1 Announce Type: new Abstract: Procedurally generated logic problems are used to both evaluate and train reasoning in language models. Their difficulty is usually set by planting a proof, that is, by sampling a proof of the desired depth and stating its premises as the problem. However, a planted proof is only one possible proof. A problem can also have shorter proofs, or several unrelated ones, and its stated depth then overstates what solving it requires. We measure what a problem actually requires, relative to a stated set of inference rules. For each problem, we compute th",
       "excerptHash": "ac6c85214ac309e451f4c495236d520f687f1c660f09cc5edcb9038587027851",
       "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-26T08:51:21.468125+00:00",
+      "checkedAt": "2026-11-26T21:53:30.571565+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
     }
   ],
   "sourceFailures": [],
-  "task": "rectangle",
+  "task": "percentage",
   "privateDataUsed": false,
   "generationAttempts": [
     {
@@ -104,58 +104,65 @@
   ],
   "programFailure": "UPSTREAM_BUSY",
   "synthesis": {
-    "trainingSeed": 88334282236221,
+    "trainingSeed": 245790072590143,
     "trainingExamples": [
       {
         "args": {
-          "width": "-2795.76",
-          "height": "-9952.15"
+          "amount": "9974.06",
+          "rate": "-6597.86"
         },
-        "expected": "6955955721/250"
+        "expected": "-164518628779/250000"
       },
       {
         "args": {
-          "width": "-4156.33",
-          "height": "-4648.52"
+          "amount": "-4726.66",
+          "rate": "3036.57"
         },
-        "expected": "48301957829/2500"
+        "expected": "-71764169781/500000"
       },
       {
         "args": {
-          "width": "-5937.35",
-          "height": "-6838.29"
+          "amount": "7493.58",
+          "rate": "891.63"
         },
-        "expected": "81202642263/2000"
+        "expected": "33407503677/500000"
       },
       {
         "args": {
-          "width": "9353.95",
-          "height": "9275.67"
+          "amount": "7245.71",
+          "rate": "-9928.06"
         },
-        "expected": "173528306793/2000"
+        "expected": "-359679218113/500000"
       }
     ],
-    "examined": 13,
-    "states": 11,
-    "cost": 3
+    "examined": 347,
+    "states": 188,
+    "cost": 5
   },
   "programCandidate": {
-    "task": "rectangle",
+    "task": "percentage",
     "expression": [
-      "mul",
+      "div",
       [
-        "var",
-        "width"
+        "mul",
+        [
+          "var",
+          "amount"
+        ],
+        [
+          "var",
+          "rate"
+        ]
       ],
       [
-        "var",
-        "height"
+        "const",
+        "100"
       ]
     ],
     "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
   },
   "candidateOrigin": "local_enumerative_synthesis",
-  "frozenHash": "2414254f9bd69c9e81ee52c4425e121eba99c2644cd50ebf966c2a7b7901a5ca",
+  "frozenHash": "1aecf7dcfe5e0ff0328dcddfbca15bd8aa0c05997b31b68307af413516209caf",
   "knowledgeEvidence": {
     "protocol": "PINF-SOURCE-MATCH-1",
     "verifiedCards": [
@@ -165,9 +172,9 @@
         "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
         "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.112536+00:00",
+        "checkedAt": "2026-11-26T21:53:30.230003+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-        "sourceHash": "fe1b6d2f92afaa9297bce9ff68bac789eb2be0d9b78c89961ed68432bdf18da5"
+        "sourceHash": "48b4182eef8c4eb8edf781fc8fb1802b9c246e35f72fd65eabe33619576d970e"
       },
       {
         "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
@@ -175,9 +182,9 @@
         "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
         "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
         "kind": "official_document_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.406674+00:00",
+        "checkedAt": "2026-11-26T21:53:30.362699+00:00",
         "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-        "sourceHash": "63ab14bfdc4f4394a1c463785e83966d5fffef9b80b9f1dbfccc17f4f5372f77"
+        "sourceHash": "6fbdaaf2e2bb31b58ae0ea9f001c3fe96756db55e4e23ca9442eb2c5195a924b"
       },
       {
         "url": "https://arxiv.org/abs/2611.33160",
@@ -185,7 +192,7 @@
         "excerpt": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling i",
         "excerptHash": "f83abb20f18495d8eed6da4ee232a7de17547f7464b03697914eddff1dd07f68",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.465108+00:00",
+        "checkedAt": "2026-11-26T21:53:30.568978+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       },
@@ -195,7 +202,7 @@
         "excerpt": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive sc",
         "excerptHash": "6eb03b6c14f2965595973f6b0ec9ce919901a77c0ac43f486888f5feb2c20c9f",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.465756+00:00",
+        "checkedAt": "2026-11-26T21:53:30.569526+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       },
@@ -205,7 +212,7 @@
         "excerpt": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources",
         "excerptHash": "06fd60902b7a2dbf3862688d4fd0cf00b2f99f86e7ede39ca28564438db5eb1a",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.466341+00:00",
+        "checkedAt": "2026-11-26T21:53:30.570032+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       },
@@ -215,7 +222,7 @@
         "excerpt": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against con",
         "excerptHash": "be3265789d20445ea73a21ccdce0890efce6f737568aa57184d9cd36312f25eb",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.466944+00:00",
+        "checkedAt": "2026-11-26T21:53:30.570548+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       },
@@ -225,7 +232,7 @@
         "excerpt": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights throug",
         "excerptHash": "85c6dd7b6579456e9a96d481767075f171436d644e0ce5e677fa19893539e75c",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.467544+00:00",
+        "checkedAt": "2026-11-26T21:53:30.571054+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       },
@@ -235,7 +242,7 @@
         "excerpt": "arXiv:2611.33303v1 Announce Type: new Abstract: Procedurally generated logic problems are used to both evaluate and train reasoning in language models. Their difficulty is usually set by planting a proof, that is, by sampling a proof of the desired depth and stating its premises as the problem. However, a planted proof is only one possible proof. A problem can also have shorter proofs, or several unrelated ones, and its stated depth then overstates what solving it requires. We measure what a problem actually requires, relative to a stated set of inference rules. For each problem, we compute th",
         "excerptHash": "ac6c85214ac309e451f4c495236d520f687f1c660f09cc5edcb9038587027851",
         "kind": "abstract_excerpt",
-        "checkedAt": "2026-11-26T08:51:21.468125+00:00",
+        "checkedAt": "2026-11-26T21:53:30.571565+00:00",
         "source": "https://rss.arxiv.org/rss/cs.AI",
         "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
       }
@@ -245,529 +252,529 @@
   },
   "programEvidence": {
     "protocol": "PINF-PROGRAM-TEST-1",
-    "candidateHash": "324b15105b3461574070689c61898ed3a741dcd0c3126a48e004878893c9184f",
-    "seed": 50192090154580,
+    "candidateHash": "d90d16c69fd8abfc82f934a7e513887740999422950ae86442b90818295dca5c",
+    "seed": 102406494263532,
     "cases": [
       {
         "args": {
-          "width": "0",
-          "height": "0"
+          "amount": "0",
+          "rate": "0"
         },
         "expected": "0",
         "reply": "0"
       },
       {
         "args": {
-          "width": "1",
-          "height": "1"
+          "amount": "1",
+          "rate": "1"
         },
-        "expected": "1",
-        "reply": "1"
+        "expected": "1/100",
+        "reply": "1/100"
       },
       {
         "args": {
-          "width": "-1",
-          "height": "-1"
+          "amount": "-1",
+          "rate": "-1"
         },
-        "expected": "1",
-        "reply": "1"
+        "expected": "1/100",
+        "reply": "1/100"
       },
       {
         "args": {
-          "width": "-2063.54",
-          "height": "-5109.31"
+          "amount": "-5464.80",
+          "rate": "4269.07"
         },
-        "expected": "52716327787/5000",
-        "reply": "52716327787/5000"
+        "expected": "-2916201717/12500",
+        "reply": "-2916201717/12500"
       },
       {
         "args": {
-          "width": "3720.03",
-          "height": "-4636.55"
+          "amount": "5894.08",
+          "rate": "-8031.44"
         },
-        "expected": "-34496210193/2000",
-        "reply": "-34496210193/2000"
+        "expected": "-7396554668/15625",
+        "reply": "-7396554668/15625"
       },
       {
         "args": {
-          "width": "6158.11",
-          "height": "-4552.65"
+          "amount": "3201.25",
+          "rate": "7725.36"
         },
-        "expected": "-56071438983/2000",
-        "reply": "-56071438983/2000"
+        "expected": "247308087/1000",
+        "reply": "247308087/1000"
       },
       {
         "args": {
-          "width": "4592.01",
-          "height": "5775.33"
+          "amount": "-2472.00",
+          "rate": "-8518.05"
         },
-        "expected": "265203731133/10000",
-        "reply": "265203731133/10000"
+        "expected": "52641549/250",
+        "reply": "52641549/250"
       },
       {
         "args": {
-          "width": "-677.08",
-          "height": "6222.86"
+          "amount": "4958.23",
+          "rate": "4551.34"
         },
-        "expected": "-5266717561/1250",
-        "reply": "-5266717561/1250"
+        "expected": "112832952641/500000",
+        "reply": "112832952641/500000"
       },
       {
         "args": {
-          "width": "-6547.08",
-          "height": "-5781.36"
+          "amount": "7358.67",
+          "rate": "-3752.84"
         },
-        "expected": "23656891518/625",
-        "reply": "23656891518/625"
+        "expected": "-69039777807/250000",
+        "reply": "-69039777807/250000"
       },
       {
         "args": {
-          "width": "4461.20",
-          "height": "2978.66"
+          "amount": "2573.27",
+          "rate": "9457.08"
         },
-        "expected": "1661049749/125",
-        "reply": "1661049749/125"
+        "expected": "60839050629/250000",
+        "reply": "60839050629/250000"
       },
       {
         "args": {
-          "width": "9625.99",
-          "height": "-5946.50"
+          "amount": "-2762.44",
+          "rate": "-4301.72"
         },
-        "expected": "-11448189907/200",
-        "reply": "-11448189907/200"
+        "expected": "7427027123/62500",
+        "reply": "7427027123/62500"
       },
       {
         "args": {
-          "width": "1482.51",
-          "height": "-965.07"
+          "amount": "773.25",
+          "rate": "-6945.81"
         },
-        "expected": "-14307259257/10000",
-        "reply": "-14307259257/10000"
+        "expected": "-2148339033/40000",
+        "reply": "-2148339033/40000"
       },
       {
         "args": {
-          "width": "6608.44",
-          "height": "-3249.12"
+          "amount": "403.28",
+          "rate": "8016.33"
         },
-        "expected": "-13419759108/625",
-        "reply": "-13419759108/625"
+        "expected": "4041031953/125000",
+        "reply": "4041031953/125000"
       },
       {
         "args": {
-          "width": "4507.29",
-          "height": "2619.73"
+          "amount": "5121.33",
+          "rate": "-5134.53"
         },
-        "expected": "118078828317/10000",
-        "reply": "118078828317/10000"
+        "expected": "-262956225249/1000000",
+        "reply": "-262956225249/1000000"
       },
       {
         "args": {
-          "width": "3068.54",
-          "height": "-6604.12"
+          "amount": "-8647.89",
+          "rate": "8657.10"
         },
-        "expected": "-25331257981/1250",
-        "reply": "-25331257981/1250"
+        "expected": "-74865648519/100000",
+        "reply": "-74865648519/100000"
       },
       {
         "args": {
-          "width": "-227.20",
-          "height": "8093.42"
+          "amount": "-7632.29",
+          "rate": "7353.63"
         },
-        "expected": "-229853128/125",
-        "reply": "-229853128/125"
+        "expected": "-561250367127/1000000",
+        "reply": "-561250367127/1000000"
       },
       {
         "args": {
-          "width": "-5089.77",
-          "height": "2678.58"
+          "amount": "4695.67",
+          "rate": "-5850.41"
         },
-        "expected": "-68166780633/5000",
-        "reply": "-68166780633/5000"
+        "expected": "-274715947247/1000000",
+        "reply": "-274715947247/1000000"
       },
       {
         "args": {
-          "width": "-7891.29",
-          "height": "1460.54"
+          "amount": "327.83",
+          "rate": "9292.13"
         },
-        "expected": "-57627723483/5000",
-        "reply": "-57627723483/5000"
+        "expected": "30462389779/1000000",
+        "reply": "30462389779/1000000"
       },
       {
         "args": {
-          "width": "-7235.27",
-          "height": "2260.31"
+          "amount": "-3362.84",
+          "rate": "645.51"
         },
-        "expected": "-163539531337/10000",
-        "reply": "-163539531337/10000"
+        "expected": "-5426867121/250000",
+        "reply": "-5426867121/250000"
       },
       {
         "args": {
-          "width": "737.86",
-          "height": "-1192.71"
+          "amount": "6467.93",
+          "rate": "1484.95"
         },
-        "expected": "-4400265003/5000",
-        "reply": "-4400265003/5000"
+        "expected": "19209105307/200000",
+        "reply": "19209105307/200000"
       },
       {
         "args": {
-          "width": "-5834.24",
-          "height": "-1411.05"
+          "amount": "-3582.77",
+          "rate": "-2336.99"
         },
-        "expected": "1029050544/125",
-        "reply": "1029050544/125"
+        "expected": "83728976623/1000000",
+        "reply": "83728976623/1000000"
       },
       {
         "args": {
-          "width": "-1986.88",
-          "height": "-9735.28"
+          "amount": "2738.83",
+          "rate": "-6769.47"
         },
-        "expected": "12089270704/625",
-        "reply": "12089270704/625"
+        "expected": "-185404275201/1000000",
+        "reply": "-185404275201/1000000"
       },
       {
         "args": {
-          "width": "-9960.72",
-          "height": "1158.18"
+          "amount": "1045.82",
+          "rate": "-1104.43"
         },
-        "expected": "-7210191681/625",
-        "reply": "-7210191681/625"
+        "expected": "-5775174913/500000",
+        "reply": "-5775174913/500000"
       },
       {
         "args": {
-          "width": "1304.28",
-          "height": "1784.78"
+          "amount": "6876.02",
+          "rate": "819.95"
         },
-        "expected": "2909816073/1250",
-        "reply": "2909816073/1250"
+        "expected": "5637992599/100000",
+        "reply": "5637992599/100000"
       },
       {
         "args": {
-          "width": "-2940.78",
-          "height": "6144.80"
+          "amount": "-2044.61",
+          "rate": "-391.03"
         },
-        "expected": "-2258813118/125",
-        "reply": "-2258813118/125"
+        "expected": "7995038483/1000000",
+        "reply": "7995038483/1000000"
       },
       {
         "args": {
-          "width": "1685.39",
-          "height": "669.40"
+          "amount": "-8854.26",
+          "rate": "2452.08"
         },
-        "expected": "564100033/500",
-        "reply": "564100033/500"
+        "expected": "-13569596163/62500",
+        "reply": "-13569596163/62500"
       },
       {
         "args": {
-          "width": "9638.82",
-          "height": "3886.22"
+          "amount": "-2031.33",
+          "rate": "-5059.53"
         },
-        "expected": "93646437651/2500",
-        "reply": "93646437651/2500"
+        "expected": "102775750749/1000000",
+        "reply": "102775750749/1000000"
       },
       {
         "args": {
-          "width": "1125.41",
-          "height": "8970.77"
+          "amount": "2214.80",
+          "rate": "5166.71"
         },
-        "expected": "100957942657/10000",
-        "reply": "100957942657/10000"
+        "expected": "2860807327/25000",
+        "reply": "2860807327/25000"
       },
       {
         "args": {
-          "width": "-8680.08",
-          "height": "481.98"
+          "amount": "3871.25",
+          "rate": "3138.51"
         },
-        "expected": "-2614765599/625",
-        "reply": "-2614765599/625"
+        "expected": "971996547/8000",
+        "reply": "971996547/8000"
       },
       {
         "args": {
-          "width": "-5450.62",
-          "height": "9103.63"
+          "amount": "-5760.19",
+          "rate": "-4038.98"
         },
-        "expected": "-248102138753/5000",
-        "reply": "-248102138753/5000"
+        "expected": "116326461031/500000",
+        "reply": "116326461031/500000"
       },
       {
         "args": {
-          "width": "-3279.34",
-          "height": "-76.31"
+          "amount": "-6247.71",
+          "rate": "472.51"
         },
-        "expected": "1251232177/5000",
-        "reply": "1251232177/5000"
+        "expected": "-29521054521/1000000",
+        "reply": "-29521054521/1000000"
       },
       {
         "args": {
-          "width": "-5092.54",
-          "height": "-1995.13"
+          "amount": "2021.13",
+          "rate": "7372.85"
         },
-        "expected": "50801396651/5000",
-        "reply": "50801396651/5000"
+        "expected": "29802976641/200000",
+        "reply": "29802976641/200000"
       },
       {
         "args": {
-          "width": "-80.23",
-          "height": "5166.71"
+          "amount": "-5428.01",
+          "rate": "-8718.48"
         },
-        "expected": "-4145251433/10000",
-        "reply": "-4145251433/10000"
+        "expected": "59154995781/125000",
+        "reply": "59154995781/125000"
       },
       {
         "args": {
-          "width": "1329.03",
-          "height": "-2137.36"
+          "amount": "-7178.39",
+          "rate": "-3785.09"
         },
-        "expected": "-3550769451/1250",
-        "reply": "-3550769451/1250"
+        "expected": "271708522051/1000000",
+        "reply": "271708522051/1000000"
       },
       {
         "args": {
-          "width": "3439.34",
-          "height": "8429.97"
+          "amount": "2923.93",
+          "rate": "9859.99"
         },
-        "expected": "144967665099/5000",
-        "reply": "144967665099/5000"
+        "expected": "288299205607/1000000",
+        "reply": "288299205607/1000000"
       },
       {
         "args": {
-          "width": "7237.32",
-          "height": "8129.62"
+          "amount": "4144.01",
+          "rate": "-4084.04"
         },
-        "expected": "73545826773/1250",
-        "reply": "73545826773/1250"
+        "expected": "-42310756501/250000",
+        "reply": "-42310756501/250000"
       },
       {
         "args": {
-          "width": "8359.21",
-          "height": "-6271.13"
+          "amount": "4524.62",
+          "rate": "-4088.63"
         },
-        "expected": "-524216926073/10000",
-        "reply": "-524216926073/10000"
+        "expected": "-92497485353/500000",
+        "reply": "-92497485353/500000"
       },
       {
         "args": {
-          "width": "8812.46",
-          "height": "-649.98"
+          "amount": "7209.35",
+          "rate": "-9293.69"
         },
-        "expected": "-14319806877/2500",
-        "reply": "-14319806877/2500"
+        "expected": "-134002928003/200000",
+        "reply": "-134002928003/200000"
       },
       {
         "args": {
-          "width": "3643.53",
-          "height": "3864.59"
+          "amount": "8316.13",
+          "rate": "-8801.01"
         },
-        "expected": "140807496027/10000",
-        "reply": "140807496027/10000"
+        "expected": "-731903432913/1000000",
+        "reply": "-731903432913/1000000"
       },
       {
         "args": {
-          "width": "-3050.62",
-          "height": "2036.16"
+          "amount": "9934.24",
+          "rate": "9566.56"
         },
-        "expected": "-3882219012/625",
-        "reply": "-3882219012/625"
+        "expected": "14849453596/15625",
+        "reply": "14849453596/15625"
       },
       {
         "args": {
-          "width": "-3296.00",
-          "height": "-612.07"
+          "amount": "849.04",
+          "rate": "-9973.60"
         },
-        "expected": "50434568/25",
-        "reply": "50434568/25"
+        "expected": "-264624542/3125",
+        "reply": "-264624542/3125"
       },
       {
         "args": {
-          "width": "-942.86",
-          "height": "6786.61"
+          "amount": "-2104.58",
+          "rate": "-5311.95"
         },
-        "expected": "-31994115523/5000",
-        "reply": "-31994115523/5000"
+        "expected": "11179423731/100000",
+        "reply": "11179423731/100000"
       },
       {
         "args": {
-          "width": "4640.69",
-          "height": "4278.52"
+          "amount": "-4990.62",
+          "rate": "3638.09"
         },
-        "expected": "49638212447/2500",
-        "reply": "49638212447/2500"
+        "expected": "-90781623579/500000",
+        "reply": "-90781623579/500000"
       },
       {
         "args": {
-          "width": "-7326.69",
-          "height": "6597.64"
+          "amount": "6229.65",
+          "rate": "9976.78"
         },
-        "expected": "-120847157529/2500",
-        "reply": "-120847157529/2500"
+        "expected": "62151847527/100000",
+        "reply": "62151847527/100000"
       },
       {
         "args": {
-          "width": "-6489.24",
-          "height": "-1863.81"
+          "amount": "3511.63",
+          "rate": "8631.43"
         },
-        "expected": "30236776011/2500",
-        "reply": "30236776011/2500"
+        "expected": "303103885309/1000000",
+        "reply": "303103885309/1000000"
       },
       {
         "args": {
-          "width": "-4765.73",
-          "height": "-9158.83"
+          "amount": "-7519.45",
+          "rate": "1338.61"
         },
-        "expected": "436485108959/10000",
-        "reply": "436485108959/10000"
+        "expected": "-20131221929/200000",
+        "reply": "-20131221929/200000"
       },
       {
         "args": {
-          "width": "2165.02",
-          "height": "-23.26"
+          "amount": "1301.04",
+          "rate": "3612.05"
         },
-        "expected": "-125895913/2500",
-        "reply": "-125895913/2500"
+        "expected": "1174855383/25000",
+        "reply": "1174855383/25000"
       },
       {
         "args": {
-          "width": "8475.75",
-          "height": "8406.56"
+          "amount": "7625.74",
+          "rate": "4351.29"
         },
-        "expected": "1781297523/25",
-        "reply": "1781297523/25"
+        "expected": "165909031023/500000",
+        "reply": "165909031023/500000"
       },
       {
         "args": {
-          "width": "9310.54",
-          "height": "1023.39"
+          "amount": "8474.32",
+          "rate": "3564.77"
         },
-        "expected": "47641567653/5000",
-        "reply": "47641567653/5000"
+        "expected": "37761252133/125000",
+        "reply": "37761252133/125000"
       },
       {
         "args": {
-          "width": "4913.24",
-          "height": "995.00"
+          "amount": "-300.11",
+          "rate": "-8176.03"
         },
-        "expected": "24443369/5",
-        "reply": "24443369/5"
+        "expected": "24537083633/1000000",
+        "reply": "24537083633/1000000"
       },
       {
         "args": {
-          "width": "564.61",
-          "height": "-2507.42"
+          "amount": "356.66",
+          "rate": "-6031.03"
         },
-        "expected": "-7078572031/5000",
-        "reply": "-7078572031/5000"
+        "expected": "-10755135799/500000",
+        "reply": "-10755135799/500000"
       },
       {
         "args": {
-          "width": "6536.55",
-          "height": "-3338.93"
+          "amount": "4940.01",
+          "rate": "390.44"
         },
-        "expected": "-43650165783/2000",
-        "reply": "-43650165783/2000"
+        "expected": "4821943761/250000",
+        "reply": "4821943761/250000"
       },
       {
         "args": {
-          "width": "-7747.39",
-          "height": "5661.51"
+          "amount": "396.55",
+          "rate": "-8190.28"
         },
-        "expected": "-438619259589/10000",
-        "reply": "-438619259589/10000"
+        "expected": "-1623927767/50000",
+        "reply": "-1623927767/50000"
       },
       {
         "args": {
-          "width": "-8190.07",
-          "height": "-4464.69"
+          "amount": "-5264.91",
+          "rate": "172.67"
         },
-        "expected": "365661236283/10000",
-        "reply": "365661236283/10000"
+        "expected": "-9090920097/1000000",
+        "reply": "-9090920097/1000000"
       },
       {
         "args": {
-          "width": "9053.19",
-          "height": "5044.06"
+          "amount": "7525.55",
+          "rate": "3146.17"
         },
-        "expected": "228324167757/5000",
-        "reply": "228324167757/5000"
+        "expected": "47353319287/200000",
+        "reply": "47353319287/200000"
       },
       {
         "args": {
-          "width": "-9453.51",
-          "height": "7088.47"
+          "amount": "-13.06",
+          "rate": "4187.38"
         },
-        "expected": "-670109220297/10000",
-        "reply": "-670109220297/10000"
+        "expected": "-136717957/250000",
+        "reply": "-136717957/250000"
       },
       {
         "args": {
-          "width": "-8446.76",
-          "height": "-671.48"
+          "amount": "2020.44",
+          "rate": "1568.45"
         },
-        "expected": "3544894003/625",
-        "reply": "3544894003/625"
+        "expected": "1584479559/50000",
+        "reply": "1584479559/50000"
       },
       {
         "args": {
-          "width": "-6347.52",
-          "height": "-9948.71"
+          "amount": "-7883.28",
+          "rate": "-90.28"
         },
-        "expected": "39468522312/625",
-        "reply": "39468522312/625"
+        "expected": "222407037/31250",
+        "reply": "222407037/31250"
       },
       {
         "args": {
-          "width": "-356.42",
-          "height": "-2279.08"
+          "amount": "4357.95",
+          "rate": "-2702.17"
         },
-        "expected": "1015387117/1250",
-        "reply": "1015387117/1250"
+        "expected": "-23551843503/200000",
+        "reply": "-23551843503/200000"
       },
       {
         "args": {
-          "width": "-7085.66",
-          "height": "-5687.23"
+          "amount": "-338.50",
+          "rate": "2616.20"
         },
-        "expected": "201488890609/5000",
-        "reply": "201488890609/5000"
+        "expected": "-8855837/1000",
+        "reply": "-8855837/1000"
       },
       {
         "args": {
-          "width": "-7628.59",
-          "height": "4854.27"
+          "amount": "7592.56",
+          "rate": "-7695.88"
         },
-        "expected": "-370312355793/10000",
-        "reply": "-370312355793/10000"
+        "expected": "-18259822079/31250",
+        "reply": "-18259822079/31250"
       },
       {
         "args": {
-          "width": "8268.32",
-          "height": "2114.02"
+          "amount": "-2707.65",
+          "rate": "2414.57"
         },
-        "expected": "10924621154/625",
-        "reply": "10924621154/625"
+        "expected": "-13075620921/200000",
+        "reply": "-13075620921/200000"
       },
       {
         "args": {
-          "width": "4783.29",
-          "height": "8641.07"
+          "amount": "-694.15",
+          "rate": "7503.17"
         },
-        "expected": "413327437203/10000",
-        "reply": "413327437203/10000"
+        "expected": "-10416650911/200000",
+        "reply": "-10416650911/200000"
       },
       {
         "args": {
-          "width": "8601.71",
-          "height": "5861.30"
+          "amount": "6325.33",
+          "rate": "-7961.31"
         },
-        "expected": "50417202823/1000",
-        "reply": "50417202823/1000"
+        "expected": "-503579129823/1000000",
+        "reply": "-503579129823/1000000"
       }
     ],
-    "nodes": 3,
+    "nodes": 5,
     "passed": true
   },
   "validationCompleted": true,
   "decisions": {
-    "knowledge": "ADOPT",
+    "knowledge": "NO_CHANGE",
     "programs": "NO_GAIN"
   },
-  "recordHash": "707d5ac69ab0ee972bf51eddbc7cca85ad73576b1375dbd7b2eca28a6db3d659"
+  "recordHash": "8d515e5bcbfdf46ef5e51a077ea281710c4884e6d6e818bdc3c6fc71ef4a9491"
 }
