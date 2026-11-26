@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "45691685417",
+  "runId": "45746098607",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-25T20:07:06Z",
+  "at": "2026-11-26T03:01:17Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "fb44c4ec922b426d52a35f46b8a96eaf117ba4af48de422d96a8d01661a1163e",
-  "cycleNumber": 235,
+  "parentRecordHash": "22ed54b98e8e494d7c5c7d9332978c08e42b9f363e4fb5c9d407ac533eaafc92",
+  "cycleNumber": 236,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,22 +1133,22 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "8fd200991bf58604da216a16e8e025ab65d4e131545ddbd230975a6af226ebe0",
+    "hash": "5f778c32544faedee6b713da212cf3d9eebe0add1e0b4191a9851efed7b49464",
     "items": [
       {
-        "title": "Exploratory Midtraining for Robot Policies",
-        "url": "http://arxiv.org/abs/2611.33130v1",
-        "updated": "2026-11-24T18:52:34Z",
+        "title": "RoboJackVR: Turning Robot Tasks into VR Games for Scalable Demonstration Collection",
+        "url": "http://arxiv.org/abs/2611.33731v1",
+        "updated": "2026-11-25T03:53:15Z",
         "status": "metadata_only_not_fulltext_verified"
       },
       {
-        "title": "EventDiffusion: Learning Native Event Stream Distribution from Videos",
-        "url": "http://arxiv.org/abs/2611.33096v1",
-        "updated": "2026-11-24T18:32:39Z",
+        "title": "BridgeSRDA: Efficient Probabilistic Super-Resolution Data Assimilation with Forecast-Informed Stochastic Interpolants",
+        "url": "http://arxiv.org/abs/2611.33720v1",
+        "updated": "2026-11-25T03:34:04Z",
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-25T20:07:06Z"
+    "accessedAt": "2026-11-26T03:01:20Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.498,
+  "elapsedSeconds": 3.122,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "22ed54b98e8e494d7c5c7d9332978c08e42b9f363e4fb5c9d407ac533eaafc92"
+  "recordHash": "b7c623d5e6fb95546f8f652381f48b627fa6cbf2f09438968dfa40de073c53c9"
 }
