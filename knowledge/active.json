@@ -2,6 +2,86 @@
   "schema": "PINF-KNOWLEDGE-1",
   "cards": [
     {
+      "url": "https://arxiv.org/abs/2611.33303",
+      "title": "Certify What You Plant: Shortcut-Free Proof Depth in Logical Reasoning Data",
+      "excerpt": "arXiv:2611.33303v1 Announce Type: new Abstract: Procedurally generated logic problems are used to both evaluate and train reasoning in language models. Their difficulty is usually set by planting a proof, that is, by sampling a proof of the desired depth and stating its premises as the problem. However, a planted proof is only one possible proof. A problem can also have shorter proofs, or several unrelated ones, and its stated depth then overstates what solving it requires. We measure what a problem actually requires, relative to a stated set of inference rules. For each problem, we compute th",
+      "excerptHash": "ac6c85214ac309e451f4c495236d520f687f1c660f09cc5edcb9038587027851",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.468125+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33263",
+      "title": "What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning",
+      "excerpt": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights throug",
+      "excerptHash": "85c6dd7b6579456e9a96d481767075f171436d644e0ce5e677fa19893539e75c",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.467544+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33190",
+      "title": "General-Purpose Decision Models for AI Configuration Tuning",
+      "excerpt": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against con",
+      "excerptHash": "be3265789d20445ea73a21ccdce0890efce6f737568aa57184d9cd36312f25eb",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.466944+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33165",
+      "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+      "excerpt": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources",
+      "excerptHash": "06fd60902b7a2dbf3862688d4fd0cf00b2f99f86e7ede39ca28564438db5eb1a",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.466341+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33161",
+      "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+      "excerpt": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive sc",
+      "excerptHash": "6eb03b6c14f2965595973f6b0ec9ce919901a77c0ac43f486888f5feb2c20c9f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.465756+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33160",
+      "title": "Context Scaling: A New Frontier of AI Scaling",
+      "excerpt": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling i",
+      "excerptHash": "f83abb20f18495d8eed6da4ee232a7de17547f7464b03697914eddff1dd07f68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.465108+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "6ac36bec172504b33f37aae82b6f05a0bfe57ae6b3da2927241141ba19a40203"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.406674+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "63ab14bfdc4f4394a1c463785e83966d5fffef9b80b9f1dbfccc17f4f5372f77"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-26T08:51:21.112536+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "fe1b6d2f92afaa9297bce9ff68bac789eb2be0d9b78c89961ed68432bdf18da5"
+    },
+    {
       "url": "https://arxiv.org/abs/2611.31347",
       "title": "Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations",
       "excerpt": "arXiv:2611.31347v1 Announce Type: new Abstract: Laya is an open decision model: given a text, a question and K named options with descriptions, it returns one probability per option in a single pass, and software may act on the answer unseen. We attack six Laya models with 81 programmatic edits of 566 synthetic items (injected sentences, label leaks, edited descriptions, decoy options, invisible and look-alike characters, floods) and report the share of correctly answered items hijacked or lost, with bootstrap intervals. Attack wordings that no defence was built from win the attacker's option ",
@@ -60,26 +140,6 @@
       "checkedAt": "2026-11-25T09:03:59.867370+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "f8ccc1768abb1b2dd19d61e2ca2a728dcde2ca9dca9e060682d9538cec404d8c"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "title": "Transformers.js 3.8.1 quantization dtypes",
-      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
-      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-25T09:03:59.704462+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
-      "sourceHash": "399740b4249e3aa3944e8127bd55e0f2acc8a2f533c1e7dafa9379deffc1473a"
-    },
-    {
-      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "title": "Transformers.js 3.8.1 WebGPU",
-      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
-      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
-      "kind": "official_document_excerpt",
-      "checkedAt": "2026-11-25T09:03:59.064061+00:00",
-      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
-      "sourceHash": "551a86fc2c9692ccea7e5d03eb8874d29319173f2785cebfedfdeedc8f947d26"
     },
     {
       "url": "https://arxiv.org/abs/2611.26797",
@@ -180,66 +240,6 @@
       "checkedAt": "2026-11-20T07:42:20.282422+00:00",
       "source": "https://rss.arxiv.org/rss/cs.AI",
       "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.25070",
-      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
-      "excerpt": "arXiv:2611.25070v1 Announce Type: new Abstract: This paper presents an AI-driven framework, CodeReAct agent, designed to enhance industrial equipment maintenance through natural language (NL) interactions. The framework employs an advanced AI agentic approach to interpret human instructions, providing knowledge extraction, asset status summarization, and work order recommendations. It identifies patterns and trends and predicts work orders by standardizing industrial data into business objects (BOs) and utilizing analytical function API calls. The AI agent operates through a Thought-Action-Obs",
-      "excerptHash": "cca9ddf378031540efe8ff6b14093e86f90df5aecbc30042a5aab0e69f1e296b",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-20T07:42:20.281898+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.25043",
-      "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
-      "excerpt": "arXiv:2611.25043v1 Announce Type: new Abstract: Artificial intelligence (AI) agents are increasingly integrated into self-driving laboratories (SDLs) to plan experiments and interpret results. However, analytical reasoning alone does not make a laboratory autonomous: autonomy in an SDL is achievable only when the agent can be trusted to act on physical hardware unsupervised and knows when to defer to a human. Here, we present an architecture that integrates an agent at the Analyze-Design interface of the Design-Make-Test-Analyze (DMTA) cycle, enabling agent-driven measurement selection and dat",
-      "excerptHash": "9e02ed5e1b0ee4ed5b734865decf34650af76ae656a89bfab34c33fbaf0e5f8e",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-20T07:42:20.281365+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "d6e9fb8d2ee99d5df083c338ffbf5bf10edb289b937b419b0d31b69384fc742d"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23445",
-      "title": "Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops",
-      "excerpt": "arXiv:2611.23445v1 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequently induces catastrophic accuracy collapse. While mixed-precision recovery strategies aim to rescue accuracy by selectively retaining high-precision parameters, the fundamental mechanics of where and why these models collapse remain poorly understood. In this study, we systematically analyze the anatomy of quantization collapse across standard Vision CNNs (including ResNet and EfficientNet backbones",
-      "excerptHash": "0978fdfbfbc982fa10303b155dbb33ec4f5e252dd91781c58891def087f12360",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.155360+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23410",
-      "title": "RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding",
-      "excerpt": "arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design intent, layout geometry, and electromagnetic behavior remains largely untested. To address this gap, we introduce RFBench, a simulator-grounded dataset and benchmark for passive RF layout design and understanding. The dataset contains 10,000 two-port planar layouts simulated using ADS Momentum, with each layout represented by editable geometric primitives, a raster image, a 16x16 occupancy grid, co",
-      "excerptHash": "78620546b6bfd1bc49afcfd7eb9c303f6da259bc495f0d141bed0f5f80a6e404",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.154797+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23398",
-      "title": "HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs",
-      "excerpt": "arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-scale AI clusters can stall multi-million dollar training workloads, the downtime of individual machines can cause outsized economic losses. Minimizing machine downtime, therefore, is more important than ever. To address this, we present Hardware Diagnoser (HardwareDx), an AI-driven hardware diagnosis system that applies a graph foundation model approach to automated datacenter maintenance. It allow",
-      "excerptHash": "bae123163d4c87ce87f3f3421811c7177f71831e5390a7f4758c85cc921a1790",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.154232+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
-    },
-    {
-      "url": "https://arxiv.org/abs/2611.23375",
-      "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
-      "excerpt": "arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecul",
-      "excerptHash": "243faecac7b8b179f1e89fd5dc9a03fcf9a588303c10d03546d6ea1ff0b69ffc",
-      "kind": "abstract_excerpt",
-      "checkedAt": "2026-11-19T07:52:31.153697+00:00",
-      "source": "https://rss.arxiv.org/rss/cs.AI",
-      "sourceHash": "c6b359cf802a93ab1045796697ef0fe2231405b4a39a7be08b71a01be39ffbfd"
     }
   ],
   "evidence": {
@@ -247,9 +247,9 @@
     "passed": true,
     "verified": 24
   },
-  "generation": 21,
-  "parentHash": "b06ce2e0ed64c9b8fa42464243636fa5869b2af8b455cc6a7538d6b012616bb5",
-  "at": "2026-11-25T09:03:59.871145+00:00",
-  "runId": "45581844649",
-  "artifactHash": "4fe9d513a7480667c18ab28c33f22c33ab04089acfea257e0ac41231eaa36ee1"
+  "generation": 22,
+  "parentHash": "4fe9d513a7480667c18ab28c33f22c33ab04089acfea257e0ac41231eaa36ee1",
+  "at": "2026-11-26T08:51:21.469129+00:00",
+  "runId": "45786677968",
+  "artifactHash": "ba5abbcdbdacb0e4660cc04d580c12dca6eb03d7c9e32739cac861f5bc31a5b9"
 }
