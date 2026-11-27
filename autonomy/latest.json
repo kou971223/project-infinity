@@ -2,11 +2,11 @@
   "schema": "PINF-AUTONOMY-1",
   "version": "0.5.0",
   "status": "completed",
-  "runId": "45905403501",
+  "runId": "45940182289",
   "attempt": "1",
   "event": "schedule",
   "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
-  "at": "2026-11-26T22:32:49Z",
+  "at": "2026-11-27T04:29:39Z",
   "protocolHash": "cebbc19f2ef4ee8eceee3e1b18e0c5e5a3fb0bdca29091d7a22af6152f770dbc",
   "billing": {
     "paidApiCalls": 0,
@@ -15,8 +15,8 @@
   "chatModelUpdated": false,
   "overallProjectAccepted": false,
   "memoryOrigin": "verified_record_loaded",
-  "parentRecordHash": "38ae6f73c34f1eb153dbbaaf3b9476329eb9b7bc4a0d61006f47776ff1cfe521",
-  "cycleNumber": 238,
+  "parentRecordHash": "dd7145a7646e7d32f50589f037296458f355cc41bed0671cabe9fd35537a0983",
+  "cycleNumber": 239,
   "generationBefore": 3,
   "activeCheckpoint": {
     "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -1133,7 +1133,7 @@
   "literature": {
     "url": "https://export.arxiv.org/api/query?search_query=all:continual%20AND%20all:learning&start=0&max_results=2&sortBy=submittedDate&sortOrder=descending",
     "access": "fetched",
-    "hash": "7853ca81946e0dcb79b08eda2a4d56ab4a9fa59fe3db0cdbadfa0690b28e8bb9",
+    "hash": "a3e61e512db1a1580befd6670aa9ca000567f665c57a26a3b42647293cd8c6d1",
     "items": [
       {
         "title": "Mixture-of-Loops Transformer",
@@ -1148,7 +1148,7 @@
         "status": "metadata_only_not_fulltext_verified"
       }
     ],
-    "accessedAt": "2026-11-26T22:32:50Z"
+    "accessedAt": "2026-11-27T04:29:40Z"
   },
   "agenda": {
     "source": [
@@ -1160,12 +1160,12 @@
     "selection": "frozen epoch; two training seeds; one release candidate fixed before evaluation",
     "notClaimed": "general research capability, novelty, E2 efficiency or RSI"
   },
-  "elapsedSeconds": 0.558,
+  "elapsedSeconds": 0.549,
   "learningDecision": {
     "decision": "DEFER_EPOCH_HOLDOUT_REVIEW"
   },
   "sourceCandidate": {
     "status": "not_run_epoch_gate"
   },
-  "recordHash": "dd7145a7646e7d32f50589f037296458f355cc41bed0671cabe9fd35537a0983"
+  "recordHash": "8159adf77a65a5ae9c35cd324be23dcf060d3505f9ef93c92220ee73f8faff1d"
 }
