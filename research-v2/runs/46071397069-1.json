@@ -1,0 +1,855 @@
+{
+  "schema": "PINF-RESEARCH-2",
+  "at": "2026-11-27T21:36:36.086781+00:00",
+  "baseCommit": "0dc1bc7e7a4a89d9385d6158468806a938c52f89",
+  "runId": "46071397069",
+  "parents": {
+    "knowledge": "ba5abbcdbdacb0e4660cc04d580c12dca6eb03d7c9e32739cac861f5bc31a5b9",
+    "programs": "6d26a0068808d97ed3529f6fd1c21e891636d0eca75c4ad235a76839293ece31"
+  },
+  "cards": [
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "title": "Transformers.js 3.8.1 WebGPU",
+      "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+      "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-27T21:36:35.570357+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+      "sourceHash": "948bc7921c6ba3823d6182439a7602397fb8ebca77998debb38ef94732028c55"
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "title": "Transformers.js 3.8.1 quantization dtypes",
+      "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+      "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+      "kind": "official_document_excerpt",
+      "checkedAt": "2026-11-27T21:36:35.799256+00:00",
+      "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+      "sourceHash": "5fd6ce64a5392b2822b1f6b451b072025640af63c03a6d883c165d4e8e4d2af8"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33160",
+      "title": "Context Scaling: A New Frontier of AI Scaling",
+      "excerpt": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling i",
+      "excerptHash": "f83abb20f18495d8eed6da4ee232a7de17547f7464b03697914eddff1dd07f68",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.082584+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33161",
+      "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+      "excerpt": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive sc",
+      "excerptHash": "6eb03b6c14f2965595973f6b0ec9ce919901a77c0ac43f486888f5feb2c20c9f",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.083280+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33165",
+      "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+      "excerpt": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources",
+      "excerptHash": "06fd60902b7a2dbf3862688d4fd0cf00b2f99f86e7ede39ca28564438db5eb1a",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.083901+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33190",
+      "title": "General-Purpose Decision Models for AI Configuration Tuning",
+      "excerpt": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against con",
+      "excerptHash": "be3265789d20445ea73a21ccdce0890efce6f737568aa57184d9cd36312f25eb",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.084547+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33263",
+      "title": "What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning",
+      "excerpt": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights throug",
+      "excerptHash": "85c6dd7b6579456e9a96d481767075f171436d644e0ce5e677fa19893539e75c",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.085170+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.33303",
+      "title": "Certify What You Plant: Shortcut-Free Proof Depth in Logical Reasoning Data",
+      "excerpt": "arXiv:2611.33303v1 Announce Type: new Abstract: Procedurally generated logic problems are used to both evaluate and train reasoning in language models. Their difficulty is usually set by planting a proof, that is, by sampling a proof of the desired depth and stating its premises as the problem. However, a planted proof is only one possible proof. A problem can also have shorter proofs, or several unrelated ones, and its stated depth then overstates what solving it requires. We measure what a problem actually requires, relative to a stated set of inference rules. For each problem, we compute th",
+      "excerptHash": "ac6c85214ac309e451f4c495236d520f687f1c660f09cc5edcb9038587027851",
+      "kind": "abstract_excerpt",
+      "checkedAt": "2026-11-27T21:36:36.085778+00:00",
+      "source": "https://rss.arxiv.org/rss/cs.AI",
+      "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+    }
+  ],
+  "sourceFailures": [],
+  "task": "mean",
+  "privateDataUsed": false,
+  "generationAttempts": [
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    },
+    {
+      "ok": false,
+      "reason": "UPSTREAM_BUSY"
+    }
+  ],
+  "programFailure": "UPSTREAM_BUSY",
+  "synthesis": {
+    "trainingSeed": 26638859236394,
+    "trainingExamples": [
+      {
+        "args": {
+          "a": "8356.15",
+          "b": "2917.80",
+          "c": "-5852.62"
+        },
+        "expected": "180711/100"
+      },
+      {
+        "args": {
+          "a": "8822.38",
+          "b": "2056.06",
+          "c": "-9955.89"
+        },
+        "expected": "18451/60"
+      },
+      {
+        "args": {
+          "a": "2034.43",
+          "b": "6896.87",
+          "c": "7272.32"
+        },
+        "expected": "810181/150"
+      },
+      {
+        "args": {
+          "a": "-8167.32",
+          "b": "-8562.37",
+          "c": "8186.98"
+        },
+        "expected": "-284757/100"
+      }
+    ],
+    "examined": 15345,
+    "states": 6007,
+    "cost": 7
+  },
+  "programCandidate": {
+    "task": "mean",
+    "expression": [
+      "div",
+      [
+        "add",
+        [
+          "add",
+          [
+            "var",
+            "a"
+          ],
+          [
+            "var",
+            "b"
+          ]
+        ],
+        [
+          "var",
+          "c"
+        ]
+      ],
+      [
+        "const",
+        "3"
+      ]
+    ],
+    "hypothesis": "Program synthesized from training examples; requires separate held-out validation."
+  },
+  "candidateOrigin": "local_enumerative_synthesis",
+  "frozenHash": "ec05261f4e72d3f99e08456857f5ac1bd6ad91665b93a5c07dc39d20d68a7df3",
+  "knowledgeEvidence": {
+    "protocol": "PINF-SOURCE-MATCH-1",
+    "verifiedCards": [
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "title": "Transformers.js 3.8.1 WebGPU",
+        "excerpt": "Due to the experimental nature of WebGPU, especially in non-Chromium browsers, you may experience issues when trying to run a model (even it it can run in WASM). If you do, please open an issue on GitHub and we’ll do our best to address it. Thanks! Update on GitHub ← Server-side Inference in Node.js Using quantized models (dtypes) → Running models on WebGPU Usage in Transformers.js v3 Reporting bugs and providing feedback",
+        "excerptHash": "26e3c487aa2c64d702cb596e33afdd1ab77f30b583e4b74988f540f2e9ad5b70",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-27T21:36:35.570357+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/webgpu",
+        "sourceHash": "948bc7921c6ba3823d6182439a7602397fb8ebca77998debb38ef94732028c55"
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "title": "Transformers.js 3.8.1 quantization dtypes",
+        "excerpt": "The list of available quantizations depends on the model, but some common ones are: full-precision ( \"fp32\" ), half-precision ( \"fp16\" ), 8-bit ( \"q8\" , \"int8\" , \"uint8\" ), and 4-bit ( \"q4\" , \"bnb4\" , \"q4f16\" ). (e.g., mixedbread-ai/mxbai-embed-xsmall-v1) Basic usage Example: Run Qwen2.5-0.5B-Instruct in 4-bit quantization ( demo ) Copied import { pipeline } from \"@huggingface/transformers\" ; // Create a text generation pipeline const generator = await pipeline ( \"text-generation\" , \"onnx-community/Qwen2.5-0.5B-Instruct\" , { dtype : \"q4\" , device : \"webgpu\" }, ); // Define the list of messages",
+        "excerptHash": "d6b691d4fbab4fe50ea024070a4274664af0aaaa60f0ec5f765a7dd2fb1f765d",
+        "kind": "official_document_excerpt",
+        "checkedAt": "2026-11-27T21:36:35.799256+00:00",
+        "source": "https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes",
+        "sourceHash": "5fd6ce64a5392b2822b1f6b451b072025640af63c03a6d883c165d4e8e4d2af8"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33160",
+        "title": "Context Scaling: A New Frontier of AI Scaling",
+        "excerpt": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling i",
+        "excerptHash": "f83abb20f18495d8eed6da4ee232a7de17547f7464b03697914eddff1dd07f68",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.082584+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33161",
+        "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+        "excerpt": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with a wider set of softer checks whose scores are blended into one number per candidate. This adaptive sc",
+        "excerptHash": "6eb03b6c14f2965595973f6b0ec9ce919901a77c0ac43f486888f5feb2c20c9f",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.083280+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33165",
+        "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+        "excerpt": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources",
+        "excerptHash": "06fd60902b7a2dbf3862688d4fd0cf00b2f99f86e7ede39ca28564438db5eb1a",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.083901+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33190",
+        "title": "General-Purpose Decision Models for AI Configuration Tuning",
+        "excerpt": "arXiv:2611.33190v1 Announce Type: new Abstract: AI configuration tuning searches for settings that improve the performance of AI systems under a limited budget. Existing tuners use different sampling and search policies, making the choice of decision strategy central to both tuning quality and cost. We investigate whether general-purpose decision models can guide tuning, using Jev as a deployed representative that returns structured choices and numeric scores across diverse tasks. To assess where it helps, we compare its use as an optimizer, performance predictor, and region guider against con",
+        "excerptHash": "be3265789d20445ea73a21ccdce0890efce6f737568aa57184d9cd36312f25eb",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.084547+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33263",
+        "title": "What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning",
+        "excerpt": "arXiv:2611.33263v1 Announce Type: new Abstract: The growing use of large language models (LLMs) for mental health support raises important safety concerns. Existing guard models primarily identify categories of harmful content, often overlooking the context needed to determine an appropriate response. We introduce a clinically grounded taxonomy that characterizes harm along three dimensions: what the harm is, who is involved, and when it occurs. It further separates harm characterization from intervention decisions, thus enabling safety policies to be specified outside the model weights throug",
+        "excerptHash": "85c6dd7b6579456e9a96d481767075f171436d644e0ce5e677fa19893539e75c",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.085170+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.33303",
+        "title": "Certify What You Plant: Shortcut-Free Proof Depth in Logical Reasoning Data",
+        "excerpt": "arXiv:2611.33303v1 Announce Type: new Abstract: Procedurally generated logic problems are used to both evaluate and train reasoning in language models. Their difficulty is usually set by planting a proof, that is, by sampling a proof of the desired depth and stating its premises as the problem. However, a planted proof is only one possible proof. A problem can also have shorter proofs, or several unrelated ones, and its stated depth then overstates what solving it requires. We measure what a problem actually requires, relative to a stated set of inference rules. For each problem, we compute th",
+        "excerptHash": "ac6c85214ac309e451f4c495236d520f687f1c660f09cc5edcb9038587027851",
+        "kind": "abstract_excerpt",
+        "checkedAt": "2026-11-27T21:36:36.085778+00:00",
+        "source": "https://rss.arxiv.org/rss/cs.AI",
+        "sourceHash": "d40c81d3b184c7d6d0dc1224000b6c4ca8b0ebd1e7e62669d436d5497f1f1271"
+      }
+    ],
+    "rejected": [],
+    "failures": []
+  },
+  "programEvidence": {
+    "protocol": "PINF-PROGRAM-TEST-1",
+    "candidateHash": "5b29df32de3ef5f6f03e428b5388d189f4b0c818561ad9e1f14ef2d162680a0f",
+    "seed": 193454146308251,
+    "cases": [
+      {
+        "args": {
+          "a": "0",
+          "b": "0",
+          "c": "0"
+        },
+        "expected": "0",
+        "reply": "0"
+      },
+      {
+        "args": {
+          "a": "1",
+          "b": "1",
+          "c": "1"
+        },
+        "expected": "1",
+        "reply": "1"
+      },
+      {
+        "args": {
+          "a": "-1",
+          "b": "-1",
+          "c": "-1"
+        },
+        "expected": "-1",
+        "reply": "-1"
+      },
+      {
+        "args": {
+          "a": "8324.14",
+          "b": "-6306.24",
+          "c": "2032.32"
+        },
+        "expected": "202511/150",
+        "reply": "202511/150"
+      },
+      {
+        "args": {
+          "a": "9969.89",
+          "b": "6318.49",
+          "c": "6369.13"
+        },
+        "expected": "2265751/300",
+        "reply": "2265751/300"
+      },
+      {
+        "args": {
+          "a": "-229.26",
+          "b": "4971.92",
+          "c": "207.16"
+        },
+        "expected": "82497/50",
+        "reply": "82497/50"
+      },
+      {
+        "args": {
+          "a": "-5252.94",
+          "b": "-1074.88",
+          "c": "3059.43"
+        },
+        "expected": "-326839/300",
+        "reply": "-326839/300"
+      },
+      {
+        "args": {
+          "a": "340.06",
+          "b": "-9798.78",
+          "c": "8077.44"
+        },
+        "expected": "-34532/75",
+        "reply": "-34532/75"
+      },
+      {
+        "args": {
+          "a": "9129.15",
+          "b": "-7024.80",
+          "c": "-2666.97"
+        },
+        "expected": "-9377/50",
+        "reply": "-9377/50"
+      },
+      {
+        "args": {
+          "a": "5145.05",
+          "b": "-5156.99",
+          "c": "3595.87"
+        },
+        "expected": "358393/300",
+        "reply": "358393/300"
+      },
+      {
+        "args": {
+          "a": "-6167.12",
+          "b": "-7589.30",
+          "c": "9120.08"
+        },
+        "expected": "-231817/150",
+        "reply": "-231817/150"
+      },
+      {
+        "args": {
+          "a": "-814.20",
+          "b": "3059.36",
+          "c": "6489.47"
+        },
+        "expected": "873463/300",
+        "reply": "873463/300"
+      },
+      {
+        "args": {
+          "a": "-1239.14",
+          "b": "-3231.61",
+          "c": "-6478.91"
+        },
+        "expected": "-547483/150",
+        "reply": "-547483/150"
+      },
+      {
+        "args": {
+          "a": "4705.21",
+          "b": "7292.15",
+          "c": "-3535.02"
+        },
+        "expected": "141039/50",
+        "reply": "141039/50"
+      },
+      {
+        "args": {
+          "a": "-5081.78",
+          "b": "-601.65",
+          "c": "5266.59"
+        },
+        "expected": "-10421/75",
+        "reply": "-10421/75"
+      },
+      {
+        "args": {
+          "a": "6601.10",
+          "b": "-1696.40",
+          "c": "2050.25"
+        },
+        "expected": "139099/60",
+        "reply": "139099/60"
+      },
+      {
+        "args": {
+          "a": "-7894.50",
+          "b": "-9086.73",
+          "c": "-2668.75"
+        },
+        "expected": "-982499/150",
+        "reply": "-982499/150"
+      },
+      {
+        "args": {
+          "a": "239.22",
+          "b": "7646.68",
+          "c": "-5723.83"
+        },
+        "expected": "72069/100",
+        "reply": "72069/100"
+      },
+      {
+        "args": {
+          "a": "-8230.10",
+          "b": "-1297.83",
+          "c": "9841.22"
+        },
+        "expected": "10443/100",
+        "reply": "10443/100"
+      },
+      {
+        "args": {
+          "a": "-5399.70",
+          "b": "603.00",
+          "c": "4343.95"
+        },
+        "expected": "-1811/12",
+        "reply": "-1811/12"
+      },
+      {
+        "args": {
+          "a": "4067.57",
+          "b": "-6338.50",
+          "c": "-5036.92"
+        },
+        "expected": "-48719/20",
+        "reply": "-48719/20"
+      },
+      {
+        "args": {
+          "a": "7207.47",
+          "b": "8067.59",
+          "c": "-7309.79"
+        },
+        "expected": "265509/100",
+        "reply": "265509/100"
+      },
+      {
+        "args": {
+          "a": "-6166.78",
+          "b": "-791.13",
+          "c": "-2951.51"
+        },
+        "expected": "-165157/50",
+        "reply": "-165157/50"
+      },
+      {
+        "args": {
+          "a": "4098.55",
+          "b": "4104.99",
+          "c": "-1709.26"
+        },
+        "expected": "54119/25",
+        "reply": "54119/25"
+      },
+      {
+        "args": {
+          "a": "-8118.21",
+          "b": "-7967.16",
+          "c": "-7469.71"
+        },
+        "expected": "-588877/75",
+        "reply": "-588877/75"
+      },
+      {
+        "args": {
+          "a": "184.24",
+          "b": "5316.60",
+          "c": "7048.87"
+        },
+        "expected": "1254971/300",
+        "reply": "1254971/300"
+      },
+      {
+        "args": {
+          "a": "9216.47",
+          "b": "2219.07",
+          "c": "-460.28"
+        },
+        "expected": "182921/50",
+        "reply": "182921/50"
+      },
+      {
+        "args": {
+          "a": "6998.01",
+          "b": "-6896.77",
+          "c": "-9830.42"
+        },
+        "expected": "-162153/50",
+        "reply": "-162153/50"
+      },
+      {
+        "args": {
+          "a": "-5985.98",
+          "b": "6589.86",
+          "c": "9686.98"
+        },
+        "expected": "514543/150",
+        "reply": "514543/150"
+      },
+      {
+        "args": {
+          "a": "-9380.75",
+          "b": "-3774.40",
+          "c": "-348.41"
+        },
+        "expected": "-337589/75",
+        "reply": "-337589/75"
+      },
+      {
+        "args": {
+          "a": "-9713.99",
+          "b": "1386.61",
+          "c": "-6784.29"
+        },
+        "expected": "-1511167/300",
+        "reply": "-1511167/300"
+      },
+      {
+        "args": {
+          "a": "-9569.07",
+          "b": "-7099.81",
+          "c": "3136.90"
+        },
+        "expected": "-225533/50",
+        "reply": "-225533/50"
+      },
+      {
+        "args": {
+          "a": "-335.53",
+          "b": "-2314.08",
+          "c": "8098.15"
+        },
+        "expected": "90809/50",
+        "reply": "90809/50"
+      },
+      {
+        "args": {
+          "a": "-982.37",
+          "b": "-1346.82",
+          "c": "-4990.37"
+        },
+        "expected": "-182989/75",
+        "reply": "-182989/75"
+      },
+      {
+        "args": {
+          "a": "-8788.82",
+          "b": "6290.21",
+          "c": "-470.83"
+        },
+        "expected": "-74236/75",
+        "reply": "-74236/75"
+      },
+      {
+        "args": {
+          "a": "-9488.07",
+          "b": "-3317.57",
+          "c": "5876.89"
+        },
+        "expected": "-27715/12",
+        "reply": "-27715/12"
+      },
+      {
+        "args": {
+          "a": "7995.22",
+          "b": "-9979.34",
+          "c": "6683.00"
+        },
+        "expected": "117472/75",
+        "reply": "117472/75"
+      },
+      {
+        "args": {
+          "a": "7248.85",
+          "b": "7774.86",
+          "c": "6294.29"
+        },
+        "expected": "7106",
+        "reply": "7106"
+      },
+      {
+        "args": {
+          "a": "4425.63",
+          "b": "3603.76",
+          "c": "-1690.26"
+        },
+        "expected": "633913/300",
+        "reply": "633913/300"
+      },
+      {
+        "args": {
+          "a": "3052.33",
+          "b": "6733.88",
+          "c": "7470.01"
+        },
+        "expected": "862811/150",
+        "reply": "862811/150"
+      },
+      {
+        "args": {
+          "a": "2978.72",
+          "b": "1079.50",
+          "c": "6830.62"
+        },
+        "expected": "272221/75",
+        "reply": "272221/75"
+      },
+      {
+        "args": {
+          "a": "-9789.87",
+          "b": "5294.06",
+          "c": "5022.48"
+        },
+        "expected": "52667/300",
+        "reply": "52667/300"
+      },
+      {
+        "args": {
+          "a": "-8398.37",
+          "b": "2156.00",
+          "c": "-9685.27"
+        },
+        "expected": "-398191/75",
+        "reply": "-398191/75"
+      },
+      {
+        "args": {
+          "a": "4880.43",
+          "b": "6851.87",
+          "c": "2944.22"
+        },
+        "expected": "366913/75",
+        "reply": "366913/75"
+      },
+      {
+        "args": {
+          "a": "-1602.66",
+          "b": "6817.38",
+          "c": "-7903.01"
+        },
+        "expected": "-268829/300",
+        "reply": "-268829/300"
+      },
+      {
+        "args": {
+          "a": "749.81",
+          "b": "1063.26",
+          "c": "-4608.88"
+        },
+        "expected": "-279581/300",
+        "reply": "-279581/300"
+      },
+      {
+        "args": {
+          "a": "-7711.46",
+          "b": "3148.29",
+          "c": "6712.98"
+        },
+        "expected": "214981/300",
+        "reply": "214981/300"
+      },
+      {
+        "args": {
+          "a": "-5210.74",
+          "b": "999.94",
+          "c": "6818.14"
+        },
+        "expected": "130367/150",
+        "reply": "130367/150"
+      },
+      {
+        "args": {
+          "a": "5568.86",
+          "b": "7559.99",
+          "c": "7553.46"
+        },
+        "expected": "2068231/300",
+        "reply": "2068231/300"
+      },
+      {
+        "args": {
+          "a": "-1629.53",
+          "b": "-2699.94",
+          "c": "7454.82"
+        },
+        "expected": "62507/60",
+        "reply": "62507/60"
+      },
+      {
+        "args": {
+          "a": "-4925.07",
+          "b": "6579.02",
+          "c": "-5758.42"
+        },
+        "expected": "-410447/300",
+        "reply": "-410447/300"
+      },
+      {
+        "args": {
+          "a": "-5876.35",
+          "b": "6089.74",
+          "c": "-3038.22"
+        },
+        "expected": "-94161/100",
+        "reply": "-94161/100"
+      },
+      {
+        "args": {
+          "a": "-6233.69",
+          "b": "5550.23",
+          "c": "-5654.52"
+        },
+        "expected": "-105633/50",
+        "reply": "-105633/50"
+      },
+      {
+        "args": {
+          "a": "2287.55",
+          "b": "-2416.76",
+          "c": "5051.51"
+        },
+        "expected": "49223/30",
+        "reply": "49223/30"
+      },
+      {
+        "args": {
+          "a": "-6397.80",
+          "b": "1598.89",
+          "c": "-2592.58"
+        },
+        "expected": "-246383/100",
+        "reply": "-246383/100"
+      },
+      {
+        "args": {
+          "a": "9215.46",
+          "b": "-691.15",
+          "c": "-4183.08"
+        },
+        "expected": "434123/300",
+        "reply": "434123/300"
+      },
+      {
+        "args": {
+          "a": "1089.61",
+          "b": "-6363.06",
+          "c": "-8014.67"
+        },
+        "expected": "-332203/75",
+        "reply": "-332203/75"
+      },
+      {
+        "args": {
+          "a": "-1060.53",
+          "b": "-6349.77",
+          "c": "-2416.20"
+        },
+        "expected": "-6551/2",
+        "reply": "-6551/2"
+      },
+      {
+        "args": {
+          "a": "-3845.44",
+          "b": "2775.80",
+          "c": "3326.72"
+        },
+        "expected": "18809/25",
+        "reply": "18809/25"
+      },
+      {
+        "args": {
+          "a": "-4688.65",
+          "b": "-6991.95",
+          "c": "-9925.86"
+        },
+        "expected": "-1080323/150",
+        "reply": "-1080323/150"
+      },
+      {
+        "args": {
+          "a": "-1736.32",
+          "b": "6534.95",
+          "c": "365.28"
+        },
+        "expected": "516391/300",
+        "reply": "516391/300"
+      },
+      {
+        "args": {
+          "a": "6526.62",
+          "b": "4935.56",
+          "c": "-7508.64"
+        },
+        "expected": "197677/150",
+        "reply": "197677/150"
+      },
+      {
+        "args": {
+          "a": "4320.26",
+          "b": "6384.83",
+          "c": "-8260.35"
+        },
+        "expected": "122237/150",
+        "reply": "122237/150"
+      },
+      {
+        "args": {
+          "a": "3701.74",
+          "b": "7606.60",
+          "c": "1355.40"
+        },
+        "expected": "633187/150",
+        "reply": "633187/150"
+      }
+    ],
+    "nodes": 7,
+    "passed": true
+  },
+  "validationCompleted": true,
+  "decisions": {
+    "knowledge": "NO_CHANGE",
+    "programs": "NO_GAIN"
+  },
+  "recordHash": "c300bbbe7055aa2d11c746690fab8698655c5ccb8f3511f93a3f01ed498fa60d"
+}
